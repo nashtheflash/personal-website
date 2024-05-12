@@ -1,0 +1,44 @@
+# What I Learned Chanpter 1
+
+## Instilation
+I was able to get up and running without issue. My Os is Linux so that makes things easier. I simply ran:
+
+```
+$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+then as stated in the docs, I checked the version for Rust and Cargo:
+
+```
+rustc --version
+// rustc 1.78.0 (9b00956e5 2024-04-29)
+
+cargo --version
+// cargo 1.78.0 (54d8815d0 2024-03-26)
+```
+
+All looked like it should so I continued to the hello world example to verify further
+
+# Hello World
+I like this project because it is hard tomess up and will further verify development environment setup.
+
+from the command line I ran:
+
+```
+cargo new hello-world
+```
+
+this will crate a new project in the hello-world derecoty. cd into it and try to run the project in the terminal:
+
+```
+cargo run
+```
+
+"hello world" printed and all looked good. I also did a quick check on my NeoVim config to make sure that was working. I opened up /src/main.rc and highlighting was there and the LSP was auto sujusting syntax.
+
+# Small Addition to the hello wold project
+The book adds on the the typical heelo world project by having you bring in a package and it prints the fallowing crab!
+
+
+# Summary
+Just basic setup nothing groundbreaking here.
