@@ -1,2 +1,71 @@
 # What I Learned Chanpter 2
+In chapter two you jump right into a project which is awesome. The goal is to make a guessing game and the docs hold yo hand the entire way.
 
+## Project Setup
+Running the following will build the initial folder structure and also generate some of the files that we are going to need.
+```
+cargo new guessing_game
+```
+
+We are then introduced to the Cargo.toml file. I header that cargo took some inspiration from npm and it shows. I feel pretty at home looking at the file.
+
+## The Project
+I wont be covering the project sep by step. The docs do a great job of that and can be found here -> <a title='The Rust Programming Language Chapter 2' target='_blank' href='https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html'>Chapter 2</a>. However, I will be looking at a few things that I found interesting and looking at the final code.
+
+## Errors as Variables
+This is a weird concept but the more I think about it, the more I think that it is interesting. Take the following section of the game:
+
+```
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => {
+        println!("You must guess a number. Please guess again...");
+        continue;
+    }
+};
+```
+At this point I don't really undertand this concept and am almost positive that I am using it incorrectly in the above example. Honsetly, at this point, it doesn't seem like this should compile. It seems like it would try to set guess = ???? I am not returning anything. I guess that because I am ending the loop, the value is never assigned to anything. It said this would be explained in greater detail later so I am not going to spend to much time one it.
+
+## My Final Code
+```
+use std::io;
+use rand::Rng;
+use std::cmp::Ordering;
+
+fn main() {
+    println!("Guess a number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    println!("The secret number is: {}", secret_number);
+
+    println!("Please input a guess!");
+
+    loop {
+
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line!");
+ 
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("You must guess a number. Please guess again...");
+                continue;
+            }
+        };
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small! Guess Again: "),
+            Ordering::Greater => println!("Too big! Guess Again: "),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+
+}
+```
