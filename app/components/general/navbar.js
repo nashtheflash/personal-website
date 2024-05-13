@@ -16,7 +16,7 @@ export function NavBar() {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {
                             menuItems.map((item) => (
-                                <li><a href={item.href}>{item.name}</a></li>
+                                <li key={item.name}><a href={item.href}>{item.name}</a></li>
                             ))
                         }
                     </ul>
@@ -27,7 +27,7 @@ export function NavBar() {
                 <ul className="menu menu-horizontal px-1">
                     {
                         menuItems.map((item) => (
-                            <li><a href={item.href}>{item.name}</a></li>
+                            <li key={item.name}><a href={item.href}>{item.name}</a></li>
                         ))
                     }
                 </ul>
