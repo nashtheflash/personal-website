@@ -52,7 +52,7 @@ function AllPhotos({galleryUrl}) {
     return(
         <>
             <h2>All Photos</h2>
-            <p>I took alot more photos! I can't include every photo in the artical, but they can be seen here: <Link href={galleryUrl}>All Photos</Link></p> 
+            <p>{"I took alot more photos! I can't include every photo in the artical, but they can be seen here: "}<Link href={galleryUrl}>All Photos</Link></p> 
         </>
     )
 }
