@@ -9,13 +9,13 @@ import hostelMap from "@/public/costa-rica/map-in-hostel.JPEG";
 import streetPicture from "@/public/costa-rica/street-picture.JPEG";
 
 const photos = [
-    featureImage,
-    dogOnCouch,
-    bathroom,
-    room,
-    parking,
-    hostelMap,
-    streetPicture,
+    {nextImg: featureImage, publicUrl: "/costa-rica/alpha-arenal.JPEG"},
+    {nextImg: dogOnCouch, publicUrl: "/costa-rica/dog-on-couch.JPEG"},
+    {nextImg: bathroom, publicUrl: "/costa-rica/alpha-arenal-bathroom.JPEG"},
+    {nextImg: room, publicUrl: "/costa-rica/alpha-arenal-room.JPEG"},
+    {nextImg: parking, publicUrl: "/costa-rica/alpha-arenal-parking.JPEG"},
+    {nextImg: hostelMap, publicUrl: "/costa-rica/map-in-hostel.JPEG"},
+    {nextImg: streetPicture, publicUrl: "/costa-rica/street-picture.JPEG"}
 ]
 
 export default function AlphaArenalPhotos() {
