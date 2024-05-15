@@ -134,6 +134,8 @@ where
     }
 
     // mascot
+    println!("{:?}", mascot);
+
     if  mascot == Some("CLIPPY") {
         write_buffer.extend_from_slice(CLIPPY);
     } else {
