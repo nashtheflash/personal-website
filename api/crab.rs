@@ -18,7 +18,6 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
     let url = Url::parse(&_req.uri().to_string())?;
     let mascot = url.query();
 
-
     let stdout = stdout();
     let message = String::from("Hello fellow Rustaceans!");
     let width = message.chars().count();
@@ -43,7 +42,6 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
 
 const ENDSL: &[u8] = b"| ";
 const ENDSR: &[u8] = b" |\n";
-#[cfg(not(feature = "clippy"))]
 const FERRIS: &[u8] = br#"
         \
          \
@@ -136,7 +134,7 @@ where
     // mascot
     println!("{:?}", mascot);
 
-    if  mascot == Some("CLIPPY") {
+    if  mascot == Some("CLIPPY=") {
         write_buffer.extend_from_slice(CLIPPY);
     } else {
         write_buffer.extend_from_slice(FERRIS);
