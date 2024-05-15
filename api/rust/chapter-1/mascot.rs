@@ -132,9 +132,7 @@ where
     }
 
     // mascot
-    println!("{:?}", mascot);
-
-    if  mascot == Some("CLIPPY=") {
+    if  mascot == Some("CLIPPY=") || mascot == Some("CLIPPY") {
         write_buffer.extend_from_slice(CLIPPY);
     } else {
         write_buffer.extend_from_slice(FERRIS);

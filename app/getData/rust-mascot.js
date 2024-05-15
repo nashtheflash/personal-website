@@ -2,9 +2,9 @@ export async function getRustMascot(mascot) {
     let url;
 
     if (mascot == "CLIPPY") {
-        url = '/api/crab?CLIPPY'
+        url = '/api/rust/chapter-1/mascot?CLIPPY'
     } else {
-        url = '/api/crab?FERRIS'
+        url = '/api/rust/chapter-1/mascot?FERRIS'
     }
 
     const response = await fetch(`${url}`, {
