@@ -4,7 +4,7 @@ import {RustChapter1} from "@/app/components/blog";
 # What I Learned Chapter 1
 
 ## Instillation
-I was able to get up and running without issue. My Os is Linux so that makes things easier. I simply ran:
+I was able to get up and running without issue. My OS is Linux so that makes things easier. I simply ran:
 
 ```
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
@@ -29,18 +29,18 @@ I like this project because it is hard to mess up and will further verify develo
 cargo new hello-world
 ```
 
-this will crate a new project in the hello-world derecoty. cd into it and try to run the project in the terminal:
+This will crate a new project in the hello-world directory. cd into it and try to run the project in the terminal:
 
 ```
 cargo run
 ```
 
-"hello world" printed and all looked good. I also did a quick check on my NeoVim config to make sure that was working. I opened up /src/main.rc and highlighting was there and the LSP was auto sujusting syntax.
+"hello world" printed and all looked good. I also did a quick check on my NeoVim config to make sure that was working. I opened up /src/main.rc and highlighting was there and the LSP was providing auto complete.
 
 # Small Addition to the hello wold project
 The book adds on to the typical hello world project by having you bring in a package and it prints the fallowing crab!
 
-When you add the ferris-says package to the cargo.toml file you will see this in the terminal! This is actual rust code running on vercel and rendered using ract & mdx. Pretty cool huh?
+When you add the ferris-says package to the cargo.toml file you will see this in the terminal! This is actual rust code running on Vercel and rendered using React & MDX. Pretty cool huh?
 
 <RustChapter1/>
 
