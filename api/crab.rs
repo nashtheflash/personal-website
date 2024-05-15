@@ -75,7 +75,7 @@ const SPACE: u8 = b' ';
 // but also big enough for most inputs
 const BUFSIZE: usize = 2048;
 
-pub fn say<W>(input: &str, mascot: Option<&str>, max_width: usize, writer: W) -> smallvec::SmallVec<[u8; 2048]>
+pub fn say<W>(input: &str, mascot: Option<&str>, max_width: usize, _writer: W) -> smallvec::SmallVec<[u8; 2048]>
 
 where
     W: Write,
