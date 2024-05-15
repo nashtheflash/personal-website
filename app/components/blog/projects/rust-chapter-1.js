@@ -1,0 +1,30 @@
+'use client';
+
+import { getRustMascot } from '@/app/getData';
+import { useState } from "react"
+
+export function RustChapter1() {
+    const [mascot, setMascot] = useState();
+
+    const getMascot = async (mascot) => {
+        const newMascot = await getRustMascot(mascot);
+        setMascot(newMascot);
+    };
+    
+
+    return (
+        <>
+            <div className="flex justify-center items-center gap-3">
+                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md" onClick={() => getMascot('FERRIS')}>Generate Ferris</button>
+                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md" onClick={() => getMascot('CLIPPY')}>Generate Clippy</button>
+            </div>
+            <div className='flex justify-center items-center mt-5'>
+                <code>
+                    <p className='whitespace-pre-wrap min-h-96'>
+                        {mascot ? mascot : 'Pick Mascot Above!'}
+                    </p>
+                </code>
+            </div>
+        </>
+    )
+}

@@ -9,3 +9,6 @@ export { Footer } from './footer';
 //Images
 export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
+
+//Project Components
+export { RustChapter1 } from "./projects/rust-chapter-1";
