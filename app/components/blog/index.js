@@ -12,3 +12,4 @@ export { TwoCenteredImages } from "./images/two-centered-images"
 
 //Project Components
 export { RustChapter1 } from "./projects/rust-chapter-1";
+export { RustChapter2 } from "./projects/rust-chapter-2";

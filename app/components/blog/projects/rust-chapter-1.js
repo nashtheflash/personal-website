@@ -18,8 +18,8 @@ export function RustChapter1() {
                 <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md" onClick={() => getMascot('FERRIS')}>Generate Ferris</button>
                 <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md" onClick={() => getMascot('CLIPPY')}>Generate Clippy</button>
             </div>
-            <div className='flex justify-center items-center mt-5'>
-                <code>
+            <div className='flex justify-center items-center mt-5 w-full'>
+                <code className='w-full'>
                     <p className='whitespace-pre-wrap min-h-96'>
                         {mascot ? mascot : 'Pick Mascot Above!'}
                     </p>

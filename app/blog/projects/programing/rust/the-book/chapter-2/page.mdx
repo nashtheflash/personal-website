@@ -1,4 +1,6 @@
-# What I Learned Chanpter 2
+import {RustChapter2} from "@/app/components/blog";
+
+# What I Learned Chapter 2
 In chapter two you jump right into a project which is awesome. The goal is to make a guessing game and the docs hold yo hand the entire way.
 
 ## Project Setup
@@ -24,48 +26,8 @@ let guess: u32 = match guess.trim().parse() {
     }
 };
 ```
-At this point I don't really undertand this concept and am almost positive that I am using it incorrectly in the above example. Honsetly, at this point, it doesn't seem like this should compile. It seems like it would try to set guess = ???? I am not returning anything. I guess that because I am ending the loop, the value is never assigned to anything. It said this would be explained in greater detail later so I am not going to spend to much time one it.
+At this point I don't really undertand this concept and am almost positive that I am using it incorrectly in the above example. Honestly, at this point, it doesn't seem like this should compile. It seems like it would try to set guess = ???? I am not returning anything. I guess that because I am ending the loop, the value is never assigned to anything. It said this would be explained in greater detail later so I am not going to spend to much time one it.
 
-## My Final Code
-```
-use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
-
-fn main() {
-    println!("Guess a number!");
-
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-
-    println!("The secret number is: {}", secret_number);
-
-    println!("Please input a guess!");
-
-    loop {
-
-        let mut guess = String::new();
-
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line!");
- 
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("You must guess a number. Please guess again...");
-                continue;
-            }
-        };
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small! Guess Again: "),
-            Ordering::Greater => println!("Too big! Guess Again: "),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
-        }
-    }
-
-}
-```
+## The Final Project
+Just like the last post, the below is the actual rust code running on the Vercel server. All of the logic is written in rust but had to be changed slightly to work as a sever application.
+<RustChapter2/>

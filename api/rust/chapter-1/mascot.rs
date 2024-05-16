@@ -4,8 +4,9 @@ use std::io::Write;
 use textwrap::fill;
 use unicode_width::UnicodeWidthStr;
 use std::str;
-use serde_json::json;
 use url::Url;
+
+use serde_json::json;
 use vercel_runtime::{run, Body, Error, Request, Response, StatusCode};
 
 
