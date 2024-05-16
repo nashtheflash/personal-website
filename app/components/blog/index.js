@@ -5,6 +5,7 @@ export { MdxImage } from "./images/MdxImage";
 //Components
 export { PhotoGallery } from './photoGallery';
 export { Footer } from './footer';
+export { CookBookDivider } from "./cookbook-divider";
 
 //Images
 export { CenteredImage } from "./images/centered-image";
