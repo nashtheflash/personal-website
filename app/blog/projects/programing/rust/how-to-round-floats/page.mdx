@@ -1,0 +1,18 @@
+# How to Round Floats in Rust
+
+Coming from Javascript, I pretty quickly wanted to round a number in order to print it. In this specific case, I was working on the Fahrenheit/Celsius/Kelvin temperature converter. I was easily able to find a way to print a rounded number to the standard output which is probably the most common need.
+
+```
+// prints 13.19
+fn main() {
+    let precision = 2;
+    let num: f64 = 13.18745;
+    println!("{:.1$}", num, precision); 
+}
+```
+
+This works great, but this Rust program is going to run on the server and I want to convert the 13.18745 to 13.19 and store it in a variable to be returned in my server response. To do this with an easy one liner format!. 
+
+```
+let result = format!("{:.2}", 1.2399);
+```
