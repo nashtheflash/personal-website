@@ -22,3 +22,11 @@ path = "api/rust/chapter-1/mascot.rs"
 [[bin]]
 name = "guessing-game"
 path = "api/rust/chapter-2/guessing-game.rs"
+
+[[bin]]
+name = "fibonacci"
+path = "api/rust/chapter-3-fib/fib.rs"
+
+[[bin]]
+name = "ftoctok"
+path = "api/rust/chapter-3-ftoctok/ftoctok.rs"

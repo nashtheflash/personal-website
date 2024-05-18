@@ -7,19 +7,29 @@ export function RustChapter2() {
     const [currentNumber, setCurrentNumber] = useState(-1);
     const [currentGuess, setCurrentGuess] = useState('');
     const [gamePrompt, setGamePrompt] = useState('Click the button to start!')
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (value) => {
         const value_clean =  value.replace(/\D/g, "");
         setCurrentGuess(value_clean);
     };
 
-    const guessingGame = async (e, currentNumber, currentGuess) => {
+    const handleSubmit = async (e) => {
+        setLoading(true);
+        await tempConversion(e)
+        setLoading(false);
+    }
+
+    const tempConversion = async (e, currentNumber, currentGuess) => {
         e.preventDefault();
+        
+        setLoading(true);
         const {currentNumber: c, prompt: p} = await getGuessingGame(currentNumber, currentGuess);
 
         setCurrentNumber(c);
         setGamePrompt(p);
         setCurrentGuess('');
+        setLoading(false);
     };
 
     return (
@@ -34,7 +44,7 @@ export function RustChapter2() {
                     </div>
                 </div>
             </div>
-            <form onSubmit={(e) => guessingGame(e, currentNumber, currentGuess)}>
+            <form onSubmit={(e) => handleSubmit(e)}>
                 <div className='flex justify-start items-center gap-3 my-5 w-full'>
                     <input 
                         type="text" 
@@ -42,9 +52,15 @@ export function RustChapter2() {
                         className="input input-bordered w-44 max-w-xs" 
                         onChange={(e) => handleChange(e.target.value)} 
                         value={currentGuess}
-                        disabled={currentNumber == -1 ? 'disabled' : ''}
+                        disabled={currentNumber == -1 || loading && 'disabled'}
                     />
-                    <button type='submit' className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">{currentNumber !== -1 ? 'Submit Guess' : 'Start Game'}</button>
+                    <button 
+                        type='submit' 
+                        className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md"
+                    >
+                        { loading && <span className="loading loading-spinner"></span>}
+                        {currentNumber !== -1 ? 'Submit Guess' : 'Start Game'}
+                    </button>
                     <h5 className='w-full'>{ gamePrompt }</h5>
                 </div>
             </form>

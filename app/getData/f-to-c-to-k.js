@@ -1,5 +1,5 @@
-export async function getGuessingGame(currentNumber, currentGuess) {
-    let url = `/api/rust/chapter-2/guessing-game?currentNumber=${currentNumber}&currentGuess=${currentGuess == '' ? 0 : currentGuess}`;
+export async function getFtoCtoK(from, to, temp) {
+    let url = `/api/rust/chapter-3-ftoctok/ftoctok?from=${from}&to=${to}&temp=${temp}`
     
 
     const response = await fetch(url, {
@@ -7,7 +7,7 @@ export async function getGuessingGame(currentNumber, currentGuess) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(currentNumber), // body data type must match "content-type" header
+        body: JSON.stringify(from), // body data type must match "content-type" header
     });
     
     const rsp = await response.json();

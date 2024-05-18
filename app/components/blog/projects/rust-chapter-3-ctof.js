@@ -1,17 +1,11 @@
 'use client';
 
-// import { getGuessingGame } from '@/app/getData';
+import { getFtoCtoK } from '@/app/getData';
 import { useState } from "react"
 
 export function CelsiusToFahrenheitToKelvin() {
     const [temp, setTemp] = useState({from: 'fahrenheit', to: 'celsius', temp: ''});
     const [calc, setCalc] = useState();
-
-    const handleChange = (value) => { //max is 183
-        // const value_clean =  value.replace(/\D/g, "");
-        // const value_num = Number(value);
-        // if (value_num < 184) seFibNumberRequest(value_clean);
-    };
     
     const handleFromChange = (value) => {
         setTemp((prevState) => {
@@ -31,33 +25,32 @@ export function CelsiusToFahrenheitToKelvin() {
         })
     };
 
-    // const guessingGame = async (e, currentNumber, currentGuess) => {
-    //     e.preventDefault();
-    //     const {currentNumber: c, prompt: p} = await getGuessingGame(currentNumber, currentGuess);
-    //
-    //     setCurrentNumber(c);
-    //     setGamePrompt(p);
-    //     setCurrentGuess('');
-    // };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+        await tempConversion()
+        setLoading(false);
+    }
+
+    const tempConversion = async () => {
+        const temp = await getFtoCtoK(temp.from, temp.to, calc);
+        
+        setTemp((prevState) => ({
+            ...prevState,
+            temp: temp.tempreture
+        }));
+
+    };
 
     return (
         <>
-            <div className='flex justify-center items-center'>
-                <div className="stats shadow">
-                    <div className="stat">
-                        <div className="stat-title">{temp.temp != '' ? `${temp.temp} ${temp.from} is` : `Temperature`}</div>
-                        <div className='flex justify-center item-center'>
-                            <div className="stat-value">{temp.temp !== '' ? temp.temp : '---'}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form onSubmit={(e) => console.log('submitting')}>
+            <form onSubmit={(e) => handleSubmit(e)}>
                 <div className='flex justify-start items-center gap-3 my-5 w-full'>
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <TempInput
                             lable={temp.from}
-                            handleChange={handleChange}
+                            handleChange={handleFromChange}
                             calc={calc}
                         />
                         <SelectConversion
@@ -68,7 +61,7 @@ export function CelsiusToFahrenheitToKelvin() {
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <TempInput
                             lable={temp.to}
-                            handleChange={handleChange}
+                            handleChange={handleToChange}
                             calc={calc}
                         />
                         <SelectConversion
@@ -93,7 +86,7 @@ function TempInput({calc, handleChange, lable}) {
                 type="text" 
                 className="grow" 
                 placeholder="Search" 
-                onChange={(e) => handlechange(e.target.value)} 
+                onChange={(e) => handleChange(e.target.value)} 
                 value={calc}
             />
             <span className={`badge text-white w-24 ${lable == 'fahrenheit' ? 'bg-green-500' : lable == 'celsius' ? 'bg-blue-500' : 'bg-red-500'}`}>{capFirstLetter(lable)}</span>

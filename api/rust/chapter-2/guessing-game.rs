@@ -1,9 +1,9 @@
 use rand::Rng;
-use std::collections::HashMap;
 
 //This is for the server
 use url::Url;
 use serde_json::json;
+use std::collections::HashMap;
 use vercel_runtime::{run, Body, Error, Request, Response, StatusCode};
 
 #[tokio::main]
