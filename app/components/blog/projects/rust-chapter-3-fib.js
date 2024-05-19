@@ -59,6 +59,7 @@ export function Fibonacci() {
                     <h5 className='w-full'></h5>
                 </div>
             </form>
+            <p>See the code here {"->"} <a href='https://github.com/nashtheflash/personal-website/blob/master/api/rust/chapter-3-fib/fib.rs' title='Fibonacci Finder'>Fibonacci Finder</a></p>
         </>
     )
 }

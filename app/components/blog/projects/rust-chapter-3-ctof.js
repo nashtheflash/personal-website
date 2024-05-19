@@ -78,6 +78,7 @@ export function CelsiusToFahrenheitToKelvin() {
                     </button>
                 </div>
             </form>
+            <p>See the code here {"->"} <a href='https://github.com/nashtheflash/personal-website/blob/master/api/rust/chapter-3-ftoctok/ftoctok.rs' title='Fahrenheit to Celsius to Kelvin'>Fahrenheit to Celsius to Kelvin</a></p>
         </>
     )
 }

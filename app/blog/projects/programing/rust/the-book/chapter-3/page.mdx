@@ -1,9 +1,42 @@
 import { Fibonacci, DaysOfChistmass, CelsiusToFahrenheitToKelvin } from "@/app/components/blog"
 
 # Chapter 3
+Chapter three was a big on that covered the basics needed to make simple programs. You can and should take a look -> [Rust Chapter 3](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html "Rust Chapter 3")
 
+## Variables and Mutability
+Variables are basically the same as Javascript. **let** and **const** are used to instantiate variables. However, variables are immutable by default. So **let** in Javascript is actually **let mut** in Rust. In Javascript I almost exclusively use **const** but the docs say not to do this in Rust. I am assuming that it is because the values cannot be computed at runtime:\
+
+"The last difference is that constants may be set only to a constant expression, not the result of a value that could only be computed at runtime."\
+
+Shadowing is cool. I used it a decent amount in the projects in this section. I like that you don't have to do lots of weird renaming.
+
+## Data Types
+This sections was new to me but probably pretty basic if you are coming from a language with types.
+
+## Functions
+Functions have similar syntax to Javascript. However I hate the return syntax. This function would return nothing:
+```rs
+fn my_func() {
+    10;
+}
+```
+This would return 10:
+```rs
+fn my_func() {
+    10
+}
+```
+
+I just don't really like that. I think it will be hard to look for the semicolon. I would prefer **return** keyword.
+
+## Comments
+Basically the same a Javascript.
+
+## Control Flow
+Also, basically the same as Javascript.
 
 ## Projects
+Most of my programming experience is with Javascript. The following projects were really my first exposure to type safety. It was eye opening. I always thought that the concept was fairly straight forward, and if I ever needed to use something like Typescript it would be easy to pick up. Type issues were really the only problems I encountered while making the below projects. I am starting to understand why some people like Typescript, but I also don't at the same time... My current thought is that if I want to crank something out quickly I would rather just use Javascript and if there is something that requires type safety I would rather use something like Rust. That idea could very easily change in the future.
 
 ### Celsius to Fahrenheit
 <CelsiusToFahrenheitToKelvin/>
