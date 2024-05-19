@@ -4,11 +4,12 @@ import { getFtoCtoK } from '@/app/getData';
 import { useState } from "react"
 
 export function CelsiusToFahrenheitToKelvin() {
-    const [temp, setTemp] = useState({from: 'fahrenheit', to: 'celsius', temp: ''});
-    const [calc, setCalc] = useState();
+    const [result, setResult] = useState({from: 'fahrenheit', to: 'celsius', temp: ''});
+    const [calc, setCalc] = useState('');
+    const [loading, setLoading] = useState(false);
     
-    const handleFromChange = (value) => {
-        setTemp((prevState) => {
+    const handleFromTempChange = (value) => {
+        setResult((prevState) => {
             return ({
                 ...prevState,
                 from: value
@@ -16,13 +17,18 @@ export function CelsiusToFahrenheitToKelvin() {
         })
     };
     
-    const handleToChange = (value) => {
-        setTemp((prevState) => {
+    const handleToTempChange = (value) => {
+        setResult((prevState) => {
             return ({
                 ...prevState,
                 to: value
             })
         })
+    };
+    
+    const handleTempInput = (value) => {
+        const value_clean = Number(parseInt(value.replace(/,/g, '')));
+        if(value_clean > -2147483648 && value_clean < 2147483648) setCalc(value_clean);
     };
 
     const handleSubmit = async (e) => {
@@ -34,11 +40,11 @@ export function CelsiusToFahrenheitToKelvin() {
     }
 
     const tempConversion = async () => {
-        const temp = await getFtoCtoK(temp.from, temp.to, calc);
+        const res = await getFtoCtoK(result.from, result.to, calc);
         
-        setTemp((prevState) => ({
+        setResult((prevState) => ({
             ...prevState,
-            temp: temp.tempreture
+            temp: res.tempreture
         }));
 
     };
@@ -46,90 +52,82 @@ export function CelsiusToFahrenheitToKelvin() {
     return (
         <>
             <form onSubmit={(e) => handleSubmit(e)}>
-                <div className='flex justify-start items-center gap-3 my-5 w-full'>
-                    <div className='flex flex-col justify-center items-center gap-2'>
-                        <TempInput
-                            lable={temp.from}
-                            handleChange={handleFromChange}
-                            calc={calc}
-                        />
-                        <SelectConversion
-                            handleChange={handleFromChange}
-                            selection={temp.from}
-                        />
-                    </div>
-                    <div className='flex flex-col justify-center items-center gap-2'>
-                        <TempInput
-                            lable={temp.to}
-                            handleChange={handleToChange}
-                            calc={calc}
-                        />
-                        <SelectConversion
-                            handleChange={handleToChange}
-                            selection={temp.to}
-                        />
-                    </div>
+                <div className='flex justify-center items-center gap-3 my-5 w-full'>
+                    <TempBox
+                        isDisabled={false}
+                        handleTempInput={handleTempInput}
+                        result={result}
+                        calc={calc}
+                        defaultSelect={'fahrenheit'}
+                        handleOptionChange={handleFromTempChange}
+                    />
+                    <h3>{'='}</h3>
+                    <TempBox
+                        isDisabled={true}
+                        handleTempInput={handleTempInput}
+                        result={result}
+                        calc={calc}
+                        defaultSelect={'celsius'}
+                        handleOptionChange={handleToTempChange}
+                    />
                 </div>
                 <div className='flex justify-center items-center'>
-                    <button type='submit' className="btn w-3/4">Convert Temperature</button>
+                    <button type='submit' className="btn w-3/4">
+                        { loading && <span className="loading loading-spinner"></span>}
+                        Convert Temperature
+                    </button>
                 </div>
             </form>
         </>
     )
 }
 
-function TempInput({calc, handleChange, lable}) {
+function TempBox({isDisabled, handleTempInput, result, calc, defaultSelect, handleOptionChange}) {
 
     return(
-        <label className="input input-bordered flex items-center gap-2">
-            <input 
-                type="text" 
-                className="grow" 
-                placeholder="Search" 
-                onChange={(e) => handleChange(e.target.value)} 
-                value={calc}
-            />
-            <span className={`badge text-white w-24 ${lable == 'fahrenheit' ? 'bg-green-500' : lable == 'celsius' ? 'bg-blue-500' : 'bg-red-500'}`}>{capFirstLetter(lable)}</span>
-        </label>
+        <div className='w-44 h-24 border-2 border-gray-500 rounded-md overflow-hidden'>
+            <div className='flex flex-col justify-center items-center'>
+               <TempInput
+                    isDisabled={isDisabled}
+                    handleTempInput={handleTempInput}
+                    result={result}
+                    calc={calc}
+                /> 
+               <OptionInput
+                    defaultSelect={defaultSelect}
+                    value={defaultSelect == 'fahrenheit' ? result.from : result.to}
+                    handleChange={handleOptionChange}
+                /> 
+            </div>
+        </div>
     )
 }
 
-function SelectConversion({selection, handleChange}){
-    return (
-        <form>
-            <div className='flex justify-center items-center gap-2'>
-                <div className='flex flex-col justify-center items-center gap-1'>
-                    <input 
-                        type="radio" 
-                        name="radio-8" 
-                        className="radio checked:bg-green-500" 
-                        checked={selection == 'fahrenheit' ? true : false} 
-                        onClick={() => handleChange('fahrenheit')}
-                    />
-                    <h3 className='m-0'>F</h3>
-                </div>
-                <div className='flex flex-col justify-center items-center gap-1'>
-                    <input 
-                        type="radio" 
-                        name="radio-8" 
-                        className="radio checked:bg-blue-500" 
-                        checked={selection == 'celsius' ? true : false}
-                        onClick={() => handleChange('celsius')}
-                    />
-                    <h3 className='m-0'>C</h3>
-                </div>
-                <div className='flex flex-col justify-center items-center gap-1'>
-                    <input 
-                        type="radio" 
-                        name="radio-8" 
-                        className="radio checked:bg-red-500" 
-                        checked={selection == 'kelvin' ? true : false}j
-                        onClick={() => handleChange('kelvin')}
-                    />
-                    <h3 className='m-0'>K</h3>
-                </div>
-            </div>
-        </form>
+function TempInput({isDisabled, handleTempInput, result, calc}) {
+    return(
+        <input 
+            type="text" 
+            placeholder="0" 
+            className="input input-ghost w-full max-w-xs h-12 rounded-none" 
+            disabled={isDisabled}
+            value={isDisabled ? Number(result.temp).toLocaleString() : Number(calc).toLocaleString()} 
+            onChange={(e) => handleTempInput(e.target.value)}
+        />
+    )
+
+}
+
+function OptionInput({defaultSelect, handleChange, value}) {
+    return(
+        <select 
+            className="select w-full max-w-xs h-10 rounded-none"
+            defaultValue={value}
+            onChange={(e) => handleChange(e.target.value)}
+        >
+            <option value='fahrenheit'>Fahrenheit</option>
+            <option value='celsius'>Celsius</option>
+            <option value='kelvin'>Kelvin</option>
+        </select>
     )
 }
 

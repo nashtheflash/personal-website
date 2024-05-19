@@ -1,5 +1,6 @@
 export async function getFtoCtoK(from, to, temp) {
     let url = `/api/rust/chapter-3-ftoctok/ftoctok?from=${from}&to=${to}&temp=${temp}`
+    console.log(url)
     
 
     const response = await fetch(url, {

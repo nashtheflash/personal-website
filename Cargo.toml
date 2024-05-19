@@ -30,3 +30,7 @@ path = "api/rust/chapter-3-fib/fib.rs"
 [[bin]]
 name = "ftoctok"
 path = "api/rust/chapter-3-ftoctok/ftoctok.rs"
+
+[[bin]]
+name = "twelve-days"
+path = "api/rust/chapter-3-12days/twelve-days.rs"

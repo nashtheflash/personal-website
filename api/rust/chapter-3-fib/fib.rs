@@ -22,8 +22,6 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
 
     let fib_number: i128 = fib(fib_position);
 
-    println!("{:?}", fib_number);
-
     Ok(Response::builder()
         .status(StatusCode::OK)
         .header("Content-Type", "application/json")

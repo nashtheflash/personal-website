@@ -22,9 +22,10 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
 
     let from = String::from(from);
     let to = String::from(to);
-    let temp = temp.parse::<i8>().unwrap();
+    let temp = temp.parse::<i32>().unwrap();
 
     let result = convert_temp(&from, &to, temp);
+    let result = format!("{:.2}", result);
 
     Ok(Response::builder()
         .status(StatusCode::OK)
@@ -35,7 +36,7 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
         )?)
 }
 
-fn convert_temp(from: &str, to: &str, tmp: i8,) -> f64 {
+fn convert_temp(from: &str, to: &str, tmp: i32,) -> f64 {
 
     let c: f64 = if from == "fahrenheit" && to == "celsius" {
         f_to_c(tmp)
@@ -50,14 +51,14 @@ fn convert_temp(from: &str, to: &str, tmp: i8,) -> f64 {
     } else if from == "kelvin" && to == "fahrenheit" {
         k_to_f(tmp)
     } else {
-        0.
+        tmp as f64
     };
 
     c
 }
 
 //CELSIUS
-fn c_to_f(tmp: i8) -> f64 {
+fn c_to_f(tmp: i32) -> f64 {
     // (C × 9/5) + 32 = °F    
     let tmp: f64 = tmp.into();
     let celsius: f64 = (tmp * 9.0/5.0) + 32.0;
@@ -65,7 +66,7 @@ fn c_to_f(tmp: i8) -> f64 {
 
 }
 
-fn c_to_k(tmp: i8) -> f64{
+fn c_to_k(tmp: i32) -> f64{
     //(F − 32) × 5/9 + 273.15 = K    
     let tmp: f64 = tmp.into();
     let kelvin: f64 = tmp + 273.15;
@@ -73,14 +74,14 @@ fn c_to_k(tmp: i8) -> f64{
 }
 
 //FEHRENHEIT
-fn f_to_c(tmp: i8) -> f64{
+fn f_to_c(tmp: i32) -> f64{
     // (F − 32) × 5/9 = C
     let tmp: f64 = tmp.into();
     let celsius: f64 = (tmp - 32.0) * 5.0/9.0;
     celsius
 }
 
-fn f_to_k(tmp: i8) -> f64{
+fn f_to_k(tmp: i32) -> f64{
     //(F − 32) × 5/9 + 273.15 = K    
     let tmp: f64 = tmp.into();
     let kelvin: f64 = (tmp - 32.0) * 5.0/9.0 + 273.15;
@@ -88,14 +89,14 @@ fn f_to_k(tmp: i8) -> f64{
 }
 
 //KELVIN
-fn k_to_c(tmp: i8) -> f64{
+fn k_to_c(tmp: i32) -> f64{
     // (F − 32) × 5/9 = C
     let tmp: f64 = tmp.into();
     let celsius: f64 = tmp - 273.15;
     celsius
 }
 
-fn k_to_f(tmp: i8) -> f64{
+fn k_to_f(tmp: i32) -> f64{
     //(K − 273.15) × 9/5 + 32 = F
     let tmp: f64 = tmp.into();
     let kelvin: f64 = (tmp - 273.15) * 9.0/5.0 + 32.0;

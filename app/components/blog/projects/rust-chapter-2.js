@@ -11,17 +11,17 @@ export function RustChapter2() {
 
     const handleChange = (value) => {
         const value_clean =  value.replace(/\D/g, "");
-        setCurrentGuess(value_clean);
+        if (value_clean <= 100) setCurrentGuess(value_clean);
     };
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         setLoading(true);
-        await tempConversion(e)
+        await guessingGame()
         setLoading(false);
     }
 
-    const tempConversion = async (e, currentNumber, currentGuess) => {
-        e.preventDefault();
+    const guessingGame = async () => {
         
         setLoading(true);
         const {currentNumber: c, prompt: p} = await getGuessingGame(currentNumber, currentGuess);
@@ -48,8 +48,8 @@ export function RustChapter2() {
                 <div className='flex justify-start items-center gap-3 my-5 w-full'>
                     <input 
                         type="text" 
-                        placeholder="Type guess here" 
-                        className="input input-bordered w-44 max-w-xs" 
+                        placeholder="Type guess here (max 100)" 
+                        className="input input-bordered w-56 max-w-xs" 
                         onChange={(e) => handleChange(e.target.value)} 
                         value={currentGuess}
                         disabled={currentNumber == -1 || loading && 'disabled'}
