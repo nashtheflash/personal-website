@@ -16,6 +16,13 @@ module.exports = {
             fontFamily: {
                 inter: ['var(--font-inter)'],
                 mori: ['var(--font-mori)'],
+            },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        maxWidth: '100ch', // add required value here
+                    }
+                }
             }
         },
     },
