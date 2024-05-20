@@ -1,0 +1,30 @@
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Comment.nvim Review",
+    description:"A complete review of the NeoVim plugin, comment.nvim. This is part of my series of trying out and reviewing Vim and NeoVim plugins",
+    keywords: ['Neovim', 'Neovim Plugins', 'comment.nvim', 'review', 'Nash Bostwick']
+});
+
+
+# Comment.nvim Review
+⚡ Smart and Powerful commenting plugin for Neovim ⚡
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a00r4e3psW0?si=amNQXHDmfUs7qJ8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Unlike most of the reviews that are first looks, I have been using this plugin for some time now. I really enjoy it although I really only use gcc in normal mode and gc in visual-block mode. Part of why I like doing these reviews is that I can do a deep dive, and visit all of the features that the plugin has to offer.
+
+## What Does This Plugin Do?
+This plugin makes commenting out lines or blocks of code easy. This is similar to what CTRL+/ in vsCode does. If you are on a line and it CTRL+/ it will comment out the line, if you have a block of text highlighted, it will comment out the entire block. Comment.nvim attempts to add this functionality to Neovim.
+
+ADD GIFS SHOING THE ABOVE IN ACTION
+
+## Limitations
+From the docs: No jsx/tsx support. Its implementation was quite complicated. Bummer! Like I said, I have been using this plugin for a few months and noticed that jsx was not highlighting correctly. I thought this was a config issue but apparently not.
+
+## Can I edit my vimrc / init.lua Instead of Using This Plugin?
+Maybe, I played around with this a little and it is easy to append // to the from of a line, but do you want to figure that out for every language? I would recommend getting this plugin instead of reinventing the wheel!
+
+Link to the project -> [Comment.nvim](https://github.com/numToStr/Comment.nvim "Comment.nvim")
+
+Regardless of what I think about the plugin, I want to say thank you to everyone that is contributing to Neovim! Nothing is meant to be negative, my opinions are just that, opinions!
