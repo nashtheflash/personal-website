@@ -1,4 +1,5 @@
 import { generateMetadata } from '@/utils';
+import { BasicVideo, Gif } from '@/app/components/blog';
 
 export const metadata = generateMetadata({
     title:"Comment.nvim Review",
@@ -10,14 +11,24 @@ export const metadata = generateMetadata({
 # Comment.nvim Review
 ⚡ Smart and Powerful commenting plugin for Neovim ⚡
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a00r4e3psW0?si=amNQXHDmfUs7qJ8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 Unlike most of the reviews that are first looks, I have been using this plugin for some time now. I really enjoy it although I really only use gcc in normal mode and gc in visual-block mode. Part of why I like doing these reviews is that I can do a deep dive, and visit all of the features that the plugin has to offer.
+<BasicVideo>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3N2lB26FTPU?si=8k-ufvhqwOd1gcQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</BasicVideo>
 
 ## What Does This Plugin Do?
 This plugin makes commenting out lines or blocks of code easy. This is similar to what CTRL+/ in vsCode does. If you are on a line and it CTRL+/ it will comment out the line, if you have a block of text highlighted, it will comment out the entire block. Comment.nvim attempts to add this functionality to Neovim.
 
-ADD GIFS SHOING THE ABOVE IN ACTION
+<Gif 
+    video={"/vim-plugin-reviews/comment-nvim/single-line-comment.mp4"}
+    topTitle='Normal Mode, Single Line Example:'
+/>
+<br/>
+<br/>
+<Gif 
+    video={"/vim-plugin-reviews/comment-nvim/multi-line-comment.mp4"}
+    topTitle='Visual Block Mode, Multi Line Example:'
+/>
 
 ## Limitations
 From the docs: No jsx/tsx support. Its implementation was quite complicated. Bummer! Like I said, I have been using this plugin for a few months and noticed that jsx was not highlighting correctly. I thought this was a config issue but apparently not.

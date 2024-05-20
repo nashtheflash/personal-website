@@ -11,6 +11,10 @@ export { CookBookDivider } from "./cookbook-divider";
 export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
 
+//Videos
+export { BasicVideo } from './videos/basic-video';
+export { Gif } from './videos/gif';
+
 //Project Components
 export { RustChapter1 } from "./projects/rust-chapter-1";
 export { RustChapter2 } from "./projects/rust-chapter-2";
