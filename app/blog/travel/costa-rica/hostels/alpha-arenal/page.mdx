@@ -1,4 +1,5 @@
 import { CenteredImage, TwoCenteredImages, Footer } from '@/app/components/blog'
+import { generateMetadata } from '@/utils';
 
 import featureImage from "@/public/costa-rica/alpha-arenal.JPEG";
 import dogOnCouch from "@/public/costa-rica/dog-on-couch.JPEG";
@@ -6,7 +7,13 @@ import bathroom from "@/public/costa-rica/alpha-arenal-bathroom.JPEG";
 import room from "@/public/costa-rica/alpha-arenal-room.JPEG";
 import parking from "@/public/costa-rica/alpha-arenal-parking.JPEG";
 
-# Alpha Arenal
+export const metadata = generateMetadata({
+    title:"Alpha Arenal Review",
+    description:"Alpha Arenal hostel review. This hostile is located in La Fortuna and cost around $20 per night. We cover the good and the bad in this complete review",
+    keywords: ['Alpha Arenal', 'hostel', 'review', 'La Fortuna', 'Nash Bostwick']
+});
+
+# Alpha Arenal Review
 
 <CenteredImage image={featureImage} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
 

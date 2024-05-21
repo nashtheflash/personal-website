@@ -4,8 +4,10 @@ export { MdxImage } from "./images/MdxImage";
 
 //Components
 export { PhotoGallery } from './photoGallery';
+export { TravelFeature } from './feature-sections/travel-feature';
 export { Footer } from './footer';
 export { CookBookDivider } from "./cookbook-divider";
+export { BlogMapWrapper } from "./map-wrapper";
 
 //Images
 export { CenteredImage } from "./images/centered-image";

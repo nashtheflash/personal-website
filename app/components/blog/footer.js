@@ -28,7 +28,7 @@ function Contact({ phone, website, address, googleMapsLink }) {
     return(
         <>
             <h2>Contact</h2>
-            <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+            <ul className="space-y-1 text-gray-500 list-inside dark:text-gray-400">
                 <li className="flex items-center gap-2">
                     <PhoneIcon className='w-4 h-4'/>
                     {phone ? phone : 'Phone Number Unavailable'}

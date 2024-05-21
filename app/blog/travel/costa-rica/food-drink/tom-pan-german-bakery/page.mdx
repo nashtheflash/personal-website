@@ -1,0 +1,64 @@
+import { CenteredImage, TwoCenteredImages, Footer, TravelFeature, Gif, BlogMapWrapper } from '@/app/components/blog'
+import { generateMetadata } from '@/utils';
+
+import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
+import bakedGoodsBetter from "@/public/costa-rica/german-bakery/baked-goods-better.JPEG";
+import bakedGoods from "@/public/costa-rica/german-bakery/baked-goods.JPEG";
+import dinningRoom from "@/public/costa-rica/german-bakery/dinning-room.JPEG";
+import food from "@/public/costa-rica/german-bakery/food-pic.JPEG";
+import pretzle from "@/public/costa-rica/german-bakery/pretzle.JPEG";
+import store from "@/public/costa-rica/german-bakery/store.JPEG";
+import tableExample from "@/public/costa-rica/german-bakery/table-example.JPEG";
+import welcomeSign from "@/public/costa-rica/german-bakery/welcome-sign.JPEG";
+import working from "@/public/costa-rica/german-bakery/working.JPEG";
+
+export const metadata = generateMetadata({
+    title:"Tom's Pan German Bakery Review",
+    description:"Tom's Pan German Bakery Complete Review. This quaint German Bakery is located in  the small town of Nuevo Arenal, and is a must stop!",
+    keywords: ['Arenal', 'Costa-Rica', 'German', 'bakery', 'Nash Bostwick']
+});
+
+<TravelFeature
+    title="Tom's Pan German Bakery Review"
+    subheading='A must stop on a long drive'
+    imageUrl={featureImage}
+    altText='German Bake Shop'
+    imgWidth={700}
+    imgHeight={700}
+/>
+
+## Location
+<BlogMapWrapper
+    text={`
+        The German Bakery is located in Nuevo Arenal. It is a great stop if you are driving from La Fortuna to Monta Verde or the coast. We were doing the drive to Monta Verde. Obviously there is a big lake, and I was looking forward to swimming. However, there isn't really an access point. It seems that that some people that are making money giving boat rides and renting equipment have tried to monopolize access. As you drive you will see signs(many signs) on the road leading up to the little town of Nuevo Arenal that say "German Bakery". You can miss them, and that is your target. Eventually you will get to town, and if you look up the main road you will see the signs on the right side. Inside there you will see the counter and small convenience store. I candy, chocolate, and beer can all be bought if you are looking to stock up on something for the drive, but I would just get their food, its so good!
+    `}
+    mapUrl='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120570.54444625179!2d-84.81250610433352!3d10.324023504115447!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa000fbdf0e5059%3A0x12664ca89c0c01de!2sTom&#39;s%20Pan%20German%20Bakery!5e0!3m2!1sen!2sus!4v1716312712298!5m2!1sen!2sus'
+/>
+
+## Food & Drink
+The food is top notch at this place. The rolls, the pretzels its all good. I am no food critic but you have to stop here! See that coffee in the back?
+<TwoCenteredImages image={[pretzle, food]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
+
+## The Iced Coffee
+I spent most of the trip to Costa Rica in search of the best ice coffee and this was probably it. They laughed at me when I asked for a "drip coffee" and after some explaining they said that might have something that would suffice. I could sense the uneasy in the mans voice. This is what they brought out:
+<Gif 
+    video={"/costa-rica/german-bakery/coffee.mp4"}
+    topTitle='Normal Mode, Single Line Example:'
+/>
+It was pure bliss, and didn't last long. The man behind the counter came out and asked if it was okay and was confused by how much I liked it, he chucked to himself when I ordered another, and was sure that I was overdoing it and that the second would not be as good as the first. He was wrong. Simple put, GET THE COFFEE!!
+
+## Setting
+Keep in mind that we are here on a beautiful day. The sun is shining, the weather is cool, and the patio is amazing! As you can see form the pictures, I have my computer out and am doing some work and writing this article. Its a quite street and there is good internet. I highly recommend this as a work remote location. The vide of the place is very inviting and a great place to take a break from driving. The folks behind us are playing a game of cards, my girlfriend is reading, it doesn't get better than that!
+<TwoCenteredImages image={[working, dinningRoom]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
+Inside there you will see the counter and small convenience store. I candy, chocolate, and beer can all be bought if you are looking to stock up on something for the drive, but I would just get their food, its so good!
+
+## Summary
+Just go here. I don't know where your even thinking about it, but what do I know? I'm just a dude fro Alaska.
+
+<Footer 
+    phone='+(506) 2694 4547' 
+    address='300 Mt Al Sur De La Gasolinea, Nuevo Arenal, 50807, Costa Rica' 
+    galleryUrl='/photo-gallery/german-bakery' 
+    googleMapsLink='https://maps.app.goo.gl/yjAKf1QnJ9iGqD7v7'
+/>
+
