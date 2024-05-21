@@ -1,8 +1,5 @@
 export async function getGuessingGame(currentNumber, currentGuess) {
-    console.log(currentNumber, currentGuess);
     let url = `/api/rust/chapter-2/guessing-game?currentNumber=${currentNumber}&currentGuess=${currentGuess == '' ? 0 : currentGuess}`;
-    console.log(url)
-    
 
     const response = await fetch(url, {
         method: "POST", // *get, post, put, delete, etc.

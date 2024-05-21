@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 export function TravelFeature({title, subheading, imageUrl, altText, imgWidth, imgHeight}) {
-    console.log(imgWidth, imgHeight)
     return(
         <>
             <h1 className='mb-0'>{title}</h1>
