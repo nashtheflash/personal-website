@@ -1,0 +1,89 @@
+import { redirect } from 'next/navigation';
+import { generateMetadata } from '@/utils';
+import { BasicVideo, Gif, CenteredImage, TwoCenteredImages } from '@/app/components/blog';
+
+export const metadata = generateMetadata({
+    title:"Lualine Review",
+    description:"How are people getting a cool status line in Neovim? A complete review of the NeoVim plugin, lualine. This is part of my series of trying out and reviewing Vim and NeoVim plugins",
+    keywords: ['Neovim', 'Neovim Plugins', 'lualine', 'review', 'Nash Bostwick']
+}); 
+
+import defaultLine from "@/public/vim-plugin-reviews/lualine-nvim/default-lua-line.png";
+import rightSide from "@/public/vim-plugin-reviews/lualine-nvim/right-lua-line.JPEG";
+import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PNG";
+
+# Lualine.nvim Review
+Prettyify you status line.
+
+<BasicVideo>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3N2lB26FTPU?si=8k-ufvhqwOd1gcQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</BasicVideo>
+
+## What Does This Plugin Do?
+Basically, this plugin is just a theme for your status line, but it also goes a little further than that. You can also show all kinds of information on it. There are tons of themes. You can check them out here -> [Lualine Themes](https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md  "Lualine Themes"). I am going to start by using the default theme and here is what my line looks like.
+
+<CenteredImage image={defaultLine} altText={'Hotel Picture'} width={'h-full'} height={'w-full'}/>
+
+Looking Closer:
+<TwoCenteredImages image={[leftSide, rightSide]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
+
+## Instillation
+```lua
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+```
+
+Defaut Config that I added to lualine.lua:
+```lua
+    require('lualine').setup {
+      options = {
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+        disabled_filetypes = {
+          statusline = {},
+          winbar = {},
+        },
+        ignore_focus = {},
+        always_divide_middle = true,
+        globalstatus = false,
+        refresh = {
+          statusline = 1000,
+          tabline = 1000,
+          winbar = 1000,
+        }
+      },
+      sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename'},
+        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_y = {'progress'},
+        lualine_z = {'location'}
+      },
+      inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {'filename'},
+        lualine_x = {'location'},
+        lualine_y = {},
+        lualine_z = {}
+      },
+      tabline = {},
+      winbar = {},
+      inactive_winbar = {},
+      extensions = {}
+    }
+```
+
+## Limitations and Alternatives
+
+
+## Can I edit my vimrc / init.lua Instead of Using This Plugin?
+Maybe, I played around with this a little and it is easy to append // to the from of a line, but do you want to figure that out for every language? I would recommend getting this plugin instead of reinventing the wheel!
+
+Link to the project -> [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim  "Lualine.nvim")
+
+Regardless of what I think about the plugin, I want to say thank you to everyone that is contributing to Neovim! Nothing is meant to be negative, my opinions are just that, opinions!
+
