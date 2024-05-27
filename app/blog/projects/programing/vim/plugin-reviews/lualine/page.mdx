@@ -12,6 +12,7 @@ import defaultLine from "@/public/vim-plugin-reviews/lualine-nvim/default-lua-li
 import rightSide from "@/public/vim-plugin-reviews/lualine-nvim/right-lua-line.JPEG";
 import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PNG";
 import bufferAdd  from "@/public/vim-plugin-reviews/lualine-nvim/buffer-added.png";
+import addWords  from "@/public/vim-plugin-reviews/lualine-nvim/cust-comp-words.png";
 
 
 # Lualine.nvim Review
@@ -147,6 +148,81 @@ Components are easy to add and from the above example it should be easy to confi
 
 ## Lets Add Functionality (Custom Component)
 I want to implement a simple word counter that I can use while writing blog posts. I want it to display how many words are on the page, and also weather I am over, under, or in a predesignated range. For instance, I want to know how may words are in my blog post(so only mdx files), and I want my blog posts to be between 500 and 750 words. Seems simple enough, lets try it out.
+
+1. Lets start by getting the word count:
+I am just going to make this in the Lualine setup file. If I end up writing lots of these I can always move them later. Also, Keep in mind that this must be defined before it is used in the setup function.
+```lua
+local function getWords()
+  return tostring(vim.fn.wordcount().words)
+end
+
+
+require('lualine').setup {}
+```
+If the source file is reloaded using :so or Neovim is closed are reopened you should see the word count on the far right hand corner of the line.
+<CenteredImage image={addWords} altText={'Custom Lualine Component with word cound'} width={'w-fit'} height={'h-full'}/>
+
+2. Making the Component Dynamic
+We need to make a component that will choose the words or location based on the file type. Note that you cant just pass 'location' into the combine_component function. You have to actually define the function somewhere.
+```lua
+local function location()
+  local line = vim.fn.line('.')
+  local col = vim.fn.virtcol('.')
+  return string.format('%3d:%-2d', line, col)
+end
+
+local function combined_component()
+    local filetype = vim.bo.filetype
+    if filetype == 'markdown' or filetype == 'mdx' then
+        return getWords()
+    else
+        return location()
+    end
+end
+```
+
+3. Adding Dynamic Colors
+We need to add a function that picks the color. Notice that if the file is not markdown or mdx it will return nil which will be the default color for the location component.
+
+```lua
+local function color()
+    local filetype = vim.bo.filetype
+    local word_count = vim.fn.wordcount().words
+    if filetype == 'markdown' or filetype == 'mdx' then
+        if word_count < 500 then return {bg = '#7d7cc0', fg= '#0A0A0A', gui='none'} end
+        if word_count > 499 and word_count < 750 then return {bg = '#8EC07C', fg= '#0A0A0A', gui='none'} end
+        if word_count > 750 then return {bg = '#c07c83', fg= '#0A0A0A', gui='none'} end
+    else
+        return nil
+    end
+end
+
+```
+
+4. Add The Component
+Now we can add the combine_component to our lua config
+```lua
+sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'buffers'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {
+        {
+            combined_component,
+            color = color,
+        }
+    }
+}
+
+```
+
+<Gif 
+    video={"/vim-plugin-reviews/lualine-nvim/custom-component.mp4"}
+    topTitle='Completed Component'
+/>
+
 
 ## Limitations and Alternatives
 | | [Feline](https://github.com/famiu/feline.nvim "Feline") | [Lualine](https://github.com/nvim-lualine/lualine.nvim "Lualine") |[Lightline](https://github.com/itchyny/lightline.vim "Lightline") | [Airline](https://github.com/vim-airline/vim-airline "Airline") |
