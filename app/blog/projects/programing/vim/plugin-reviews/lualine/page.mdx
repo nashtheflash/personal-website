@@ -14,6 +14,7 @@ import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PN
 import bufferAdd  from "@/public/vim-plugin-reviews/lualine-nvim/buffer-added.png";
 import addWords  from "@/public/vim-plugin-reviews/lualine-nvim/cust-comp-words.png";
 
+import StatusLineComparison from '../components/status-line-comparison.mdx';
 
 # Lualine.nvim Review
 Prettyify you status line.
@@ -215,27 +216,26 @@ sections = {
         }
     }
 }
-
 ```
 
-<Gif 
-    video={"/vim-plugin-reviews/lualine-nvim/custom-component.mp4"}
-    topTitle='Completed Component'
-/>
+## Completed Component
+<div className='h-44 overflow-hidden'>
+    <div className='-translate-y-44'>
+        <Gif 
+        video={"/vim-plugin-reviews/lualine-nvim/custom-component.mp4"}
+        />
+
+    </div>
+</div>
 
 
 ## Limitations and Alternatives
-| | [Feline](https://github.com/famiu/feline.nvim "Feline") | [Lualine](https://github.com/nvim-lualine/lualine.nvim "Lualine") |[Lightline](https://github.com/itchyny/lightline.vim "Lightline") | [Airline](https://github.com/vim-airline/vim-airline "Airline") |
-| :-------------: | :------------: | :----------------: |:----------------: |:----------------: |
-| Speed           | 17.2 ms        | 24.8 ms            | 25.5 ms           | 79.9 ms           |
-| Themes          | ~17            | ~40                | ~40               | ~60               | 
-| Customizability |                | 8/10               |                   |                   |
-| Easy of Use     |                | 9/10               |                   |                   |
-| Wireds Pick     |                | <Checkmark/>       |                   |                   |
+<StatusLineComparison/>
 
 ## Can I edit my vimrc / init.lua Instead of Using This Plugin?
-Maybe, I played around with this a little and it is easy to append // to the from of a line, but do you want to figure that out for every language? I would recommend getting this plugin instead of reinventing the wheel!
+Yes you can and its not that hard!\
+Vim script -> [Build a Custom Vim Status Line](/blog/projects/programing/vim/build-a-vim-status-line  "Build a Custom Vim Status Line")\
+Lua -> [Build a Custom Neovim Status Line](/blog/projects/programing/vim/build-a-vim-status-line  "Build a Custom Neovim Status Line")
 
-Link to the project -> [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim  "Lualine.nvim")
-
+Link to the project -> [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim  "Lualine.nvim")\
 Regardless of what I think about the plugin, I want to say thank you to everyone that is contributing to Neovim! Nothing is meant to be negative, my opinions are just that, opinions!
