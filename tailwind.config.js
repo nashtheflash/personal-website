@@ -16,6 +16,7 @@ module.exports = {
             fontFamily: {
                 inter: ['var(--font-inter)'],
                 mori: ['var(--font-mori)'],
+                neue: ['var(--font-neue)'],
             },
             typography: {
                 DEFAULT: {

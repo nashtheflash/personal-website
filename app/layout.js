@@ -1,6 +1,4 @@
-import { NavBar } from "./components/general";
-
-import { inter, mori } from "../lib/fonts";
+import { inter, mori, neue } from "../lib/fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -10,9 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${inter.variable} ${mori.variable}`} data-theme="dark">
-            <body className='min-h-screen'>
-                <NavBar/>
+        <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable}`} data-theme="dark">
+            <body className='min-h-screen bg-base-100'>
                 {children}
             </body>
         </html>
