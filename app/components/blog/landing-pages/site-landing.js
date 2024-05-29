@@ -4,7 +4,7 @@ import { BoltIcon, ArrowTrendingUpIcon, ClockIcon, ArrowPathIcon } from '@heroic
 export function SiteLanding() {
     return(
         <div className='h-full w-full bg-gray-500 p-2'>
-            <div className='grid grid-cols-6 gap-1 justify-center items-center'>
+            <div className='grid grid-cols-1 gap-1 justify-center items-center lg:grid-cols-6'>
                 <About/>
                 <BlogSection/>
                 <StravaFeed/>
@@ -56,7 +56,7 @@ export function BlogSection() {
             <h1>Programing</h1>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
+                    <img src="https://imgk.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide4" className="btn btn-circle">❮</a> 
                         <a href="#slide2" className="btn btn-circle">❯</a>
@@ -131,10 +131,17 @@ export function RecentYoutube(){
         <div className='col-span-3 flex flex-col justify-start items-start bg-base-200 rounded-md'>
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Recent Youtube</h1>
             <p>This video continues the Youtube searies of reviewing Neovim plugins. The plugin that is being looked at is comment.nvim. I have been using this for awhile and really like it!</p>
-            <div className='w-full flex justify-center items-center mt-3'>
-                <BasicVideo>
-                    <iframe width="660" height="415" src="https://www.youtube.com/embed/3N2lB26FTPU?si=8k-ufvhqwOd1gcQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </BasicVideo>
+            <div className='flex justify-center items-center w-full mt-3'>
+                    <iframe 
+                        width="660" 
+                        height="460" 
+                        src="https://www.youtube.com/embed/3N2lB26FTPU?si=8k-ufvhqwOd1gcQo" 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen>
+                    </iframe>
             </div>
         </div>
     )
@@ -145,7 +152,7 @@ export function StravaFeed() {
         <div className='row-span-3 h-full col-span-3 py-5 bg-base-100 rounded-md'>
 
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Strava Feed</h1>
-            <div className='flex flex-col gap-3 justify-center items-start'>
+            <div className='flex flex-col gap-3 justify-center items-center'>
                 <StravaActivityBrief/>
                 <StravaActivityBrief/>
                 <StravaActivityBrief/>
@@ -162,14 +169,14 @@ export function StravaFeed() {
 
 export function StravaActivityBrief() {
     return(
-        <div className="stats shadow bg-base-300">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 min-[1480px]:grid-cols-4 bg-base-300">
 
-            <div className="stat">
-                <div className="stat-figure text-secondary">
+            <div className="stat place-items-center">
+                <div className="stat-title">Activity</div>
+                <div className="stat-value text-secondary">
                     <BoltIcon className='h-8 w-8'/>
                 </div>
-                <div className="stat-title">Activity</div>
-                <div className="stat-value">Running</div>
+                <div className="stat-desc">Jan 1st</div>
             </div>
 
             <div className="stat">
@@ -180,13 +187,13 @@ export function StravaActivityBrief() {
                 <div className="stat-value">31K</div>
             </div>
 
-            <div className="stat">
-                <div className="stat-figure text-secondary">
-                    <ClockIcon className='h-8 w-8'/>
+                <div className="stat">
+                    <div className="stat-figure text-secondary">
+                        <ClockIcon className='h-8 w-8'/>
+                    </div>
+                    <div className="stat-title">Total Time</div>
+                    <div className="stat-value">4,200</div>
                 </div>
-                <div className="stat-title">Total Time</div>
-                <div className="stat-value">4,200</div>
-            </div>
 
             <div className="stat">
                 <div className="stat-figure text-secondary">
@@ -240,7 +247,7 @@ export function SocialMedia() {
             <div className="divider mt-0"></div>
             <div className='flex justify-between items-center gap-6'>
                 {/* Github */}
-                <span className="[&>svg]:h-20 [&>svg]:w-20">
+                <span className="[&>svg]:h-full [&>svg]:w-full [&>svg]:max-h-48 [&>svg]:max-w-48">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -250,7 +257,7 @@ export function SocialMedia() {
                     </svg>
                 </span>
                 {/* Instagram */}
-                <span className="[&>svg]:h-20 [&>svg]:w-20">
+                <span className="[&>svg]:h-full [&>svg]:w-full [&>svg]:max-h-48 [&>svg]:max-w-48">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -261,7 +268,7 @@ export function SocialMedia() {
                 </span>
 
                 {/* Linkedin */}
-                <span className="[&>svg]:h-20 [&>svg]:w-20">
+                <span className="[&>svg]:h-full [&>svg]:w-full [&>svg]:max-h-48 [&>svg]:max-w-48">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -272,7 +279,7 @@ export function SocialMedia() {
                 </span>
 
                 {/* Youtube */}
-                <span className="[&>svg]:h-20 [&>svg]:w-20">
+                <span className="[&>svg]:h-full [&>svg]:w-full [&>svg]:max-h-48 [&>svg]:max-w-48">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
