@@ -1,16 +1,17 @@
-import { RustChapter2, BasicVideo } from "@/app/components/blog";
+import { RustChapter2 } from "@/app/components/blog";
 import { BoltIcon, ArrowTrendingUpIcon, ClockIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
 
 export function SiteLanding() {
     return(
         <div className='h-full w-full bg-gray-500 p-2'>
-            <div className='grid grid-cols-1 gap-1 justify-center items-center lg:grid-cols-6'>
+            <div className='grid grid-cols-1 gap-1 justify-center items-start lg:grid-cols-6 lg:grid-rows-12'>
                 <About/>
                 <BlogSection/>
+                <Topic/>
                 <StravaFeed/>
+                <SocialMedia/>
                 <ProjectShowcase/>
                 <RecentYoutube/>
-                <SocialMedia/>
             </div>
         </div>
     )
@@ -18,7 +19,7 @@ export function SiteLanding() {
 
 export function BlogSection() {
     return(
-        <div className='flex flex-col col-span-3 row-span-2 bg-base-100 rounded-md p-2'>
+        <div className='flex col-span-4 row-span-2 w-full h-full bg-base-100 rounded-md p-2'>
             <h1>Blog Posts</h1>
 
             <h1>Travel</h1>
@@ -128,7 +129,7 @@ export function BlogRecent() {
 
 export function RecentYoutube(){
     return(
-        <div className='col-span-3 flex flex-col justify-start items-start bg-base-200 rounded-md'>
+        <div className='col-span-3 row-span-3 h-full w-full flex flex-col justify-start items-start bg-base-200 rounded-md'>
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Recent Youtube</h1>
             <p>This video continues the Youtube searies of reviewing Neovim plugins. The plugin that is being looked at is comment.nvim. I have been using this for awhile and really like it!</p>
             <div className='flex justify-center items-center w-full mt-3'>
@@ -149,13 +150,9 @@ export function RecentYoutube(){
 
 export function StravaFeed() {
     return(
-        <div className='row-span-3 h-full col-span-3 py-5 bg-base-100 rounded-md'>
-
+    <div className='row-span-3 md:row-span-6 lg:row-span-4 min-[1480px]:row-span-4 h-full col-span-4 py-5 bg-base-100 rounded-md'>
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Strava Feed</h1>
             <div className='flex flex-col gap-3 justify-center items-center'>
-                <StravaActivityBrief/>
-                <StravaActivityBrief/>
-                <StravaActivityBrief/>
                 <StravaActivityBrief/>
                 <StravaActivityBrief/>
                 <StravaActivityBrief/>
@@ -210,7 +207,7 @@ export function StravaActivityBrief() {
 
 export function ProjectShowcase() {
     return(
-        <div className='col-span-3 bg-base-100 rounded-md'>
+        <div className='col-span-3 row-span-2 bg-base-100 rounded-md'>
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Recent Project</h1>
             <p>I am learingin rust. In the process I am adding all of the projects to this websit. The below game is chapter 2 from the book. It is actuall rust code! Pretty cool right?</p>
             <RustChapter2/>
@@ -242,7 +239,7 @@ export function BlogFeature() {
 
 export function SocialMedia() {
     return(
-        <div className='flex flex-col col-span-2 px-2 py-1 bg-base-100 rounded-md'>
+        <div className='flex flex-col col-span-2 row-span-1 w-full h-full px-2 py-1 bg-base-100 rounded-md'>
             <h1 className='font-mori text-2xl'>Social Media</h1>
             <div className="divider mt-0"></div>
             <div className='flex justify-between items-center gap-6'>
@@ -295,7 +292,7 @@ export function SocialMedia() {
 
 export function About() {
     return(
-        <div className='flex flex-col col-span-3 bg-base-100 rounded-md'>
+        <div className='flex flex-col col-span-2 row-span-2 w-full h-full bg-base-100 rounded-md'>
            
             <div className='flex justify-start items-end gap-4 p-2'>
                 <div className="avatar">
@@ -314,3 +311,32 @@ export function About() {
     )
 }
 
+export function Topic() {
+    return(
+        <div className="bg-base-100 w-fill h-full col-span-2 row-span-3 rounded-md">
+            <h1 className='font-mori text-6xl font-bold tracking-wide'>Navagation</h1>
+            <ul className="menu bg-base-100 w-56 rounded-box">
+                <li><a>Item 1</a></li>
+                <li>
+                    <details open>
+                        <summary>Parent</summary>
+                        <ul>
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                            <li>
+                                <details open>
+                                    <summary>Parent</summary>
+                                    <ul>
+                                        <li><a>Submenu 1</a></li>
+                                        <li><a>Submenu 2</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Item 3</a></li>
+            </ul>
+        </div>
+    )
+}
