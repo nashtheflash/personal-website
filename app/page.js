@@ -9,7 +9,7 @@ export const metadata = generateMetadata({
 
 export default function Home() {
     return (
-        <div className=''>
+        <div className='text-white'>
             <SiteLanding/>
         </div>
     )
