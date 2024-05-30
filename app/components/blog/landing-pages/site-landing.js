@@ -1,17 +1,32 @@
+import Image from 'next/image';
 import { RustChapter2 } from "@/app/components/blog";
-import { BoltIcon, ArrowTrendingUpIcon, ClockIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
+import { BoltIcon, ArrowTrendingUpIcon, ClockIcon, ArrowPathIcon, MapPinIcon } from '@heroicons/react/24/outline'
+
+import artOne from "@/public/art/week-one/activity-one.JPG";
+import artTwo from "@/public/art/week-one/activity-two.JPG";
+import artThree from "@/public/art/week-one/activity-three.JPG";
 
 export function SiteLanding() {
     return(
         <div className='h-full w-full bg-gray-500 p-2'>
-            <div className='grid grid-cols-1 gap-1 justify-center items-start lg:grid-cols-6 lg:grid-rows-12'>
-                <About/>
-                <BlogSection/>
-                <Topic/>
+            <div className='flex max-[995px]:flex-col gap-2'>
+                <div className='flex flex-col gap-2'>
+                    <About/>
+                    <SocialMedia/>
+                </div>
+                <div className='grow'>
+                    <BlogFeature/>
+                </div>
+            </div>
+            <div className='flex max-[995px]:flex-col gap-2 mt-2'>
+                    <Nav/>
+                <div className='flex flex-col gap-2 grow'>
+                    <ProjectShowcase/>
+                    <RecentYoutube/>
+                </div>
+            </div>
+            <div className='mt-2'>
                 <StravaFeed/>
-                <SocialMedia/>
-                <ProjectShowcase/>
-                <RecentYoutube/>
             </div>
         </div>
     )
@@ -19,101 +34,120 @@ export function SiteLanding() {
 
 export function BlogSection() {
     return(
-        <div className='flex col-span-4 row-span-2 w-full h-full bg-base-100 rounded-md p-2'>
-            <h1>Blog Posts</h1>
-
-            <h1>Travel</h1>
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a> 
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a> 
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a> 
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">❮</a> 
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-            </div>
-            
-            <h1>Programing</h1>
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://imgk.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a> 
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a> 
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a> 
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">❮</a> 
-                        <a href="#slide1" className="btn btn-circle">❯</a>
+        <div className='grow flex flex-col md:flex-row h-fit bg-base-100 rounded-md p-2 gap-2'>
+            <div className='flex flex-col justify-center items-center'>
+                <h1>Travel</h1>
+                <div className="carousel max-w-[500px]">
+                    <div id="slide1" className="carousel-item relative w-full">
+                        <Image
+                            src={artOne}
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                        />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a> 
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide2" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" className="btn btn-circle">❮</a> 
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide3" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" className="btn btn-circle">❮</a> 
+                            <a href="#slide4" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide4" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" className="btn btn-circle">❮</a> 
+                            <a href="#slide1" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <h1>Outdoor</h1>
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a> 
-                        <a href="#slide2" className="btn btn-circle">❯</a>
+            <div className='flex flex-col justify-center items-center'>
+                <h1>Programing</h1>
+                <div className="carousel max-w-[500px]">
+                    <div id="slide1" className="carousel-item relative w-full">
+                        <Image
+                            src={artTwo}
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                        />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a> 
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide2" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" className="btn btn-circle">❮</a> 
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide3" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" className="btn btn-circle">❮</a> 
+                            <a href="#slide4" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide4" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" className="btn btn-circle">❮</a> 
+                            <a href="#slide1" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
-                </div> 
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a> 
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a> 
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-                <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">❮</a> 
-                        <a href="#slide1" className="btn btn-circle">❯</a>
+                </div>
+            </div>
+            
+            <div className='flex flex-col justify-center items-center'>
+                <h1>Outdoor</h1>
+                <div className="carousel max-w-[500px]">
+                    <div id="slide1" className="carousel-item relative w-full">
+                        <Image
+                            src={artThree}
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                        />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a> 
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide2" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" className="btn btn-circle">❮</a> 
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide3" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" className="btn btn-circle">❮</a> 
+                            <a href="#slide4" className="btn btn-circle">❯</a>
+                        </div>
+                    </div> 
+                    <div id="slide4" className="carousel-item relative w-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" className="btn btn-circle">❮</a> 
+                            <a href="#slide1" className="btn btn-circle">❯</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,9 +155,14 @@ export function BlogSection() {
     )
 }
 
-export function BlogRecent() {
+export function Blog() {
     return(
-    <h1>personal landing</h1>
+        <Image
+            src={artOne}
+            width={500}
+            height={500}
+            alt="Picture of the author"
+        />
     )
 }
 
@@ -150,7 +189,7 @@ export function RecentYoutube(){
 
 export function StravaFeed() {
     return(
-    <div className='row-span-3 md:row-span-6 lg:row-span-4 min-[1480px]:row-span-4 h-full col-span-4 py-5 bg-base-100 rounded-md'>
+    <div className='h-full py-5 bg-base-100 rounded-md'>
             <h1 className='font-mori text-6xl w-fill font-bold tracking-wide mb-6'>Strava Feed</h1>
             <div className='flex flex-col gap-3 justify-center items-center'>
                 <StravaActivityBrief/>
@@ -166,17 +205,21 @@ export function StravaFeed() {
 
 export function StravaActivityBrief() {
     return(
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 min-[1480px]:grid-cols-4 bg-base-300">
+        <div className="stats shadow bg-base-300">
 
-            <div className="stat place-items-center">
-                <div className="stat-title">Activity</div>
-                <div className="stat-value text-secondary">
-                    <BoltIcon className='h-8 w-8'/>
-                </div>
-                <div className="stat-desc">Jan 1st</div>
+            <div className="stat place-self-center max-[1082px]:hidden">
+                <div className="stat-value">Evening Run</div>
             </div>
 
             <div className="stat">
+                <div className="stat-figure text-secondary">
+                    <BoltIcon className='h-8 w-8'/>
+                </div>
+                <div className="stat-title">Activity</div>
+                <div className="stat-value">Running</div>
+            </div>
+
+            <div className="stat max-[426px]:hidden">
                 <div className="stat-figure text-secondary">
                     <ArrowPathIcon className='h-8 w-8'/>
                 </div>
@@ -184,7 +227,7 @@ export function StravaActivityBrief() {
                 <div className="stat-value">31K</div>
             </div>
 
-                <div className="stat">
+                <div className="stat max-[822px]:hidden">
                     <div className="stat-figure text-secondary">
                         <ClockIcon className='h-8 w-8'/>
                     </div>
@@ -192,12 +235,20 @@ export function StravaActivityBrief() {
                     <div className="stat-value">4,200</div>
                 </div>
 
-            <div className="stat">
+            <div className="stat max-[623px]:hidden">
                 <div className="stat-figure text-secondary">
                     <ArrowTrendingUpIcon className='h-8 w-8'/>
                 </div>
                 <div className="stat-title">Elevation Gain</div>
                 <div className="stat-value">1,200</div>
+            </div>
+            
+            <div className="stat max-[1422px]:hidden">
+                <div className="stat-figure text-secondary">
+                    <MapPinIcon className='h-8 w-8'/>
+                </div>
+                <div className="stat-title">Location</div>
+                <div className="stat-value">Anchorage, Ak</div>
             </div>
 
         </div>
@@ -217,21 +268,18 @@ export function ProjectShowcase() {
 
 export function BlogFeature() {
     return(
-        <div>
-            <h1>Featured Artical</h1>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div> 
-                        <div className="badge badge-outline">Products</div>
-                    </div>
-                </div>
+        <div className='bg-base-100 p-5'>
+            <div className=''>
+                <h2 className='font-neue text-[15rem] leading-[11rem]'>Big Story</h2>
+                <p className='text-lg pl-3'>A Big Story is here, and this is the subheading</p>
+            </div>
+            <div className='flex justify-center items-center mt-5'>
+                <Image
+                    src={artOne}
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                />
             </div>
         </div>
     )
@@ -239,7 +287,7 @@ export function BlogFeature() {
 
 export function SocialMedia() {
     return(
-        <div className='flex flex-col col-span-2 row-span-1 w-full h-full px-2 py-1 bg-base-100 rounded-md'>
+        <div className='flex flex-col w-full h-full px-2 py-1 bg-base-100 rounded-md'>
             <h1 className='font-mori text-2xl'>Social Media</h1>
             <div className="divider mt-0"></div>
             <div className='flex justify-between items-center gap-6'>
@@ -292,9 +340,8 @@ export function SocialMedia() {
 
 export function About() {
     return(
-        <div className='flex flex-col col-span-2 row-span-2 w-full h-full bg-base-100 rounded-md'>
-           
-            <div className='flex justify-start items-end gap-4 p-2'>
+        <div className='flex flex-col grow-0 w-full h-full bg-base-100 rounded-md'>
+            <div className='flex justify-start items-end gap-4 p-2 max-[470px]:flex-col max-[470px]:items-start'>
                 <div className="avatar">
                     <div className="w-24 rounded-full">
                         <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -303,40 +350,62 @@ export function About() {
                 <h1 className='font-mori text-6xl font-bold tracking-wide'>Wired Woodsman</h1>
             </div>
             <div className="divider mt-0"></div>
-            <p className='font-neue text-6xl'>Enjoying the <span className="text-accent">outdoors</span></p> 
-            <p className='font-neue text-6xl'>Building <span className="text-accent">software</span></p>
-            <p className='font-neue text-6xl text-accent'>Alaska</p>
+                <div className='place-self-start'>
+                    <p className='font-neue text-6xl'>get <span className="text-accent">outdoors</span></p> 
+                    <p className='font-neue text-6xl'>build <span className="text-accent">software</span></p>
+                    <p className='font-neue text-6xl text-accent'>Alaska</p>
+            </div>
             <br/>
         </div>
     )
 }
 
-export function Topic() {
+export function Nav() {
     return(
-        <div className="bg-base-100 w-fill h-full col-span-2 row-span-3 rounded-md">
-            <h1 className='font-mori text-6xl font-bold tracking-wide'>Navagation</h1>
-            <ul className="menu bg-base-100 w-56 rounded-box">
-                <li><a>Item 1</a></li>
-                <li>
-                    <details open>
-                        <summary>Parent</summary>
+        <ul className="menu max-[995px]:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
+            <li>
+                <a>Solutions</a>
+                <ul>
+                    <li><a>Design</a></li>
+                    <li><a>Development</a></li>
+                    <li><a>Hosting</a></li>
+                    <li><a>Domain register</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Enterprise</a>
+                <ul>
+                    <li><a>CRM software</a></li>
+                    <li><a>Marketing management</a></li>
+                    <li><a>Security</a></li>
+                    <li><a>Consulting</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Products</a>
+                <ul>
+                    <li><a>UI Kit</a></li>
+                    <li><a>Wordpress themes</a></li>
+                    <li><a>Wordpress plugins</a></li>
+                    <li>
+                        <a>Open source</a>
                         <ul>
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li>
-                                <details open>
-                                    <summary>Parent</summary>
-                                    <ul>
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
+                            <li><a>Auth management system</a></li>
+                            <li><a>VScode theme</a></li>
+                            <li><a>Color picker app</a></li>
                         </ul>
-                    </details>
-                </li>
-                <li><a>Item 3</a></li>
-            </ul>
-        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Company</a>
+                <ul>
+                    <li><a>About us</a></li>
+                    <li><a>Contact us</a></li>
+                    <li><a>Privacy policy</a></li>
+                    <li><a>Press kit</a></li>
+                </ul>
+            </li>
+        </ul>
     )
 }

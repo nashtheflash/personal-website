@@ -35,7 +35,7 @@ export function RustChapter2() {
     return (
         <>
             <div className='flex justify-start items-center'>
-                <div className="stats shadow">
+                <div className="stats shadow bg-base-200 mt-2">
                     <div className="stat">
                         <div className="stat-title">Current Number</div>
                         <div className='flex justify-center item-center'>
@@ -56,13 +56,13 @@ export function RustChapter2() {
                     />
                     <button 
                         type='submit' 
-                        className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md"
+                        className="btn"
                     >
                         { loading && <span className="loading loading-spinner"></span>}
                         {currentNumber !== -1 ? 'Submit Guess' : 'Start Game'}
                     </button>
-                    <h5 className='w-full'>{ gamePrompt }</h5>
                 </div>
+                <h5 className='w-full p-2'>{ gamePrompt }</h5>
             </form>
         </>
     )
