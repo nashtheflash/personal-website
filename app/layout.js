@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { inter, mori, neue } from "../lib/fonts";
 import "./globals.css";
 
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
         <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable}`} data-theme="dark">
             <body className='min-h-screen bg-base-100'>
                 {children}
+                <SpeedInsights />
             </body>
         </html>
     );
