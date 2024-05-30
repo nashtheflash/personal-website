@@ -270,7 +270,7 @@ export function BlogFeature() {
     return(
         <div className='bg-base-100 p-5'>
             <div className=''>
-                <h2 className='font-neue text-[15rem] leading-[11rem]'>Big Story</h2>
+                <h2 className='font-neue text-[10rem] leading-[9rem]'>Big Story</h2>
                 <p className='text-lg pl-3'>A Big Story is here, and this is the subheading</p>
             </div>
             <div className='flex justify-center items-center mt-5'>
