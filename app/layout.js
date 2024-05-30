@@ -1,4 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/react';
+
 import { inter, mori, neue } from "../lib/fonts";
 import "./globals.css";
 
@@ -13,6 +15,7 @@ export default function RootLayout({ children }) {
             <body className='min-h-screen bg-base-100'>
                 {children}
                 <SpeedInsights />
+                <Analytics/>
             </body>
         </html>
     );
