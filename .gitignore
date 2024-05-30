@@ -38,3 +38,6 @@ target/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#SEO
+/public/sitemap.xml
