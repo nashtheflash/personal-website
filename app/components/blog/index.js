@@ -27,6 +27,11 @@ export { CelsiusToFahrenheitToKelvin } from "./projects/rust-chapter-3-ctof";
 
 //Landing Pages
 export { SiteLanding } from "./landing-pages/site-landing";
+export { TopicLanding } from "./landing-pages/topic-landing";
+
+//Small Topics
+export { TopicSmall } from "./topic/topic-small";
+export { TopicLarge } from "./topic/topic-large";
 
 //Emoji
 export { Checkmark } from './emojis/checkmark';
