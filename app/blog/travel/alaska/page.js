@@ -8,9 +8,10 @@ export const metadata = generateMetadata({
 });
 
 import artOne from "@/public/art/week-one/activity-one.JPG";
+
 const topics = [
-    <TopicSmall title='Artical 1' subheading='this is a sub' picture={artOne} link='/blog/travel/alaska'/>,
-    <TopicSmall title='Artical 2' subheading='this is a sub' picture={artOne} link='/blog/travel/costa-rica'/>
+    <TopicSmall key={1}  title='Artical 1' subheading='this is a sub' picture={artOne} link='/blog/travel/alaska'/>,
+    <TopicSmall key={2} title='Artical 2' subheading='this is a sub' picture={artOne} link='/blog/travel/costa-rica'/>
 ]
 
 export default function Travel() {
