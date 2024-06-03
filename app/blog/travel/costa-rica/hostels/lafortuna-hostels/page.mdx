@@ -1,8 +1,15 @@
+import { generateMetadata } from '@/utils';
 import { CenteredImage, TwoCenteredImages, Footer } from '@/app/components/blog'
 
 import streetPicture from "@/public/costa-rica/street-picture.JPEG";
 import alphaAreanl from "@/public/costa-rica/alpha-arenal.JPEG";
 import laFortunaLodge from "@/public/costa-rica/la-fortuna-lodge.JPEG";
+
+export const metadata = generateMetadata({
+    title:"La Fortuna Hostels",
+    description:"My impression of the La Fortuna hostel situation. There are alot of options in this small town",
+    keywords: ['Alpha Arenal', 'hostel', 'review', 'La Fortuna', 'Nash Bostwick']
+});
 
 # Hostels in La Fortuna
 
@@ -17,14 +24,15 @@ Hostel row sits on a dead end road or cul-de-sac type thing that has the volcano
 
 We walked up and down this road to town frequently in various states of intoxication and at all hours of the day and night. I never felt out of place or uncomfortable. The to hostels are La Fortuna Lodge on the left and Alpha Arenal on the right and Hotel Arenal Xilopalo at the end of the road. La Fortuna Lodge and Xilopalo seemed like it had an older crowd, older than 25, and Alpha Arenal was younger. I am 27 and defiantly felt a little old while staying at the Alpha. I like to do some working while traveling and both places had areas to do that. Basically if you have extra cash to spend, I would stay at La Fortuna Lodge. When you get there you'll be like, 'dang this place it pretty sick'.
 
-
 Here are some shots of the Tuna and Alpha Arenal, keep in mind we only stayed at Alpha Arenal!
 <TwoCenteredImages image={[laFortunaLodge, alphaAreanl]} altText={['La Fortuna Lodge', 'Alpha Arenal Hostel']} width={'h-2/3'} height={'w-2/3'} />
 
 Another option is the Selena in town. We stayed at a few of these on the cost later in our trip and they were nice but more expensive. Defiantly worth taking a look at!
 
-
-
 As with all of my reviews keep in mind I'm just a dude from Alaska.
 Have fun out there.
 
+<Footer 
+    galleryUrl='/photo-gallery/la-fortuna-hostels' 
+    related={['alpha-arenal','tom-pan-german-bakery','manuel-antonio']}
+/>

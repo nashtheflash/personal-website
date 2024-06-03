@@ -1,3 +1,4 @@
+import { generateMetadata } from '@/utils';
 import { PhotoGallery } from "@/app/components/blog";
 
 import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
@@ -23,6 +24,12 @@ const photos = [
     {nextImg: welcomeSign, publicUrl: "/costa-rica/german-bakery/welcome-sign.JPEG"},
     {nextImg: working, publicUrl: "/costa-rica/german-bakery/working.JPEG"},
 ]
+
+export const metadata = generateMetadata({
+    title:"Tom Pan German Bakery",
+    description:"All the pictures that I took at Tom Pan German Bakery",
+    keywords: ['Food and Drink', 'Costa Rica', 'Pictures', 'Tom Pan German Bakery', 'Nash Bostwick']
+});
 
 export default function GermanBakery() {
     return(

@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAt-8Idk0EE9EFo5ueyPq3MYkyVuNkSVfo",
-  authDomain: "personal-websi-5fafc.firebaseapp.com",
-  projectId: "personal-websi-5fafc",
-  storageBucket: "personal-websi-5fafc.appspot.com",
-  messagingSenderId: "899815832674",
-  appId: "1:899815832674:web:87b15450aa414a0dfae53b",
-  measurementId: "G-49PTYZS2CW"
+  apiKey: "AIzaSyDuPpxS9pthcVLksqeG1JPtuESYeAAkLVE",
+  authDomain: "wired-woodsman.firebaseapp.com",
+  projectId: "wired-woodsman",
+  storageBucket: "wired-woodsman.appspot.com",
+  messagingSenderId: "451357413235",
+  appId: "1:451357413235:web:28689f1f9f3e85f5ff7f06"
 };
 
 // Initialize Firebase

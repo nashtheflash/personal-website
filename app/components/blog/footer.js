@@ -1,22 +1,25 @@
 import Link from 'next/link';
+import { getFooterItem } from '@/lib/db';
 import { PhoneIcon, GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
-export function Footer({ phone, website, address, googleMapsLink, galleryUrl }) {
+export async function Footer({ phone, website, address, googleMapsLink, galleryUrl, related}) {
     return (
         <>
             <AllPhotos galleryUrl={galleryUrl}/>
+            { (phone != undefined || website != undefined || address != undefined || googleMapsLink != undefined) &&
             <Contact 
                 phone={phone}
                 website={website}
                 address={address}
                 googleMapsLink={googleMapsLink}
             />
-            <h2>Related Articals</h2>
-            <div className='flex justify-center items-center gap-2 mb-10'>
-                <Card/>
-                <Card/>
-                <Card/>
-            </div>
+            }
+            { related &&
+                <>
+                    <h2>Related Articals</h2>
+                    <Related related={related}/>
+                </>
+            }
         </>
     )
 }
@@ -57,14 +60,35 @@ function AllPhotos({galleryUrl}) {
     )
 }
 
-function Card() {
+async function Related({related}) {
+    
+    const [ relatedOne, relatedTwo, relatedThree ] = await Promise.all([
+        getFooterItem(related[0]),
+        getFooterItem(related[1]),
+        getFooterItem(related[2]),
+    ]);
+
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure className='m-0'><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title mt-2">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
+        <div className='flex justify-center items-stretch gap-2 mb-10'>
+            <Card data={relatedOne}/>
+            <Card data={relatedTwo}/>
+            <Card data={relatedThree}/>
+        </div>
+    )
+}
+
+function Card({data}) {
+    const {title, description, thumbnail, url} = data;
+
+    return (
+        <div className="card card-compact w-96 bg-base-100 shadow-xl ronded-lg overflow-hidden">
+            <Link href={url} className='no-underline'>
+                { thumbnail ? <figure className='m-0'><img src={thumbnail} alt="Shoes" /></figure> : <figure className='m-0'><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure> }
+                <div className="card-body">
+                    { title ? <h2 className="card-title mt-2">{title}</h2> : <h2 className="card-title mt-2">Shoes!</h2> }
+                    { description ? <p>{description}</p> : <p>If a dog chews shoes whose shoes does he choose?</p>}            
+                </div>
+            </Link>
         </div>
     )
 }
