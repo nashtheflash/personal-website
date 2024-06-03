@@ -11,7 +11,7 @@ export function MdxLayoutFullWidth({ children }) {
 export function MdxLayout({ children }) {
   // Create any shared layout or styles here
   return (
-    <div className="prose">
+    <div className="prose w-screen px-6">
       {children}
     </div>
   )
