@@ -1,14 +1,15 @@
-import { redirect } from 'next/navigation';
 import { generateMetadata } from '@/utils';
 import { BasicVideo, Gif, CenteredImage, TwoCenteredImages, Checkmark, FromToCode } from '@/app/components/blog';
 
 export const metadata = generateMetadata({
-    title:"Lualine Review",
+    title:"AirLine Review",
     description:"How are people getting a cool status line in Neovim? A complete review of the NeoVim plugin, lualine. This is part of my series of trying out and reviewing Vim and NeoVim plugins",
     keywords: ['Neovim', 'Neovim Plugins', 'lualine', 'review', 'Nash Bostwick']
 }); 
 
-import defaultLine from "@/public/vim-plugin-reviews/lualine-nvim/default-lua-line.png";
+import defaultLine from "@/public/vim-plugin-reviews/airline-nvim/airline-default.png";
+import exampleLine from "@/public/vim-plugin-reviews/airline-nvim/airline-example.png";
+import base16Line from "@/public/vim-plugin-reviews/airline-nvim/base16-example.png";
 import rightSide from "@/public/vim-plugin-reviews/lualine-nvim/right-lua-line.JPEG";
 import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PNG";
 import bufferAdd  from "@/public/vim-plugin-reviews/lualine-nvim/buffer-added.png";
@@ -16,8 +17,8 @@ import addWords  from "@/public/vim-plugin-reviews/lualine-nvim/cust-comp-words.
 
 import StatusLineComparison from '../components/status-line-comparison.mdx';
 
-# Lualine.nvim Review
-A blazing fast and easy to configure Neovim statusline written in Lua.
+# Airline.nvim Review
+Lean & mean status/tabline for vim that's light as air.
 
 <BasicVideo>
     <iframe 
@@ -39,62 +40,46 @@ A blazing fast and easy to configure Neovim statusline written in Lua.
 </BasicVideo>
 
 ## What Does This Plugin Do?
-Basically, this plugin is just a theme for your status line, but it also goes a little further than that. You can also show all kinds of information on it. There are tons of themes. You can check them out here -> [Lualine Themes](https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md  "Lualine Themes"). I am going to start by using the default theme and here is what my line looks like.
+Basically, this plugin is just a theme for your status line, but it also goes a little further than that. You can also show all kinds of information on it. There are tons of themes. You can check them out here -> [Airline Themes](https://github.com/vim-airline/vim-airline/wiki/Screenshots  "Airline Themes"). I am going to start by using the default theme and here is what my line looks like.
 
-<CenteredImage image={defaultLine} altText={'Buffer Added to Status Line'} width={'w-full'} height={'h-full'}/>
-
-Looking Closer:
-<TwoCenteredImages image={[leftSide, rightSide]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
+<CenteredImage image={exampleLine} altText={'Status Line example'} width={'w-2/3'} height={'h-3/4'}/>
 
 ## Instillation
+For more context, You can see how I setup my Neovim Files here: [Wired's Neovim File Structure][999]
+
+The readme offers options for many plugin managers:
+| Plugin Manager | Install with... |
+| ------------- | ------------- |
+| [Pathogen][11] | `git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline`<br/>Remember to run `:Helptags` to generate help tags |
+| [NeoBundle][12] | `NeoBundle 'vim-airline/vim-airline'` |
+| [Vundle][13] | `Plugin 'vim-airline/vim-airline'` |
+| [Plug][40] | `Plug 'vim-airline/vim-airline'` |
+| [VAM][22] | `call vam#ActivateAddons([ 'vim-airline' ])` |
+| [Dein][52] | `call dein#add('vim-airline/vim-airline')` |
+| [minpac][55] | `call minpac#add('vim-airline/vim-airline')` |
+| pack feature (native Vim 8 package feature)| `git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline`<br/>Remember to run `:helptags ~/.vim/pack/dist/start/vim-airline/doc` to generate help tags |
+| manual | copy all of the files into your `~/.vim` directory |
+
+I use vim-plug so I'll add this to my plugins file:
 ```lua
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
+Plug 'vim-airline/vim-airline'
 ```
 
-Default Config that I added to lualine.lua:
+No need to add additional configuration. This plugin will work of of the box and look like:
+<CenteredImage image={defaultLine} altText={'Airline default'} width={'w-2/3'} height={'h-3/4'}/>
+
+A little ugly, but lets fix that! I want it to look like the example at the top of this article, so I am going to change the theme to base16. In order to do that we need to install the theme plugin
 ```lua
-    require('lualine').setup {
-      options = {
-        icons_enabled = true,
-        theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-        disabled_filetypes = {
-          statusline = {},
-          winbar = {},
-        },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = false,
-        refresh = {
-          statusline = 1000,
-          tabline = 1000,
-          winbar = 1000,
-        }
-      },
-      sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
-        lualine_x = {'encoding', 'fileformat', 'filetype'},
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
-      },
-      inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
-        lualine_y = {},
-        lualine_z = {}
-      },
-      tabline = {},
-      winbar = {},
-      inactive_winbar = {},
-      extensions = {}
-    }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 ```
+To set the theme, and if you are using my folder structure, you will go to .vim/vimrc and add this line:
+```vim
+let g:airline_theme='base16'
+```
+No our line looks like:
+<CenteredImage image={base16Line} altText={'Airline Base16 Theme'} width={'w-2/3'} height={'h-3/4'}/>
+This is good, but it doesnt really look like the example, lets change the dividers. To do that, I am going to try a million things and non of them will work. I am thinking that this would work better with vim, but this is a Neovim plugin review. I wouldn't say it's impossible to change the dividers, but it will take some work that is out of scope of the review.
 
 ## Components
 Components are an easy way to add functionality to Lualine. Here are the avalable components: 
@@ -239,3 +224,70 @@ Lua -> [Build a Custom Neovim Status Line](/blog/projects/programing/vim/build-a
 
 Link to the project -> [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim  "Lualine.nvim")\
 Regardless of what I think about the plugin, I want to say thank you to everyone that is contributing to Neovim! Nothing is meant to be negative, my opinions are just that, opinions!
+
+[999]: /blog/projects/programing/vim/setup
+
+
+[1]: https://github.com/Lokaltog/vim-powerline
+[2]: https://github.com/powerline/powerline
+[3]: https://github.com/Lokaltog/powerline-fonts
+[4]: https://github.com/tpope/vim-fugitive
+[5]: https://github.com/scrooloose/syntastic
+[6]: https://github.com/bling/vim-bufferline
+[7]: https://github.com/bling/minivimrc
+[8]: http://en.wikipedia.org/wiki/Open/closed_principle
+[9]: https://github.com/Shougo/unite.vim
+[10]: https://github.com/ctrlpvim/ctrlp.vim
+[11]: https://github.com/tpope/vim-pathogen
+[12]: https://github.com/Shougo/neobundle.vim
+[13]: https://github.com/VundleVim/Vundle.vim
+[14]: https://github.com/vim-airline/vim-airline/wiki/Screenshots
+[15]: https://github.com/techlivezheng/vim-plugin-minibufexpl
+[16]: https://github.com/sjl/gundo.vim
+[17]: https://github.com/mbbill/undotree
+[18]: https://github.com/preservim/nerdtree
+[19]: https://github.com/majutsushi/tagbar
+[20]: https://powerline.readthedocs.org/en/master/installation.html#patched-fonts
+[21]: https://github.com/ludovicchabant/vim-lawrencium
+[22]: https://github.com/MarcWeber/vim-addon-manager
+[23]: https://github.com/altercation/solarized
+[24]: https://github.com/chriskempson/tomorrow-theme
+[25]: https://github.com/tomasr/molokai
+[26]: https://github.com/nanotech/jellybeans.vim
+[27]: https://github.com/vim-airline/vim-airline/wiki/FAQ
+[28]: https://github.com/chrisbra/csv.vim
+[29]: https://github.com/airblade/vim-gitgutter
+[30]: https://github.com/mhinz/vim-signify
+[31]: https://github.com/jmcantrell/vim-virtualenv
+[32]: https://github.com/chriskempson/base16-vim
+[33]: https://github.com/vim-airline/vim-airline/wiki/Test-Plan
+[34]: http://eclim.org
+[35]: https://github.com/edkolev/tmuxline.vim
+[36]: https://github.com/edkolev/promptline.vim
+[37]: https://github.com/gcmt/taboo.vim
+[38]: https://github.com/vim-ctrlspace/vim-ctrlspace
+[39]: https://github.com/tomtom/quickfixsigns_vim
+[40]: https://github.com/junegunn/vim-plug
+[41]: https://github.com/bling
+[42]: https://github.com/chrisbra
+[43]: https://github.com/vim-airline/vim-airline/wiki/Becoming-a-Maintainer
+[45]: https://github.com/vim-airline/vim-airline/commit/d7fd8ca649e441b3865551a325b10504cdf0711b
+[46]: https://github.com/vim-airline/vim-airline-themes#vim-airline-themes--
+[47]: https://github.com/mildred/vim-bufmru
+[48]: https://github.com/ierton/xkb-switch
+[49]: https://github.com/vovkasm/input-source-switcher
+[50]: https://github.com/jreybert/vimagit
+[51]: https://github.com/Shougo/denite.nvim
+[52]: https://github.com/Shougo/dein.vim
+[53]: https://github.com/lervag/vimtex
+[54]: https://github.com/mox-mox/vim-localsearch
+[55]: https://github.com/k-takata/minpac/
+[56]: https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/dark_minimal.vim
+[57]: https://github.com/autozimu/LanguageClient-neovim
+[58]: https://github.com/vim-airline/vim-airline/blob/master/LICENSE
+[59]: https://github.com/neoclide/coc-git
+[60]: https://github.com/cdelledonne/vim-cmake
+[61]: http://github.com/lambdalisue/battery.vim/
+[62]: http://github.com/rbong/vim-flog/
+[63]: https://github.com/lewis6991/gitsigns.nvim
+[64]: https://github.com/VimfanTPdvorak/vimodoro

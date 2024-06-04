@@ -1,10 +1,9 @@
-import { redirect } from 'next/navigation';
 import { generateMetadata } from '@/utils';
 import { BasicVideo, Gif, CenteredImage, TwoCenteredImages, Checkmark, FromToCode } from '@/app/components/blog';
 
 export const metadata = generateMetadata({
-    title:"Lualine Review",
-    description:"How are people getting a cool status line in Neovim? A complete review of the NeoVim plugin, lualine. This is part of my series of trying out and reviewing Vim and NeoVim plugins",
+    title:"Feline Review",
+    description:"How are people getting a cool status line in Neovim? A complete review of the NeoVim plugin, feline. This is part of my series of trying out and reviewing Vim and NeoVim plugins",
     keywords: ['Neovim', 'Neovim Plugins', 'lualine', 'review', 'Nash Bostwick']
 }); 
 
@@ -16,8 +15,8 @@ import addWords  from "@/public/vim-plugin-reviews/lualine-nvim/cust-comp-words.
 
 import StatusLineComparison from '../components/status-line-comparison.mdx';
 
-# Lualine.nvim Review
-A blazing fast and easy to configure Neovim statusline written in Lua.
+# Feline.nvim Review
+A minimal, stylish and customizable statusline / winbar for Neovim written in Lua
 
 <BasicVideo>
     <iframe 
@@ -52,7 +51,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 ```
 
-Default Config that I added to lualine.lua:
+Defaut Config that I added to lualine.lua:
 ```lua
     require('lualine').setup {
       options = {
