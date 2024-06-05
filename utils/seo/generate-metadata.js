@@ -30,12 +30,12 @@
 
 
 export function generateMetadata({
-    title= "Nash's Blog", 
-    description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting', 
+    title= "Nash's Blog",
+    description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting',
     keywords=['Nash Bostwick', 'blog', 'Alaska']
 }={}) {
 
-    const meta = {
+    const meta = {    
         title,
         description,
         keywords,

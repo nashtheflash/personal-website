@@ -10,6 +10,10 @@ export const metadata = generateMetadata({
 import defaultLine from "@/public/vim-plugin-reviews/airline-nvim/airline-default.png";
 import exampleLine from "@/public/vim-plugin-reviews/airline-nvim/airline-example.png";
 import base16Line from "@/public/vim-plugin-reviews/airline-nvim/base16-example.png";
+import dividerSetup from "@/public/vim-plugin-reviews/airline-nvim/divider-setup.png";
+import smartTabLine from "@/public/vim-plugin-reviews/airline-nvim/smart-tab-line.png";
+import tmuxLine from "@/public/vim-plugin-reviews/airline-nvim/tmux-line.png";
+
 import rightSide from "@/public/vim-plugin-reviews/lualine-nvim/right-lua-line.JPEG";
 import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PNG";
 import bufferAdd  from "@/public/vim-plugin-reviews/lualine-nvim/buffer-added.png";
@@ -77,142 +81,49 @@ To set the theme, and if you are using my folder structure, you will go to .vim/
 ```vim
 let g:airline_theme='base16'
 ```
-No our line looks like:
+Now our line looks like:
 <CenteredImage image={base16Line} altText={'Airline Base16 Theme'} width={'w-2/3'} height={'h-3/4'}/>
-This is good, but it doesnt really look like the example, lets change the dividers. To do that, I am going to try a million things and non of them will work. I am thinking that this would work better with vim, but this is a Neovim plugin review. I wouldn't say it's impossible to change the dividers, but it will take some work that is out of scope of the review.
+This is good, but it doesn't really look like the example, lets change the dividers. I tried a million things to try to get this to work without installing anything without success. I followed a post a found that said I needed to install Powerline Fonts. Here is the script I an and the repo.
+
+[Powerline Fonts][65]
+```bash
+> git clone https://github.com/powerline/fonts.git --depth=1
+> cd fonts
+> ./install.sh
+> cd ..
+> rm -rf fonts
+```
+
+After that was installed, All I needed to add to my vimrc was:
+
+```vim
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+```
+Now our line looks a little better:
+<CenteredImage image={dividerSetup} altText={'Airline Divider Setup'} width={'w-2/3'} height={'h-3/4'}/>
+
+## Smarter tab line
+This seems to be something that other lines do not offer. Lets add the following to our vimrc ant take a look:
+
+```vim
+let g:airline#extensions#tabline#enabled = 1
+```
+A bar has appeared at the top of the screen(I made the window small for the picture):
+<CenteredImage image={smartTabLine} altText={'Airline Smart Tab Line'} width={'w-2/3'} height={'h-3/4'}/>
+I am sure that some people love this thing, but its not for me. I like having the buffers on the usual line on the left. I like how Lualine does it!!
 
 ## Components
-Components are an easy way to add functionality to Lualine. Here are the avalable components: 
+Lets extend this thing. It looks like there are a decent amount of options for components. One caught my eye immediately: [tmuxline][66]
 
+I added this to my plugin file:
 ```lua
-branch (git branch)
-buffers (shows currently available buffers)
-diagnostics (diagnostics count from your preferred source)
-diff (git diff status)
-encoding (file encoding)
-fileformat (file format)
-filename
-filesize
-filetype
-hostname
-location (location in file in line:column format)
-mode (vim mode)
-progress (%progress in file)
-searchcount (number of search matches when hlsearch is active)
-selectioncount (number of selected characters or lines)
-tabs (shows currently available tabs)
-windows (shows currently available windows)
+Plug 'edkolev/tmuxline.vim'
 ```
-lets add a components, I need to be able to see the open buffers, so lets add the buffers component. We will need to go to the plugin config file and make some changes in the sections object. Lualine supports 3 components on the left side of the screen and 3 components on the right side of the screen. We are going to replace the lualine_c pramiter in the sections object with the buffers component.
+Wallah, it works. All I had to do was add it with vim-plug. I did not read the docs well enough. I thought his was going to merge the 2 status lines similar to the way [vim-tpipeline][67] does. It loos fine but a massive 2 line status bar is not for me!
+<CenteredImage image={tmuxLine} altText={'Tmuxline Example'} width={'w-2/3'} height={'h-3/4'}/>
 
-<FromToCode
-    from={`
-      sections = {
-          lualine_a = {'mode'},
-          lualine_b = {'branch', 'diff', 'diagnostics'},
-        - lualine_c = {'filename'},
-          lualine_x = {'encoding', 'fileformat', 'filetype'},
-          lualine_y = {'progress'},
-          lualine_z = {'location'}
-      },
-    `}
-    to={`
-      sections = {
-          lualine_a = {'mode'},
-          lualine_b = {'branch', 'diff', 'diagnostics'},
-        + lualine_c = {'buffer'},
-          lualine_x = {'encoding', 'fileformat', 'filetype'},
-          lualine_y = {'progress'},
-          lualine_z = {'location'}
-      }
-    `}
-/>
-
-<CenteredImage image={bufferAdd} altText={'Lua Line'} width={'w-fit'} height={'h-full'}/>
-
-Components are easy to add and from the above example it should be easy to configure the line as needed, but what if you need more? What if you want a custom component?
-
-## Lets Add Functionality (Custom Component)
-I want to implement a simple word counter that I can use while writing blog posts. I want it to display how many words are on the page, and also weather I am over, under, or in a predesignated range. For instance, I want to know how may words are in my blog post(so only mdx files), and I want my blog posts to be between 500 and 750 words. Seems simple enough, lets try it out.
-
-1. Lets start by getting the word count:
-I am just going to make this in the Lualine setup file. If I end up writing lots of these I can always move them later. Also, Keep in mind that this must be defined before it is used in the setup function.
-```lua
-local function getWords()
-  return tostring(vim.fn.wordcount().words)
-end
-
-
-require('lualine').setup {}
-```
-If the source file is reloaded using :so or Neovim is closed are reopened you should see the word count on the far right hand corner of the line.
-<CenteredImage image={addWords} altText={'Custom Lualine Component with word cound'} width={'w-fit'} height={'h-full'}/>
-
-2. Making the Component Dynamic
-We need to make a component that will choose the words or location based on the file type. Note that you cant just pass 'location' into the combine_component function. You have to actually define the function somewhere.
-```lua
-local function location()
-  local line = vim.fn.line('.')
-  local col = vim.fn.virtcol('.')
-  return string.format('%3d:%-2d', line, col)
-end
-
-local function combined_component()
-    local filetype = vim.bo.filetype
-    if filetype == 'markdown' or filetype == 'mdx' then
-        return getWords()
-    else
-        return location()
-    end
-end
-```
-
-3. Adding Dynamic Colors
-We need to add a function that picks the color. Notice that if the file is not markdown or mdx it will return nil which will be the default color for the location component.
-
-```lua
-local function color()
-    local filetype = vim.bo.filetype
-    local word_count = vim.fn.wordcount().words
-    if filetype == 'markdown' or filetype == 'mdx' then
-        if word_count < 500 then return {bg = '#7d7cc0', fg= '#0A0A0A', gui='none'} end
-        if word_count > 499 and word_count < 750 then return {bg = '#8EC07C', fg= '#0A0A0A', gui='none'} end
-        if word_count > 750 then return {bg = '#c07c83', fg= '#0A0A0A', gui='none'} end
-    else
-        return nil
-    end
-end
-
-```
-
-4. Add The Component
-Now we can add the combine_component to our lua config
-```lua
-sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'buffers'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {
-        {
-            combined_component,
-            color = color,
-        }
-    }
-}
-```
-
-## Completed Component
-<div className='h-44 overflow-hidden'>
-    <div className='-translate-y-44'>
-        <Gif 
-        video={"/vim-plugin-reviews/lualine-nvim/custom-component.mp4"}
-        />
-
-    </div>
-</div>
-
+To sum this up, I really like this option for creating a status line. I think that it is a little hard to configure, but there are alot of options. I spent the afternoon messing around and was able to get a good looking status line that integrated well with Tmux! If I was looking for a status line to use with Vim only, this would be my pick.
 
 ## Limitations and Alternatives
 <StatusLineComparison/>
@@ -222,7 +133,8 @@ Yes you can and its not that hard!\
 Vim script -> [Build a Custom Vim Status Line](/blog/projects/programing/vim/build-a-vim-status-line  "Build a Custom Vim Status Line")\
 Lua -> [Build a Custom Neovim Status Line](/blog/projects/programing/vim/build-a-vim-status-line  "Build a Custom Neovim Status Line")
 
-Link to the project -> [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim  "Lualine.nvim")\
+Link to the project -> [Airline.nvim](https://github.com/vim-airline/vim-airline  "Airline.nvim")
+
 Regardless of what I think about the plugin, I want to say thank you to everyone that is contributing to Neovim! Nothing is meant to be negative, my opinions are just that, opinions!
 
 [999]: /blog/projects/programing/vim/setup
@@ -291,3 +203,6 @@ Regardless of what I think about the plugin, I want to say thank you to everyone
 [62]: http://github.com/rbong/vim-flog/
 [63]: https://github.com/lewis6991/gitsigns.nvim
 [64]: https://github.com/VimfanTPdvorak/vimodoro
+[65]: https://github.com/powerline/fonts
+[66]: https://github.com/edkolev/tmuxline.vim
+[67]: https://github.com/vimpostor/vim-tpipeline
