@@ -5,9 +5,13 @@ export const BoltCutters = ({title='Bolt Cutters'} = {}) => <a href='https://amz
 export const AngleGrinder = ({title='Angle Ginder'} = {}) => <a href='https://amzn.to/3KvSMR1' target="_blank">{title}</a>
 
 //ACTIONPACKER
-export const ActionPacker = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3yWOTSt' target="_blank">{title}</a>
+export const ActionPacker8 = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3VxhExW' target="_blank">{title}</a>
+export const ActionPacker24 = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3yWOTSt' target="_blank">{title}</a>
+export const ActionPacker35 = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/4aTfblW' target="_blank">{title}</a>
+export const ActionPacker35Wheeled = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3x6U1TA' target="_blank">{title}</a>
+export const ActionPacker48 = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3Ky8Pha' target="_blank">{title}</a>
+export const RatchetStraps = ({title='Ratchet Strap'} = {}) => <a href='https://amzn.to/3Rdnn9K' target="_blank">{title}</a>
+export const Handles = ({title='Handles'} = {}) => <a href='https://amzn.to/3xdjvyE' target="_blank">{title}</a>
 
 //MAG-LIGHT
-export const lightBulb ='';
-export const reflectiveFunnel ='';
-export const glass ='';
+export const ButtonRubber = ({title='Button Rubber'} = {}) => <a href='https://amzn.to/3wWol3r' target="_blank">{title}</a>

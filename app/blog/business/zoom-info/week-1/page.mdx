@@ -1,11 +1,10 @@
 import { CenteredImage, TwoCenteredImages, Footer } from '@/app/components/blog'
 import { generateMetadata } from '@/utils';
 
-import featureImage from "@/public/costa-rica/alpha-arenal.JPEG";
-import dogOnCouch from "@/public/costa-rica/dog-on-couch.JPEG";
-import bathroom from "@/public/costa-rica/alpha-arenal-bathroom.JPEG";
-import room from "@/public/costa-rica/alpha-arenal-room.JPEG";
-import parking from "@/public/costa-rica/alpha-arenal-parking.JPEG";
+import topicError from "@/public/zoom-info/unable-to-remove-topics.png";
+import clusterError from "@/public/zoom-info/unable-to-remove-cluster.png";
+import buyingGroup from "@/public/zoom-info/buying-group.png";
+import buyingGroupStatus from "@/public/zoom-info/buying-group-status.png";
 
 export const metadata = generateMetadata({
     title:"ZoomInfo Week One",
@@ -16,14 +15,34 @@ export const metadata = generateMetadata({
 # ZoomInfo Week One Implementation
 
 ## Day One
-First thing in the moring I jumped in the system and was greated with some setup steps. The firs thing was to connect ZoomInfo with out CRM, Zoho. The connection wend smoothly. Then I was asked to setup the intent topics, which to me is the most caluable bpart of the system. I ran into a few issues. I went to the page that allows you to edit or remove the topics and there were already some default topics selected. Not a prolem, I just need to get them changed, when I tried to delete all of the topices, I was met with an error:
+First thing in the morning I jumped in the system and was greated with some setup steps. The firs thing was to connect ZoomInfo with out CRM, Zoho. The connection wend smoothly. Then I was asked to setup the intent topics, which to me is the most valuable part of the system. I ran into a few issues. I went to the page that allows you to edit or remove the topics and there were already some default topics selected. Not a prolem, I just need to get them changed, when I tried to delete all of the topics, I was met with an error:
+<CenteredImage image={topicError} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
 
 Not a problem, I'll remove the cluster. Well, that didn't work either:
+<CenteredImage image={clusterError} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
 
 At this time it was around 10am, I figured that I would contact my account manager. I was able to track down his email in the app and sent him an email. Long story short, I sent about 20 emails out to multipal people, all of which said that they could not help. The only path forward was to schedule and wait for our implementation meeting on Thursday. This was Monday and I am sitting here ready to use this thing.
 
-The last person I expected to help in this situation was my salesperson, but to his credit, he jumped in and tried to fix the issue that was preventing me from setting up the system. I could tell by his emails that he thought that it was user error, shich is fine and probably very likly, but that changed at some point. It seems there is an error in the system that a software developer is going to need to take a look at. I guess I will wait.
+The last person I expected to help in this situation was my salesperson, but to his credit, he jumped in and tried to fix the issue that was preventing me from setting up the system. I could tell by his emails that he thought that it was user error, which is fine and probably very likely, but that changed at some point. It seems there is an error in the system that a software developer is going to need to take a look at. I guess I will wait.
 
+## Day Two
+Not much happened today. I got an email at around 6pm saying that the bug with the account had been fixed. I am traveling tomorrow and should be able to complete the setup.
+
+## Day Three
+Travel day for me. I was able to mostly the setup of the system. I am not 100% sure what terms we should be using as intent topics, but that is something that I am hopping that my SEO guy can help with. I fired an email his way to see what our top topics are. Here are the remaining items that need to be setup:
+
+1. Buying Group
+It looks like I have this section setup, but it still saws that it is outstanding. I will bring this up on the implementation call tomorrow. Below, you will see 2 buying groups but the road map says it still needs to be reviewed.
+
+<CenteredImage image={buyingGroup} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
+<CenteredImage image={buyingGroupStatus} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
+I'm not sure on that one.
+
+2. Account Fit Score (AFS)
+To setup this section you need either the Salesforce integration or to build a CSV and import it. I will have to go the CSV route and that is all that will be talked about in this post. The CSV is a minimum 100 URL's for companies that are a good fit for your business. This is a big ask for us and I need to get some clarification of how this is used and what companies should be included. I will add more on this tomorrow.
+
+## Day Four
+We got on the call and the first thing that was said was 'This will not be a training call'. Great... We basically just got on a meeting to setup more meetings. I don't have an issue with that, but waiting a week to set up more meetings is frustrating. I was able to get a few system oddities ironed out, but almost every question I had was not answered. It was deflected by saying, "I am not a technical person, we would have to setup a meeting with them". No meeting was ever setup. I am going to just try to figure out the system myself tomorrow.
 
 <Footer 
     phone='+(506)6109-8651' 
