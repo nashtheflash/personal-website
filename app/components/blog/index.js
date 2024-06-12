@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic';
+
 //Markdown
 export { MdxLayout } from "./mdx-layout";
 export { MdxImage } from "./images/MdxImage";
@@ -35,3 +37,9 @@ export { TopicLarge } from "./topic/topic-large";
 
 //Emoji
 export { Checkmark } from './emojis/checkmark';
+
+//Links
+export { LinkNewTab } from "./links/link-new-tab";
+
+//Strava
+export { StravaEmbed } from "./strava/strava-embed";

@@ -1,0 +1,47 @@
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Embed Strava In Nextjs",
+    description:"How to use the Strava Embed in a Nextjs application",
+    keywords: ['Strava Embed', 'Nextjs', 'How to Embed Strava in Nextjs', 'Wired Woodsman']
+}); 
+
+# How to use the Strava Embed In a Nextjs Application
+To use the embed, I created a react component that I can pass the Strava activity id into:
+
+```js
+
+import Script from 'next/script';
+
+export async function StravaEmbed({dataEmbedId}) {
+
+    return (
+        <div className='flex justify-center items-center'>
+            <div 
+                className="strava-embed-placeholder" 
+                data-embed-type="activity" 
+                data-embed-id={dataEmbedId}
+                data-style="standard" 
+                data-from-embed="false"
+            />
+            <Script src="https://strava-embeds.com/embed.js"/>
+        </div>
+    )
+
+}
+
+```
+The div that creates a flexbox is not needed. I only use this component on blog pages which uses MDX. I have found that wrapping everything in a flexbox makes things easy.
+
+Then to use the component, grab the ID out of the url on Strava and pass it to the component.
+
+
+```js
+//https://www.strava.com/activities/11629040199
+
+import { StravaEmbed } from '@/app/components/blog'
+
+<StravaEmbed dataEmbedId='11629040199'/>
+
+```
+
