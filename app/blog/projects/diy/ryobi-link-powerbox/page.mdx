@@ -1,0 +1,110 @@
+import { generateMetadata } from '@/utils';
+import { BasicVideo, Gif, CenteredImage, TwoCenteredImages, Checkmark, FromToCode } from '@/app/components/blog';
+import { ActionPacker8, RyobiLinkBoxMedium, PlumbersPutty } from '@/app/products/product-links';
+
+export const metadata = generateMetadata({
+    title:"Ryobi Link PowerBox",
+    description:"How to create a Ryobi Link PowerBox that will both store and keep your batteries charged. All that is needed to get started is a Link box, chargers, and zipties",
+    keywords: ['Ryobi Link', 'Ryobi Link Customization', 'diy', 'Nash Bostwick']
+}); 
+
+import defaultLine from "@/public/vim-plugin-reviews/airline-nvim/airline-default.png";
+import exampleLine from "@/public/vim-plugin-reviews/airline-nvim/airline-example.png";
+import base16Line from "@/public/vim-plugin-reviews/airline-nvim/base16-example.png";
+import dividerSetup from "@/public/vim-plugin-reviews/airline-nvim/divider-setup.png";
+import smartTabLine from "@/public/vim-plugin-reviews/airline-nvim/smart-tab-line.png";
+import tmuxLine from "@/public/vim-plugin-reviews/airline-nvim/tmux-line.png";
+
+import rightSide from "@/public/vim-plugin-reviews/lualine-nvim/right-lua-line.JPEG";
+import leftSide  from "@/public/vim-plugin-reviews/lualine-nvim/left-lua-line.PNG";
+import bufferAdd  from "@/public/vim-plugin-reviews/lualine-nvim/buffer-added.png";
+import addWords  from "@/public/vim-plugin-reviews/lualine-nvim/cust-comp-words.png";
+
+
+# Ryobi Powerbox Build
+I wanted an easy way to store and keep all of my batteries charged. My solution was to convert by Ryobi link Box into a PowerBox. 
+
+<BasicVideo>
+    <iframe 
+        width="560" 
+        height="315"
+        src="https://www.youtube.com/embed/3N2lB26FTPU?si=8k-ufvhqwOd1gcQo" 
+        title="YouTube video player" 
+        frameBorder="0" 
+        allow="accelerometer; 
+        autoplay; 
+        clipboard-write; 
+        encrypted-media; 
+        gyroscope; 
+        picture-in-picture; 
+        web-share" 
+        referrerPolicy="strict-origin-when-cross-origin" 
+        allowFullScreen
+    ></iframe>
+</BasicVideo>
+
+## My Batteries/Chargers are Everywhere
+I can't control my batteries. I need to create a battery organization system. Looking at the problem, batteries can be in 4 states of being:
+
+1. Dead / Awaiting Charging
+2. Charging
+3. Ready For Use
+4. In Use
+
+I am not going to be worried about the "In Use" state for this build.
+
+### Dead / Awaiting Charging
+Batteries sitting around dead is the worst possible scenario, and something I want to engineer out of they system. I have a few options:
+1. Every Battery has a charger
+This is not something that is practical, at least not for me. I have 5 Milwaukee 12v batteries, 2 Milwaukee 18v batteries, and 4 Ryobi 18v batteries. 11 chargers would be over the top. I also don't buy chargers, I just get them as I buy tools. Sometimes I get the bare tool, sometimes I get that battery and charger. I only have 5 charges, so that is the max that I can use.
+
+2. Force Dead Batteries to the Charger
+I have found that batteries charge faster than they can be used. Due to this, there should not be an awaiting charge area. The system should make it easy to pug dead batteries right into the charger.
+
+### Charging
+I want to centralized place that all of my batteries can charge. I want this place to be portage as well. I have mounted chargers to the wall in the past and it worked great, but this is no longer an option!
+
+### Ready for Use
+This should be the only storage area for the batteries. I also need this to be portable. I also don't want a "charger" area and a "battery" area. If I am thinking anything battery related, I want to only have to go to one place.
+
+## The Container
+As the title says, I am going to use the Ryobi Link box for this build. I already use the link system to store a lot of my tools, and all of my power tools so this is a no brainier. I considered using an action packer for this, but in the end wanted to stick with the system I already had in place for my tools. Here are Links to the Ryobi Link box that I am using and the ActionPacker that I think would be a good option:
+
+Find the Ryobi Link here -> <RyobiLinkBoxMedium/>\
+Find the ActionPacker Link here -> <ActionPacker8/>
+
+## The First Attempt
+I have tried to make this system before and it failed miserably. The issue is that I tried to use <PlumbersPutty title='plumbers putty'/> and it did not stick well to the Link box. This time I will be using zip ties. I am not sure if they will hold any better or not.
+
+1. **Don't use a pull strap**\
+When the box came around the carousel, the strap had loosened a fair amount. Not to the point of it being and issue, the box did not open, but it was concerning. I used the simple pull straps so that the TSA could easily open and close the box if needed.
+
+2. **The mounting handles on the handles did not go all the way through**\
+The mounting holes on the handles were closed off which made it hard to get the length of the bolts right during the build. I would be far easier if the holes went all the way through, it will also probably be stronger.
+
+## The Final Modification
+With the lessons learned from the first build, I am going to fix the box so that it will fly better!
+
+### Tools
+
+| Tool                         | Where to Buy               |
+| :--------------------------: | :----------------: |
+| Drill                        | <Drill/>           |
+| Drill Bits                   | <DrillBits/>               |
+| Anngle Grinder / Bolt Cutters| <AngleGrinder/> / <BoltCutters/>          |
+
+### Supplies
+| Tool                         | Where to Buy               |
+| :--------------------------: | :----------------: |
+| Strap                        | <RatchetStraps/>           |
+| Handels                      | <Handles/>           |
+| Metal Backer                 | <DrillBits/>               |
+
+
+
+
+
+
+
+
+
