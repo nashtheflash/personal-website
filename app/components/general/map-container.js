@@ -3,10 +3,16 @@ import MapBox from "./mapbox"
 
 export default async function Map({mapHeight, tracks}) {
     //build and array of tracks to convert
-    const gpxTracks = tracks.map(track => gpxToGeoJson(track));
+    const gpxTracks = tracks.map((track) => ({
+        ...track,
+        data: gpxToGeoJson(track.url),
+        active: 1
+        })
+    )
+    console.log(gpxTracks);
 
     return(
-        <MapBox mapHeight={mapHeight} tracks={gpxTracks}/>
+        <MapBox mapHeight={mapHeight} gpxData={gpxTracks}/>
     )
 }
 
@@ -26,7 +32,7 @@ const fetchGPX = (file) => {
     const DOMParser = require("xmldom").DOMParser;
     const rootPath = process.cwd();
 
-    const gpxFile = new DOMParser().parseFromString(fs.readFileSync(path.resolve(`${rootPath}${file}`), "utf8"));
+    const gpxFile = new DOMParser().parseFromString(fs.readFileSync(path.resolve(`${rootPath}/public${file}`), "utf8"));
 
     return gpxFile;
 

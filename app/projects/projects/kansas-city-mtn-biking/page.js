@@ -121,51 +121,16 @@ export function StorySection() {
 
 export function MapSection() {
     const gpxTracks = [
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx',
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx',
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx',
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx',
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx',
-        '/public/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx',
+        {name: 'Scape Goat', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx'},
+        {name: 'Billy Goat', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx'},
+        {name: 'Columbine Loop', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx'},
+        {name: 'Columbine Connector', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx'},
+        {name: 'Technical Loop', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx'},
+        {name: 'Columbine Bypass', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx'},
     ];
 
     return(
-        <div className="w-full h-full p-5">
-            <MapSelect/>
-            <div className=''>
-                <Map mapHeight='400' tracks={gpxTracks}/>
-            </div>
-            <MapAction/>
-        </div>
-    )
-}
-
-export function MapSelect() {
-    return(
-        <div className="grid grid-cols-3 justify-center justify-items-center items-start gap-1 py-3 text-black">
-            <h1 className='col-span-3'>TRAILS</h1>
-            <button className="">All Trails</button>
-            <button className="">Columbine Loop</button>
-            <button className="">Billy Goat</button>
-            <button className="">Technical Loop</button>
-            <button className="">Columbine Connector</button>
-            <button className="">Scape Goat</button>
-        </div>
-    )
-}
-
-export function MapAction() {
-    return(
-        <div className="flex justify-center items-center gap-3 py-3 text-black">
-            <button className="btn btn-neutral">
-                <MapIcon className='w-5 h-5'/>
-                Download GPX
-            </button>
-            <button className="btn btn-neutral">
-                <InformationCircleIcon className='w-5 h-5'/>
-                Help
-            </button>
-        </div>
+        <Map mapHeight='400' tracks={gpxTracks}/>
     )
 }
 
