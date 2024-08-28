@@ -9,7 +9,6 @@ export default async function Map({mapHeight, tracks}) {
         active: 1
         })
     )
-    console.log(gpxTracks);
 
     return(
         <MapBox mapHeight={mapHeight} gpxData={gpxTracks}/>

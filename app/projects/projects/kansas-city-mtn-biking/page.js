@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Map from '@/app/components/general/map-container';
+import { BlackTieTitle } from '@/app/components/blog/section-headers/black-tie';
 
 import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
@@ -209,8 +210,8 @@ export function FAQSummary({txt}) {
 export function PhotoGallery() {
     return(
         <div className='flex flex-col justify-center items-center'>
-            <h1 className='text-black'>Photo Gallery</h1>
-            <div className="carousel w-full">
+            <BlackTieTitle title='PHOTO GALLERY'/>
+            <div className="carousel w-full mt-2">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"

@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl';
+import { BlackTieTitle } from '../blog/section-headers/black-tie';
 import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -13,14 +14,15 @@ export default function MapBox({mapHeight, gpxData}) {
     const map = useRef(null);
     
     const [mapLoaded, setMapLoaded] = useState(false);
-    const [lng, setLng] = useState(-70.9);
-    const [lat, setLat] = useState(42.35);
-    const [zoom, setZoom] = useState(9);
+    const [lng, setLng] = useState(-94.879008);
+    const [lat, setLat] = useState(38.906144);
+    const [zoom, setZoom] = useState(13);
     const [currentTrack, setCurrentTrack] = useState(gpxData);
     
     useEffect(() => {
-        
         if (map.current) return; // initialize map only once
+
+        //Base map settings
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/outdoors-v12',
@@ -28,6 +30,7 @@ export default function MapBox({mapHeight, gpxData}) {
             zoom: zoom
         });
     
+        //once the map is loaded start drawing the tracks
         map.current.on('load', () => {
             setMapLoaded(true);
             
@@ -52,6 +55,23 @@ export default function MapBox({mapHeight, gpxData}) {
                         'line-width': 4
                     }
                 });
+                
+                var popup;
+                
+                //mouse over events
+                map.current.on('mouseover', layerName, function (e) {
+                    popup = new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(`<h2>${layerName}</h2>`)
+                        .addTo(map.current);
+
+                    map.setPaintProperty(layerName, 'line-width', 8); // Set width to 8 on hover
+                });
+
+                map.current.on('mouseout', layerName, function (e) {
+                    if (popup) popup.remove();
+                    map.current.setPaintProperty(layerName, 'line-width', 4); // Set width to 8 on hover
+                });
             });
         });
     });
@@ -72,7 +92,7 @@ export default function MapBox({mapHeight, gpxData}) {
     return( 
         <div className="w-full h-full p-5">
             <MapSelect trails={gpxData} setCurrentTrack={setCurrentTrack}/>
-            <div className=''>
+            <div className='text-black'>
                 <div ref={mapContainer} className={`map-container h-[${mapHeight}px]`} />
             </div>
             <MapAction tracks={currentTrack}/>
@@ -83,7 +103,9 @@ export default function MapBox({mapHeight, gpxData}) {
 export function MapSelect({trails, setCurrentTrack}) {
     return(
         <div className="grid grid-cols-3 justify-center justify-items-center items-start gap-1 py-3 text-black">
-            <h1 className='col-span-3'>TRAILS</h1>
+            <div className='col-span-3'>
+                <BlackTieTitle title='TRAILS'/>
+            </div>
             <button className="" onClick={() => selectAllTracks(setCurrentTrack)}>All Trails</button>
             {
                trails && trails.map(trail => {
