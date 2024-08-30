@@ -16,7 +16,7 @@ export default function MapBox({mapHeight, gpxData}) {
     const [mapLoaded, setMapLoaded] = useState(false);
     const [lng, setLng] = useState(-94.879008);
     const [lat, setLat] = useState(38.906144);
-    const [zoom, setZoom] = useState(13);
+    const [zoom, setZoom] = useState(14);
     const [currentTrack, setCurrentTrack] = useState(gpxData);
     
     useEffect(() => {
@@ -65,7 +65,7 @@ export default function MapBox({mapHeight, gpxData}) {
                         .setHTML(`<h2>${layerName}</h2>`)
                         .addTo(map.current);
 
-                    map.setPaintProperty(layerName, 'line-width', 8); // Set width to 8 on hover
+                    map.current.setPaintProperty(layerName, 'line-width', 8); // Set width to 8 on hover
                 });
 
                 map.current.on('mouseout', layerName, function (e) {
@@ -93,7 +93,7 @@ export default function MapBox({mapHeight, gpxData}) {
         <div className="w-full h-full p-5">
             <MapSelect trails={gpxData} setCurrentTrack={setCurrentTrack}/>
             <div className='text-black'>
-                <div ref={mapContainer} className={`map-container h-[${mapHeight}px]`} />
+                <div ref={mapContainer} className={`map-container h-[400px]`} />
             </div>
             <MapAction tracks={currentTrack}/>
         </div>
