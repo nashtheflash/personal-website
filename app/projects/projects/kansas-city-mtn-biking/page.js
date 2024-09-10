@@ -5,7 +5,7 @@ import { BlogMapWrapper } from '@/app/components/blog';
 
 import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
-import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.jpg";
+import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG";
 import ListDot from "@/public/mtn-bike-kc/arrow-list-bullet.png";
 import DistanceIcon from "@/public/mtn-bike-kc/distance.png";
 import DaysIcon from "@/public/mtn-bike-kc/days.png";
@@ -65,10 +65,13 @@ export function Area() {
 export function HeaderSection() {
     return(
         <div className="bg-neutral-800 w-full h-fit">
-            <Image
-                src={featureImage}
-                alt={"title"}
-            />
+            <div className=''>
+                <Image
+                    src={featureImage}
+                    alt={"title"}
+                    className={'h-[calc(100vh-6rem-36px)]'}
+                />
+            </div>
             <div className='p-3 text-4xl'>
                 <h1>CEDAR NILES</h1>
             </div>
@@ -123,12 +126,12 @@ export function StorySection() {
 
 export function MapSection() {
     const gpxTracks = [
-        {name: 'Scape Goat', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx'},
-        {name: 'Billy Goat', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx'},
-        {name: 'Columbine Loop', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx'},
-        {name: 'Columbine Connector', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx'},
-        {name: 'Technical Loop', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx'},
-        {name: 'Columbine Bypass', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx'},
+        {name: 'Scape Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx'},
+        {name: 'Billy Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx'},
+        {name: 'Columbine Loop', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx'},
+        {name: 'Columbine Connector', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx'},
+        {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx'},
+        {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx'},
     ];
 
     return(
@@ -138,47 +141,50 @@ export function MapSection() {
 
 export function FAQSection() {
     return(
-        <div className='min-h-80'>
-            <div role="tablist" className="tabs tabs-lifted p-2">
-                <input 
-                    type="radio" 
-                    name="my_tabs_2" 
-                    role="tab" 
-                    className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
-                    aria-label="Access" 
-                    defaultChecked 
-                />
-                <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
-                    <FAQAccess/>
-                </div>
-
-                <input
-                    type="radio"
-                    name="my_tabs_2"
-                    role="tab"
-                    className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
-                    aria-label="Highlights"
-                />
-                <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
-                    <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
-                        <FAQItem title='Columbine Bypass' txt='is a nice jump trail located in the middle of the trail system. Great place for laps!'/>
-                        <FAQItem title='Columbine Loop' txt='is best riden counter clockwise'/>
-                        <FAQItem title='Technical Loop' txt='is as chossy as this trail system gets. I prefer riding this trail counter clockwise.'/>
+        <div className='flex flex-col justify-center items-center'>
+            <BlackTieTitle title="FAQ's"/>
+            <div className='min-h-80'>
+                <div role="tablist" className="tabs tabs-lifted p-2">
+                    <input 
+                        type="radio" 
+                        name="my_tabs_2" 
+                        role="tab" 
+                        className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
+                        aria-label="Access" 
+                        defaultChecked 
+                    />
+                    <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
+                        <FAQAccess/>
                     </div>
-                </div>
 
-                <input 
-                    type="radio" 
-                    name="my_tabs_2" 
-                    role="tab" 
-                    className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
-                    aria-label="Food/Drink" 
-                />
-                <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
-                    <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
-                        <FAQItem title='Best post ride beer?' txt='Red Crow Brewing is the hands down winner. I would go with an Isabelle & a Spicy Honey Mustard Chicken sandwich' mapUrl={'https://maps.app.goo.gl/MucY3w3SHfBuGt5b6'}/>
-                        <FAQItem title='Lunch Time?' txt="Bonito Michoacán is a grocery story that has a small cafe that serves authentic mexican food!" mapUrl={'https://maps.app.goo.gl/wXreS4aGshSC4W159'}/>
-                        <FAQItem title="BB's Grill" txt="BB's is better than I would have thought. Good beer selection and the Jalapeno Popper Chicken Sandwich is to die for." mapUrl={'https://maps.app.goo.gl/965fntmMo9di8ubB6'}/>
+                    <input
+                        type="radio"
+                        name="my_tabs_2"
+                        role="tab"
+                        className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
+                        aria-label="Highlights"
+                    />
+                    <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
+                        <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
+                            <FAQItem title='Columbine Bypass' txt='is a nice jump trail located in the middle of the trail system. Great place for laps!'/>
+                            <FAQItem title='Columbine Loop' txt='is best riden counter clockwise'/>
+                            <FAQItem title='Technical Loop' txt='is as chossy as this trail system gets. I prefer riding this trail counter clockwise.'/>
+                        </div>
+                    </div>
+
+                    <input 
+                        type="radio" 
+                        name="my_tabs_2" 
+                        role="tab" 
+                        className="tab [--tab-bg:#d0cfcd] [--tab-border-color:#d0cfcd] text-gray-500" 
+                        aria-label="Food/Drink" 
+                    />
+                    <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
+                        <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
+                            <FAQItem title='Best post ride beer?' txt='Red Crow Brewing is the hands down winner. I would go with an Isabelle & a Spicy Honey Mustard Chicken sandwich' mapUrl={'https://maps.app.goo.gl/MucY3w3SHfBuGt5b6'}/>
+                            <FAQItem title='Lunch Time?' txt="Bonito Michoacán is a grocery story that has a small cafe that serves authentic mexican food!" mapUrl={'https://maps.app.goo.gl/wXreS4aGshSC4W159'}/>
+                            <FAQItem title="BB's Grill" txt="BB's is better than I would have thought. Good beer selection and the Jalapeno Popper Chicken Sandwich is to die for." mapUrl={'https://maps.app.goo.gl/965fntmMo9di8ubB6'}/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,21 +220,21 @@ export function FAQAccess() {
             trailheadName: '119th Street Trailhead',
             gMapLinkUrl: 'https://maps.app.goo.gl/KySzsCW7vRfB2vyd9',
             gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12419.436404190137!2d-94.88314610747071!3d38.90433725660361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0977bb9da0e6d%3A0x11414b7fb807be8c!2sCedar%20Niles%20Park%20119th%20St%20Trailhead!5e0!3m2!1sen!2sus!4v1724975254860!5m2!1sen!2sus',
-            trailheadDiscription: 'I would call this secondary access. From here you will have to head down the paved path twords the woods. You will see the entrance to Scape Goat. Ride up scape goat to access the rest of the trail system.'
+            trailheadDiscription: 'I would call this secondary access. From here you will have to head down the paved path across the bridge and twords the woods. You will see the entrance to Scape Goat. Ride up Scape Goat to access the rest of the trail system.'
         }
     ]
 
 
     return(
-        <div className=''>
+        <>
             { 
                 accessInfo && accessInfo.map((trailhead, i) => {
                     return (
-                        <>
+                        <div key={i}>
                             <div className='flex gap-1 justify-between items-start'>
                                 <div className='flex flex-col justify-start items-start'>
-                                    <div className="flex items-center justify-center bg-[#563730] px-7 w-fit h-10 [clip-path:polygon(5%_0%,95%_0%,100%_20%,100%_80%,95%_100%,5%_100%,0%_80%,0%_20%)]">
-                                        <h1 className='text-white text-xl'>{trailhead.trailheadName}</h1>
+                                    <div className="flex items-center justify-center bg-[#563730] px-7 w-fit h-fit min-h-10 [clip-path:polygon(5%_0%,95%_0%,100%_20%,100%_80%,95%_100%,5%_100%,0%_80%,0%_20%)]">
+                                        <h1 className='text-white text-xl text-center'>{trailhead.trailheadName}</h1>
                                     </div>
                                     <a 
                                         href={trailhead.gMapLinkUrl} 
@@ -246,11 +252,11 @@ export function FAQAccess() {
                                 />
                             </div>
                             { i != accessInfo.length - 1 && <div className="divider"></div>}
-                        </>
+                        </div>
                     )
                 })
             }
-        </div>
+        </>
     )
 }
 

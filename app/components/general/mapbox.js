@@ -7,6 +7,10 @@ import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 export default function MapBox({mapHeight, gpxData}) {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -51,7 +55,11 @@ export default function MapBox({mapHeight, gpxData}) {
                         'line-cap': 'round'
                     },
                     paint: {
-                        'line-color': '#888',
+                        'line-color':   track.difficulty == 'easy' ? '#22c55e' : 
+                                        track.difficulty == 'medium' ? '#3b82f6' : 
+                                        track.difficulty == 'hard' ? '#000000' : 
+                                        track.difficulty == 'expert' ? '#ef4444' : 
+                                        '#888',
                         'line-width': 4
                     }
                 });
@@ -114,7 +122,20 @@ export function MapSelect({trails, setCurrentTrack}) {
                             key={trail.name}
                             className="" 
                             onClick={() => handleTrackChange(setCurrentTrack, trail.name)}
-                        >{trail.name}</button>
+                        >
+                            <div className='flex gap-1 justify-center items-center'>
+                                {trail.name}
+                                <div className={
+                                    classNames(
+                                        trail.difficulty == 'easy' ? "w-2 h-2 bg-green-500 transform rotate-45" :
+                                        trail.difficulty == 'medium' ? "w-2 h-2 bg-blue-500 transform rotate-45" :
+                                        trail.difficulty == 'hard' ? "w-2 h-2 bg-black transform rotate-45" :
+                                        trail.difficulty == 'expert' ? "w-2 h-2 bg-red-500 transform rotate-45" :
+                                        "w-2 h-2 bg-purple-500 transform rotate-45"
+                                    )}
+                                />
+                            </div>
+                        </button>
                     )
                })
             }
