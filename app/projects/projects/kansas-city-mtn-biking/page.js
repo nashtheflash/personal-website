@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Map from '@/app/components/general/map-container';
 import { BlackTieTitle } from '@/app/components/blog/section-headers/black-tie';
 import { BlogMapWrapper } from '@/app/components/blog';
+import { PhotoCarousel } from '@/app/components/blog/images/photo-carousel';
 
 import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
-import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG";
 import ListDot from "@/public/mtn-bike-kc/arrow-list-bullet.png";
 import DistanceIcon from "@/public/mtn-bike-kc/distance.png";
 import DaysIcon from "@/public/mtn-bike-kc/days.png";
@@ -15,6 +15,8 @@ import RideabilityIcon from "@/public/mtn-bike-kc/rideability.png";
 import HighPointIcon from "@/public/mtn-bike-kc/highpoint.png";
 import DifficultyIcon from "@/public/mtn-bike-kc/difficulty.png";
 import AscentIcon from "@/public/mtn-bike-kc/ascent.png";
+
+import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG";
 
 
 export default function KansasCityMtmBiking() {
@@ -141,7 +143,7 @@ export function MapSection() {
 
 export function FAQSection() {
     return(
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center h-fit'>
             <BlackTieTitle title="FAQ's"/>
             <div className='min-h-80'>
                 <div role="tablist" className="tabs tabs-lifted p-2">
@@ -269,47 +271,17 @@ export function FAQSummary({txt}) {
 }
 
 export function PhotoGallery() {
+
+    const photos = [
+        "/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG",
+        "/mtn-bike-kc/cedar-niles/big-jump.JPEG",
+        "/mtn-bike-kc/cedar-niles/small-jump.JPEG",
+    ]
+
     return(
         <div className='flex flex-col justify-center items-center'>
             <BlackTieTitle title='PHOTO GALLERY'/>
-            <div className="carousel w-full mt-2">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide4" className="carousel-item relative w-full">
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-            </div>
+            <PhotoCarousel photoUrls={photos}/>
         </div>
     )
 }
