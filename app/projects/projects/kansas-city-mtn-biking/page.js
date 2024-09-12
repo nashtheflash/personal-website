@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import Map from '@/app/components/general/map-container';
 import { BlackTieTitle } from '@/app/components/blog/section-headers/black-tie';
-import { BlogMapWrapper } from '@/app/components/blog';
 import { FAQSection } from '@/app/components/blog/kc-mnt-biking/faq-section';
 import { PhotoCarousel } from '@/app/components/blog/images/photo-carousel';
+import { MdxLayout } from '@/app/components/blog';
+import { generateMetadata } from '@/utils';
 
-import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
-
-import ListDot from "@/public/mtn-bike-kc/arrow-list-bullet.png";
 import DistanceIcon from "@/public/mtn-bike-kc/distance.png";
 import DaysIcon from "@/public/mtn-bike-kc/days.png";
 import PavementIcon from "@/public/mtn-bike-kc/pavement.png";
@@ -18,7 +16,15 @@ import DifficultyIcon from "@/public/mtn-bike-kc/difficulty.png";
 import AscentIcon from "@/public/mtn-bike-kc/ascent.png";
 
 import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG";
+import CedarNiles from './articals/cedar-niles.mdx'
 
+
+
+export const metadata = generateMetadata({
+    title:"Kansas City Mountain Biking",
+    description:"Digital Guidebook for Mountain Biking In Kansas City",
+    keywords: ['Kansas City', 'Mountain Biking', 'Guide', 'Nash Bostwick']
+});
 
 export default function KansasCityMtmBiking() {
     return(
@@ -38,6 +44,7 @@ export function ProjectNav() {
             <Badge text='#3'><li className="w-full"><a>Blue River Parkway</a></li></Badge>
             <Badge text='#4'><li className="w-full"><a>Nall Park</a></li></Badge>
             <Badge text='#4'><li className="w-full"><a>Landahl Park</a></li></Badge>
+            <Badge text='#5'><li className="w-full"><a>St. Joe</a></li></Badge>
         </ul>
     )
 }
@@ -88,11 +95,11 @@ export function StatsSection() {
             <div className='grid grid-cols-2 h-full items-center justify-items-center sm:grid-cols-3 md:grid-cols-4'>
                 <Stat title='Distance Total' Icon={DistanceIcon} stat='50 Mi' statAlt='(10 KM.)'/>
                 <Stat title='Number of Trails' Icon={SingleTrackIcon} stat='5'/>
-                <Stat title='Jump Lines' Icon={DifficultyIcon} stat='1'/>
+                <Stat title='Flow' Icon={DifficultyIcon} stat='1'/>
+                <Stat title='Down Hill' Icon={DifficultyIcon} stat='5'/>
+                <Stat title='XC' Icon={DifficultyIcon} stat='5'/>
                 <Stat title='Difficulty' Icon={DifficultyIcon} stat='5'/>
-                <Stat title='Rank' Icon={AscentIcon} stat='3 in KC'/>
                 <Stat title='Traffic' Icon={RideabilityIcon} stat='High'/>
-                <Stat title='Somthing else' Icon={DifficultyIcon} stat='5'/>
                 <Stat title='Current Status' Icon={PavementIcon} stat='Good to go'/>
             </div>
         </div>
@@ -121,8 +128,11 @@ export function Stat({Icon, title, stat, statAlt}) {
 
 export function StorySection() {
     return(
-        <div className="w-full h-full">
-            <h1>HI this is a MDX story</h1>
+
+        <div className='flex flex-col justify-center items-center py-12 w-full'>
+            <MdxLayout>
+                <CedarNiles/>
+            </MdxLayout>
         </div>
     )
 }
