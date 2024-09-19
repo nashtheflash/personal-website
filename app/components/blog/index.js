@@ -2,6 +2,8 @@ import dynamic from 'next/dynamic';
 
 //Markdown
 export { MdxLayout } from "./mdx-layout";
+export { MdxLayoutFullWidth } from "./mdx-layout";
+export { MdxLayoutParentWidth } from "./mdx-layout";
 export { MdxImage } from "./images/MdxImage";
 
 //Components
@@ -15,6 +17,7 @@ export { FromToCode } from "./colums/from-to-code";
 //Images
 export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
+export { ThreeCenteredImages } from "./images/three-centered-images"
 
 //Videos
 export { BasicVideo } from './videos/basic-video';
@@ -43,3 +46,8 @@ export { LinkNewTab } from "./links/link-new-tab";
 
 //Strava
 export { StravaEmbed } from "./strava/strava-embed";
+
+//KC-Mtn-Biking
+export { TLDR } from './kc-mnt-biking/tldr'
+export { FAQSection } from './kc-mnt-biking/faq-section'
+export { CallOut } from './kc-mnt-biking/call-out'

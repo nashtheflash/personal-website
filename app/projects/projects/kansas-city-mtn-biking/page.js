@@ -3,7 +3,7 @@ import Map from '@/app/components/general/map-container';
 import { BlackTieTitle } from '@/app/components/blog/section-headers/black-tie';
 import { FAQSection } from '@/app/components/blog/kc-mnt-biking/faq-section';
 import { PhotoCarousel } from '@/app/components/blog/images/photo-carousel';
-import { MdxLayout } from '@/app/components/blog';
+import { MdxLayout, MdxLayoutParentWidth } from '@/app/components/blog';
 import { generateMetadata } from '@/utils';
 
 import DistanceIcon from "@/public/mtn-bike-kc/distance.png";
@@ -17,7 +17,6 @@ import AscentIcon from "@/public/mtn-bike-kc/ascent.png";
 
 import featureImage from "@/public/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG";
 import CedarNiles from './articals/cedar-niles.mdx'
-
 
 
 export const metadata = generateMetadata({
@@ -129,10 +128,10 @@ export function Stat({Icon, title, stat, statAlt}) {
 export function StorySection() {
     return(
 
-        <div className='flex flex-col justify-center items-center py-12 w-full'>
-            <MdxLayout>
+        <div className='flex flex-col justify-center items-center py-12 w-[calc(100vw-14rem)]'>
+            <MdxLayoutParentWidth>
                 <CedarNiles/>
-            </MdxLayout>
+            </MdxLayoutParentWidth>
         </div>
     )
 }

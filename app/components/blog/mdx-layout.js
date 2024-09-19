@@ -17,3 +17,12 @@ export function MdxLayout({ children }) {
   )
 }
 
+export function MdxLayoutParentWidth({ children }) {
+  // Create any shared layout or styles here
+  return (
+    <div className="prose w-full px-6">
+      {children}
+    </div>
+  )
+}
+
