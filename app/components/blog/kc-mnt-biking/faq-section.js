@@ -5,7 +5,7 @@ import { BlogMapWrapper  } from "../map-wrapper";
 
 import ListDot from "@/public/mtn-bike-kc/arrow-list-bullet.png";
 
-export function FAQSection() {
+export function FAQSection({accessInfo, faqHighlights, faqFoodDrink}) {
     
     const handleClick = () => {
         document.getElementById('faq').scrollIntoView({
@@ -27,7 +27,7 @@ export function FAQSection() {
                         defaultChecked 
                     />
                     <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
-                        <FAQAccess/>
+                        <FAQAccess accessInfo={accessInfo}/>
                     </div>
 
                     <input
@@ -39,9 +39,11 @@ export function FAQSection() {
                     />
                     <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
                         <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
-                            <FAQItem title='Columbine Bypass' txt='is a nice jump trail located in the middle of the trail system. Great place for laps!'/>
-                            <FAQItem title='Columbine Loop' txt='is best riden counter clockwise'/>
-                            <FAQItem title='Technical Loop' txt='is as chossy as this trail system gets. I prefer riding this trail counter clockwise.'/>
+                            {
+                                faqHighlights && faqHighlights.map(({title, text}, index) => (
+                                    <FAQItem key={index} title={title} txt={text}/>
+                                ))
+                            }
                         </div>
                     </div>
 
@@ -54,9 +56,11 @@ export function FAQSection() {
                     />
                     <div role="tabpanel" className="tab-content bg-[#d0cfcd] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] border-[#d0cfcd] rounded-box p-6">
                         <div className='grid gap-2 grid-cols-1 md:grid-cols-2'>
-                            <FAQItem title='Best post ride beer?' txt='Red Crow Brewing is the hands down winner. I would go with an Isabelle & a Spicy Honey Mustard Chicken sandwich' mapUrl={'https://maps.app.goo.gl/MucY3w3SHfBuGt5b6'}/>
-                            <FAQItem title='Lunch Time?' txt="Bonito Michoacán is a grocery story that has a small cafe that serves authentic mexican food!" mapUrl={'https://maps.app.goo.gl/wXreS4aGshSC4W159'}/>
-                            <FAQItem title="BB's Grill" txt="BB's is better than I would have thought. Good beer selection and the Jalapeno Popper Chicken Sandwich is to die for." mapUrl={'https://maps.app.goo.gl/965fntmMo9di8ubB6'}/>
+                            {
+                                faqFoodDrink && faqFoodDrink.map(({title, text}, index) => (
+                                    <FAQItem key={index} title={title} txt={text}/>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
@@ -81,23 +85,7 @@ export function FAQItem({title, txt, mapUrl}) {
     )
 }
 
-export function FAQAccess() {
-    const accessInfo = [
-        {
-            trailheadName: 'Clare Road Trailhead',
-            gMapLinkUrl: 'https://maps.app.goo.gl/hNYoWBXYHtPLdLH97',
-            gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8963.888413691491!2d-94.8790833808989!3d38.90040089327876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c09717e637c3c3%3A0x326b4c9e2476ee0d!2sCedar%20Niles%20Park%20Clare%20Road%20Trailhead!5e0!3m2!1sen!2sus!4v1724972397538!5m2!1sen!2sus',
-            trailheadDiscription: 'This is the main access point for the trails. From here you can jump right onto the Columbine Connector trail that will take you out to Billy Goat and the Columbine Loop.'
-        },
-        {
-            trailheadName: '119th Street Trailhead',
-            gMapLinkUrl: 'https://maps.app.goo.gl/KySzsCW7vRfB2vyd9',
-            gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12419.436404190137!2d-94.88314610747071!3d38.90433725660361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0977bb9da0e6d%3A0x11414b7fb807be8c!2sCedar%20Niles%20Park%20119th%20St%20Trailhead!5e0!3m2!1sen!2sus!4v1724975254860!5m2!1sen!2sus',
-            trailheadDiscription: 'I would call this secondary access. From here you will have to head down the paved path across the bridge and twords the woods. You will see the entrance to Scape Goat. Ride up Scape Goat to access the rest of the trail system.'
-        }
-    ]
-
-
+export function FAQAccess({accessInfo}) {
     return(
         <>
             { 
