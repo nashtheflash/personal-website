@@ -1,8 +1,5 @@
-import { ProjectNav, Area, MtnBikeGettingStarted } from '@/app/components/blog';
+import { KCMtnBikingMain } from '@/app/components/blog';
 import { generateMetadata } from '@/utils';
-
-//Data is stored localy
-import { data } from './data';
 
 export const metadata = generateMetadata({
     title:"Kansas City Mountain Biking",
@@ -10,15 +7,9 @@ export const metadata = generateMetadata({
     keywords: ['Kansas City', 'Mountain Biking', 'Guide', 'Nash Bostwick']
 });
 
-export default function KansasCityMtmBiking() {
-    const areaData = data.map(area => area.name).indexOf('Cedar Niles');
+export default function KansasCityMtnBiking() {
 
     return(
-        <div className="flex w-full min-h-screen">
-            <ProjectNav data={data}/>
-            {
-                areaData >= 0 ? <Area data={data[areaData]}/> : <MtnBikeGettingStarted/>
-            }
-        </div>
+        <KCMtnBikingMain/>
     )
 }

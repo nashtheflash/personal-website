@@ -9,6 +9,8 @@ import {
 
 export function Area({data}) {
     const { name, rank, featuredImage, stats, gpxTracks, photos, accessInfo, faqHighlights, faqFoodDrink } = data;
+    // console.log(name);
+    // console.log(data);
 
     return(
         <div className="w-full h-full min-h-screen bg-[#f2f1ed]">

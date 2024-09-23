@@ -48,6 +48,7 @@ export { LinkNewTab } from "./links/link-new-tab";
 export { StravaEmbed } from "./strava/strava-embed";
 
 //KC-Mtn-Biking
+export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'
 export { TLDR } from './kc-mnt-biking/tldr'
 export { FAQSection } from './kc-mnt-biking/faq-section'
 export { CallOut } from './kc-mnt-biking/call-out'
@@ -58,5 +59,6 @@ export { StatsSection } from './kc-mnt-biking/stats-section'
 export { StorySection } from './kc-mnt-biking/story-section'
 export { MtnBikePhotoGallery } from './kc-mnt-biking/photo-section'
 export { MtnBikeMap } from './kc-mnt-biking/mtn-bike-map'
+// export { default as MtnBikeMap } from './kc-mnt-biking/mtn-bike-map';
 export { MtnBikeGettingStarted } from './kc-mnt-biking/mtn-bike-getting-started'
 export { MtnBikeFooter } from './kc-mnt-biking/mtn-bike-footer'

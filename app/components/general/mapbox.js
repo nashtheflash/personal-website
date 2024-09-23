@@ -60,7 +60,7 @@ export default function MapBox({mapHeight, gpxData}) {
                                         track.difficulty == 'hard' ? '#000000' : 
                                         track.difficulty == 'expert' ? '#ef4444' : 
                                         '#888',
-                        'line-width': 4
+                        'line-width': 4,
                     }
                 });
                 
