@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react';
 
 export function PhotoCarousel({photoUrls}) {
     const totalPictures = photoUrls.length;
+    
+    const [prevPic, setPrevPic] = useState(totalPictures - 1);
     const [currentPic, setCurrentPic] = useState(0);
+    const [nextPic, setNextPic] = useState(1);
 
     const goTo = (event, type, totalPics) => {
         event.preventDefault()
@@ -17,7 +20,7 @@ export function PhotoCarousel({photoUrls}) {
         carousel.scrollTo({ left: left })
 
         if (type == 'next') {
-            if (currentPic == totalPictures - 1) {
+            if (currentPic == totalPics - 1) {
                 setCurrentPic(0);
             } else {
                 setCurrentPic((prev) => prev + 1);
@@ -26,7 +29,7 @@ export function PhotoCarousel({photoUrls}) {
         
         if (type == 'previous') {
             if (currentPic == 0) {
-                setCurrentPic(totalPictures - 1);
+                setCurrentPic(totalPics - 1);
             } else {
                 setCurrentPic((prev) => prev - 1);
             }
@@ -34,9 +37,24 @@ export function PhotoCarousel({photoUrls}) {
 
     }
 
+    useEffect(() => {
+        const nextPicture = getPreviousPic(currentPic, totalPictures);
+        const prevPicture = getNextPic(currentPic, totalPictures);
+
+        setPrevPic(nextPicture);
+        setNextPic(prevPicture);
+        
+    }, [currentPic])
+
     return(
-        <div className='flex justify-center items-center px-10'>
-            <a href={`#slide${getPreviousPic(currentPic, totalPictures)}`} onClick={(e) => goTo(e, 'previous', totalPictures)} className="btn btn-circle">❮</a>
+        <div className='flex justify-center items-center p-2 px-10'>
+            <a 
+                href={`#slide${prevPic}`} 
+                onClick={(e) => goTo(e, 'previous', totalPictures)} 
+                className="btn btn-circle"
+            >
+                ❮
+            </a>
             <div className="carousel w-full mt-2">
                 { photoUrls && photoUrls.map((photo, index) => (
                     <div id={`slide${index}`} key={index} className="carousel-item justify-center items-center relative w-full">
@@ -44,7 +62,7 @@ export function PhotoCarousel({photoUrls}) {
                             src={photo}
                             width={600}
                             height={600}
-                            alt="Picture of the author"
+                            alt="Photo Gallery Picture"
                         />
                         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         </div>
@@ -52,7 +70,13 @@ export function PhotoCarousel({photoUrls}) {
                 ))
                 }
             </div>
-            <a href={`#slide${getNextPic(currentPic, totalPictures)}`} onClick={(e) => goTo(e, 'next', totalPictures)} className="btn btn-circle">❯</a>
+            <a 
+                href={`#slide${nextPic}`} 
+                onClick={(e) => goTo(e, 'next', totalPictures)} 
+                className="btn btn-circle"
+            >
+                ❯
+            </a>
         </div>
     )
 }
