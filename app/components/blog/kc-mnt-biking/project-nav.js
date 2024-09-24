@@ -1,13 +1,25 @@
-export function ProjectNav({data}) {
+export function ProjectNav({ data, setCurrentArea }) {
+
+    function handleAreaChange(newArea) {
+        setCurrentArea(newArea); 
+        console.log('new area');
+    }
+
+
     return(
         <ul className="menu bg-base-200 rounded-box w-56 m-2">
             {
                 data && data.map(({name, rank}, index) => (
-                    <Badge key={index} text={`#${rank}`}><li className="w-full"><a>{name}</a></li></Badge>
+                    <Badge key={index} text={`#${rank}`}>
+                        <li className="w-full">
+                            <a onClick={() => handleAreaChange(name)}>
+                                {name}
+                            </a>
+                        </li>
+                    </Badge>
                 ))
 
             }
-            <Badge text='#2'><li className="w-full"><a>Kill Creek</a></li></Badge>
             <Badge text='#3'><li className="w-full"><a>Blue River Parkway</a></li></Badge>
             <Badge text='#4'><li className="w-full"><a>Nall Park</a></li></Badge>
             <Badge text='#4'><li className="w-full"><a>Landahl Park</a></li></Badge>

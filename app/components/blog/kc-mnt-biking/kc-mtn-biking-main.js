@@ -8,19 +8,21 @@ import { data } from '../../../projects/projects/kansas-city-mtn-biking/data';
 
 
 export function KCMtnBikingMain() {
-    const [currentArea, setCurrentArea] = useState('Cedar Niles');
-    const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
+    const [currentArea, setCurrentArea] = useState('');
+    const [currentAreaIndex, setCurrentAreaIndex] = useState(-1);
 
     useEffect(() => {
-        const newIndex = getAreaIndex(data, currentArea) 
-        setCurrentAreaIndex(newIndex);
+        if (currentArea != '') {
+            const newIndex = getAreaIndex(data, currentArea) 
+            setCurrentAreaIndex(newIndex);
+        }
     }, [currentArea])
 
     return(
         <div className="flex w-full min-h-screen">
-            <ProjectNav data={data}/>
+            <ProjectNav data={data} setCurrentArea={setCurrentArea} />
             {
-                currentArea != '' ? <Area data={data[currentAreaIndex]}/> : <MtnBikeGettingStarted/>
+                currentAreaIndex != -1 ? <Area data={data[currentAreaIndex]}/> : <MtnBikeGettingStarted/>
             }
         </div>
     )

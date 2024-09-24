@@ -2,13 +2,15 @@ import { MdxLayoutParentWidth } from '@/app/components/blog';
 
 //MDX articals
 import CedarNiles from '../../../projects/projects/kansas-city-mtn-biking/articals/cedar-niles.mdx'
+import KillCreek from '../../../projects/projects/kansas-city-mtn-biking/articals/kill-creek.mdx'
 
 export function StorySection({name}) {
 
     const artical = (name) => {
       switch(name) {
 
-        case "Cedar Niles":   return <CedarNiles />;
+        case "Cedar Niles":   return <CedarNiles/>;
+        case "Kill Creek":   return <KillCreek/>;
         default:      return <h1>No project match</h1>
 
       }
