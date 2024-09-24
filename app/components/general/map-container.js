@@ -18,8 +18,18 @@ export default function Map({mapHeight, tracks}) {
     return(
         <>
             {
-                trackData ? <MapBox mapHeight={mapHeight} gpxData={trackData}/> : <h1>Loading</h1>
+                trackData ? <MapBox mapHeight={mapHeight} gpxData={trackData}/> : <MapLoading mapHeight={mapHeight}/>
             }
         </>
+    )
+}
+
+
+function MapLoading({mapHeight}) {
+    return(
+        <div className={`flex flex-col justify-center items-center text-gray-500 h-[${mapHeight}px]`}>
+            <h3>Loading Map</h3>
+            <span className="loading loading-ring loading-lg"></span>
+        </div>
     )
 }
