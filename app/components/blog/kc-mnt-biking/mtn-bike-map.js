@@ -1,7 +1,7 @@
 import Map from '@/app/components/general/map-container';
 
-export function MtnBikeMap({gpxTracks}) {
+export function MtnBikeMap({ data }) {
     return(
-        <Map mapHeight='400' tracks={gpxTracks}/>
+        <Map mapHeight='400' data={data} />
     )
 }

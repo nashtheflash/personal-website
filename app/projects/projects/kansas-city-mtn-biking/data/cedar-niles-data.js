@@ -12,13 +12,16 @@ export const cedarNilesData = {
             traffic: 'low',
             currentStatus: 'Open'
         },
+        mapStartingLat: 38.906144,
+        mapStartingLon: -94.879008,
+        mapZoom: 14,
         gpxTracks: [
-            {name: 'Scape Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx'},
-            {name: 'Billy Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx'},
-            {name: 'Columbine Loop', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx'},
-            {name: 'Columbine Connector', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx'},
-            {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx'},
-            {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx'},
+            {name: 'Scape Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx', active: 1},
+            {name: 'Billy Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx', active: 1},
+            {name: 'Columbine Loop', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx', active: 1},
+            {name: 'Columbine Connector', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx', active: 1},
+            {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx', active: 1},
+            {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx', active: 1},
         ],
         photos: [
             "/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG",

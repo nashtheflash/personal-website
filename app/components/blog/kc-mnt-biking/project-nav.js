@@ -2,7 +2,6 @@ export function ProjectNav({ data, setCurrentArea }) {
 
     function handleAreaChange(newArea) {
         setCurrentArea(newArea); 
-        console.log('new area');
     }
 
 

@@ -11,18 +11,96 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function MapBox({mapHeight, gpxData}) {
+export default function MapBox({ data, geoJsonTracks }) {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
     const mapContainer = useRef(null);
     const map = useRef(null);
     
     const [mapLoaded, setMapLoaded] = useState(false);
-    const [lng, setLng] = useState(-94.879008);
-    const [lat, setLat] = useState(38.906144);
-    const [zoom, setZoom] = useState(14);
-    const [currentTrack, setCurrentTrack] = useState(gpxData);
+    // const [reloadMap, setReloadMap] = useState(false);
+    const [lng, setLng] = useState(data.mapStartingLon);
+    const [lat, setLat] = useState(data.mapStartingLat);
+    const [zoom, setZoom] = useState(data.mapZoom);
+    const [currentTrack, setCurrentTrack] = useState(geoJsonTracks);
+
+    useEffect(() => {
+        // console.log('data change', data.mapStartingLon);
+        setLng(data.mapStartingLon);
+        setLat(data.mapStartingLat);
+        setZoom(data.mapZoom);
+        // setCurrentTrack(geoJsonTracks)
+        // mapLoaded == true ? setReloadMap(true) : ''
+        // setMapLoaded(false);
+
+        //if the data changes all of the layers need to be cleared
+        if(mapLoaded) {
+            const oldLayers = map.current.getStyle().layers.filter((layer) => layer.source != 'composite' && layer.type == 'line')
+
+            oldLayers.forEach((layer) => {
+                map.current.removeLayer(layer.id);
+                map.current.removeSource(layer.id);   
+            });
+
+            //moves the map to the next location
+            map.current.flyTo({
+                center: [data.mapStartingLon, data.mapStartingLat],
+                essential: true // this animation is considered essential with respect to prefers-reduced-motion
+            });
+        }
+
+     }, [data])
     
+    useEffect(() => {
+        //adds the new layers to the map note: geoJsonTracks is useState so must be updated independantly of data
+        if(mapLoaded) {
+            setCurrentTrack(geoJsonTracks)
+            geoJsonTracks.forEach(track => {
+                const layerName = track.name;
+
+                map.current.addSource(layerName, {
+                    type: 'geojson',
+                    data: track.data
+                });
+
+                map.current.addLayer({
+                    id: layerName,
+                    type: 'line',
+                    source: layerName,
+                    layout: {
+                        'line-join': 'round',
+                        'line-cap': 'round'
+                    },
+                    paint: {
+                        'line-color':   track.difficulty == 'easy' ? '#22c55e' : 
+                                        track.difficulty == 'medium' ? '#3b82f6' : 
+                                        track.difficulty == 'hard' ? '#000000' : 
+                                        track.difficulty == 'expert' ? '#ef4444' : 
+                                        '#888',
+                        'line-width': 4,
+                    }
+                });
+                
+                var popup;
+                
+                //mouse over events
+                map.current.on('mouseover', layerName, function (e) {
+                    popup = new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(`<h2>${layerName}</h2>`)
+                        .addTo(map.current);
+
+                    map.current.setPaintProperty(layerName, 'line-width', 8); // Set width to 8 on hover
+                });
+
+                map.current.on('mouseout', layerName, function (e) {
+                    if (popup) popup.remove();
+                    map.current.setPaintProperty(layerName, 'line-width', 4); // Set width to 8 on hover
+                });
+            });
+        }
+    }, [geoJsonTracks])
+
     useEffect(() => {
         if (map.current) return; // initialize map only once
 
@@ -37,7 +115,7 @@ export default function MapBox({mapHeight, gpxData}) {
         //once the map is loaded start drawing the tracks
         map.current.on('load', () => {
             setMapLoaded(true);
-            
+
             currentTrack.forEach(track => {
                 const layerName = track.name;
 
@@ -99,16 +177,16 @@ export default function MapBox({mapHeight, gpxData}) {
 
     return( 
         <div className="w-full h-full p-5">
-            <MapSelect trails={gpxData} setCurrentTrack={setCurrentTrack}/>
+            <MapSelect trails={data.gpxTracks} setCurrentTrack={setCurrentTrack}/>
             <div className='text-black'>
                 <div ref={mapContainer} className={`map-container h-[400px]`} />
             </div>
-            <MapAction tracks={currentTrack}/>
+            <MapAction tracks={currentTrack}/> : <h1>loading</h1>
         </div>
     )
 }
 
-export function MapSelect({trails, setCurrentTrack}) {
+function MapSelect({trails, setCurrentTrack}) {
     return(
         <div className="grid grid-cols-3 justify-center justify-items-center items-start gap-1 py-3 text-black">
             <div className='col-span-3'>

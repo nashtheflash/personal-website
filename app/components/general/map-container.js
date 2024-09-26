@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 import { getTrack } from "./server-action";
 import MapBox from "./mapbox";
 
-export default function Map({mapHeight, tracks}) {
+export default function Map({mapHeight, data}) {
     const [trackData, setTrackData] = useState();
 
     async function getTrackData() {
-        const allTracks = await getTrack(tracks);
+        const allTracks = await getTrack(data.gpxTracks);
         setTrackData(allTracks)
     }
     
     useEffect(() => {
         getTrackData()
-    }, []);
+    }, [data]);
 
     return(
         <>
             {
-                trackData ? <MapBox mapHeight={mapHeight} gpxData={trackData}/> : <MapLoading mapHeight={mapHeight}/>
+                trackData ? <MapBox data={data} geoJsonTracks={trackData}/> : <MapLoading mapHeight={mapHeight}/>
             }
         </>
     )
