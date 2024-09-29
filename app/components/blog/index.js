@@ -18,6 +18,7 @@ export { FromToCode } from "./colums/from-to-code";
 export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
 export { ThreeCenteredImages } from "./images/three-centered-images"
+export { PhotoCarousel } from "./images/photo-carousel/photo-carousel"
 
 //Videos
 export { BasicVideo } from './videos/basic-video';

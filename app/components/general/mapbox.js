@@ -18,20 +18,15 @@ export default function MapBox({ data, geoJsonTracks }) {
     const map = useRef(null);
     
     const [mapLoaded, setMapLoaded] = useState(false);
-    // const [reloadMap, setReloadMap] = useState(false);
     const [lng, setLng] = useState(data.mapStartingLon);
     const [lat, setLat] = useState(data.mapStartingLat);
     const [zoom, setZoom] = useState(data.mapZoom);
-    const [currentTrack, setCurrentTrack] = useState(geoJsonTracks);
+    const [currentTracks, setCurrentTracks] = useState(geoJsonTracks);
 
     useEffect(() => {
-        // console.log('data change', data.mapStartingLon);
         setLng(data.mapStartingLon);
         setLat(data.mapStartingLat);
         setZoom(data.mapZoom);
-        // setCurrentTrack(geoJsonTracks)
-        // mapLoaded == true ? setReloadMap(true) : ''
-        // setMapLoaded(false);
 
         //if the data changes all of the layers need to be cleared
         if(mapLoaded) {
@@ -54,7 +49,7 @@ export default function MapBox({ data, geoJsonTracks }) {
     useEffect(() => {
         //adds the new layers to the map note: geoJsonTracks is useState so must be updated independantly of data
         if(mapLoaded) {
-            setCurrentTrack(geoJsonTracks)
+            setCurrentTracks(geoJsonTracks)
             geoJsonTracks.forEach(track => {
                 const layerName = track.name;
 
@@ -116,7 +111,7 @@ export default function MapBox({ data, geoJsonTracks }) {
         map.current.on('load', () => {
             setMapLoaded(true);
 
-            currentTrack.forEach(track => {
+            currentTracks.forEach(track => {
                 const layerName = track.name;
 
                 map.current.addSource(layerName, {
@@ -166,40 +161,40 @@ export default function MapBox({ data, geoJsonTracks }) {
     useEffect(() => {
         if (!mapLoaded) return;
 
-        currentTrack.forEach((track) => {
+        currentTracks.forEach((track) => {
             if (track.active == 1) {
                 map.current.setLayoutProperty(track.name, 'visibility', 'visible');
             } else {
                 map.current.setLayoutProperty(track.name, 'visibility', 'none');
             }
         });
-    }, [currentTrack]);
+    }, [currentTracks]);
 
     return( 
         <div className="w-full h-full p-5">
-            <MapSelect trails={data.gpxTracks} setCurrentTrack={setCurrentTrack}/>
+            <MapSelect trails={data.gpxTracks} setCurrentTracks={setCurrentTracks}/>
             <div className='text-black'>
                 <div ref={mapContainer} className={`map-container h-[400px]`} />
             </div>
-            <MapAction tracks={currentTrack}/> : <h1>loading</h1>
+            <MapAction tracks={currentTracks}/> : <h1>loading</h1>
         </div>
     )
 }
 
-function MapSelect({trails, setCurrentTrack}) {
+function MapSelect({trails, setCurrentTracks}) {
     return(
         <div className="grid grid-cols-3 justify-center justify-items-center items-start gap-1 py-3 text-black">
             <div className='col-span-3'>
                 <BlackTieTitle title='TRAILS'/>
             </div>
-            <button className="" onClick={() => selectAllTracks(setCurrentTrack)}>All Trails</button>
+            <button className="" onClick={() => selectAllTracks(setCurrentTracks)}>All Trails</button>
             {
                trails && trails.map(trail => {
                     return (
                         <button 
                             key={trail.name}
                             className="" 
-                            onClick={() => handleTrackChange(setCurrentTrack, trail.name)}
+                            onClick={() => handleTrackChange(setCurrentTracks, trail.name)}
                         >
                             <div className='flex gap-1 justify-center items-center'>
                                 {trail.name}

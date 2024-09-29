@@ -1,100 +1,197 @@
-'use client'
-import Image from 'next/image'
-import { useEffect, useState } from 'react';
+"use client";
+import React, { useCallback, useEffect, useState } from 'react'
+// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+// import {
+//   PrevButton,
+//   NextButton,
+//   usePrevNextButtons
+// } from './EmblaCarouselArrowButtons'
+import useEmblaCarousel from 'embla-carousel-react'
 
-export function PhotoCarousel({photoUrls}) {
-    const totalPictures = photoUrls.length;
-    
-    const [prevPic, setPrevPic] = useState(totalPictures - 1);
-    const [currentPic, setCurrentPic] = useState(0);
-    const [nextPic, setNextPic] = useState(1);
+import "./photo-carousel/embela.css"
 
-    const goTo = (event, type, totalPics) => {
-        event.preventDefault()
-        const btn = event.currentTarget;
 
-        const carousel = document.querySelector('.carousel')
-        const href = btn.getAttribute('href')
-        const target = carousel.querySelector(href)
-        const left = target.offsetLeft
-        carousel.scrollTo({ left: left })
+// export function PhotoC() {
+//     const OPTIONS = { loop: true }
+//     const SLIDE_COUNT = 5
+//     const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+//     return (
+//         <>
+//             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+//         </>
+//     )
+//
+// }
 
-        if (type == 'next') {
-            if (currentPic == totalPics - 1) {
-                setCurrentPic(0);
-            } else {
-                setCurrentPic((prev) => prev + 1);
-            }
-        }
-        
-        if (type == 'previous') {
-            if (currentPic == 0) {
-                setCurrentPic(totalPics - 1);
-            } else {
-                setCurrentPic((prev) => prev - 1);
-            }
-        }
 
-    }
 
-    useEffect(() => {
-        const nextPicture = getPreviousPic(currentPic, totalPictures);
-        const prevPicture = getNextPic(currentPic, totalPictures);
 
-        setPrevPic(nextPicture);
-        setNextPic(prevPicture);
-        
-    }, [currentPic])
 
-    return(
-        <div className='flex justify-center items-center p-2 px-10'>
-            <a 
-                href={`#slide${prevPic}`} 
-                onClick={(e) => goTo(e, 'previous', totalPictures)} 
-                className="btn btn-circle"
-            >
-                ❮
-            </a>
-            <div className="carousel w-full mt-2">
-                { photoUrls && photoUrls.map((photo, index) => (
-                    <div id={`slide${index}`} key={index} className="carousel-item justify-center items-center relative w-full">
-                        <Image
-                            src={photo}
-                            width={600}
-                            height={600}
-                            alt="Photo Gallery Picture"
-                        />
-                        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        </div>
-                    </div>
-                ))
-                }
+const EmblaCarousel = (props) => {
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi)
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
+
+  return (
+    <section className="embla">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((index) => (
+            <div className="embla__slide" key={index}>
+              <div className="embla__slide__number">{index + 1}</div>
             </div>
-            <a 
-                href={`#slide${nextPic}`} 
-                onClick={(e) => goTo(e, 'next', totalPictures)} 
-                className="btn btn-circle"
-            >
-                ❯
-            </a>
+          ))}
         </div>
-    )
+      </div>
+
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 
+const useDotButton = (emblaApi) => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
 
-const getPreviousPic = (index, arrayLength) => {
-    if (index == 0) {
-        return arrayLength - 1;
-    } else {
-        return index - 1;
-    }
+  const onDotButtonClick = useCallback(
+    (index) => {
+      if (!emblaApi) return
+      emblaApi.scrollTo(index)
+    },
+    [emblaApi]
+  )
+
+  const onInit = useCallback((emblaApi) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = useCallback((emblaApi) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onInit(emblaApi)
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
+  return {
+    selectedIndex,
+    scrollSnaps,
+    onDotButtonClick
+  }
 }
 
-const getNextPic = (index, arrayLength) => {
-    if (index == arrayLength - 1) {
-        return 0;
-    } else {
-        return index + 1;
-    }
+export const DotButton = (props) => {
+  const { children, ...restProps } = props
+
+  return (
+    <button type="button" {...restProps}>
+      {children}
+    </button>
+  )
+}
+
+
+export const usePrevNextButtons = (emblaApi) => {
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+
+  const onPrevButtonClick = useCallback(() => {
+    if (!emblaApi) return
+    emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const onNextButtonClick = useCallback(() => {
+    if (!emblaApi) return
+    emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const onSelect = useCallback((emblaApi) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev())
+    setNextBtnDisabled(!emblaApi.canScrollNext())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onSelect])
+
+  return {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  }
+}
+
+export const PrevButton = (props) => {
+  const { children, ...restProps } = props
+
+  return (
+    <button
+      className="embla__button embla__button--prev"
+      type="button"
+      {...restProps}
+    >
+      <svg className="embla__button__svg" viewBox="0 0 532 532">
+        <path
+          fill="currentColor"
+          d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+        />
+      </svg>
+      {children}
+    </button>
+  )
+}
+
+export const NextButton = (props) => {
+  const { children, ...restProps } = props
+
+  return (
+    <button
+      className="embla__button embla__button--next"
+      type="button"
+      {...restProps}
+    >
+      <svg className="embla__button__svg" viewBox="0 0 532 532">
+        <path
+          fill="currentColor"
+          d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+        />
+      </svg>
+      {children}
+    </button>
+  )
 }
