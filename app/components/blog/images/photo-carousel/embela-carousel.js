@@ -39,7 +39,7 @@ export function EmblaCarousel({ slides, options, photos }) {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center w-full text-black">
+            <div className="flex items-center justify-center w-full mt-1 text-black">
                 <div className="embla__buttons">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                     <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

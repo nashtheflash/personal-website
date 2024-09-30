@@ -26,7 +26,7 @@ export function StatsSection({stats}) {
     return(
         <div className="bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] py-5 text-black w-full h-fit">
             <div className='grid grid-cols-2 h-full items-center justify-items-center sm:grid-cols-3 md:grid-cols-4'>
-                <Stat title='Distance Total' Icon={DistanceIcon} stat={`${distanceMiles} Mi`} statAlt={`(${distanceMiles * 1.609} KM)`}/>
+                <Stat title='Distance Total' Icon={DistanceIcon} stat={`${distanceMiles} Mi`} statAlt={`(${(distanceMiles * 1.609).toFixed(2)} KM)`}/>
                 <Stat title='Number of Trails' Icon={SingleTrackIcon} stat={numberOfTrails}/>
                 <Stat title='Flow' Icon={DifficultyIcon} stat={flowTrails}/>
                 <Stat title='Down Hill' Icon={DifficultyIcon} stat={downHillTrails}/>
