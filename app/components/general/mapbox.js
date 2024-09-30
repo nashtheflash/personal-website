@@ -176,7 +176,7 @@ export default function MapBox({ data, geoJsonTracks }) {
             <div className='text-black'>
                 <div ref={mapContainer} className={`map-container h-[400px]`} />
             </div>
-            <MapAction tracks={currentTracks}/> : <h1>loading</h1>
+            <MapAction tracks={currentTracks}/>
         </div>
     )
 }
@@ -238,7 +238,7 @@ export function MapAction({tracks}) {
     const selectedTrack = tracks.find((track) => track.active == 1);
 
     return(
-        <div className="flex justify-center items-center gap-3 py-3 text-black">
+        <div className="flex justify-center items-center gap-3 py-3 mb-3 text-black">
             <a href={selectedTrack.url} download>
                 <button className="btn btn-neutral">
                     <MapIcon className='w-5 h-5'/>
