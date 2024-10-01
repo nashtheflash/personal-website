@@ -16,12 +16,13 @@ export const killCreekData = {
         mapStartingLon: -94.976933,
         mapZoom: 13,
         gpxTracks: [
+            {name: 'Inner Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-loop.gpx'},
+            {name: 'Outer Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/outer-hank.gpx'},
             {name: 'Eddy Trail', difficulty: 'medium', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-trail.gpx'},
-            {name: 'Green Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop.gpx'},
-            {name: 'Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-loop.gpx'},
-            {name: 'Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-connector.gpx'},
-            {name: 'Green Loop Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-connector.gpx'},
-            {name: 'Green Loop to Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-to-hank-connector.gpx'},
+            // {name: 'Green Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop.gpx'},
+            // {name: 'Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-connector.gpx'},
+            // {name: 'Green Loop Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-connector.gpx'},
+            // {name: 'Green Loop to Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-to-hank-connector.gpx'},
         ],
         photos: [
         "/mtn-bike-kc/kill-creek/park-sign.JPEG",
