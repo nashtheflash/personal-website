@@ -1,7 +1,7 @@
 export const killCreekData = {
         name: 'Kill Creek',
         rank: 2,
-        featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
+        featuredImage: '/mtn-bike-kc/kill-creek/tower.JPEG',
         stats: {
             distanceMiles: 4.4,
             numberOfTrails: 4,
@@ -24,9 +24,18 @@ export const killCreekData = {
             {name: 'Green Loop to Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-to-hank-connector.gpx'},
         ],
         photos: [
-            "/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG",
-            "/mtn-bike-kc/cedar-niles/big-jump.JPEG",
-            "/mtn-bike-kc/cedar-niles/small-jump.JPEG",
+        "/mtn-bike-kc/kill-creek/park-sign.JPEG",
+            "/mtn-bike-kc/kill-creek/trail-map.JPEG",
+            "/mtn-bike-kc/kill-creek/trail-sign.JPEG",
+            "/mtn-bike-kc/kill-creek/outer-hank.JPEG",
+            "/mtn-bike-kc/kill-creek/paved-path.JPEG",
+            "/mtn-bike-kc/kill-creek/observation-deck.JPEG",
+            "/mtn-bike-kc/kill-creek/plant-comunity.JPEG",
+            "/mtn-bike-kc/kill-creek/lake.JPEG",
+            "/mtn-bike-kc/kill-creek/praire.JPEG",
+            "/mtn-bike-kc/kill-creek/kayaks.JPEG",
+            "/mtn-bike-kc/kill-creek/hiking-only-area.JPEG",
+            "/mtn-bike-kc/kill-creek/horse-parking.JPEG",
         ],
         accessInfo: [
             {
@@ -50,8 +59,8 @@ export const killCreekData = {
                 text: 'is okay. Very overshadowed by the Observation Tower.'
             },
             {
-                title: 'Swim Beach',
-                text: 'I always try to take a swim after a hot summar ride.'
+                title: 'Swim Beach / Kayaks',
+                text: 'I always try to take a swim after a hot summar ride. There are also kayaks that you can rent at anytime!'
             }
         ],
         faqFoodDrink: [

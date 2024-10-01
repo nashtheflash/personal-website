@@ -22,6 +22,7 @@ export const cedarNilesData = {
             {name: 'Columbine Connector', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx', active: 1},
             {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx', active: 1},
             {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx', active: 1},
+            {name: 'The Annex', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/the-annex.gpx', active: 1},
         ],
         photos: [
             "/mtn-bike-kc/cedar-niles/billy-goat-south-trail-head.JPEG",
@@ -37,6 +38,9 @@ export const cedarNilesData = {
             "/mtn-bike-kc/cedar-niles/trail-3.JPEG",
             "/mtn-bike-kc/cedar-niles/trail-head-sign.JPEG",
             "/mtn-bike-kc/cedar-niles/trail.JPEG",
+            "/mtn-bike-kc/cedar-niles/the-annex.JPEG",
+            "/mtn-bike-kc/cedar-niles/dirt-jump.JPEG",
+            "/mtn-bike-kc/cedar-niles/wood-drop.JPEG",
             // "/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG",
             // "/mtn-bike-kc/cedar-niles/big-jump.JPEG",
             // "/mtn-bike-kc/cedar-niles/small-jump.JPEG",

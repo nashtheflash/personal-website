@@ -8,8 +8,8 @@ export function ThreeCenteredImages({image, altText, width, height}) {
     const imageTwo = image[1];
     const altTextTwo = altText[1];
     
-    const imageThree = image[1];
-    const altTextThree = altText[1];
+    const imageThree = image[2];
+    const altTextThree = altText[2];
     
     return (
         <div className='flex justify-center items-center gap-2 w-full h-full'>
