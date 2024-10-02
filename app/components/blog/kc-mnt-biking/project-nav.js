@@ -19,10 +19,6 @@ export function ProjectNav({ data, setCurrentArea }) {
                 ))
 
             }
-            <Badge text='#3'><li className="w-full"><a>Blue River Parkway</a></li></Badge>
-            <Badge text='#4'><li className="w-full"><a>Nall Park</a></li></Badge>
-            <Badge text='#4'><li className="w-full"><a>Landahl Park</a></li></Badge>
-            <Badge text='#5'><li className="w-full"><a>St. Joe</a></li></Badge>
         </ul>
     )
 }

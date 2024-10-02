@@ -3,6 +3,8 @@ import { MdxLayoutParentWidth } from '@/app/components/blog';
 //MDX articals
 import CedarNiles from '../../../projects/projects/kansas-city-mtn-biking/articals/cedar-niles.mdx'
 import KillCreek from '../../../projects/projects/kansas-city-mtn-biking/articals/kill-creek.mdx'
+import NallPark from '../../../projects/projects/kansas-city-mtn-biking/articals/nall-park.mdx'
+import Rozarks from '../../../projects/projects/kansas-city-mtn-biking/articals/rozark.mdx'
 
 export function StorySection({name}) {
 
@@ -11,6 +13,8 @@ export function StorySection({name}) {
 
         case "Cedar Niles":   return <CedarNiles/>;
         case "Kill Creek":   return <KillCreek/>;
+        case "Nall Park":   return <NallPark/>;
+        case "Rozarks":   return <Rozarks/>;
         default:      return <h1>No project match</h1>
 
       }
