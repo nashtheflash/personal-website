@@ -14,6 +14,7 @@ export function MtnBikeGettingStarted() {
             </ul>
             <h1>Grading system</h1>
             <h1>Parts of Town good bad?</h1>
+            <h1>Bike shops. Rental??</h1>
         </div>
     )
 }

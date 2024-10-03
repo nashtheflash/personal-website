@@ -67,7 +67,8 @@ export default function MapBox({ data, geoJsonTracks }) {
                         'line-cap': 'round'
                     },
                     paint: {
-                        'line-color':   track.difficulty == 'easy' ? '#22c55e' : 
+                        'line-color':   track.difficulty == 'paved' ? '#808080' : 
+                                        track.difficulty == 'easy' ? '#22c55e' : 
                                         track.difficulty == 'medium' ? '#3b82f6' : 
                                         track.difficulty == 'hard' ? '#000000' : 
                                         track.difficulty == 'expert' ? '#ef4444' : 
@@ -200,6 +201,7 @@ function MapSelect({trails, setCurrentTracks}) {
                                 {trail.name}
                                 <div className={
                                     classNames(
+                                        trail.difficulty == 'paved' ? "w-2 h-2 bg-gray-500 transform rotate-45" :
                                         trail.difficulty == 'easy' ? "w-2 h-2 bg-green-500 transform rotate-45" :
                                         trail.difficulty == 'medium' ? "w-2 h-2 bg-blue-500 transform rotate-45" :
                                         trail.difficulty == 'hard' ? "w-2 h-2 bg-black transform rotate-45" :

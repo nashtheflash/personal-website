@@ -12,17 +12,22 @@ export const rozarksData = {
             traffic: 'low',
             currentStatus: 'Open'
         },
-        mapStartingLat: 38.906144,
-        mapStartingLon: -94.879008,
+        mapStartingLat: 39.061031,
+        mapStartingLon: -94.610546,
         mapZoom: 14,
         gpxTracks: [
-            {name: 'Scape Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/scape-goat.gpx', active: 1},
-            {name: 'Billy Goat', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/billy-goat.gpx', active: 1},
-            {name: 'Columbine Loop', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-loop.gpx', active: 1},
-            {name: 'Columbine Connector', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-connector.gpx', active: 1},
-            {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx', active: 1},
-            {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx', active: 1},
-            {name: 'The Annex', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/the-annex.gpx', active: 1},
+            {name: "Marty's Woods", difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/marty-woods.gpx', active: 1},
+            {name: 'Gnome Garden', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/gnome-garden.gpx', active: 1},
+            {name: 'Maccochaque', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/maccochaque.gpx', active: 1},
+            {name: 'Powerline', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/powerline.gpx', active: 1},
+            {name: 'Mission Cliff', difficulty: 'easy', url: '/mtn-bike-kc/rozarks/gpx-files/mission-cliffs.gpx', active: 1},
+            {name: '39th Street Traverse', difficulty: 'paved', url: '/mtn-bike-kc/rozarks/gpx-files/39-traverse.gpx', active: 1},
+            {name: 'Bindle Byway', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/bindle-byway.gpx', active: 1},
+            {name: "Gnome's Glen", difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/gnome-glen.gpx', active: 1},
+            {name: 'KoldKar', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/koldkar.gpx', active: 1},
+            {name: 'The Meadow', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/the-meadow.gpx', active: 1},
+            {name: "Devil's Dip", difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/devil-dip.gpx', active: 1},
+            {name: 'The Layover', difficulty: 'medium', url: '/mtn-bike-kc/rozarks/gpx-files/the-layover.gpx', active: 1},
         ],
         photos: [
             "/mtn-bike-kc/rozarks/maccochaque.JPEG",
@@ -40,15 +45,21 @@ export const rozarksData = {
         ],
         accessInfo: [
             {
-                trailheadName: 'Clare Road Trailhead',
-                gMapLinkUrl: 'https://maps.app.goo.gl/hNYoWBXYHtPLdLH97',
-                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8963.888413691491!2d-94.8790833808989!3d38.90040089327876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c09717e637c3c3%3A0x326b4c9e2476ee0d!2sCedar%20Niles%20Park%20Clare%20Road%20Trailhead!5e0!3m2!1sen!2sus!4v1724972397538!5m2!1sen!2sus',
+                trailheadName: 'Rosedale Arch Trailhead',
+                gMapLinkUrl: 'https://maps.app.goo.gl/GyTpJ78tinhicBvE9',
+                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d439.47249172690664!2d-94.61505387415842!3d39.063979350688335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1d80e717873%3A0x1f8ae9e9a49e6c06!2sRosedale%20Memorial%20Arch!5e1!3m2!1sen!2sus!4v1727966853076!5m2!1sen!2sus',
                 trailheadDiscription: 'This is the main access point for the trails. From here you can jump right onto the Columbine Connector trail that will take you out to Billy Goat and the Columbine Loop.'
             },
             {
-                trailheadName: '119th Street Trailhead',
-                gMapLinkUrl: 'https://maps.app.goo.gl/KySzsCW7vRfB2vyd9',
-                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12419.436404190137!2d-94.88314610747071!3d38.90433725660361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0977bb9da0e6d%3A0x11414b7fb807be8c!2sCedar%20Niles%20Park%20119th%20St%20Trailhead!5e0!3m2!1sen!2sus!4v1724975254860!5m2!1sen!2sus',
+                trailheadName: 'Fisher Park Trailhead',
+                gMapLinkUrl: 'https://maps.app.goo.gl/eY7bDYcxk5Gjgkim6',
+                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925.3113102201669!2d-94.61634539868233!3d39.05758194807152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0ee25da252423%3A0x10919d2b0265509b!2sFisher%20Park!5e1!3m2!1sen!2sus!4v1727966678744!5m2!1sen!2sus',
+                trailheadDiscription: 'I would call this secondary access. From here you will have to head down the paved path across the bridge and twords the woods. You will see the entrance to Scape Goat. Ride up Scape Goat to access the rest of the trail system.'
+            },
+            {
+                trailheadName: 'Community Center Trailhead',
+                gMapLinkUrl: 'https://maps.app.goo.gl/WZwrpfaEuFJhabxf7',
+                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.5016291615973!2d-94.60045057511721!3d39.060290703362405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0efd45b620fa1%3A0xc0b96f9d7f559641!2sWestport%20Roanoke%20KC%20Parks%20Community%20Center!5e1!3m2!1sen!2sus!4v1727966960439!5m2!1sen!2sus',
                 trailheadDiscription: 'I would call this secondary access. From here you will have to head down the paved path across the bridge and twords the woods. You will see the entrance to Scape Goat. Ride up Scape Goat to access the rest of the trail system.'
             }
         ],
