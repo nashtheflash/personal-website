@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Ropoflo</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>Ropoflo</name>
+    <link href="https://www.mtbproject.com/trail/7034409/ropoflo"/>
+    <trkseg>
+      <trkpt lat="39.041815" lon="-94.647329">
+        <ele>301.75</ele>
+        <time>2022-11-20T08:30:52.380Z</time>
+      </trkpt>
+      <trkpt lat="39.041815" lon="-94.647327">
+        <ele>302</ele>
+        <time>2022-11-20T08:30:52.686Z</time>
+      </trkpt>
+      <trkpt lat="39.041746" lon="-94.647341">
+        <ele>302.75</ele>
+        <time>2022-11-20T08:31:05.212Z</time>
+      </trkpt>
+      <trkpt lat="39.041696" lon="-94.64738">
+        <ele>303</ele>
+        <time>2022-11-20T08:31:15.695Z</time>
+      </trkpt>
+      <trkpt lat="39.041642" lon="-94.647497">
+        <ele>303.25</ele>
+        <time>2022-11-20T08:31:34.651Z</time>
+      </trkpt>
+      <trkpt lat="39.041667" lon="-94.647659">
+        <ele>302.75</ele>
+        <time>2022-11-20T08:31:57.657Z</time>
+      </trkpt>
+      <trkpt lat="39.041686" lon="-94.647686">
+        <ele>302.75</ele>
+        <time>2022-11-20T08:32:02.730Z</time>
+      </trkpt>
+      <trkpt lat="39.04172" lon="-94.647695">
+        <ele>302.5</ele>
+        <time>2022-11-20T08:32:08.955Z</time>
+      </trkpt>
+      <trkpt lat="39.04176" lon="-94.64767">
+        <ele>302</ele>
+        <time>2022-11-20T08:32:16.928Z</time>
+      </trkpt>
+      <trkpt lat="39.041759" lon="-94.647671">
+        <ele>302</ele>
+        <time>2022-11-20T08:32:17.144Z</time>
+      </trkpt>
+      <trkpt lat="39.041773" lon="-94.647662">
+        <ele>302</ele>
+        <time>2022-11-20T08:32:19.950Z</time>
+      </trkpt>
+      <trkpt lat="39.041943" lon="-94.647685">
+        <ele>300.25</ele>
+        <time>2022-11-20T08:32:50.605Z</time>
+      </trkpt>
+      <trkpt lat="39.042101" lon="-94.647689">
+        <ele>299</ele>
+        <time>2022-11-20T08:33:18.945Z</time>
+      </trkpt>
+      <trkpt lat="39.042259" lon="-94.647759">
+        <ele>297.75</ele>
+        <time>2022-11-20T08:33:48.910Z</time>
+      </trkpt>
+      <trkpt lat="39.042529" lon="-94.647832">
+        <ele>295.5</ele>
+        <time>2022-11-20T08:34:38.387Z</time>
+      </trkpt>
+      <trkpt lat="39.042889" lon="-94.648009">
+        <ele>293.5</ele>
+        <time>2022-11-20T08:35:47.495Z</time>
+      </trkpt>
+      <trkpt lat="39.043065" lon="-94.648079">
+        <ele>292.5</ele>
+        <time>2022-11-20T08:36:20.529Z</time>
+      </trkpt>
+      <trkpt lat="39.043244" lon="-94.648116">
+        <ele>291.25</ele>
+        <time>2022-11-20T08:36:53.041Z</time>
+      </trkpt>
+      <trkpt lat="39.043461" lon="-94.648094">
+        <ele>288.5</ele>
+        <time>2022-11-20T08:37:32.077Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

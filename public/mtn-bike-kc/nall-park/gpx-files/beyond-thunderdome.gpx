@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Beyond Thunderdome</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>Beyond Thunderdome</name>
+    <link href="https://www.mtbproject.com/trail/7034408/beyond-thunderdome"/>
+    <trkseg>
+      <trkpt lon="-94.646741" lat="39.041041">
+        <ele>308.96</ele>
+        <time>2022-11-20T08:31:33.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.646759" lat="39.041194">
+        <ele>306.24</ele>
+        <time>2022-11-20T08:32:33.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.646714" lat="39.041766">
+        <ele>303.06</ele>
+        <time>2022-11-20T08:34:32.366Z</time>
+      </trkpt>
+      <trkpt lat="39.041764" lon="-94.646773">
+        <ele>304.75</ele>
+        <time>2022-11-20T08:34:41.919Z</time>
+      </trkpt>
+      <trkpt lat="39.041709" lon="-94.64682">
+        <ele>305</ele>
+        <time>2022-11-20T08:34:55.667Z</time>
+      </trkpt>
+      <trkpt lat="39.041528" lon="-94.646889">
+        <ele>307</ele>
+        <time>2022-11-20T08:35:34.985Z</time>
+      </trkpt>
+      <trkpt lat="39.041438" lon="-94.646903">
+        <ele>308.25</ele>
+        <time>2022-11-20T08:35:53.867Z</time>
+      </trkpt>
+      <trkpt lat="39.041444" lon="-94.646931">
+        <ele>307.75</ele>
+        <time>2022-11-20T08:35:58.565Z</time>
+      </trkpt>
+      <trkpt lat="39.041455" lon="-94.646972">
+        <ele>307.75</ele>
+        <time>2022-11-20T08:36:05.582Z</time>
+      </trkpt>
+      <trkpt lat="39.041464" lon="-94.64703">
+        <ele>307.5</ele>
+        <time>2022-11-20T08:36:15.150Z</time>
+      </trkpt>
+      <trkpt lat="39.041491" lon="-94.64704">
+        <ele>307</ele>
+        <time>2022-11-20T08:36:21.002Z</time>
+      </trkpt>
+      <trkpt lat="39.041604" lon="-94.647049">
+        <ele>305.25</ele>
+        <time>2022-11-20T08:36:44.584Z</time>
+      </trkpt>
+      <trkpt lat="39.041604" lon="-94.647049">
+        <ele>305.25</ele>
+        <time>2022-11-20T08:36:44.584Z</time>
+      </trkpt>
+      <trkpt lat="39.041608" lon="-94.647049">
+        <ele>305.25</ele>
+        <time>2022-11-20T08:36:47.542Z</time>
+      </trkpt>
+      <trkpt lat="39.041711" lon="-94.647141">
+        <ele>303.75</ele>
+        <time>2022-11-20T08:37:18.452Z</time>
+      </trkpt>
+      <trkpt lat="39.041792" lon="-94.647221">
+        <ele>302.75</ele>
+        <time>2022-11-20T08:37:43.623Z</time>
+      </trkpt>
+      <trkpt lat="39.041815" lon="-94.647327">
+        <ele>302</ele>
+        <time>2022-11-20T08:38:04.699Z</time>
+      </trkpt>
+      <trkpt lat="39.041815" lon="-94.647327">
+        <ele>302</ele>
+        <time>2022-11-20T08:38:04.699Z</time>
+      </trkpt>
+      <trkpt lat="39.041815" lon="-94.647329">
+        <ele>301.5</ele>
+        <time>2022-11-20T08:38:49.005Z</time>
+      </trkpt>
+      <trkpt lat="39.041837" lon="-94.647425">
+        <ele>301.5</ele>
+        <time>2022-11-20T08:39:04.821Z</time>
+      </trkpt>
+      <trkpt lat="39.041865" lon="-94.647481">
+        <ele>301</ele>
+        <time>2022-11-20T08:39:15.344Z</time>
+      </trkpt>
+      <trkpt lat="39.042019" lon="-94.647554">
+        <ele>299.5</ele>
+        <time>2022-11-20T08:39:48.733Z</time>
+      </trkpt>
+      <trkpt lat="39.042312" lon="-94.647585">
+        <ele>296.75</ele>
+        <time>2022-11-20T08:40:48.548Z</time>
+      </trkpt>
+      <trkpt lat="39.042792" lon="-94.647724">
+        <ele>293.5</ele>
+        <time>2022-11-20T08:42:28.650Z</time>
+      </trkpt>
+      <trkpt lat="39.042976" lon="-94.647823">
+        <ele>292.5</ele>
+        <time>2022-11-20T08:43:09.224Z</time>
+      </trkpt>
+      <trkpt lat="39.042995" lon="-94.64783">
+        <ele>290.75</ele>
+        <time>2022-11-20T08:43:13.245Z</time>
+      </trkpt>
+      <trkpt lat="39.042995" lon="-94.64783">
+        <ele>290.75</ele>
+        <time>2022-11-20T08:43:13.245Z</time>
+      </trkpt>
+      <trkpt lat="39.043285" lon="-94.647931">
+        <ele>290.75</ele>
+        <time>2022-11-20T08:45:46.104Z</time>
+      </trkpt>
+      <trkpt lat="39.043481" lon="-94.647884">
+        <ele>288.25</ele>
+        <time>2022-11-20T08:46:22.928Z</time>
+      </trkpt>
+      <trkpt lat="39.043481" lon="-94.647884">
+        <ele>288.25</ele>
+        <time>2022-11-20T08:46:22.928Z</time>
+      </trkpt>
+      <trkpt lat="39.043535" lon="-94.647927">
+        <ele>287.5</ele>
+        <time>2022-11-20T08:48:16.606Z</time>
+      </trkpt>
+      <trkpt lat="39.043535" lon="-94.647927">
+        <ele>287.5</ele>
+        <time>2022-11-20T08:48:16.606Z</time>
+      </trkpt>
+      <trkpt lat="39.043534" lon="-94.648026">
+        <ele>287.5</ele>
+        <time>2022-11-20T08:49:40.501Z</time>
+      </trkpt>
+      <trkpt lat="39.0435" lon="-94.648087">
+        <ele>288</ele>
+        <time>2022-11-20T08:50:07.206Z</time>
+      </trkpt>
+      <trkpt lat="39.043461" lon="-94.648094">
+        <ele>288.5</ele>
+        <time>2022-11-20T08:50:25.240Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
