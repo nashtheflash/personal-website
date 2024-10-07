@@ -1,77 +1,63 @@
 export const nallParkData = {
         name: 'Nall Park',
         rank: 3,
-        featuredImage: '/mtn-bike-kc/kill-creek/tower.JPEG',
+        featuredImage: '/mtn-bike-kc/nall-park/turtle.JPEG',
         stats: {
-            distanceMiles: 4.4,
+            distanceMiles: 0.62,
             numberOfTrails: 4,
             flowTrails: 0,
-            downHillTrails: 0,
-            XCTrails: 4,
+            downHillTrails: 1,
+            XCTrails: 3,
             areaDificulty: 1,
             traffic: 'low',
             currentStatus: 'Open'
         },
-        mapStartingLat: 38.915987,
-        mapStartingLon: -94.976933,
-        mapZoom: 13,
+        mapStartingLat: 39.042303,
+        mapStartingLon: -94.648130,
+        mapZoom: 16,
         gpxTracks: [
-            {name: 'Inner Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-loop.gpx'},
-            {name: 'Outer Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/outer-hank.gpx'},
-            {name: 'Eddy Trail', difficulty: 'medium', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-trail.gpx'},
-            // {name: 'Green Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop.gpx'},
-            // {name: 'Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/hank-connector.gpx'},
-            // {name: 'Green Loop Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-connector.gpx'},
-            // {name: 'Green Loop to Hank Connector', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/green-loop-to-hank-connector.gpx'},
+            {name: 'Master Blaster', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/master-blaster.gpx'},
+            {name: 'Beyond-thunderdome', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/beyond-thunderdome.gpx'},
+            {name: 'Ropoflo', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/ropoflo.gpx'},
+            {name: 'Aunty Entity', difficulty: 'medium', url: '/mtn-bike-kc/nall-park/gpx-files/aunty-entity.gpx'},
         ],
         photos: [
-        "/mtn-bike-kc/kill-creek/park-sign.JPEG",
-            "/mtn-bike-kc/kill-creek/trail-map.JPEG",
-            "/mtn-bike-kc/kill-creek/trail-sign.JPEG",
-            "/mtn-bike-kc/kill-creek/outer-hank.JPEG",
-            "/mtn-bike-kc/kill-creek/paved-path.JPEG",
-            "/mtn-bike-kc/kill-creek/observation-deck.JPEG",
-            "/mtn-bike-kc/kill-creek/plant-comunity.JPEG",
-            "/mtn-bike-kc/kill-creek/lake.JPEG",
-            "/mtn-bike-kc/kill-creek/praire.JPEG",
-            "/mtn-bike-kc/kill-creek/kayaks.JPEG",
-            "/mtn-bike-kc/kill-creek/hiking-only-area.JPEG",
-            "/mtn-bike-kc/kill-creek/horse-parking.JPEG",
+            "/mtn-bike-kc/nall-park/turtle.JPEG",
+            "/mtn-bike-kc/nall-park/trail-map.JPEG",
+            "/mtn-bike-kc/nall-park/trail.JPEG",
+            "/mtn-bike-kc/nall-park/disk.JPEG",
+            "/mtn-bike-kc/nall-park/trail-2.JPEG",
+            "/mtn-bike-kc/nall-park/trail-3.JPEG",
+            "/mtn-bike-kc/nall-park/trail-5.JPEG",
+            "/mtn-bike-kc/nall-park/trail-6.JPEG",
+            "/mtn-bike-kc/nall-park/trail-7.JPEG",
         ],
         accessInfo: [
             {
-                trailheadName: 'Main Trailhead',
-                gMapLinkUrl: 'https://maps.app.goo.gl/XLy8poHyPpGxg9Gd7',
-                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.9224462429256!2d-94.9767881238028!3d38.91501857172022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c098d2f656449b%3A0x89c433c72a98d313!2sOlathe%2C%20KS%2066061!5e1!3m2!1sen!2sus!4v1727720993078!5m2!1sen!2sus',
-                trailheadDiscription: 'This is the main access point for the trails. From here you can access the Green Loop or Outer Hank Trail.'
+                trailheadName: 'Nall Park Trailhead',
+                gMapLinkUrl: 'https://maps.app.goo.gl/XCS2F4bQ4BTmkqDu8',
+                gMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.855962337588!2d-94.64931072173256!3d39.04140341999608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0eddfdb90b983%3A0x3d270775e032ec72!2sNall%20Park%20Singletrack%20-%20Mountain%20Bike%20Trail%20Head!5e0!3m2!1sen!2sus!4v1728271015895!5m2!1sen!2sus',
+                trailheadDiscription: 'This is the main access point for the trails. From here you can access the Master Blaster or Beyond Thunderdome.'
             },
         ],
         faqHighlights: [
             {
-                title: 'Eddy Loop',
-                text: 'is my favorite trail at Kill Creek.'
+                title: 'RopoFlo',
+                text: 'is a pretty good jump line in the city!'
             },
-            {
-                title: 'The Observation Tower',
-                text: 'is cool. Would drive out there just to see it? No. If this is your first visit it might be worth a trip to the top.'
-            },
-            {
-                title: 'The Observation Deck',
-                text: 'is okay. Very overshadowed by the Observation Tower.'
-            },
-            {
-                title: 'Swim Beach / Kayaks',
-                text: 'I always try to take a swim after a hot summar ride. There are also kayaks that you can rent at anytime!'
-            }
         ],
         faqFoodDrink: [
             {
-                title: 'KC Wine CO.',
-                text: "Has weird hours but if your riding with a girlfriend or wife I can't recommend this enough. She will love it!"
+                title: "Sully's",
+                text: "is not the place to go unless you are looking to get black out drunk. At least I heard that I don't actually know."
             },
             {
-                title: "Austin's",
-                text: "is located in Gardner. Its the closest place to grab a burger."
+                title: "The Peanut",
+                text: "is so good. I can't recommend there wings enough!" 
+            },
+            {
+                title: "Longboards Wraps & Bowls",
+                text: "is great to grab a wrap and go!" 
             }
         ],
     }

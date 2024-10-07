@@ -57,31 +57,23 @@ export const hodgeParkData = {
         ],
         faqHighlights: [
             {
-                title: 'Eddy Loop',
-                text: 'is my favorite trail at Kill Creek.'
+                title: 'Bandwagon',
+                text: 'is my favorite trail at Hodge Park.'
             },
             {
-                title: 'The Observation Tower',
-                text: 'is cool. Would drive out there just to see it? No. If this is your first visit it might be worth a trip to the top.'
+                title: 'The Shoal Creek Museum',
+                text: 'is right next to the trail and worth riding around.'
             },
             {
-                title: 'The Observation Deck',
-                text: 'is okay. Very overshadowed by the Observation Tower.'
+                title: 'Easy riding',
+                text: 'is everywhere. This is a great place to take a biginner!'
             },
-            {
-                title: 'Swim Beach / Kayaks',
-                text: 'I always try to take a swim after a hot summar ride. There are also kayaks that you can rent at anytime!'
-            }
         ],
         faqFoodDrink: [
             {
-                title: 'KC Wine CO.',
-                text: "Has weird hours but if your riding with a girlfriend or wife I can't recommend this enough. She will love it!"
+                title: 'The Landing',
+                text: "is about the only non-chain place to get a burger and beer out here."
             },
-            {
-                title: "Austin's",
-                text: "is located in Gardner. Its the closest place to grab a burger."
-            }
         ],
     }
 
