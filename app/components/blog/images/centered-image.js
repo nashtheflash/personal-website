@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { MdxImage } from '@/app/components/blog'
 
 export function CenteredImage({image, altText, title, subtitle, width, height}) {
@@ -38,23 +37,3 @@ function SubTitle({subtitle}) {
         <span className='text-md font-semibold'>This is a subtitle</span>
     )
 }
-
-// function ImageFullScreen({image}) {
-//onClick={()=> document.getElementById('my_modal_5').showModal()} //add this to the image to open the model
-//     console.log(image);
-//     return(
-//         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-//             <div className='flex justify-center items-center w-screen h-screen'>
-//                 <div className='w-screen'>
-//                     <Image
-//                         src={image}
-//                         alt={"Full Screen Image"}
-//                         sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
-//                         layout="fill"
-//                         className='w-100 h-100'
-//                     />
-//                 </div>
-//             </div>
-//         </dialog>
-//     )
-// }

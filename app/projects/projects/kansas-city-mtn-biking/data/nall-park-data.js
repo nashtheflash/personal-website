@@ -22,15 +22,13 @@ export const nallParkData = {
             {name: 'Aunty Entity', difficulty: 'medium', url: '/mtn-bike-kc/nall-park/gpx-files/aunty-entity.gpx'},
         ],
         photos: [
-            "/mtn-bike-kc/nall-park/turtle.JPEG",
-            "/mtn-bike-kc/nall-park/trail-map.JPEG",
-            "/mtn-bike-kc/nall-park/trail.JPEG",
-            "/mtn-bike-kc/nall-park/disk.JPEG",
-            "/mtn-bike-kc/nall-park/trail-2.JPEG",
-            "/mtn-bike-kc/nall-park/trail-3.JPEG",
-            "/mtn-bike-kc/nall-park/trail-5.JPEG",
-            "/mtn-bike-kc/nall-park/trail-6.JPEG",
-            "/mtn-bike-kc/nall-park/trail-7.JPEG",
+            { photoUrl: "/mtn-bike-kc/nall-park/trail-map.JPEG", title: 'Trail Map', subtitle: "Beyond Thunderdome is not correct", show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/trail.JPEG", title: 'Master Blaster', subtitle: "Taken from the top of the ravine", show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/disk.JPEG", title: 'Trail Art', show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/trail-2.JPEG", title: 'Ropoflo', subtitle: "Looking down from the drop in pont", show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/trail-3.JPEG", title: 'Jumps', show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/trail-6.JPEG", title: 'Typical Trail', show: false},
+            { photoUrl: "/mtn-bike-kc/nall-park/trail-7.JPEG", title: 'Typical Trail', show: false},
         ],
         accessInfo: [
             {

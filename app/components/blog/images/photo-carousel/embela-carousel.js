@@ -6,6 +6,7 @@ import {
   usePrevNextButtons
 } from './arrow-buttons'
 import useEmblaCarousel from 'embla-carousel-react'
+import { CenteredImage } from '../centered-image'
 
 export function EmblaCarousel({ slides, options, photos }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
@@ -26,13 +27,20 @@ export function EmblaCarousel({ slides, options, photos }) {
                 <div className="embla__container">
                     {photos.map((photo, index) => (
                         <div className="embla__slide" key={index}>
-                            <div className="flex justify-center items-center relative w-full">
-                                <Image
-                                    src={photo}
-                                    width={600}
-                                    height={600}
-                                    alt="Photo Gallery Picture"
-                                />
+                            <div className="flex justify-center items-center w-full">
+                                <div className='relative group w-fit'>
+                                    <Image
+                                        src={photo.photoUrl}
+                                        width={600}
+                                        height={600}
+                                        alt="Photo Gallery Picture"
+                                    />
+                                    <div className={`absolute left-0 bottom-0 w-fit h-fit pl-2 pr-8 py-0 text-white bg-[#bdd2c9] ${photo.show ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100 transition-opacity ease-in-out delay-150 duration-300 [clip-path:polygon(0_0,100%_0%,95%_100%,0_100%)]`}>
+                                        {
+                                            photo.title ? <Title title={photo.title} subtitle={photo.subtitle}/> : <></>
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -62,3 +70,27 @@ export function EmblaCarousel({ slides, options, photos }) {
         </section>
   )
 }
+
+function Title({title, subtitle}) {
+    
+    return (
+        <div className='flex flex-col justify-start items-start'>
+            <span className='text-4xl font-bold'>{title}</span>
+            {
+                subtitle ? <SubTitle subtitle={subtitle}/> : <></>
+            }
+        </div>
+    )
+}
+
+function SubTitle({subtitle}) {
+    
+    return (
+        <span className='text-md font-semibold'>{subtitle}</span>
+    )
+}
+
+
+
+
+
