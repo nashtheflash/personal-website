@@ -40,6 +40,7 @@ export default function MapBox({ data, geoJsonTracks }) {
             //moves the map to the next location
             map.current.flyTo({
                 center: [data.mapStartingLon, data.mapStartingLat],
+                zoom: data.mapZoom,
                 essential: true // this animation is considered essential with respect to prefers-reduced-motion
             });
         }
