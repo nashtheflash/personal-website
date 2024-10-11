@@ -11,6 +11,9 @@ export function MtnBikeGettingStarted() {
                 <li>spiders</li>
                 <li>snakes</li>
                 <li>tickes</li>
+                <li>poins ivy</li>
+                <li>poins oak</li>
+                <li>Oak Mites</li>
             </ul>
             <h1>Grading system</h1>
             <h1>Parts of Town good bad?</h1>

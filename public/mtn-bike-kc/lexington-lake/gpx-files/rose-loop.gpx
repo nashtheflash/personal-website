@@ -11,9 +11,9 @@
     <name>Rose Loop</name>
     <link href="https://www.mtbproject.com/trail/7040869/rose-loop"/>
     <trkseg>
-      <trkpt lat="38.971262" lon="-95.006364">
-        <ele>276.25</ele>
-        <time>2022-08-10T23:50:00.509Z</time>
+      <trkpt lat="38.971255" lon="-95.005738">
+        <ele>275.75</ele>
+        <time>2022-08-10T23:48:00.909Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -28,7 +28,26 @@
       </trkpt>
       <trkpt lat="38.971263" lon="-95.006367">
         <ele>276.5</ele>
-        <time>2022-08-10T23:50:01.042Z</time>
+        <time>2022-08-10T23:50:00.100Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>dirt</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971305" lon="-95.006379">
+        <ele>277</ele>
+        <time>2022-08-10T23:50:10.586Z</time>
+      </trkpt>
+      <trkpt lat="38.971304764517996" lon="-95.00637893271335">
+        <ele>276.7712393023471</ele>
+        <time>2022-08-10T23:50:10.794Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1622,7 +1641,7 @@
       </trkpt>
       <trkpt lat="38.971411" lon="-95.00395">
         <ele>273</ele>
-        <time>2022-08-11T01:16:26.451Z</time>
+        <time>2022-08-11T01:15:40.278Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1635,24 +1654,9 @@
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.971356" lon="-95.00402">
-        <ele>274</ele>
-        <time>2022-08-11T01:16:32.197Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>dirt</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.971355" lon="-95.004021">
-        <ele>273.25</ele>
-        <time>2022-08-11T01:16:32.286Z</time>
+      <trkpt lat="38.971411" lon="-95.00395">
+        <ele>273</ele>
+        <time>2022-08-11T01:15:40.412Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1667,22 +1671,7 @@
       </trkpt>
       <trkpt lat="38.971237" lon="-95.004174">
         <ele>274</ele>
-        <time>2022-08-11T01:16:44.730Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>dirt</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.971238" lon="-95.0043">
-        <ele>275.25</ele>
-        <time>2022-08-11T01:16:52.006Z</time>
+        <time>2022-08-11T01:16:19.273Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1697,7 +1686,7 @@
       </trkpt>
       <trkpt lat="38.971249" lon="-95.00524">
         <ele>275.25</ele>
-        <time>2022-08-11T01:17:46.290Z</time>
+        <time>2022-08-11T01:18:30.114Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1712,7 +1701,37 @@
       </trkpt>
       <trkpt lat="38.97125" lon="-95.005343">
         <ele>275.25</ele>
-        <time>2022-08-11T01:17:52.237Z</time>
+        <time>2022-08-11T01:18:42.754Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>dirt</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.97125353775252" lon="-95.00560053986078">
+        <ele>275.6037592141533</ele>
+        <time>2022-08-11T01:19:04.870Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>dirt</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971253" lon="-95.005602">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:19:05.003Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -1727,22 +1746,239 @@
       </trkpt>
       <trkpt lat="38.971255" lon="-95.005707">
         <ele>275.75</ele>
-        <time>2022-08-11T01:18:13.258Z</time>
+        <time>2022-08-11T01:19:14.021Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>dirt</surface>
+              <surface>grass</surface>
               <foot>yes</foot>
               <bicycle>yes</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.971262" lon="-95.006363">
+      <trkpt lat="38.971229" lon="-95.005627">
+        <ele>275.75</ele>
+        <time>2022-08-11T01:19:21.466Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.97118710875652" lon="-95.00555610708328">
+        <ele>275.5888684987114</ele>
+        <time>2022-08-11T01:19:36.166Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971187" lon="-95.005556">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:19:36.166Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971164" lon="-95.005517">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:19:44.246Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971089" lon="-95.00545">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:20:03.634Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.97100065589644" lon="-95.00539507093303">
+        <ele>275.61443529340085</ele>
+        <time>2022-08-11T01:20:27.412Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.971" lon="-95.005395">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:20:27.412Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.970896" lon="-95.00533">
+        <ele>275.75</ele>
+        <time>2022-08-11T01:20:55.430Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.96986" lon="-95.005283">
+        <ele>274.75</ele>
+        <time>2022-08-11T01:25:06.635Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.96956" lon="-95.005273">
+        <ele>275.5</ele>
+        <time>2022-08-11T01:26:19.356Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.969415" lon="-95.005318">
+        <ele>276</ele>
+        <time>2022-08-11T01:26:55.501Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.969274" lon="-95.005392">
         <ele>276.5</ele>
-        <time>2022-08-11T01:18:51.140Z</time>
+        <time>2022-08-11T01:27:32.404Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.969189" lon="-95.00546">
+        <ele>276.75</ele>
+        <time>2022-08-11T01:27:56.660Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.968991" lon="-95.005667">
+        <ele>276.25</ele>
+        <time>2022-08-11T01:28:58.491Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.968927" lon="-95.005721">
+        <ele>276.25</ele>
+        <time>2022-08-11T01:29:17.038Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>grass</surface>
+              <foot>yes</foot>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.968831" lon="-95.005834">
+        <ele>275.75</ele>
+        <time>2022-08-11T01:29:48.572Z</time>
       </trkpt>
     </trkseg>
   </trk>

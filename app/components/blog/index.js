@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-//Markdown
+
 export { MdxLayout } from "./mdx-layout";
 export { MdxLayoutFullWidth } from "./mdx-layout";
 export { MdxLayoutParentWidth } from "./mdx-layout";
@@ -50,6 +50,7 @@ export { StravaEmbed } from "./strava/strava-embed";
 
 //KC-Mtn-Biking
 export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'
+export { MtnBikeGettingStarted } from './kc-mnt-biking/mtn-bike-getting-started'
 export { TLDR } from './kc-mnt-biking/tldr'
 export { FAQSection } from './kc-mnt-biking/faq-section'
 export { CallOut } from './kc-mnt-biking/call-out'
@@ -61,5 +62,5 @@ export { StorySection } from './kc-mnt-biking/story-section'
 export { MtnBikePhotoGallery } from './kc-mnt-biking/photo-section'
 export { MtnBikeMap } from './kc-mnt-biking/mtn-bike-map'
 // export { default as MtnBikeMap } from './kc-mnt-biking/mtn-bike-map';
-export { MtnBikeGettingStarted } from './kc-mnt-biking/mtn-bike-getting-started'
+export { TrailDescription  } from './kc-mnt-biking/trails'
 export { MtnBikeFooter } from './kc-mnt-biking/mtn-bike-footer'

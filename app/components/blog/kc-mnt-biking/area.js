@@ -6,6 +6,7 @@ import {
     StorySection,
     MtnBikePhotoGallery,
     MtnBikeMap,
+    TrailDescription,
     FAQSection,
 } from "../";
 
@@ -33,6 +34,7 @@ export function Area({data}) {
             <StorySection name={name}/>
             <MtnBikePhotoGallery photos={photos}/>
             <MtnBikeMap data={data} />
+            <TrailDescription data={data}/>
             <FAQSection accessInfo={accessInfo} faqHighlights={faqHighlights} faqFoodDrink={faqFoodDrink} />
         </div>
     )

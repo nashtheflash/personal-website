@@ -7,6 +7,9 @@ import NallPark from '../../../projects/projects/kansas-city-mtn-biking/articals
 import Rozarks from '../../../projects/projects/kansas-city-mtn-biking/articals/rozark.mdx'
 import ShawneeMissionPark from '../../../projects/projects/kansas-city-mtn-biking/articals/shawnee-mission-park.mdx'
 import HodgePark from '../../../projects/projects/kansas-city-mtn-biking/articals/hodge-park.mdx'
+import LexingtonLake from '../../../projects/projects/kansas-city-mtn-biking/articals/lexington-lake.mdx'
+import SwopePark from '../../../projects/projects/kansas-city-mtn-biking/articals/swope-park.mdx'
+import BigBullCreek from '../../../projects/projects/kansas-city-mtn-biking/articals/big-bull-creek.mdx'
 
 export function StorySection({name}) {
 
@@ -19,6 +22,9 @@ export function StorySection({name}) {
         case "Rozarks":   return <Rozarks/>;
         case "Shawnee Mission Park":   return <ShawneeMissionPark/>;
         case "Hodge Park":   return <HodgePark/>;
+        case "Lexington Lake":   return <LexingtonLake/>;
+        case "Swope Park":   return <SwopePark/>;
+        case "Big Bull Creek":   return <BigBullCreek/>;
         default:      return <h1>No project match</h1>
 
       }
