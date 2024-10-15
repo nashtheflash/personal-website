@@ -52,7 +52,7 @@ export default function MapBox({ data, geoJsonTracks }) {
         if(mapLoaded) {
             setCurrentTracks(geoJsonTracks)
             geoJsonTracks.forEach(track => {
-                const layerName = track.name;
+                const layerName = `${track.name}-man-add`;
 
                 map.current.addSource(layerName, {
                     type: 'geojson',

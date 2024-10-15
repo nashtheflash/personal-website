@@ -14,7 +14,7 @@ export const lexingtonLakeData = {
         },
         mapStartingLat: 38.970007,
         mapStartingLon: -95.010915,
-        mapZoom: 14,
+        mapZoom: 13,
         gpxTracks: [
             {name: 'Rose Loop', difficulty: 'easy', url: '/mtn-bike-kc/lexington-lake/gpx-files/rose-loop.gpx', active: 1, oneWay: false, description: 'Second Easyiest Trail', features: '', mustRide: false, rating: 3},
             {name: 'Emerald Loop', difficulty: 'medium', url: '/mtn-bike-kc/lexington-lake/gpx-files/emerald-loop.gpx', active: 1, oneWay: false, description: 'Easy riding on the sides, harder riding on the back. The short steep hills on the back section are fun', features: '', mustRide: false, rating: 3},
@@ -22,9 +22,26 @@ export const lexingtonLakeData = {
             {name: 'Charcoal Loop', difficulty: 'easy', url: '/mtn-bike-kc/lexington-lake/gpx-files/charcoal-loop.gpx', active: 1, oneWay: false, description: 'Easyiest Trail. Rides Fast!', features: '', mustRide: false, rating: 3},
         ],
         photos: [
-        { photoUrl: "/mtn-bike-kc/lexington-lake/park-sign.JPEG", title: 'Welcome to Lexington Lake', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/park-sign.JPEG", title: 'Welcome to Lexington Lake', show: false},
             { photoUrl: "/mtn-bike-kc/lexington-lake/map.JPEG", title: 'Trail Map', show: false},
-            { photoUrl: "/mtn-bike-kc/lexington-lake/park-wide-trail-sign.JPEG", title: 'Main Gate', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/park-wide-trail-sign.JPEG", title: 'Respect The Sign', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/parking-2.JPEG", title: 'Parking Area', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/parking.JPEG", title: 'Parking Area', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/main-gate.JPEG", title: 'Main Gate', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/cross-country.JPEG", title: 'Cross Country Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/lake-1.JPEG", title: 'Lexinton Lake', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/lake-2.JPEG", title: 'Lexinton Lake', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/lake-3.JPEG", title: 'Lexinton Lake', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/paved-path.JPEG", title: 'Paved Path', subtitle: 'Circles the lake', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-1.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-2.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-5.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-6.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-7.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-8.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-9.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/trail-10.JPEG", title: 'Lexington Lake Trails', show: false},
+            { photoUrl: "/mtn-bike-kc/lexington-lake/cause-coffee.JPEG", title: 'Cause Coffee', subtitle: 'A great place for a cup of joe', show: false},
         ],
         accessInfo: [
             {
@@ -36,30 +53,30 @@ export const lexingtonLakeData = {
         ],
         faqHighlights: [
             {
-                title: 'Columbine Bypass',
-                text: 'is a nice jump trail located in the middle of the trail system. Great place for laps!'
+                title: "Mom's Basment",
+                text: 'is a great place to crash but a little embarising! Found on the Indigo Loop.'
             },
             {
-                title: 'Columbine Loop',
-                text: 'is best riden counter clockwise'
+                title: 'The Bluff',
+                text: 'is a a must ride. Found on both the Indigo and Emerald Loops!'
             },
             {
-                title: 'Technical Loop',
-                text: 'is as chossy as this trail system gets. I prefer riding this trail counter clockwise.'
+                title: '1 Hour 20 Minutes',
+                text: 'is how long it took me to ride the entire system.'
             }
         ],
         faqFoodDrink: [
             {
                 title: 'Best post ride beer?',
-                text: 'Red Crow Brewing is the hands down winner. I would go with an Isabelle & a Spicy Honey Mustard Chicken sandwich'
+                text: "JT's Grill and Sports Bar is about the only option for a cheap beer in good Ol Desoto!"
             },
             {
-                title: 'Lunch Time?',
-                text: "Bonito Michoacán is a grocery story that has a small cafe that serves authentic mexican food!"
+                title: 'Cause Coffee',
+                text: "is a great little coffee shop that also has baked goods!"
             },
             {
-                title: "BB's Grill",
-                text: "BB's is better than I would have thought. Good beer selection and the Jalapeno Popper Chicken Sandwich is to die for."
+                title: "Leo’s Kitchen and Patio",
+                text: "is great! Check there hours before driving over there!"
             }
         ],
     }

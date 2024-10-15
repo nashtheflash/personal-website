@@ -4,6 +4,13 @@ export function MtnBikeGettingStarted() {
         <div className="w-full h-full min-h-screen bg-[#f2f1ed] text-black">
             <h1>Just getting started</h1>
 
+            <h1>I am new to mountain biking where should I go?</h1>
+            <ul>
+                <li>Lexington Lake</li>
+                <li>Hodge Park</li>
+                <li>Cedar Niles</li>
+            </ul>
+            <h1>What time of year is good to ride?</h1>
             <h1>Wildlife</h1>
             <ul>
                 <li>Deer</li>

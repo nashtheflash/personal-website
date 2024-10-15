@@ -34,6 +34,6 @@ function Title({title, subtitle}) {
 function SubTitle({subtitle}) {
     
     return (
-        <span className='text-md font-semibold'>This is a subtitle</span>
+        <span className='text-md font-semibold'>{subtitle}</span>
     )
 }
