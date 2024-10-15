@@ -1,6 +1,6 @@
 export const bigBullCreekData = {
         name: 'Big Bull Creek',
-        rank: 1,
+        rank: 9,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {
             distanceMiles: 7.5,
@@ -41,14 +41,6 @@ export const bigBullCreekData = {
             { photoUrl: "/mtn-bike-kc/cedar-niles/the-annex.JPEG", title: 'The Annex Trailhead', show: false},
             { photoUrl: "/mtn-bike-kc/cedar-niles/dirt-jump.JPEG", title: 'Annex Dirt Jump', show: false},
             { photoUrl: "/mtn-bike-kc/cedar-niles/wood-drop.JPEG", title: 'The Annex Drop', subtitle: 'One of my favorite features in Kansas City', show: false},
-
-            // "/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG",
-            // "/mtn-bike-kc/cedar-niles/big-jump.JPEG",
-            // "/mtn-bike-kc/cedar-niles/small-jump.JPEG",
-            // "/mtn-bike-kc/cedar-niles/billy-goat-north-trail-head.JPEG",
-            // "/mtn-bike-kc/cedar-niles/4-corrners.JPEG",
-            // "/mtn-bike-kc/cedar-niles/typical-marker.JPEG",
-            // "/mtn-bike-kc/cedar-niles/typical-trail.JPEG",
         ],
         accessInfo: [
             {

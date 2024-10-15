@@ -10,6 +10,7 @@ import HodgePark from '../../../projects/projects/kansas-city-mtn-biking/artical
 import LexingtonLake from '../../../projects/projects/kansas-city-mtn-biking/articals/lexington-lake.mdx'
 import SwopePark from '../../../projects/projects/kansas-city-mtn-biking/articals/swope-park.mdx'
 import BigBullCreek from '../../../projects/projects/kansas-city-mtn-biking/articals/big-bull-creek.mdx'
+import MartinCityDownhill from '../../../projects/projects/kansas-city-mtn-biking/articals/martin-city-downhill.mdx'
 
 export function StorySection({name}) {
 
@@ -25,6 +26,7 @@ export function StorySection({name}) {
         case "Lexington Lake":   return <LexingtonLake/>;
         case "Swope Park":   return <SwopePark/>;
         case "Big Bull Creek":   return <BigBullCreek/>;
+        case "Martin City Downhill":   return <MartinCityDownhill/>;
         default:      return <h1>No project match</h1>
 
       }

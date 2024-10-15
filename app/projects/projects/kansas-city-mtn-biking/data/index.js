@@ -6,7 +6,8 @@ import { schawneeMissionParkData } from "./schawnee-mission-park-data"
 import { hodgeParkData } from "./hodge-park-data"
 import { lexingtonLakeData } from "./lexington-lake-data"
 import { swopeParkData } from "./swope-park-data"
-import { bigBullCreekData } from "./big-bull-creek"
+import { bigBullCreekData } from "./big-bull-creek-data"
+import { martinCityDownhillData } from "./martin-city-downhill-data"
 
 export const data = [
     cedarNilesData,
@@ -18,4 +19,5 @@ export const data = [
     lexingtonLakeData, 
     swopeParkData,
     bigBullCreekData,
+    martinCityDownhillData,
 ]
