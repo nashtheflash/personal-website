@@ -6,8 +6,22 @@ import {
     Footer, 
     LinkNewTab, 
     StravaEmbed ,
-    TLDR
+    TLDR,
+    BlogMapWrapper,
 } from '@/app/components/blog'
+
+
+import doNotPark from "@/public/mtn-bike-kc/martin-city-downhill/do-not-park.JPEG";
+import yellowGate from "@/public/mtn-bike-kc/martin-city-downhill/yellow-gate.JPEG";
+import officialMap from "@/public/mtn-bike-kc/martin-city-downhill/official-map.JPEG";
+import brownsParking from "@/public/mtn-bike-kc/martin-city-downhill/browns-parking-area.JPEG";
+import trailEntrance from "@/public/mtn-bike-kc/martin-city-downhill/trail-entrance.JPEG";
+import altTrailhead from "@/public/mtn-bike-kc/martin-city-downhill/139-trailhead.JPEG";
+import altTrailhead2 from "@/public/mtn-bike-kc/martin-city-downhill/139-trailhead-2.JPEG";
+import downhillHub from "@/public/mtn-bike-kc/martin-city-downhill/downhill-hub.JPEG";
+import yeld from "@/public/mtn-bike-kc/martin-city-downhill/yeld.JPEG";
+import bikesOnly from "@/public/mtn-bike-kc/martin-city-downhill/bikes-only.JPEG";
+import oneWay from "@/public/mtn-bike-kc/martin-city-downhill/one-way.JPEG";
 
 
 import carBike from "@/public/mtn-bike-kc/cedar-niles/car-bike.JPEG";
@@ -15,36 +29,50 @@ import fourCorners from "@/public/mtn-bike-kc/cedar-niles/4-corrners.JPEG";
 import smallJump from "@/public/mtn-bike-kc/cedar-niles/small-jump.JPEG";
 import bigJump from "@/public/mtn-bike-kc/cedar-niles/big-jump.JPEG";
 
-# Martin City Downhill Creek Digital Guide Book
+# Digital Guide Book
 <TLDR
-text="Cedar Niles is one of my fravite spots in South Kansas City area. There is terrain for both new and more experienced riders. If you live in Olathe this is the place for an after work rip!"
+text="The Martin City Downhill is the best downhill area in Kansas City. The riding ranges from easy to big jumps with 15' gaps. Get the feel of the trails before hitting the features. Some lines are more maintained than others."
 />
-
-There are a two ways to access the trails at Cedar Niles, the 119th trailhead and the Clair Road trailhead. I always park at Clair road because it is the quicker way to access any given sections of the trail system. I would hit the Columbine Loop if it is your first visit. I prefer to ride the look counter clock wise but clockwise if fun too. It is a good representation of the area. If you are finding the ride easy I would add a lap on the Technical Loop and a lap on the Columbine Bypass.
-
-To access the Columbine Loop, park at Clair Road and bike down the Columbine Connector Trail until you get to the main trail junction. I call this junction "3 Corners". Here you can get on the Columbine Loop, Columbine Connector, or Billy Goat.
-
-<CenteredImage image={fourCorners} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
 
 <CallOut
-title="New Additions!"
-text='Cedar Niles is adding more and more trails to the system. Currently the new section of trail is unnamed. I am calling it "The Annex". The new trails can be accessed the fastest by parking at the 119th Street trailhead and turning right after the bridge. Climb the paved hill and you will see the trail entrance on the right!'
+title="Blue River Parkway Trails"
+text='The Martin City Downhill and Swope Park areas bookend the larger Blue River Parkway trail system. They are separated from the larger system because of specific access details, area focuses, and local banter.'
 />
 
-## Columbine Bypass
-Probably the best jump line in south Kansas City, the Columbine Bypass consists of three decent sized drops and a few small jumps to flat ground. The next closest jump line is probably at Nall Park!
+## Access
+Accessing the Martin City Downhill area is confusing and can lead to you being towed or ticketed! Do NOT park at the yellow gate immediately outside of the trail head. If you look on Google Maps, you may think it's a ball field, it's not. They have been removed by the city.
 
-<TwoCenteredImages image={[smallJump, bigJump]} altText={['Columbine Bypass Small Jump', 'Columbine Bypass Big Jump']} width={'h-2/3'} height={'w-2/3'} />
+### DO NOT PARK HERE!
+<BlogMapWrapper mapUrl='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d328.7682097142383!2d-94.58733640734576!3d38.87369779759352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1729094458475!5m2!1sen!2sus'/>
+<TwoCenteredImages image={[yellowGate, doNotPark]} titles={["Don't Park Here", "Don't Park Here"]} altText={['Columbine Bypass Small Jump', 'Columbine Bypass Big Jump']} width={'h-2/3'} height={'w-2/3'} />
+
+### Browns Athletic Field Access
+This is the recommended way to access the trails. Park at the athletic fields, ride your bike across the street. You will ride east on Blue Ridge Boulevard. Ride over the bridge and you will see the trail entrance on the south side of the road. The downside is the long approach, 2 miles, to the downhill area. Hopefully better parking will open in the future!
+
+<TwoCenteredImages image={[brownsParking, trailEntrance]} titles={["Brown Parking Area", "Trail Entrance"]} subtitles={['', 'Found on the south side of the road']} altText={['Columbine Bypass Small Jump', 'Columbine Bypass Big Jump']} width={'h-2/3'} height={'w-2/3'} />
 
 
-If you have see the classic "bike leaning against and abandoned car" picture the west entrance to the Columbine Bypass is the location!
+### 139th Street Access
+Parking at 139th street is not official parking. It is a pull off on the side of the road that can fit about 4 or 5 cars. I frequently see people there. I park there if I have a limited amount of time to ride. This is defiantly a "park at your own risk" situation!
 
-<CenteredImage image={carBike} altText={'Hotel Picture'} width={'h-2/3'} height={'w-2/3'} />
+<TwoCenteredImages image={[altTrailhead, altTrailhead2]} titles={["Trail Entrance", "139th St. Parking Area"]} altText={['Martin City Downhill 139th Street Parking', 'Martin City Downhill 139th Street Parking']} width={'h-2/3'} height={'w-2/3'} />
+
 
 <CallOut
-title="Dificulty"
-text="Cedar Niles is easy riding and a great place to take a beginner. The Technical Loop is the only place that doesn't have ways to ride around the tougher terrain. The  jump line, Columbine Bypass, has easy ride around options for each jump."
+title="New Area"
+text='The Martin City Downhill was opened in September 2023. It is the newest addition to the Blue River Parkway trail system and probably one of the newest additions to the Kansas City Trail system as a whole!'
 />
 
-Cedar Niles is an awesome place to ride. There is traffic but it is not uncommon not to see anyone while your out there. If you are looking for something close that offers more of a challenge, I would check out Big Bull Creek Park!
+## Trails
+This system is well documented! Here is the official map!
+<CenteredImage image={officialMap} altText={'Martin City Downhill Official Trail Map'} title={'Trail Map'} width={'h-2/3'} height={'w-2/3'} />
+ 
+UPnAT'EM is the trail that will take you up to the main hub. From the hub you have the options to take Jack Burton or Truffle Shuffle Down. 
 
+<CenteredImage image={downhillHub} altText={'Martin City Downhill Hub'} title={'Downhill Hub'} width={'h-2/3'} height={'w-2/3'} />
+
+I really enjoyed riding Jack Burton. It has some great berms, low consequence jumps, and its fast to get back to the top for another lap!
+
+This is the only true downhill area in Kansas City. Pay attention to the trail signs! Most trails can only be ridden one way!
+<CenteredImage image={oneWay} altText={'Martin City Downhill One Way Sign'} title={'One Way!'} width={'h-2/3'} height={'w-2/3'} />
+<TwoCenteredImages image={[yeld, bikesOnly]} titles={["Martin City Downhill Yeld Sign", "Martin City Downhill Bikes Only Sign"]} altText={['Yeld!', 'Bikes Only!']} width={'h-2/3'} height={'w-2/3'} />

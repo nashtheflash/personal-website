@@ -1,3 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="https://mtbproject.com">
-<metadata><name>Fraggle Rock</name><author><name/><link href="https://www.mtbproject.com/user/200680566/jacob-casby"/></author><copyright author="MTB Project"><year>2023</year></copyright></metadata><trk><name>Fraggle Rock</name><link href="https://www.mtbproject.com/trail/7068728/fraggle-rock"/><trkseg><trkpt lon="-94.588332" lat="38.870775"><ele>285.16</ele><time>2022-11-27T13:04:22-07:00</time></trkpt><trkpt lon="-94.588153" lat="38.871068"><ele>281.37</ele><time>2022-11-27T13:05:22-07:00</time></trkpt><trkpt lon="-94.588279" lat="38.871551"><ele>276.22</ele><time>2022-11-27T13:06:22-07:00</time></trkpt></trkseg></trk></gpx>
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>fraggle-rock</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>fraggle-rock</name>
+    <link href="https://www.mtbproject.com/trail/7068728/fraggle-rock"/>
+    <trkseg>
+      <trkpt lon="-94.588332" lat="38.870775">
+        <ele>285.16</ele>
+        <time>2022-11-27T20:04:22.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.588153" lat="38.871068">
+        <ele>281.37</ele>
+        <time>2022-11-27T20:05:22.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.588279" lat="38.871551">
+        <ele>276.22</ele>
+        <time>2022-11-27T20:06:22.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

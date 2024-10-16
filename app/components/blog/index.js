@@ -1,6 +1,3 @@
-import dynamic from 'next/dynamic';
-
-
 export { MdxLayout } from "./mdx-layout";
 export { MdxLayoutFullWidth } from "./mdx-layout";
 export { MdxLayoutParentWidth } from "./mdx-layout";

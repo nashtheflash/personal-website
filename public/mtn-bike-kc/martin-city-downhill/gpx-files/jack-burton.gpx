@@ -1,3 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="https://mtbproject.com">
-<metadata><name>Jack Burton</name><author><name/><link href="https://www.mtbproject.com/user/200311600/seth-peterson"/></author><copyright author="MTB Project"><year>2023</year></copyright></metadata><trk><name>Jack Burton</name><link href="https://www.mtbproject.com/trail/7068297/jack-burton"/><trkseg><trkpt lon="-94.591045" lat="38.868376"><ele>294.42</ele><time>2022-11-27T14:21:26-07:00</time></trkpt><trkpt lon="-94.59127" lat="38.868529"><ele>293.85</ele><time>2022-11-27T14:22:26-07:00</time></trkpt><trkpt lon="-94.591369" lat="38.86855"><ele>293.19</ele><time>2022-11-27T14:23:26-07:00</time></trkpt><trkpt lon="-94.591539" lat="38.868494"><ele>292.03</ele><time>2022-11-27T14:24:26-07:00</time></trkpt><trkpt lon="-94.592087" lat="38.868425"><ele>291.33</ele><time>2022-11-27T14:25:26-07:00</time></trkpt><trkpt lon="-94.592258" lat="38.868418"><ele>291.34</ele><time>2022-11-27T14:26:26-07:00</time></trkpt><trkpt lon="-94.59242" lat="38.868466"><ele>291.33</ele><time>2022-11-27T14:27:26-07:00</time></trkpt><trkpt lon="-94.592734" lat="38.868676"><ele>291.31</ele><time>2022-11-27T14:28:26-07:00</time></trkpt><trkpt lon="-94.59286" lat="38.868704"><ele>291.45</ele><time>2022-11-27T14:29:26-07:00</time></trkpt><trkpt lon="-94.59304" lat="38.868683"><ele>291.01</ele><time>2022-11-27T14:30:26-07:00</time></trkpt><trkpt lon="-94.593354" lat="38.868557"><ele>289.44</ele><time>2022-11-27T14:31:26-07:00</time></trkpt><trkpt lon="-94.593435" lat="38.868753"><ele>287.4</ele><time>2022-11-27T14:32:26-07:00</time></trkpt><trkpt lon="-94.593237" lat="38.869229"><ele>285.51</ele><time>2022-11-27T14:33:26-07:00</time></trkpt><trkpt lon="-94.593138" lat="38.869348"><ele>284.52</ele><time>2022-11-27T14:34:26-07:00</time></trkpt><trkpt lon="-94.593013" lat="38.869425"><ele>283.55</ele><time>2022-11-27T14:35:26-07:00</time></trkpt><trkpt lon="-94.592986" lat="38.869516"><ele>281.4</ele><time>2022-11-27T14:36:26-07:00</time></trkpt><trkpt lon="-94.59304" lat="38.869641"><ele>279.16</ele><time>2022-11-27T14:37:26-07:00</time></trkpt><trkpt lon="-94.593093" lat="38.869669"><ele>277.26</ele><time>2022-11-27T14:38:26-07:00</time></trkpt><trkpt lon="-94.593534" lat="38.869516"><ele>276.14</ele><time>2022-11-27T14:39:26-07:00</time></trkpt><trkpt lon="-94.593767" lat="38.869264"><ele>275.43</ele><time>2022-11-27T14:40:26-07:00</time></trkpt><trkpt lon="-94.593893" lat="38.869201"><ele>273.91</ele><time>2022-11-27T14:41:26-07:00</time></trkpt><trkpt lon="-94.594207" lat="38.868956"><ele>272.76</ele><time>2022-11-27T14:42:26-07:00</time></trkpt><trkpt lon="-94.594252" lat="38.868893"><ele>271.78</ele><time>2022-11-27T14:43:26-07:00</time></trkpt><trkpt lon="-94.594459" lat="38.868774"><ele>270.95</ele><time>2022-11-27T14:44:26-07:00</time></trkpt><trkpt lon="-94.594576" lat="38.868627"><ele>270.84</ele><time>2022-11-27T14:45:26-07:00</time></trkpt></trkseg></trk></gpx>
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>jack-burton</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>jack-burton</name>
+    <link href="https://www.mtbproject.com/trail/7068297/jack-burton"/>
+    <trkseg>
+      <trkpt lon="-94.591045" lat="38.868376">
+        <ele>294.42</ele>
+        <time>2022-11-27T21:21:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.59127" lat="38.868529">
+        <ele>293.85</ele>
+        <time>2022-11-27T21:22:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.591369" lat="38.86855">
+        <ele>293.19</ele>
+        <time>2022-11-27T21:23:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.591539" lat="38.868494">
+        <ele>292.03</ele>
+        <time>2022-11-27T21:24:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.592087" lat="38.868425">
+        <ele>291.33</ele>
+        <time>2022-11-27T21:25:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.592258" lat="38.868418">
+        <ele>291.34</ele>
+        <time>2022-11-27T21:26:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.59242" lat="38.868466">
+        <ele>291.33</ele>
+        <time>2022-11-27T21:27:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.592734" lat="38.868676">
+        <ele>291.31</ele>
+        <time>2022-11-27T21:28:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.59286" lat="38.868704">
+        <ele>291.45</ele>
+        <time>2022-11-27T21:29:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.59304" lat="38.868683">
+        <ele>291.01</ele>
+        <time>2022-11-27T21:30:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593354" lat="38.868557">
+        <ele>289.44</ele>
+        <time>2022-11-27T21:31:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593435" lat="38.868753">
+        <ele>287.4</ele>
+        <time>2022-11-27T21:32:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593237" lat="38.869229">
+        <ele>285.51</ele>
+        <time>2022-11-27T21:33:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593138" lat="38.869348">
+        <ele>284.52</ele>
+        <time>2022-11-27T21:34:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593013" lat="38.869425">
+        <ele>283.55</ele>
+        <time>2022-11-27T21:35:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.592986" lat="38.869516">
+        <ele>281.4</ele>
+        <time>2022-11-27T21:36:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.59304" lat="38.869641">
+        <ele>279.16</ele>
+        <time>2022-11-27T21:37:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593093" lat="38.869669">
+        <ele>277.26</ele>
+        <time>2022-11-27T21:38:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593534" lat="38.869516">
+        <ele>276.14</ele>
+        <time>2022-11-27T21:39:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593767" lat="38.869264">
+        <ele>275.43</ele>
+        <time>2022-11-27T21:40:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.593893" lat="38.869201">
+        <ele>273.91</ele>
+        <time>2022-11-27T21:41:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.594207" lat="38.868956">
+        <ele>272.76</ele>
+        <time>2022-11-27T21:42:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.594252" lat="38.868893">
+        <ele>271.78</ele>
+        <time>2022-11-27T21:43:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.594459" lat="38.868774">
+        <ele>270.95</ele>
+        <time>2022-11-27T21:44:26.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.594576" lat="38.868627">
+        <ele>270.84</ele>
+        <time>2022-11-27T21:45:26.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
