@@ -3,6 +3,10 @@ export { MdxLayoutFullWidth } from "./mdx-layout";
 export { MdxLayoutParentWidth } from "./mdx-layout";
 export { MdxImage } from "./images/MdxImage";
 
+//Layouts
+export { TwoColumn } from './layout/two-column'
+export { OneColumn } from './layout/one-column'
+
 //Components
 export { PhotoGallery } from './photoGallery';
 export { TravelFeature } from './feature-sections/travel-feature';
