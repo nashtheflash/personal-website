@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>technical-offshoot-2</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>technical-offshoot-2</name>
+    <link href="https://www.mtbproject.com/trail/7018025/technical-offshoot-2"/>
+    <trkseg>
+      <trkpt lat="39.23310389667202" lon="-94.38577320233561">
+        <ele>256.04877243221557</ele>
+        <time>2023-10-19T14:59:59.132Z</time>
+      </trkpt>
+      <trkpt lat="39.23309909967652" lon="-94.38579118392013">
+        <ele>256.0747426167119</ele>
+        <time>2023-10-19T15:00:03.570Z</time>
+      </trkpt>
+      <trkpt lat="39.23309909967652" lon="-94.38579118392013">
+        <ele>253.94471823789956</ele>
+        <time>2023-10-19T15:00:03.570Z</time>
+      </trkpt>
+      <trkpt lon="-94.386041" lat="39.233146">
+        <ele>253.38</ele>
+        <time>2023-10-19T15:01:01.000Z</time>
+      </trkpt>
+      <trkpt lat="39.23314592847935" lon="-94.38604209836832">
+        <ele>253.38</ele>
+        <time>2023-10-19T15:01:01.000Z</time>
+      </trkpt>
+      <trkpt lat="39.23313275199642" lon="-94.38624445164005">
+        <ele>252.95429739252126</ele>
+        <time>2023-10-19T15:01:50.109Z</time>
+      </trkpt>
+      <trkpt lat="39.23313275199642" lon="-94.38624445164005">
+        <ele>252.41469917782314</ele>
+        <time>2023-10-19T15:01:50.109Z</time>
+      </trkpt>
+      <trkpt lat="39.23313024202167" lon="-94.3862897544109">
+        <ele>252.86806258905298</ele>
+        <time>2023-10-19T15:02:01.093Z</time>
+      </trkpt>
+      <trkpt lat="39.23313168625012" lon="-94.38633263870854">
+        <ele>253.60042788740196</ele>
+        <time>2023-10-19T15:02:11.478Z</time>
+      </trkpt>
+      <trkpt lat="39.23313168625012" lon="-94.38633263870854">
+        <ele>253.60042788740196</ele>
+        <time>2023-10-19T15:02:11.478Z</time>
+      </trkpt>
+      <trkpt lat="39.23312590933347" lon="-94.38637792026498">
+        <ele>254.445122921995</ele>
+        <time>2023-10-19T15:02:22.533Z</time>
+      </trkpt>
+      <trkpt lat="39.23312590933347" lon="-94.38637792026498">
+        <ele>254.445122921995</ele>
+        <time>2023-10-19T15:02:22.533Z</time>
+      </trkpt>
+      <trkpt lat="39.23311992609726" lon="-94.38641627640742">
+        <ele>255.07268939788386</ele>
+        <time>2023-10-19T15:02:31.908Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
