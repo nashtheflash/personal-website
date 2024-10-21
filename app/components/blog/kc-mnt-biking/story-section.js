@@ -34,7 +34,7 @@ export function StorySection({name}) {
         case "Kessler Park":   return <KesslerPark/>;
         case "Hidden Valley Park":   return <HiddenValleyPark/>;
         case "Stockdale":   return <Stockdale/>;
-        case "Mopac Singletrack":   return <MopacSingletrack/>;
+        case "MoPac Single Track":   return <MopacSingletrack/>;
         default:      return <h1>No project match</h1>
 
       }
