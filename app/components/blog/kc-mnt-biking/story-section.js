@@ -11,6 +11,10 @@ import LexingtonLake from '../../../projects/projects/kansas-city-mtn-biking/art
 import SwopePark from '../../../projects/projects/kansas-city-mtn-biking/articals/swope-park.mdx'
 import BigBullCreek from '../../../projects/projects/kansas-city-mtn-biking/articals/big-bull-creek.mdx'
 import MartinCityDownhill from '../../../projects/projects/kansas-city-mtn-biking/articals/martin-city-downhill.mdx'
+import KesslerPark from '../../../projects/projects/kansas-city-mtn-biking/articals/kessler-park.mdx'
+import HiddenValleyPark from '../../../projects/projects/kansas-city-mtn-biking/articals/hidden-valley-park.mdx'
+import Stockdale from '../../../projects/projects/kansas-city-mtn-biking/articals/stockdale.mdx'
+import MopacSingletrack from '../../../projects/projects/kansas-city-mtn-biking/articals/mopac-singletrack.mdx'
 
 export function StorySection({name}) {
 
@@ -27,6 +31,10 @@ export function StorySection({name}) {
         case "Swope Park":   return <SwopePark/>;
         case "Big Bull Creek":   return <BigBullCreek/>;
         case "Martin City Downhill":   return <MartinCityDownhill/>;
+        case "Kessler Park":   return <KesslerPark/>;
+        case "Hidden Valley Park":   return <HiddenValleyPark/>;
+        case "Stockdale":   return <Stockdale/>;
+        case "Mopac Singletrack":   return <MopacSingletrack/>;
         default:      return <h1>No project match</h1>
 
       }
