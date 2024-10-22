@@ -1,7 +1,7 @@
 export const stockdaleData = {
         name: 'Stockdale',
         rank: 7,
-        featuredImage: '/mtn-bike-kc/stockdale/trail-17.JPEG',
+        featuredImage: '/mtn-bike-kc/stockdale/jump-1.JPEG',
         stats: {
             distanceMiles: 5.91,
             numberOfTrails: 4,
