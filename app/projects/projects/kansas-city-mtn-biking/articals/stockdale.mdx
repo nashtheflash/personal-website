@@ -1,3 +1,5 @@
+import { Dynaplug, BikePump, MultiTool, BearSpray } from '../products'
+
 import { 
     CenteredImage, 
     TwoCenteredImages, 
@@ -9,7 +11,6 @@ import {
     TLDR
 } from '@/app/components/blog'
 
-
 import parking from "@/public/mtn-bike-kc/stockdale/parking-4.JPEG";
 import flatTire from "@/public/mtn-bike-kc/stockdale/flat-tire.JPEG";
 import frolf from "@/public/mtn-bike-kc/stockdale/trail-17.JPEG";
@@ -17,6 +18,7 @@ import skinny from "@/public/mtn-bike-kc/stockdale/trail-8.JPEG";
 import sign from "@/public/mtn-bike-kc/stockdale/sign-1.JPEG";
 import badSkinny from "@/public/mtn-bike-kc/stockdale/trail-3.JPEG";
 import tech from "@/public/mtn-bike-kc/stockdale/trail-12.JPEG";
+import altEntrance from "@/public/mtn-bike-kc/stockdale/trailhead-alt-2.JPEG";
 
 # Stockdale Digital Guide Book
 <TLDR
@@ -33,6 +35,9 @@ Stockdale consists of one big loop and  couple of offshoots that are more diffic
 
 <CenteredImage image={skinny} altText={'Stockdale Wooden Skinny'} title={'Skinny'} width={'h-2/3'} height={'w-2/3'} />
 <ThreeCenteredImages image={[sign, badSkinny, flatTire]} altText={['Stockdale Lake Trail Sign', 'Stockdale Damaged Wood Feature', 'Stockdale Flat Tire']} titles={['Trail Sign', 'Damaged Skinny', 'Flat Tire']} width={'h-2/3'} height={'w-2/3'} />
+ 
+I like to ride the jump line on the way to the main trail. However the trail actually starts in the woods by the first jump. It's easy to miss especially with those jumps looking at you!
+<CenteredImage image={altEntrance} altText={'Stockdale Trail Entrance'} title={'Main Loop Entrance'} width={'h-2/3'} height={'w-2/3'} />
 
 I really enjoyed the first technical offshoot! Great ledge riding!
 <CenteredImage image={tech} altText={'Stockdale Technical Offshoot 1'} title={'Technical Offshoot One'} width={'h-2/3'} height={'w-2/3'} />
@@ -41,12 +46,13 @@ I really enjoyed the first technical offshoot! Great ledge riding!
 title="Bike Tools"
 text="I recommend tubeless tires and carrying a pump and dynaplugs to fix flat tires. While making this guide I only got one flat tire, and I think it was due to the age of the tire rather than a puncture."
 />
-You can find the tools I carry here: [My Bike Tools][1]. If you need something please use the link to support the project! If you don't need it don't buy it!
+The tools I carry: 
+* <Dynaplug/> 
+* <BikePump/> 
+* <MultiTool/> 
+If you need something please use the link to support the project! If you don't need it don't buy it!
 
 The trails run along side and through a frisbee golf course. Keep an eye out for frolfers. I was on the jump line when I accidentally rode through just as a guy was teeing off!
 <CenteredImage image={frolf} altText={'Stockdale Disk Golf'} title={'Disk Golf'} width={'h-2/3'} height={'w-2/3'} />
 
-I have encountered a decent amount of hikers on the trails. I would defiantly keep an eye out for them. I had an unleashed pit bull come up to me aggressively. I recommend keeping some [bear spray][2] handy!
-
-[1]: /bike-tools
-[2]: /bear-spray
+I have encountered a decent amount of hikers on the trails. I would defiantly keep an eye out for them. I had an unleashed pit bull come up to me aggressively. I recommend keeping some <BearSpray/> handy!
