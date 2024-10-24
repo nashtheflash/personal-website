@@ -33,7 +33,7 @@ export function EmblaCarousel({ slides, options, photos }) {
                                         src={photo.photoUrl}
                                         width={600}
                                         height={600}
-                                        alt="Photo Gallery Picture"
+                                        alt={photo.title ? photo.title : "Photo Gallery Picture"}
                                     />
                                     <div className={`absolute left-0 bottom-0 w-fit h-fit pl-2 pr-8 py-0 text-white bg-[#bdd2c9] ${photo.show ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100 transition-opacity ease-in-out delay-150 duration-300 [clip-path:polygon(0_0,100%_0%,95%_100%,0_100%)]`}>
                                         {

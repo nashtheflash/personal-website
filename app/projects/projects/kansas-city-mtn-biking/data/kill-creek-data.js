@@ -18,7 +18,7 @@ export const killCreekData = {
         gpxTracks: [
             {name: 'Inner Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/inner-hank-loop.gpx'},
             {name: 'Outer Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/outer-hank-loop.gpx'},
-            {name: 'Eddy Trail', difficulty: 'medium', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-loop.gpx'},
+            {name: 'Eddy Trail', difficulty: 'medium', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-loop.gpx'}, //has water crossing
             {name: 'Paved Trail', difficulty: 'paved', url: '/mtn-bike-kc/kill-creek/gpx-files/paved.gpx'},
         ],
         photos: [
