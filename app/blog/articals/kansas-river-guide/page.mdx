@@ -1,4 +1,5 @@
 import { 
+    OneColumn,
     CenteredImage, 
     TwoCenteredImages, 
     Footer, 
@@ -44,16 +45,23 @@ text="This guide is intended for someone that wants to get on the Kansas River b
 2. Know the
 
 ## Find The River CFS
-The speed that a river is moving is measured in cubic feet per second(CFS). You can find the current river CFS here -> [Water Watch][2]
+The speed that a river is moving is measured in cubic feet per second(CFS). The current readings for the Kansas River are shown below. 
 
-<iframe src="https://waterwatch.usgs.gov/new/index.php?st=kansas+river&search.x=0&search.y=0&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile" 
-width="100%" 
-height="500"
-></iframe>
+<OneColumn>
+    <iframe
+      src="https://waterwatch.usgs.gov/new/index.php?st=kansas+river&search.x=0&search.y=0&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile#map"
+      scrolling="no"
+      width="638"
+      height="448"
+    />
+</OneColumn>
+
 
 * Min CFS
 * Novice paddles should use the river when the CFS is less than 5,000
 * Experience paddles should use the river when the CFS is less than 8,000
+
+You can find the full USGA website here -> [Water Watch][2]
 
 ## Know The Hazards
 The Kansas River has all of the natural hazards that could be found on any river, but also has additional man-made hazards. Those hazards are:
@@ -84,35 +92,9 @@ There are two railroad bridges that were demolished into the river. Both are loc
 ## Plan Entry and Exit Points
 Deciding where to enter and exit the river depends on how much time you have. Plan on being able to travel 3 miles per hour when the river is < 5,000 CFS and 6 miles per hour if speeds are between 5,000 and 8,000.
 
-<iframe src="https://www.google.com/maps/d/embed?mid=1A7RTX-9Bj_0MdgY5qejfxA_D_dRNGBDy&ehbc=2E312F" width="640" height="480"></iframe>
-
-## Location
-<BlogMapWrapper
-    text={`
-        The German Bakery is located in Nuevo Arenal. It is a great stop if you are driving from La Fortuna to Monta Verde or the coast. We were doing the drive to Monta Verde. Obviously there is a big lake, and I was looking forward to swimming. However, there isn't really an access point. It seems that that some people that are making money giving boat rides and renting equipment have tried to monopolize access. As you drive you will see signs(many signs) on the road leading up to the little town of Nuevo Arenal that say "German Bakery". You can miss them, and that is your target. Eventually you will get to town, and if you look up the main road you will see the signs on the right side. Inside there you will see the counter and small convenience store. I candy, chocolate, and beer can all be bought if you are looking to stock up on something for the drive, but I would just get their food, its so good!
-    `}
-    mapUrl='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120570.54444625179!2d-84.81250610433352!3d10.324023504115447!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa000fbdf0e5059%3A0x12664ca89c0c01de!2sTom&#39;s%20Pan%20German%20Bakery!5e0!3m2!1sen!2sus!4v1716312712298!5m2!1sen!2sus'
-/>
-
-## Food & Drink
-The food is top notch at this place. The rolls, the pretzels its all good. I am no food critic but you have to stop here! See that coffee in the back?
-<TwoCenteredImages image={[pretzle, food]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
-
-## The Iced Coffee
-I spent most of the trip to Costa Rica in search of the best ice coffee and this was probably it. They laughed at me when I asked for a "drip coffee" and after some explaining they said that might have something that would suffice. I could sense the uneasy in the mans voice. This is what they brought out:
-<Gif 
-    video={"/costa-rica/german-bakery/coffee.mp4"}
-    topTitle='Normal Mode, Single Line Example:'
-/>
-It was pure bliss, and didn't last long. The man behind the counter came out and asked if it was okay and was confused by how much I liked it, he chucked to himself when I ordered another, and was sure that I was overdoing it and that the second would not be as good as the first. He was wrong. Simple put, GET THE COFFEE!!
-
-## Setting
-Keep in mind that we are here on a beautiful day. The sun is shining, the weather is cool, and the patio is amazing! As you can see form the pictures, I have my computer out and am doing some work and writing this article. Its a quite street and there is good internet. I highly recommend this as a work remote location. The vide of the place is very inviting and a great place to take a break from driving. The folks behind us are playing a game of cards, my girlfriend is reading, it doesn't get better than that!
-<TwoCenteredImages image={[working, dinningRoom]} altText={['Full Room Picture', 'Picture of Bathroom']} width={'h-2/3'} height={'w-2/3'} />
-Inside there you will see the counter and small convenience store. I candy, chocolate, and beer can all be bought if you are looking to stock up on something for the drive, but I would just get their food, its so good!
-
-## Summary
-Just go here. I don't know where your even thinking about it, but what do I know? I'm just a dude fro Alaska.
+<OneColumn>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1A7RTX-9Bj_0MdgY5qejfxA_D_dRNGBDy&ehbc=2E312F" width="640" height="480"></iframe>
+</OneColumn>
 
 <Footer 
     phone='+(506) 2694 4547' 
