@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>71-underpass</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>71-underpass</name>
+    <link href="https://www.mtbproject.com/trail/7059209/71-underpass"/>
+    <trkseg>
+      <trkpt lon="-94.548474" lat="38.96967">
+        <ele>238.78</ele>
+        <time>2023-10-27T03:22:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.548393" lat="38.969824">
+        <ele>238.6</ele>
+        <time>2023-10-27T03:23:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.548277" lat="38.969747">
+        <ele>239.03</ele>
+        <time>2023-10-27T03:24:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547747" lat="38.969866">
+        <ele>238.27</ele>
+        <time>2023-10-27T03:25:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.54763" lat="38.969817">
+        <ele>238.83</ele>
+        <time>2023-10-27T03:26:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547612" lat="38.969705">
+        <ele>239.55</ele>
+        <time>2023-10-27T03:27:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547243" lat="38.969377">
+        <ele>238.23</ele>
+        <time>2023-10-27T03:28:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546911" lat="38.969209">
+        <ele>235.88</ele>
+        <time>2023-10-27T03:29:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546884" lat="38.969314">
+        <ele>234.69</ele>
+        <time>2023-10-27T03:30:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546983" lat="38.969405">
+        <ele>234.34</ele>
+        <time>2023-10-27T03:31:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547351" lat="38.970236">
+        <ele>234.3</ele>
+        <time>2023-10-27T03:32:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547773" lat="38.970948">
+        <ele>234.65</ele>
+        <time>2023-10-27T03:33:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547818" lat="38.971297">
+        <ele>234.75</ele>
+        <time>2023-10-27T03:34:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547765" lat="38.971556">
+        <ele>234.48</ele>
+        <time>2023-10-27T03:35:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547585" lat="38.971702">
+        <ele>234.26</ele>
+        <time>2023-10-27T03:36:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547387" lat="38.972156">
+        <ele>233.91</ele>
+        <time>2023-10-27T03:37:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.547217" lat="38.972324">
+        <ele>234.74</ele>
+        <time>2023-10-27T03:38:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546615" lat="38.972547">
+        <ele>235.53</ele>
+        <time>2023-10-27T03:39:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546309" lat="38.972513">
+        <ele>235.1</ele>
+        <time>2023-10-27T03:40:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.546049" lat="38.972408">
+        <ele>234.65</ele>
+        <time>2023-10-27T03:41:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.545384" lat="38.972436">
+        <ele>234.24</ele>
+        <time>2023-10-27T03:42:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.545132" lat="38.972387">
+        <ele>234.17</ele>
+        <time>2023-10-27T03:43:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.544719" lat="38.972429">
+        <ele>232.82</ele>
+        <time>2023-10-27T03:44:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.544234" lat="38.972645">
+        <ele>232.09</ele>
+        <time>2023-10-27T03:45:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.543848" lat="38.972666">
+        <ele>233.77</ele>
+        <time>2023-10-27T03:46:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.543399" lat="38.972862">
+        <ele>236.04</ele>
+        <time>2023-10-27T03:47:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.543048" lat="38.972862">
+        <ele>237.89</ele>
+        <time>2023-10-27T03:48:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.542851" lat="38.972904">
+        <ele>238.47</ele>
+        <time>2023-10-27T03:49:24.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.542734" lat="38.97296">
+        <ele>238.44</ele>
+        <time>2023-10-27T03:50:24.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
