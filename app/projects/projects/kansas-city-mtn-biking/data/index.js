@@ -12,6 +12,7 @@ import { kesslerParkData } from "./kessler-park-data"
 import { stockdaleData } from "./stockdale-data"
 import { mopacSingletrackData } from "./mopac-singletrack-data"
 import { hiddenValleyParkData } from "./hidden-valley-park-data"
+import { landahlParkData } from "./landahl-park-data"
 
 export const data = [
     cedarNilesData,
@@ -28,4 +29,5 @@ export const data = [
     stockdaleData,
     mopacSingletrackData,
     hiddenValleyParkData,
+    landahlParkData,
 ]

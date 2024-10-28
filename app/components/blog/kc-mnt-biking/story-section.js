@@ -15,6 +15,7 @@ import KesslerPark from '../../../projects/projects/kansas-city-mtn-biking/artic
 import HiddenValleyPark from '../../../projects/projects/kansas-city-mtn-biking/articals/hidden-valley-park.mdx'
 import Stockdale from '../../../projects/projects/kansas-city-mtn-biking/articals/stockdale.mdx'
 import MopacSingletrack from '../../../projects/projects/kansas-city-mtn-biking/articals/mopac-singletrack.mdx'
+import LandahlPark from '../../../projects/projects/kansas-city-mtn-biking/articals/landahl-park.mdx'
 
 export function StorySection({name}) {
 
@@ -35,6 +36,7 @@ export function StorySection({name}) {
         case "Hidden Valley Park":   return <HiddenValleyPark/>;
         case "Stockdale":   return <Stockdale/>;
         case "MoPac Single Track":   return <MopacSingletrack/>;
+        case "Landahl":   return <LandahlPark/>;
         default:      return <h1>No project match</h1>
 
       }
