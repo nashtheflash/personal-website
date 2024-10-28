@@ -27,7 +27,7 @@ export function EmblaCarousel({ slides, options, photos }) {
                 <div className="embla__container">
                     {photos.map((photo, index) => (
                         <div className="embla__slide" key={index}>
-                            <div className="flex justify-center items-center w-full">
+                            <div className="flex justify-center items-center w-full h-full">
                                 <div className='relative group w-fit'>
                                     <Image
                                         src={photo.photoUrl}

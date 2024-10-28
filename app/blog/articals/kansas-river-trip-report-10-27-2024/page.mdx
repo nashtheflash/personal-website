@@ -1,0 +1,132 @@
+import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/feature-image.JPEG";
+import parkingEntrance from "@/public/blog/kansas-river-trip-report-10-27-24/parking-entrance.JPEG";
+import bridge from "@/public/blog/kansas-river-trip-report-10-27-24/bridge.JPEG";
+import launch from "@/public/blog/kansas-river-trip-report-10-27-24/launch.JPEG";
+import kawPoint from "@/public/blog/kansas-river-trip-report-10-27-24/kaw-point.JPEG";
+import levee from "@/public/blog/kansas-river-trip-report-10-27-24/levee.JPEG";
+import strava from "@/public/blog/kansas-river-trip-report-10-27-24/strava.JPEG";
+import garmin from "@/public/blog/kansas-river-trip-report-10-27-24/garmin.JPEG";
+
+import { 
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    ImageFeature,
+    MdxLayout,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Kansas River Trip Report",
+    description:"Kansas River Kayaking Trip Report 10/27/2024. Turner Bridge to Kaw Point",
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point']
+});
+
+<ImageFeature
+title='Kansas River Trip Report'
+image={featureImage}
+/>
+
+
+<BlogStatsSection
+    date='1/27/2024'
+    speedCFS={1200}
+    distanceMiles={6}
+    putIn='Turner Bridge'
+    takeOut='Kaw Point'
+/>
+
+
+
+<MdxLayout>
+
+<TLDR
+text="I had a great late October trip on the Kaw. The fall colors were beautiful. The river was was slow resulting in lots of paddling!"
+/>
+
+## Turner Bridge Access
+Accessing at Turner bridge was alright. The actual ramp is pretty secluded. I drove back to check out the parking situation and there were some homeless people making a fire back there. They also had a broken down truck parked at the bottom of the ramp. I talked to them for a few minutes, drove back to the gravel parking lot near the main road, then walked back down to the river!
+
+<CenteredImage image={parkingEntrance} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={640} height={640}/>
+<TwoCenteredImages image={[bridge, launch]} altText={['Turner Bridge River Access', 'Turner Bridge Packraft Launch']} titles={['Turner Bridge Access', 'My Lanch Point']} width={640} height={640} />
+
+## Paddling
+There was more paddling that expected on this trip. I was expecting 1200 CFS to push me along, but if I stopped paddling I was dead in the water. There was some wind but it was sporadic and short lived. 
+
+The total trip length was 9.24 Miles which was the expected length. The Friends of the Kaw website says that novice paddlers can paddle 3 miles per hour, so I was expecting 3 hours. Instead, It took 3 hours 50 minutes. Maybe I am out of shape, but I felt like I was getting after it. I did take a 15min break to take a leak and adjust the seat on my boat. I was sore the next day!
+<TwoColumn>
+    <StravaEmbed
+    dataEmbedId={12760366647}
+    />
+    <iframe src='https://connect.garmin.com/modern/activity/embed/17393317922' title='Turner Bridge -> Confluence' width='465' height='500' frameborder='0'></iframe>
+</TwoColumn>
+
+I was expecting the paddle through downtown to be pretty cool. I ended up disappointed. There are large levees that surround the river and it ruins the view. If you are after skyline views I would get on the Missouri River instead! Below you can see what I am talking about!
+<CenteredImage image={levee} altText={'West Bottoms Levee'} title={'West Bottoms Levee'} width={640} height={640}/>
+I was also interested in checking out the "super cool" Rock Island Bridge seen above. At the time of writing it doesn't look close to being completed and honestly looks like its decaying instead of growing.
+
+Once I was at the end I was jealous of the speed of the Missouri River and think that would be more fun and less work to get down. That might be my next trip!
+
+## Wildlife
+While doing past Hadley Island A deer swam across the river about 100' in front of me. I think we were both equally surprised. Other than a few more deer, I saw a hand full of cranes and lots of fish!
+
+## First Trip With the Expedition
+The New Alpacka Raft Preformed great. It wasn't the right boat for this river, but you have to run what you have! I ended up Ubering back to my truck, and it was nice just to fold up my boat and not have to worry about locking it up or coming back to get it! I think that a touring style kayak would be the ultimate setup if this was the only river you were going to be on. I am going back to Alaska soon and its far easier to flay with a pack raft!
+
+## 7th Street Access
+<OneColumn>
+    <BlogMapWrapper
+        text='I ran into a guy fishing while heading down the river. He mentioned another access point on 7th street. I can confime this is true! This is musch closer to downtown. I belive it was about 3 miles from Kaw point. There is a dock and if I were taking someone who was newer to paddling, I would recommend from this access point to Kaw Park!'
+        mapUrl={'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1330.9936975780722!2d-94.62390219269248!3d39.075721519037145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1730138050344!5m2!1sen!2sus'}
+    />
+</OneColumn>
+
+## Kaw Point Access
+
+<TwoColumn>
+    There are always some characters hanging out at Kaw Point. As soon as I pulled up some dude started yelling at me wanting to rent my raft? I don't know what he was saying. Maybe I just hate people. Otherwise this park is beautiful. Definitely one of my favorite in Kansas City!
+    <CenteredImage image={kawPoint} altText={'Kaw Point Downtown Kansas City Overlook'} title={'Kaw Point'} width={320} height={320}/>
+</TwoColumn>
+
+</MdxLayout>
+
+<OneColumn>
+    <BlackTieTitle
+        title='Photo Gallery'
+    />
+</OneColumn>
+
+<br/>
+
+<PhotoCarousel 
+photoUrls={[
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-1.JPEG", title: 'Kansas River', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-3.JPEG", title: 'Kansas River', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-4.JPEG", title: 'Kansas River', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-5.JPEG", title: 'Kansas River', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-6.JPEG", title: 'Kansas City Skyline', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-8.JPEG", title: 'Kansas City Skyline', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-9.JPEG", title: 'Kansas City Skyline', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-10.JPEG", title: 'Quick Stop', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-12.JPEG", title: 'Quick Stop', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-13.JPEG", title: 'Rock Island Bridge', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-14.JPEG", title: 'Rock Island Bridge', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-15.JPEG", title: 'Rock Island Bridge', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-16.JPEG", title: 'Kansas River', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-18.JPEG", title: 'At the Confluence', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-21.JPEG", title: 'Kansas City', show: false},
+{ photoUrl: "/blog/kansas-river-trip-report-10-27-24/ks-river-23.JPEG", title: 'Packing Up', show: false},
+]}
+options={{loop: true}} 
+/>

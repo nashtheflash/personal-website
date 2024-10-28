@@ -1,3 +1,4 @@
+'use client';
 import { EmblaCarousel } from "./embela-carousel"
 import "./embela.css"
 

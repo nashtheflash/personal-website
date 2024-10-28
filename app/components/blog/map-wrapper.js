@@ -5,7 +5,7 @@ export function BlogMapWrapper({
     height='h-96',
     alignment='center',
     text,
-    mapUrl
+    mapUrl,
 } ={}) {
     return(
         <div className='flex justify-around items-start gap-2'>

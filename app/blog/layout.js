@@ -2,8 +2,8 @@ import { MdxLayout } from "../components/blog/mdx-layout"
 
 export default function MDXPage({ children }) {
   return (
-        <div className='flex flex-col justify-center items-center py-12 w-full'>
-            <MdxLayout>{children}</MdxLayout>
+        <div className='grid grid-cols-1 justify-items-stretch w-full h-fit bg-[#f2f1ed] text-gray-700'>
+            {children}
         </div>
     )
 }

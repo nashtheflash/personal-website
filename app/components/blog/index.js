@@ -7,13 +7,19 @@ export { MdxImage } from "./images/MdxImage";
 export { TwoColumn } from './layout/two-column'
 export { OneColumn } from './layout/one-column'
 
+//Feature
+export { TravelFeature } from './feature-sections/travel-feature';
+export { ImageFeature } from './feature-sections/image-feature';
+
 //Components
 export { PhotoGallery } from './photoGallery';
-export { TravelFeature } from './feature-sections/travel-feature';
 export { Footer } from './footer';
 export { CookBookDivider } from "./cookbook-divider";
 export { BlogMapWrapper } from "./map-wrapper";
 export { FromToCode } from "./colums/from-to-code";
+
+//Data Display
+export { BlogStatsSection } from "./data-display/stat-section";
 
 //Images
 export { CenteredImage } from "./images/centered-image";
@@ -48,6 +54,9 @@ export { LinkNewTab } from "./links/link-new-tab";
 
 //Strava
 export { StravaEmbed } from "./strava/strava-embed";
+
+//Headings
+export { BlackTieTitle } from "./section-headers/black-tie";
 
 //KC-Mtn-Biking
 export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'
