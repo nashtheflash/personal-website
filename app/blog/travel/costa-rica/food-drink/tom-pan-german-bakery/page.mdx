@@ -1,4 +1,4 @@
-import { CenteredImage, TwoCenteredImages, Footer, TravelFeature, Gif, BlogMapWrapper } from '@/app/components/blog'
+import { CenteredImage, TwoCenteredImages, Footer, TravelFeature, Gif, BlogMapWrapper, MdxLayout} from '@/app/components/blog'
 import { generateMetadata } from '@/utils';
 
 import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
@@ -17,6 +17,8 @@ export const metadata = generateMetadata({
     description:"Tom's Pan German Bakery Complete Review. This quaint German Bakery is located in  the small town of Nuevo Arenal, and is a must stop!",
     keywords: ['Arenal', 'Costa-Rica', 'German', 'bakery', 'Nash Bostwick']
 });
+
+<MdxLayout>
 
 <TravelFeature
     title="Tom's Pan German Bakery Review"
@@ -63,3 +65,4 @@ Just go here. I don't know where your even thinking about it, but what do I know
     related={['alpha-arenal','la-fortuna','manuel-antonio']}
 />
 
+</MdxLayout>

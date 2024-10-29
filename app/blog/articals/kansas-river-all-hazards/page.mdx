@@ -3,23 +3,34 @@ import {
     CenteredImage, 
     TwoCenteredImages, 
     OneColumn,
-    TwoColumn
+    TwoColumn,
+    MdxLayout,
 } from '@/app/components/blog'
 
-import belvueLowHeadDam from "@/public/kansas-river/hazards/belvue-low-head-dam.png";
-import topekaLowHeadDam from "@/public/kansas-river/hazards/topeka-water-plant-low-head-dam-1.png";
-import topekaLowHeadDam2 from "@/public/kansas-river/hazards/topeka-water-plant-low-head-dam-2.JPEG";
-import topekaLowHeadDam3 from "@/public/kansas-river/hazards/topeka-water-plant-low-head-dam-3.JPEG";
-import topekaBridge from "@/public/kansas-river/hazards/topeka-bridge.png";
-import topekaBridge2 from "@/public/kansas-river/hazards/topeka-bridge-2.png";
-import tecumsehLowHeadDam from "@/public/kansas-river/hazards/tecumseh-low-head-dam.png";
-import lawrenceEnergyCenterLowHeadDam from "@/public/kansas-river/hazards/lawrence-energy-center-low-head-dam.png";
-import bowersock from "@/public/kansas-river/hazards/bowersock-1.png";
-import bowersockTakeOut from "@/public/kansas-river/hazards/bowersock-take-out.png";
-import bowersockPutIn from "@/public/kansas-river/hazards/bowersock-put-in.png";
-import waterone1 from "@/public/kansas-river/hazards/waterone-dam-1.png";
-import waterone2 from "@/public/kansas-river/hazards/waterone-dam-2.JPEG";
-import waterone3 from "@/public/kansas-river/hazards/waterone-dam-3.JPEG";
+import belvueLowHeadDam from "@/public/blog/kansas-river-all-hazards/belvue-low-head-dam.png";
+import topekaLowHeadDam from "@/public/blog/kansas-river-all-hazards/topeka-water-plant-low-head-dam-1.png";
+import topekaLowHeadDam2 from "@/public/blog/kansas-river-all-hazards/topeka-water-plant-low-head-dam-2.JPEG";
+import topekaLowHeadDam3 from "@/public/blog/kansas-river-all-hazards/topeka-water-plant-low-head-dam-3.JPEG";
+import topekaBridge from "@/public/blog/kansas-river-all-hazards/topeka-bridge.png";
+import topekaBridge2 from "@/public/blog/kansas-river-all-hazards/topeka-bridge-2.png";
+import tecumsehLowHeadDam from "@/public/blog/kansas-river-all-hazards/tecumseh-low-head-dam.png";
+import lawrenceEnergyCenterLowHeadDam from "@/public/blog/kansas-river-all-hazards/lawrence-energy-center-low-head-dam.png";
+import bowersock from "@/public/blog/kansas-river-all-hazards/bowersock-1.png";
+import bowersockTakeOut from "@/public/blog/kansas-river-all-hazards/bowersock-take-out.png";
+import bowersockPutIn from "@/public/blog/kansas-river-all-hazards/bowersock-put-in.png";
+import waterone1 from "@/public/blog/kansas-river-all-hazards/waterone-dam-1.png";
+import waterone2 from "@/public/blog/kansas-river-all-hazards/waterone-dam-2.JPEG";
+import waterone3 from "@/public/blog/kansas-river-all-hazards/waterone-dam-3.JPEG";
+
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Kansas River Hazards",
+    description:"A list of all the man made hazards that can be found on the Kansas River with pictures and some videos",
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Hazards', 'Low Head Dams', 'Sand Dredges', 'Fallen Rail Road Bridges']
+});
+
+<MdxLayout>
 
 # Kansas River Hazards
 
@@ -212,6 +223,7 @@ In low water the bridges can be hazardous and paddlers should proceed with cauti
 Friends of the Kaw Info -> [East Old Railroad Bridge][4]
 <CookBookDivider/>
 
+</MdxLayout>
 
 
 

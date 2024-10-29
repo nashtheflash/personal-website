@@ -6,7 +6,8 @@ import {
     TravelFeature, 
     Gif, 
     BlogMapWrapper,
-    TLDR
+    TLDR,
+    MdxLayout,
 } from '@/app/components/blog'
 import { generateMetadata } from '@/utils';
 
@@ -24,8 +25,10 @@ import working from "@/public/costa-rica/german-bakery/working.JPEG";
 export const metadata = generateMetadata({
     title:"Kansas River Kayaking Guide",
     description:"Information on kayaking or rafting on the Kansas River.",
-    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide']
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide', 'First Time']
 });
+
+<MdxLayout>
 
 <TravelFeature
     title="Kansas River Guide"
@@ -103,6 +106,8 @@ Deciding where to enter and exit the river depends on how much time you have. Pl
     googleMapsLink='https://maps.app.goo.gl/yjAKf1QnJ9iGqD7v7'
     related={['alpha-arenal','la-fortuna','manuel-antonio']}
 />
+
+</MdxLayout>
 
 [1]: /blog/articals/kansas-river-all-hazards
 [2]: https://waterwatch.usgs.gov/new/index.php?st=kansas+river&search.x=0&search.y=0&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile
