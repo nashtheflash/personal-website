@@ -13,6 +13,10 @@ import { stockdaleData } from "./stockdale-data"
 import { mopacSingletrackData } from "./mopac-singletrack-data"
 import { hiddenValleyParkData } from "./hidden-valley-park-data"
 import { landahlParkData } from "./landahl-park-data"
+import { jacomoData } from "./jacomo-data"
+import { blueRiverParkwayData } from "./blue-river-parkway-data"
+import { wyandotteLakeData } from "./wyandotte-lake-data"
+import { lawrenceRiverTrailsData } from "./lawrence-river-trails-data"
 
 export const data = [
     cedarNilesData,
@@ -30,4 +34,8 @@ export const data = [
     mopacSingletrackData,
     hiddenValleyParkData,
     landahlParkData,
+    jacomoData,
+    blueRiverParkwayData,
+    wyandotteLakeData,
+    lawrenceRiverTrailsData,
 ]

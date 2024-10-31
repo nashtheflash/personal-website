@@ -17,11 +17,15 @@ import Stockdale from '../../../projects/projects/kansas-city-mtn-biking/artical
 import MopacSingletrack from '../../../projects/projects/kansas-city-mtn-biking/articals/mopac-singletrack.mdx'
 import LandahlPark from '../../../projects/projects/kansas-city-mtn-biking/articals/landahl-park.mdx'
 
+import Jacomo from '../../../projects/projects/kansas-city-mtn-biking/articals/jacomo.mdx'
+import BlueRiverParkway from '../../../projects/projects/kansas-city-mtn-biking/articals/blue-river-parkway.mdx'
+import WyandotteLake from '../../../projects/projects/kansas-city-mtn-biking/articals/wyandotte-lake.mdx'
+import LawrenceRiverTrails from '../../../projects/projects/kansas-city-mtn-biking/articals/lawrence-river-trails.mdx'
+
 export function StorySection({name}) {
 
     const artical = (name) => {
       switch(name) {
-
         case "Cedar Niles":   return <CedarNiles/>;
         case "Kill Creek":   return <KillCreek/>;
         case "Nall Park":   return <NallPark/>;
@@ -37,6 +41,10 @@ export function StorySection({name}) {
         case "Stockdale":   return <Stockdale/>;
         case "MoPac Single Track":   return <MopacSingletrack/>;
         case "Landahl":   return <LandahlPark/>;
+        case "Jacomo":   return <Jacomo/>;
+        case "Blue River Parkway":   return <BlueRiverParkway/>;
+        case "Wyandotte Lake":   return <WyandotteLake/>;
+        case "Lawrence River Trails":   return <LawrenceRiverTrails/>;
         default:      return <h1>No project match</h1>
 
       }
