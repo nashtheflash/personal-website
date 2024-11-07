@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
-export function ImageFeature({title, image}) {
+export function ImageFeature({title, image, alt}) {
     return(
         <div className="bg-neutral-800 w-full h-[calc(100%-63px)]">
             <div className='flex items-center justify-center'>
                 <Image
                     src={image}
-                    alt={"Artical Featured Image"}
+                    alt={alt ? alt : "Artical Featured Image"}
                     width={0}
                     height={0}
                     sizes="100vw"

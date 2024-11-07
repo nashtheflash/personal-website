@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { RustChapter2 } from "@/app/components/blog";
 import { BoltIcon, ArrowTrendingUpIcon, ClockIcon, ArrowPathIcon, MapPinIcon } from '@heroicons/react/24/outline'
 
+import logo from "@/public/logo.png";
 import artOne from "@/public/art/week-one/activity-one.JPG";
 import artTwo from "@/public/art/week-one/activity-two.JPG";
 import artThree from "@/public/art/week-one/activity-three.JPG";
@@ -158,7 +159,7 @@ export function BlogSection() {
 export function Blog() {
     return(
         <Image
-            src={artOne}
+            src={logo}
             width={500}
             height={500}
             alt="Picture of the author"
@@ -344,7 +345,7 @@ export function About() {
             <div className='flex justify-start items-end gap-4 p-2 max-[470px]:flex-col max-[470px]:items-start'>
                 <div className="avatar">
                     <div className="w-24 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        <img src="/logo.png" />
                     </div>
                 </div>
                 <h1 className='font-mori text-6xl font-bold tracking-wide'>Wired Woodsman</h1>

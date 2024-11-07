@@ -1,0 +1,38 @@
+import featureImage from "@/public/blog/adonit-pen-alternate-charging/feature-image.JPEG";
+import sherpaCharger from "@/public/blog/adonit-pen-alternate-charging/sherpa-charger.JPEG";
+import toBeAdded from "@/public/blog/adonit-pen-alternate-charging/sherpa-charger.JPEG";
+
+import { 
+    TwoCenteredImages, 
+    TLDR,
+    ImageFeature,
+    MdxLayout,
+} from '@/app/components/blog'
+
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Adonit Pen Alternate Charging",
+    description:"Charging the Adonit Pen is not limited to the charger that is included in the box. Here are some additional potions if you lost the supplied charger!",
+    keywords: ['Adonit', 'Pen', 'Alternate Charging', 'Lost Adonit Pen Charger' ]
+});
+
+<ImageFeature
+title='Adonit Pen Alternate Charging'
+image={featureImage}
+alt='Adonit Pen charging on Apple Wireless Charger'
+/>
+
+<MdxLayout>
+
+<TLDR
+text="When I got my Adonit pen, I didn't understand what the USB device was for. It turns out that was the charger and unfortunately it is long gone!"
+/>
+
+## Generic Wireless Chargers
+I threw my pen on my Apple wireless charger and after a few minutes it turned on. This is annoying but at least I don't have to carry another charger!
+
+<TwoCenteredImages image={[sherpaCharger, toBeAdded]} altText={['Adonit Pen charging on Shepa 100 Wireless Charger', 'Adonit Pen charging on Shepa 100 Wireless Charger']} titles={['Goal Zero', 'Apple Charger']} width={640} height={640} />
+
+</MdxLayout>
+
