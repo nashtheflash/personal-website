@@ -19,7 +19,7 @@ export function TrailDescription({data}) {
                         data.gpxTracks && data.gpxTracks.map((trail, index) => {
                             //add must ride
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <th>{index}</th>
                                     <td>{trail.name}</td>
                                     <td>{trail.oneWay ? 'One Way' : 'Bidirectional'}</td>
