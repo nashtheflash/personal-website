@@ -26,3 +26,11 @@ export function MdxLayoutParentWidth({ children }) {
   )
 }
 
+export function MdxPageWidth({ children }) {
+  // Create any shared layout or styles here
+  return (
+    <div className="w-full my-3">
+      {children}
+    </div>
+  )
+}

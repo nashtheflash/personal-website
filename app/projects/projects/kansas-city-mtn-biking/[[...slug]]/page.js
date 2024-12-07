@@ -35,10 +35,10 @@ export async function generateMetadata({ params }) {
 
 export default async function KansasCityMtnBiking({ params }) {
     const { slug }  = await params
-    const areaInfo = getAreaInfo(slug[0], data);
+    const areaInfo = slug ? getAreaInfo(slug[0], data).name : '';
     
     return(
-        <KCMtnBikingMain urlParam={areaInfo?.name ? areaInfo?.name : ''}/>
+        <KCMtnBikingMain urlParam={areaInfo}/>
     )
 }
 
