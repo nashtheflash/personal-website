@@ -1,5 +1,6 @@
 export const wyandotteLakeData = {
         name: 'Wyandotte Lake',
+        urlParam: 'wyandotte-lake',
         rank: 1,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

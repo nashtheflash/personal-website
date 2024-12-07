@@ -1,5 +1,6 @@
 export const schawneeMissionParkData = {
         name: 'Shawnee Mission Park',
+        urlParam: 'shawnee-mission-park',
         rank: 5,
         featuredImage: '/mtn-bike-kc/sm-park/feature-image.JPEG',
         stats: {

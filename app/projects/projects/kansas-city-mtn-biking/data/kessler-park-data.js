@@ -1,5 +1,6 @@
 export const kesslerParkData = {
         name: 'Kessler Park',
+        urlParam: 'kessler-park',
         rank: 11,
         featuredImage: '/mtn-bike-kc/kessler-park/water-fall.JPEG',
         stats: {

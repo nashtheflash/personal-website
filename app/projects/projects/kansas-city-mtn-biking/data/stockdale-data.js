@@ -1,5 +1,6 @@
 export const stockdaleData = {
         name: 'Stockdale',
+        urlParam: 'stockdale',
         rank: 7,
         featuredImage: '/mtn-bike-kc/stockdale/jump-1.JPEG',
         stats: {

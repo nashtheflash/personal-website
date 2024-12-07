@@ -1,5 +1,6 @@
 export const cedarNilesData = {
         name: 'Cedar Niles',
+        urlParam: 'cedar-niles',
         rank: 1,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

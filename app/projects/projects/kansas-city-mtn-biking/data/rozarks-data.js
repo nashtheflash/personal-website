@@ -1,5 +1,6 @@
 export const rozarksData = {
         name: 'Rozarks',
+        urlParam: 'rozarks',
         rank: 4,
         featuredImage: '/mtn-bike-kc/rozarks/arch.JPEG',
         stats: {

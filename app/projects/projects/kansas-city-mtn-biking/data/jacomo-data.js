@@ -1,5 +1,6 @@
 export const jacomoData = {
         name: 'Jacomo',
+        urlParam: 'jacomo',
         rank: 11,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

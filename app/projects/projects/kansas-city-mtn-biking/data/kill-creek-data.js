@@ -1,5 +1,6 @@
 export const killCreekData = {
         name: 'Kill Creek',
+        urlParam: 'kill-creek',
         rank: 2,
         featuredImage: '/mtn-bike-kc/kill-creek/tower.JPEG',
         stats: {

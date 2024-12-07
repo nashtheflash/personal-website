@@ -1,5 +1,6 @@
 export const hiddenValleyParkData = {
         name: 'Hidden Valley Park',
+        urlParam: 'hidden-valley-park',
         rank: 14,
         featuredImage: '/mtn-bike-kc/hidden-valley-park/momba-1.JPEG',
         stats: {

@@ -1,5 +1,6 @@
 export const martinCityDownhillData = {
         name: 'Martin City Downhill',
+        urlParam: 'martin-city-downhill',
         rank: 10,
         featuredImage: '/mtn-bike-kc/martin-city-downhill/feature.JPEG',
         stats: {

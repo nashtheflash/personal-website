@@ -1,5 +1,6 @@
 export const nallParkData = {
         name: 'Nall Park',
+        urlParam: 'nall-park',
         rank: 3,
         featuredImage: '/mtn-bike-kc/nall-park/turtle.JPEG',
         stats: {

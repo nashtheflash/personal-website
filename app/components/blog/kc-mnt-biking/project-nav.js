@@ -8,10 +8,10 @@ export function ProjectNav({ data, setCurrentArea }) {
     return(
         <ul className="menu bg-base-200 rounded-box w-56 m-2">
             {
-                data && data.map(({name, rank}, index) => (
+                data && data.map(({name, rank, urlParam}, index) => (
                     <Badge key={index} text={`#${rank}`}>
                         <li className="w-full">
-                            <a onClick={() => handleAreaChange(name)}>
+                            <a href={`/projects/projects/kansas-city-mtn-biking/${urlParam}`}>
                                 {name}
                             </a>
                         </li>

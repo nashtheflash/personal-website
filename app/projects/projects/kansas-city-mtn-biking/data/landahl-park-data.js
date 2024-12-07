@@ -1,5 +1,6 @@
 export const landahlParkData = {
         name: 'Landahl',
+        urlParam: 'landahl-park',
         rank: 1,
         featuredImage: '/mtn-bike-kc/landahl-park/the-ish.JPEG',
         stats: {

@@ -1,5 +1,6 @@
 export const lawrenceRiverTrailsData = {
         name: 'Lawrence River Trails',
+        urlParam: 'lawrence-river-trail',
         rank: 1,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

@@ -1,5 +1,6 @@
 export const blueRiverParkwayData = {
         name: 'Blue River Parkway',
+        urlParam: 'blue-river-parkway',
         rank: 1,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

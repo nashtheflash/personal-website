@@ -1,5 +1,6 @@
 export const hodgeParkData = {
         name: 'Hodge Park',
+        urlParam: 'hodge-park',
         rank: 6,
         featuredImage: '/mtn-bike-kc/hodge-park/cabin.JPEG',
         stats: {

@@ -1,5 +1,6 @@
 export const bigBullCreekData = {
         name: 'Big Bull Creek',
+        urlParam: 'big-bull-creek',
         rank: 9,
         featuredImage: '/mtn-bike-kc/big-bull-creek/trail-11.JPEG',
         stats: {

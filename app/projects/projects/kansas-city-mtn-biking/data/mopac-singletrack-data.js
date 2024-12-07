@@ -1,5 +1,6 @@
 export const mopacSingletrackData = {
         name: 'MoPac Single Track',
+        urlParam: 'mopac-single-track',
         rank: 13,
         featuredImage: '/mtn-bike-kc/mopac-singletrack/bike-1.JPEG',
         stats: {

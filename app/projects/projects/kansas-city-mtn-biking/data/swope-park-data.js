@@ -1,5 +1,6 @@
 export const swopeParkData = {
         name: 'Swope Park',
+        urlParam: 'swope-park',
         rank: 8,
         featuredImage: '/mtn-bike-kc/cedar-niles/cedar-niles-car.JPEG',
         stats: {

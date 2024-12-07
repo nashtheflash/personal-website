@@ -1,5 +1,6 @@
 export const lexingtonLakeData = {
         name: 'Lexington Lake',
+        urlParam: 'lexington-lake',
         rank: 7,
         featuredImage: '/mtn-bike-kc/lexington-lake/mom-basement.JPEG',
         stats: {
