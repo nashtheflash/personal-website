@@ -1,3 +1,14 @@
+export const metadata = {
+    title: "Kansas River Kayaking Guide",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"Information on kayaking or rafting on the Kansas River.",
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide', 'First Time'],
+    isActive: true,
+};
+
 import { 
     OneColumn,
     CenteredImage, 
@@ -9,7 +20,6 @@ import {
     TLDR,
     MdxLayout,
 } from '@/app/components/blog'
-import { generateMetadata } from '@/utils';
 
 import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
 import bakedGoodsBetter from "@/public/costa-rica/german-bakery/baked-goods-better.JPEG";
@@ -21,12 +31,6 @@ import store from "@/public/costa-rica/german-bakery/store.JPEG";
 import tableExample from "@/public/costa-rica/german-bakery/table-example.JPEG";
 import welcomeSign from "@/public/costa-rica/german-bakery/welcome-sign.JPEG";
 import working from "@/public/costa-rica/german-bakery/working.JPEG";
-
-export const metadata = generateMetadata({
-    title:"Kansas River Kayaking Guide",
-    description:"Information on kayaking or rafting on the Kansas River.",
-    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide', 'First Time']
-});
 
 <MdxLayout>
 

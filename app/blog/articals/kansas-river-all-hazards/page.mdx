@@ -1,3 +1,14 @@
+export const metadata = {
+    title: "Kansas River Hazards",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description: "A list of all the man made hazards that can be found on the Kansas River with pictures and some videos",
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Hazards', 'Low Head Dams', 'Sand Dredges', 'Fallen Rail Road Bridges'],
+    isActive: true,
+};
+
 import { 
     CookBookDivider,
     CenteredImage, 
@@ -21,14 +32,6 @@ import bowersockPutIn from "@/public/blog/kansas-river-all-hazards/bowersock-put
 import waterone1 from "@/public/blog/kansas-river-all-hazards/waterone-dam-1.png";
 import waterone2 from "@/public/blog/kansas-river-all-hazards/waterone-dam-2.JPEG";
 import waterone3 from "@/public/blog/kansas-river-all-hazards/waterone-dam-3.JPEG";
-
-import { generateMetadata } from '@/utils';
-
-export const metadata = generateMetadata({
-    title:"Kansas River Hazards",
-    description:"A list of all the man made hazards that can be found on the Kansas River with pictures and some videos",
-    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Hazards', 'Low Head Dams', 'Sand Dredges', 'Fallen Rail Road Bridges']
-});
 
 <MdxLayout>
 
@@ -60,7 +63,7 @@ This area can be hazardous in low water and paddlers should proceed with caution
 
 Here is a video of the approach:
 <OneColumn>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cKVA108q84A?si=btGVvnjSbGHa6Ss-" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cKVA108q84A?si=btGVvnjSbGHa6Ss-" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </OneColumn>
 
 Friends of the Kaw Info -> [Belvue Low Head Dam][1]
@@ -87,7 +90,7 @@ The Topeka water plant has a low-head dam (often referred to as the Topeka weir)
 
 Here is a video of the approach:
 <OneColumn>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2qoPdS71DJE?si=PDQr0i-RxrS31CHl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2qoPdS71DJE?si=PDQr0i-RxrS31CHl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </OneColumn>
 Friends of the Kaw Info -> [Topeka Water Plant Low-Head Dam][2]
 <CookBookDivider/>

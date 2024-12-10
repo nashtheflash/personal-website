@@ -1,3 +1,14 @@
+export const metadata = {
+    title: "Kansas River Trip Report",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"Kansas River Kayaking Trip Report 10/27/2024. Turner Bridge to Kaw Point",
+    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
+    isActive: true,
+};
+
 import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/feature-image.JPEG";
 import parkingEntrance from "@/public/blog/kansas-river-trip-report-10-27-24/parking-entrance.JPEG";
 import bridge from "@/public/blog/kansas-river-trip-report-10-27-24/bridge.JPEG";
@@ -24,14 +35,6 @@ import {
     BlackTieTitle,
     PhotoCarousel,
 } from '@/app/components/blog'
-
-import { generateMetadata } from '@/utils';
-
-export const metadata = generateMetadata({
-    title:"Kansas River Trip Report",
-    description:"Kansas River Kayaking Trip Report 10/27/2024. Turner Bridge to Kaw Point",
-    keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point']
-});
 
 <ImageFeature
 title='Kansas River Trip Report'
