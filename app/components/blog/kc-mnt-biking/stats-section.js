@@ -1,14 +1,16 @@
-import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Icons
-import DistanceIcon from "@/public/mtn-bike-kc/distance.png";
-import PavementIcon from "@/public/mtn-bike-kc/pavement.png";
-import SingleTrackIcon from "@/public/mtn-bike-kc/singletrack.png";
-import RideabilityIcon from "@/public/mtn-bike-kc/rideability.png";
-import DifficultyIcon from "@/public/mtn-bike-kc/difficulty.png";
-import DaysIcon from "@/public/mtn-bike-kc/days.png";
-import HighPointIcon from "@/public/mtn-bike-kc/highpoint.png";
-import AscentIcon from "@/public/mtn-bike-kc/ascent.png";
+import { 
+    faWave,
+    faRoute,
+    faHashtag,
+    faHillRockslide,
+    faMountainSun,
+    faGauge,
+    faTrafficLight,
+    faInfo
+} from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 export function StatsSection({stats}) {
     
@@ -26,14 +28,14 @@ export function StatsSection({stats}) {
     return(
         <div className="bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] py-5 text-black w-full h-fit">
             <div className='grid grid-cols-2 h-full items-center justify-items-center sm:grid-cols-3 md:grid-cols-4'>
-                <Stat title='Distance Total' Icon={DistanceIcon} stat={`${distanceMiles} Mi`} statAlt={`(${(distanceMiles * 1.609).toFixed(2)} KM)`}/>
-                <Stat title='Number of Trails' Icon={SingleTrackIcon} stat={numberOfTrails}/>
-                <Stat title='Flow' Icon={DifficultyIcon} stat={flowTrails}/>
-                <Stat title='Down Hill' Icon={DifficultyIcon} stat={downHillTrails}/>
-                <Stat title='XC' Icon={DifficultyIcon} stat={XCTrails}/>
-                <Stat title='Difficulty' Icon={DifficultyIcon} stat={areaDificulty}/>
-                <Stat title='Traffic' Icon={RideabilityIcon} stat={traffic}/>
-                <Stat title='Current Status' Icon={PavementIcon} stat={currentStatus}/>
+                <Stat title='Distance Total' Icon={faRoute} stat={`${distanceMiles} Mi`} statAlt={`(${(distanceMiles * 1.609).toFixed(2)} KM)`}/>
+                <Stat title='Number of Trails' Icon={faHashtag} stat={numberOfTrails}/>
+                <Stat title='Flow' Icon={faWave} stat={flowTrails}/>
+                <Stat title='Down Hill' Icon={faHillRockslide} stat={downHillTrails}/>
+                <Stat title='XC' Icon={faMountainSun} stat={XCTrails}/>
+                <Stat title='Difficulty' Icon={faGauge} stat={areaDificulty}/>
+                <Stat title='Traffic' Icon={faTrafficLight} stat={traffic}/>
+                <Stat title='Current Status' Icon={faInfo} stat={currentStatus}/>
             </div>
         </div>
     )
@@ -44,14 +46,11 @@ function Stat({Icon, title, stat, statAlt}) {
         <>
             <div className='flex flex-col justify-center items-center'>
                 <h2 className='text-sm text-gray-600'>{title}</h2>
-                <div className="flex gap-2 justify-center items-center">
-                    <Image
-                        src={Icon}
-                        alt={"Stat Icon"}
-                    />
-                    <div className='text-black'>
+                <div className="flex gap-4 justify-center items-center">
+                    <FontAwesomeIcon icon={Icon} className='h-7 w-7'/>
+                    <div className='flex flex-col gap-0 text-black'>
                         <p>{stat}</p>
-                        {statAlt && <span>{statAlt}</span>}
+                        {statAlt && <span className='text-xs text-gray-600'>{statAlt}</span>}
                     </div>
                 </div>
             </div>
