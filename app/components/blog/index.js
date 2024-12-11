@@ -12,6 +12,9 @@ export { OneColumn } from './layout/one-column'
 export { TravelFeature } from './feature-sections/travel-feature';
 export { ImageFeature } from './feature-sections/image-feature';
 
+//Cards
+export { BlogCard } from './cards/blog-artical-card';
+
 //Components
 export { PhotoGallery } from './photoGallery';
 export { Footer } from './footer';

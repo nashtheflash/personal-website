@@ -1,8 +1,9 @@
 const menuItems = [
-    {name: 'Marketing', href: '/blog/marketing'},
-    {name: 'Projects', href: '/blog/projects'},
-    {name: 'Outdoor', href: '/blog/outdoor'},
-    {name: 'Travel', href: '/blog/travel'},
+    {name: 'Blog', href: '/blog'},
+    {name: 'Projects', href: '/projects'},
+    // {name: 'Marketing', href: '/blog/marketing'},
+    // {name: 'Outdoor', href: '/blog/outdoor'},
+    // {name: 'Travel', href: '/blog/travel'},
 ]
 
 export function NavBar() {

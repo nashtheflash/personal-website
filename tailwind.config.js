@@ -17,6 +17,8 @@ module.exports = {
                 inter: ['var(--font-inter)'],
                 mori: ['var(--font-mori)'],
                 neue: ['var(--font-neue)'],
+                cursive: ['var(--font-cursive)'],
+                spartan: ['var(--font-spartan)'],
             },
             typography: {
                 DEFAULT: {
@@ -24,7 +26,7 @@ module.exports = {
                         maxWidth: '100ch', // add required value here
                     }
                 }
-            }
+            },
         },
     },
     daisyui: {

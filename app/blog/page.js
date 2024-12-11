@@ -1,5 +1,5 @@
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
-import { MdxLayout } from "../components/blog"
+import { MdxLayout, BlogCard } from "../components/blog"
 
 export default function BlogHome() {
 
@@ -14,46 +14,33 @@ export default function BlogHome() {
 
 async function BlogList() {
     const allArticals = folderPaths('app/blog/articals');
-    const metadata = await getBlogPostMetadata('app/blog/articals', allArticals);
+    const metadata = await getBlogPostMetadata('app/blog/articals', allArticals)
+    const activeArticalMetadata = metadata.filter((artical) => !artical.isActive)
 
     return(
         <div className="not-prose grid grid-cols-3 gap-2 justify-items-center items-center w-full">
             {
-                metadata.map((artical, i) => {
-                    if(artical && artical.isActive) {
-                        return (
-                            <div key={i}>
+                activeArticalMetadata.map((artical, i) => {
+                    return (
+                        <div key={i} className={`relative h-full w-full min-h-[500px] ${getSize(i)}`}>
+                            <a href={`/blog/articals${artical.folder}`}>
                                 <BlogCard 
                                     title={artical.title}
-                                    artical={artical.folder}
+                                    thumbnail={artical.thumbnail}
                                 />
-                            </div>
-                        )
-                    }
+                            </a>
+                        </div>
+                    )
                 })
             }
         </div>
     )
 }
 
-function BlogCard({ title, artical }) {
-    return(
-        <a href={`/blog/articals${artical}`}>
-            <div className="card bg-base-100 image-full w-full shadow-xl">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt={`${title} thumbnail`}
-                    />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">{title}</h2>
-                    <p>{artical}</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </a>
-    )
+
+function getSize(index) {
+    if(index == 0) return 'col-span-3'
+    if(index == 1) return 'col-span-1'
+    if(index % 2 == 0) return 'col-span-2'
+    if(index % 3 == 0) return 'col-span-1'
 }
