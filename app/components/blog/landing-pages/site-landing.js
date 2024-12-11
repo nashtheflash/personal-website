@@ -10,6 +10,19 @@ import artThree from "@/public/art/week-one/activity-three.JPG";
 
 export function SiteLanding() {
     return(
+        <div className='flex fle-col justify-center items-center h-full w-full min-h-[calc(100vh-64px)] p-2'>
+            <Image
+                src="/logo.png"
+                width={500}
+                height={500}
+                className='animate-spin-smooth'
+            />
+        </div>
+    )
+}
+
+export function SiteLandingOld() {
+    return(
         <div className='h-full w-full bg-gray-500 p-2'>
             <div className='flex max-[995px]:flex-col gap-2'>
                 <div className='flex flex-col gap-2'>

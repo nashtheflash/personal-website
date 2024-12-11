@@ -27,6 +27,15 @@ module.exports = {
                     }
                 }
             },
+            keyframes: {
+                'spin-smooth': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                },
+            },
+            animation: {
+                'spin-smooth': 'spin-smooth 11s linear infinite', // Smooth, slow spin
+            },
         },
     },
     daisyui: {
