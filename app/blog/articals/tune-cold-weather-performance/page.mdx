@@ -7,8 +7,9 @@ export const metadata = {
     description:"Tune M1 cold weather preformance: stock, with factory insulation, and with aftermarket insulation.",
     keywords: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
     isActive: false,
-};
+}; 
 
+import Image from 'next/image';
 import { 
     MdxLayout,
     OneColumn,
@@ -26,9 +27,13 @@ import {
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
+    LineGraph,
 } from '@/app/components/blog'
 
-import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/feature-image.JPEG";
+import { noInsulationData, timeToTempData } from "./graph-data"
+
+import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/bridge.JPEG";
+import sensor from "@/public/blog/tune-cold-weather-performance/sensor.gif";
 
 <ImageFeature
     title='Tune M1 Cold Weather Performance'
@@ -37,9 +42,42 @@ import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/featur
 
 <MdxLayout>
 
-## All About insulation performance.
+<TLDR
+text="Testing the Tune M1's performance in the cold. This includes no insulation, the Tune insulation kit, and other ways to improve the cold weather performance of the camper. "
+/>
 
-### Stock tune no insulation performance
-### Performance with the insulation kit
+### Issues
+While testing the tune in cold weather there were a few things that jumped out at me.
+
+The bed is very cold when you get in and will continue to be cold when you move around. People will say that the cold is coming from the floor but I have not found this to be the case > 32 degrees Fahrenheit. Having a large comforter is almost a requirment and I always wear a sweatshirt when going to sleep!
+
+
+### Test Parameters
+Each test that you find below will use 55 degrees fahrenheit as the test temperature. This is a little on the cold side but defiantly a luxury for camping light. The Tune is somewhere between sleeping in a tent and a 4 seasons truck camper and after my testing I found 55 degrees to be the sweet spot.
+
+The temperature sensors are placed midway on the bed on the inside of the camper and the outside logger is sitting on the tailgate.
+
+### Stock Tune (No Insulation)
+The first part of the test is heating the camper from ambient temperature to 55 degrees. 
+
+<LineGraph title={'Ambient to 55 Degrees(empty)'} data={timeToTempData} />
+
+I was surprised at how quickly the camper got up to temperature but notice that the logger never got up to 55 degrees. It appears there is X amount of temp difference between the heaters sensor and what you feel in the bed portion of the camper. In the [Set-Up Video][1] they show that you could move the heaters sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Unfortunatly, this leads to the portion of camper below the bed to be about X amount warmer that the bed portion. Keep that in mind when setting the heat.
+
+<TwoCenteredImages image={[sensor, featureImage]} altText={['Tune M1 Heater Sensor Relocation', 'Columbine Bypass Big Jump']} width={'500'} height={'500'} />
+
+<LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
+
+Difference between ambient and camper temp
+
+### Tune with Insulation Kit
+### Tune with Roof Insulation
+### Tune Under Bed Insulation
+
+### Other articles:
+Tune Heater propane consumption
+Tune Heater Electricity Draw
 
 </MdxLayout>
+
+[1]: https://www.youtube.com/watch?v=RCQB0O0w-uk

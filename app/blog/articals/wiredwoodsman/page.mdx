@@ -1,0 +1,81 @@
+export const metadata = {
+    title: "Wired Woodsman",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/wiredwoodsman/thumbnail.png',
+    description:"description",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: true,
+};
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+import featureImage from "@/public/blog/wiredwoodsman/thumbnail.png";
+
+<ImageFeature
+    title='Wired Woodsman'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+<TLDR
+text="My personal website that I use as a creative outlet and to publish art! Everything that you see on the blog was written or created by me. That includes all of the writing, art, even the website was written by me using some of my favorite technologies" />
+
+## Purpose
+I don't think of this website as a project showcase, although it closely resembles one. I don't care if anyone ever sees this. I don't care if I am writing into the abyss. I think that it is important to document what you do while you are alive. My hope is that in 1000 years someone will stumble upon this website and see who I am. In a way, I may never truly die.
+
+Additionally, I find that this website gives me a reason to create. It gives me a reason to visit every place that you can mountain bike in Kansas City instead of just going to the one I like the most. It gives me a reason to skin the extra few miles to see what is over the saddle. It is a process that I have come to love, and cannot imaging a life not written down.
+
+Lastly, while I make works that are going to end up on this site, ideas start pouring out. I think that creating and writing about ideas makes me really think everything through, and that leads to another idea, and then another. 
+
+## Why the Name
+The name was inspired by a coffee shop that was in Rapid City, South Dakota. I'm not sure why the name stuck but it did! 
+
+## How was it built
+I used a few different technologies to build the site. MDX was defiantly the focal point. I wanted to be able to freely type out a document and not have to reformat it, but I also wanted the flexibility to add extra functionality that you would not get from a standard WordPress website. MDX was perfect for this, however there was defiantly some setup and learning required to get everything that I wanted. 
+
+For example, it was very important to me to be able to go to a directory, create a file using a template, and everything just work. It is hard for me to switch from programming to writing, so much so that most of the articles start as pure text, then I go back and add all of the needed photos and other components. I was able to keep programming out of my writing by creating some server code that looks at the  metadata exported from every post. You can read more about the some of the challenges, and solutions, from the links below:
+
+* [Exporting Metadata From MDX Files][1]
+* [Setting Up Neovim For MDX][2]
+* [Easy MDX Linking][3]
+* [MDX Typography Setup][4]
+* [MDX Stat Section Methodology][5]
+
+## What Text Editor Do I Use To Write
+Neovim & Tmux are the only useful tools, other than pen & paper, for writing down ideas, or really anything for that matter. Neovim frees the user from any fees, accounts, or other monetary commitments. It frees the mind from all of the bugs that are associated with other programs. Lastly, Neovim frees the user from looking at their desk. There is no need to engage your brain to look for the mouse. You simply type. Isn't that all writing should be?
+
+Microsoft is one of the worst companies in the world. Microsoft Word is there worst creating. It is the absolute worst piece of software ever created. If you are a current user, stop. Why do you need to pay to write down ideas? Why do you need to have an account to express yourself? I have being accounted for!
+
+</MdxLayout>
+
+[1]: /blog/articals/mdx-metadata
+[2]: /blog/articals/neovim-mdx-setup
+[3]: /blog/articals/easy-mdx-linking
+[4]: /blog/articals/mdx-typography-setup
+[5]: /blog/articals/mdx-stat-section-methodology

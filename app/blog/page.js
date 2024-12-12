@@ -18,7 +18,7 @@ async function BlogList() {
     const activeArticalMetadata = metadata.filter((artical) => !artical.isActive)
 
     return(
-        <div className="not-prose grid grid-cols-3 gap-2 justify-items-center items-center w-full">
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full">
             {
                 activeArticalMetadata.map((artical, i) => {
                     return (
@@ -39,8 +39,8 @@ async function BlogList() {
 
 
 function getSize(index) {
-    if(index == 0) return 'col-span-3'
-    if(index == 1) return 'col-span-1'
-    if(index % 2 == 0) return 'col-span-2'
+    if(index == 0) return 'col-span-1 sm:col-span-3'
+    if(index == 1) return 'col-span-1 sm:col-span-1'
+    if(index % 2 == 0) return 'col-span-1 sm:col-span-2'
     if(index % 3 == 0) return 'col-span-1'
 }
