@@ -21,13 +21,24 @@ import {
     BlogMapWrapper,
     TLDR,
     BlogStatsSection,
+    Stat,
     ImageFeature,
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
 } from '@/app/components/blog'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
 import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
+
+<BlogStatsSection>
+    <Stat title={'TITLE'} stat={'value'} icon={faReact}/>
+</BlogStatsSection>
 
 <MdxLayout>
 
