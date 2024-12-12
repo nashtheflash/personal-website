@@ -1,0 +1,58 @@
+export const metadata = {
+    title: "Tune M1 Cold Weather Preformance",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"Tune M1 cold weather preformance: stock, with factory insulation, and with aftermarket insulation.",
+    keywords: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
+    isActive: false,
+};
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/feature-image.JPEG";
+
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+
+<ImageFeature
+    title='Kansas River Trip Report'
+    image={featureImage}
+/>
+
+
+<BlogStatsSection>
+    <Stat title={'TITLE'} stat={'value'} icon={faReact}/>
+</BlogStatsSection>
+
+
+<MdxLayout>
+
+## All About insulation performance.
+
+### Stock tune no insulation performance
+### Performance with the insulation kit
+
+</MdxLayout>

@@ -5,7 +5,7 @@ import {
     faReact,
     faShopify,
 } from '@fortawesome/free-brands-svg-icons';
-// import nextjs from '/favicon.ico';
+
 import nextjs from "@/public/favicon.ico";
 import logo from "@/public/logo.png";
 
@@ -31,8 +31,8 @@ function Project() {
             <div className="flex justify-between items-center">
                 <div className="prose grow-0 w-1/2">
                     <h1 className="text-5xl">WiredWoodsman</h1>
+                    <p>My personal website that I use as a creative outlet and to publish art! Everything that you see on the blog was written or created by me. That includes all of the writing, art, even the website was written by me using some of my favrit techmologies!</p>
                     <a className="text-xs" href="/">See Blog Post</a>
-                    <p>My personal bolg that I use to publish whatever I like! Everythiny that you see on the blog was written or created by me. That includes all of the writing, art, even the website was written by me using some of my favrit techmologies!</p>
                 </div>
                 <div className='flex justify-center items-center w-1/2'>
                     <Image

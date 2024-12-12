@@ -24,6 +24,7 @@ export { FromToCode } from "./colums/from-to-code";
 
 //Data Display
 export { BlogStatsSection } from "./data-display/stat-section";
+export { Stat } from "./data-display/stat-section";
 
 //Images
 export { CenteredImage } from "./images/centered-image";

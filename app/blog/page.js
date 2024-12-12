@@ -5,7 +5,7 @@ export default function BlogHome() {
 
     return(
         <MdxLayout>
-            <div className="min-h-[calc(100vh-64px-.75rem-.75rem)] bg-[#f2f1ed] w-full">
+            <div className="bg-[#f2f1ed] w-full">
                 <BlogList/>
             </div>
         </MdxLayout>
