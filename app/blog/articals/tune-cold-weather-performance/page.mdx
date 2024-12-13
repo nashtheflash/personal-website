@@ -33,7 +33,13 @@ import {
 import { noInsulationData, timeToTempData } from "./graph-data"
 
 import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/bridge.JPEG";
-import sensor from "@/public/blog/tune-cold-weather-performance/sensor.gif";
+import sensorGif from "@/public/blog/tune-cold-weather-performance/sensor.gif";
+import friggaSensor from "@/public/blog/tune-cold-weather-performance/frigga-sensor.JPEG";
+import sensorLocation from "@/public/blog/tune-cold-weather-performance/sensor-location.JPEG";
+import insideCamper from "@/public/blog/tune-cold-weather-performance/inside-camper.JPEG";
+import hestSpecs from "@/public/blog/tune-cold-weather-performance/hest-r-value.png";
+
+import { FriggaTempLoger } from '@/app/products/product-links';
 
 <ImageFeature
     title='Tune M1 Cold Weather Performance'
@@ -43,43 +49,89 @@ import sensor from "@/public/blog/tune-cold-weather-performance/sensor.gif";
 <MdxLayout>
 
 <TLDR
-text="Testing the Tune M1's performance in the cold. This includes no insulation, the Tune insulation kit, and other ways to improve the cold weather performance of the camper. "
+text="Testing the Tune M1's performance in the cold. This includes no insulation, the Tune insulation kit, and other ways to improve the cold weather performance of the camper. If you are looking for the largest gain for the least amount of work, just buy and install the Tune Insulation Pack"
 />
 
-### Issues
-While testing the tune in cold weather there were a few things that jumped out at me.
+### Cold Weather Goals
+The obvious goal when running the Tune in the cold is to have the heater run as little as possible. This not only saves fuel, but also cuts down on the noise the heater creates. The heater is loud! I found that at max it can reach X DB's. I am a very deep sleeper and when that thing kicks on I wake up. You can read more about my heater specific testing here: [Tune Heater][2].
 
-The bed is very cold when you get in and will continue to be cold when you move around. People will say that the cold is coming from the floor but I have not found this to be the case > 32 degrees Fahrenheit. Having a large comforter is almost a requirment and I always wear a sweatshirt when going to sleep!
+### Observation
+Turning the heater on and feeling for the coldest parts of the camper is dumb science but I think it is useful to see where the biggest performance improvements might be hiding. Here is what I found:
+1. The cloth section(by far the coldest)(Est. R-value: ~1.5)
+2. Exposed Aluminum(Est. R-value: ~0)
+3. Truck Bed(Est. R-value: ~0)
+4. FRP Panels([Est. R-value: 2.1][5]) 
 
+I think the cloth seems the coldest because some of the wind is able to pass though the fabric. Just a guess I am not a scientist. When you are laying in bed, you can feel the cold on your head!
 
 ### Parameters
+<TwoColumn>
+<CenteredImage image={insideCamper} altText={'Tune M1 on Tacoma'} title={'Tune M1 on Tacoma'} width={500} height={500} />
 I have the smaller Tune M1 that is on the back of a Toyota Tacoma with a 5.5' bed. If you have a longer bed I would expect some kind of degraded performance.
+</TwoColumn>
 
-Each test that you find below will use 65 degrees fahrenheit as the test temperature. Defiantly a luxury for camping light. I assume this will be a hard temp for the camper to hold in some situations, but the purpose of collecting this data is to see what is possible, not necessarily what is considered normal operation.
+Each test that you find below will use 65 degrees fahrenheit as the test temperature. Defiantly a luxury for camping light. I assume this will be a hard temp for the camper to hold in some situations, but the purpose of collecting this data is to see what is possible, not necessarily what is considered normal operation. The fan was not used in any of the tests. I have yet to have any condensation buildup while sleeping.
 
-The inside temperature sensor is wedged into the T-track next to the fan. The outside sensor is set on a chair right outside the camper.
+The inside temperature sensor is wedged into the T-track next to the fan. The outside sensor is set on a chair right outside the camper. I am using a <FriggaTempLoger/> to record the temperatures. There are surprisingly few options to simply log temperature over a given time.
+<TwoCenteredImages image={[sensorLocation, friggaSensor]} altText={['Sensor Location During Test', 'Frigga Temperature Logger']} titles={['Sensor Location', 'Frigga Temp Logger']} width={'500'} height={'500'} /> 
+
+In the [Set-Up Video][1] they show that you could move the heaters sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Maybe they saw some of the same results and went with the cleaner install. I would have!
+<TwoCenteredImages image={[sensorGif, featureImage]} altText={['Tune M1 Heater Sensor Relocation', 'New Tune M1 Sensor Install']} width={'500'} height={'500'} />
 
 ### Stock Tune (No Insulation)
-The first part of the test is heating the camper from ambient temperature to 65 degrees. This is with no insulation and the windows closed and using the boost setting.
+<TwoColumn>
+The first part of the test is heating the camper from ambient temperature to 65 degrees. This is with no insulation, the windows closed, and using the boost setting on the heater. You can see the setup on the right.
+<CenteredImage image={insideCamper} altText={'Inside Camper Windows Closed'} title={'3 Corners'} width={700} height={700} />
+</TwoColumn>
 
-<LineGraph title={'Ambient to 55 Degrees(empty)'} data={timeToTempData} />
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempData} />
 
-I was surprised at how quickly the camper got up to temperature but notice that the logger never got up to 55 degrees. It appears there is X amount of temp difference between the heaters sensor and what you feel in the bed portion of the camper. In the [Set-Up Video][1] they show that you could move the heaters sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Unfortunatly, this leads to the portion of camper below the bed to be about X amount warmer that the bed portion. Keep that in mind when setting the heat.
-
-<TwoCenteredImages image={[sensor, featureImage]} altText={['Tune M1 Heater Sensor Relocation', 'Columbine Bypass Big Jump']} width={'500'} height={'500'} />
+It took about 90 minutes to get the camper up to temperature. The temperature sensor for the heater thermostat is very close to the heater. I also have the king size bed extension that overhangs the heater and forms a cubby. I thought these factors would lead there to be a large temperature difference between what the heater was seeing vs what the temperature sensor in the sleeping section of the camper was seeing. This was clearly not the case! The difference in temperature was only about 2.5-3 degrees.
 
 <LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
 
-Difference between ambient and camper temp
+Difference between ambient and camper temp was kept at 40 degrees which was impressive, but you can also see that the heater ran almost continuously. During the 9 hour test, the heater was only off for 2.5 hours. Kicking on about 10 times.
 
 ### Tune with Insulation Kit
 ### Tune with Roof Insulation
-### Tune Under Bed Insulation
+### Tune with Door Insulation
+### Tune with BedRug
+### Tune with Insulation Kit & Roof Insulation
+### Tune with Insulation Kit & Roof Insulation & Door Insulation
+### Tune with Insulation Kit & Roof Insulation & Door Insulation & BedRug
+### Tune Bed Insulation / Sleeping Warmer
+
+#### Hest Mattress Specs
+This is by far the test with the least amount of data. It is more of a feel. My honest feeling is that the Hest mattress that the tune comes with is enough insulation for sleeping. It is cold when you get into bed, but you warm it up quickly. Hest foam seems to have an R-Value of 8.8 seen below:
+<CenteredImage image={hestSpecs} altText={'Hest Mattress Specs'} title={'Hest Specs'} width={1280} height={518} />
+
+I believe that Tune buys the Dually Pads from Hest. They have there branding all over the page. Here are the links to the info:
+* [Hest Dually(No R-Value Spec)][3]
+* [Hest Foamy(Has R-Value Spec)][3]
+
+#### Dress Warmer
+By far the cheapest and most versatile way of sleeping warmer is just to dress warmer. You can wear the clothes around town too!
+
+#### Adding Material Under the Mattress
+I have seen some trying to add insulation under the mattress to try to boost the R-Value of the sleep system. Unfortunately, I have not found this to work(> 10 degrees). If you were wanting to boost the value, I would honestly just put a quality wool blanket under the mattress. That could boost the R-Value to ~11, is easily removable, and can be utilized for other things if needed! I tried a wool blanket and saw no difference when testing down to 10 degrees fahrenheit.
+
+#### Heating Blanket
+If you were wanting to have a warm bed when you get in. I would look at a [heating blanket][6]. That made a huge difference for me. I placed the blanket below me and turned it on the lowest heat setting! You can find my full review with power specs here: [Tune Heated Blaanket][6]
+
+
+### Summary
+Just install the Tune Insulation Pack for the bulk of the gains!
 
 ### Other articles:
-Tune Heater propane consumption
-Tune Heater Electricity Draw
+* Tune Heater propane consumption
+* Tune Heater Electricity Draw
 
 </MdxLayout>
 
 [1]: https://www.youtube.com/watch?v=RCQB0O0w-uk
+[2]: /blog/articals/tune-heater
+[3]: https://hest.com/products/dually-extend
+[4]: https://hest.com/products/foamy
+[5]: https://merrittsupply.com/wp-content/uploads/2017/05/FRP-Honeycomb-TDS.pdf?srsltid=AfmBOopX1vFFzVEkNeA_A-dJcpsNzvkXsbNlbQ7a3B7GgWRglsu6Imd6
+[6]: /blog/articals/tune-heated-blanket
+[60]: https://www.amazon.com/Homemate-Electric-Heated-Blanket-King/dp/B0D66TNSP3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.waqzPEzZEkepNwdY-eD1ycPhg2nYrNsFRy-XgDNTjLN6U0jsrU9YK7jC98_2jSA2BUgjUl1mvwDXpp2quAQYjzYFD1z9OL6Xc5DgA1WjamnUnPKSbP7-hmcAilWiu62k4d5_fFFjxtIQ1NN7hYlhLPVrDxBwyi4QJpKAM0hfywhUbUCWoJkv5Bj-p0YPz2-nNjTsxBWP_VdPmvCLFtbTPy7H3wz6Je-j2MhimMXEsxKSh6rFKulYdZH9aqAr0yGlBngrMOXvz16khJus0ElxNVBVay6EfHXu1W63Rd1afKA.7jAot0lU-d48m2LB2W3jucof8Eelvzhw6VWyAzrYN1M&dib_tag=se&hvadid=631491241413&hvdev=c&hvlocphy=9023836&hvnetw=g&hvqmt=e&hvrand=6063659926571370957&hvtargid=kwd-391822225100&hydadcr=7439_13294077&keywords=amazon%2Bking%2Bsize%2Belectric%2Bblanket&qid=1734116477&sr=8-10&th=1

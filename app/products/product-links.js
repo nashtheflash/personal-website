@@ -21,3 +21,6 @@ export const ButtonRubber = ({title='Button Rubber'} = {}) => <a href='https://a
 
 //Ryobi Link
 export const RyobiLinkBoxMedium = ({title='Ryobi Link Medium Box'} = {}) => <a href='https://amzn.to/3VqOJKO' target="_blank">{title}</a>
+
+//Tune M1
+export const FriggaTempLoger = ({title='Frigga Temperature Logger'} = {}) => <a href='https://www.amazon.com/dp/B0CV5DJ4G1?ref=ppx_yo2ov_dt_b_fed_asin_title' target="_blank">{title}</a>
