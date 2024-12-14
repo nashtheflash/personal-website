@@ -23,4 +23,8 @@ export const ButtonRubber = ({title='Button Rubber'} = {}) => <a href='https://a
 export const RyobiLinkBoxMedium = ({title='Ryobi Link Medium Box'} = {}) => <a href='https://amzn.to/3VqOJKO' target="_blank">{title}</a>
 
 //Tune M1
-export const FriggaTempLoger = ({title='Frigga Temperature Logger'} = {}) => <a href='https://www.amazon.com/dp/B0CV5DJ4G1?ref=ppx_yo2ov_dt_b_fed_asin_title' target="_blank">{title}</a>
+export const FriggaTempLoger = ({title='Frigga Temperature Logger'} = {}) => <a href='https://amzn.to/3ZRcoaG' target="_blank">{title}</a>
+export const ReflectiveInsulation = ({title='Reflective Foil Insulation'} = {}) => <a href='https://amzn.to/3BrUbHu' target="_blank">{title}</a>
+export const OutdoorCarpet = ({title='Outdoor Carpet'} = {}) => <a href='https://amzn.to/3VE1ov1' target="_blank">{title}</a>
+export const HiStrengthAdhesive = ({title='Hi Strength Spray Adhesive'} = {}) => <a href='https://amzn.to/3VByfQY' target="_blank">{title}</a>
+export const VelcroRoll = ({title='Velcro Roll'} = {}) => <a href='https://amzn.to/4iDggDB' target="_blank">{title}</a>

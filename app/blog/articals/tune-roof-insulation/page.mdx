@@ -1,0 +1,100 @@
+export const metadata = {
+    title: "Tune M1 Roof Insulation Install",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"How to install roof insulation on a Tune M1 camper & what advantages does it provide in cold weather? All of the questions are answered in this blog post.",
+    keywords: ['Tune M1', 'Roof', 'Insulation', 'Install'],
+    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: false,
+};
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+    OutdoorCarpet,
+    HiStrengthAdhesive,
+    FoamInsulation,
+    VelcroRoll,
+} from '@/app/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
+
+<ImageFeature
+    title='Tune M1 Roof Install'
+    image={featureImage}
+/>
+
+<BlogStatsSection>
+    <Stat title={'Cost'} stat={'value'} icon={faReact}/>
+    <Stat title={'Total Time'} stat={'value'} icon={faReact}/>
+    <Stat title={'Worth it?'} stat={'value'} icon={faReact}/>
+</BlogStatsSection>
+
+<MdxLayout>
+
+# Inspiration
+This post was heavily inspired by [Noah Noah's Post][1] on the Tune Owners group on Facebook.
+
+# Materials
+* One Roll Reflective Insulation(48 in. x 25 ft) - [HomeDepot][2] / <ReflectiveInsulation title={'Amazon'}/>
+* Outdoor Carpet(6’ wide, 20’ long) -  [HomeDepot][3] / <OutdoorCarpet title={'Amazon'}/>
+* 5 cans Hi-Strength 90 Spray Adhesive - [HomeDepot][4] / <HiStrengthAdhesive title={'Amazon'}/>
+* 3 Sheets Foam Insulation - [HomeDepot][5]
+* One Roll Velcro - [HomeDepot][6] / <VelcroRoll title={'Amazon'}/>
+
+# Tools
+* Framing Square or Straight Edge
+* Hot Knife or Knife
+
+# Build
+### Measure & Cut Foam
+### Install Reflective Insulation
+### Install Carpet
+### Install Velcro
+### Install Panels
+* Measure and cut foam boards. Trace carpet and reflectix to match.
+* Test fit
+* Spray adhesive everything together – carpet, foam board, reflectix, and carpet
+* Test fit
+* Adhesive Velcro to the ceiling, attach ceiling panels
+
+# Testing
+The panels only add minimal performance increases over the stock roof in cold weather conditions. You can read more here:
+[Tune Cold Wether Performance][7]
+
+
+</MdxLayout>
+
+[1]: https://www.facebook.com/groups/258913089967507/posts/372997191892429/
+[2]: https://www.homedepot.com/p/Everbilt-48-in-x-25-ft-Double-Reflective-Insulation-Radiant-Barrier-48x25RI/315103268
+[3]: https://www.homedepot.com/p/TrafficMaster-Elevations-Sky-Gray-12-ft-15-oz-SD-Polyester-Texture-Full-Roll-Carpet-sq-ft-Roll-7PD5N660144H/203240740
+[4]: https://www.homedepot.com/p/3M-14-6-oz-Hi-Strength-90-Spray-Adhesive-90-DSC/316351910?fbclid=IwZXh0bgNhZW0CMTAAAR0tFSUgp5yFIGV5QdxeWZq8XUHw0VXQHh0p1aiD2nx2qxr4GsVCy-JLU6I_aem_s3ELGqMXsHnUcn-efM2Ddw
+[5]: https://www.homedepot.com/p/Owens-Corning-FOAMULAR-NGX-Insulating-Sheathing-0-5-in-x-4-ft-x-8-ft-SE-R-3-XPS-Rigid-Foam-Board-Insulation-13NGX/315193939?fbclid=IwZXh0bgNhZW0CMTAAAR1-wPFC1kwyzaWO1kuwmUnlBDBrNWKtjoA9D7aZbJ5TYgCXYShbVDNBIZM_aem_QDFS8LJjVR50sR3JR008Dg
+[6]: https://www.homedepot.com/p/VELCRO-10-ft-x-1-in-Ultra-Mate-Tape-91100/202261943 
+[7]: /blog/articals/tune-cold-weather-performance
