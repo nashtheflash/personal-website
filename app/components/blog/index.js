@@ -2,6 +2,7 @@ export { MdxLayout } from "./mdx-layout";
 export { MdxPageWidth } from "./mdx-layout";
 export { MdxLayoutFullWidth } from "./mdx-layout";
 export { MdxLayoutParentWidth } from "./mdx-layout";
+export { MdxTableWraper } from "./mdx-layout";
 export { MdxImage } from "./images/MdxImage";
 
 //Layouts

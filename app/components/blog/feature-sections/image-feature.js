@@ -2,19 +2,17 @@ import Image from 'next/image';
 
 export function ImageFeature({title, image, alt}) {
     return(
-        <div className="bg-neutral-800 w-full h-[calc(100%-63px)]">
-            <div className='flex items-center justify-center'>
+        <div className="flex flex-col bg-neutral-800 w-full h-[calc(100vh-63px)]">
+            <div className='relative flex items-center justify-center w-full h-full'>
                 <Image
                     src={image}
                     alt={alt ? alt : "Artical Featured Image"}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100vw', height: 'calc(100vh - 63px - 2.5rem - .75rem - .75rem - .75rem)', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                    style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                    fill={true}
                 />
             </div>
-            <div className='bg-neutral-800 w-full'>
-                <div className='prose p-3 text-xl '>
+            <div className='bg-neutral-800 w-full h-fit'>
+                <div className='prose p-3 text-xs sm:text-xl '>
                     <h1 className='uppercase'>{title}</h1>
                 </div>
             </div>
