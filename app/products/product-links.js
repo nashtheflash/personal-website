@@ -6,6 +6,11 @@ export const DrillBits = ({title='Drill Bits'} = {}) => <a href='https://amzn.to
 export const Drill = ({title='Drill'} = {}) => <a href='https://amzn.to/4bKPfuh' target="_blank">{title}</a>
 export const BoltCutters = ({title='Bolt Cutters'} = {}) => <a href='https://amzn.to/3RhwVAK' target="_blank">{title}</a>
 export const AngleGrinder = ({title='Angle Ginder'} = {}) => <a href='https://amzn.to/3KvSMR1' target="_blank">{title}</a>
+export const HotKnife = ({title='Hot Knife'} = {}) => <a href='https://amzn.to/3P0gBCL' target="_blank">{title}</a>
+export const DryWallTSquare = ({title='Drywall T Square'} = {}) => <a href='https://amzn.to/4flrY2T' target="_blank">{title}</a>
+export const SpeedSquare = ({title='Speed Square'} = {}) => <a href='https://amzn.to/3BHFNuD' target="_blank">{title}</a>
+export const ElectricMultiTool = ({title='Electric Multi-Tool'} = {}) => <a href='https://amzn.to/3ZWlKlr' target="_blank">{title}</a>
+export const Scissors = ({title='Scissors'} = {}) => <a href='https://amzn.to/4iE9c9U' target="_blank">{title}</a>
 
 //ACTIONPACKER
 export const ActionPacker8 = ({title='ActionPaker'} = {}) => <a href='https://amzn.to/3VxhExW' target="_blank">{title}</a>

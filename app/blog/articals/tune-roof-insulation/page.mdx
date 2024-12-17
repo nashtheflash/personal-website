@@ -7,7 +7,7 @@ export const metadata = {
     description:"How to install roof insulation on a Tune M1 camper & what advantages does it provide in cold weather? All of the questions are answered in this blog post.",
     keywords: ['Tune M1', 'Roof', 'Insulation', 'Install'],
     tags: ['test', 'test', 'test', 'test', 'test', 'test'],
-    isActive: false,
+    isActive: true,
 };
 
 import { 
@@ -36,6 +36,11 @@ import {
     HiStrengthAdhesive,
     FoamInsulation,
     VelcroRoll,
+    HotKnife,
+    DryWallTSquare,
+    SpeedSquare,
+    ElectricMultiTool,
+    Scissors,
 } from '@/app/products/product-links'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -44,7 +49,8 @@ import {
     faShopify,
 } from '@fortawesome/free-brands-svg-icons';
 
-import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
+import featureImage from "@/public/blog/tune-roof-insulation-install/feature-image.JPEG";
+import carpet from "@/public/blog/tune-roof-insulation-install/carpet.gif";
 
 <ImageFeature
     title='Tune M1 Roof Install'
@@ -63,46 +69,56 @@ import featureImage from "@/public/costa-rica/german-bakery/welcome.JPEG";
 # Inspiration
 This post was heavily inspired by [Noah Noah's Post][1] on the Tune Owners group on Facebook.
 
-I was very skeptical that these panels were going to make the camper hold heat any better. I was willing to spend the money in hopes this would help reflect heat in the summer & make the camper darker. All 3 panels together weight 20LBS and are not noticeable when manipulating the roof.
+I was very skeptical that these panels were going to make the camper hold heat any better. I was willing to spend the money in hopes this would help reflect heat in the summer & make the camper darker. All 3 panels together weight 5LBS and are not noticeable when manipulating the roof.
 
 # Materials
 You will see that I did not include the Reflective Insulation that Noah had on his build. I did this because I choose to use foam panels that already had a reflective backing. I was hopping this would make the build a bit cheaper with little to no performance loss.
 
 <MdxTableWraper>
-| Quantity | Item                  | Description        | Cost   | HomeDepot      | Menards       | Amazon                                   |
-| :------: | :-------------------: | :----------------: | :----: | :------------: | :-----------: | :--------------------------------------: |
-| ~~1 Roll~~| ~~Reflective Insulation~~ | ~~(48 in. x 25 ft)~~   | ~~$5~~     |  ~~[Shop Now][2]~~ | ~~[Shop Now][2]~~ | ~~<ReflectiveInsulation title={'Shop Now'}/>~~ | 
-| 1 Roll   | Outdoor Carpet        | 8' X 12'           | $5     |  [Shop Now][3] | [Shop Now][2] | <OutdoorCarpet title={'Shop Now'}/>        | 
-| 5 Cans   | Spay Adhesive         | Hi-Strenght 90     | $5     |  [Shop Now][4] | [Shop Now][2] | <HiStrengthAdhesive title={'Shop Now'}/>   | 
-| 3 Sheets | Foam Insulation       | 4' x 8'            | $5     |  [Shop Now][5] | [Shop Now][2] |                                          | 
-| 36 Feet  | Velcro                | High Strength      | $5     |  [Shop Now][6] | [Shop Now][2] | <VelcroRoll title={'Shop Now'}/>           | 
+    | Quantity  | Item                      | Description          | Cost              | HomeDepot          | Menards           | Amazon                                         |
+    | :-------: | :-------------------:     | :------------------: | :---------------: | :----------------: | :---------------: | :--------------------------------------------: |
+    | ~~1 Roll~~| ~~Reflective Insulation~~ | ~~(48 in. x 25 ft)~~ | ~~$59.97 (Each)~~ |  ~~[Shop Now][2]~~ | ~~[Shop Now][2]~~ | ~~<ReflectiveInsulation title={'Shop Now'}/>~~ | 
+    | 1 Roll    | Outdoor Carpet            | 8' X 12'             | $55.869 (Total)   |  [Shop Now][3]     | [Shop Now][2]     | <OutdoorCarpet title={'Shop Now'}/>            | 
+    | 3 Cans    | Spay Adhesive             | Hi-Strenght 90       | $15.66 (Each)     |  [Shop Now][4]     | [Shop Now][2]     | <HiStrengthAdhesive title={'Shop Now'}/>       | 
+    | 3 Sheets  | Foam Insulation           | 4' x 8'              | $20.86 (Each)     |  [Shop Now][5]     | [Shop Now][2]     |                                                | 
+    | 30 Feet   | Velcro                    | High Strength        | $21.97 (Each)     |  [Shop Now][6]     | [Shop Now][2]     | <VelcroRoll title={'Shop Now'}/>               | 
 </MdxTableWraper>
 
 # Tools
 Only minimal tools are needed for this build:
-* Framing Square / dray wall hanger / Straight Edge
-* Hot Knife / Knife / Trim Tool
+<MdxTableWraper>
+    | Tool         | Notes                                                          | In Store             | Amazon                                   |
+    | :-------:    | :-------------------------------------------------------------:|:-------------------: | :--------------------------------------: |
+    | Large Square | Any type of large straigh edge will work                       | [HomeDepot][8]       |  <DryWallTSquare title={'Shop Now'}/>    | 
+    | Speed Square | Small square for making notches                                | [HomeDepot][9]       |  <SpeedSquare title={'Shop Now'}/>       | 
+    | Hot Kinfe    | Makes cutting way faster and cleaner                           | [Harbor Freight][10] |  <HotKnife title={'Shop Now'}/>          | 
+    | Multi-Tool   | A good option if you alreay have one. The hot knife is better! | [HomeDepot][11]      |  <ElectricMultiTool title={'Shop Now'}/> | 
+    | Sissors      | Sharp ones!                                                    | [HomeDepot][12]      |  <Scissors title={'Shop Now'}/>          | 
+</MdxTableWraper>
+
+Borrow as much as you can! This is a quick project and probably not worth buying any tools unless you have another project in mind. The Hot Knife was defiantly the best way to get a straight cut on the foam. If I was only going to by one tool, it would be that one!
 
 # Build
 ### Measure & Cut Foam
-The alcoves in the Tune M1 Celling measure approximately X x X. You can see more exact measurements below that included the fan section.
+The front and back alcoves in the Tune M1 Celling measure approximately 70 1/4" x 35 3/4" and the middle alcove is 70 1/4" x 36 3/5". I made some extra cuts to alleviate some of the pressure on the locking mechanism and to make room for the roof port wiring. You can see more exact measurements below that included the fan section.
 (ADD PIC w/ Procreate)
 You will needs one 4x8 Sheet of plastic for each indent. If you have a longer truck this may very!
 
 At this point I cut and test fitted all of the panels. I tried both a hot knife and a rotorry tool and bother worked well to make the cuts. A box cutter would take longer but work just the same!
 ### Install Reflective Insulation
+Originally done in Noah's post but I opted to save some time and money and not do this step. I bought foam panels with a reflective backing in hopes it would keep some of the heat out!
+(add pics)
+
 ### Install Carpet
 When buying the carpet, make sure that it does not have a backing material. This will make the panels way heavier and the adhesive wont work at well!
-(Add Pic of carpet)
+<CenteredImage image={carpet} altText={'Tune M1 Insulation Carpet'} title={'No Backing'} width={'500'} height={'500'} />
 
-I unrolled the carpet, laid the pru cut foam panels down supported by blocks, then sprayed the panel and slowly let it rest on the carpet. The video below shows this process.
-(ADD GIF)
+Unroll the carpet and stick the panels to it!
 
-Once everything was bonded together, I cut the carpet to fit!
-(show Picture)
+Once everything was bonded together, I cut the carpet to fit! I found that laying everything on the foam offcuts and using scissors worked the best!
 
 ### Install Velcro
-Install both sides of the Velcro on the backs of the panels. I did 3 strips per panel. With the Velcro stuck together, peel the adhesive backing off of the top side of the exposed Velcro. That will stick the Velcro on the perfict place durring the first install!
+Install both sides of the Velcro on the backs of the panels. I did 3 strips per panel. With the Velcro stuck together, peel the adhesive backing off of the top side of the exposed Velcro. That will stick the Velcro on the perfect place during the first install!
 (add pics)
 
 ### Install Panels
@@ -114,6 +130,7 @@ The panels only add minimal performance increases over the stock roof in cold we
 [Tune Cold Wether Performance][7]
 The camper was noticeably darker after installing the panels. A plus if that's what you into!
 
+The only other thing to note is that there was an adhesive smell for a few days coming from the panels. I would recommend letting them air out before spending the weekend in the camper!
 
 </MdxLayout>
 
@@ -124,3 +141,8 @@ The camper was noticeably darker after installing the panels. A plus if that's w
 [5]: https://www.homedepot.com/p/Owens-Corning-FOAMULAR-NGX-Insulating-Sheathing-0-5-in-x-4-ft-x-8-ft-SE-R-3-XPS-Rigid-Foam-Board-Insulation-13NGX/315193939?fbclid=IwZXh0bgNhZW0CMTAAAR1-wPFC1kwyzaWO1kuwmUnlBDBrNWKtjoA9D7aZbJ5TYgCXYShbVDNBIZM_aem_QDFS8LJjVR50sR3JR008Dg
 [6]: https://www.homedepot.com/p/VELCRO-10-ft-x-1-in-Ultra-Mate-Tape-91100/202261943 
 [7]: /blog/articals/tune-cold-weather-performance
+[8]: https://www.homedepot.com/p/Empire-48-in-Drywall-T-Square-410-48/202035306
+[9]: https://www.homedepot.com/p/Empire-7-in-Laser-Etched-Aluminum-Rafter-Square-e2994/205317688
+[10]: https://www.harborfreight.com/130-watt-hot-knife-60313.html
+[11]: https://www.homedepot.com/p/RYOBI-ONE-18V-Cordless-Oscillating-Multi-Tool-Tool-Only-PCL430B/317987594
+[12]: https://www.homedepot.com/p/Crescent-Wiss-10-in-Titanium-Coated-Offset-Tradesman-Scissors-CW10T/313485237
