@@ -10,7 +10,7 @@ export async function Footer({ phone, website, address, googleMapsLink, galleryU
 
 function Logo() {
     return(
-        <div className='flex flex-col justify-center items-center h-fit p-2'>
+        <div className='flex flex-col justify-center items-center h-fit p-2 overflow-hidden'>
             <Image
                 src="/logo.png"
                 width={250}
