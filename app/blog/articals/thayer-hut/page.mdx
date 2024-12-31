@@ -1,0 +1,65 @@
+export const metadata = {
+    title: "Thayer Hut",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/thayer-hut/feature-image.JPG',
+    description:"I went out to Thayer Hut in August of 2024. This was my second attempt at finding the hut. I had a great time in the beautiful Delta Range!",
+    keywords: ['Thayer Hut', 'Trip Report', 'Alaska', 'Delta Range', 'Hut'],
+    tags: ['Thayer Hut', 'Trip Report', 'Alaska', 'Delta Range', 'Hut'],
+    isActive: true,
+};
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+import featureImage from "@/public/blog/thayer-hut/feature-image.JPG";
+import fourCorners from "@/public/mtn-bike-kc/cedar-niles/4-corrners.JPEG";
+
+<ImageFeature
+    title='Thayer Hut'
+    image={featureImage}
+/>
+
+<BlogStatsSection>
+    <Stat title={'TITLE'} stat={'value'} icon={faReact}/>
+</BlogStatsSection>
+
+
+<MdxLayout>
+My first attemt to get out to Thayer was unsuccessful and I ended up pitching my tent out on the glacier.
+
+# This is the template
+[Kansas River Hazard Information][1]
+
+<CenteredImage image={fourCorners} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+
+</MdxLayout>
+
+[1]: /blog/articals/artical-template
