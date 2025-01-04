@@ -12,7 +12,7 @@ function Logo() {
     return(
         <div className='flex flex-col justify-center items-center h-fit p-2 overflow-hidden'>
             <Image
-                src="/logo.png"
+                src={"/nashbrowns-logo.png"}
                 width={250}
                 height={250}
                 className='animate-spin-smooth'

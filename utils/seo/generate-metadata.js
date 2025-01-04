@@ -30,7 +30,7 @@
 
 
 export function generateMetadata({
-    title= "Nash's Blog",
+    title= "NashBrowns Blog",
     description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting',
     keywords=['Nash Bostwick', 'blog', 'Alaska']
 }={}) {
@@ -42,7 +42,7 @@ export function generateMetadata({
 
         //Defaults
         generator: 'Next.js',
-        applicationName: 'Nash Bostwicks Blog and Showcase',
+        applicationName: 'NashBrowns Blog and Showcase',
         referrer: 'origin-when-cross-origin',
         authors: [{ name: 'Nash Bostwick' }],
         creator: 'Nash Bostwick',

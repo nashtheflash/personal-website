@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const menuItems = [
     {name: 'Blog', href: '/blog'},
     {name: 'Projects', href: '/projects'},
@@ -22,7 +24,13 @@ export function NavBar() {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl" href='/' >Wired Woodsman</a>
+                <a className="" href='/' >
+                    <Image
+                        src={"/nashbrowns-logo-white.png"}
+                        width={248}
+                        height={48}
+                    />
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

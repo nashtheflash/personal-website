@@ -6,7 +6,7 @@ import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
 import "./globals.css";
 
 export const metadata = {
-    title: "Wired Woodsman",
+    title: "NashBrowns",
     description: "A Blog about travel, tools, Alaska, the outdoors, and tech",
 };
 

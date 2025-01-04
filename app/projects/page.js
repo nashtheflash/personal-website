@@ -30,7 +30,7 @@ function Project() {
         <div className="bg-black w-11/12 h-fit">
             <div className="flex justify-between items-center">
                 <div className="prose grow-0 w-1/2">
-                    <h1 className="text-5xl">WiredWoodsman</h1>
+                    <h1 className="text-5xl">NashBrowns</h1>
                     <p>My personal website that I use as a creative outlet and to publish art! Everything that you see on the blog was written or created by me. That includes all of the writing, art, even the website was written by me using some of my favrit techmologies!</p>
                     <a className="text-xs" href="/blog/articals/wiredwoodsman">See Blog Post</a>
                 </div>
