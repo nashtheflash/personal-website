@@ -33,3 +33,4 @@ export const ReflectiveInsulation = ({title='Reflective Foil Insulation'} = {}) 
 export const OutdoorCarpet = ({title='Outdoor Carpet'} = {}) => <a href='https://amzn.to/3VE1ov1' target="_blank">{title}</a>
 export const HiStrengthAdhesive = ({title='Hi Strength Spray Adhesive'} = {}) => <a href='https://amzn.to/3VByfQY' target="_blank">{title}</a>
 export const VelcroRoll = ({title='Velcro Roll'} = {}) => <a href='https://amzn.to/4iDggDB' target="_blank">{title}</a>
+export const FriggaLogger = ({title='Frigga Tempreture Logger'} = {}) => <a href='https://amzn.to/3PCN6r8' target="_blank">{title}</a>
