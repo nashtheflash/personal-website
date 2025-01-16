@@ -27,6 +27,7 @@ export function NavBar() {
                 <a className="" href='/' >
                     <Image
                         src={"/nashbrowns-logo-white.png"}
+                        alt='Nash Borowns Logo Long'
                         width={248}
                         height={48}
                     />
