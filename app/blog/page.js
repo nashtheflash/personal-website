@@ -1,3 +1,9 @@
+export default function BlogHome() {
+
+    return(
+        <h1>BLOG</h1>
+    )
+}
 // import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
 // import { MdxLayout, BlogCard } from "../components/blog"
 //
