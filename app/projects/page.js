@@ -43,14 +43,6 @@ function Project() {
                     />
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
-                <h1 className="text-2xl">Tech Stack</h1>
-                <div className="flex gap-2">
-                    <React/>
-                    <Shopify/>
-                    <Nextjs/>
-                </div>
-            </div>
         </div>
     )
 }
