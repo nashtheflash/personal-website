@@ -14,7 +14,6 @@ import {
     MdxLayout,
     TLDR,
     ImageFeature,
-    RustChapter2,
 } from '@/app/components/blog'
 
 import featureImage from "@/public/blog/nash-browns/thumbnail.png";
@@ -56,16 +55,6 @@ For example, it was very important to me to be able to go to a directory, create
 The tech stack for this site is pretty much just Nextjs, React, and MDX. I use a few libraries but try to keep it to a minimum. 
 ### Database
 There is currently no backed(there are Nextjs server functions and API routes) or database. It is 100% static. There are some files that contain data that might look awfully similar to a noSQL database but that is just complexity. I want to model the data very quickly and at the end of the day it is static. At some point if the need arises I am open to adding a database.
-### Cool Stuff
-I lied above, there is more at play at certain parts of the application. For instance, take a look at the below simple guessing game:
-<div className='col-span-3 row-span-2 bg-base-100 rounded-md'>
-    <RustChapter2/>
-</div>
-Super simple? It could be, but this small exersice might look familar to you. This is part of 'the book' of Rust. In fact it is actually Rust code that is being ran on the server. This is what I love about this tech stack, you can simply write simple blog posts that contain words of pictures or embed games that use rust for all of the logic. This ability really sets this website apart!
-
-You may have caught me dancing around how this works. It uses React code for the UI and utilizes and API route, that runs rust code, to get the numbers and check the guesses. You can read more about the project here:
-* [Rust Chapter 2][6]
-* [All Rust Projects][7]
 
 ## What Text Editor Do I Use To Write
 Neovim & Tmux are the only useful tools, other than pen & paper, for writing down ideas, or really anything for that matter. Neovim frees the user from any fees, accounts, or other monetary commitments. It frees the mind from all of the bugs that are associated with other programs. Lastly, Neovim frees the user from looking at their desk. There is no need to engage your brain to look for the mouse. You simply type. Isn't that all writing should be?
@@ -79,8 +68,6 @@ Microsoft is one of the worst companies in the world. Windows is the worst opera
 [3]: /blog/articals/easy-mdx-linking
 [4]: /blog/articals/mdx-typography-setup
 [5]: /blog/articals/mdx-stat-section-methodology
-[6]: /blog/articals/rust-chapter-2
-[7]: /blog/articals/rust-all-projects
 
 
 
