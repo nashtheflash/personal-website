@@ -4,6 +4,7 @@ export { MdxLayoutFullWidth } from "./mdx-layout";
 export { MdxLayoutParentWidth } from "./mdx-layout";
 export { MdxTableWraper } from "./mdx-layout";
 export { MdxImage } from "./images/MdxImage";
+export { WritingWraper } from "./writing-wraper";
 
 //Layouts
 export { TwoColumn } from './layout/two-column'

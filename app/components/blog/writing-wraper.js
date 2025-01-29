@@ -1,17 +1,14 @@
+
 import Image from 'next/image';
 
-import test5 from "@/public/testing-5.JPEG";
-import main from "@/public/main.JPEG";
-import left from "@/public/left.JPEG";
-import right from "@/public/right.JPEG";
 
-export default function Testing() {
+export function WritingWraper({children, header, left, right, footer}) {
 
     return(
         <div className="flex flex-col justify-start items-center w-full">
 
             <Image
-                src={main}
+                src={header}
                 alt={'Logo'}
                 width={1500}
                 height={400}
@@ -26,7 +23,7 @@ export default function Testing() {
                         height={400}
                     />
                 </div>
-                <p className="grow">This is some text for testing that I want to see if I can position in the corrent place. This is just more text to see how the sit looks at it. I think that this will actually work. Maybe</p>
+                <p className="">{children}</p>
                 <div className="justify-self-end w-fit">
                     <Image
                         src={right}
@@ -37,7 +34,7 @@ export default function Testing() {
                 </div>
             </div>
             <Image
-                src={test5}
+                src={footer}
                 alt={'Logo'}
                 width={1500}
                 height={400}
