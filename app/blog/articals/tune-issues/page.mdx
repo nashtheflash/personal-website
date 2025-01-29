@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "All Tune M1 Issues",
     published: "2024-12-30",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['Tune', 'M1', 'Issues', 'Problems', 'Fixes', 'Hacks'],
     isActive: false,
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import { 
     MdxLayout,

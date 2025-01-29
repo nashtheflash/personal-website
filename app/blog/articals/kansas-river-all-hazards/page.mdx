@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Kansas River Hazards",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['Kansas River', 'Kaw River', 'kayaking', 'Hazards', 'Low Head Dams', 'Sand Dredges', 'Fallen Rail Road Bridges'],
     isActive: false,
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import { 
     CookBookDivider,

@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Exporting Metadata from MDX Files",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['MDX', 'Metadata', 'Export', 'MDX Blog Metadata', 'Metadata Export'],
     isActive: true,
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import { 
     MdxLayout,

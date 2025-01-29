@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Kansas River Trip Report",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
     isActive: true,
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import featureImage from "@/public/blog/kansas-river-trip-report-10-27-24/feature-image.JPEG";
 import parkingEntrance from "@/public/blog/kansas-river-trip-report-10-27-24/parking-entrance.JPEG";

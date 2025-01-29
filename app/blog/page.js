@@ -1,5 +1,12 @@
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
 import { MdxLayout, BlogCard } from "../components/blog"
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+    title:"Blog",
+    description:"All Blog Articals",
+    keywords: ['Projects', 'Art', 'Outdoor', 'Travel', 'Blog', 'Alaska', 'Nash Bostwick']
+});
 
 export default function BlogHome() {
 

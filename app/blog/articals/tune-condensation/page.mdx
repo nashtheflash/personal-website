@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Tune M1 Condensation",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['Tune M1', 'condensation', 'camping'],
     isActive: false,
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { MdxLayout,} from '@/app/components/blog'

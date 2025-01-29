@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Adonit Pen Alternate Charging",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tags: ['Adonit', 'Pen', 'Alternate Charging', 'Lost Adonit Pen Charger'],
     isActive: false
 };
+
+export const metadata = generateMetadata({...postMetadata});
 
 import featureImage from "@/public/blog/adonit-pen-alternate-charging/feature-image.JPEG";
 import sherpaCharger from "@/public/blog/adonit-pen-alternate-charging/sherpa-charger.JPEG";

@@ -1,4 +1,6 @@
-export const metadata = {
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
     title: "Tune M1 Cold Weather Preformance",
     published: "2024-12-01",
     updated: "2024-12-01",
@@ -9,6 +11,8 @@ export const metadata = {
     tage: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
     isActive: true,
 }; 
+
+export const metadata = generateMetadata({...postMetadata});
 
 import { 
     MdxLayout,

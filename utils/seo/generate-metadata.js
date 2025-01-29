@@ -30,10 +30,11 @@
 
 
 export function generateMetadata({
-    title= "NashBrowns Blog",
+    title= "Nash Browns",
     description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting',
-    keywords=['Nash Bostwick', 'blog', 'Alaska'],
-    image='/logo.png'
+    keywords=['Nash Bostwick', 'blog', 'Nash Browns'],
+    thumbnail='/logo.png',
+    publishedTime='2023-01-01T00:00:00.000Z',
 }={}) {
 
     const meta = {    
@@ -41,8 +42,21 @@ export function generateMetadata({
         description,
         keywords,
         openGraph: {
-            images: image,
+            title: title,
+            description: description,
+            type: 'article',
+            publishedTime: publishedTime,
+            authors: ['Nash'],
+            siteName: 'Nash Browns',
+            images: [
+                {
+                    url: thumbnail, // Must be an absolute URL
+                    // width: 800,
+                    // height: 600,
+                },
+            ]
         },
+
 
         //Defaults
         generator: 'Next.js',
