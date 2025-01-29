@@ -32,13 +32,17 @@
 export function generateMetadata({
     title= "NashBrowns Blog",
     description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting',
-    keywords=['Nash Bostwick', 'blog', 'Alaska']
+    keywords=['Nash Bostwick', 'blog', 'Alaska'],
+    image='/logo.png'
 }={}) {
 
     const meta = {    
         title,
         description,
         keywords,
+        openGraph: {
+            images: image,
+        },
 
         //Defaults
         generator: 'Next.js',
@@ -52,7 +56,7 @@ export function generateMetadata({
             address: false,
             telephone: false,
         },
-         robots: {
+        robots: {
             index: true,
             follow: true,
             nocache: true,
