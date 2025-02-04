@@ -1,0 +1,93 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Starlink Install",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/tune-starlink-install/thumbnail.JPEG',
+    description:"description",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import featureImage from "@/public/blog/tune-starlink-install/thumbnail.JPEG";
+import supplies from "@/public/blog/tune-starlink-install/thumbnail.JPEG";
+import mountGrinder from "@/public/blog/tune-starlink-install/mount-grinder.JPEG";
+import mount from "@/public/blog/tune-starlink-install/mount.JPEG";
+import grinder from "@/public/blog/tune-starlink-install/grinder.JPEG";
+import mountHoles from "@/public/blog/tune-starlink-install/mount-holes.JPEG";
+import stockImage from "@/public/blog/tune-starlink-install/mount-stock-image.png";
+
+<ImageFeature
+    title='Tune M1 Starlink Install'
+    image={featureImage}
+/>
+
+
+<MdxLayout>
+
+## The Mount 
+ 
+I went with the [TRIO Speedmount for Starlink Mini][1]. I choose the black option without any of the added mounting options. The mount did not come with the bolts that were needed to screw the mount together. It looks like the option: "Mini Speedmount Through Bolt Hardware Kit" might be the needed bolts. I am not paying $10 for something I can get at Home Depot for less than $2.
+
+<CenteredImage image={stockImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'500'} height={'500'} />
+
+The price seems a little high for a piece of plastic, but I would say I am happy with the mount. It is very minimalistic and sturdy. It is also easy to shape using and angle grinder.
+
+## Supplies
+
+* 2x 8mm-1.25 X 20mm Bolts
+* Tune t-track nuts
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'500'} height={'500'} />
+
+
+## Location
+I decided to mount the starlink on the corner of the panel closes to the tailgate on the drivers side. This location seemed the best because:
+
+* The fan was wired on that side
+* The corner would suport the pannel on 2 sides insead of one
+
+After mounting, I found that the Starlink Mini makes a high pitch humm. I would try to keep it as far away from the bed as possible!
+
+
+## Install
+I found that I had to round off one of the corners of the mount. This was to allow the mount to fit around a bracket and mount flush on 2 sides. If you have a fan, make sure to leave room for the wiring!
+
+I used a cats paw sanding disk on an angle grinder. It was perfect for forming the plastic. After a few test fits I was able to get it fitted up.
+<CenteredImage image={mountGrinder} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+<TwoCenteredImages image={[mount, grinder]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'h-2/3'} height={'w-2/3'} />
+
+I ended up drilling 2 holes, on one each side of the mount, for the bolts to mount to the track. I also went ahead an did a test hole but this is not required.
+<CenteredImage image={mountHoles} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'500'} height={'500'} />
+
+
+That's it. There wasn't any secrets of magic to this one! I made a video of the install as well. Ya, I know my videos suck. I'm just practicing bro.
+
+</MdxLayout>
+
+[1]: https://mobilemusthave.com/products/trio-speedmount-for-starlink-mini
