@@ -37,6 +37,7 @@ export { PhotoCarousel } from "./images/photo-carousel/photo-carousel"
 //Videos
 export { BasicVideo } from './videos/basic-video';
 export { Gif } from './videos/gif';
+export { YoutubeVideo } from './videos/youtube-video';
 
 //Landing Pages
 export { SiteLanding } from "./landing-pages/site-landing";

@@ -6,29 +6,22 @@ export const postMetadata = {
     updated: "2024-12-01",
     author: 'Nash Bostwick',
     thumbnail: '/blog/tune-starlink-install/thumbnail.JPEG',
-    description:"description",
-    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
-    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
+    description: "description",
+    keywords: ['Tune', 'Tune M1', 'Starlink', 'Install', 'Easy', 'Fast'],
+    tags: ['Tune', 'Tune M1', 'Starlink', 'Install', 'Easy', 'Fast'],
     isActive: true,
 };
 
-export const metadata = generateMetadata({...postMetadata});
+export const metadata = generateMetadata({ ...postMetadata });
 
 import { 
     MdxLayout,
     OneColumn,
-    TwoColumn,
     CenteredImage, 
     TwoCenteredImages, 
-    Footer, 
-    TravelFeature, 
-    Gif, 
-    BlogMapWrapper,
-    TLDR,
     ImageFeature,
-    StravaEmbed,
-    BlackTieTitle,
-    PhotoCarousel,
+    YoutubeVideo,
+    TLDR,
 } from '@/app/components/blog'
 
 import { 
@@ -43,68 +36,58 @@ import mount from "@/public/blog/tune-starlink-install/mount.JPEG";
 import grinder from "@/public/blog/tune-starlink-install/grinder.JPEG";
 import mountHoles from "@/public/blog/tune-starlink-install/mount-holes.JPEG";
 import stockImage from "@/public/blog/tune-starlink-install/mount-stock-image.png";
-import hardwear from "@/public/blog/tune-starlink-install/hardwear.JPEG";
+import hardware from "@/public/blog/tune-starlink-install/hardwear.JPEG";
 
 <ImageFeature
     title='Tune M1 Starlink Install'
     image={featureImage}
 />
 
-
 <MdxLayout>
 
+<TLDR
+text="Expensive "
+/>
+
 ## The Mount 
- 
-I went with the <StarlinkMount/>. I choose the black option without any of the added mounting options. The mount did not come with the bolts that were needed to screw the mount together. It looks like the option: "Mini Speedmount Through Bolt Hardware Kit" might be the needed bolts. I am not paying $10 for something I can get at Home Depot for less than $2.
+
+I went with the <StarlinkMount/>. I chose the black option without any of the added mounting options. The mount did not come with the bolts needed to screw it together. It looks like the option **"Mini Speedmount Through Bolt Hardware Kit"** might include the necessary bolts, but I’m not paying $10 for something I can get at Home Depot for less than $2. The mount is a little on the expensive side, $150, and to not get the two bolts to screw it together is a little bit of a slap in the face. Overall, I’m happy with the mount. It’s very minimalistic and sturdy. It’s also easy to shape using an angle grinder.
 
 <CenteredImage image={stockImage} altText={'TRIO Speedmount'} title={'TRIO Speedmount'} width={'500'} height={'500'} />
-
-The price seems a little high for a piece of plastic, but I would say I am happy with the mount. It is very minimalistic and sturdy. It is also easy to shape using and angle grinder.
 
 ## Supplies
 
 * 2x 8mm-1.25 X 20mm Bolts
-* Tune t-track nuts
-<CenteredImage image={hardwear} altText={'Hardware'} title={'Hardware'} width={'500'} height={'500'} />
+* Tune t-track nuts  
+<CenteredImage image={hardware} altText={'Hardware'} title={'Hardware'} width={'500'} height={'500'} />
 
+## Location  
+I decided to mount the Starlink on the corner of the panel closest to the tailgate on the driver’s side. This location seemed best because:
 
-## Location
-I decided to mount the Starlink on the corner of the panel closes to the tailgate on the drivers side. This location seemed the best because:
-
-* The fan was wired on that side
-* The corner would support the panel on 2 sides instead of one
+* The fan was wired on that side  
+* The corner would support the panel on two sides instead of one  
 
 <CenteredImage image={featureImage} altText={'TRIO Speedmount'} title={'TRIO Speedmount'} width={'1000'} height={'1000'} />
 
-After mounting, I found that the Starlink Mini makes a high pitch humm. I would try to keep it as far away from the bed as possible!
+After mounting, I found that the Starlink Mini makes a high-pitched hum. I’d recommend keeping it as far away from the bed as possible!
 
+## Install  
+I had to round off one of the mount’s corners to allow it to fit around a bracket and mount flush on two sides. If you have a fan, make sure to leave room for the wiring!
 
-## Install
-I found that I had to round off one of the corners of the mount. This was to allow the mount to fit around a bracket and mount flush on 2 sides. If you have a fan, make sure to leave room for the wiring!
-
-I used a cats paw sanding disk on an angle grinder. It was perfect for forming the plastic. After a few test fits I was able to get it fitted up.
+I used a **Tiger Paw sanding disk** on an angle grinder, which worked perfectly for shaping the plastic. After a few test fits, I was able to get everything lined up.  
 <CenteredImage image={mountGrinder} altText={'TRIO Speedmount and grinder'} width={'h-2/3'} height={'w-2/3'} />
 <TwoCenteredImages image={[mount, grinder]} altText={['Corner Carving', 'Tiger Paw Grinding Disk']} titles={['Mount Shaping', 'Tiger Paw']} width={'h-2/3'} height={'w-2/3'} />
 
-I ended up drilling 2 holes, on one each side of the mount, for the bolts to mount to the track. I also went ahead an did a test hole but this is not required.
+I ended up drilling two holes, one on each side of the mount, for the bolts to mount to the track. I also went ahead and did a test hole, but this is not required.  
 <CenteredImage image={mountHoles} altText={'Hole Locations'} title={'Hole Locations'} width={'500'} height={'500'} />
 
-
-That's it. There wasn't any secrets of magic to this one! I made a video of the install as well. Ya, I know my videos suck. I'm just practicing:)
+That's it! There weren’t any secrets or magic to this one. I also made a video of the install—yeah, I know my videos suck, but I’m just practicing. 🙂
 
 <OneColumn>
-<iframe 
-width="1280" 
-height="720" 
-src="https://www.youtube.com/embed/T84u08lGEDk?si=1plKHiXuvLu5gtVo&autoplay=1&mute=1&loop=1&&playlist=T84u08lGEDk&origin=https://nashbrowns.com" 
-title="YouTube video player" 
-frameBorder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-referrerpolicy="strict-origin-when-cross-origin" 
-allowFullScreen
-/>
+<YoutubeVideo videoId='T84u08lGEDk'/>
 </OneColumn>
 
 </MdxLayout>
 
 [1]: https://mobilemusthave.com/products/trio-speedmount-for-starlink-mini
+
