@@ -16,7 +16,8 @@ function Logo() {
                 alt='NashBrowns Logo'
                 width={250}
                 height={250}
-                className='animate-spin-smooth'
+                className='animate-spin-smooth select-none unselectable'
+                draggable={false}
             />
         </div>
     )
