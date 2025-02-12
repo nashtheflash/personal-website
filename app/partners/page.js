@@ -1,5 +1,5 @@
-import Login from '../components/blog/login/login';
-import ContactUs from '../components/blog/forms/contact-us';
+import { Login } from '../components/blog/login/login';
+import { ContactUs } from '../components/blog/forms/contact-us';
 
 export default function ProjectsHome() {
 
