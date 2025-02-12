@@ -62,6 +62,14 @@ export { BlackTieTitle } from "./section-headers/black-tie";
 //Charts
 export { LineGraph } from "./charts/line-chart";
 
+//Forms
+export { ContactUs } from "./forms/contact-us";
+
+//Login
+export { Login } from "./login/login";
+
+//Art
+
 //KC-Mtn-Biking
 export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'
 export { MtnBikeGettingStarted } from './kc-mnt-biking/mtn-bike-getting-started'

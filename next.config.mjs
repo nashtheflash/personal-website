@@ -4,16 +4,19 @@ import remarkGfm from 'remark-gfm';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    images: {
+    domains: ['images.unsplash.com'],
+  }
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
+    // Add markdown plugins here, as desired
     options: {
         remarkPlugins: [remarkGfm],
         rehypePlugins: [],
     },
 })
- 
+
 // Merge MDX config with Next.js config
 export default withMDX(nextConfig)
 
