@@ -5,7 +5,7 @@ import {
     faKey,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-export default function Login() {
+export function Login() {
     return (
         <div className="mx-auto w-full md:p-10 py-5 md:py-0">
             <h1 className="text-center text-2xl sm:text-3xl font-semibold text-[#4A07DA]">

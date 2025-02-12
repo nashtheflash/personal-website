@@ -1,21 +1,53 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fetchUnsplashImageById, parseUnsplashText } from '@/app/server-actions/unsplash';
+import { generateMetadata as gmd } from '@/utils';
 
 import { 
     faBitcoin,
 } from '@fortawesome/free-brands-svg-icons';
 
+export async function generateMetadata({ params }) {
+    let metadata;
+    const slug = (await params).slug
+
+
+    //Fetch Image From Unsplash
+    const unsplashData = await fetchUnsplashImageById(slug);
+    const { urls, description: unsplashDescription, tags: unsplashTags, width, height } = unsplashData;
+    const { title, description } = await parseUnsplashText(unsplashDescription);
+    const tags = unsplashTags.map(tag => tag.title);
+
+
+        metadata = gmd({
+            title,
+            description,
+            thumbnail: urls.thumb,
+            localThumb: false,
+            keywords: [...tags]
+        });
+
+  return {
+    ...metadata
+  }
+}
+
 export default async function Page({ params }) {
     const slug = (await params).slug
+    
+    //Fetch Image From Unsplash
+    const unsplashData = await fetchUnsplashImageById(slug);
+    const { urls, description: unsplashDescription, width, height } = unsplashData;
+    const { title, description } = await parseUnsplashText(unsplashDescription);
 
     return (
         <>
             <div className="flex flex-wrap md items-center h-screen max-h-[calc(100vh-64px)]">
                 <div className="bg-white w-full md:w-1/2 h-screen max-h-[calc(100vh-64px)] flex flex-col">
                     <div className="mx-32">
-                        <Title title={slug}/>
+                        <Title title={title}/>
                         <Labels/>
-                        <Description/>
+                        <Description description={description} />
                         <ReadMore/>
                     </div>
                     <div className='flex justify-center gap-24 mt-auto w-full'>
@@ -23,7 +55,9 @@ export default async function Page({ params }) {
                         <Purchase/>
                     </div>
                 </div>
-                <Art/>
+                <div className="relative bg-red-600 w-full md:w-1/2 h-screen max-h-[calc(100vh-64px)]">
+                    <Art art={urls.raw}/>
+                </div>
             </div>
         </>
     )
@@ -31,9 +65,10 @@ export default async function Page({ params }) {
 
 export function Title({title}) {
     return(
-        <h1 className="text-6xl font-bold text-black mt-16">{title}</h1>
+        <h1 className="text-6xl font-bold text-black mt-16">{title || 'Untitled'}</h1>
     )
 }
+
 export function Labels({labels}) {
     //medium paint/photo/ect...
     return(
@@ -57,11 +92,7 @@ export function Labels({labels}) {
 export function Description({description}) {
     return(
         <div className="w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm">
-            Tokyo, Japan’s busy capital, mixes the ultramodern and the
-            traditional, from neon-lit skyscrapers to historic temples. The
-            opulent Meiji Shinto Shrine is known for its towering gate and
-            surrounding woods. The Imperial Palace sits amid large public
-            gardens
+            {description}
         </div>
     )
 }
@@ -113,28 +144,14 @@ export function Price({price}) {
 }
 
 export function Art({art}) {
-    const image =`https://images.unsplash.com/photo-1739104627818-d9159a7daa8d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`;
+    const image = art ? art : `https://images.unsplash.com/photo-1739289354200-f5db511bd08b?q=300`;
+
     return(
-        <div className="relative bg-red-600 w-full md:w-1/2 h-screen max-h-[calc(100vh-64px)]">
-                <Image
-                    src={image}
-                    alt={"Artical Featured Image"}
-                    style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
-                    fill={true}
-                />
-        </div>
+        <Image
+            src={image}
+            alt={"Artical Featured Image"}
+            style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+            fill={true}
+        />
     )
 }
-
-
-// export function Art({art}) {
-//     return(
-//         <div className="bg-red-600 w-full md:w-1/2 h-screen max-h-[calc(100vh-64px)]">
-//             <img
-//                 src={`https://images.unsplash.com/photo-1739104627818-d9159a7daa8d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-//                 className="h-screen max-h-[calc(100vh-64px)] w-full"
-//                 alt=""
-//             />
-//         </div>
-//     )
-// }

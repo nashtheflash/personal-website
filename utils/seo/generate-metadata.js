@@ -34,6 +34,7 @@ export function generateMetadata({
     description='This is a blog artical written by Nash Bostwick. It contains information on places that he has been, projects that he is working on, and other information that he finds intresting',
     keywords=['Nash Bostwick', 'blog', 'Nash Browns'],
     thumbnail='/logo.png',
+    localThumb=true,
     publishedTime='2023-01-01T00:00:00.000Z',
 }={}) {
 
@@ -50,7 +51,7 @@ export function generateMetadata({
             siteName: 'Nash Browns',
             images: [
                 {
-                    url: `https://www.nashbrowns.com${thumbnail}`, // Must be an absolute URL
+                    url: localThumb ? `https://www.nashbrowns.com${thumbnail}` : thumbnail, // Must be an absolute URL
                     // width: 800,
                     // height: 600,
                 },

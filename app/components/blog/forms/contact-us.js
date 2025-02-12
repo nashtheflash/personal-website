@@ -6,7 +6,7 @@ import {
     faEnvelope,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-export default function ContactUS() {
+export function ContactUs() {
 
     return (
         <div className="mx-auto w-full md:p-10 py-5 md:py-0">
