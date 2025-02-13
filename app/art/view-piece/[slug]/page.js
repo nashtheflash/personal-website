@@ -16,7 +16,6 @@ export async function generateMetadata({ params }) {
     //Fetch Image From Unsplash
     const unsplashData = await fetchUnsplashImageById(slug);
     const { urls, description: unsplashDescription, tags: unsplashTags, width, height } = unsplashData;
-    console.log(unsplashDescription);
     const { title, description } = await parseUnsplashText(unsplashDescription);
     const tags = unsplashTags.map(tag => tag.title);
 

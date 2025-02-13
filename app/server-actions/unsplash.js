@@ -3,7 +3,7 @@
 export async function fetchUnsplashImageById(imageId) {
     if (!imageId) return { error: "Image ID is required" };
 
-    const accessKey = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
+    const accessKey = process.env.UNSPLASH_ACCESS_KEY;
 
     try {
         const response = await fetch(
@@ -15,7 +15,6 @@ export async function fetchUnsplashImageById(imageId) {
         }
 
         const data = await response.json();
-        console.log(data);
         return data; // Return the full image object
     } catch (error) {
         return { error: error.message };
