@@ -69,6 +69,7 @@ export { ContactUs } from "./forms/contact-us";
 export { Login } from "./login/login";
 
 //Art
+export { UnsplashDownloader } from "./art/download-unsplash";
 
 //KC-Mtn-Biking
 export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'

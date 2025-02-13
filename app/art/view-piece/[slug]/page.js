@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchUnsplashImageById, parseUnsplashText } from '@/app/server-actions/unsplash';
 import { generateMetadata as gmd } from '@/utils';
+import { UnsplashDownloader } from '@/app/components/blog';
 
 import { 
     faBitcoin,
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }) {
     //Fetch Image From Unsplash
     const unsplashData = await fetchUnsplashImageById(slug);
     const { urls, description: unsplashDescription, tags: unsplashTags, width, height } = unsplashData;
+    console.log(unsplashDescription);
     const { title, description } = await parseUnsplashText(unsplashDescription);
     const tags = unsplashTags.map(tag => tag.title);
 
@@ -37,8 +39,12 @@ export default async function Page({ params }) {
     
     //Fetch Image From Unsplash
     const unsplashData = await fetchUnsplashImageById(slug);
-    const { urls, description: unsplashDescription, width, height } = unsplashData;
+    const { id, urls, description: unsplashDescription, width, height, links } = unsplashData;
     const { title, description } = await parseUnsplashText(unsplashDescription);
+
+
+    //Fetch Image From DB
+    const readMoreLink = false;
 
     return (
         <>
@@ -48,10 +54,11 @@ export default async function Page({ params }) {
                         <Title title={title}/>
                         <Labels/>
                         <Description description={description} />
-                        <ReadMore/>
+                        <PhotographerAttribute/>
+                        {readMoreLink ? <ReadMore/> : ""}
                     </div>
                     <div className='flex justify-center gap-24 mt-auto w-full'>
-                        <Download/>
+                        <UnsplashDownloader imageId={id} title={title || 'Untitled'}/>
                         <Purchase/>
                     </div>
                 </div>
@@ -97,19 +104,18 @@ export function Description({description}) {
     )
 }
 
+export function PhotographerAttribute({}) {
+    return(
+        <p className='text-sm text-gray-300 mt-2'>
+            Photo by <a className='underline' href='https://unsplash.com/@nashbrowns'>Nash Browns</a> on <a className='underline'  href='https://unsplash.com/?utm_source=your_app_name&utm_medium=referral'>Unsplash</a>
+        </p>
+    )
+}
+
 export function ReadMore({readMore}) {
     return(
         <button className="uppercase mt-5 text-sm font-semibold text-gray-200 hover:underline">
             Read More
-        </button>
-    )
-}
-
-
-export function Download({download}) {
-    return(
-        <button className="uppercase mt-5 text-lg font-semibold text-gray-200 hover:underline">
-            Download
         </button>
     )
 }

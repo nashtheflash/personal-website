@@ -23,21 +23,14 @@ export async function fetchUnsplashImageById(imageId) {
 }
 
 export async function parseUnsplashText(text) {
-    const titleMatch = text.match(/^"(.+?)"/);
-    const title = titleMatch ? titleMatch[1] : "";
-    
-    let description = text;
-    if (titleMatch) {
-        description = description.replace(titleMatch[0], "").replace(/^\s*[–—]\s*/, "").trim();
+    if(!text){
+        return {
+            title: 'Untitled',
+            description: 'A picture is worth a thousnd words. This picture does not need a description!',
+        };
     }
     
-    return {
-        title,
-        description
-    };
-}
 
-export async function parseUnsplashTags(text) {
     const titleMatch = text.match(/^"(.+?)"/);
     const title = titleMatch ? titleMatch[1] : "";
     
