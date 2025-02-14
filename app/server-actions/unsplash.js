@@ -95,7 +95,7 @@ export async function getMyUnsplashCollections() {
       headers: {
         Authorization: `Client-ID ${accessKey}`,
       },
-      cache: "no-store",
+      // cache: "no-store",
     });
 
     if (!response.ok) {
@@ -122,7 +122,7 @@ export async function getPhotosInCollection(collectionId) {
       headers: {
         Authorization: `Client-ID ${accessKey}`,
       },
-      cache: "no-store",
+      // cache: "no-store",
     });
 
     if (!response.ok) {
