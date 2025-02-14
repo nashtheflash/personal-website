@@ -7,9 +7,9 @@ export function ArtNav({ collections }) {
     return(
         <ul className="menu bg-base-200 rounded-box w-56">
             { 
-                    collections && collections.map((collection) => {
+                    collections && collections.map((collection, i) => {
                         return(
-                            <li>
+                            <li key={i}>
                                 <a onClick={() => router.push(`/art?collection=${collection.id}`)}>
                                     {collection.title}
                                 </a>
