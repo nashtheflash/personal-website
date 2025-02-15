@@ -13,7 +13,10 @@ export function ContactUs() {
             <h1 className="text-center text-2xl sm:text-3xl font-semibold text-[#4A07DA]">
                 Not A Partner?
             </h1>
-            <div className="w-full mt-5 sm:mt-8">
+            <h4 className="text-center text-sm sm:text-xs font-semibold text-[#4A07DA]">
+                Please fill out the contact form below to get in touch!
+            </h4>
+            <div className="w-full mt-2 sm:mt-5">
                 <div className="flex flex-col gap-5 w-full">
                     <div className="flex flex-col md:flex-row  gap-3 w-full">
                         <label className="input input-bordered flex items-center gap-2 w-full md:w-1/2">

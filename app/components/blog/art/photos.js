@@ -4,7 +4,7 @@
 import { MdxLayout, ArtNav, ArtCollection } from "@/app/components/blog"
 import { Suspense } from "react";
 
-export function Art() {
+export function Photos() {
     // const allArt = readFiles('public/art', 1);
 
     return(

@@ -72,7 +72,7 @@ export { Login } from "./login/login";
 export { UnsplashDownloader } from "./art/download-unsplash";
 export { ArtNav } from "./art/art-nav";
 export { ArtCollection } from "./art/art-collection";
-export { Art } from "./art/art";
+export { Photos } from "./art/photos";
 
 //KC-Mtn-Biking
 export { KCMtnBikingMain } from './kc-mnt-biking/kc-mtn-biking-main'
