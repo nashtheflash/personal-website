@@ -26,7 +26,7 @@ export function ArtCollection({allArt}) {
                 photos && photos.map((photo, i) => {
                     return (
                         <div key={i} className={`relative h-fit w-fit`}>
-                            <a href={`http://localhost:3000/art/view-piece/${photo.id}`}>
+                            <a href={`/art/view-piece/${photo.id}`}>
                                 <ArtCard 
                                     image={photo.urls.raw}
                                     name='tbd'
