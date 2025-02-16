@@ -29,6 +29,10 @@ import {
     noInsulationData,
     timeToTempRoofInsulationPackData,
     roofInsulationPackData,
+    noRoofInsulationInsulationPackDataTimeToTemp,
+    noRoofInsulationInsulationPackData,
+    roofInsulationNoInsulationPackDataTimeToTemp,
+    roofInsulationNoInsulationPackData,
 } from "./graph-data"
 
 import featureImage from "@/public/blog/tune-cold-weather-performance/feature-image.JPEG";
@@ -93,20 +97,53 @@ Difference between ambient and camper temp was kept at 40 degrees which was impr
 
 You can download the data here -> <a href={'/blog/tune-cold-weather-performance/No Insulation Data.xlsx'} download>Download</a>
 
-### Tune with Insulation Kit
-### Tune with Roof Insulation
-### Tune with Door Insulation
-### Tune with BedRug
-### Tune with Insulation Kit & Roof Insulation
+### Tune with Insulation Kit WORKING
+<TwoColumn>
+The first part of the test is heating the camper from ambient temperature to 65 degrees. This is with no insulation, the windows closed, and using the boost setting on the heater. You can see the setup on the right.
+<CenteredImage image={insideCamper} altText={'Inside Camper Windows Closed'} title={'3 Corners'} width={700} height={700} />
+</TwoColumn>
+
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={noRoofInsulationInsulationPackDataTimeToTemp} />
+
+It took about 90 minutes to get the camper up to temperature. The temperature sensor for the heater thermostat is very close to the heater. I also have the king size bed extension that overhangs the heater and forms a cubby. I thought these factors would lead there to be a large temperature difference between what the heater was seeing vs what the temperature sensor in the sleeping section of the camper was seeing. This was clearly not the case! The difference in temperature was only about 2.5-3 degrees.
+
+<LineGraph title={'Overnight Heater Performance'} data={noRoofInsulationInsulationPackData} />
+
+Difference between ambient and camper temp was kept at 40 degrees which was impressive, but you can also see that the heater ran almost continuously. During the 9 hour test, the heater was only off for 2.5 hours. Kicking on about 10 times.
+
+You can download the data here -> <a href={'/blog/tune-cold-weather-performance/No Insulation Data.xlsx'} download>Download</a>
+
+### Tune with Roof Insulation WORKING
+
+<TwoColumn>
+ This test is wit the roof insulation only with the windows closed. The heater is turned on Boost to get the camper to temp, then auto for the rest of the night. You can see the setup on the right.
+<CenteredImage image={insideCamper} altText={'Inside Camper Windows Closed'} title={'3 Corners'} width={700} height={700} />
+</TwoColumn>
+
+The first part of the test is heating the camper from ambient temperature to 65 degrees.
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={roofInsulationNoInsulationPackDataTimeToTemp} />
+
+It took about 90 minutes to get the camper up to temperature. The temperature sensor for the heater thermostat is very close to the heater. I also have the king size bed extension that overhangs the heater and forms a cubby. I thought these factors would lead there to be a large temperature difference between what the heater was seeing vs what the temperature sensor in the sleeping section of the camper was seeing. This was clearly not the case! The difference in temperature was only about 2.5-3 degrees.
+
+<LineGraph title={'Overnight Heater Performance'} data={roofInsulationNoInsulationPackData} />
+
+Difference between ambient and camper temp was kept at 40 degrees which was impressive, but you can also see that the heater ran almost continuously. During the 9 hour test, the heater was only off for 2.5 hours. Kicking on about 10 times.
+
+You can download the data here -> <a href={'/blog/tune-cold-weather-performance/No Insulation Data.xlsx'} download>Download</a>
+
+### Tune with Insulation Kit & Roof Insulation WOKRING
 <TwoColumn>
 This is with the Tune insulation pack and roof insulation, the windows closed, and using the boost setting on the heater. You can see the setup on the right.
 <CenteredImage image={insideCamper} altText={'Inside Camper Windows Closed'} title={'3 Corners'} width={700} height={700} />
 </TwoColumn>
 
+This is by far the best setup. It is not only warm, but it also makes the camper feel like a den. It is dark, quiet, and there are not drafts that are able to get it. Even when it is cold, the night setting on the heater is warm enough to keep the camper warm. Having the heater in night mode is a huge deal because it is very quite! I wake up every time I hear the heater kick on when it is on auto mode!
+
 <LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempRoofInsulationPackData} />
 <LineGraph title={'Overnight Heater Performance'} data={roofInsulationPackData} />
 
 You can download the data here -> <a href={'/blog/tune-cold-weather-performance/Roof & Insulation Pack Data .xlsx'} download>Download</a>
+
 ### Tune with Insulation Kit & Roof Insulation & Door Insulation
 ### Tune with Insulation Kit & Roof Insulation & Door Insulation & BedRug
 ### Tune Bed Insulation / Sleeping Warmer
