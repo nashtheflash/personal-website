@@ -16,20 +16,28 @@ export const metadata = generateMetadata({...postMetadata});
 
 import { 
     MdxLayout,
+    ImageFeature,
+    CenteredImage,
     TwoCenteredImages, 
 } from '@/app/components/blog'
 
-import gap from "@/public/blog/tune-insulation/gap.JPEG";
-import noGap from "@/public/blog/tune-insulation/no-gap.JPEG";
+import featureImage from "@/public/blog/tune-insulation-pack-install/feature-image.JPEG";
+import overlap from "@/public/blog/tune-insulation-pack-install/overlap.JPEG";
+import gap from "@/public/blog/tune-insulation-pack-install/gap.JPEG";
+import noGap from "@/public/blog/tune-insulation-pack-install/no-gap.JPEG";
 
+<ImageFeature
+    title='Tune M1 Insulation Pack Install'
+    image={featureImage}
+/>
 
 <MdxLayout>
 
 ## How to install tune insulation pack
-The official instructions ->
-I was able to follow the PDF instructions in the Aspen parking lot and everything went great first shot!
+The official instructions -> <a href={'/blog/tune-insulation/tune-insulation-pack-install.pdf'} download>Download</a>
 
-For some more detail, there are two basic steps:
+I was able to follow the PDF instructions in the Aspen resort parking lot and everything went great first shot! For some more detail, there are two basic steps:
+
 ### Install The Front & Back Sections
 After raising the top of the camper, you will want to unhook the elastic webbing that is located behind the lifting arms.
 
@@ -45,8 +53,9 @@ Remember to re-hook the elastic webbing behind the lifting bars.
 The side sections are much easier because you don't have the lifting bar in the way. The process is the same except you will want to open both windows slightly and line the center of the insulation in between the windows. See video below!
 
 
-## Insulation Pack Trimming
+### Insulation Pack Trimming
 I used the insulation pack for about a month before committing to trimming it back. Why even trim then? The trim is needed because it blocks the side windows if you don't!
+<CenteredImage image={overlap} altText={'OZ Jump Line Jump'} title={'Dirt Jump'} width={'750'} height={'750'} />
 
 
 ## Roof Gap
