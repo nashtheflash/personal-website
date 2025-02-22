@@ -162,13 +162,6 @@ export const roofInsulationPackData = [
     {name: '07:35:00', Inside: 57.7, Outside: 25},
     {name: '07:45:00', Inside: 57.9, Outside: 24.8},
     {name: '07:55:00', Inside: 57.9, Outside: 25.6},
-    {name: '08:05:00', Inside: 58.1, Outside: 25.7},
-    {name: '08:15:00', Inside: 58.2, Outside: 25.9},
-    {name: '08:25:00', Inside: 58.2, Outside: 26.8},
-    {name: '08:35:00', Inside: 58.6, Outside: 27.4},
-    {name: '08:45:00', Inside: 60.2, Outside: 28.4},
-    {name: '08:55:00', Inside: 59.9, Outside: 29.7},
-    {name: '09:05:00', Inside: 63.6, Outside: 31.1},
 ];
 
 export const noRoofInsulationInsulationPackDataTimeToTemp = [
@@ -257,14 +250,6 @@ export const roofInsulationNoInsulationPackDataTimeToTemp = [
 ];
 
 export const roofInsulationNoInsulationPackData = [
-    {name: '08:40:00 PM', Inside: 39, Outside: 39.2},
-    {name: '08:50:00 PM', Inside: 37.2, Outside: 36.6},
-    {name: '09:00:00 PM', Inside: 35.9, Outside: 34.8},
-    {name: '09:10:00 PM', Inside: 35, Outside: 33.9},
-    {name: '09:20:00 PM', Inside: 34.5, Outside: 33.6},
-    {name: '09:30:00 PM', Inside: 34.1, Outside: 33.4},
-    {name: '09:40:00 PM', Inside: 33.6, Outside: 32.9},
-    {name: '09:50:00 PM', Inside: 33, Outside: 32.3},
     {name: '10:00:00 PM', Inside: 32.7, Outside: 32},
     {name: '10:10:00 PM', Inside: 33.6, Outside: 30.1},
     {name: '10:20:00 PM', Inside: 41.9, Outside: 29.5},
