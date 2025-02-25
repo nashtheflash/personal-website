@@ -33,6 +33,7 @@ export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
 export { ThreeCenteredImages } from "./images/three-centered-images"
 export { PhotoCarousel } from "./images/photo-carousel/photo-carousel"
+export { ThreeSixtyImage } from "./images/three-sixty-image"
 
 //Videos
 export { BasicVideo } from './videos/basic-video';
