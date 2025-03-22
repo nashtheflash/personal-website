@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { ProjectNav, Area, MtnBikeGettingStarted } from '@/app/components/blog';
+import { ProjectNav, Area, MtnBikeGettingStarted, Footer } from '@/app/components/blog';
 import { getAreaIndex } from '../../../projects/projects/kansas-city-mtn-biking/utils';
 
 //Data is stored localy
@@ -26,11 +26,14 @@ export function KCMtnBikingMain({urlParam}) {
     }, [currentAreaIndex])
 
     return(
+        <>
         <div className="flex w-full min-h-screen">
             <ProjectNav data={data} setCurrentArea={setCurrentArea} />
             {
                 currentData ? <Area data={currentData}/> : <MtnBikeGettingStarted/>
             }
         </div>
+        <Footer/>
+        </>
     )
 }

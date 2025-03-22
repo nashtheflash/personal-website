@@ -2,14 +2,47 @@
 export function MtnBikeGettingStarted() {
     return(
         <div className="w-full h-full min-h-screen bg-[#f2f1ed] text-black">
-            <h1>Just getting started</h1>
+            <HowToUse/>
+            <Beginner/>
+            <WhenToRide/>
+            <Wildlife/>
+            <TrailGrading/>
+            <Saftey/>
+            <BikeShops/>
+            <Bike/>
+            <Tools/>
+        </div>
+    )
+}
+
+function HowToUse() {
+    return(
+        <h1>How to Use this Book</h1>
+    )
+}
+
+function Beginner() {
+    return(
+        <>
             <h1>I am new to mountain biking where should I go?</h1>
             <ul>
                 <li>Lexington Lake</li>
                 <li>Hodge Park</li>
                 <li>Cedar Niles</li>
             </ul>
-            <h1>What time of year is good to ride?</h1>
+        </>
+    )
+}
+
+function WhenToRide() {
+    return(
+        <h1>What time of year is good to ride?</h1>
+    )
+}
+
+function Wildlife() {
+    return(
+        <>
             <h1>Wildlife</h1>
             <ul>
                 <li>Deer</li>
@@ -22,12 +55,36 @@ export function MtnBikeGettingStarted() {
                 <li>Oak Mites</li>
                 <li>Osage orange thornes</li>
             </ul>
-            <h1>Grading system</h1>
-            <h1>Parts of Town good bad?</h1>
-            <h1>Bike shops. Rental??</h1>
-            <h1>What bike shoule i have</h1>
-            <h1>What trail system should I start at??</h1>
-            <h1>Bike tools to keep on the bike and in the car</h1>
-        </div>
+        </>
+    )
+}
+
+function TrailGrading() {
+    return(
+        <h1>Grading system</h1>
+    )
+}
+
+function Saftey() {
+    return(
+        <h1>Parts of Town good bad?</h1>
+    )
+}
+
+function BikeShops() {
+    return(
+        <h1>Bike shops. Rental??</h1>
+    )
+}
+
+function Bike() {
+    return(
+        <h1>What bike shoule i have</h1>
+    )
+}
+
+function Tools() {
+    return(
+        <h1>Bike tools to keep on the bike and in the car</h1>
     )
 }
