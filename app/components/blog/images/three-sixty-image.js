@@ -5,14 +5,14 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { CSS3DRenderer, CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer";
 
-export function ThreeSixtyImage() {
+export function ThreeSixtyImage({image}) {
     const containerRef = useRef(null);
     const animationFrameId = useRef(null);
     const [activeAnnotation, setActiveAnnotation] = useState(null);
 
     const annotations = [
-        { id: "door", position: new THREE.Vector3(0, 0, -200), label: "Door", size: 1 },
-        { id: "stereo", position: new THREE.Vector3(100, 50, -150), label: "Stereo", size: 0.4 },
+        // { id: "door", position: new THREE.Vector3(0, 0, -200), label: "Door", size: 1 },
+        // { id: "stereo", position: new THREE.Vector3(100, 50, -150), label: "Stereo", size: 0.4 },
     ];
 
     // Function to handle annotation clicks
@@ -54,7 +54,7 @@ export function ThreeSixtyImage() {
         geometry.scale(-1, 1, 1);
         const textureLoader = new THREE.TextureLoader();
         textureLoader.load(
-            "/blog/360-image-implementation/test.JPEG",
+            image,
             (texture) => {
                 console.log("✅ Texture Loaded Successfully!");
 

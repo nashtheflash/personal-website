@@ -1,0 +1,99 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Rainbow Peak",
+    published: "2025-3-24",
+    updated: "2025-3-24",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/rainbow-peak/thumbnail.JPEG',
+    description:"Rainbow Peak is located in the Chugach National Forest. I climbed it in March or 2025 and here are my thoughts",
+    keywords: ['Rainbow Peak', 'Chugach', '120', 'Alaska', 'Climb'],
+    tags: ['Rainbow Peak', 'Chugach', '120', 'Alaska', 'Climb'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    YoutubeVideo,
+} from '@/app/components/blog'
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faRoute,
+    faArrowTrendUp,
+    faArrowTrendDown,
+    faMountain,
+    faTimer,
+    faCalendarDays,
+    faLocationDot,
+    faPickaxe,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+import featureImage from "@/public/blog/rainbow-peak/thumbnail.JPEG";
+import parkingLotPoint from "@/public/blog/rainbow-peak/parking-lot-point.JPEG";
+import rainbowPoint from "@/public/blog/rainbow-peak/rainbow-point.JPEG";
+import rainbowRidge2 from "@/public/blog/rainbow-peak/rainbow-ridge-2.JPEG";
+import watch from "@/public/blog/rainbow-peak/watch.JPEG";
+import map from "@/public/blog/rainbow-peak/map-3d.JPEG";
+
+<ImageFeature
+    title='Rainbow Peak Climb Report'
+    image={'/blog/rainbow-peak/summit-view.jpg'}
+    threeSixty={true}
+/>
+
+<BlogStatsSection>
+    <Stat title={'Distance'} stat={'5.73'} icon={faRoute}/>
+    <Stat title={'Summit Elevation'} stat={'3543'} icon={faMountain}/>
+    <Stat title={'Elevation Gain'} stat={'3539'} icon={faArrowTrendUp}/>
+    <Stat title={'Elevation Loss'} stat={'3562'} icon={faArrowTrendDown}/>
+    <Stat title={'Duration'} stat={'3:29:51'} icon={faTimer}/>
+    <Stat title={'Summit Date'} stat={'March 22, 2025'} icon={faCalendarDays}/>
+    <Stat title={'Difficulty'} stat={'Non-Technical'} icon={faPickaxe}/>
+    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/VxQ8Q9425sBESUa69" target="_blank">Rainbow Trailhead</a>} icon={faLocationDot}/>
+</BlogStatsSection>
+
+
+<MdxLayout>
+
+I was able to summit Rainbow Peak for the second time on March 22nd, 2025. I was a beautiful ~40 degree early spring day. This peak is usually one of the first snowless peaks of the year and 2025 was no different. I was able to get to the top with minimal potholing. The view from the top is awesome!
+
+<CenteredImage image={map} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+
+
+The way up is pretty easy. There might be some 3rd class terrain on the ridge leading up to the headwall. I wouldn't be worried about taking anyone that is in decent physical shape up this one. They might be a little squeamish in a few spots if they don't like heights. Also, keep in mind that this is a popular spot of tourists. Tourists love kicking rocks down on the people below. Be careful out there!
+
+<CenteredImage image={rainbowRidge2} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+
+There is one place where the trail y's off and you can go right. On the way up I went climbers right and it lead to excessive side hilling and steeper climbing. Stick to the ride, it goes!
+
+<TwoColumn>
+<StravaEmbed dataEmbedId='13959161837'/>
+<iframe src='https://connect.garmin.com/modern/activity/embed/18609142803' width='465' height={'100%'} title='Activity Embed' frameborder="0" />
+</TwoColumn>
+
+Here is a view from the peak and parking lot. It is always fun to be able to see the car from the start!
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+<TwoCenteredImages image={[rainbowPoint, parkingLotPoint]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'h-2/3'} height={'w-2/3'} />
+
+
+The headwall leading up to the peak offers some decent scree surfing on the way down!
+<OneColumn>
+    <YoutubeVideo videoId='GJUTCba4x8Y'/>
+</OneColumn>
+
+</MdxLayout>
+
+
