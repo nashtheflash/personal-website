@@ -5,6 +5,17 @@ import mapboxgl from '!mapbox-gl';
 import { BlackTieTitle } from '../blog/section-headers/black-tie';
 import {MapIcon, InformationCircleIcon} from '@heroicons/react/24/outline'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faArrowDownToLine,
+    faEye,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+import { 
+    faRhombus,
+    faCircle,
+} from '@awesome.me/kit-237330da78/icons/classic/solid'
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function classNames(...classes) {
@@ -174,11 +185,57 @@ export default function MapBox({ data, geoJsonTracks }) {
 
     return( 
         <div className="w-full h-full p-5">
-            <MapSelect trails={data.gpxTracks} setCurrentTracks={setCurrentTracks}/>
-            <div className='text-black'>
-                <div ref={mapContainer} className={`map-container h-[400px]`} />
+            <div className='flex h-[400px] text-black'>
+                <MapSideBar trails={data.gpxTracks} setCurrentTracks={setCurrentTracks}/>
+                <div ref={mapContainer} className={`map-container h-[400px] w-full`} />
             </div>
-            <MapAction tracks={currentTracks}/>
+            <div className='flex justify-center items-center mt-3 text-black'>
+                <button className="btn btn-wide">View Printable Map</button>
+            </div>
+        </div>
+    )
+}
+
+function MapSideBar({trails, setCurrentTracks}) {
+    return(
+        <div className="w-2/5 h-full bg-orange-500 overflow-y-auto overflow-x-hidden">
+            {
+               trails && trails.map(trail => {
+                    return (
+                        <TrailCard key={trail.name} trail={trail} setCurrentTracks={setCurrentTracks}/>
+                    )
+               })
+            }
+        </div>
+    )
+}
+
+function TrailCard({trail, setCurrentTracks}) {
+    return(
+        <div className="card card-bordered w-full bg-gray-800 card-xs shadow-sm rounded-none">
+            <div className="card-body p-6">
+                <h2 className="card-title">
+                    {trail.name}
+                    <div className="tooltip" data-tip="Trail Color">
+                        <FontAwesomeIcon icon={faCircle} className='h-5 w-5 text-red-900'/>
+                    </div>
+                    <div className="tooltip" data-tip="Difficulty">
+                        <FontAwesomeIcon icon={faRhombus} className='h-5 w-5 text-green-900'/>
+                    </div>
+                    <div className="tooltip" data-tip="Download">
+                        <FontAwesomeIcon icon={faArrowDownToLine} className='h-5 w-5'/>
+                    </div>
+                    <div className="tooltip" data-tip="View Only">
+                        <button 
+                            className=""
+                            onClick={() => handleTrackChange(setCurrentTracks, trail.name)}
+                        >
+                            <FontAwesomeIcon icon={faEye} className='h-5 w-5'/>
+                        </button>
+                    </div>
+                </h2>
+                <p className='text-left'>{trail.description}</p>
+            </div>
         </div>
     )
 }
@@ -191,7 +248,7 @@ function MapSelect({trails, setCurrentTracks}) {
             </div>
             <button className="" onClick={() => selectAllTracks(setCurrentTracks)}>All Trails</button>
             {
-               trails && trails.map(trail => {
+                trails && trails.map(trail => {
                     return (
                         <button 
                             key={trail.name}
@@ -203,17 +260,17 @@ function MapSelect({trails, setCurrentTracks}) {
                                 <div className={
                                     classNames(
                                         trail.difficulty == 'paved' ? "w-2 h-2 bg-gray-500 transform rotate-45" :
-                                        trail.difficulty == 'easy' ? "w-2 h-2 bg-green-500 transform rotate-45" :
-                                        trail.difficulty == 'medium' ? "w-2 h-2 bg-blue-500 transform rotate-45" :
-                                        trail.difficulty == 'hard' ? "w-2 h-2 bg-black transform rotate-45" :
-                                        trail.difficulty == 'expert' ? "w-2 h-2 bg-red-500 transform rotate-45" :
-                                        "w-2 h-2 bg-purple-500 transform rotate-45"
+                                            trail.difficulty == 'easy' ? "w-2 h-2 bg-green-500 transform rotate-45" :
+                                                trail.difficulty == 'medium' ? "w-2 h-2 bg-blue-500 transform rotate-45" :
+                                                    trail.difficulty == 'hard' ? "w-2 h-2 bg-black transform rotate-45" :
+                                                        trail.difficulty == 'expert' ? "w-2 h-2 bg-red-500 transform rotate-45" :
+                                                            "w-2 h-2 bg-purple-500 transform rotate-45"
                                     )}
                                 />
                             </div>
                         </button>
                     )
-               })
+                })
             }
         </div>
     )
@@ -237,21 +294,21 @@ const selectAllTracks = (setTrack) => {
     )
 }
 
-export function MapAction({tracks}) {
-    const selectedTrack = tracks.find((track) => track.active == 1);
-
-    return(
-        <div className="flex justify-center items-center gap-3 py-3 mb-3 text-black">
-            <a href={selectedTrack.url} download>
-                <button className="btn btn-neutral">
-                    <MapIcon className='w-5 h-5'/>
-                    Download GPX
-                </button>
-            </a>
-            <button className="btn btn-neutral">
-                <InformationCircleIcon className='w-5 h-5'/>
-                Help
-            </button>
-        </div>
-    )
-}
+// export function MapAction({tracks}) {
+//     const selectedTrack = tracks.find((track) => track.active == 1);
+//
+//     return(
+//         <div className="flex justify-center items-center gap-3 py-3 mb-3 text-black">
+//             <a href={selectedTrack.url} download>
+//                 <button className="btn btn-neutral">
+//                     <MapIcon className='w-5 h-5'/>
+//                     Download GPX
+//                 </button>
+//             </a>
+//             <button className="btn btn-neutral">
+//                 <InformationCircleIcon className='w-5 h-5'/>
+//                 Help
+//             </button>
+//         </div>
+//     )
+// }

@@ -24,6 +24,7 @@ export const cedarNilesData = {
             {name: 'Technical Loop', difficulty: 'medium', url: '/mtn-bike-kc/cedar-niles/gpx-files/technical-loop.gpx', active: 1},
             {name: 'Columbine Bypass', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/columbine-bypass.gpx', active: 1},
             {name: 'The Annex', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/the-annex.gpx', active: 1},
+            {name: 'Paved Path', difficulty: 'easy', url: '/mtn-bike-kc/cedar-niles/gpx-files/paved-path.gpx', active: 1},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/cedar-niles/billy-goat-south-trail-head.JPEG", title: 'Billy Goat Trail Marker', show: false},

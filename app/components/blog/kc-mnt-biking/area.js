@@ -32,9 +32,9 @@ export function Area({data}) {
             <HeaderSection name={name} featuredImage={featuredImage}/>
             <StatsSection stats={stats}/>
             <StorySection name={name}/>
-            <MtnBikePhotoGallery photos={photos}/>
             <MtnBikeMap data={data} />
-            <TrailDescription data={data}/>
+            <MtnBikePhotoGallery photos={photos}/>
+            {/* <TrailDescription data={data}/> */}
             <FAQSection accessInfo={accessInfo} faqHighlights={faqHighlights} faqFoodDrink={faqFoodDrink} />
         </div>
     )
