@@ -9,7 +9,7 @@ export function TwoCenteredImages({image, titles, subtitles, altText, width, hei
     const altTextTwo = altText[1];
     
     return (
-        <div className='flex flex-col sm:flex-row justify-center items-center gap-2 w-full h-full'>
+        <div className='flex flex-col sm:flex-row justify-center items-center gap-2 w-full h-fit'>
             <div className={`relative group h-fit`}>
                 <MdxImage src={imageOne} alt={altTextOne} height={height} width={width}/>
                     <div className='absolute left-1 bottom-1 w-fit h-fit px-4 py-0 text-white bg-[#bdd2c9] opacity-0 group-hover:opacity-100 transition-opacity ease-in-out delay-150 duration-300 [clip-path:polygon(0_0,100%_0%,95%_100%,0_100%)]'>
