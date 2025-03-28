@@ -50,7 +50,8 @@ export function LineGraph({ title, data }) {
     const lines = getLines(data);
 
     return (
-        <div className='w-[1000px] h-[500px]'>
+        <div className='w-full h-fit overflow-x-auto overflow-y-hidden'>
+        <div className='w-[1000px] h-[750px]'>
             <ResponsiveContainer width="100%" height="100%">
                     <text x={500 / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
                         <tspan fontSize="14">{title}</tspan>
@@ -78,6 +79,7 @@ export function LineGraph({ title, data }) {
                     }
                 </LineChart>
             </ResponsiveContainer>
+        </div>
         </div>
     );
 }
