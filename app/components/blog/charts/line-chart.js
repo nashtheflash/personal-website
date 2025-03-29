@@ -52,7 +52,7 @@ export function LineGraph({ title, data }) {
     return (
         <div className='w-full h-fit overflow-x-auto overflow-y-hidden'>
         <div className='w-[1000px] h-[750px]'>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="95%">
                     <text x={500 / 2} y={20} fill="black" textAnchor="middle" dominantBaseline="central">
                         <tspan fontSize="14">{title}</tspan>
                     </text>
