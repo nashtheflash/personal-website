@@ -141,7 +141,8 @@ export default function MapBox({ data, geoJsonTracks }) {
                         'line-cap': 'round'
                     },
                     paint: {
-                        'line-color':   track.difficulty == 'easy' ? '#22c55e' : 
+                        'line-color':   track.color ? track.color :
+                                        track.difficulty == 'easy' ? '#22c55e' : 
                                         track.difficulty == 'medium' ? '#3b82f6' : 
                                         track.difficulty == 'hard' ? '#000000' : 
                                         track.difficulty == 'expert' ? '#ef4444' : 
@@ -184,10 +185,10 @@ export default function MapBox({ data, geoJsonTracks }) {
     }, [currentTracks]);
 
     return( 
-        <div className="w-full h-full p-5">
-            <div className='flex h-[400px] text-black'>
+        <div className="w-full w-[calc(100vw-14rem)] p-5 py-12">
+            <div className='flex h-[600px] text-black'>
                 <MapSideBar trails={data.gpxTracks} setCurrentTracks={setCurrentTracks}/>
-                <div ref={mapContainer} className={`map-container h-[400px] w-full`} />
+                <div ref={mapContainer} className={`map-container h-full w-full`} />
             </div>
             <div className='flex justify-center items-center mt-3 text-black'>
                 <button className="btn btn-wide">View Printable Map</button>
@@ -198,7 +199,8 @@ export default function MapBox({ data, geoJsonTracks }) {
 
 function MapSideBar({trails, setCurrentTracks}) {
     return(
-        <div className="w-2/5 h-full bg-orange-500 overflow-y-auto overflow-x-hidden">
+        <div className="w-1/4 h-full bg-orange-500 overflow-y-auto overflow-x-hidden">
+            <ViewAll setCurrentTracks={setCurrentTracks}/>
             {
                trails && trails.map(trail => {
                     return (
@@ -210,6 +212,22 @@ function MapSideBar({trails, setCurrentTracks}) {
     )
 }
 
+function ViewAll({setCurrentTracks}) {
+    return(
+        <div className="card card-bordered w-full bg-gray-800 card-xs shadow-sm rounded-none">
+            <div className="flex justify-center items-center gap-2 h-10">
+                <button className="" onClick={() => selectAllTracks(setCurrentTracks)}>View All Trails</button>
+                <button 
+                    className=""
+                    onClick={() => selectAllTracks(setCurrentTracks)}
+                >
+                    <FontAwesomeIcon icon={faEye} className='h-5 w-5'/>
+                </button>
+            </div>
+        </div>
+    )
+}
+
 function TrailCard({trail, setCurrentTracks}) {
     return(
         <div className="card card-bordered w-full bg-gray-800 card-xs shadow-sm rounded-none">
@@ -217,11 +235,18 @@ function TrailCard({trail, setCurrentTracks}) {
                 <h2 className="card-title">
                     {trail.name}
                     <div className="tooltip" data-tip="Trail Color">
-                        <FontAwesomeIcon icon={faCircle} className='h-5 w-5 text-red-900'/>
+                        <FontAwesomeIcon icon={faCircle} className={`h-5 w-5 ${trail.textColor}`}/>
                     </div>
-                    <div className="tooltip" data-tip="Difficulty">
-                        <FontAwesomeIcon icon={faRhombus} className='h-5 w-5 text-green-900'/>
-                    </div>
+                    <FontAwesomeIcon icon={faRhombus} className={
+                        classNames(
+                            trail.difficulty == 'paved' ? "w-5 h-5 text-gray-600" :
+                                trail.difficulty == 'easy' ? "w-5 h-5 text-green-600" :
+                                    trail.difficulty == 'medium' ? "w-5 h-5 text-blue-600" :
+                                        trail.difficulty == 'hard' ? "w-5 h-5 text-black" :
+                                            trail.difficulty == 'expert' ? "w-5 h-5 text-red-600" :
+                                                "w-5 h-5 text-purple-500"
+                        )}
+                    />
                     <div className="tooltip" data-tip="Download">
                         <FontAwesomeIcon icon={faArrowDownToLine} className='h-5 w-5'/>
                     </div>
