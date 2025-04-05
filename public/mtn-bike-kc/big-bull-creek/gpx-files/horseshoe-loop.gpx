@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="https://gpx.studio" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+<gpx creator="https://gpx.studio" version="1.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
   <metadata>
     <name>horseshoe-Loop</name>
     <author>
@@ -10,253 +10,6 @@
   <trk>
     <name>horseshoe-Loop</name>
     <trkseg>
-      <trkpt lat="38.759348" lon="-94.992135">
-        <ele>315</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759369" lon="-94.992137">
-        <ele>314.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.75946" lon="-94.992179">
-        <ele>314.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759638" lon="-94.992281">
-        <ele>314.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759658" lon="-94.992322">
-        <ele>314.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759676" lon="-94.992417">
-        <ele>314.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759696" lon="-94.992522">
-        <ele>314.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759726" lon="-94.992555">
-        <ele>314.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759837" lon="-94.992567">
-        <ele>313.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760133" lon="-94.99265">
-        <ele>312.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760237" lon="-94.992855">
-        <ele>311</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760311" lon="-94.992972">
-        <ele>310</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760319" lon="-94.993003">
-        <ele>309.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.76032" lon="-94.993061">
-        <ele>309.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760284" lon="-94.993146">
-        <ele>309</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760289" lon="-94.993225">
-        <ele>308.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760359" lon="-94.993604">
-        <ele>307.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760377" lon="-94.993732">
-        <ele>307</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760371" lon="-94.993955">
-        <ele>306.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
       <trkpt lat="38.760353" lon="-94.994064">
         <ele>306.5</ele>
         <extensions>
@@ -712,15 +465,32 @@
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
+      <trkpt lat="38.758678" lon="-94.996597">
+        <ele>310</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
       <trkpt lat="38.758642" lon="-94.996661">
         <ele>310</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -731,9 +501,11 @@
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -744,9 +516,11 @@
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -757,9 +531,11 @@
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -770,9 +546,11 @@
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -783,23 +561,43 @@
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.758428" lon="-94.997072">
+      <trkpt lat="38.75842" lon="-94.997076">
         <ele>308.25</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.758419" lon="-94.997077">
+        <ele>308.25</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -811,9 +609,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -825,9 +625,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -839,9 +641,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -853,9 +657,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -867,9 +673,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -881,9 +689,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -895,9 +705,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -909,9 +721,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -923,9 +737,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -937,9 +753,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -951,9 +769,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -965,9 +785,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -979,9 +801,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -993,9 +817,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1007,9 +833,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1021,9 +849,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1035,9 +865,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1049,9 +881,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1063,12 +897,17 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
+      </trkpt>
+      <trkpt lat="38.75953" lon="-94.995681">
+        <ele>310</ele>
       </trkpt>
       <trkpt lat="38.75953" lon="-94.995681">
         <ele>310</ele>
@@ -1378,6 +1217,22 @@
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
+      <trkpt lat="38.760353" lon="-94.994064">
+        <ele>306.5</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
       <trkpt lat="38.760371" lon="-94.993955">
         <ele>306.75</ele>
         <extensions>
@@ -1385,9 +1240,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1399,9 +1256,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1413,9 +1272,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1427,9 +1288,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1441,135 +1304,187 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.76032" lon="-94.993061">
-        <ele>309.25</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760319" lon="-94.993003">
-        <ele>309.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.760311" lon="-94.992972">
+      <trkpt lat="38.760262" lon="-94.993048">
         <ele>310</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.760237" lon="-94.992855">
-        <ele>311</ele>
+      <trkpt lat="38.760262" lon="-94.993048">
+        <ele>309.5</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.760133" lon="-94.99265">
+      <trkpt lat="38.760249" lon="-94.992984">
+        <ele>310</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.760137" lon="-94.992818">
+        <ele>311.5</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.760086" lon="-94.99273">
+        <ele>312.25</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.760043" lon="-94.992687">
         <ele>312.5</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.759837" lon="-94.992567">
+      <trkpt lat="38.759904" lon="-94.992625">
+        <ele>313.25</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.759802" lon="-94.992603">
         <ele>313.75</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.759726" lon="-94.992555">
+      <trkpt lat="38.759695" lon="-94.992606">
+        <ele>314</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.759642" lon="-94.992578">
         <ele>314.25</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.759696" lon="-94.992522">
-        <ele>314.5</ele>
+      <trkpt lat="38.759627" lon="-94.992485">
+        <ele>314.75</ele>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.759676" lon="-94.992417">
-        <ele>314.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1581,9 +1496,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1595,9 +1512,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1609,9 +1528,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1623,9 +1544,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1637,9 +1560,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1651,9 +1576,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1665,9 +1592,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1679,9 +1608,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1693,9 +1624,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1707,9 +1640,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1721,9 +1656,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1735,9 +1672,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1749,9 +1688,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1763,9 +1704,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1777,9 +1720,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1791,9 +1736,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1805,9 +1752,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1819,23 +1768,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.758331" lon="-94.99217">
-        <ele>314.5</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1847,9 +1784,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1861,9 +1800,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1875,9 +1816,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1889,9 +1832,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1903,23 +1848,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.757935" lon="-94.992171">
-        <ele>315.75</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1931,9 +1864,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1945,9 +1880,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1959,9 +1896,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1973,9 +1912,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -1987,9 +1928,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2001,9 +1944,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2015,9 +1960,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2029,9 +1976,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2043,9 +1992,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2057,9 +2008,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2071,9 +2024,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2085,9 +2040,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2099,12 +2056,17 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
+      </trkpt>
+      <trkpt lat="38.756802" lon="-94.992989">
+        <ele>316</ele>
       </trkpt>
       <trkpt lat="38.756802" lon="-94.992989">
         <ele>316</ele>
@@ -2400,6 +2362,22 @@
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
+      <trkpt lat="38.756807" lon="-94.995624">
+        <ele>312.5</ele>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
       <trkpt lat="38.756788" lon="-94.995753">
         <ele>312.25</ele>
         <extensions>
@@ -2407,9 +2385,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2421,9 +2401,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2435,9 +2417,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2449,9 +2433,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2463,9 +2449,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2477,9 +2465,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2491,9 +2481,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2505,9 +2497,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2519,9 +2513,11 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
@@ -2533,28 +2529,17 @@
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>path</highway>
-              <surface>unpaved</surface>
-              <foot>yes</foot>
-              <bicycle>yes</bicycle>
+              <surface>ground</surface>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+              <mtb_scale>1</mtb_scale>
+              <smoothness>bad</smoothness>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="38.756823" lon="-94.996973">
+      <trkpt lat="38.756822" lon="-94.996968">
         <ele>312</ele>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <surface>paved</surface>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="38.756824" lon="-94.996974">
-        <ele>311.75</ele>
       </trkpt>
     </trkseg>
   </trk>

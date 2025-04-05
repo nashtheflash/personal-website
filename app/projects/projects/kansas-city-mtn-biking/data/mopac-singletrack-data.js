@@ -17,7 +17,7 @@ export const mopacSingletrackData = {
         mapStartingLon: -94.298588,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'KAM', difficulty: 'easy', textColor: 'text-orange-600', color: '#f54a00', url: '/mtn-bike-kc/mopac-singletrack/gpx-files/KAM.gpx', active: 1, oneWay: false, description: 'Fun trail with the most elevation +/- in the system.', features: '', mustRide: false, rating: 3},
+            {name: 'KAM', difficulty: 'easy', textColor: 'text-orange-600', color: '#f54a00', url: '/mtn-bike-kc/mopac-singletrack/gpx-files/KAM.gpx', active: 1, oneWay: false, description: 'Fun trail with the most elevation +/- in the system.', features: ['jump'], mustRide: false, rating: 3},
             {name: 'Sasquatch Crossing', difficulty: 'easy', textColor: 'text-blue-600', color: '#155dfc', url: '/mtn-bike-kc/mopac-singletrack/gpx-files/sasquatch-crossing.gpx', active: 1, oneWay: false, description: 'Mostly flat trail, few rocks and roots.', features: '', mustRide: false, rating: 3},
             {name: 'Blood, Sweat, and Ticks', difficulty: 'medium', textColor: 'text-red-600', color: '#e7000b', url: '/mtn-bike-kc/mopac-singletrack/gpx-files/blood-sweat-and-ticks.gpx', active: 1, oneWay: false, description: 'Awesome tech trail. Some of the moves are very fun!', features: '', mustRide: true, rating: 5},
             {name: 'Lake Shore Drive', difficulty: 'easy', textColor: 'text-green-600', color: '#00a63e', url: '/mtn-bike-kc/mopac-singletrack/gpx-files/lake-shore-drive.gpx', active: 1, oneWay: false, description: 'Easy riding, continues on the west side of the lake, which is not on the paper maps.', features: '', mustRide: true, rating: 5},
