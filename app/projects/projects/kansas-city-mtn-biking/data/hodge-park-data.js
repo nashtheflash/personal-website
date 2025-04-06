@@ -17,11 +17,11 @@ export const hodgeParkData = {
         mapStartingLon: -94.504779,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Twisted Branch', difficulty: 'easy', url: '/mtn-bike-kc/hodge-park/gpx-files/twisted-branch.gpx'},
-            {name: 'Farmtastic', difficulty: 'easy', url: '/mtn-bike-kc/hodge-park/gpx-files/farmtastic.gpx'},
-            {name: 'Field Loop', difficulty: 'easy', url: '/mtn-bike-kc/hodge-park/gpx-files/field-loop.gpx'},
-            {name: 'Bandwagon', difficulty: 'easy', url: '/mtn-bike-kc/hodge-park/gpx-files/bandwagon.gpx'},
-            {name: 'Buffalo Trace', difficulty: 'easy', url: '/mtn-bike-kc/hodge-park/gpx-files/buffalo-trace.gpx'},
+            {name: 'Twisted Branch', difficulty: 'easy', textColor: 'text-orange-400', color: '#ff8904', url: '/mtn-bike-kc/hodge-park/gpx-files/twisted-branch.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Farmtastic', difficulty: 'easy', textColor: 'text-yellow-400', color: '#fcc800', url: '/mtn-bike-kc/hodge-park/gpx-files/farmtastic.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Field Loop', difficulty: 'easy', textColor: 'text-green-400', color: '#05df72', url: '/mtn-bike-kc/hodge-park/gpx-files/field-loop.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Bandwagon', difficulty: 'easy', textColor: 'text-blue-400', color: '#51a2ff', url: '/mtn-bike-kc/hodge-park/gpx-files/bandwagon.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Buffalo Trace', difficulty: 'easy', textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/hodge-park/gpx-files/buffalo-trace.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/hodge-park/bike.JPEG", title: 'My Bike On The Trail', show: false},

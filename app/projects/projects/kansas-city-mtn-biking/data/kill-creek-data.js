@@ -17,10 +17,10 @@ export const killCreekData = {
         mapStartingLon: -94.976933,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Inner Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/inner-hank-loop.gpx'},
-            {name: 'Outer Hank Loop', difficulty: 'easy', url: '/mtn-bike-kc/kill-creek/gpx-files/outer-hank-loop.gpx'},
-            {name: 'Eddy Trail', difficulty: 'medium', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-loop.gpx'}, //has water crossing
-            {name: 'Paved Trail', difficulty: 'paved', url: '/mtn-bike-kc/kill-creek/gpx-files/paved.gpx'},
+            {name: 'Inner Hank Loop', difficulty: 'easy', textColor: 'text-yellow-400', color: '#fcc800', url: '/mtn-bike-kc/kill-creek/gpx-files/inner-hank-loop.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Outer Hank Loop', difficulty: 'easy', textColor: 'text-purple-400', color: '#c27aff', url: '/mtn-bike-kc/kill-creek/gpx-files/outer-hank-loop.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Eddy Trail', difficulty: 'medium', textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/kill-creek/gpx-files/eddy-loop.gpx',  oneWay: false, description: '', features: ['water'], mustRide: false, rating: 3}, //has water crossing
+            {name: 'Paved Trail', difficulty: 'paved', textColor: 'text-orange-400', color: '#99a1af', url: '/mtn-bike-kc/kill-creek/gpx-files/paved.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/kill-creek/park-sign.JPEG", title: 'Welcome To Kill Creek', show: false},

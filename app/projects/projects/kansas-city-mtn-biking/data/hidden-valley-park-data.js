@@ -17,9 +17,9 @@ export const hiddenValleyParkData = {
         mapStartingLon: -94.506039,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Cool Ranch', difficulty: 'easy', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/cool-ranch.gpx', active: 1, oneWay: false, description: 'Easy trail. There are a few jumps and some awesome burms.', features: 'jumps, burms', mustRide: true, rating: 4},
-            {name: 'Blue Cheese', difficulty: 'easy', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/blue-cheese.gpx', active: 1, oneWay: false, description: 'Fun, easy, fast ride through the trees.', features: '', mustRide: false, rating: 3},
-            {name: 'Zesty', difficulty: 'easy', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/zesty.gpx', active: 1, oneWay: false, description: 'Fun, fast trail. Very few roacks or roots.', features: '', mustRide: false, rating: 2},
+            {name: 'Cool Ranch', difficulty: 'easy', textColor: 'text-yellow-400', color: '#ffba00', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/cool-ranch.gpx', active: 1, oneWay: false, description: 'Easy trail. There are a few jumps and some awesome burms.', features: 'jumps, burms', mustRide: true, rating: 4},
+            {name: 'Blue Cheese', difficulty: 'easy', textColor: 'text-blue-400', color: '#51a2ff', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/blue-cheese.gpx', active: 1, oneWay: false, description: 'Fun, easy, fast ride through the trees.', features: '', mustRide: false, rating: 3},
+            {name: 'Zesty', difficulty: 'easy', textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/hidden-valley-park/gpx-files/zesty.gpx', active: 1, oneWay: false, description: 'Fun, fast trail. Very few roacks or roots.', features: '', mustRide: false, rating: 2},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/hidden-valley-park/arial-view-3.JPEG", title: 'Trail Entrance', show: false},

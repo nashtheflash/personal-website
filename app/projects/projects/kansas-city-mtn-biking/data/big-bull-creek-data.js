@@ -17,11 +17,11 @@ export const bigBullCreekData = {
         mapStartingLon: -94.986116,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Horseshoe Loop', difficulty: 'easy', textColor: 'text-blue-600', color: '#155dfc', url: '/mtn-bike-kc/big-bull-creek/gpx-files/horseshoe-loop.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
-            {name: 'Quarry Loop', difficulty: 'easy', textColor: 'text-red-600', color: '#e7000b', url: '/mtn-bike-kc/big-bull-creek/gpx-files/quarry-loop.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
-            {name: 'Bull Creek Loop', difficulty: 'easy', textColor: 'text-orange-600', color: '#f54a00', url: '/mtn-bike-kc/big-bull-creek/gpx-files/big-bull-creek.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
-            {name: 'Coyote Run', difficulty: 'easy', textColor: 'text-purple-600', color: '#9810fa', url: '/mtn-bike-kc/big-bull-creek/gpx-files/coyote-run.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3 },
-            {name: 'Paved Trail', difficulty: 'easy', textColor: 'text-gray-600', color: '#4a5565', url: '/mtn-bike-kc/big-bull-creek/gpx-files/paved.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3 },
+            {name: 'Horseshoe Loop', difficulty: 'easy', textColor: 'text-blue-400', color: '#51a2ff', url: '/mtn-bike-kc/big-bull-creek/gpx-files/horseshoe-loop.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Quarry Loop', difficulty: 'easy', textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/big-bull-creek/gpx-files/quarry-loop.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Bull Creek Loop', difficulty: 'easy', textColor: 'text-orange-400', color: '#ff8904', url: '/mtn-bike-kc/big-bull-creek/gpx-files/big-bull-creek.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Coyote Run', difficulty: 'easy', textColor: 'text-purple-400', color: '#c27aff', url: '/mtn-bike-kc/big-bull-creek/gpx-files/coyote-run.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3 },
+            {name: 'Paved Trail', difficulty: 'easy', textColor: 'text-gray-400', color: '#99a1af', url: '/mtn-bike-kc/big-bull-creek/gpx-files/paved.gpx', active: 1, oneWay: false, description: '', features: [], mustRide: false, rating: 3 },
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/big-bull-creek/park-sign-1.JPEG", title: 'Billy Goat Trail Marker', show: false},

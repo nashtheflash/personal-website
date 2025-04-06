@@ -17,10 +17,10 @@ export const kesslerParkData = {
         mapStartingLon: -94.545685,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Kessler Park Trail', difficulty: 'expert', url: '/mtn-bike-kc/kessler-park/gpx-files/kessler-park-trail.gpx', active: 1, oneWay: false, description: "Lots of exposure to a 100' cliff edge. Fun trail", features: '', mustRide: false, rating: 3},
-            {name: 'Big Grin Gooseneck', difficulty: 'easy', url: '/mtn-bike-kc/kessler-park/gpx-files/big-grin-gooseneck.gpx', active: 1, oneWay: false, description: "I was unable to find this trail", features: '', mustRide: false, rating: 3},
-            {name: 'Chestnut Express', difficulty: 'easy', url: '/mtn-bike-kc/kessler-park/gpx-files/chestnut-express.gpx', active: 1, oneWay: false, description: "Large homless camp surounds parts of the trail", features: '', mustRide: false, rating: 3},
-            {name: 'The Wilderness', difficulty: 'easy', url: '/mtn-bike-kc/kessler-park/gpx-files/the-wilderness.gpx', active: 1, oneWay: false, description: "Large homless camp surounds parts of the trail", features: '', mustRide: false, rating: 3},
+            {name: 'Kessler Park Trail', difficulty: 'expert',  textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/kessler-park/gpx-files/kessler-park-trail.gpx', active: 1, oneWay: false, description: "Lots of exposure to a 100' cliff edge. Fun trail", features: '', mustRide: false, rating: 3},
+            {name: 'Big Grin Gooseneck', difficulty: 'easy',  textColor: 'text-purple-400', color: '#c27aff', url: '/mtn-bike-kc/kessler-park/gpx-files/big-grin-gooseneck.gpx', active: 1, oneWay: false, description: "I was unable to find this trail", features: '', mustRide: false, rating: 3},
+            {name: 'Chestnut Express', difficulty: 'easy',  textColor: 'text-neutral-100', color: '#f5f5f5', url: '/mtn-bike-kc/kessler-park/gpx-files/chestnut-express.gpx', active: 1, oneWay: false, description: "Large homless camp surounds parts of the trail", features: '', mustRide: false, rating: 3},
+            {name: 'The Wilderness', difficulty: 'easy',  textColor: 'text-green-400', color: '#05df72', url: '/mtn-bike-kc/kessler-park/gpx-files/the-wilderness.gpx', active: 1, oneWay: false, description: "Large homless camp surounds parts of the trail", features: '', mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/kessler-park/stay-out.JPEG", title: 'Welcome to Kessler', show: false},
