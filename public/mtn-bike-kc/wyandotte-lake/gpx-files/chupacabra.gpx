@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+<gpx version="1.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
   <metadata>
     <name>chupacabra</name>
     <author>
@@ -13,384 +13,427 @@
     <trkseg>
       <trkpt lat="39.171343" lon="-94.783264">
         <ele>268.25</ele>
-        <time>2022-04-07T17:39:29.134Z</time>
+        <time>2022-04-07T17:38:47.018Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171476" lon="-94.783521">
         <ele>269.5</ele>
-        <time>2022-04-07T17:40:50.158Z</time>
+        <time>2022-04-07T17:39:50.336Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171623" lon="-94.783648">
-        <ele>270.5</ele>
-        <time>2022-04-07T17:41:37.180Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171623" lon="-94.783648">
-        <ele>270.25</ele>
-        <time>2022-04-07T17:41:37.180Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171626" lon="-94.78365">
         <ele>270.5</ele>
-        <time>2022-04-07T17:41:38.087Z</time>
+        <time>2022-04-07T17:40:37.987Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171576" lon="-94.783865">
         <ele>270.25</ele>
-        <time>2022-04-07T17:42:24.336Z</time>
+        <time>2022-04-07T17:41:23.983Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171492" lon="-94.784015">
-        <ele>269.75</ele>
-        <time>2022-04-07T17:43:02.462Z</time>
+      <trkpt lat="39.17145" lon="-94.784098">
+        <ele>269.5</ele>
+        <time>2022-04-07T17:42:22.195Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171294" lon="-94.784015">
+      <trkpt lat="39.171315" lon="-94.783967">
         <ele>268.5</ele>
-        <time>2022-04-07T17:44:04.386Z</time>
+        <time>2022-04-07T17:43:06.847Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171294" lon="-94.784015">
-        <ele>268.5</ele>
-        <time>2022-04-07T17:44:04.386Z</time>
+      <trkpt lat="39.171255" lon="-94.783985">
+        <ele>268.25</ele>
+        <time>2022-04-07T17:43:23.129Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171293" lon="-94.784015">
-        <ele>268.5</ele>
-        <time>2022-04-07T17:44:04.653Z</time>
+      <trkpt lat="39.171312" lon="-94.784116">
+        <ele>268.75</ele>
+        <time>2022-04-07T17:43:53.912Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171426" lon="-94.784208">
         <ele>269.75</ele>
-        <time>2022-04-07T17:45:07.262Z</time>
+        <time>2022-04-07T17:44:29.455Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171742" lon="-94.784401">
-        <ele>273.75</ele>
-        <time>2022-04-07T17:46:56.610Z</time>
+      <trkpt lat="39.171559" lon="-94.784294">
+        <ele>271.5</ele>
+        <time>2022-04-07T17:45:08.779Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171908" lon="-94.784551">
-        <ele>276</ele>
-        <time>2022-04-07T17:47:43.058Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171908" lon="-94.784551">
         <ele>276</ele>
-        <time>2022-04-07T17:47:43.058Z</time>
+        <time>2022-04-07T17:46:54.999Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171856" lon="-94.784605">
+        <ele>276.25</ele>
+        <time>2022-04-07T17:47:12.644Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171697" lon="-94.784607">
+        <ele>275.75</ele>
+        <time>2022-04-07T17:47:54.672Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171626" lon="-94.784616">
         <ele>275.25</ele>
-        <time>2022-04-07T17:48:56.086Z</time>
+        <time>2022-04-07T17:48:13.531Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171626" lon="-94.784616">
-        <ele>275.25</ele>
-        <time>2022-04-07T17:48:56.086Z</time>
+      <trkpt lat="39.171681" lon="-94.784743">
+        <ele>277.25</ele>
+        <time>2022-04-07T17:48:43.340Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171709" lon="-94.784723">
-        <ele>277</ele>
-        <time>2022-04-07T17:49:26.001Z</time>
+      <trkpt lat="39.171792" lon="-94.784873">
+        <ele>278.75</ele>
+        <time>2022-04-07T17:49:22.968Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171858" lon="-94.78498">
         <ele>279.75</ele>
-        <time>2022-04-07T17:50:29.425Z</time>
+        <time>2022-04-07T17:49:50.987Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171975" lon="-94.785023">
         <ele>280</ele>
-        <time>2022-04-07T17:51:00.440Z</time>
+        <time>2022-04-07T17:50:23.144Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172108" lon="-94.78498">
         <ele>279.75</ele>
-        <time>2022-04-07T17:51:35.394Z</time>
+        <time>2022-04-07T17:50:59.385Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172208" lon="-94.784873">
-        <ele>279</ele>
-        <time>2022-04-07T17:52:08.517Z</time>
+      <trkpt lat="39.172261" lon="-94.784911">
+        <ele>279.25</ele>
+        <time>2022-04-07T17:51:42.225Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172302" lon="-94.784792">
-        <ele>278.75</ele>
-        <time>2022-04-07T17:52:37.335Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172307" lon="-94.784787">
         <ele>278.75</ele>
-        <time>2022-04-07T17:52:38.934Z</time>
+        <time>2022-04-07T17:52:10.394Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.172197" lon="-94.784755">
+        <ele>278.25</ele>
+        <time>2022-04-07T17:52:40.199Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172141" lon="-94.78468">
         <ele>277.75</ele>
-        <time>2022-04-07T17:53:26.241Z</time>
+        <time>2022-04-07T17:53:01.536Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172142385509225" lon="-94.78467933329013">
-        <ele>277.75</ele>
-        <time>2022-04-07T17:53:26.605Z</time>
+      <trkpt lat="39.172211" lon="-94.784601">
+        <ele>277.5</ele>
+        <time>2022-04-07T17:53:26.120Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172141" lon="-94.784681">
-        <ele>277.75</ele>
-        <time>2022-04-07T17:53:27.012Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172141" lon="-94.78468">
-        <ele>277.75</ele>
-        <time>2022-04-07T17:53:27.269Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172274" lon="-94.784616">
         <ele>277.75</ele>
-        <time>2022-04-07T17:53:57.548Z</time>
+        <time>2022-04-07T17:53:43.055Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172357" lon="-94.784487">
         <ele>277.5</ele>
-        <time>2022-04-07T17:54:25.270Z</time>
+        <time>2022-04-07T17:54:17.406Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172374" lon="-94.784272">
         <ele>276.5</ele>
-        <time>2022-04-07T17:55:01.008Z</time>
+        <time>2022-04-07T17:55:01.690Z</time>
+      </trkpt>
+      <trkpt lat="39.172374" lon="-94.784272">
+        <ele>276.5</ele>
+        <time>2022-04-07T17:55:01.690Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -403,7 +446,7 @@
       </trkpt>
       <trkpt lat="39.172141" lon="-94.7838">
         <ele>274.5</ele>
-        <time>2022-04-07T17:56:33.540Z</time>
+        <time>2022-04-07T17:56:34.008Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -416,7 +459,7 @@
       </trkpt>
       <trkpt lat="39.172125" lon="-94.783546">
         <ele>274.5</ele>
-        <time>2022-04-07T17:57:17.896Z</time>
+        <time>2022-04-07T17:57:18.364Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -429,7 +472,7 @@
       </trkpt>
       <trkpt lat="39.172125" lon="-94.783546">
         <ele>274.5</ele>
-        <time>2022-04-07T17:57:17.896Z</time>
+        <time>2022-04-07T17:57:18.364Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -442,7 +485,7 @@
       </trkpt>
       <trkpt lat="39.172125" lon="-94.783543">
         <ele>274.5</ele>
-        <time>2022-04-07T17:57:18.438Z</time>
+        <time>2022-04-07T17:57:18.906Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -455,7 +498,7 @@
       </trkpt>
       <trkpt lat="39.172241" lon="-94.783371">
         <ele>275.75</ele>
-        <time>2022-04-07T17:57:58.118Z</time>
+        <time>2022-04-07T17:57:58.586Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -468,7 +511,7 @@
       </trkpt>
       <trkpt lat="39.172324" lon="-94.783135">
         <ele>277.25</ele>
-        <time>2022-04-07T17:58:43.224Z</time>
+        <time>2022-04-07T17:58:43.692Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -481,7 +524,7 @@
       </trkpt>
       <trkpt lat="39.172424" lon="-94.782942">
         <ele>279</ele>
-        <time>2022-04-07T17:59:23.629Z</time>
+        <time>2022-04-07T17:59:24.097Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -494,7 +537,7 @@
       </trkpt>
       <trkpt lat="39.172607" lon="-94.782878">
         <ele>281.25</ele>
-        <time>2022-04-07T18:00:06.198Z</time>
+        <time>2022-04-07T18:00:06.666Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -507,7 +550,7 @@
       </trkpt>
       <trkpt lat="39.172688" lon="-94.782668">
         <ele>283</ele>
-        <time>2022-04-07T18:00:30.931Z</time>
+        <time>2022-04-07T18:00:31.399Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -520,7 +563,7 @@
       </trkpt>
       <trkpt lat="39.172687" lon="-94.782669">
         <ele>282.75</ele>
-        <time>2022-04-07T18:00:31.095Z</time>
+        <time>2022-04-07T18:00:31.563Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -533,293 +576,344 @@
       </trkpt>
       <trkpt lat="39.17269" lon="-94.782663">
         <ele>283</ele>
-        <time>2022-04-07T18:00:31.847Z</time>
+        <time>2022-04-07T18:00:32.430Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>footway</highway>
               <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17269" lon="-94.782663">
+        <ele>283</ele>
+        <time>2022-04-07T18:00:32.563Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172557" lon="-94.782513">
         <ele>282.25</ele>
-        <time>2022-04-07T18:00:55.877Z</time>
+        <time>2022-04-07T18:01:00.246Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172357" lon="-94.782427">
-        <ele>280.5</ele>
-        <time>2022-04-07T18:01:24.552Z</time>
+      <trkpt lat="39.172398" lon="-94.782381">
+        <ele>281</ele>
+        <time>2022-04-07T18:01:29.875Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172307" lon="-94.782216">
-        <ele>280.75</ele>
-        <time>2022-04-07T18:01:52.730Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172307" lon="-94.782216">
-        <ele>280.5</ele>
-        <time>2022-04-07T18:01:52.730Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172307" lon="-94.782212">
         <ele>280.75</ele>
-        <time>2022-04-07T18:01:53.237Z</time>
+        <time>2022-04-07T18:01:54.870Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172424" lon="-94.782062">
         <ele>282.25</ele>
-        <time>2022-04-07T18:02:20.412Z</time>
+        <time>2022-04-07T18:02:20.718Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172524" lon="-94.781998">
         <ele>283.25</ele>
-        <time>2022-04-07T18:02:38.802Z</time>
+        <time>2022-04-07T18:02:38.210Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172674" lon="-94.781848">
         <ele>285</ele>
-        <time>2022-04-07T18:03:10.068Z</time>
+        <time>2022-04-07T18:03:07.950Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172823" lon="-94.781719">
         <ele>286.75</ele>
-        <time>2022-04-07T18:03:39.630Z</time>
+        <time>2022-04-07T18:03:36.069Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.17294" lon="-94.78159">
         <ele>288.25</ele>
-        <time>2022-04-07T18:04:04.985Z</time>
+        <time>2022-04-07T18:04:00.187Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173039" lon="-94.781504">
-        <ele>289.5</ele>
-        <time>2022-04-07T18:04:24.647Z</time>
+      <trkpt lat="39.173023" lon="-94.781481">
+        <ele>289.25</ele>
+        <time>2022-04-07T18:04:18.746Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173123" lon="-94.781354">
+      <trkpt lat="39.173103" lon="-94.781352">
         <ele>290.25</ele>
-        <time>2022-04-07T18:04:48.279Z</time>
+        <time>2022-04-07T18:04:38.813Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173189" lon="-94.781247">
         <ele>291</ele>
-        <time>2022-04-07T18:05:05.742Z</time>
+        <time>2022-04-07T18:04:57.367Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173339" lon="-94.781204">
         <ele>292</ele>
-        <time>2022-04-07T18:05:31.055Z</time>
+        <time>2022-04-07T18:05:21.444Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173338" lon="-94.781206">
-        <ele>289.25</ele>
-        <time>2022-04-07T18:05:31.336Z</time>
+      <trkpt lat="39.173376" lon="-94.781249">
+        <ele>292.25</ele>
+        <time>2022-04-07T18:05:29.412Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173073" lon="-94.781676">
-        <ele>289.25</ele>
-        <time>2022-04-07T18:06:45.557Z</time>
+      <trkpt lat="39.173324" lon="-94.781333">
+        <ele>291.75</ele>
+        <time>2022-04-07T18:05:42.470Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17308055515909" lon="-94.78167456712724">
-        <ele>289.3319227847808</ele>
-        <time>2022-04-07T18:06:46.778Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173079" lon="-94.781675">
-        <ele>289.25</ele>
-        <time>2022-04-07T18:06:47.049Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173189" lon="-94.781654">
+      <trkpt lat="39.173168" lon="-94.781457">
         <ele>290.5</ele>
-        <time>2022-04-07T18:07:04.730Z</time>
+        <time>2022-04-07T18:06:11.182Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173146" lon="-94.781577">
+        <ele>290.25</ele>
+        <time>2022-04-07T18:06:26.161Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173209" lon="-94.781592">
+        <ele>290.75</ele>
+        <time>2022-04-07T18:06:36.200Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173272" lon="-94.781526">
         <ele>291.25</ele>
-        <time>2022-04-07T18:07:25.299Z</time>
+        <time>2022-04-07T18:06:48.917Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173372" lon="-94.78144">
-        <ele>292</ele>
-        <time>2022-04-07T18:07:44.409Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173522" lon="-94.78129">
         <ele>293.25</ele>
-        <time>2022-04-07T18:08:14.587Z</time>
+        <time>2022-04-07T18:07:37.460Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173572" lon="-94.781097">
+        <ele>293.75</ele>
+        <time>2022-04-07T18:08:02.179Z</time>
+      </trkpt>
+      <trkpt lat="39.173572" lon="-94.781097">
+        <ele>293.75</ele>
+        <time>2022-04-07T18:08:02.179Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -832,111 +926,123 @@
       </trkpt>
       <trkpt lat="39.173572" lon="-94.781097">
         <ele>293.75</ele>
-        <time>2022-04-07T18:08:39.670Z</time>
+        <time>2022-04-07T18:08:02.179Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173572" lon="-94.780903">
         <ele>294</ele>
-        <time>2022-04-07T18:09:03.583Z</time>
+        <time>2022-04-07T18:08:29.988Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173407" lon="-94.780664">
-        <ele>291.5</ele>
-        <time>2022-04-07T18:09:43.032Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173391" lon="-94.780656">
-        <ele>289.5</ele>
-        <time>2022-04-07T18:09:45.754Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173391" lon="-94.780656">
+      <trkpt lat="39.173343" lon="-94.780738">
         <ele>291.25</ele>
-        <time>2022-04-07T18:09:45.754Z</time>
+        <time>2022-04-07T18:09:18.490Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173207" lon="-94.780555">
-        <ele>289.5</ele>
-        <time>2022-04-07T18:10:17.480Z</time>
+      <trkpt lat="39.173104" lon="-94.780626">
+        <ele>289.75</ele>
+        <time>2022-04-07T18:10:05.509Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172923" lon="-94.780517">
-        <ele>288.75</ele>
-        <time>2022-04-07T18:11:02.781Z</time>
+      <trkpt lat="39.172993" lon="-94.780537">
+        <ele>289</ele>
+        <time>2022-04-07T18:10:29.676Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.17269" lon="-94.780517">
         <ele>288.25</ele>
-        <time>2022-04-07T18:11:39.748Z</time>
+        <time>2022-04-07T18:11:25.777Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
+      </trkpt>
+      <trkpt lat="39.172476" lon="-94.780476">
+        <ele>287.5</ele>
+        <time>2022-04-07T18:12:05.781Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.172406" lon="-94.780432">
+        <ele>286.25</ele>
+        <time>2022-04-07T18:12:20.180Z</time>
       </trkpt>
       <trkpt lat="39.172407" lon="-94.780431">
         <ele>287.25</ele>
-        <time>2022-04-07T18:12:25.877Z</time>
+        <time>2022-04-07T18:12:20.439Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -947,1088 +1053,2427 @@
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172174" lon="-94.780281">
-        <ele>286.25</ele>
-        <time>2022-04-07T18:13:07.192Z</time>
+      <trkpt lat="39.172406" lon="-94.780432">
+        <ele>287</ele>
+        <time>2022-04-07T18:12:20.698Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172025" lon="-94.780131">
+      <trkpt lat="39.172476" lon="-94.780476">
+        <ele>287.5</ele>
+        <time>2022-04-07T18:12:37.448Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.172326" lon="-94.780554">
+        <ele>287.5</ele>
+        <time>2022-04-07T18:13:12.236Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.172124" lon="-94.780637">
+        <ele>287.25</ele>
+        <time>2022-04-07T18:13:57.838Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171923" lon="-94.780756">
+        <ele>287.25</ele>
+        <time>2022-04-07T18:14:45.410Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17161" lon="-94.780924">
+        <ele>285.5</ele>
+        <time>2022-04-07T18:15:58.334Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171419" lon="-94.781102">
+        <ele>282.5</ele>
+        <time>2022-04-07T18:16:49.020Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17118" lon="-94.781401">
+        <ele>279.75</ele>
+        <time>2022-04-07T18:18:00.639Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171111" lon="-94.781526">
+        <ele>279.25</ele>
+        <time>2022-04-07T18:18:26.229Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171003" lon="-94.78164">
+        <ele>279</ele>
+        <time>2022-04-07T18:18:56.248Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170896" lon="-94.781703">
+        <ele>278.25</ele>
+        <time>2022-04-07T18:19:21.549Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170812" lon="-94.781843">
+        <ele>275.5</ele>
+        <time>2022-04-07T18:19:51.071Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170689" lon="-94.781875">
+        <ele>273.25</ele>
+        <time>2022-04-07T18:20:18.062Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170591" lon="-94.781828">
+        <ele>272.5</ele>
+        <time>2022-04-07T18:20:40.552Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170489" lon="-94.781714">
+        <ele>272.75</ele>
+        <time>2022-04-07T18:21:09.583Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170407" lon="-94.781599">
+        <ele>272.25</ele>
+        <time>2022-04-07T18:21:35.639Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170375" lon="-94.7815">
+        <ele>271.75</ele>
+        <time>2022-04-07T18:21:53.526Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170388" lon="-94.781454">
+        <ele>272.25</ele>
+        <time>2022-04-07T18:22:01.602Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170387" lon="-94.781455">
+        <ele>271.75</ele>
+        <time>2022-04-07T18:22:01.965Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170407" lon="-94.781386">
+        <ele>272.25</ele>
+        <time>2022-04-07T18:22:14.112Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170457" lon="-94.781313">
+        <ele>273</ele>
+        <time>2022-04-07T18:22:30.175Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170528" lon="-94.781305">
+        <ele>274</ele>
+        <time>2022-04-07T18:22:45.335Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170534" lon="-94.781404">
+        <ele>274</ele>
+        <time>2022-04-07T18:23:01.711Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170568" lon="-94.781468">
+        <ele>274.75</ele>
+        <time>2022-04-07T18:23:14.505Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170644" lon="-94.781458">
+        <ele>275.75</ele>
+        <time>2022-04-07T18:23:30.754Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170763" lon="-94.781309">
+        <ele>277.5</ele>
+        <time>2022-04-07T18:24:06.030Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170851" lon="-94.781188">
+        <ele>278.5</ele>
+        <time>2022-04-07T18:24:33.388Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170902" lon="-94.781031">
+        <ele>278.75</ele>
+        <time>2022-04-07T18:25:01.459Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171015" lon="-94.780872">
+        <ele>279.75</ele>
+        <time>2022-04-07T18:25:37.028Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171144" lon="-94.780775">
+        <ele>280.75</ele>
+        <time>2022-04-07T18:26:08.788Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17131" lon="-94.780577">
+        <ele>281.75</ele>
+        <time>2022-04-07T18:26:56.879Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171387" lon="-94.780416">
+        <ele>282</ele>
+        <time>2022-04-07T18:27:28.074Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171358" lon="-94.780031">
+        <ele>279.75</ele>
+        <time>2022-04-07T18:28:31.860Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171318" lon="-94.779932">
+        <ele>278.5</ele>
+        <time>2022-04-07T18:28:50.269Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.1712" lon="-94.779736">
+        <ele>275.25</ele>
+        <time>2022-04-07T18:29:31.190Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171193" lon="-94.779583">
+        <ele>274.25</ele>
+        <time>2022-04-07T18:29:56.463Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171231" lon="-94.779379">
+        <ele>273.5</ele>
+        <time>2022-04-07T18:30:31.060Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171287" lon="-94.779254">
+        <ele>273.5</ele>
+        <time>2022-04-07T18:30:54.867Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17138" lon="-94.779256">
+        <ele>274.75</ele>
+        <time>2022-04-07T18:31:14.650Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17147" lon="-94.779299">
+        <ele>276.25</ele>
+        <time>2022-04-07T18:31:35.065Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.17151" lon="-94.779378">
+        <ele>277.5</ele>
+        <time>2022-04-07T18:31:50.623Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171455" lon="-94.779499">
+        <ele>277.5</ele>
+        <time>2022-04-07T18:32:13.752Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171473" lon="-94.779561">
+        <ele>278.25</ele>
+        <time>2022-04-07T18:32:24.669Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171542" lon="-94.779533">
+        <ele>279</ele>
+        <time>2022-04-07T18:32:40.054Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171603" lon="-94.779529">
+        <ele>280</ele>
+        <time>2022-04-07T18:32:53.045Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171617" lon="-94.779632">
+        <ele>281</ele>
+        <time>2022-04-07T18:33:10.289Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171578" lon="-94.779738">
+        <ele>281.25</ele>
+        <time>2022-04-07T18:33:29.637Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171567" lon="-94.779846">
+        <ele>282</ele>
+        <time>2022-04-07T18:33:47.600Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171589" lon="-94.779892">
+        <ele>285</ele>
+        <time>2022-04-07T18:33:56.780Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171589" lon="-94.779892">
+        <ele>282.5</ele>
+        <time>2022-04-07T18:33:56.780Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171686" lon="-94.780089">
+        <ele>285</ele>
+        <time>2022-04-07T18:34:36.415Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171704" lon="-94.780242">
+        <ele>285.5</ele>
+        <time>2022-04-07T18:35:02.697Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171673" lon="-94.780405">
         <ele>285.75</ele>
-        <time>2022-04-07T18:13:37.179Z</time>
+        <time>2022-04-07T18:35:31.201Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171599" lon="-94.780567">
+        <ele>285.5</ele>
+        <time>2022-04-07T18:36:03.135Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171329" lon="-94.780849">
+        <ele>283.25</ele>
+        <time>2022-04-07T18:37:19.242Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171098" lon="-94.781115">
+        <ele>280</ele>
+        <time>2022-04-07T18:38:27.078Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170932" lon="-94.781335">
+        <ele>279</ele>
+        <time>2022-04-07T18:39:19.217Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.170985" lon="-94.781369">
+        <ele>279</ele>
+        <time>2022-04-07T18:39:32.183Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171041" lon="-94.781333">
+        <ele>279.25</ele>
+        <time>2022-04-07T18:39:45.890Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171169" lon="-94.781204">
+        <ele>280.25</ele>
+        <time>2022-04-07T18:40:21.475Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171271" lon="-94.781072">
+        <ele>281.5</ele>
+        <time>2022-04-07T18:40:53.127Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171322" lon="-94.780988">
+        <ele>282.25</ele>
+        <time>2022-04-07T18:41:11.247Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171432" lon="-94.780907">
+        <ele>283.75</ele>
+        <time>2022-04-07T18:41:38.995Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171518" lon="-94.780807">
+        <ele>285.25</ele>
+        <time>2022-04-07T18:42:04.360Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171641" lon="-94.780765">
+        <ele>286.5</ele>
+        <time>2022-04-07T18:42:32.232Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171774" lon="-94.780662">
+        <ele>286.75</ele>
+        <time>2022-04-07T18:43:06.216Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171885" lon="-94.780558">
+        <ele>286.75</ele>
+        <time>2022-04-07T18:43:36.270Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171936" lon="-94.780463">
+        <ele>286.5</ele>
+        <time>2022-04-07T18:43:55.894Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171946" lon="-94.780342">
+        <ele>286.25</ele>
+        <time>2022-04-07T18:44:16.560Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171892" lon="-94.780221">
+        <ele>285.75</ele>
+        <time>2022-04-07T18:44:40.271Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171848" lon="-94.780103">
+        <ele>285.25</ele>
+        <time>2022-04-07T18:45:02.509Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171842" lon="-94.779981">
         <ele>285</ele>
-        <time>2022-04-07T18:14:11.580Z</time>
+        <time>2022-04-07T18:45:23.270Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171727" lon="-94.77975">
-        <ele>282.75</ele>
-        <time>2022-04-07T18:14:45.347Z</time>
+      <trkpt lat="39.171753" lon="-94.779733">
+        <ele>282.5</ele>
+        <time>2022-04-07T18:46:09.683Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.171725" lon="-94.779745">
-        <ele>282.75</ele>
-        <time>2022-04-07T18:14:46.531Z</time>
+      <trkpt lat="39.171841" lon="-94.779661">
+        <ele>281.75</ele>
+        <time>2022-04-07T18:46:32.512Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171725" lon="-94.779745">
-        <ele>282.75</ele>
-        <time>2022-04-07T18:14:46.763Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171858" lon="-94.779702">
-        <ele>282</ele>
-        <time>2022-04-07T18:15:24.075Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171991" lon="-94.779702">
         <ele>281.75</ele>
-        <time>2022-04-07T18:16:00.267Z</time>
+        <time>2022-04-07T18:47:06.102Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172158" lon="-94.779809">
         <ele>283</ele>
-        <time>2022-04-07T18:16:51.008Z</time>
+        <time>2022-04-07T18:47:46.951Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172341" lon="-94.779895">
-        <ele>284</ele>
-        <time>2022-04-07T18:17:44.007Z</time>
+      <trkpt lat="39.172268" lon="-94.779957">
+        <ele>285</ele>
+        <time>2022-04-07T18:48:21.771Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.172474" lon="-94.780024">
-        <ele>286</ele>
-        <time>2022-04-07T18:18:29.288Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172607" lon="-94.780067">
         <ele>286.25</ele>
-        <time>2022-04-07T18:19:06.599Z</time>
+        <time>2022-04-07T18:49:38.349Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172773" lon="-94.780088">
         <ele>286.25</ele>
-        <time>2022-04-07T18:19:51.988Z</time>
+        <time>2022-04-07T18:50:14.889Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172956" lon="-94.780067">
         <ele>286.25</ele>
-        <time>2022-04-07T18:20:41.983Z</time>
+        <time>2022-04-07T18:50:55.137Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173173" lon="-94.779981">
         <ele>285.75</ele>
-        <time>2022-04-07T18:21:43.756Z</time>
+        <time>2022-04-07T18:51:44.868Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173322" lon="-94.779895">
         <ele>285</ele>
-        <time>2022-04-07T18:22:28.174Z</time>
+        <time>2022-04-07T18:52:20.627Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173439" lon="-94.779809">
-        <ele>285.75</ele>
-        <time>2022-04-07T18:23:04.817Z</time>
+      <trkpt lat="39.17347" lon="-94.779856">
+        <ele>286.25</ele>
+        <time>2022-04-07T18:52:53.718Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173289" lon="-94.779552">
-        <ele>282.5</ele>
-        <time>2022-04-07T18:24:12.680Z</time>
+      <trkpt lat="39.173499" lon="-94.779697">
+        <ele>285.5</ele>
+        <time>2022-04-07T18:53:21.458Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173389" lon="-94.779594">
+      <trkpt lat="39.173368" lon="-94.779603">
         <ele>283.5</ele>
-        <time>2022-04-07T18:24:41.296Z</time>
+        <time>2022-04-07T18:53:54.297Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173489" lon="-94.779616">
-        <ele>284.75</ele>
-        <time>2022-04-07T18:25:08.901Z</time>
+      <trkpt lat="39.173336" lon="-94.77955">
+        <ele>282.75</ele>
+        <time>2022-04-07T18:54:05.704Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173588" lon="-94.779702">
-        <ele>286.5</ele>
-        <time>2022-04-07T18:25:41.380Z</time>
+      <trkpt lat="39.1734" lon="-94.779528">
+        <ele>283.25</ele>
+        <time>2022-04-07T18:54:20.213Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173485" lon="-94.77952">
+        <ele>284</ele>
+        <time>2022-04-07T18:54:38.882Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173588" lon="-94.779609">
+        <ele>285.75</ele>
+        <time>2022-04-07T18:55:06.040Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173655" lon="-94.779788">
         <ele>287.75</ele>
-        <time>2022-04-07T18:26:07.100Z</time>
+        <time>2022-04-07T18:55:39.797Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17365500001541" lon="-94.78009734643288">
-        <ele>289.91833485746537</ele>
-        <time>2022-04-07T18:27:12.358Z</time>
+      <trkpt lat="39.173681" lon="-94.779941">
+        <ele>289.25</ele>
+        <time>2022-04-07T18:56:06.397Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173655" lon="-94.780109">
-        <ele>290</ele>
-        <time>2022-04-07T18:27:14.816Z</time>
+      <trkpt lat="39.173644" lon="-94.780049">
+        <ele>289.5</ele>
+        <time>2022-04-07T18:56:26.450Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173755" lon="-94.780109">
+      <trkpt lat="39.173697" lon="-94.780095">
+        <ele>290.5</ele>
+        <time>2022-04-07T18:56:40.444Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173775" lon="-94.780098">
         <ele>291.25</ele>
-        <time>2022-04-07T18:27:42.027Z</time>
+        <time>2022-04-07T18:56:57.538Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173855" lon="-94.780174">
+      <trkpt lat="39.173891" lon="-94.780146">
         <ele>292.75</ele>
-        <time>2022-04-07T18:28:12.498Z</time>
+        <time>2022-04-07T18:57:24.225Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173971" lon="-94.780281">
+      <trkpt lat="39.173909" lon="-94.78027">
+        <ele>293.75</ele>
+        <time>2022-04-07T18:57:45.650Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173982" lon="-94.780253">
         <ele>294.5</ele>
-        <time>2022-04-07T18:28:51.304Z</time>
+        <time>2022-04-07T18:58:01.899Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173971" lon="-94.780281">
-        <ele>294.5</ele>
-        <time>2022-04-07T18:28:51.304Z</time>
+      <trkpt lat="39.174023" lon="-94.780168">
+        <ele>294.25</ele>
+        <time>2022-04-07T18:58:18.901Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174021" lon="-94.780109">
-        <ele>294</ele>
-        <time>2022-04-07T18:29:30.056Z</time>
+      <trkpt lat="39.174092" lon="-94.780147">
+        <ele>295</ele>
+        <time>2022-04-07T18:58:34.432Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174121" lon="-94.780195">
-        <ele>295.5</ele>
-        <time>2022-04-07T18:30:02.760Z</time>
+      <trkpt lat="39.174159" lon="-94.780172">
+        <ele>295.75</ele>
+        <time>2022-04-07T18:58:49.710Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17412149451243" lon="-94.78020046951177">
-        <ele>295.5367057137661</ele>
-        <time>2022-04-07T18:30:03.898Z</time>
+      <trkpt lat="39.174185" lon="-94.780311">
+        <ele>296.75</ele>
+        <time>2022-04-07T18:59:13.993Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17415393140665" lon="-94.78055924130253">
-        <ele>297.9948066985287</ele>
-        <time>2022-04-07T18:31:03.866Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.174153" lon="-94.78056">
+      <trkpt lat="39.174201" lon="-94.780484">
         <ele>297.75</ele>
-        <time>2022-04-07T18:31:04.124Z</time>
+        <time>2022-04-07T18:59:43.582Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.174154" lon="-94.78056">
-        <ele>298</ele>
-        <time>2022-04-07T18:31:04.306Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174254" lon="-94.780453">
         <ele>297.75</ele>
-        <time>2022-04-07T18:31:32.132Z</time>
+        <time>2022-04-07T18:59:56.332Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174337" lon="-94.780281">
         <ele>296.75</ele>
-        <time>2022-04-07T18:32:05.769Z</time>
+        <time>2022-04-07T19:00:30.740Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174337" lon="-94.780045">
+      <trkpt lat="39.174374" lon="-94.780045">
         <ele>295.75</ele>
-        <time>2022-04-07T18:32:44.951Z</time>
+        <time>2022-04-07T19:01:11.631Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17432" lon="-94.779831">
-        <ele>294</ele>
-        <time>2022-04-07T18:33:20.666Z</time>
+      <trkpt lat="39.174289" lon="-94.77985">
+        <ele>294.25</ele>
+        <time>2022-04-07T19:01:49.623Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174204" lon="-94.779552">
-        <ele>291.75</ele>
-        <time>2022-04-07T18:34:13.227Z</time>
+      <trkpt lat="39.174279" lon="-94.779689">
+        <ele>292.75</ele>
+        <time>2022-04-07T19:02:17.053Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.174199" lon="-94.779589">
+        <ele>292</ele>
+        <time>2022-04-07T19:02:41.456Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174021" lon="-94.779423">
         <ele>289.25</ele>
-        <time>2022-04-07T18:34:57.888Z</time>
+        <time>2022-04-07T19:03:29.573Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173871" lon="-94.779294">
-        <ele>286.5</ele>
-        <time>2022-04-07T18:35:36.496Z</time>
+      <trkpt lat="39.173816" lon="-94.779303">
+        <ele>286</ele>
+        <time>2022-04-07T19:04:18.890Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173712" lon="-94.779273">
+        <ele>284.75</ele>
+        <time>2022-04-07T19:04:42.237Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173678" lon="-94.779283">
+        <ele>284</ele>
+        <time>2022-04-07T19:04:50.051Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173676" lon="-94.779283">
+        <ele>284.25</ele>
+        <time>2022-04-07T19:04:50.478Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173638" lon="-94.779294">
         <ele>284</ele>
-        <time>2022-04-07T18:36:26.395Z</time>
+        <time>2022-04-07T19:04:59.206Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17364282049311" lon="-94.7792976727518">
-        <ele>284.0850734807562</ele>
-        <time>2022-04-07T18:36:27.473Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173643" lon="-94.779294">
-        <ele>284</ele>
-        <time>2022-04-07T18:36:28.024Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173638" lon="-94.779294">
-        <ele>284</ele>
-        <time>2022-04-07T18:36:28.994Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173722" lon="-94.779358">
+      <trkpt lat="39.1737" lon="-94.779381">
         <ele>285.5</ele>
-        <time>2022-04-07T18:36:48.006Z</time>
+        <time>2022-04-07T19:05:19.736Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173855" lon="-94.779444">
-        <ele>287.5</ele>
-        <time>2022-04-07T18:37:17.000Z</time>
+      <trkpt lat="39.173799" lon="-94.77948">
+        <ele>287.25</ele>
+        <time>2022-04-07T19:05:47.808Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173954" lon="-94.779552">
+        <ele>289.25</ele>
+        <time>2022-04-07T19:06:24.727Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174038" lon="-94.779637">
         <ele>291</ele>
-        <time>2022-04-07T18:38:03.067Z</time>
+        <time>2022-04-07T19:06:48.653Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174137" lon="-94.779788">
-        <ele>293</ele>
-        <time>2022-04-07T18:38:32.945Z</time>
+      <trkpt lat="39.174099" lon="-94.779761">
+        <ele>292.5</ele>
+        <time>2022-04-07T19:07:14.166Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174077" lon="-94.779905">
+      <trkpt lat="39.174087" lon="-94.779894">
         <ele>293.25</ele>
-        <time>2022-04-07T18:38:52.247Z</time>
+        <time>2022-04-07T19:07:37.428Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.174076" lon="-94.779906">
-        <ele>293</ele>
-        <time>2022-04-07T18:38:52.509Z</time>
+      <trkpt lat="39.174018" lon="-94.779874">
+        <ele>292.25</ele>
+        <time>2022-04-07T19:07:53.277Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.174071" lon="-94.779916">
-        <ele>293.25</ele>
-        <time>2022-04-07T18:38:54.148Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173971" lon="-94.779745">
         <ele>291</ele>
-        <time>2022-04-07T18:39:23.621Z</time>
+        <time>2022-04-07T19:08:18.039Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173821" lon="-94.779616">
         <ele>288.5</ele>
-        <time>2022-04-07T18:39:55.619Z</time>
+        <time>2022-04-07T19:08:58.439Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173655" lon="-94.779487">
         <ele>285.75</ele>
-        <time>2022-04-07T18:40:30.016Z</time>
+        <time>2022-04-07T19:09:41.868Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173256" lon="-94.779337">
         <ele>280.5</ele>
-        <time>2022-04-07T18:41:43.782Z</time>
+        <time>2022-04-07T19:11:15.004Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173096" lon="-94.779214">
-        <ele>278</ele>
-        <time>2022-04-07T18:42:26.087Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173096" lon="-94.779214">
-        <ele>278</ele>
-        <time>2022-04-07T18:42:26.087Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173089" lon="-94.779208">
         <ele>278</ele>
-        <time>2022-04-07T18:42:27.986Z</time>
+        <time>2022-04-07T19:11:58.625Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173189" lon="-94.779144">
         <ele>278.25</ele>
-        <time>2022-04-07T18:42:53.340Z</time>
+        <time>2022-04-07T19:12:23.641Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173306" lon="-94.779122">
         <ele>279.25</ele>
-        <time>2022-04-07T18:43:20.194Z</time>
+        <time>2022-04-07T19:12:50.137Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173439" lon="-94.779058">
         <ele>280</ele>
-        <time>2022-04-07T18:43:52.435Z</time>
+        <time>2022-04-07T19:13:21.948Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173605" lon="-94.779079">
         <ele>282</ele>
-        <time>2022-04-07T18:44:30.318Z</time>
+        <time>2022-04-07T19:13:59.326Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173788" lon="-94.779058">
         <ele>284</ele>
-        <time>2022-04-07T18:45:12.046Z</time>
+        <time>2022-04-07T19:14:40.498Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173971" lon="-94.779058">
         <ele>285.75</ele>
-        <time>2022-04-07T18:45:53.610Z</time>
+        <time>2022-04-07T19:15:21.508Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174104" lon="-94.778951">
         <ele>286.5</ele>
-        <time>2022-04-07T18:46:29.212Z</time>
+        <time>2022-04-07T19:15:56.635Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174187" lon="-94.778801">
         <ele>285.75</ele>
-        <time>2022-04-07T18:47:01.661Z</time>
+        <time>2022-04-07T19:16:28.651Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174237" lon="-94.778607">
         <ele>283.75</ele>
-        <time>2022-04-07T18:47:37.658Z</time>
+        <time>2022-04-07T19:17:04.168Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.17422" lon="-94.778371">
         <ele>281.75</ele>
-        <time>2022-04-07T18:48:19.391Z</time>
+        <time>2022-04-07T19:17:45.344Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.174104" lon="-94.778092">
         <ele>282.25</ele>
-        <time>2022-04-07T18:49:15.136Z</time>
+        <time>2022-04-07T19:18:40.345Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173904" lon="-94.777856">
-        <ele>282.25</ele>
-        <time>2022-04-07T18:50:16.701Z</time>
+      <trkpt lat="39.173757" lon="-94.777672">
+        <ele>283</ele>
+        <time>2022-04-07T19:20:26.981Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173722" lon="-94.777728">
-        <ele>282.25</ele>
-        <time>2022-04-07T18:51:03.783Z</time>
+      <trkpt lat="39.173676" lon="-94.777542">
+        <ele>284</ele>
+        <time>2022-04-07T19:20:55.957Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173656" lon="-94.777476">
+      <trkpt lat="39.173679" lon="-94.777453">
         <ele>284.25</ele>
-        <time>2022-04-07T18:51:50.618Z</time>
+        <time>2022-04-07T19:21:11.433Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173655" lon="-94.77747">
+      <trkpt lat="39.173719" lon="-94.777448">
         <ele>284.25</ele>
-        <time>2022-04-07T18:51:51.680Z</time>
+        <time>2022-04-07T19:21:20.439Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173871" lon="-94.777577">
+      <trkpt lat="39.173795" lon="-94.777538">
         <ele>284</ele>
-        <time>2022-04-07T18:52:44.233Z</time>
+        <time>2022-04-07T19:21:43.560Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17386911266823" lon="-94.7775714809664">
-        <ele>284.00000000000006</ele>
-        <time>2022-04-07T18:52:45.295Z</time>
+      <trkpt lat="39.173848" lon="-94.777543">
+        <ele>284.25</ele>
+        <time>2022-04-07T19:21:55.468Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173805" lon="-94.777384">
+      <trkpt lat="39.173846" lon="-94.777467">
+        <ele>284.25</ele>
+        <time>2022-04-07T19:22:08.676Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173831" lon="-94.77732">
+        <ele>283.75</ele>
+        <time>2022-04-07T19:22:34.434Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.173652" lon="-94.777131">
         <ele>284</ele>
-        <time>2022-04-07T18:53:21.375Z</time>
+        <time>2022-04-07T19:23:26.272Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173688" lon="-94.777191">
-        <ele>284</ele>
-        <time>2022-04-07T18:54:04.514Z</time>
+      <trkpt lat="39.173672" lon="-94.777075">
+        <ele>283.75</ele>
+        <time>2022-04-07T19:23:36.983Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173688" lon="-94.777191">
-        <ele>284</ele>
-        <time>2022-04-07T18:54:04.514Z</time>
+      <trkpt lat="39.173738" lon="-94.777091">
+        <ele>283.5</ele>
+        <time>2022-04-07T19:23:52.032Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173938" lon="-94.777256">
+      <trkpt lat="39.173861" lon="-94.777227">
         <ele>283.25</ele>
-        <time>2022-04-07T18:55:02.438Z</time>
+        <time>2022-04-07T19:24:28.336Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.17393385614488" lon="-94.77724935160249">
-        <ele>283.2385214857345</ele>
-        <time>2022-04-07T18:55:03.632Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.173932" lon="-94.777255">
+      <trkpt lat="39.173897" lon="-94.777224">
         <ele>283.25</ele>
-        <time>2022-04-07T18:55:04.469Z</time>
+        <time>2022-04-07T19:24:36.421Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.173938" lon="-94.777256">
-        <ele>283.25</ele>
-        <time>2022-04-07T18:55:05.561Z</time>
+      <trkpt lat="39.173899" lon="-94.777177">
+        <ele>283</ele>
+        <time>2022-04-07T19:24:44.599Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.173805" lon="-94.777041">
         <ele>283</ele>
-        <time>2022-04-07T18:55:43.754Z</time>
+        <time>2022-04-07T19:25:16.253Z</time>
+      </trkpt>
+      <trkpt lat="39.173805" lon="-94.777041">
+        <ele>283</ele>
+        <time>2022-04-07T19:25:16.253Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2041,7 +3486,7 @@
       </trkpt>
       <trkpt lat="39.173627" lon="-94.776979">
         <ele>284</ele>
-        <time>2022-04-07T18:56:18.781Z</time>
+        <time>2022-04-07T19:25:49.906Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2054,7 +3499,7 @@
       </trkpt>
       <trkpt lat="39.173627" lon="-94.776979">
         <ele>283.75</ele>
-        <time>2022-04-07T18:56:18.781Z</time>
+        <time>2022-04-07T19:25:49.906Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2067,7 +3512,7 @@
       </trkpt>
       <trkpt lat="39.173622" lon="-94.776977">
         <ele>284</ele>
-        <time>2022-04-07T18:56:19.780Z</time>
+        <time>2022-04-07T19:25:50.905Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2080,7 +3525,7 @@
       </trkpt>
       <trkpt lat="39.173455" lon="-94.777148">
         <ele>285</ele>
-        <time>2022-04-07T18:57:00.288Z</time>
+        <time>2022-04-07T19:26:31.413Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2093,7 +3538,7 @@
       </trkpt>
       <trkpt lat="39.173256" lon="-94.777191">
         <ele>284.25</ele>
-        <time>2022-04-07T18:57:38.621Z</time>
+        <time>2022-04-07T19:27:09.746Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2106,7 +3551,7 @@
       </trkpt>
       <trkpt lat="39.173056" lon="-94.777191">
         <ele>281.5</ele>
-        <time>2022-04-07T18:58:16.617Z</time>
+        <time>2022-04-07T19:27:47.742Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2119,150 +3564,232 @@
       </trkpt>
       <trkpt lat="39.172856" lon="-94.777062">
         <ele>280</ele>
-        <time>2022-04-07T18:58:59.098Z</time>
+        <time>2022-04-07T19:28:29.126Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
               <highway>footway</highway>
               <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.172856" lon="-94.777062">
+        <ele>280</ele>
+        <time>2022-04-07T19:28:29.284Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172657" lon="-94.776848">
         <ele>280</ele>
-        <time>2022-04-07T18:59:48.319Z</time>
+        <time>2022-04-07T19:29:17.233Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172441" lon="-94.776655">
         <ele>280</ele>
-        <time>2022-04-07T19:00:38.238Z</time>
+        <time>2022-04-07T19:30:05.862Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.172208" lon="-94.776311">
         <ele>274.75</ele>
-        <time>2022-04-07T19:01:45.517Z</time>
+        <time>2022-04-07T19:31:11.402Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172091" lon="-94.776033">
+      <trkpt lat="39.172073" lon="-94.776037">
         <ele>272.5</ele>
-        <time>2022-04-07T19:02:32.106Z</time>
+        <time>2022-04-07T19:31:57.983Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
-      <trkpt lat="39.172091" lon="-94.775796">
-        <ele>271.5</ele>
-        <time>2022-04-07T19:03:07.012Z</time>
+      <trkpt lat="39.172048" lon="-94.775772">
+        <ele>270.75</ele>
+        <time>2022-04-07T19:32:36.285Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171999" lon="-94.77559">
+        <ele>268</ele>
+        <time>2022-04-07T19:33:03.927Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171969" lon="-94.775555">
+        <ele>267.25</ele>
+        <time>2022-04-07T19:33:11.415Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="39.171941" lon="-94.775584">
+        <ele>267.5</ele>
+        <time>2022-04-07T19:33:18.062Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <reversedirection>yes</reversedirection>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171942" lon="-94.775668">
         <ele>268.5</ele>
-        <time>2022-04-07T19:03:41.022Z</time>
+        <time>2022-04-07T19:33:30.116Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171748" lon="-94.775786">
         <ele>269</ele>
-        <time>2022-04-07T19:04:17.906Z</time>
+        <time>2022-04-07T19:34:09.812Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
-            </gpxtpx:Extensions>
-          </gpxtpx:TrackPointExtension>
-        </extensions>
-      </trkpt>
-      <trkpt lat="39.171748" lon="-94.775786">
-        <ele>269</ele>
-        <time>2022-04-07T19:04:18.052Z</time>
-        <extensions>
-          <gpxtpx:TrackPointExtension>
-            <gpxtpx:Extensions>
-              <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171723" lon="-94.776011">
         <ele>269.25</ele>
-        <time>2022-04-07T19:04:48.355Z</time>
+        <time>2022-04-07T19:34:42.425Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171729" lon="-94.776375">
         <ele>269</ele>
-        <time>2022-04-07T19:05:36.893Z</time>
+        <time>2022-04-07T19:35:34.663Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
               <reversedirection>yes</reversedirection>
-              <highway>footway</highway>
-              <bicycle>yes</bicycle>
+              <highway>path</highway>
+              <surface>ground</surface>
+              <access>yes</access>
+              <foot>designated</foot>
+              <bicycle>designated</bicycle>
             </gpxtpx:Extensions>
           </gpxtpx:TrackPointExtension>
         </extensions>
       </trkpt>
       <trkpt lat="39.171756" lon="-94.776555">
         <ele>269.25</ele>
-        <time>2022-04-07T19:06:01.335Z</time>
+        <time>2022-04-07T19:36:00.968Z</time>
+      </trkpt>
+      <trkpt lat="39.171756" lon="-94.776555">
+        <ele>269.25</ele>
+        <time>2022-04-07T19:36:00.968Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2275,7 +3802,7 @@
       </trkpt>
       <trkpt lat="39.171873" lon="-94.776688">
         <ele>270.75</ele>
-        <time>2022-04-07T19:06:28.153Z</time>
+        <time>2022-04-07T19:36:29.830Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2288,7 +3815,7 @@
       </trkpt>
       <trkpt lat="39.172075" lon="-94.776784">
         <ele>272.5</ele>
-        <time>2022-04-07T19:07:05.172Z</time>
+        <time>2022-04-07T19:37:06.849Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2301,7 +3828,7 @@
       </trkpt>
       <trkpt lat="39.172258" lon="-94.776955">
         <ele>273</ele>
-        <time>2022-04-07T19:07:44.031Z</time>
+        <time>2022-04-07T19:37:45.708Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2314,7 +3841,7 @@
       </trkpt>
       <trkpt lat="39.172424" lon="-94.77702">
         <ele>275</ele>
-        <time>2022-04-07T19:08:13.863Z</time>
+        <time>2022-04-07T19:38:15.540Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2327,7 +3854,7 @@
       </trkpt>
       <trkpt lat="39.17254" lon="-94.777148">
         <ele>275</ele>
-        <time>2022-04-07T19:08:40.113Z</time>
+        <time>2022-04-07T19:38:41.790Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2340,7 +3867,7 @@
       </trkpt>
       <trkpt lat="39.172707" lon="-94.777363">
         <ele>274.75</ele>
-        <time>2022-04-07T19:09:20.687Z</time>
+        <time>2022-04-07T19:39:22.364Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2353,7 +3880,7 @@
       </trkpt>
       <trkpt lat="39.172873" lon="-94.777363">
         <ele>277.5</ele>
-        <time>2022-04-07T19:09:49.233Z</time>
+        <time>2022-04-07T19:39:50.910Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2366,7 +3893,7 @@
       </trkpt>
       <trkpt lat="39.172973" lon="-94.777449">
         <ele>278.25</ele>
-        <time>2022-04-07T19:10:09.900Z</time>
+        <time>2022-04-07T19:40:11.577Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2379,7 +3906,7 @@
       </trkpt>
       <trkpt lat="39.173156" lon="-94.777535">
         <ele>280.5</ele>
-        <time>2022-04-07T19:10:43.393Z</time>
+        <time>2022-04-07T19:40:45.070Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2392,7 +3919,7 @@
       </trkpt>
       <trkpt lat="39.173339" lon="-94.777492">
         <ele>284</ele>
-        <time>2022-04-07T19:11:15.380Z</time>
+        <time>2022-04-07T19:41:17.057Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2405,7 +3932,7 @@
       </trkpt>
       <trkpt lat="39.173499" lon="-94.777534">
         <ele>283.75</ele>
-        <time>2022-04-07T19:11:43.715Z</time>
+        <time>2022-04-07T19:41:45.392Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2418,7 +3945,7 @@
       </trkpt>
       <trkpt lat="39.173499" lon="-94.777534">
         <ele>283.75</ele>
-        <time>2022-04-07T19:11:43.715Z</time>
+        <time>2022-04-07T19:41:45.392Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2431,7 +3958,7 @@
       </trkpt>
       <trkpt lat="39.173505" lon="-94.777535">
         <ele>283.75</ele>
-        <time>2022-04-07T19:11:44.762Z</time>
+        <time>2022-04-07T19:41:46.439Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2444,7 +3971,7 @@
       </trkpt>
       <trkpt lat="39.173389" lon="-94.77762">
         <ele>282.5</ele>
-        <time>2022-04-07T19:12:07.913Z</time>
+        <time>2022-04-07T19:42:09.590Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2457,7 +3984,7 @@
       </trkpt>
       <trkpt lat="39.173239" lon="-94.777706">
         <ele>279.75</ele>
-        <time>2022-04-07T19:12:36.398Z</time>
+        <time>2022-04-07T19:42:38.075Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2470,7 +3997,7 @@
       </trkpt>
       <trkpt lat="39.173056" lon="-94.777771">
         <ele>276.25</ele>
-        <time>2022-04-07T19:13:09.337Z</time>
+        <time>2022-04-07T19:43:11.014Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2483,7 +4010,7 @@
       </trkpt>
       <trkpt lat="39.172873" lon="-94.777728">
         <ele>274</ele>
-        <time>2022-04-07T19:13:41.617Z</time>
+        <time>2022-04-07T19:43:43.294Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2496,7 +4023,7 @@
       </trkpt>
       <trkpt lat="39.172491" lon="-94.777556">
         <ele>269.25</ele>
-        <time>2022-04-07T19:14:51.831Z</time>
+        <time>2022-04-07T19:44:53.508Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2509,7 +4036,7 @@
       </trkpt>
       <trkpt lat="39.172324" lon="-94.77732">
         <ele>269</ele>
-        <time>2022-04-07T19:15:34.818Z</time>
+        <time>2022-04-07T19:45:36.495Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2522,7 +4049,7 @@
       </trkpt>
       <trkpt lat="39.172141" lon="-94.77717">
         <ele>267.75</ele>
-        <time>2022-04-07T19:16:12.444Z</time>
+        <time>2022-04-07T19:46:14.121Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2535,7 +4062,7 @@
       </trkpt>
       <trkpt lat="39.172027" lon="-94.77711">
         <ele>266.75</ele>
-        <time>2022-04-07T19:16:33.810Z</time>
+        <time>2022-04-07T19:46:35.487Z</time>
         <extensions>
           <gpxtpx:TrackPointExtension>
             <gpxtpx:Extensions>
@@ -2547,7 +4074,7 @@
       </trkpt>
       <trkpt lat="39.172026" lon="-94.77711">
         <ele>267.5</ele>
-        <time>2022-04-07T19:16:34.019Z</time>
+        <time>2022-04-07T19:46:35.696Z</time>
       </trkpt>
     </trkseg>
   </trk>

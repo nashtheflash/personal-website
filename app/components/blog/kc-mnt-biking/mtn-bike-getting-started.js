@@ -11,6 +11,7 @@ export function MtnBikeGettingStarted() {
             <BikeShops/>
             <Bike/>
             <Tools/>
+            <RidingClub/>
         </div>
     )
 }
@@ -18,6 +19,12 @@ export function MtnBikeGettingStarted() {
 function HowToUse() {
     return(
         <h1>How to Use this Book</h1>
+    )
+}
+
+function RidingClub() {
+    return(
+        <h1>Wyco riding club</h1>
     )
 }
 
