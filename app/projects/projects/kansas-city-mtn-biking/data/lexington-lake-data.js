@@ -17,10 +17,10 @@ export const lexingtonLakeData = {
         mapStartingLon: -95.010915,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Rose Loop', difficulty: 'easy', url: '/mtn-bike-kc/lexington-lake/gpx-files/rose-loop.gpx', active: 1, oneWay: false, description: 'Second Easyiest Trail', features: '', mustRide: false, rating: 3},
-            {name: 'Emerald Loop', difficulty: 'medium', url: '/mtn-bike-kc/lexington-lake/gpx-files/emerald-loop.gpx', active: 1, oneWay: false, description: 'Easy riding on the sides, harder riding on the back. The short steep hills on the back section are fun', features: '', mustRide: false, rating: 3},
-            {name: 'Indigo Loop', difficulty: 'medium', url: '/mtn-bike-kc/lexington-lake/gpx-files/indigo-loop.gpx', active: 1, oneWay: false, description: 'My Favorite trail on the system. The back section is the hardest part!', features: '', mustRide: true, rating: 3},
-            {name: 'Charcoal Loop', difficulty: 'easy', url: '/mtn-bike-kc/lexington-lake/gpx-files/charcoal-loop.gpx', active: 1, oneWay: false, description: 'Easyiest Trail. Rides Fast!', features: '', mustRide: false, rating: 3},
+            {name: 'Rose Loop', difficulty: 'easy', textColor: 'text-rose-400', color: '#ff637e', url: '/mtn-bike-kc/lexington-lake/gpx-files/rose-loop.gpx', active: 1, oneWay: false, description: 'Second Easyiest Trail', features: '', mustRide: false, rating: 3},
+            {name: 'Emerald Loop', difficulty: 'medium', textColor: 'text-emerald-400', color: '#00d492', url: '/mtn-bike-kc/lexington-lake/gpx-files/emerald-loop.gpx', active: 1, oneWay: false, description: 'Easy riding on the sides, harder riding on the back. The short steep hills on the back section are fun', features: '', mustRide: false, rating: 3},
+            {name: 'Indigo Loop', difficulty: 'medium', textColor: 'text-indigo-400', color: '#7c86ff', url: '/mtn-bike-kc/lexington-lake/gpx-files/indigo-loop.gpx', active: 1, oneWay: false, description: 'My Favorite trail on the system. The back section is the hardest part!', features: '', mustRide: true, rating: 3},
+            {name: 'Charcoal Loop', difficulty: 'easy', textColor: 'text-stone-700', color: '#44403b', url: '/mtn-bike-kc/lexington-lake/gpx-files/charcoal-loop.gpx', active: 1, oneWay: false, description: 'Easyiest Trail. Rides Fast!', features: '', mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/lexington-lake/park-sign.JPEG", title: 'Welcome to Lexington Lake', show: false},

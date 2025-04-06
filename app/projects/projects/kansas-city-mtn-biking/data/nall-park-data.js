@@ -17,10 +17,10 @@ export const nallParkData = {
         mapStartingLon: -94.648130,
         mapZoom: 16,
         gpxTracks: [
-            {name: 'Master Blaster', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/master-blaster.gpx'},
-            {name: 'Beyond-thunderdome', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/beyond-thunderdome.gpx'},
-            {name: 'Ropoflo', difficulty: 'easy', url: '/mtn-bike-kc/nall-park/gpx-files/ropoflo.gpx'},
-            {name: 'Aunty Entity', difficulty: 'medium', url: '/mtn-bike-kc/nall-park/gpx-files/aunty-entity.gpx'},
+            {name: 'Master Blaster', difficulty: 'easy', textColor: 'text-green-400', color: '#00d492', url: '/mtn-bike-kc/nall-park/gpx-files/master-blaster.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Beyond-thunderdome', difficulty: 'easy', textColor: 'text-blue-400', color: '#7c86ff', url: '/mtn-bike-kc/nall-park/gpx-files/beyond-thunderdome.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Ropoflo', difficulty: 'easy', textColor: 'text-stone-950', color: '#0c0a09', url: '/mtn-bike-kc/nall-park/gpx-files/ropoflo.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
+            {name: 'Aunty Entity', difficulty: 'medium', textColor: 'text-red-400', color: '#ff637e', url: '/mtn-bike-kc/nall-park/gpx-files/aunty-entity.gpx',  oneWay: false, description: '', features: [], mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/nall-park/trail-map.JPEG", title: 'Trail Map', subtitle: "Beyond Thunderdome is not correct", show: false},

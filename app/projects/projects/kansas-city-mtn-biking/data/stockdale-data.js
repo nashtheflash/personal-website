@@ -17,10 +17,10 @@ export const stockdaleData = {
         mapStartingLon: -94.385412,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Main Loop', difficulty: 'easy', url: '/mtn-bike-kc/stockdale/gpx-files/main-loop.gpx', active: 1, oneWay: false, description: 'Fun fast trail.', features: 'skinnys', mustRide: true, rating: 4},
-            {name: 'Skills Loop', difficulty: 'easy', url: '/mtn-bike-kc/stockdale/gpx-files/skills-loop.gpx', active: 1, oneWay: false, description: 'Great jumpline right by the parking lot!', features: 'jumps, burms', mustRide: false, rating: 3},
-            {name: 'Tech Trail 1', difficulty: 'medium', url: '/mtn-bike-kc/stockdale/gpx-files/technical-offshoot-1.gpx', active: 1, oneWay: false, description: "Short Fun tech trail with a nice rock ledge. Don't Fall!", features: '', mustRide: true, rating: 3},
-            {name: 'Tech Trail 2', difficulty: 'medium', url: '/mtn-bike-kc/stockdale/gpx-files/technical-offshoot-2.gpx', active: 1, oneWay: false, description: 'Short challenging trail', features: '', mustRide: false, rating: 3},
+            {name: 'Main Loop', difficulty: 'easy', textColor: 'text-blue-400', color: '#7c86ff', url: '/mtn-bike-kc/stockdale/gpx-files/main-loop.gpx', active: 1, oneWay: false, description: 'Fun fast trail.', features: 'skinnys', mustRide: true, rating: 4},
+            {name: 'Skills Loop', difficulty: 'easy', textColor: 'text-green-400', color: '#00d492', url: '/mtn-bike-kc/stockdale/gpx-files/skills-loop.gpx', active: 1, oneWay: false, description: 'Great jumpline right by the parking lot!', features: 'jumps, burms', mustRide: false, rating: 3},
+            {name: 'Tech Trail 1', difficulty: 'medium', textColor: 'text-red-400', color: '#ff637e', url: '/mtn-bike-kc/stockdale/gpx-files/technical-offshoot-1.gpx', active: 1, oneWay: false, description: "Short Fun tech trail with a nice rock ledge. Don't Fall!", features: '', mustRide: true, rating: 3},
+            {name: 'Tech Trail 2', difficulty: 'medium', textColor: 'text-red-400', color: '#ff637e', url: '/mtn-bike-kc/stockdale/gpx-files/technical-offshoot-2.gpx', active: 1, oneWay: false, description: 'Short challenging trail', features: '', mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/stockdale/entrance.JPEG", title: 'Park Entrance', show: false},

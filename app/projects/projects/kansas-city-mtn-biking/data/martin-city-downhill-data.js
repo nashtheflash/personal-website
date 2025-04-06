@@ -17,11 +17,11 @@ export const martinCityDownhillData = {
         mapStartingLon: -94.593406,
         mapZoom: 14,
         gpxTracks: [
-            {name: "Access Trail", difficulty: 'easy', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/access-trail.gpx', active: 1, oneWay: false, description: 'Access Trail. Doesnt mean its not fun!', features: '', mustRide: false, rating: 3},
-            {name: "UPnAT'EM", difficulty: 'easy', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/upnatem.gpx', active: 1, oneWay: false, description: 'Easy up route. Fun to ride down too!', features: '', mustRide: false, rating: 3},
-            {name: "Fraggle Rock", difficulty: 'expert', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/fraggle-rock.gpx', active: 1, oneWay: true, description: 'Contains the areas biggest sends!', features: 'jumps', mustRide: false, rating: 3},
-            {name: "Jack Burton", difficulty: 'hard', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/jack-burton.gpx', active: 1, oneWay: true, description: 'I love this trail. Low consequence jumps and big berms.', features: 'jumps', mustRide: true, rating: 3},
-            {name: "Truffle Shuffle", difficulty: 'medium', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/truffle-shuffle.gpx', active: 1, oneWay: true, description: 'Easiest downhill only trail.', features: 'jumps, skinnys', mustRide: false, rating: 3},
+            {name: "Access Trail", difficulty: 'easy', textColor: 'text-yellow-400', color: '#fcc800', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/access-trail.gpx', active: 1, oneWay: false, description: 'Access Trail. Doesnt mean its not fun!', features: '', mustRide: false, rating: 3},
+            {name: "UPnAT'EM", difficulty: 'easy', textColor: 'text-green-400', color: '#05df72', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/upnatem.gpx', active: 1, oneWay: false, description: 'Easy up route. Fun to ride down too!', features: '', mustRide: false, rating: 3},
+            {name: "Bobber Drop", difficulty: 'expert', textColor: 'text-red-400', color: '#ff6467', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/fraggle-rock.gpx', active: 1, oneWay: true, description: 'Contains the areas biggest sends!', features: 'jumps', mustRide: false, rating: 3},
+            {name: "Jack Burton", difficulty: 'hard', textColor: 'text-orange-400', color: '#ff8904', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/jack-burton.gpx', active: 1, oneWay: true, description: 'I love this trail. Low consequence jumps and big berms.', features: 'jumps', mustRide: true, rating: 3},
+            {name: "Truffle Shuffle", difficulty: 'medium', textColor: 'text-blue-400', color: '#7c86ff', url: '/mtn-bike-kc/martin-city-downhill/gpx-files/truffle-shuffle.gpx', active: 1, oneWay: true, description: 'Easiest downhill only trail.', features: 'jumps, skinnys', mustRide: false, rating: 3},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/martin-city-downhill/browns-field-sign.JPEG", title: 'Brown Parking Sign', show: false},

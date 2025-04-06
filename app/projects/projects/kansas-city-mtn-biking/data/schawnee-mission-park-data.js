@@ -17,12 +17,12 @@ export const schawneeMissionParkData = {
         mapStartingLon: -94.807653,
         mapZoom: 13,
         gpxTracks: [
-            {name: 'Red Loop', difficulty: 'medium', url: '/mtn-bike-kc/sm-park/gpx-files/red-loop.gpx', active: 1, oneWay: false, description: 'This is harder than the Orange Loop but easier than the others!', features: '', mustRide: true, rating: 4},
-            {name: 'Gold Loop', difficulty: 'medium', url: '/mtn-bike-kc/sm-park/gpx-files/gold-loop.gpx', active: 1, oneWay: false, description: 'I prefer counter clockwise. Best trail in the park!', features: '', mustRide: true, rating: 4},
-            {name: 'Orange Loop', difficulty: 'medium', url: '/mtn-bike-kc/sm-park/gpx-files/orange-loop.gpx', active: 1, oneWay: false, description: 'Easiest trail in the park. Fun, fast riding!', features: '', mustRide: true, rating: 4},
-            {name: 'Violet Loop', difficulty: 'medium', url: '/mtn-bike-kc/sm-park/gpx-files/violet-loop.gpx', active: 1, oneWay: false, description: 'Hard rocky riding. Pretty technical in spots.', features: '', mustRide: true, rating: 4},
-            {name: 'Pump Track', difficulty: 'medium', url: '/mtn-bike-kc/sm-park/gpx-files/pump-track.gpx', active: 1, oneWay: false, description: 'Fun time and right by the parking lot. Best jumps in south Kansas City.', features: 'jumps', mustRide: true, rating: 4},
-            {name: 'Skills Area', difficulty: 'easy', url: '/mtn-bike-kc/sm-park/gpx-files/skills-area.gpx', active: 1, oneWay: false, description: 'Great for kids. Boring for adults.', features: '', mustRide: true, rating: 4},
+            {name: 'Red Loop', difficulty: 'medium', textColor: 'text-red-400', color: '#ff637e', url: '/mtn-bike-kc/sm-park/gpx-files/red-loop.gpx', active: 1, oneWay: false, description: 'This is harder than the Orange Loop but easier than the others!', features: '', mustRide: true, rating: 4},
+            {name: 'Gold Loop', difficulty: 'medium', textColor: 'text-yellow-400', color: '#fcc800', url: '/mtn-bike-kc/sm-park/gpx-files/gold-loop.gpx', active: 1, oneWay: false, description: 'I prefer counter clockwise. Best trail in the park!', features: '', mustRide: true, rating: 4},
+            {name: 'Orange Loop', difficulty: 'medium', textColor: 'text-orange-400', color: '#ff8904', url: '/mtn-bike-kc/sm-park/gpx-files/orange-loop.gpx', active: 1, oneWay: false, description: 'Easiest trail in the park. Fun, fast riding!', features: '', mustRide: true, rating: 4},
+            {name: 'Violet Loop', difficulty: 'medium', textColor: 'text-violet-400', color: '#a684ff', url: '/mtn-bike-kc/sm-park/gpx-files/violet-loop.gpx', active: 1, oneWay: false, description: 'Hard rocky riding. Pretty technical in spots.', features: '', mustRide: true, rating: 4},
+            {name: 'Pump Track', difficulty: 'medium', textColor: 'text-blue-400', color: '#7c86ff', url: '/mtn-bike-kc/sm-park/gpx-files/pump-track.gpx', active: 1, oneWay: false, description: 'Fun time and right by the parking lot. Best jumps in south Kansas City.', features: 'jumps', mustRide: true, rating: 4},
+            {name: 'Skills Area', difficulty: 'easy', textColor: 'text-green-400', color: '#00d492', url: '/mtn-bike-kc/sm-park/gpx-files/skills-area.gpx', active: 1, oneWay: false, description: 'Great for kids. Boring for adults.', features: '', mustRide: true, rating: 4},
         ],
         photos: [
             { photoUrl: "/mtn-bike-kc/sm-park/middle-gate.JPEG", title: 'Middle Gate', subtitle: "If you peddal down the paved path you will see it!", show: false},
