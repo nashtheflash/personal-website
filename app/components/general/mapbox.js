@@ -85,12 +85,7 @@ export default function MapBox({ data, geoJsonTracks }) {
                         'line-cap': 'round'
                     },
                     paint: {
-                        'line-color':   track.difficulty == 'paved' ? '#808080' : 
-                            track.difficulty == 'easy' ? '#22c55e' : 
-                                track.difficulty == 'medium' ? '#3b82f6' : 
-                                    track.difficulty == 'hard' ? '#000000' : 
-                                        track.difficulty == 'expert' ? '#ef4444' : 
-                                            '#888',
+                        'line-color': track.color ? track.color : '#FFFFFF',
                         'line-width': 4,
                     }
                 });
@@ -147,12 +142,7 @@ export default function MapBox({ data, geoJsonTracks }) {
                         'line-cap': 'round'
                     },
                     paint: {
-                        'line-color':   track.color ? track.color :
-                            track.difficulty == 'easy' ? '#22c55e' : 
-                                track.difficulty == 'medium' ? '#3b82f6' : 
-                                    track.difficulty == 'hard' ? '#000000' : 
-                                        track.difficulty == 'expert' ? '#ef4444' : 
-                                            '#888',
+                        'line-color': track.color ? track.color : '#FFFFFF',
                         'line-width': 4,
                     }
                 });

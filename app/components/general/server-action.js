@@ -25,9 +25,11 @@ const fetchGPX = (file) => {
     const fs = require("fs");
     var path = require("path");
     const DOMParser = require("xmldom").DOMParser;
-    const rootPath = process.cwd();
+    // const rootPath = process.cwd();
+    const gpxPath = path.join(process.cwd(), 'public', file);
 
-    const gpxFile = new DOMParser().parseFromString(fs.readFileSync(path.resolve(`${rootPath}/public${file}`), "utf8"));
+    // const gpxFile = new DOMParser().parseFromString(fs.readFileSync(path.resolve(`${rootPath}/public${file}`), "utf8"));
+    const gpxFile = new DOMParser().parseFromString(fs.readFileSync(path.resolve(gpxPath), "utf8"));
 
     return gpxFile;
 
