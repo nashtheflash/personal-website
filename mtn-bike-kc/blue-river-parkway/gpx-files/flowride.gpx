@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Flowride</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>Flowride</name>
+    <link href="https://www.mtbproject.com/trail/7036779/flowride"/>
+    <trkseg>
+      <trkpt lat="38.89942" lon="-94.572662">
+        <ele>305.25</ele>
+        <time>2022-11-20T17:40:06.215Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.899277" lon="-94.572353">
+        <ele>307.25</ele>
+        <time>2022-11-20T17:41:24.566Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.899227" lon="-94.57216">
+        <ele>307.5</ele>
+        <time>2022-11-20T17:42:08.897Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.89911" lon="-94.571838">
+        <ele>306.75</ele>
+        <time>2022-11-20T17:43:26.345Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.899043" lon="-94.571731">
+        <ele>306</ele>
+        <time>2022-11-20T17:43:56.276Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898993" lon="-94.571795">
+        <ele>305.25</ele>
+        <time>2022-11-20T17:44:16.038Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898926" lon="-94.571795">
+        <ele>304.25</ele>
+        <time>2022-11-20T17:44:34.800Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898893" lon="-94.571731">
+        <ele>304</ele>
+        <time>2022-11-20T17:44:51.529Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898793" lon="-94.571581">
+        <ele>302.5</ele>
+        <time>2022-11-20T17:45:34.574Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898659" lon="-94.571516">
+        <ele>300.5</ele>
+        <time>2022-11-20T17:46:14.683Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898542" lon="-94.571559">
+        <ele>298.75</ele>
+        <time>2022-11-20T17:46:48.762Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898409" lon="-94.571581">
+        <ele>297</ele>
+        <time>2022-11-20T17:47:25.056Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898409" lon="-94.571581">
+        <ele>297</ele>
+        <time>2022-11-20T17:47:25.287Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898325" lon="-94.571645">
+        <ele>295.75</ele>
+        <time>2022-11-20T17:47:51.717Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898258" lon="-94.571752">
+        <ele>295.25</ele>
+        <time>2022-11-20T17:48:20.645Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898208" lon="-94.57186">
+        <ele>294.75</ele>
+        <time>2022-11-20T17:48:47.115Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.898108" lon="-94.571988">
+        <ele>294</ele>
+        <time>2022-11-20T17:49:25.318Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897991" lon="-94.572053">
+        <ele>292.75</ele>
+        <time>2022-11-20T17:49:59.817Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897757" lon="-94.572053">
+        <ele>290.75</ele>
+        <time>2022-11-20T17:51:03.149Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897574" lon="-94.572117">
+        <ele>289</ele>
+        <time>2022-11-20T17:51:54.480Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897457" lon="-94.572182">
+        <ele>287.75</ele>
+        <time>2022-11-20T17:52:28.980Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897356" lon="-94.572182">
+        <ele>287</ele>
+        <time>2022-11-20T17:52:56.315Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897256" lon="-94.57216">
+        <ele>286</ele>
+        <time>2022-11-20T17:53:23.773Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896972" lon="-94.57216">
+        <ele>283.5</ele>
+        <time>2022-11-20T17:54:40.638Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896858" lon="-94.572242">
+        <ele>282.25</ele>
+        <time>2022-11-20T17:55:15.998Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896822" lon="-94.572267">
+        <ele>281.75</ele>
+        <time>2022-11-20T17:55:27.072Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896799" lon="-94.572291">
+        <ele>280.75</ele>
+        <time>2022-11-20T17:55:35.090Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896722" lon="-94.572375">
+        <ele>280.75</ele>
+        <time>2022-11-20T17:56:02.428Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896672" lon="-94.572546">
+        <ele>279.5</ele>
+        <time>2022-11-20T17:56:40.906Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896688" lon="-94.572739">
+        <ele>277.5</ele>
+        <time>2022-11-20T17:57:21.790Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896766" lon="-94.572881">
+        <ele>276.25</ele>
+        <time>2022-11-20T17:57:58.400Z</time>
+      </trkpt>
+      <trkpt lon="-94.572881" lat="38.896766">
+        <ele>277.2</ele>
+        <time>2022-11-20T17:57:59.006Z</time>
+      </trkpt>
+      <trkpt lat="38.896766" lon="-94.572881">
+        <ele>276.25</ele>
+        <time>2022-11-20T17:57:59.612Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896772" lon="-94.57289">
+        <ele>276.25</ele>
+        <time>2022-11-20T17:58:04.234Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.896889" lon="-94.572997">
+        <ele>275.75</ele>
+        <time>2022-11-20T17:59:16.421Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:Extensions>
+              <highway>footway</highway>
+              <bicycle>yes</bicycle>
+            </gpxtpx:Extensions>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="38.897079" lon="-94.572976">
+        <ele>277.25</ele>
+        <time>2022-11-20T18:00:52.278Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

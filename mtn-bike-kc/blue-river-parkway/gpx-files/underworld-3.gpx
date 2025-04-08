@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>underworld-3</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>underworld-3</name>
+    <link href="https://www.mtbproject.com/trail/7066734/underworld"/>
+    <trkseg>
+      <trkpt lon="-94.556864" lat="38.962986">
+        <ele>238.06</ele>
+        <time>2022-04-27T19:21:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.55646" lat="38.963307">
+        <ele>237.25</ele>
+        <time>2022-04-27T19:22:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.556325" lat="38.963216">
+        <ele>236.67</ele>
+        <time>2022-04-27T19:23:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.556191" lat="38.963049">
+        <ele>236.38</ele>
+        <time>2022-04-27T19:24:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.556056" lat="38.963049">
+        <ele>236.41</ele>
+        <time>2022-04-27T19:25:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.555831" lat="38.96344">
+        <ele>236.52</ele>
+        <time>2022-04-27T19:26:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.555598" lat="38.963649">
+        <ele>236.46</ele>
+        <time>2022-04-27T19:27:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.555481" lat="38.963887">
+        <ele>236.24</ele>
+        <time>2022-04-27T19:28:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.555185" lat="38.963929">
+        <ele>235.83</ele>
+        <time>2022-04-27T19:29:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.554735" lat="38.964397">
+        <ele>235.09</ele>
+        <time>2022-04-27T19:30:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.554475" lat="38.964467">
+        <ele>233.93</ele>
+        <time>2022-04-27T19:31:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.553828" lat="38.964767">
+        <ele>232.85</ele>
+        <time>2022-04-27T19:32:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.553675" lat="38.964921">
+        <ele>232.61</ele>
+        <time>2022-04-27T19:33:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.553334" lat="38.965046">
+        <ele>233.14</ele>
+        <time>2022-04-27T19:34:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.553056" lat="38.965207">
+        <ele>233.6</ele>
+        <time>2022-04-27T19:35:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.552777" lat="38.965535">
+        <ele>233.74</ele>
+        <time>2022-04-27T19:36:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.552669" lat="38.966017">
+        <ele>233.98</ele>
+        <time>2022-04-27T19:37:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.551906" lat="38.966688">
+        <ele>234.42</ele>
+        <time>2022-04-27T19:38:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.551546" lat="38.966925">
+        <ele>234.96</ele>
+        <time>2022-04-27T19:39:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.551286" lat="38.967267">
+        <ele>235.44</ele>
+        <time>2022-04-27T19:40:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.550828" lat="38.967596">
+        <ele>235.59</ele>
+        <time>2022-04-27T19:41:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.550585" lat="38.967868">
+        <ele>235.44</ele>
+        <time>2022-04-27T19:42:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.550567" lat="38.968057">
+        <ele>235.25</ele>
+        <time>2022-04-27T19:43:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.550316" lat="38.968196">
+        <ele>235.27</ele>
+        <time>2022-04-27T19:44:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.550226" lat="38.96849">
+        <ele>235.72</ele>
+        <time>2022-04-27T19:45:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.549777" lat="38.968629">
+        <ele>236.31</ele>
+        <time>2022-04-27T19:46:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.549355" lat="38.968797">
+        <ele>236.54</ele>
+        <time>2022-04-27T19:47:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.548968" lat="38.969251">
+        <ele>236.71</ele>
+        <time>2022-04-27T19:48:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.548699" lat="38.969621">
+        <ele>237.52</ele>
+        <time>2022-04-27T19:49:59.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.548465" lat="38.969705">
+        <ele>238.36</ele>
+        <time>2022-04-27T19:50:59.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

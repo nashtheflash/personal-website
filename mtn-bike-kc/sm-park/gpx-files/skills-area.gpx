@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" creator="https://mtbproject.com" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Skills Trail</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <trk>
+    <name>Skills Trail</name>
+    <link href="https://www.mtbproject.com/trail/7052750/skills-trail"/>
+    <trkseg>
+      <trkpt lat="38.993299" lon="-94.798213">
+        <ele>309.75</ele>
+        <time>2022-04-24T23:47:55.993Z</time>
+      </trkpt>
+      <trkpt lat="38.993242" lon="-94.79821">
+        <ele>310</ele>
+        <time>2022-04-24T23:48:12.568Z</time>
+      </trkpt>
+      <trkpt lat="38.993251" lon="-94.797509">
+        <ele>307.75</ele>
+        <time>2022-04-24T23:50:50.905Z</time>
+      </trkpt>
+      <trkpt lat="38.992685" lon="-94.797545">
+        <ele>306.5</ele>
+        <time>2022-04-24T23:53:35.572Z</time>
+      </trkpt>
+      <trkpt lat="38.99248" lon="-94.797543">
+        <ele>305.75</ele>
+        <time>2022-04-24T23:54:35.141Z</time>
+      </trkpt>
+      <trkpt lat="38.991823756255336" lon="-94.79753772657821">
+        <ele>290.6622615730885</ele>
+        <time>2022-04-24T23:57:50.488Z</time>
+      </trkpt>
+      <trkpt lat="38.991823756255336" lon="-94.79753772657821">
+        <ele>296.5258650688239</ele>
+        <time>2022-04-24T23:57:50.488Z</time>
+      </trkpt>
+      <trkpt lat="38.991489092042315" lon="-94.79749037715948">
+        <ele>295.09207241862595</ele>
+        <time>2022-04-24T23:59:30.708Z</time>
+      </trkpt>
+      <trkpt lat="38.99136129234165" lon="-94.79735395789112">
+        <ele>294.36887407398035</ele>
+        <time>2022-04-25T00:00:20.138Z</time>
+      </trkpt>
+      <trkpt lat="38.99136129234165" lon="-94.79735395789112">
+        <ele>294.04610228419745</ele>
+        <time>2022-04-25T00:00:20.138Z</time>
+      </trkpt>
+      <trkpt lon="-94.797299" lat="38.991332">
+        <ele>293.53</ele>
+        <time>2022-04-25T00:00:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.797415" lat="38.991018">
+        <ele>292.36</ele>
+        <time>2022-04-25T00:01:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.797191" lat="38.990892">
+        <ele>292.29</ele>
+        <time>2022-04-25T00:02:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.796786" lat="38.99085">
+        <ele>292.65</ele>
+        <time>2022-04-25T00:03:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.796328" lat="38.990997">
+        <ele>292.85</ele>
+        <time>2022-04-25T00:04:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.796185" lat="38.991157">
+        <ele>293</ele>
+        <time>2022-04-25T00:05:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.796301" lat="38.991541">
+        <ele>293.63</ele>
+        <time>2022-04-25T00:06:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.796571" lat="38.991646">
+        <ele>294.9</ele>
+        <time>2022-04-25T00:07:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.797263" lat="38.991639">
+        <ele>295.69</ele>
+        <time>2022-04-25T00:08:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.797325" lat="38.991534">
+        <ele>295.5</ele>
+        <time>2022-04-25T00:09:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.797236" lat="38.991485">
+        <ele>295.2</ele>
+        <time>2022-04-25T00:10:58.000Z</time>
+      </trkpt>
+      <trkpt lon="-94.79737" lat="38.991367">
+        <ele>295.09</ele>
+        <time>2022-04-25T00:11:58.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

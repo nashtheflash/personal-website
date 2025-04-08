@@ -10,8 +10,13 @@ export async function GET(req, { params }) {
     const filePath = slug ? path.join(publicFolder, ...slug) : null  //  /public/images/avatar/1234567.jpg
     if (!filePath) throw new Error()
 
+
+
+
     const fileContent = await fs.readFile(filePath)
+        // console.error('PATH:', fileContent)
     if (!fileContent) throw new Error()
+
 
     return new NextResponse(fileContent)
   } catch (err) {
