@@ -28,6 +28,9 @@ const fetchGPX = (file) => {
     // const rootPath = process.cwd();
     const rootPath = '.next/server';
 
+    const projectDirectory = path.join(process.cwd())
+    console.log("PD", projectDirectory);
+
     // const dataFilePath = path.resolve(process.cwd() + file)
 
 
