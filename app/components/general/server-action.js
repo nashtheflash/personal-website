@@ -25,7 +25,8 @@ const fetchGPX = (file) => {
     const fs = require("fs");
     var path = require("path");
     const DOMParser = require("xmldom").DOMParser;
-    const rootPath = process.cwd();
+    // const rootPath = process.cwd();
+    const rootPath = '.next/server';
 
     // const dataFilePath = path.resolve(process.cwd() + file)
 
