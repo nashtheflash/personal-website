@@ -6,7 +6,12 @@ const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     images: {
     domains: ['images.unsplash.com'],
-  }
+  },
+    experimental: {
+    outputFileTracingIncludes: {
+    '/mtn-bike-kc': ['./public/**/*'],
+},
+  },
 };
 
 const withMDX = createMDX({
