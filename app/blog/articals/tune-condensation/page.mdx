@@ -1,0 +1,29 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Condensation",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"How to handle condensation build up in the Tune M1 camper",
+    keywords: ['Tune M1', 'condensation', 'camping'],
+    tags: ['Tune M1', 'condensation', 'camping'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { MdxLayout,} from '@/app/components/blog'
+
+import { faHexagonNodes } from '@awesome.me/kit-237330da78/icons/duotone/solid'
+
+<MdxLayout>
+
+## How to install tune insulation pack
+<FontAwesomeIcon icon={faHexagonNodes} />
+
+
+</MdxLayout>
+

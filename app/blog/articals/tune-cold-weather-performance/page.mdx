@@ -1,0 +1,164 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Cold Weather Preformance",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/tune-cold-weather-performance/thumbnail.jpg',
+    description:"Tune M1 cold weather preformance: stock, with factory insulation, and with aftermarket insulation.",
+    keywords: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
+    tage: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
+    isActive: true,
+}; 
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    TLDR,
+    ImageFeature,
+    LineGraph,
+} from '@/app/components/blog'
+
+import { 
+    timeToTempNoInsulationData,
+    noInsulationData,
+    timeToTempRoofInsulationPackData,
+    roofInsulationPackData,
+    noRoofInsulationInsulationPackDataTimeToTemp,
+    noRoofInsulationInsulationPackData,
+    roofInsulationNoInsulationPackDataTimeToTemp,
+    roofInsulationNoInsulationPackData,
+} from "./graph-data"
+
+import featureImage from "@/public/blog/tune-cold-weather-performance/feature-image.JPEG";
+import sensorGif from "@/public/blog/tune-cold-weather-performance/sensor.gif";
+import friggaSensor from "@/public/blog/tune-cold-weather-performance/frigga-sensor.JPEG";
+import sensorLocation from "@/public/blog/tune-cold-weather-performance/sensor-location.JPEG";
+import insideCamper from "@/public/blog/tune-cold-weather-performance/inside-camper.JPEG";
+import insideCamperNoInsulation from "@/public/blog/tune-cold-weather-performance/inside-camper.JPEG";
+import insideCamperRoofInsulation from "@/public/blog/tune-cold-weather-performance/insideCamperRoofInsulation.JPEG";
+import insideCamperFullInsulation from "@/public/blog/tune-cold-weather-performance/inside-camper-full-insulation.JPEG";
+import tempSensor from "@/public/blog/tune-cold-weather-performance/temp-sensor.JPEG";
+
+import hestSpecs from "@/public/blog/tune-cold-weather-performance/hest-r-value.png";
+
+import { FriggaTempLoger } from '@/app/products/product-links';
+
+<ImageFeature
+    title='Tune M1 Cold Weather Performance'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+<TLDR
+text="I have put the Tune M1 to the test this winter. I have tested its performance in different configurations. This includes no insulation, the Tune Insulation Pack, and other ways to improve the cold-weather performance of the camper. If you are looking for the largest gain for the least amount of work, just buy and install the Tune Insulation Pack."
+/>
+
+### Cold Weather Goals
+The obvious goal when running the Tune in the cold is to have the heater run as little as possible. This not only saves fuel, but also cuts down on the noise the heater creates. The heater is loud! I am a very deep sleeper, and when that thing kicks on, I wake up.
+
+### Observation
+Turning the heater on and feeling for the coldest parts of the camper is dumb science, but I think it is useful to see where the biggest performance improvements might be hiding. Here is what I found:
+
+1. The cloth section(by far the coldest)(Est. R-value: ~1.5)
+2. Exposed Aluminum(Est. R-value: ~0)
+3. Truck Bed(Est. R-value: ~0)
+4. FRP Panels([Est. R-value: 2.1][5]) 
+
+I think the cloth seems the coldest because some of the wind is able to pass through the fabric. Just a guess—I’m not a scientist. When you are lying in bed, you can feel the cold on your head!
+
+### Parameters
+
+I have the smaller Tune M1 that is on the back of a Toyota Tacoma with a 5.5' bed. If you have a longer bed, I would expect some kind of degraded performance. I have a full aluminum shell—the only windows are on the pop-up section of the camper!
+
+Each test you find below uses 65 degrees Fahrenheit as the test temperature. Definitely a luxury for camping light. I assume this will be a hard temperature for the camper to maintain in some situations, but the purpose of collecting this data is to see what is possible—not necessarily what is considered normal operation. The fan was not used in any of the tests. I have yet to experience any condensation buildup while sleeping.
+
+The inside temperature sensor is wedged into the T-track next to the fan. The outside sensor is set on a chair right outside the camper. I am using a <FriggaTempLoger/> to record the temperatures. There are surprisingly few options to simply log temperature over a given time.
+
+<TwoCenteredImages image={[sensorLocation, friggaSensor]} altText={['Sensor Location During Test', 'Frigga Temperature Logger']} titles={['Sensor Location', 'Frigga Temp Logger']} width={'500'} height={'500'} /> 
+
+In the [Setup Video][1], they show that you could move the heater’s sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Maybe they saw some of the same results and went with the cleaner install. I would have!
+<TwoCenteredImages image={[sensorGif, tempSensor]} altText={['Tune M1 Heater Sensor Relocation', 'New Tune M1 Sensor Install']} width={'500'} height={'500'} />
+
+### Stock Tune (No Insulation)
+<TwoColumn>
+The first part of the test is heating the camper from ambient temperature to 65 degrees. This is with no insulation, the windows closed, and the heater set to boost mode. You can see the setup on the right.
+<CenteredImage image={insideCamperNoInsulation} altText={'Inside Camper Windows Closed'} width={700} height={700} />
+</TwoColumn>
+
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempNoInsulationData} />
+
+It took about 90 minutes to get the camper up to temperature. The temperature sensor for the heater thermostat is very close to the heater. I also have the king-size bed extension that overhangs the heater and forms a cubby. I thought these factors would lead to a large temperature difference between what the heater was sensing versus what the temperature sensor in the sleeping section of the camper was reading. This was clearly not the case! The difference in temperature was only about 2.5–3 degrees.
+
+<LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
+
+The difference between ambient and camper temperature was kept at 40 degrees, which was impressive—but you can also see that the heater ran almost continuously. During the 9-hour test, the heater was only off for about 2.5 hours, kicking on around 10 times. This doesn’t sound like much, but when the heater kicks on, it is super loud!
+
+### Tune with Insulation Kit
+This test involves heating the camper from ambient temperature to 65 degrees. The camper has the insulation kit installed, no roof insulation, the windows closed, and the heater set to boost mode. You can see the setup on the right.
+
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={noRoofInsulationInsulationPackDataTimeToTemp} />
+
+It took about 60 minutes to get the camper up to temperature. It was noticeably faster than without the kit installed. Without the insulation kit, the camper can get drafty due to all the zippers and openings. The insulation kit eliminates the drafts, making it much more comfortable! As you can see, the heater is still kicking on and off a decent amount.
+
+<LineGraph title={'Overnight Heater Performance'} data={noRoofInsulationInsulationPackData} />
+
+### Tune with Roof Insulation
+
+<TwoColumn>
+This test is with the roof insulation only, with the windows closed. The heater is turned on Boost to get the camper up to temperature, then set to Auto for the rest of the night. You can see the setup on the right.
+<CenteredImage image={insideCamperRoofInsulation} altText={'Inside Camper Windows Closed'} width={700} height={700} />
+</TwoColumn>
+
+The first part of the test is heating the camper from ambient temperature to 65 degrees.
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={roofInsulationNoInsulationPackDataTimeToTemp} />
+
+It took about 60 minutes to get the camper up to temperature. Note that the ambient temperature was a little warmer than in the other tests! You can see that the heater turned on less frequently than without the roof insulation. I love the roof insulation! It helps keep light out, parking lot lights are awful without it, and it also helps cut down on noise. I think it looks really nice as well! The test results aren’t much different from the full insulation test.
+
+<LineGraph title={'Overnight Heater Performance'} data={roofInsulationNoInsulationPackData} />
+
+### Tune with Insulation Kit & Roof Insulation
+<TwoColumn>
+This test is with the Tune Insulation Pack and roof insulation, the windows closed, and the heater set to Boost mode. You can see the setup on the right.
+<CenteredImage image={insideCamperFullInsulation} altText={'Inside Camper Windows Closed'} width={700} height={700} />
+</TwoColumn>
+
+This is by far the best setup. It’s not only warm, but it also makes the camper feel like a den. It’s dark, quiet, and there are no drafts able to get in. Even when it’s cold, the night setting on the heater is warm enough to keep the camper comfortable. Having the heater in night mode is a huge deal because it is very quiet! I wake up every time I hear the heater kick on when it’s in Auto mode.
+
+<LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempRoofInsulationPackData} />
+<LineGraph title={'Overnight Heater Performance'} data={roofInsulationPackData} />
+
+#### Hest Mattress Specs
+This is by far the test with the least amount of data. It is more of a feel. My honest feeling is that the Hest mattress that the Tune comes with is enough insulation for sleeping. It is cold when you get into bed, but you warm it up quickly. Hest foam seems to have an R-Value of 8.8 seen below:
+<CenteredImage image={hestSpecs} altText={'Hest Mattress Specs'} title={'Hest Specs'} width={1280} height={518} />
+
+I believe that Tune buys the Dually Pads from Hest. They have there branding all over the page. Here are the links to the info:
+* [Hest Dually(No R-Value Spec)][3]
+* [Hest Foamy(Has R-Value Spec)][3]
+
+#### Adding Material Under the Mattress
+I have seen some trying to add insulation under the mattress to try to boost the R-Value of the sleep system. Unfortunately, I have not found this to work(> 10 degrees). If you were wanting to boost the value, I would honestly just put a quality wool blanket under the mattress. That could boost the R-Value to ~11, is easily removable, and can be utilized for other things if needed! I tried a wool blanket and saw no difference when testing down to 10 degrees Fahrenheit.
+
+#### Heating Blanket
+If you were wanting to have a warm bed when you get in. I would look at a heated blanket. That made a huge difference for me. I placed the blanket below the comforter and turn it on the lowest heat setting!
+
+
+### Summary
+The Tune Insulation Pack is a must for camping in the cold! Roof insulation and rerouting the heater vent also make a huge difference!
+
+</MdxLayout>
+
+[1]: https://www.youtube.com/watch?v=RCQB0O0w-uk
+[2]: /blog/articals/tune-heater
+[3]: https://hest.com/products/dually-extend
+[4]: https://hest.com/products/foamy
+[5]: https://merrittsupply.com/wp-content/uploads/2017/05/FRP-Honeycomb-TDS.pdf?srsltid=AfmBOopX1vFFzVEkNeA_A-dJcpsNzvkXsbNlbQ7a3B7GgWRglsu6Imd6
+[6]: /blog/articals/tune-heated-blanket
+[7]: /blog/articals/tune-heater-vent-reroute
+[60]: https://www.amazon.com/Homemate-Electric-Heated-Blanket-King/dp/B0D66TNSP3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.waqzPEzZEkepNwdY-eD1ycPhg2nYrNsFRy-XgDNTjLN6U0jsrU9YK7jC98_2jSA2BUgjUl1mvwDXpp2quAQYjzYFD1z9OL6Xc5DgA1WjamnUnPKSbP7-hmcAilWiu62k4d5_fFFjxtIQ1NN7hYlhLPVrDxBwyi4QJpKAM0hfywhUbUCWoJkv5Bj-p0YPz2-nNjTsxBWP_VdPmvCLFtbTPy7H3wz6Je-j2MhimMXEsxKSh6rFKulYdZH9aqAr0yGlBngrMOXvz16khJus0ElxNVBVay6EfHXu1W63Rd1afKA.7jAot0lU-d48m2LB2W3jucof8Eelvzhw6VWyAzrYN1M&dib_tag=se&hvadid=631491241413&hvdev=c&hvlocphy=9023836&hvnetw=g&hvqmt=e&hvrand=6063659926571370957&hvtargid=kwd-391822225100&hydadcr=7439_13294077&keywords=amazon%2Bking%2Bsize%2Belectric%2Bblanket&qid=1734116477&sr=8-10&th=1

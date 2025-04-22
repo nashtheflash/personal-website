@@ -1,0 +1,77 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Insulation Pack Install",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"How to install the factory insulation pack on the Tune M1 camper",
+    keywords: ['Tune M1', 'Insulation Pack', 'Install', 'How to'],
+    tags: ['Tune M1', 'Insulation Pack', 'Install', 'How to'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    ImageFeature,
+    CenteredImage,
+    TwoCenteredImages, 
+} from '@/app/components/blog'
+
+import featureImage from "@/public/blog/tune-insulation-pack-install/feature-image.JPEG";
+import overlap from "@/public/blog/tune-insulation-pack-install/overlap.JPEG";
+import gap from "@/public/blog/tune-insulation-pack-install/gap.JPEG";
+import noGap from "@/public/blog/tune-insulation-pack-install/no-gap.JPEG";
+
+<ImageFeature
+    title='Tune M1 Insulation Pack Install'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+## How to install tune insulation pack
+The official instructions -> <a href={'/blog/tune-insulation/tune-insulation-pack-install.pdf'} download>Download</a>
+
+I was able to follow the PDF instructions in the Aspen resort parking lot and everything went great first shot! For some more detail, there are two basic steps:
+
+### Install The Front & Back Sections
+After raising the top of the camper, you will want to unhook the elastic webbing that is located behind the lifting arms.
+
+(ADD PIC)
+
+Starting with the tailgate side of the camper. Fold the insulation in on itself and feed half of the insulation behind one bar then the other. Once the insulation is somewhat in place, open the insulation window just enough so you can see the window on the camper. Line up the windows the best that you can and start pushing the Velcro together starting in the middle and working your way out. 
+
+(ADD VIDEO)
+
+Remember to re-hook the elastic webbing behind the lifting bars.
+
+### Install The Side Sections
+The side sections are much easier because you don't have the lifting bar in the way. The process is the same except you will want to open both windows slightly and line the center of the insulation in between the windows. See video below!
+
+
+### Insulation Pack Trimming
+I used the insulation pack for about a month before committing to trimming it back. Why even trim then? The trim is needed because it blocks the side windows if you don't!
+<CenteredImage image={overlap} altText={'OZ Jump Line Jump'} title={'Dirt Jump'} width={'750'} height={'750'} />
+
+
+## Roof Gap
+After the installing the insulation pack, I noticed that the gap between the camper roof and body increased a pretty significant amount. Note that this is with the mattress and roof insulation installed and an untrimmed insulation pack.
+<TwoCenteredImages image={[noGap, gap]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'h-2/3'} height={'w-2/3'} />
+
+At first, I though this was due to the roof insulation that I added, and is installed in the both of the above pictures. I also saw people on the [Tune Facebook Page][1] talking about the matres and or sheets contributing to the gap. With the roof down, I was able to feel around between the mattress and the roof and it didn't feel all that tight. I removed the mattress and was able to immediately see that there was enough room, and the roof was not closing. I contacted Tune, and here was the recommendation:
+
+A gap is common when the insulation pack is installed and it varies quite a bit from camper to camper. Due to the variability, we do not have a specific acceptable amount. How much of a gap do you have at the moment? As long as you are able to latch the roof latches securely, no other issues should arise from the gap (doesn't have to be very tight but enough that it won't come undone on its own).
+
+Another method to help close the gap would be to go around the camper slightly tightening each roof latch one by one. This will gradually close the gap until the desired spacing is reached. If you decide to try this, avoid over tightening the latches as this can cause the rivets to break. Additionally, I like to do this incrementally over the course of a few weeks so that I am giving the insulation time to adjust. I have seen some cases where someone tries to fully close the gap at once and the roof latches end up blowing out. 
+
+I followed the above advice and the roof gap did decrease. It is currently close to the original amount.
+
+
+
+</MdxLayout>
+
+[1]: https://www.facebook.com/groups/258913089967507

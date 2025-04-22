@@ -1,0 +1,21 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 3rd Tailight Install",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"How to install the Tune M1 tailing on a Toyota Tacoma without drilling holes.",
+    keywords: ['Tune M1', '3rd Trail Light', 'Install', 'How to'],
+    tags: ['Tune M1', '3rd Trail Light', 'Install', 'How to'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { MdxLayout,} from '@/app/components/blog'
+
+<MdxLayout>
+    <h1>This is how you wire in the tune 3rd taillight</h1>
+</MdxLayout>

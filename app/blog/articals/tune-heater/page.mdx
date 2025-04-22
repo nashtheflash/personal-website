@@ -1,0 +1,28 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Heater",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"Exploring the Tune M1 Heater. This includes looking at the heat output, noise levels, propane usage, issues, and a way to monitor the level of propane in the tank.",
+    keywords: ['Tune M1', 'Heater'],
+    tags: ['Tune M1', 'Heater'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { MdxLayout } from '@/app/components/blog'
+
+<MdxLayout>
+    <h1>This artical is all about the heater</h1>
+    <h1>How much power is drawn</h1>
+    <h1>How loud is it? Some kind of DB testing would be cool. Use Phone?</h1>
+    <h1>how much propane is used</h1>
+    <h1>how to add a gauge to monitor the amount of propane</h1>
+    <h1>opening and closing procedure</h1>
+    <h1>issue I had with the loose fitting</h1>
+    <h1>Link to an artical about testing the heating</h1>
+</MdxLayout>

@@ -1,0 +1,31 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Test",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"description",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    CenteredImage, 
+    TwoCenteredImages, 
+} from '@/app/components/blog'
+
+import featureImage from "@/public/blog/nash-browns/thumbnail.png";
+
+<MdxLayout>
+
+# This is the template
+[Kansas River Hazard Information][1]
+
+</MdxLayout>
+
+[1]: /blog/articals/artical-template

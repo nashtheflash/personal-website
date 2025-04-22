@@ -1,0 +1,109 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Thayer Hut",
+    published: "2024-09-01",
+    updated: "2024-09-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ffeature-image.JPEG?alt=media&token=2b6943ad-6210-4b7a-a67b-607e8707a17f',
+    description:"I went out to Thayer Hut in August of 2024. This was my second attempt at finding the hut. I had a great time in the beautiful Delta Range!",
+    keywords: ['Thayer Hut', 'Trip Report', 'Alaska', 'Delta Range', 'Hut'],
+    tags: ['Thayer Hut', 'Trip Report', 'Alaska', 'Delta Range', 'Hut'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    MdxImage,
+    ImageFeature,
+    StravaEmbed,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ffeature-image.JPEG?alt=media&token=2b6943ad-6210-4b7a-a67b-607e8707a17f";
+export const tent = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ftent.JPEG?alt=media&token=5db67af8-4cbc-4111-9e38-3387dbb12181";
+export const truckCamper = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ftruck-camper.JPEG?alt=media&token=77b023b5-17a7-4e44-b8bd-0c5ebf024b28";
+export const glacierCreek = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fglacier-creek.JPEG?alt=media&token=05e7d9f0-8695-4d5b-9e38-672406cd30be";
+export const finalClimb = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ffinal-climb.JPEG?alt=media&token=9ef44d77-d3ee-43ab-9b7f-9293b34fb99d";
+export const iceCave = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fice-cave.JPEG?alt=media&token=6b98770d-608b-440e-a9ed-ca35fb818df3";
+export const noIceCave = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fno-ice-cave.JPEG?alt=media&token=a0df9c00-d25f-43ab-a794-0df0ae43c9ab";
+export const glacierToday = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fglacier-today.JPEG?alt=media&token=c153345b-5f9f-474d-941a-88c350cd3147";
+export const tokTai = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ftok-tai.JPEG?alt=media&token=dc6468c9-ef56-4d17-89bb-7b1558a61278";
+
+<ImageFeature
+    title='Thayer Hut'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+## The Ice Cave
+Unfortunately, the ice cave that was at the toe of the glacier is no longer there. In fact, it fell 4 days after my first visit to the area. Today, it is unrecognizable :(
+<TwoCenteredImages image={[iceCave, noIceCave]} altText={['Castner Glacier Ice Cave', 'Castner Glacier Ice Cave Fallen']} titles={['The Old Ice Cave', 'Fallen Ice Cave']} width={'500'} height={'500'} />
+<CenteredImage image={glacierToday} altText={'Recent Caster Glacier Picture'} title={'Recent Picture'} width={'750'} height={'500'} />
+
+
+<TwoColumn>
+My first attempt to get out to Thayer was unsuccessful and I ended up pitching my tent out on the moraine. I didn't make it to the hut because I could not find where it was. I thought it would be obvious. I had read something that said you can see the medow from the parking lot and the aproch was steeper than they expected. This continued to run through my head and I was sure the hut was on the ledge directly at the back of the valley. This is not the case!
+<CenteredImage image={tent} altText={'Tent on Caster Glacier'} title={'Not Many Tent Spots'} width={'500'} height={'500'} />
+</TwoColumn>
+
+<TwoColumn>
+<CenteredImage image={truckCamper} altText={'Truck Parking'} title={'Parking for the Night'} width={'500'} height={'500'} />
+I spent the night in the parking lot after the long drive from Anchorage. It is a beautiful and mostly quiet spot! I have spent the night other places closer to Glennallen but the mosiqutos are so much worse down there!
+</TwoColumn>
+
+The walk up the moraine is quite awful. I probably won't be going back out to the hut again without skis. The goal is to stay to on the south side of the valley as long as possible and to cross over to the north side when you are close to the final climb. The creek running down the center of the glacier is the only thing I would be concerned about. If it is a warmer day it may be hard to cross the creek, and you might be forced to make the crossing earlier than is ideal. On a beautiful early September day, the crossing was not an issue!
+<CenteredImage image={glacierCreek} altText={'Caster Glacier River'} title={'Water Crossing'} width={'500'} height={'500'} />
+
+As I said this is not a fun hike. You are constantly walking over rocks and so you can't really look around or just turn off your brain. I found that walking straight is the best strategy if you are trying to get to the back quickly and efficiently. Its hard to prove that this is effective, but you can see my case study below:
+<TwoColumn>
+    <StravaEmbed dataEmbedId='12303114674'/>
+    <StravaEmbed dataEmbedId='12303114841'/>
+</TwoColumn>
+
+## The Final Climb
+The final climb is way steeper than I though but it is relatively easy to see how to make it up the main shoot on the west face. If you are comfortable with some crevasse exposure, going further up the glacier and then back tracking / side hilling up to the hut is much easier! The picture below is the steep route that basically looks flat in the picture.
+<CenteredImage image={finalClimb} altText={'Climb up to the hut'} title={'Final Climb'} width={'500'} height={'500'} />
+
+<TwoColumn>
+This is a very cool place to go and I am excited to go back for longer than an over night. It would be awesome to carve out enough time to do some climbing! Remember to stop at Toke Tai on the way home!
+<CenteredImage image={tokTai} altText={'Tok Tai'} title={'Tok Tai'} width={'500'} height={'500'} />
+</TwoColumn>
+
+
+<PhotoCarousel 
+    photoUrls={[
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fold.JPG?alt=media&token=4572d967-6f0b-4565-ae45-c917350e5f9a", title: 'The Hut', show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-3.JPEG?alt=media&token=6d41b798-6612-49c9-bd8e-6772566f490d", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-7.JPEG?alt=media&token=65b09776-255c-410b-ba3b-38121fcf63a8",show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-10.JPEG?alt=media&token=d88d21a0-e1c2-49cd-bb9b-38fdda4dc4f4", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-16.JPEG?alt=media&token=e21251bf-4e61-419b-8c9d-0615a12b6caf", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-17.JPEG?alt=media&token=19b14499-f49d-404b-8215-2d2beb0cb348", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-19.JPEG?alt=media&token=ff62a22a-1c16-4b38-a4ee-2d1b5362aedc", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-21.JPEG?alt=media&token=389f1065-ffbe-48da-afd1-2c33b14e93a3", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-22.JPEG?alt=media&token=038ac3ea-2c68-44f4-8d51-0b0ef252af13", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-23.JPEG?alt=media&token=7b565689-1643-4dc7-8bb6-6e9889469549", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-24.JPEG?alt=media&token=c596f780-395a-493a-881e-b26d5f2444e5", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-25.JPEG?alt=media&token=90b70892-0d41-4363-b1c2-3e21a2e98642", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-26.JPEG?alt=media&token=70e00141-fa9e-4f8d-b70d-e8c8714312d3", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-27.JPEG?alt=media&token=177eea52-98ce-4a36-81f8-fb6a34835c93", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-30.JPEG?alt=media&token=dbf50caa-882b-4531-9390-9703775816f1", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-31.JPEG?alt=media&token=2512a3ba-6321-472b-8294-10845cc292b8", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-32.JPEG?alt=media&token=4e2e7d87-7edb-462b-9b29-6af8e1d38a88", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-33.JPEG?alt=media&token=d9e012c0-4295-4327-b0bc-e1989d8934bf", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-34.JPEG?alt=media&token=5356ecdb-6588-4c50-9173-a31b51a4a3b6", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-35.JPEG?alt=media&token=9855561b-b0fd-415c-8eb3-15ba1b100245", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-36.JPEG?alt=media&token=b5299b13-371a-485b-bb8b-885388c78e88", show: false},
+        { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-37.JPEG?alt=media&token=2a649629-b0ad-43aa-8972-7904e9e705c4", show: false},
+]} 
+    options={{loop: true}} 
+/>
+
+</MdxLayout>
+

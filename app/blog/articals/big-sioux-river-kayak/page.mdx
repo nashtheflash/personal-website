@@ -1,0 +1,121 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Big Sioux River",
+    published: "2025-04-19",
+    updated: "2025-04-19",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fthumbnail.JPEG?alt=media&token=354984d3-1b90-4bdc-93a7-1fe382ba58fc',
+    description:"On April 19 2025 I kayaked the Big Sioux River. This is a trip report detailing how it went.",
+    keywords: ['Trip Report', 'How To', 'Kayak', 'Big Sioux River', 'Can I Kayak the Bif Sioux River'],
+    tags: ['Trip Report', 'How To', 'Kayak', 'Big Sioux River', 'Can I Kayak the Bif Sioux River'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fthumbnail.JPEG?alt=media&token=354984d3-1b90-4bdc-93a7-1fe382ba58fc";
+export const map = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fmap.jpg?alt=media&token=4287b7ba-3b03-47fc-9c41-83492c291f2c";
+export const test = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2FIMG_7226.JPEG?alt=media&token=ea814485-7183-4231-a3c3-79a6c9a4d5b9";
+
+<ImageFeature
+    title='Big Sioux River Kayak'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+I was visiting my monther, a resedent of Sioux Falls, in April of 2025. I decided to bring my Packraft. Why? Durring a previous visit, I was walking her dog and noticed some people kayaking down a river in Tuthill park. It stuck, and Easter weeked 2025 was the stars alighed to see what the river was like.
+
+## Goal
+The goal of the afternoon was to kayak from Elmwood Park to Falls Park. It just seemed like a good distance and not much though was put into it. Kayaking through down town Sioux Falls did sound like a good time though!
+<CenteredImage image={test} altText={'Jay Heath Trail'} title={'Jay Heath Trail'} width={500} height={1000} />
+
+
+## Research
+<TwoColumn>
+<div>
+Basically nothing. I found this map, which is great if you wanted to view the entire river system not a great for a quick and percics city trip. Imaging my mom: 
+where will I drop you off? 
+Where will I pick you up?
+How long will this take?
+Will you die?
+
+All great questions. I shared my location on my phone and headed off.
+</div>
+
+<div className="flex flex-col justify-center items-center w-full">
+<CenteredImage image={map} altText={'Jay Heath Trail'} title={'Jay Heath Trail'} width={500} height={1000} />
+<a href="/blog/big-sioux-river-kayak/JayHeathTrail_85x11.pdf" download className="btn btn-ghost">Download</a>
+</div>
+
+</TwoColumn>
+
+<TwoColumn>
+One other thing I looked at is this all trails track. I don't know that this did much, but I did use it to be able to judge some dstances to try to come up with a ball park of how long this was going to take. You can see this on all trails [here][1]
+
+<iframe class="alltrails" src="https://www.alltrails.com/widget/trail/us/south-dakota/big-sioux-river-kayaking-route-ward-to-brandon?elevationDiagram=false" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
+</TwoColumn>
+
+## Flow
+Check the flow before you go! I did not. I could find anything on the internet recommending a minimum flow for rafting. Here were the stats when I went:
+
+* Skunk Creek: 33.2 CFS                                           -- Considered Average
+* Big Sioux River at Sioux Falls: 43.9 CFS                        -- Considered Much Below Average
+* Big Sioux River at North Cliff Ave at Sioux Falls, SD: 398 CFS  -- Considered Below Average
+
+The above numbers were not heigh enough. There were some portions that needed to be walked and lots of dragging on the bottom. I would consider the above numbers the minimum in order to have some kind of a good time!
+
+You can check the current flow [here][2]!
+
+<OneColumn>
+    <iframe
+      src="https://waterwatch.usgs.gov/new/index.php?mt=real&st=big+sioux+river&usst=&ushuc=&go=GO&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile#map"
+      scrolling="no"
+      width="638"
+      height="448"
+    />
+</OneColumn>
+
+
+
+
+
+
+[Kansas River Hazard Information][1]
+
+
+</MdxLayout>
+
+[1]: https://www.alltrails.com/trail/us/south-dakota/big-sioux-river-kayaking-route-ward-to-brandon
+[2]: https://waterwatch.usgs.gov/new/index.php?mt=real&st=big+sioux+river&usst=&ushuc=&go=GO&id=wwlmap_viewer
+

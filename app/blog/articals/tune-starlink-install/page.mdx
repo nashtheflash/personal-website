@@ -1,0 +1,92 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Starlink Install",
+    published: "2025-02-07",
+    updated: "2025-02-07",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fthumbnail.JPEG?alt=media&token=d8ff0832-75d8-4698-9424-e5f1354b890d',
+    description: "How to quickly install a Starlink Mini in a Tune M1 camper.",
+    keywords: ['Tune', 'Tune M1', 'Starlink', 'Install', 'Easy', 'Fast'],
+    tags: ['Tune', 'Tune M1', 'Starlink', 'Install', 'Easy', 'Fast'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({ ...postMetadata });
+
+import { 
+    MdxLayout,
+    OneColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    ImageFeature,
+    YoutubeVideo,
+    TLDR,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+    StarlinkMount
+} from '@/app/products/product-links'
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fthumbnail.JPEG?alt=media&token=d8ff0832-75d8-4698-9424-e5f1354b890d";
+export const mountGrinder = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount-grinder.JPEG?alt=media&token=3af4e57e-7b45-4b8e-bf2a-df3cd008a315";
+export const mount = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount.JPEG?alt=media&token=e04e06ca-f713-421a-ad8d-d0fae7e0eeb9";
+export const grinder = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fgrinder.JPEG?alt=media&token=acc748df-113e-44b4-9fb7-3d63e819082c";
+export const mountHoles = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount-holes.JPEG?alt=media&token=2569024d-5ebb-4933-907e-f1675f5eef50";
+export const stockImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount-stock-image.png?alt=media&token=c2e84abd-b1e4-4708-9ea6-c32abf44eed6";
+export const hardware = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fhardwear.JPEG?alt=media&token=4689542f-2810-43cc-937b-38d5c7666f56";
+
+<ImageFeature
+    title='Tune M1 Starlink Install'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+<TLDR
+text="Expensive piece of plastic but it makes mounting the Starlink Mini a breeze! This project took about 20 minutes from start to end!"
+/>
+
+## The Mount 
+
+I went with the <StarlinkMount/>. I chose the black option without any of the added mounting options. The mount did not come with the bolts needed to screw it together. It looks like the option **"Mini Speedmount Through Bolt Hardware Kit"** might include the necessary bolts, but I’m not paying $10 for something I can get at Home Depot for less than $2. The mount is a little on the expensive side, $150, and to not get the two bolts to screw it together is a little bit of a slap in the face. Overall, I’m happy with the mount. It’s very minimalistic and sturdy. It’s also easy to shape using an angle grinder.
+
+<CenteredImage image={stockImage} altText={'TRIO Speedmount'} title={'TRIO Speedmount'} width={'500'} height={'500'} />
+
+## Supplies
+
+* 2x 8mm-1.25 X 20mm Bolts
+* Tune t-track nuts  
+<CenteredImage image={hardware} altText={'Hardware'} title={'Hardware'} width={'500'} height={'500'} />
+
+## Location  
+I decided to mount the Starlink on the corner of the panel closest to the tailgate on the driver’s side. This location seemed best because:
+
+* The fan was wired on that side  
+* The corner would support the panel on two sides instead of one  
+
+<CenteredImage image={featureImage} altText={'TRIO Speedmount'} title={'TRIO Speedmount'} width={'1000'} height={'1000'} />
+
+After mounting, I found that the Starlink Mini makes a high-pitched hum. I’d recommend keeping it as far away from the bed as possible!
+
+## Install  
+I had to round off one of the mount’s corners to allow it to fit around a bracket and mount flush on two sides. If you have a fan, make sure to leave room for the wiring!
+
+I used a **Tiger Paw sanding disk** on an angle grinder, which worked perfectly for shaping the plastic. After a few test fits, I was able to get everything lined up.  
+<CenteredImage image={mountGrinder} altText={'TRIO Speedmount and grinder'} width={750} height={500} />
+<TwoCenteredImages image={[mount, grinder]} altText={['Corner Carving', 'Tiger Paw Grinding Disk']} titles={['Mount Shaping', 'Tiger Paw']} width={500} height={500} />
+
+I ended up drilling two holes, one on each side of the mount, for the bolts to mount to the track. I also went ahead and did a test hole, but this is not required.  
+<CenteredImage image={mountHoles} altText={'Hole Locations'} title={'Hole Locations'} width={'500'} height={'500'} />
+
+That's it! There weren’t any secrets or magic to this one. I also made a video of the install. My videos suck, but I’m just practicing.
+
+<OneColumn>
+<YoutubeVideo videoId='T84u08lGEDk'/>
+</OneColumn>
+
+</MdxLayout>
+
+[1]: https://mobilemusthave.com/products/trio-speedmount-for-starlink-mini
+

@@ -1,0 +1,23 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune M1 Equipment Power Draw",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'path/to/thumbnail',
+    description:"Power specs for the standard Tune M1 Equipment",
+    keywords: ['Tune M1', 'Power Specs', 'Lights', 'Fan', 'Heater'],
+    tags: ['Tune M1', 'Power Specs', 'Lights', 'Fan', 'Heater'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { MdxLayout,} from '@/app/components/blog'
+
+<MdxLayout>
+    <h1>This is how much power is drawn by the: lights</h1>
+    <h1>This is how much power is drawn by the: fan</h1>
+    <h1>This is how much power is drawn by the: heater</h1>
+</MdxLayout>

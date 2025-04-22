@@ -1,0 +1,70 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "All Tune M1 Issues",
+    published: "2024-12-30",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/tune-issues/loose-fitting.JPEG',
+    description:"This is a list of all the issues I have encountered while owning the tune camper. There are going to be issues with any camper, so this is not a knock on Tune.",
+    keywords: ['Tune', 'M1', 'Issues', 'Problems', 'Fixes', 'Hacks'],
+    tags: ['Tune', 'M1', 'Issues', 'Problems', 'Fixes', 'Hacks'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    ImageFeature,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import looseFitting from "@/public/blog/tune-issues/loose-fitting.JPEG";
+import badCord from "@/public/blog/tune-issues/bad-cord.JPEG";
+import starlinkCable from "@/public/blog/tune-issues/starlink-cable.JPEG";
+import tearOne from "@/public/blog/tune-issues/tear-one.JPEG";
+import tearTwo from "@/public/blog/tune-issues/tear-two.JPEG";
+
+<ImageFeature
+    title='Tune M1 Issues'
+    image={looseFitting}
+/>
+
+<MdxLayout>
+
+# Tune Issues
+This is a list of all the issues I have encountered while owning the tune camper. There are going to be issues with any camper, so this is not a knock on Tune.
+
+
+## Loose Heater Fittings
+<TwoColumn>
+    When I first bought the camper the heater would not start. I tried to fire it probably 50 times and no dice. I found the issue to be a flange fitting that was only hand tight. I tight it and everything worked great!
+    <CenteredImage image={looseFitting} altText={'Tune M1 Loose Heater Fitting'} title={'Loose Fitting Location'} width={'500'} height={'500'} />
+</TwoColumn>
+
+## Bad Light Cord
+<TwoColumn>
+    <CenteredImage image={badCord} altText={'Tune M1 Bad Light Cord'} title={'Bad COrd'} width={'500'} height={'500'} />
+    I drove from Kansas City to Aspen to ski. When I opend the top the lights would not come no. Huge bummer. I found that the issue was caused by a bad USB-C to 12V barrel connector.
+</TwoColumn>
+<TwoColumn>
+    <CenteredImage image={starlinkCable} altText={'Using Starlink Cable for Tune M1 Lights'} title={'Sarlink Cable Into Switch'} width={'500'} height={'500'} />
+    I also found that the included starlink cable works in a pinch, and was extreamly helpful in trouble shooting the issue. The starlink cable is so long, and there are so many berrel conectors in the lighing wireing, I was able to plug dirrectly into the system in diffrent places to narrow down the issue!
+</TwoColumn>
+
+## Insulation Kit Rip
+
+While uninstalling the Tune Insulation Kit, it just tore. I am not sure how this could have been prevented. I was being supper gentle. I would defiantly only pull from the Velcro and as close to the sticking point as possible!
+<TwoCenteredImages image={[tearOne, tearTwo]} altText={['Tune Insulation Tear', 'Tune Insulation Tear']} titles={['Tune Insulation Tear', 'Tune Insulation Tear']} width={'500'} height={'500'} />
+
+</MdxLayout>
+
+[1]: /blog/articals/artical-template
+

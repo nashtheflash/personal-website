@@ -1,0 +1,97 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Rainbow Peak",
+    published: "2025-3-24",
+    updated: "2025-3-24",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fthumbnail.JPEG?alt=media&token=06b1e57f-dcf1-46e5-a0e1-1e9549001627',
+    description:"Rainbow Peak is located in the Chugach National Forest. I climbed it in March or 2025 and here are my thoughts",
+    keywords: ['Rainbow Peak', 'Chugach', '120', 'Alaska', 'Climb'],
+    tags: ['Rainbow Peak', 'Chugach', '120', 'Alaska', 'Climb'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    YoutubeVideo,
+} from '@/app/components/blog'
+
+import { 
+    faRoute,
+    faArrowTrendUp,
+    faArrowTrendDown,
+    faMountain,
+    faTimer,
+    faCalendarDays,
+    faLocationDot,
+    faPickaxe,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fthumbnail.JPEG?alt=media&token=06b1e57f-dcf1-46e5-a0e1-1e9549001627";
+export const map = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fmap-3d.JPEG?alt=media&token=c925f2c8-0376-4b7e-89b4-777463be5ac7";
+export const parkingLotPoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fparking-lot-point.JPEG?alt=media&token=7dcfc6a2-a64f-4cbd-8ced-58e5bff4e0dc";
+export const rainbowPoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Frainbow-point.JPEG?alt=media&token=191e48e7-0cf9-4b49-a61a-9878ccbd1e66";
+export const rainbowRidge2 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Frainbow-ridge-2.JPEG?alt=media&token=7e351fb8-b6b9-4af4-b049-c2d415f4a424";
+export const watch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fwatch.JPEG?alt=media&token=c1b50838-aeb3-4bb4-bac2-b8571813740f";
+
+<ImageFeature
+    title='Rainbow Peak Climb Report'
+    image={'/blog/rainbow-peak/summit-view.jpg'}
+    threeSixty={true}
+/>
+
+<BlogStatsSection>
+    <Stat title={'Distance'} stat={'5.73'} icon={faRoute}/>
+    <Stat title={'Summit Elevation'} stat={'3543'} icon={faMountain}/>
+    <Stat title={'Elevation Gain'} stat={'3539'} icon={faArrowTrendUp}/>
+    <Stat title={'Elevation Loss'} stat={'3562'} icon={faArrowTrendDown}/>
+    <Stat title={'Duration'} stat={'3:29:51'} icon={faTimer}/>
+    <Stat title={'Summit Date'} stat={'March 22, 2025'} icon={faCalendarDays}/>
+    <Stat title={'Difficulty'} stat={'Non-Technical'} icon={faPickaxe}/>
+    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/VxQ8Q9425sBESUa69" target="_blank">Rainbow Trailhead</a>} icon={faLocationDot}/>
+</BlogStatsSection>
+
+
+<MdxLayout>
+
+I was able to summit Rainbow Peak for the second time on March 22nd, 2025. I was a beautiful ~40 degree early spring day. This peak is usually one of the first snowless peaks of the year and 2025 was no different. I was able to get to the top with minimal potholing. The view from the top is awesome!
+
+<CenteredImage image={map} altText={'Rainbow Ridge 3D Map'} width={750} height={750} />
+
+
+The way up is pretty easy. There might be some 3rd class terrain on the ridge leading up to the headwall. I wouldn't be worried about taking anyone that is in decent physical shape up this one. They might be a little squeamish in a few spots if they don't like heights. Also, keep in mind that this is a popular spot of tourists. Tourists love kicking rocks down on the people below. Be careful out there!
+
+<CenteredImage image={rainbowRidge2} altText={'Rainbow Ridge'} title={'Rainbow Ridge'} width={500} height={500} />
+
+There is one place where the trail y's off and you can go right. On the way up I went climbers right and it lead to excessive side hilling and steeper climbing. Stick to the ride, it goes!
+
+<TwoColumn>
+<StravaEmbed dataEmbedId='13959161837'/>
+<iframe src='https://connect.garmin.com/modern/activity/embed/18609142803' width='465' height={'100%'} title='Activity Embed' frameborder="0" />
+</TwoColumn>
+
+Here is a view from the peak and parking lot. It is always fun to be able to see the car from the start!
+<CenteredImage image={featureImage} altText={'Rainbow Summit Views'} title={'Summit Views'} width={1000} height={500} />
+<TwoCenteredImages image={[rainbowPoint, parkingLotPoint]} altText={['The Goal', 'The New Goal']} titles={['The Goal', 'The New Goal']} width={500} height={500} />
+
+
+The headwall leading up to the peak offers some decent scree surfing on the way down!
+<OneColumn>
+    <YoutubeVideo videoId='GJUTCba4x8Y'/>
+</OneColumn>
+
+</MdxLayout>
+
+

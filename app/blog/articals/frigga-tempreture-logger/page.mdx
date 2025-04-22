@@ -1,0 +1,89 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Frigga M2H Data Logger",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/frigga-tempreture-logger/feature-image.JPEG',
+    description:"The frigga data logger is a simple way to log the ambient tempreture. A supprisingly hard thing to do. The instructions are a little confusing, this artical clears up some of the questions many people have!",
+    keywords: ['Frigga', 'Tempreture', 'Logger', 'Data', 'Review'],
+    tags: ['Frigga', 'Tempreture', 'Logger', 'Data'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    CenteredImage, 
+    ImageFeature,
+} from '@/app/components/blog'
+
+import { 
+    FriggaLogger
+} from '@/app/products/product-links'
+
+import featureImage from "@/public/blog/frigga-tempreture-logger/feature-image.JPEG";
+// import batteryChange from "@/public/blog/frigga-tempreture-logger/battery-change.gif";
+
+<ImageFeature
+    title='Frigga M2H Temperature Logger'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+## Review
+The temperature logger works great! The only gripe I have is that the instructions are not clear on how it works! Her are the basic questions that I had before buying.
+
+If you would like to purchase this logger, here is a link -> <FriggaLogger/>
+
+Here are the instructions that come with the logger -> 
+
+Here are the specs [Website][2] / Download
+
+Q: Can you use this multiple times?
+A: Yes, the description on amazon and the instructions are not super clear on this. You can reset the logger after use! Please see below! 
+
+Q: Can you change the batteries?
+A: Yes, the loggers fun on CR2450 coin batteries and they can be replaced!
+
+
+## My Manual
+Below are all the functions / icons that I use or look at to operate the logger.
+
+### Functions
+| Function | What is does                       |
+| :------------: | :------------------------------: |
+| 1 Can          | Crushed Pineaple (reserve juice) |
+| 3              | Bananas Sliced                   |
+| 1 Small Jar    | Maraschino Cherries              |
+| 1 Box          | Frozen Strawberries              |
+| 1 Small Can    | Frozen Lemonade                  |
+| 1 Small Can    | Frozen Orange Juice              |
+| 2 1/2 Cups     | Water                            |
+
+### Icon Meanings
+| Icon | Meaning                       |
+| :------------: | :------------------------------: |
+| 1 Can          | Crushed Pineaple (reserve juice) |
+| 3              | Bananas Sliced                   |
+| 1 Small Jar    | Maraschino Cherries              |
+| 1 Box          | Frozen Strawberries              |
+| 1 Small Can    | Frozen Lemonade                  |
+| 1 Small Can    | Frozen Orange Juice              |
+| 2 1/2 Cups     | Water                            |
+
+
+## Data Export
+YOU DO NOT NEED TO DOWNLOAD THEIR SOFTWARE!! Just plug the logger into you computer! The logger will display PDF on the screen while it is generating the report. If you navigate to the logger using your file explorer you will find the generated files!
+
+## Battery Change
+The battery looks permanently installed, it's not! Just slide something in along side the battery, I used a pocket knife, and pry it out! Here is the process!
+{/* <CenteredImage image={batteryChange} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} /> */}
+
+</MdxLayout>
+
+[1]: /blog/articals/artical-template
+[2]: https://www.friggatech.com/shop/usb-temperature-logger-frigga-m2h
