@@ -9,6 +9,8 @@ export { WritingWraper } from "./writing-wraper";
 //Layouts
 export { TwoColumn } from './layout/two-column'
 export { OneColumn } from './layout/one-column'
+export { TLDR } from './layout/tldr'
+
 
 //Feature
 export { TravelFeature } from './feature-sections/travel-feature';
