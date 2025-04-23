@@ -1,8 +1,8 @@
 import { GoogleMap } from '../general/google-map';
 
 export function BlogMapWrapper({
-    width='w-96',
-    height='h-96',
+    width='w-[500px]',
+    height='h-[500px]',
     alignment='center',
     text,
     mapUrl,
