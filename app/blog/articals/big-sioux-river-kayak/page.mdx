@@ -31,7 +31,7 @@ import {
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
-    GoogleMap
+    GoogleMap,
 } from '@/app/components/blog'
 
 import { 
@@ -131,8 +131,8 @@ There was water on this section. I found out why at the end!
 These rocks / damn are labeled on the official map. Here is a more exact location:
 <TwoColumn>
     <CenteredImage image={rockMap} altText={'Big Sioux Rock Crossing Location'} title={'Rock Crossing'} width={500} height={1000} />
-    <BlogMapWrapper
-        mapUrl={'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d857.7072740462057!2d-96.76801973033982!3d43.53798197038517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDMyJzE2LjciTiA5NsKwNDYnMDIuNiJX!5e1!3m2!1sen!2sus!4v1745428856288!5m2!1sen!2sus'}
+    <GoogleMap
+        url={'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d857.7072740462057!2d-96.76801973033982!3d43.53798197038517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDMyJzE2LjciTiA5NsKwNDYnMDIuNiJX!5e1!3m2!1sen!2sus!4v1745428856288!5m2!1sen!2sus'}
     />
 </TwoColumn>
 
@@ -154,10 +154,12 @@ Probably the best water of the trip. There is also a fun little rapid at Tuthill
 
 ## Taking Out
 <TwoColumn>
+<div className='w-full sm:w-1/2'>
 Taking out can be done almost anywhere along the river. I choose Pasley Park on the fly due to time constraints. Next time I will make it to the falls!
-    <BlogMapWrapper
-        mapUrl={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953.9296074867719!2d-96.69891083201539!3d43.52246784089331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878eb428ceb171e3%3A0x48c3788cd4b106c!2sParking%20lot%2C%20S%20Southeastern%20Ave%2C%20Sioux%20Falls%2C%20SD%2057103!5e0!3m2!1sen!2sus!4v1745431456598!5m2!1sen!2sus'}
-    />
+</div>
+<div className='w-full sm:w-1/2'>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1446.5129889286798!2d-96.698167!3d43.522651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878eb428ceb171e3%3A0x48c3788cd4b106c!2sParking%20lot%2C%20S%20Southeastern%20Ave%2C%20Sioux%20Falls%2C%20SD%2057103!5e0!3m2!1sen!2sus!4v1745528154482!5m2!1sen!2sus" width="100%" height="450" style={{"border":0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 </TwoColumn>
 
 ## Wild Life
@@ -171,8 +173,8 @@ There is a nice kayak launch at this park. Honestly, Farm Park to Falls Park wou
 
 <TwoColumn>
     <CenteredImage image={launch} altText={'Farm Park Canoe and Kayak Launch'} title={'Canoe and Kayak Launch'} width={500} height={500} />
-    <BlogMapWrapper
-        mapUrl={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d302.5535713534548!2d-96.7504343828405!3d43.501449880950325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878ec90045dc01af%3A0xb29ff98a93bb23fb!2sFarm%20Field%20Park%20Kayak%20%26%20Canoe%20Access!5e1!3m2!1sen!2sus!4v1745430322845!5m2!1sen!2sus'}
+    <GoogleMap
+        url={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d302.5535713534548!2d-96.7504343828405!3d43.501449880950325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878ec90045dc01af%3A0xb29ff98a93bb23fb!2sFarm%20Field%20Park%20Kayak%20%26%20Canoe%20Access!5e1!3m2!1sen!2sus!4v1745430322845!5m2!1sen!2sus'}
     />
 </TwoColumn>
 

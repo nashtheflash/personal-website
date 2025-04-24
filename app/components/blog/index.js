@@ -24,6 +24,7 @@ export { PhotoGallery } from './photoGallery';
 export { Footer } from './footer';
 export { CookBookDivider } from "./cookbook-divider";
 export { BlogMapWrapper } from "./map-wrapper";
+export { GoogleMap } from "../general/google-map";
 export { FromToCode } from "./colums/from-to-code";
 
 //Data Display

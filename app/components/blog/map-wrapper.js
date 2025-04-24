@@ -1,7 +1,7 @@
 import { GoogleMap } from '../general/google-map';
 
 export function BlogMapWrapper({
-    width='w-[500px]',
+    width='w-full',
     height='h-[500px]',
     alignment='center',
     text,
