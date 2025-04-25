@@ -109,12 +109,22 @@ The above numbers were not heigh enough. There were some portions that needed to
 You can check the current flow [here][2]!
 
 <OneColumn>
-    <iframe
-      src="https://waterwatch.usgs.gov/new/index.php?mt=real&st=big+sioux+river&usst=&ushuc=&go=GO&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile#map"
-      scrolling="no"
-      width="638"
-      height="448"
-    />
+    <div style={{ width: '638px', height: '448px', overflow: 'hidden', position: 'relative' }}>
+          <iframe
+            src="https://waterwatch.usgs.gov/new/index.php?mt=real&st=big+sioux+river&usst=&ushuc=&go=GO&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile"
+            style={{
+              position: 'absolute',
+              top: '-474px',     // SMALL move up
+              left: '-356px',   // BIGGER move right
+              width: '1200px',
+              height: '1000px',
+              border: 'none',
+            }}
+            scrolling="no"
+            frameBorder="0"
+            title="USGS Map"
+          />
+    </div>
 </OneColumn>
 
 
