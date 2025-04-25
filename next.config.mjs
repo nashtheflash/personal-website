@@ -5,12 +5,17 @@ import remarkGfm from 'remark-gfm';
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     images: {
-        domains: ['images.unsplash.com'],
+        // domains: ['images.unsplash.com'],
         remotePatterns: [
             {
                 protocol: "https",
                 hostname: "firebasestorage.googleapis.com",
                 pathname: "/v0/b/**",
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+                // pathname: "/v0/b/**",
             },
         ],
     },
