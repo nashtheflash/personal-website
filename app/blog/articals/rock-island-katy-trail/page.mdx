@@ -2,14 +2,14 @@ import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
     title: "Rock Island & Katy Trail",
-    published: "2024-05-05",
-    updated: "2024-05-05",
+    published: "2025-05-05",
+    updated: "2025-06-05",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fthumbnail.JPEG?alt=media&token=3b81c34f-7ee2-4419-894c-56b129bc11dc',
-    description:"description",
-    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
-    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
-    isActive: false,
+    description:"I bikes the Rock Island and Katy Trail in May of 2025. This is how I went about the planning the trip, what I found along the way, and what I would do diffrently next time!",
+    keywords: ['Roack Island Trail', 'Katy Trail', 'How to ride Katy Trail', 'Rock Island Trail Through Bike', 'Katy Trail Through Bike', 'Bike Packing from Kansas City to St. Louis', 'Trip Reoport'],
+    tags: ['Roack Island Trail', 'Katy Trail', 'How to ride Katy Trail', 'Rock Island Trail Through Bike', 'Katy Trail Through Bike', 'Bike Packing from Kansas City to St. Louis', 'Trip Reoport'],
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -20,6 +20,7 @@ import {
     TwoColumn,
     CenteredImage, 
     TwoCenteredImages, 
+    ThreeCenteredImages, 
     Footer, 
     TravelFeature, 
     Gif, 
@@ -31,6 +32,7 @@ import {
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
+    GoogleMap,
 } from '@/app/components/blog'
 
 import { 
@@ -44,6 +46,21 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fthumbnail.JPEG?alt=media&token=3b81c34f-7ee2-4419-894c-56b129bc11dc";
+export const trailOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrail-1.JPEG?alt=media&token=d0fb8d6c-90c4-474c-b978-98c972cefabc";
+export const trailTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrail-2.JPEG?alt=media&token=469f073c-cc6b-470e-b0fe-b472c79557f2";
+export const trailThree = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrail-3.JPEG?alt=media&token=0835cc36-d627-47b1-947b-39b2dace324e";
+export const blowDown = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fblowdown.JPEG?alt=media&token=82f8f630-bb96-44c3-a211-173d28302395";
+export const turtle = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fturtle.JPEG?alt=media&token=c9450204-54af-41e3-bedb-caca8c9338f8";
+export const spider = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fspider.JPEG?alt=media&token=3371dea4-a463-411f-bada-0cfc198fb80c";
+export const trailFour = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrail-4.JPEG?alt=media&token=ac6f0387-3810-4d46-9c99-f1336dc561b8";
+export const camping = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fcamping.JPEG?alt=media&token=901871c5-060f-4b1a-b0d1-40b83829426f";
+export const tax = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fdog-tax.gif?alt=media&token=56f87388-c370-48bd-95a9-bab3d552ef34";
+export const rip = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Frip.JPEG?alt=media&token=0c419eba-54e8-4f62-be98-74fe2f8e54fd";
+export const tunnel = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftunnel.JPEG?alt=media&token=60851362-77ca-49b0-97f5-5dd003a31b48";
+export const stand = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fstand.JPEG?alt=media&token=b125701f-5180-4d9e-a137-1f0fd4c9cf13";
+export const cooperLanding = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fcooper-landing.JPEG?alt=media&token=0c054a62-f863-432d-a6f7-3e0f91da8a05";
+export const jeffCity = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fjeff-city.JPEG?alt=media&token=3a49deba-d850-4260-9f60-6587dea9fbd7";
+export const arch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Farch.JPEG?alt=media&token=853bf815-89bd-4a62-9cb6-1e5779557bf0";
 
 <ImageFeature
     title='Rock Island & Katy Trail'
@@ -63,7 +80,18 @@ text="The Rock Island and Katy Trail rail to trail system crosses the state of M
 
 
 ## Planning
-I had a lot of initial thoughts about how I would plan the route for this trip. I ended up with a goal to ride from my house in Olathe, Kansas to Gateway National Park with a "complete as much as makes sense mindset". I found a couple of useful tools when planning the trip. The first being the old faithful [How Far Did I Run?][1] website. The second and more trip specific is the [The Katy Trail and Rock Island Trail Website][2]. I am not sure who maintains this but it is pretty cool!
+I had a lot of initial thoughts about how I would plan the route for this trip. I ended up with a goal to ride from my house in Olathe, Kansas to Gateway National Park with a "complete as much as makes sense mindset". I found a couple of useful tools when planning the trip. The first being the old faithful [How Far Did I Run?][1] website. The second and more trip specific is the [The Katy Trail and Rock Island Trail Website][2]. I am not sure who maintains this but it is pretty cool! I am not going to recreate the wheel.
+
+<div className="w-full h-[600px] border-8 border-black">
+  <iframe
+    src="https://bikekatytrail.com/"
+    width="100%"
+    height="100%"
+    style={{ border: "none" }}
+    loading="lazy"
+    title="Bike Katy Trail Website"
+  />
+</div>
 
 I decided taking 143rd east through south Kansas City to Pleasant Hill where Rock Island trail begins would be my best bet. Then I could ride straight through to the Katy and onto St. Louis where I would exit at the [Missouri Bluffs Trail Trailhead][3] and follow Google Maps to Gateway National Park.
 
@@ -74,24 +102,59 @@ I left Thursday May 1st and noon and needed to be on the Sunday trail leaving fr
 ## The Trail
 The trail is about 8ft wide almost completly flat for the entire 200+ miles, and consists of finely crushed gravel. The trail is mostly elevated, I assume this is due to it being an old rail line, and has a nice crown that helps shed water quickly. The week prior to my trip was rainy and I was worried this would be an issue. Fortunately, the trail was mostly dry and rode fast. Some soggy sections slowed me down a little but was more than manageable!
 
+<ThreeCenteredImages image={[trailOne, trailTwo, trailThree]} altText={['Katy Trail Conditions', 'Katy Trail Bridge', 'Katy Trail Conditions']}  width={'500'} height={'500'} />
+
+<TwoColumn>
+<div>
+
+### Blow Down
+I think I came across 2 trees that were blown down on the entire 300+ miles of trail. That pretty darn good!
+
+### Bike
 I rode gravel bike (Salsa Warbird) and it was fantastic. I think a gravel bike would be the best choice but you could take anything on this trail. I say a lot of cheap e-bikes running round that were doing fine!
+</div>
+
+<CenteredImage image={blowDown} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
+</TwoColumn>
+
 
 ## Wildlife
 I saw a fair amount of wild life on this trip! Deer, turtles, snakes, spiders, lizards and more! A few notable interactions:
+<CenteredImage image={turtle} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
 
 I didn't have any mosquito issues. I think some of this was because I was early in the year and kept moving. There was quite a bit of standing water linning the trail that is going to be full of them later in the year!
 
+<TwoColumn>
+<div>
+
+### Spiders
 On day one I saw a massive spider while I was riding. I got a little closer than I should and this thing jumped 6-8 inches in the air and almost landed on my leg. Later this was confimed this was a wolf spider. Keep some room between these guys.
 
+### Snakes
 After dark on day one I turned on my light and not 5 minuts later I almost ran over a black snake stretched across the trail. If it wasn't for the light I would have it hit. I probably did about 4 total hours or night riding and was very glad to have a bright head light.
+
+</div>
+<CenteredImage image={spider} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
+</TwoColumn>
 
 On Saturday night I was ridding by headlight and saw lots of opossums and armadillos. It was nice to have some company!
 
 ## Traffic
-Everyone has a different idea of what isolated means. There were defiantly times where I didn't see many people, but I never felt isolated on the trip. However the trail was hardly ever busy. The buisies sections were near Pleasant Hill, Sedailia, Jeff City, and St.Louis.
+<TwoColumn>
+Everyone has a different idea of what isolated means. The vast majority of the time I didn't see many people, but I never felt isolated on the trip. However the trail was hardly ever busy. The buisies sections were near Pleasant Hill, Sedailia, Jeff City, and St.Louis.
+<CenteredImage image={trailFour} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
+</TwoColumn>
 
 ## Camping
-I wasn't able to find much information on camping before the trip. 
+<TwoColumn>
+<div>
+I wasn't able to find much information on camping before the trip. My plan was to sleep at the trail heads if I couldn't find an established camping area!
+
+I found that the trail is more geared twords renting a cabin or Airbnb by the trail. I know this is perfect for lots of people but not my thing! I marked lots of camping options on the map below!
+
+</div>
+<CenteredImage image={camping} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
+</TwoColumn>
 
 It might seem tempting to walk off the trail and camp but I probably wouldn't. There are tons of ticks! I found out how bad the ticks can get while working for the Missouri DNR in college. However, I would camp at almost any trail head. I think the more away from town the better. I don't know the legality of this, but If you pitched as the sun was going down I don't think you would have an issue.
 
@@ -106,37 +169,101 @@ I wouldn't do this trip in the heat and humidity. Most of the trail is sorounded
 ## Olathe -> Windsor
 My mindset was to not push to hard and ride in the dark a little if needed and that is exactly what happened. The trip started with some rode riding and ended at the eastern termulus of the Rock Island trail. This is a fun section. Some of the road riding was on the sholder of Highway 150 wich might make some people uncomfortable and deffinatly is not my favrorit type off riding. It was nessisary to get to the trailhead. 
 
-There is a night path on the north side of Highway 150 that streatched most of te route and got me off of the shoulder.
+There is a night path on the north side of Highway 150 that streatched most of te route and got me off of the shoulder. Eventually I had to jump on Outer Bend Road. It was okay be deffinatly alot of traffice. Smart road is quiet and takes you by some great mountain biking that I have written about: [Mopac Single Track Mountain Biking][4].
 
-Be very very carful out there. This guy would not let me pass until I paid "The Tax". I jumped on the bike and got the hell out of there shortly after this video was shot.
+<TwoColumn>
+<div>
+
+### Unable to Pass
+Be very very careful out there. This guy would not let me pass until I paid "The Tax". I jumped on the bike and got the hell out of there shortly after this video was shot.
 
 In all seriousness, I pulled about 20 ticks out of this dog. Make sure to check yourself and stay out of the tall stuff!
 
+
+</div>
+<CenteredImage image={tax} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={250} height={500} />
+</TwoColumn>
+
+<TwoColumn>
+<div className='w-1/2'>
+
+### Camping
 I ended in Windsor with plans to camp at the trailhead. Google Maps brought up a camp ground and I decided to take a look. Wile standing over my bike looking at the sign, I was approached by the owner. The allure of a shower and coffee in the morning got the best of me. I usually pass on $20 to camp but this place is worth it. The owner is supper nice, the facilities are clean, and they go above and beyond what is expected. Defiantly a place I recommend!
 
+</div>
+    <GoogleMap
+        url={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4034.1548267009057!2d-93.52128434954554!3d38.53587824650126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c40959d86324a1%3A0x9ad5be4836682d3a!2sKaty-Rock%20Junction%2C%20LLC!5e0!3m2!1sen!2sus!4v1746643947346!5m2!1sen!2sus'}
+    />
+
+</TwoColumn>
+
 ## Windsor -> Coopers Landing	
+<TwoColumn>
+<div className='w-1/2'>
 The day started with a shower and when I was putting my sock back on it ripped. Little did I know that this would end up setting the timeline for the rest of the trip.
 
-I rode into Sedalia, got coffee and some food at Woods, and went to the bike shop to get a new set of socks. The name of the shop is Pro-Velo and it is right off the trail next to the Katy Depot. The dude working was super nice and we shot the shit for 20min. After hearing I had no plans he insisted that I stay the night at Coopers Landing even though it was cutting the day a little short. He filld my head with stories of college wpmen from Mizzo, live music, beer and all overlookign the big muddy. How could I resit?
+I was very lucky that the sock was still covering the heal of my foot!
 
-I rode into Coopers Landing and did in fact have a great time and slurped down a couple of beers. I highly recommend staying the night if you can. As mentioned in the safty section I did run into a werid dude that was under som kind of chemically induced trance that required river worship at 3am. It was kinda cool to watch in all reality!
+</div>
+<CenteredImage image={rip} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+</TwoColumn>
+
+<TwoColumn>
+<div className='w-1/2'>
+I rode into Sedalia, got coffee and some food at Woods, and went to the bike shop to get a new set of socks. The name of the shop is Pro-Velo and it is right off the trail next to the Katy Depot. The dude working was super nice and we shot the shit for 20min. After hearing I had no plans he insisted that I stay the night at Coopers Landing even though it was cutting the day a little short. He filld my head with stories of college woman from Mizzo, live music, beer and all overlookign the big muddy. How could I resit?
+    
+</div>
+<GoogleMap
+        url={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.801634920812!2d-93.22379462929098!3d38.705050362957195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c385c601bbf351%3A0xe08d4755a45a5035!2sPro-Velo!5e0!3m2!1sen!2sus!4v1746644571337!5m2!1sen!2sus'}
+    />
+</TwoColumn>
+
+Rochport is a cool little town that I wish I had more time to explore. You come into town by riding through a longer old railroad tunnel and are quickly greeted by a roadside stand. The town is right on the bank of the big muddy. Explore!!!
+
+<TwoCenteredImages image={[tunnel, stand]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'500'} height={'500'} />
+
+I rode into Coopers Landing and did in fact have a great time and slurped down a couple of beers. I highly recommend staying the night if you can. As mentioned in the safety section I did run into a weird dude that was under some kind of chemically induced trance that required river worship at 3am. In the morning I felt culturally enriched but a little light on sleep!
+<CenteredImage image={cooperLanding} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
 
 ## Coopers Landing -> Chesterfield
 I got to pay the price for an easier Friday. 126 miles to a hot shower and some shitty toxic hell(Toco Bell) The last 30 was in the dark and the rain. Lucky my light lasted and it wasn't a downpour or too cold! I'm not going to lie, a low point was reached Saturday night. Push push push!
+<CenteredImage image={jeffCity} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
 
 ## Chesterfield -> Gateway National Park
+<TwoColumn>
+<div className='w-3/5'>
+
 I was worried about soreness from the big push the day before but this ended up not being an issue. It started out as a great. I was riding the high of feeling way better than expected. I was making good time though the first 10 miles so I stopped for a coffee. I was crazy haired in 4 day old cloths shovoling food into my mouth surrounded by a variaty of unintrested peopele. A group of guys had driven there "cool cars" to the shop and talked loudly about cool cars they didn't have. A group of geriatric walkes in brand new athleasure cloths and many others that looked on wanting me to leave to take my table but not wanting to ask. It was so good to be back to the big pretentious city. The food was like rocket fuel. The rest of the ride to the arch was pure bliss trough some beautiful parts of St. Louis. I was even able to push it a little through traffic which I was shocking after the previous day! 
 
-I couldn't recommend this trip enough! The riding is so flat and you can camp in so many different towns.  You can really dial intensity to whatever fits your pace!
+</div>
+<div className='w-2/5'>
+<CenteredImage image={arch} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={300} height={1000} />
+</div>
+</TwoColumn>
+
+## St. Louis -> Kansas City
+
+# Map 
+<iframe src="https://ridewithgps.com/embeds?type=route&id=50658216&sampleGraph=true&hideSurface=true" style={{width: '1px', 'min-width': '100%', height: '700px', border: 'none'}} scrolling="no"></iframe>
+
+## Alternate Trip
+There are a couple of options that I think would be fun to slim this trip down. All of the sujustions start and end in towns that connect to Amtrack! I would try to hit Coopers Landing, Rochport, or Defiance. They were the coolest little towns!
+
+### Sedailia to Jefferson City - 1 Night
+I met 2 women from Colorado doing this exact trip! Definatly doable for almost anyone. I would spend the night at Coopers Landing and take the quick ride to Jefferson City in the morning!
+
+### Herman to St. Louis. - 1 Night
+This would be great if you lived in St. Louis and were trying to impress and adventurous woman with a fun overnight date. I would stay in Defiance. Camping is limited but I'm sure there are rentals avaiable!
+
+### Sedailia to Herman. - 2 Nights
+This offers a little more riding. I would Stay in Rochport or Coopers Landing for the first night. Then Steamboat Junction Campground or rent a place in Herman for night 2.
 
 
-[Kansas River Hazard Information][1]
-
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'1000'} height={'500'} />
-<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'500'} height={'500'} />
+I couldn't recommend the Rock Island and Katy Trails enough! The riding is so flat and you can camp in so many different towns.  You can really dial intensity to whatever fits your pace!
 
 </MdxLayout>
 
 [1]: https://onthegomap.com/
 [2]: https://bikekatytrail.com/
 [3]: https://maps.app.goo.gl/w7kvEdzzFvbne4Kh8
+[4]: https://maps.app.goo.gl/w7kvEdzzFvbne4Kh8
