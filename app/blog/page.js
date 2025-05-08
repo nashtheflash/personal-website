@@ -20,21 +20,21 @@ export default function BlogHome() {
 }
 
 async function BlogList() {
-    const allArticals = folderPaths('app/blog/articals');
-    const metadata = await getBlogPostMetadata('app/blog/articals', allArticals)
-    const activeArticalMetadata = metadata.filter((artical) => artical.isActive)
+    const allArticals = folderPaths('app/blog/articles');
+    const metadata = await getBlogPostMetadata('app/blog/articles', allArticals)
+    const activeArticalMetadata = metadata.filter((article) => article.isActive)
     const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
 
     return(
         <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full">
             {
-                orderedArticals.map((artical, i) => {
+                orderedArticals.map((article, i) => {
                     return (
                         <div key={i} className={`relative h-full w-full min-h-[500px] ${getSize(i)}`}>
-                            <a href={`/blog/articals${artical.folder}`}>
+                            <a href={`/blog/articles${article.folder}`}>
                                 <BlogCard 
-                                    title={artical.title}
-                                    thumbnail={artical.thumbnail}
+                                    title={article.title}
+                                    thumbnail={article.thumbnail}
                                 />
                             </a>
                         </div>

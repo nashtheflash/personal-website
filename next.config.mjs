@@ -19,11 +19,20 @@ const nextConfig = {
             },
         ],
     },
-    experimental: {
-        outputFileTracingIncludes: {
-            '/mtn-bike-kc': ['./public/**/*'],
-        },
+    async redirects() {
+        return [
+            {
+                source: '/blog/articals/:slug*',
+                destination: '/blog/articles/:slug*',
+                permanent: true, // 308 redirect
+            },
+        ];
     },
+    // experimental: {
+    //     outputFileTracingIncludes: {
+    //         '/mtn-bike-kc': ['./public/**/*'],
+    //     },
+    // },
 };
 
 const withMDX = createMDX({
