@@ -40,10 +40,17 @@ import {
 } from '@/app/products/product-links'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { 
-    faReact,
-    faShopify,
-} from '@fortawesome/free-brands-svg-icons';
+    faRoute,
+    faSun,
+    faRoad,
+    faWaveSine,
+    faBicycle,
+    faStairs,
+    faLightEmergencyOn,
+    faNarwhal,
+} from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Fthumbnail.JPEG?alt=media&token=3b81c34f-7ee2-4419-894c-56b129bc11dc";
 export const trailOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrail-1.JPEG?alt=media&token=d0fb8d6c-90c4-474c-b978-98c972cefabc";
@@ -69,10 +76,17 @@ export const bikeTrain = "https://firebasestorage.googleapis.com/v0/b/nash-brown
     image={featureImage}
 />
 
-<BlogStatsSection>
-    <Stat title={'TITLE'} stat={'value'} icon={faReact}/>
-</BlogStatsSection>
 
+<BlogStatsSection>
+<Stat title={'Distance'} stat={'320'} icon={faRoute}/>
+<Stat title={'Days'} stat={'3'} icon={faSun}/>
+<Stat title={'Paved'} stat={'2%'} icon={faRoad}/>
+<Stat title={'Single Track'} stat={'0%'} icon={faWaveSine}/>
+<Stat title={'Ascent'} stat={'8,750ft'} icon={faStairs}/>
+<Stat title={'Rideable Time'} stat={'100%'} icon={faBicycle}/>
+<Stat title={'Dificulty'} stat={'2/10'} icon={faLightEmergencyOn}/>
+<Stat title={'Animmals Scene'} stat={'13'} icon={faNarwhal}/>
+</BlogStatsSection>
 
 <MdxLayout>
 

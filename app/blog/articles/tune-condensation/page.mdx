@@ -1,29 +1,68 @@
 import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
-    title: "Tune M1 Condensation",
+    title: "Tune Insulation Kit Repair",
     published: "2024-12-01",
     updated: "2024-12-01",
     author: 'Nash Bostwick',
-    thumbnail: 'path/to/thumbnail',
-    description:"How to handle condensation build up in the Tune M1 camper",
-    keywords: ['Tune M1', 'condensation', 'camping'],
-    tags: ['Tune M1', 'condensation', 'camping'],
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae',
+    description:"description",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
     isActive: false,
 };
 
 export const metadata = generateMetadata({...postMetadata});
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { MdxLayout,} from '@/app/components/blog'
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/app/components/blog'
 
-import { faHexagonNodes } from '@awesome.me/kit-237330da78/icons/duotone/solid'
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae";
+
+<ImageFeature
+    title='Tune Insulation Kit Repair'
+    image={featureImage}
+/>
+
 
 <MdxLayout>
 
-## How to install tune insulation pack
-<FontAwesomeIcon icon={faHexagonNodes} />
+<TLDR
+text="The Rock Island and Katy Trail rail to trail system crosses the state of Missouri connecting Kansas City and St. Louis. Stretching about 300 miles, the trail crosses small towns, is well maintained, and reserved only for bikes and foot traffic." 
+/>
 
+# This is the template
+[Kansas River Hazard Information][1]
+
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'h-2/3'} height={'w-2/3'} />
 
 </MdxLayout>
 
+[1]: /blog/articals/artical-template
