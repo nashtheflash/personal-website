@@ -5,11 +5,11 @@ export const postMetadata = {
     published: "2025-05-23",
     updated: "2025-05-23",
     author: 'Nash Bostwick',
-    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fpatch-1.JPEG?alt=media&token=b0114991-ebe0-4db8-ae63-c123ce2d5aa4',
     description:"Quick, no-sew repair method for rips in the Tune Insulation Pack. Fast, easy, and cost-effective solution to extend your gear’s life.",
     keywords: ['Tune M1', 'Tune', 'Insulation Kit Repair', 'Tune Repair', 'Tune Support'],
     tags: ['Tune M1', 'Tune', 'Insulation Kit Repair', 'Tune Repair', 'Tune Support'],
-    isActive: false,
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -43,16 +43,20 @@ import {
     faShopify,
 } from '@fortawesome/free-brands-svg-icons';
 
-export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae";
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fpatch-1.JPEG?alt=media&token=b0114991-ebe0-4db8-ae63-c123ce2d5aa4";
 
 export const ripOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Frip-1.JPEG?alt=media&token=04b2ddbc-fed6-4ed9-bd11-d3dba8cc5f08";
 export const ripTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Frip-2.JPEG?alt=media&token=2a6a5832-5329-4ab6-a5bf-e58781859bd3";
 export const ripThree = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Frip-3.JPEG?alt=media&token=721fde2a-cdd4-4c30-a5c9-544d9e2339aa";
 
-export const prepOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fprep-1.JPEG?alt=media&token=a476c720-37d6-476c-82b1-01555f68f1b0";
+export const prepOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2FIMG_6259.jpeg?alt=media&token=38c58ed4-3d08-49ac-b586-4bd2b064ccd1";
 export const prepTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fprep-2.JPEG?alt=media&token=c90a16c4-08ed-4261-804d-be43648e4bdd";
 export const prepThree = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fprep-3.JPEG?alt=media&token=f82fcc93-26ff-4911-b2a9-bcc70d5b8a41";
 
+export const bookOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fbooks-1.JPEG?alt=media&token=0a8e9771-6458-41e3-b600-ab45d0837fba";
+export const bookTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fbooks-2.JPEG?alt=media&token=7b074d77-5d0d-4c98-b092-569d2111f109";
+export const supplies = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fsupplies.JPEG?alt=media&token=d7ac52f7-f0fd-429d-82ef-d78c38f60274";
+export const patchOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fpatch-1.JPEG?alt=media&token=b0114991-ebe0-4db8-ae63-c123ce2d5aa4";
 
 
 <ImageFeature
@@ -81,7 +85,7 @@ Tune took care of the situation, but I was left with a insulation panel that had
 Supplies:
 1. Tenacious Tap
 2. Rubbing Alcohol
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+<CenteredImage image={supplies} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
 
 The Process: 
 
@@ -90,15 +94,17 @@ The Process:
 3. Applied tap
 4. Weighted the area overnight
 5. Repeat on the other side!
-<TwoCenteredImages image={[prepOne, prepTwo]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
+<TwoCenteredImages image={[prepOne, bookOne]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
 
 Here is the end result:
 <CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
 
 This has been working for the last 4 months. Will it work for the next 10 year? Only time will tell!
-
-
-
 </MdxLayout>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 [1]: /blog/articals/artical-template
