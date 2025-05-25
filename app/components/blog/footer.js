@@ -44,7 +44,7 @@ export function Footer({ phone, website, address, googleMapsLink, galleryUrl, re
                 </div>
             </nav>
             <aside>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved by Nash Browns</p>
+                <p>Copyright © {new Date().getFullYear()} - All rights reserved by Nash Browns</p>
             </aside>
         </footer>
     )
