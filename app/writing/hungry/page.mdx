@@ -1,3 +1,23 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Hungery",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"description",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: false,
+};
+
+import { MdxLayout } from '@/app/components/blog'
+
+export const metadata = generateMetadata({...postMetadata});
+
+# This is a test
+
 Its hard to find god with a full stomach
 Its hard to find god with things are going well
 

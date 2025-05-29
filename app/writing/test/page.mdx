@@ -1,5 +1,7 @@
-export const metadata = {
-    title: "This is just a template",
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "TEST",
     published: "2024-12-01",
     updated: "2024-12-01",
     author: 'Nash Bostwick',
@@ -10,28 +12,8 @@ export const metadata = {
     isActive: false,
 };
 
-import { 
-    MdxLayout,
-    OneColumn,
-    WritingWraper,
-} from '@/app/components/blog'
+export const metadata = generateMetadata({...postMetadata});
 
-import test5 from "@/public/testing-5.JPEG";
-import main from "@/public/main.JPEG";
-import left from "@/public/left.JPEG";
-import right from "@/public/right.JPEG";
-
-<WritingWraper
-    header={main}
-    right={right}
-    left={left}
-    footer={test5}
->
-    <MdxLayout>
-     
-        <OneColumn>
-            # Getting Old
-        </OneColumn>
 
 I went to Barret Jackson, the biggest car auction in the world, this weekend in Arizona. Auctions of any kind are electric but this one was especially interesting. Cars would go for one or two hundred thousand while a sea of people that could barely make rent looked on.
 
@@ -39,7 +21,4 @@ That sea contained many creatures. Overweight men dressed in hyper masculine clo
 
 The average man was probably 55. They had some gray hair left
 
-
-    </MdxLayout>
-</WritingWraper>
 
