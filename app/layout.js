@@ -1,6 +1,11 @@
 import { NavBar } from "@/app/components/general"
+
+// Vercel
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
+
+//Firebase Analytics
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
 
@@ -14,6 +19,7 @@ export default function RootLayout({ children }) {
                 {children}
                 <SpeedInsights />
                 <Analytics/>
+                <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
             </body>
         </html>
     );
