@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
 
 import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
+
 import "./globals.css";
 
 export default function RootLayout({ children }) {

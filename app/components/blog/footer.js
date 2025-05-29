@@ -12,9 +12,9 @@ import garmin from "@/public/garmin-connect.png";
 import Link from 'next/link';
 
 
-export function Footer({ phone, website, address, googleMapsLink, galleryUrl, related}) {
+export function Footer() {
     return (
-        <footer className="footer footer-horizontal footer-center bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] text-black rounded p-10 mt-20">
+        <footer className="footer footer-horizontal footer-center bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] text-black rounded p-10">
             <nav className="grid grid-flow-col gap-4">
                 <Link href={'/blog/articals/nash-browns'} className="link link-hover">About</Link>
                 <Link href={'/partners'} className="link link-hover">Contact</Link>
@@ -47,33 +47,5 @@ export function Footer({ phone, website, address, googleMapsLink, galleryUrl, re
                 <p>Copyright © {new Date().getFullYear()} - All rights reserved by Nash Browns</p>
             </aside>
         </footer>
-    )
-}
-
-
-
-
-
-
-// export async function Footer({ phone, website, address, googleMapsLink, galleryUrl, related}) {
-//     return (
-//         <div className="bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] py-5 text-black w-full h-fit justify-self-center">
-//             <Logo/>
-//         </div>
-//     )
-// }
-
-function Logo() {
-    return(
-        <div className='flex flex-col justify-center items-center h-16 p-2 overflow-hidden'>
-            <Image
-                src={"/nashbrowns-logo.png"}
-                alt='NashBrowns Logo'
-                width={64}
-                height={64}
-                className='animate-spin-smooth select-none unselectable'
-                draggable={false}
-            />
-        </div>
     )
 }
