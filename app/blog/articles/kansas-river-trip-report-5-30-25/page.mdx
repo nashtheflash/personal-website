@@ -2,26 +2,18 @@ import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
     title: "Kansas River Trip Report",
-    published: "2024-27-10",
-    updated: "2024-27-10",
+    published: "2025-05-30",
+    updated: "2025-05-30",
     author: 'Nash Bostwick',
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Ffeature-image.JPEG?alt=media&token=0cd22741-0a79-42a3-9e9e-be5f6dada5b7',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Ffeature-image.JPEG?alt=media&token=89247d1f-8ab9-47db-89c8-c0bfed6da780',
     description:"Kansas River Kayaking Trip Report 10/27/2024. Turner Bridge to Kaw Point",
     keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
     tags: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
-    isActive: true,
+    isActive: false,
 };
 
 export const metadata = generateMetadata({...postMetadata});
 
-export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Ffeature-image.JPEG?alt=media&token=0cd22741-0a79-42a3-9e9e-be5f6dada5b7";
-export const parkingEntrance = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fparking-entrance.JPEG?alt=media&token=863d8f52-1b01-4e3d-92fa-02c142013fef";
-export const bridge = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fbridge.JPEG?alt=media&token=1d10cc2c-f676-4f2f-940d-6556f4b746b4";
-export const launch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Flaunch.JPEG?alt=media&token=c2d960e6-5498-4895-98fa-85c8eae14732";
-export const kawPoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fkaw-point.JPEG?alt=media&token=c140dbae-031a-46ed-81aa-009961bcd8fa";
-export const levee = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Flevee.JPEG?alt=media&token=783df174-40e5-4175-b70f-9f5a37a192eb";
-export const strava = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fstrava.JPEG?alt=media&token=45bf8170-3597-4552-9f37-8d8bd65295c3";
-export const garmin = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fgarmin.JPEG?alt=media&token=a1bd2c0f-04bb-4973-b65f-2002737da2c7";
 
 import { 
     OneColumn,
@@ -50,19 +42,29 @@ import {
     faShip,
 } from '@awesome.me/kit-237330da78/icons/classic/light'
 
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Ffeature-image.JPEG?alt=media&token=89247d1f-8ab9-47db-89c8-c0bfed6da780";
+
+export const wak = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Flaunch-2.JPEG?alt=media&token=46ab2c3c-72ce-4f68-9f8d-508173d41b66";
+export const bridge = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fbridge.JPEG?alt=media&token=1d10cc2c-f676-4f2f-940d-6556f4b746b4";
+export const launch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Flaunch.JPEG?alt=media&token=c2d960e6-5498-4895-98fa-85c8eae14732";
+export const kawPoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fkaw-point.JPEG?alt=media&token=c140dbae-031a-46ed-81aa-009961bcd8fa";
+export const levee = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Flevee.JPEG?alt=media&token=783df174-40e5-4175-b70f-9f5a37a192eb";
+export const strava = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fstrava.JPEG?alt=media&token=45bf8170-3597-4552-9f37-8d8bd65295c3";
+export const garmin = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fgarmin.JPEG?alt=media&token=a1bd2c0f-04bb-4973-b65f-2002737da2c7";
+
 <ImageFeature
 title='Kansas River Trip Report'
 image={featureImage}
 />
 
 <BlogStatsSection>
-    <Stat title={'Distance'} stat={'9 Mi'} icon={faRoute}/>
-    <Stat title={'Days'} stat={'1'} icon={faCalendarDays}/>
-    <Stat title={'Speed(CFS)'} stat={'1200'} icon={faGauge}/>
-    <Stat title={'Paddle Time'} stat={'3:39:17'} icon={faClock}/>
-    <Stat title={'Difficulty'} stat={'Hard'} icon={faShip}/>
-    <Stat title={'Put In'} stat={'Turner Bridge'} icon={faPlaneArrival}/>
-    <Stat title={'Take Out'} stat={'Kaw Point'} icon={faPlaneDeparture}/>
+    <Stat title={'Distance'} stat={'11 Mi'} icon={faRoute}/>
+    <Stat title={'Days'} stat={'2'} icon={faCalendarDays}/>
+    <Stat title={'Speed(CFS)'} stat={'3900'} icon={faGauge}/>
+    <Stat title={'Paddle Time'} stat={'4:20:16'} icon={faClock}/>
+    <Stat title={'Difficulty'} stat={'Easy'} icon={faShip}/>
+    <Stat title={'Put In'} stat={'Eudora'} icon={faPlaneArrival}/>
+    <Stat title={'Take Out'} stat={'Desoto'} icon={faPlaneDeparture}/>
     <Stat title={'Fish Caught'} stat={'0'} icon={faNarwhal}/>
 </BlogStatsSection>
 
@@ -70,14 +72,19 @@ image={featureImage}
 <MdxLayout>
 
 <TLDR
-text="I had a great late October trip on the Kaw. The fall colors were beautiful. The river was was slow resulting in lots of paddling!"
+text="It was great to get out on the Kansas River with a couple of old friends from high school. We set out after work on Friday and were done with the trip Saturday afternoon."
 />
 
-## Turner Bridge Access
-Accessing at Turner bridge was alright. The actual ramp is pretty secluded. I drove back to check out the parking situation and there were some homeless people making a fire back there. They also had a broken down truck parked at the bottom of the ramp. I talked to them for a few minutes, drove back to the gravel parking lot near the main road, then walked back down to the river!
+## Wakarusa River Access
+<CenteredImage image={wak} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={1100} height={619}/>
 
-<CenteredImage image={parkingEntrance} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={640} height={640}/>
+We put in on the Wakarusa River launch in Eudora. The Kaw is about .8 miles down river. It was a beautiful 70 degree day. We were defiantly steeling a couple of cool days from the summer for this quick trip.
+
+
 <TwoCenteredImages image={[bridge, launch]} altText={['Turner Bridge River Access', 'Turner Bridge Packraft Launch']} titles={['Turner Bridge Access', 'My Lanch Point']} width={640} height={640} />
+
+
+## Day One
 
 ## Paddling
 There was more paddling that expected on this trip. I was expecting 1200 CFS to push me along, but if I stopped paddling I was dead in the water. There was some wind but it was sporadic and short lived. 
@@ -99,18 +106,8 @@ Once I was at the end I was jealous of the speed of the Missouri River and think
 ## Wildlife
 While doing past Hadley Island A deer swam across the river about 100' in front of me. I think we were both equally surprised. Other than a few more deer, I saw a hand full of cranes and lots of fish!
 
-## First Trip With the Expedition
-The New Alpacka Raft Preformed great. It wasn't the right boat for this river, but you have to run what you have! I ended up Ubering back to my truck, and it was nice just to fold up my boat and not have to worry about locking it up or coming back to get it! I think that a touring style kayak would be the ultimate setup if this was the only river you were going to be on. I am going back to Alaska soon and its far easier to flay with a pack raft!
 
-## 7th Street Access
-<TwoColumn>
-I ran into a guy fishing while heading down the river. He mentioned another access point on 7th street. I can confime this is true! This is musch closer to downtown. I belive it was about 3 miles from Kaw point. There is a dock and if I were taking someone who was newer to paddling, I would recommend from this access point to Kaw Park!
-    <BlogMapWrapper
-        mapUrl={'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1330.9936975780722!2d-94.62390219269248!3d39.075721519037145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1730138050344!5m2!1sen!2sus'}
-    />
-</TwoColumn>
-
-## Kaw Point Access
+## Desoto River Access
 
 <TwoColumn>
     There are always some characters hanging out at Kaw Point. As soon as I pulled up some dude started yelling at me wanting to rent my raft? I don't know what he was saying. Maybe I just hate people. Otherwise this park is beautiful. Definitely one of my favorite in Kansas City!
