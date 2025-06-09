@@ -1,11 +1,13 @@
-export function Gif({video, topTitle, bottomTitle}){
+export function Gif({video, topTitle, bottomTitle, height, width}){
+    console.log(height, width);
+
     return(
         <>
             { topTitle && <p className='m-0'>{topTitle}</p> }
             <div className='flex flex-col justify-center items-center'>
                 <video 
-                    width="1280" 
-                    height="960" 
+                    width={width} 
+                    height={height}
                     preload="none"
                     autoPlay
                     loop
