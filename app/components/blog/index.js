@@ -72,6 +72,10 @@ export { ContactUs } from "./forms/contact-us";
 //Login
 export { Login } from "./login/login";
 
+//Ads
+export { YoutubeAd } from "./ads/youtube-video";
+
+
 //Art
 export { UnsplashDownloader } from "./art/download-unsplash";
 export { ArtNav } from "./art/art-nav";

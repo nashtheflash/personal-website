@@ -1,0 +1,122 @@
+import { generateMetadata } from '@/utils';
+
+export const postMetadata = {
+    title: "Tune Heavy Lift Strut Install",
+    published: "2025-06-14",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Ffeature-image.jpeg?alt=media&token=a422e625-dba6-4792-ad90-7e97a1741c28',
+    description:"Detailed instructions of how to install the upgraded Tune M1 Heavy Lift Struts. If you have alot of weight on your roof, this will make it much easier to pop and unpop the top!",
+    keywords: ['Tune M1', 'Heavy Lift Strut', 'Insulation', 'Factory Struts'],
+    tags: ['Tune M1', 'Heavy Lift Strut', 'Insulation', 'Factory Struts'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+    YoutubeVideo,
+    YoutubeAd,
+} from '@/app/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/app/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Ffeature-image.jpeg?alt=media&token=a422e625-dba6-4792-ad90-7e97a1741c28";
+export const bareStrut = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fbare-strut.jpeg?alt=media&token=fddc63a5-f5dd-4260-86e1-fc6a141e1065";
+export const leanStrut = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Flean-strut.jpeg?alt=media&token=85ddae25-9fe1-428e-89bd-057071470e63";
+export const strutStrap = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstrut-strap.jpeg?alt=media&token=22a0094d-31d5-405b-ad11-3ac15371c678";
+export const strutsOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstruts-1.jpeg?alt=media&token=42fd2d63-f19b-43ac-8626-5cdb8f953d8c";
+export const strutsTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstruts-2.jpeg?alt=media&token=4c81df9e-b544-4b2f-b0f7-7fd14ea192f5";
+export const strutsThree = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstruts-3.jpeg?alt=media&token=39512c03-fb03-485a-811b-1515f732decb";
+export const strutsOverview = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstruts-overview.jpeg?alt=media&token=0bd56bd3-b554-498b-9daa-312b82ebdd57";
+export const tools = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Ftools-needed.jpeg?alt=media&token=bd9a750f-4a1f-4727-841a-b22b39213627";
+export const strutVid = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstrut-operation.mov?alt=media&token=82206506-473b-4c6c-aa3a-ed91cbad1abf";
+export const strutClipSeated = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstrut-seated.jpeg?alt=media&token=266bf066-c4d7-462b-b876-f0f266d736d7";
+
+
+<ImageFeature
+    title='Tune Heavy Lift Strut Install'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+<TLDR
+text="Installing the heavy lift struts on the Tune M1 was more challenging than I expected. Installing the struts on the front of the camper was especially hard. I was able to come up with a few tricks that I am happy to share!" 
+/>
+
+## Tools
+This is what I ended up using to get the struts installed:
+* **Strap** I used the pull type but the ratchet style might work too
+* **Small block of wood**
+* **Pliers**
+<CenteredImage image={tools} altText={'Tune M1 Strut Install Tools'}  width={1000} height={500} />
+    
+<YoutubeAd videoID={'T84u08lGEDk'} description={'I made a video outlining this install.'} />
+
+## Overview
+<TwoColumn>
+<div className={'w-full sm:w-1/3'}>
+The struts show up in the fully extended position. I was hoping that they would show up held in the retracted position similar to how vehicle struts are sold. Not the case! Due to the struts being fully extended, you must raise and lock the camper in the fully open position.
+
+The struts have a small wire that holds the strut onto the ball. You rotate the clip and pull down to remove the wire. You must remove the wire to install or remove the strut! When reinstalling the wire clip, sometimes it will feel like it clipped but in reality it didn't. Make sure that you can see the end up the clip protruding from the strut ball!
+</div>
+
+<div className={'w-full sm:w-2/3'}>
+<CenteredImage image={strutClipSeated} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+<Gif video={strutVid} width={500}/>
+
+</div>
+</TwoColumn>
+
+## Rear Strut Install
+The rear struts are much easier to install than the front. You are able to stand directly under the struts and yous your legs for leverage. The only thing that made the rear strut install easier was using a piece of wood to disperse the pressure over a lager portion of your hand.
+<CenteredImage image={strutsThree} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={1000} height={500} />
+
+## Front Strut Install
+The front is much harder to install because you cant get enough leverage to depress the strut. I tried installing them from a ladder and there was no chance. The next thing I tried was from the roof of the camper. No dice! The only thing that worked was to use a strap to hold the struts in a depressed position. Them install them onto the camper. 
+<CenteredImage image={strutStrap} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={1000} height={500} />
+
+The strut instillation wasn't easy. It was actually pretty hard. You could use the straps for the from and the back to make things significantly easier. I would budget about 90 minutes to do this Job! If you would like to watch me install the struts, you can click on the video below!
+
+<OneColumn>
+<div className='w-full sm:w-2/3'>
+    <YoutubeVideo videoId='H_NeBTkCW64'/>
+</div>
+</OneColumn>
+
+
+
+</MdxLayout>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[1]: /blog/articals/artical-template
+

@@ -1,5 +1,5 @@
 export function Gif({video, topTitle, bottomTitle, height, width}){
-    console.log(height, width);
+    // console.log(height, width);
 
     return(
         <>

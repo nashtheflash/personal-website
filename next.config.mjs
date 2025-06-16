@@ -17,6 +17,11 @@ const nextConfig = {
                 hostname: "images.unsplash.com",
                 // pathname: "/v0/b/**",
             },
+            {
+                protocol: "https",
+                hostname: "img.youtube.com",
+                // pathname: "/v0/b/**",
+            },
         ],
     },
     async redirects() {
