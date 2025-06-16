@@ -60,7 +60,7 @@ export function generateMetadata({
 
         //Defaults
         generator: 'Next.js',
-        applicationName: 'NashBrowns Blog and Showcase',
+        applicationName: 'NashBrowns',
         referrer: 'origin-when-cross-origin',
         authors: [{ name: 'Nash Bostwick' }],
         creator: 'Nash Bostwick',

@@ -28,7 +28,7 @@ export function YoutubeAd({videoID, description}) {
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                     { width > 768 ? <FontAwesomeIcon icon={faArrowRight} className='h-12 w-12'/> : <FontAwesomeIcon icon={faArrowDown} className='h-12 w-12'/>}
-                    <span>Click the video to go to Youtube</span>
+                    <span>Click the video to go to YouTube</span>
                 </div>
                 <div>
                     <a href={videoURL} className='block'>
