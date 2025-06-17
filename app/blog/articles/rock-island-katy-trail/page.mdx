@@ -33,6 +33,7 @@ import {
     BlackTieTitle,
     PhotoCarousel,
     GoogleMap,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -70,6 +71,10 @@ export const jeffCity = "https://firebasestorage.googleapis.com/v0/b/nash-browns
 export const arch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Farch.JPEG?alt=media&token=853bf815-89bd-4a62-9cb6-1e5779557bf0";
 export const train = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2Ftrain.gif?alt=media&token=3a2206cd-d1f9-4e80-a94e-0d61aac56fe8";
 export const bikeTrain = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rock-island-katy-trail%2FbikeTrain.JPEG?alt=media&token=a8d676ad-4eec-4d5c-9971-a9c2b3ac6107";
+
+export const relatedArticleOne = '/blog/articles/kansas-river-trip-report-5-30-2025';
+export const relatedArticleTwo = '/blog/articles/rainbow-peak';
+export const relatedArticleThree = '/blog/articles/thayer-hut';
 
 <ImageFeature
     title='Rock Island & Katy Trail'
@@ -287,6 +292,12 @@ This offers a little more riding. I would Stay in Rochport or Coopers Landing fo
 
 
 I couldn't recommend the Rock Island and Katy Trails enough! The riding is so flat and you can camp in so many different towns.  You can really dial intensity to whatever fits your pace!
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 

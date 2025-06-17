@@ -31,6 +31,7 @@ import {
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -57,6 +58,10 @@ export const bookOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.
 export const bookTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fbooks-2.JPEG?alt=media&token=7b074d77-5d0d-4c98-b092-569d2111f109";
 export const supplies = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fsupplies.JPEG?alt=media&token=d7ac52f7-f0fd-429d-82ef-d78c38f60274";
 export const patchOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-insulation-pack-repair%2Fpatch-1.JPEG?alt=media&token=b0114991-ebe0-4db8-ae63-c123ce2d5aa4";
+
+export const relatedArticleOne = '/blog/articles/tune-heavy-lift-strut-install';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/tune-starlink-install';
 
 
 <ImageFeature
@@ -100,6 +105,13 @@ Here is the end result:
 <CenteredImage image={featureImage} altText={'Repaired Insulation pack image'}  width={500} height={500} />
 
 The fix has worked well for the last four months. Will it work for the next ten years? Only time will tell!
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
+
 </MdxLayout>
 
 [1]: /blog/articals/artical-template

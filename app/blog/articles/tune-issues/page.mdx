@@ -21,6 +21,7 @@ import {
     TwoCenteredImages, 
     ImageFeature,
     TLDR,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -32,6 +33,10 @@ export const badCord = "https://firebasestorage.googleapis.com/v0/b/nash-browns.
 export const starlinkCable = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-issues%2Fstarlink-cable.JPEG?alt=media&token=80beb446-c5db-4f62-816a-752a80b57ffb";
 export const tearOne = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-issues%2Ftear-one.JPEG?alt=media&token=b6ea8d00-623c-4633-ab86-0a41c486d1fc";
 export const tearTwo = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-issues%2Ftear-two.JPEG?alt=media&token=9a9d8468-9889-415f-bfe6-73598f4b81f2";
+
+export const relatedArticleOne = '/blog/articles/tune-heavy-lift-strut-install';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/tune-starlink-install';
 
 <ImageFeature
     title='Tune M1 Issues'
@@ -80,6 +85,13 @@ While uninstalling the Tune Insulation Kit, it just tore. I am not sure how this
 
 Luckily, Tune sent a replacement, and I was also able to repair the tear! You can read about the repair here: [Tune Insulation Pack Repair][1]
 <TwoCenteredImages image={[tearOne, tearTwo]} altText={['Tune Insulation Tear', 'Tune Insulation Tear']} titles={['Tune Insulation Tear', 'Tune Insulation Tear']} width={'500'} height={'500'} />
+
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 

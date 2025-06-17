@@ -23,6 +23,7 @@ import {
     ImageFeature,
     StravaEmbed,
     PhotoCarousel,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ffeature-image.JPEG?alt=media&token=2b6943ad-6210-4b7a-a67b-607e8707a17f";
@@ -34,6 +35,10 @@ export const iceCave = "https://firebasestorage.googleapis.com/v0/b/nash-browns.
 export const noIceCave = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fno-ice-cave.JPEG?alt=media&token=a0df9c00-d25f-43ab-a794-0df0ae43c9ab";
 export const glacierToday = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fglacier-today.JPEG?alt=media&token=c153345b-5f9f-474d-941a-88c350cd3147";
 export const tokTai = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Ftok-tai.JPEG?alt=media&token=dc6468c9-ef56-4d17-89bb-7b1558a61278";
+
+export const relatedArticleOne = '/blog/articles/rainbow-peak';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 
 <ImageFeature
     title='Thayer Hut'
@@ -103,6 +108,15 @@ This is a very cool place to go and I am excited to go back for longer than an o
         { photoUrl: "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/thayer-hut%2Fpc-37.JPEG?alt=media&token=2a649629-b0ad-43aa-8972-7904e9e705c4", show: false},
 ]} 
     options={{loop: true}} 
+/>
+
+<br/>
+<br/>
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
 />
 
 </MdxLayout>

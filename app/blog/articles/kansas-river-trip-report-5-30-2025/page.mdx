@@ -20,16 +20,16 @@ import {
     TwoColumn,
     CenteredImage, 
     TwoCenteredImages, 
-    BlogMapWrapper,
     TLDR,
     BlogStatsSection,
+    Stat,
     ImageFeature,
     MdxLayout,
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
-    Stat,
     Gif,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -50,6 +50,10 @@ export const leakyBoat = "https://firebasestorage.googleapis.com/v0/b/nash-brown
 export const camp1 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Fsandbar-4.JPEG?alt=media&token=9fb3c00b-e699-477b-9448-759f81645852";
 export const camp2 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Fcamp-3.JPEG?alt=media&token=fa94e212-4c83-4797-bd8f-6bfee7a1111d";
 export const camp3 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Fsunset-1.JPEG?alt=media&token=ffafe8c1-7c99-4e2b-a326-81ab444eee4e";
+
+export const relatedArticleOne = '/blog/articles/kansas-river-trip-report-10-27-2024';
+export const relatedArticleTwo = '/blog/articles/kansas-river-guide';
+export const relatedArticleThree = '/blog/articles/kansas-river-all-hazards';
 
 <ImageFeature
 title='Kansas River Trip Report'
@@ -114,6 +118,13 @@ We made great time to the take-out point. We barely even paddled. I think they a
 </TwoColumn>
 
 I love getting out on the Kansas River. As far as outdoor activities around Kansas City, the Kaw has easy access and provides a wilderness feel.
+
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 <br/>

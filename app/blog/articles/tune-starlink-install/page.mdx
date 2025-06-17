@@ -23,6 +23,7 @@ import {
     YoutubeVideo,
     TLDR,
     YoutubeAd,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -37,6 +38,10 @@ export const grinder = "https://firebasestorage.googleapis.com/v0/b/nash-browns.
 export const mountHoles = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount-holes.JPEG?alt=media&token=2569024d-5ebb-4933-907e-f1675f5eef50";
 export const stockImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fmount-stock-image.png?alt=media&token=c2e84abd-b1e4-4708-9ea6-c32abf44eed6";
 export const hardware = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-starlink-install%2Fhardwear.JPEG?alt=media&token=4689542f-2810-43cc-937b-38d5c7666f56";
+
+export const relatedArticleOne = '/blog/articles/tune-heavy-lift-strut-install';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/tune-insulation-pack-repair';
 
 <ImageFeature
     title='Tune M1 Starlink Install'
@@ -89,6 +94,14 @@ That's it! There weren’t any secrets or magic to this one. I also made a video
 <YoutubeVideo videoId='T84u08lGEDk'/>
 </OneColumn>
 
+<br/>
+
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 </MdxLayout>
 
 [1]: https://mobilemusthave.com/products/trio-speedmount-for-starlink-mini

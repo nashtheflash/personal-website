@@ -6,7 +6,7 @@ export const postMetadata = {
     updated: "2024-12-01",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae',
-    description:"Tune M1 cold weather preformance: stock, with factory insulation, and with aftermarket insulation.",
+    description:"Explore the Tune M1 camper’s cold weather capabilities. Learn how it handles winter camping and get practical tips for your own outdoor trips.",
     keywords: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
     tage: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
     isActive: true,
@@ -22,6 +22,7 @@ import {
     TLDR,
     ImageFeature,
     LineGraph,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -46,6 +47,10 @@ export const insideCamperFullInsulation = "https://firebasestorage.googleapis.co
 export const tempSensor = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Ftemp-sensor.JPEG?alt=media&token=cc9b107b-ae5a-436d-a07e-03efeedaee9b";
 export const hestSpecs = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fhest-r-value.png?alt=media&token=5cb7c569-f435-4f23-bc7f-bf37246f1e87";
 
+export const relatedArticleOne = '/blog/articles/tune-heavy-lift-strut-install';
+export const relatedArticleTwo = '/blog/articles/tune-starlink-install';
+export const relatedArticleThree = '/blog/articles/tune-insulation-pack-repair';
+
 import { FriggaTempLoger } from '@/app/products/product-links';
 
 <ImageFeature
@@ -56,11 +61,11 @@ import { FriggaTempLoger } from '@/app/products/product-links';
 <MdxLayout>
 
 <TLDR
-text="I have put the Tune M1 to the test this winter. I have tested its performance in different configurations. This includes no insulation, the Tune Insulation Pack, and other ways to improve the cold-weather performance of the camper. If you are looking for the largest gain for the least amount of work, just buy and install the Tune Insulation Pack."
+text="I have put the Tune M1 to the test this winter. I have tested its performance in different configurations and cold weather conditions. This includes no insulation, the Tune Insulation Pack, and other ways to improve the cold-weather performance of the camper. If you are looking for the largest gain for the least amount of work, just buy and install the Tune Insulation Pack."
 />
 
 ### Cold Weather Goals
-The obvious goal when running the Tune in the cold is to have the heater run as little as possible. This not only saves fuel, but also cuts down on the noise the heater creates. The heater is loud! I am a very deep sleeper, and when that thing kicks on, I wake up.
+The obvious goal when running the Tune in the cold is to have the heater run as little as possible. This not only saves fuel, but also cuts down on the noise the heater creates. The heater is loud! I am a very deep sleeper, but when that thing kicks on, I wake up.
 
 ### Observation
 Turning the heater on and feeling for the coldest parts of the camper is dumb science, but I think it is useful to see where the biggest performance improvements might be hiding. Here is what I found:
@@ -149,7 +154,13 @@ If you were wanting to have a warm bed when you get in. I would look at a heated
 
 
 ### Summary
-The Tune Insulation Pack is a must for camping in the cold! Roof insulation and rerouting the heater vent also make a huge difference!
+The Tune Insulation Pack is a must for camping in the cold! Roof insulation and rerouting the heater vent also make a huge difference! If you want to read more about the Tune, you should check out some of my other articals below, or check out their website they have some good information as well!
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 

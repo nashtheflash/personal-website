@@ -19,20 +19,12 @@ import {
     OneColumn,
     TwoColumn,
     CenteredImage, 
-    TwoCenteredImages, 
-    Footer, 
-    TravelFeature, 
     Gif, 
-    BlogMapWrapper,
     TLDR,
-    BlogStatsSection,
-    Stat,
     ImageFeature,
-    StravaEmbed,
-    BlackTieTitle,
-    PhotoCarousel,
     YoutubeVideo,
     YoutubeAd,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -56,6 +48,10 @@ export const strutsOverview = "https://firebasestorage.googleapis.com/v0/b/nash-
 export const tools = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Ftools-needed.jpeg?alt=media&token=bd9a750f-4a1f-4727-841a-b22b39213627";
 export const strutVid = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstrut-operation.mov?alt=media&token=82206506-473b-4c6c-aa3a-ed91cbad1abf";
 export const strutClipSeated = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-heavy-lift-strut-install%2Fstrut-seated.jpeg?alt=media&token=266bf066-c4d7-462b-b876-f0f266d736d7";
+
+export const relatedArticleOne = '/blog/articles/tune-starlink-install';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/tune-insulation-pack-repair';
 
 
 <ImageFeature
@@ -109,14 +105,15 @@ The strut installation wasn't easy. It was actually pretty hard. You can use the
 </div>
 </OneColumn>
 
+<br/>
 
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 [1]: /blog/articals/artical-template
 

@@ -32,6 +32,7 @@ import {
     BlackTieTitle,
     PhotoCarousel,
     GoogleMap,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -56,6 +57,10 @@ export const fallsTakeOut = "https://firebasestorage.googleapis.com/v0/b/nash-br
 export const construction = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Flow-head-damn.JPEG?alt=media&token=e3532f36-23ff-4838-a591-a8a1d144b64b";
 export const mussle = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2FIMG_7243.JPEG?alt=media&token=eb340e1a-0084-4973-886a-82ab3058effe";
 export const needle = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2FIMG_7241.JPEG?alt=media&token=bc4f0a31-50fe-41f2-aebe-608ab4220358";
+
+export const relatedArticleOne = '/blog/articles/kansas-river-trip-report-5-30-2025';
+export const relatedArticleTwo = '/blog/articles/rainbow-peak';
+export const relatedArticleThree = '/blog/articles/kansas-river-trip-report-10-27-2024';
 
 <ImageFeature
     title='Big Sioux River Kayak'
@@ -208,6 +213,15 @@ It was a beautiful day to be out on the water! I would like to continue to kayak
 </div>
 
 </TwoColumn>
+
+<br/>
+<br/>
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 

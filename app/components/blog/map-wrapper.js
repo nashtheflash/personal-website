@@ -11,12 +11,10 @@ export function BlogMapWrapper({
         <div className='flex justify-around items-start gap-2'>
             {text && <p className='m-0'>{text}</p>}
 
-            <div className={`flex ${alignment == 'right' ? 'justify-start' : alignment == 'right' ? 'justify-end' : 'justify-center'} items-center`}>
-                <div className={`${height} ${width}`}>
-                    <GoogleMap
-                        url={mapUrl}
-                    />
-                </div>
+            <div className={`${height} ${width}`}>
+                <GoogleMap
+                    url={mapUrl}
+                />
             </div>
         </div>
     )

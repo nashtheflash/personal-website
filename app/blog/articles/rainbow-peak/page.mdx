@@ -26,6 +26,7 @@ import {
     ImageFeature,
     StravaEmbed,
     YoutubeVideo,
+    RelatedArticles,
 } from '@/app/components/blog'
 
 import { 
@@ -45,6 +46,10 @@ export const parkingLotPoint = "https://firebasestorage.googleapis.com/v0/b/nash
 export const rainbowPoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Frainbow-point.JPEG?alt=media&token=191e48e7-0cf9-4b49-a61a-9878ccbd1e66";
 export const rainbowRidge2 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Frainbow-ridge-2.JPEG?alt=media&token=7e351fb8-b6b9-4af4-b049-c2d415f4a424";
 export const watch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/rainbow-peak%2Fwatch.JPEG?alt=media&token=c1b50838-aeb3-4bb4-bac2-b8571813740f";
+
+export const relatedArticleOne = '/blog/articles/thayer-hut';
+export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
+export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 
 <ImageFeature
     title='Rainbow Peak Climb Report'
@@ -91,6 +96,13 @@ The headwall leading up to the peak offers some decent scree surfing on the way 
 <OneColumn>
     <YoutubeVideo videoId='GJUTCba4x8Y'/>
 </OneColumn>
+
+
+<RelatedArticles 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 

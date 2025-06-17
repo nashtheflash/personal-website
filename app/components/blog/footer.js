@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 export function Footer() {
     return (
-        <footer className="footer footer-horizontal footer-center bg-[#bdd2c9] bg-[url('/mtn-bike-kc/topo-bg-3-black.png')] text-black rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] text-black rounded p-10">
             <nav className="grid grid-flow-col gap-4">
                 <Link href={'/blog/articals/nash-browns'} className="link link-hover">About</Link>
                 <Link href={'/partners'} className="link link-hover">Contact</Link>
