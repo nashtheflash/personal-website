@@ -5,7 +5,7 @@ export const postMetadata = {
     published: "2024-12-01",
     updated: "2024-12-01",
     author: 'Nash Bostwick',
-    thumbnail: '/blog/nash-browns/thumbnail.png',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Ffeature-image.JPEG?alt=media&token=89247d1f-8ab9-47db-89c8-c0bfed6da780',
     description:"Information on kayaking or rafting on the Kansas River.",
     keywords: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide', 'First Time'],
     tags: ['Kansas River', 'Kaw River', 'kayaking', 'rafting', 'guide', 'First Time'],
@@ -16,31 +16,29 @@ export const metadata = generateMetadata({...postMetadata});
 
 import { 
     OneColumn,
-    TravelFeature, 
+    ImageFeature, 
     TLDR,
     MdxLayout,
 } from '@/app/components/blog'
 
-import featureImage from "@/public/blog/nash-browns/thumbnail.png";
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-05-30-25%2Ffeature-image.JPEG?alt=media&token=89247d1f-8ab9-47db-89c8-c0bfed6da780";
+
+<ImageFeature
+title='Kansas River Kayaking Guide'
+image={featureImage}
+/>
 
 <MdxLayout>
-
-<TravelFeature
-    title="Kansas River Guide"
-    imageUrl={featureImage}
-    altText='German Bake Shop'
-    imgWidth={700}
-    imgHeight={700}
-/>
 
 <TLDR
 text="This guide is intended for someone that wants to get on the Kansas River but doesn't know where to start. This guide is NOT intended to teach river skills. Please join an appropriate class for that!"
 />
 
 ## Steps In Planning A Trip
-1. Identify The Current River Speed
-1. Entry and Exit Point
-2. Know the
+1. Identify the current river speed
+2. Be aware of hazards
+3. Entry and exit point
+4. Know any planed reservoir releases
 
 ## Find The River CFS
 The speed that a river is moving is measured in cubic feet per second(CFS). The current readings for the Kansas River are shown below. 
@@ -55,9 +53,11 @@ The speed that a river is moving is measured in cubic feet per second(CFS). The 
 </OneColumn>
 
 
-* Min CFS
+* Min CFS 1,000(this will be lake like)
 * Novice paddles should use the river when the CFS is less than 5,000
 * Experience paddles should use the river when the CFS is less than 8,000
+
+I found that anything over 3,000 CFS is fun!
 
 You can find the full USGA website here -> [Water Watch][2]
 
@@ -88,13 +88,23 @@ You should never ride over low head dams or weirs. There are big signs on the Ka
 There are two railroad bridges that were demolished into the river. Both are located in Topeka and are about 2 miles from each other.
 
 ## Plan Entry and Exit Points
-Deciding where to enter and exit the river depends on how much time you have. Plan on being able to travel 3 miles per hour when the river is < 5,000 CFS and 6 miles per hour if speeds are between 5,000 and 8,000.
+Deciding where to enter and exit the river depends on how much time you have. Plan on being able to travel 3 miles per hour when the river is between 3,000 & 5,000 CFS and 6 miles per hour if speeds are between 5,000 and 8,000.
 
 <OneColumn>
     <iframe src="https://www.google.com/maps/d/embed?mid=1A7RTX-9Bj_0MdgY5qejfxA_D_dRNGBDy&ehbc=2E312F" width="640" height="480"></iframe>
 </OneColumn>
 
+## Check for Planed Reservoir Releases
+I haven't ever seen a release that would be noticeable wile paddling. It only takes to seconds to check. I would assume that this could be dangerous or helpful depending on the base flow of the river.
+
+[Kansas River Reservoir Releases][3]
+
 </MdxLayout>
+<br/>
+<br/>
+<br/>
+<br/>
 
 [1]: /blog/articals/kansas-river-all-hazards
 [2]: https://waterwatch.usgs.gov/new/index.php?st=kansas+river&search.x=0&search.y=0&id=wwlmap_viewer&xft=0&choose=&ssonly=1&sspopup=0&snmfb=0&mt=real&mcf=jsontile
+[3]: https://www.nwd-mr.usace.army.mil/rcc/nwk/3_Days_Forecast.pdf
