@@ -1,14 +1,14 @@
 import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
-    title: "Tune M1 Cold Weather Preformance",
+    title: "Tune M1 Cold Weather Performance",
     published: "2024-12-01",
     updated: "2024-12-01",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae',
-    description:"Explore the Tune M1 camper’s cold weather capabilities. Learn how it handles winter camping and get practical tips for your own outdoor trips.",
-    keywords: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
-    tage: ['Tune M1', 'Cold Weather Preformance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
+    description:"Explore the Tune M1 camper's cold weather capabilities. Learn how it handles winter camping and get practical tips for your own outdoor trips.",
+    keywords: ['Tune M1', 'Cold Weather Performance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
+    tags: ['Tune M1', 'Cold Weather Performance', 'No Insulation', 'Factory Insulation', 'Aftermarket Insulation'],
     isActive: true,
 }; 
 
@@ -75,7 +75,7 @@ Turning the heater on and feeling for the coldest parts of the camper is dumb sc
 3. Truck Bed(Est. R-value: ~0)
 4. FRP Panels([Est. R-value: 2.1][5]) 
 
-I think the cloth seems the coldest because some of the wind is able to pass through the fabric. Just a guess—I’m not a scientist. When you are lying in bed, you can feel the cold on your head!
+I think the cloth seems the coldest because some of the wind is able to pass through the fabric. Just a guess—I'm not a scientist. When you are lying in bed, you can feel the cold on your head!
 
 ### Parameters
 
@@ -87,7 +87,7 @@ The inside temperature sensor is wedged into the T-track next to the fan. The ou
 
 <TwoCenteredImages image={[sensorLocation, friggaSensor]} altText={['Sensor Location During Test', 'Frigga Temperature Logger']} titles={['Sensor Location', 'Frigga Temp Logger']} width={'500'} height={'500'} /> 
 
-In the [Setup Video][1], they show that you could move the heater’s sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Maybe they saw some of the same results and went with the cleaner install. I would have!
+In the [Setup Video][1], they show that you could move the heater's sensor around, but this no longer appears to be the case. As seen below, my sensor only has about 4 inches of exposed cord and appears to be permanently attached. Maybe they saw some of the same results and went with the cleaner install. I would have!
 <TwoCenteredImages image={[sensorGif, tempSensor]} altText={['Tune M1 Heater Sensor Relocation', 'New Tune M1 Sensor Install']} width={'500'} height={'500'} />
 
 ### Stock Tune (No Insulation)
@@ -102,7 +102,7 @@ It took about 90 minutes to get the camper up to temperature. The temperature se
 
 <LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
 
-The difference between ambient and camper temperature was kept at 40 degrees, which was impressive—but you can also see that the heater ran almost continuously. During the 9-hour test, the heater was only off for about 2.5 hours, kicking on around 10 times. This doesn’t sound like much, but when the heater kicks on, it is super loud!
+The difference between ambient and camper temperature was kept at 40 degrees, which was impressive—but you can also see that the heater ran almost continuously. During the 9-hour test, the heater was only off for about 2.5 hours, kicking on around 10 times. This doesn't sound like much, but when the heater kicks on, it is super loud!
 
 ### Tune with Insulation Kit
 This test involves heating the camper from ambient temperature to 65 degrees. The camper has the insulation kit installed, no roof insulation, the windows closed, and the heater set to boost mode. You can see the setup on the right.
@@ -123,7 +123,7 @@ This test is with the roof insulation only, with the windows closed. The heater 
 The first part of the test is heating the camper from ambient temperature to 65 degrees.
 <LineGraph title={'Ambient to 65 Degrees(empty)'} data={roofInsulationNoInsulationPackDataTimeToTemp} />
 
-It took about 60 minutes to get the camper up to temperature. Note that the ambient temperature was a little warmer than in the other tests! You can see that the heater turned on less frequently than without the roof insulation. I love the roof insulation! It helps keep light out, parking lot lights are awful without it, and it also helps cut down on noise. I think it looks really nice as well! The test results aren’t much different from the full insulation test.
+It took about 60 minutes to get the camper up to temperature. Note that the ambient temperature was a little warmer than in the other tests! You can see that the heater turned on less frequently than without the roof insulation. I love the roof insulation! It helps keep light out, parking lot lights are awful without it, and it also helps cut down on noise. I think it looks really nice as well! The test results aren't much different from the full insulation test.
 
 <LineGraph title={'Overnight Heater Performance'} data={roofInsulationNoInsulationPackData} />
 
@@ -133,7 +133,7 @@ This test is with the Tune Insulation Pack and roof insulation, the windows clos
 <CenteredImage image={insideCamperFullInsulation} altText={'Inside Camper Windows Closed'} width={700} height={700} />
 </TwoColumn>
 
-This is by far the best setup. It’s not only warm, but it also makes the camper feel like a den. It’s dark, quiet, and there are no drafts able to get in. Even when it’s cold, the night setting on the heater is warm enough to keep the camper comfortable. Having the heater in night mode is a huge deal because it is very quiet! I wake up every time I hear the heater kick on when it’s in Auto mode.
+This is by far the best setup. It's not only warm, but it also makes the camper feel like a den. It's dark, quiet, and there are no drafts able to get in. Even when it's cold, the night setting on the heater is warm enough to keep the camper comfortable. Having the heater in night mode is a huge deal because it is very quiet! I wake up every time I hear the heater kick on when it's in Auto mode.
 
 <LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempRoofInsulationPackData} />
 <LineGraph title={'Overnight Heater Performance'} data={roofInsulationPackData} />
@@ -142,7 +142,7 @@ This is by far the best setup. It’s not only warm, but it also makes the campe
 This is by far the test with the least amount of data. It is more of a feel. My honest feeling is that the Hest mattress that the Tune comes with is enough insulation for sleeping. It is cold when you get into bed, but you warm it up quickly. Hest foam seems to have an R-Value of 8.8 seen below:
 <CenteredImage image={hestSpecs} altText={'Hest Mattress Specs'} title={'Hest Specs'} width={1280} height={518} />
 
-I believe that Tune buys the Dually Pads from Hest. They have there branding all over the page. Here are the links to the info:
+I believe that Tune buys the Dually Pads from Hest. They have their branding all over the page. Here are the links to the info:
 * [Hest Dually(No R-Value Spec)][3]
 * [Hest Foamy(Has R-Value Spec)][3]
 
@@ -154,7 +154,7 @@ If you were wanting to have a warm bed when you get in. I would look at a heated
 
 
 ### Summary
-The Tune Insulation Pack is a must for camping in the cold! Roof insulation and rerouting the heater vent also make a huge difference! If you want to read more about the Tune, you should check out some of my other articals below, or check out their website they have some good information as well!
+The Tune Insulation Pack is a must for camping in the cold! Roof insulation and rerouting the heater vent also make a huge difference! If you want to read more about the Tune, you should check out some of my other articles below, or check out their website—they have some good information as well!
 
 <RelatedArticles 
     articleOne={relatedArticleOne}
