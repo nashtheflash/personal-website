@@ -16,6 +16,9 @@ export { TLDR } from './layout/tldr'
 export { TravelFeature } from './feature-sections/travel-feature';
 export { ImageFeature } from './feature-sections/image-feature';
 
+//Callout / Feature
+export { CallOut } from './callout-feature/callout';
+
 //Cards
 export { BlogCard } from './cards/blog-artical-card';
 
