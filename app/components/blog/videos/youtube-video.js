@@ -6,17 +6,19 @@ export function YoutubeVideo({videoId}){
     const origin = 'origin=https://nashbrowns.com'
 
     return(
-        <div className="flex justify-center items-center w-full">
-            <iframe 
-                src={`https://www.youtube.com/embed/${videoId}?si=1plKHiXuvLu5gtVo&${autoPlay}&${mute}&${loop}&${playlist}&${origin}`}
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
-                style={{aspectRatio: '16 / 9', width: '100%'}}
-            />
+        <div className="h-fit w-full bg-[#ddded9] rounded-lg px-4 py-2 my-4">
+            <h2 className='text-center text-5xl font-mono font-bold my-6'>🎥 Watch On Youtube</h2>
+            <div className="flex justify-center items-center w-full">
+                <iframe 
+                    src={`https://www.youtube.com/embed/${videoId}?si=1plKHiXuvLu5gtVo&${autoPlay}&${mute}&${loop}&${playlist}&${origin}`}
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                    style={{aspectRatio: '16 / 9', width: '100%'}}
+                />
+            </div>
         </div>
     )
 }
-
