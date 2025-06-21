@@ -5,7 +5,7 @@ export const postMetadata = {
     published: "2025-06-20",
     updated: "2025-06-20",
     author: 'Nash Bostwick',
-    thumbnail: `https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Ffeature-video.mov?alt=media&token=b97b9f5b-1032-4693-be4d-51a4745a8a06`,
+    thumbnail: `https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Flight-edit.JPG?alt=media&token=69237295-e360-401d-b727-318ee5c3e388`,
     description:"DIY guide: Install Tune M1 third brake light on 2022 Toyota Tacoma without drilling holes or cutting factory wiring. Complete wiring tutorial with $30 solution.",
     keywords: ['Tune M1', 'third brake light', 'brake light install', 'Toyota Tacoma wiring', 'Tune M1 installation', '2022 Tacoma', '3rd generation Tacoma', 'DIY truck mods', 'truck wiring', 'brake light wiring', 'Tune M1 brake light', 'Tacoma mods', 'truck accessories'],
     tags: ['Tune M1', 'Third Brake Light', 'Installation Guide', 'Toyota Tacoma', 'DIY', 'Wiring'],
@@ -16,21 +16,11 @@ export const metadata = generateMetadata({...postMetadata});
 
 import { 
     MdxLayout,
-    OneColumn,
-    TwoColumn,
     CenteredImage, 
     TwoCenteredImages, 
-    Footer, 
-    TravelFeature, 
-    Gif, 
-    BlogMapWrapper,
     TLDR,
-    BlogStatsSection,
-    Stat,
     ImageFeature,
-    StravaEmbed,
-    BlackTieTitle,
-    PhotoCarousel,
+    Gif,
     CallOut,
     RelatedArticles,
     YoutubeVideo,
@@ -38,7 +28,6 @@ import {
 } from '@/app/components/blog'
 
 import { 
-    ReflectiveInsulation,
     TrailerConnector,
     TacomaConnectors,
     GenaricConnector,
@@ -51,7 +40,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Flight-edit.JPG?alt=media&token=69237295-e360-401d-b727-318ee5c3e388";
-export const featureVideo= "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Ffeature-video.mov?alt=media&token=b97b9f5b-1032-4693-be4d-51a4745a8a06";
+// export const featureVideo= "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Ffeature-video.mov?alt=media&token=b97b9f5b-1032-4693-be4d-51a4745a8a06";
 export const tuneWiring = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Ftune-wiring.jpeg?alt=media&token=c9ca1f77-64ef-4a9e-870f-44b8fbe1dccf";
 export const lightWiring = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Flight-wiring.jpeg?alt=media&token=eb7636f1-9a6d-4d75-ae37-773f6ddbc108";
 export const trailerPort = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-third-taillight-install%2Ftrailer-port.jpeg?alt=media&token=8ed0a2c6-e0f3-40ec-a19a-861f96053c07";
@@ -73,8 +62,7 @@ export const relatedArticleThree = '/blog/articles/tune-starlink-install';
 
 <ImageFeature
     title='Tune M1 Third Brake Light Install'
-    image={featureVideo}
-    video={true}
+    image={featureImage}
 />
 
 <MdxLayout>
@@ -92,7 +80,7 @@ Tune does not provide instructions on how to wire up the 3rd brake light. I can'
 
 The connector on the left plugs into the Tune. The black wire goes to ground, the red goes to power. It's that simple! They also included a fuse which I feel is unneeded because the truck already has a fuse on that circuit, but I ended up installing it in my final setup as a precaution! I had a few thoughts on where to get power for this setup:
 
-<YoutubeAd videoID={'H_NeBTkCW64'} description={'I made a video outlining this install.'} />
+<YoutubeAd videoID={'8Cs5f0VdYBE'} description={'I made a video outlining this install.'} />
 
 ### The Brake Light
 This is almost certainly what Tune had in mind when they supplied the wires. You could run them out near the tailgate, right into the back of the brake light. Ultimately, this is where I ended up getting power from, but I didn't want to have the wire exposed. It would be a matter of time before I caught it with something. Also, I was not big on the aesthetics!
@@ -135,7 +123,7 @@ Then just plug everything together! This is one of those projects that ended qui
 
 <br/>
 
-<YoutubeVideo videoId='H_NeBTkCW64'/>
+<YoutubeVideo videoId='8Cs5f0VdYBE'/>
 
 <RelatedArticles 
     articleOne={relatedArticleOne}
