@@ -1,10 +1,9 @@
 export function Gif({video, topTitle, bottomTitle, height, width}){
-    // console.log(height, width);
 
     return(
         <>
             { topTitle && <p className='m-0'>{topTitle}</p> }
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center w-full'>
                 <video 
                     width={width} 
                     height={height}

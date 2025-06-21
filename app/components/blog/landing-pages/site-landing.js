@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function SiteLanding() {
     return(
-        <div className='flex fle-col justify-center items-center h-full w-full min-h-[calc(100vh-64px)] p-2'>
+        <div className='flex fle-col justify-center items-center w-full h-[calc(100vh-64px)] p-2 overflow-hidden'>
             <Image
                 src={"/nashbrowns-logo.png"}
                 alt='NashBrowns Logo'

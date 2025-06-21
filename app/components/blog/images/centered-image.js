@@ -23,7 +23,7 @@ function Title({title, subtitle}) {
     
     return (
         <div className='flex flex-col justify-start items-start'>
-            <span className='text-4xl font-bold'>{title}</span>
+            <span className='text-4xl font-bold pr-3'>{title}</span>
             {
                 subtitle ? <SubTitle subtitle={subtitle}/> : <></>
             }
