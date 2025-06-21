@@ -8,7 +8,7 @@ export async function RelatedArticles({articleOne, articleTwo, articleThree}) {
     return(
         <>
             <div className='w-full'>
-                <h1 className='text-center font-mono'>Related Articles</h1>
+                <h2 className='text-center font-mono'>Related Articles</h2>
             </div>
             <div className="flex flex-col gap-3 md:flex-row justify-between items-center w-full">
                 <RelatedCard article={articleOne}/>
