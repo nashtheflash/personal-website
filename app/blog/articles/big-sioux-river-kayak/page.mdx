@@ -1,14 +1,14 @@
 import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
-    title: "Big Sioux River",
+    title: "Big Sioux River Kayak",
     published: "2025-04-19",
     updated: "2025-04-19",
     author: 'Nash Bostwick',
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fthumbnail.JPEG?alt=media&token=354984d3-1b90-4bdc-93a7-1fe382ba58fc',
-    description:"On April 19 2025 I kayaked the Big Sioux River. This is a trip report detailing how it went.",
-    keywords: ['Trip Report', 'How To', 'Kayak', 'Big Sioux River', 'Can I Kayak the Big Sioux River', 'How to Kayak the Big Sioux River'],
-    tags: ['Trip Report', 'How To', 'Kayak', 'Big Sioux River', 'Can I Kayak the Big Sioux River', 'How to Kayak the Big Sioux River'],
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Ffeature-image.jpg?alt=media&token=39eb2a7e-7b62-48c2-b205-f44711550741',
+    description:"Complete Big Sioux River kayaking trip report from Elmwood Park to Pasley Park in Sioux Falls, SD. Includes flow rates, put-in/take-out locations, wildlife sightings, and essential tips for paddling this urban river.",
+    keywords: ['Big Sioux River', 'Sioux Falls kayaking', 'South Dakota paddling', 'Big Sioux River kayak', 'Sioux Falls river trip', 'Elmwood Park kayak launch', 'Pasley Park takeout', 'Skunk Creek confluence', 'Tuthill Park rapids', 'Farm Field Park kayak', 'river flow rates', 'CFS kayaking', 'urban kayaking', 'Sioux Falls outdoor activities'],
+    tags: ['Trip Report', 'Kayaking', 'Big Sioux River', 'Sioux Falls', 'South Dakota', 'River Paddling', 'Outdoor Adventure'],
     isActive: true,
 };
 
@@ -19,33 +19,30 @@ import {
     OneColumn,
     TwoColumn,
     CenteredImage, 
-    TwoCenteredImages, 
-    Footer, 
-    TravelFeature, 
-    Gif, 
-    BlogMapWrapper,
     TLDR,
     BlogStatsSection,
     Stat,
     ImageFeature,
     StravaEmbed,
-    BlackTieTitle,
-    PhotoCarousel,
     GoogleMap,
     RelatedArticles,
 } from '@/app/components/blog'
 
-import { 
-    ReflectiveInsulation,
-} from '@/app/products/product-links'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faReact,
-    faShopify,
-} from '@fortawesome/free-brands-svg-icons';
 
-export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fthumbnail.JPEG?alt=media&token=354984d3-1b90-4bdc-93a7-1fe382ba58fc";
+import { 
+    faRoute,
+    faCalendarDays,
+    faNarwhal,
+    faGauge,
+    faClock,
+    faPlaneArrival,
+    faPlaneDeparture,
+    faShip,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Ffeature-image.jpg?alt=media&token=39eb2a7e-7b62-48c2-b205-f44711550741";
 export const map = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fmap.jpg?alt=media&token=4287b7ba-3b03-47fc-9c41-83492c291f2c";
 export const hopefulTakeout = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Fhopeful-take-out.JPEG?alt=media&token=26d2fbd4-3362-484b-ac18-7a61c3182ec9";
 export const rocks = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/big-sioux-river-kayak%2Frocks.JPEG?alt=media&token=9dda64ea-0b6c-4f45-8aac-6286812fe010";
@@ -67,15 +64,27 @@ export const relatedArticleThree = '/blog/articles/kansas-river-trip-report-10-2
     image={featureImage}
 />
 
+<BlogStatsSection>
+    <Stat title={'Distance'} stat={'8.08 Mi'} icon={faRoute}/>
+    <Stat title={'Days'} stat={'1'} icon={faCalendarDays}/>
+    <Stat title={'Speed(CFS)'} stat={'398'} icon={faGauge}/>
+    <Stat title={'Paddle Time'} stat={'4:23:56'} icon={faClock}/>
+    <Stat title={'Difficulty'} stat={'Easy'} icon={faShip}/>
+    <Stat title={'Put In'} stat={'Elmwood Park'} icon={faPlaneArrival}/>
+    <Stat title={'Take Out'} stat={'Pasley Park'} icon={faPlaneDeparture}/>
+    <Stat title={'Fish Caught'} stat={'0'} icon={faNarwhal}/>
+</BlogStatsSection>
+
 <MdxLayout>
 
-I was visiting my mother, a resident of Sioux Falls, in April of 2025. I decided to bring my Packraft. Why? During a previous visit, I was walking her dog and noticed some people kayaking down a river in Tuthill park. It stuck, and Easter weekend 2025 was the stars alighted to see what the river was like.
+<TLDR
+text="I was visiting my mother, a resident of Sioux Falls, in April of 2025. I decided to bring my Packraft. Why? During a previous visit, I was walking her dog and noticed some people kayaking down a river in Tuthill Park. It stuck, and Easter weekend 2025 was when the stars aligned to see what the river was like." 
+/>
 
-## Goal
 The goal of the afternoon was to kayak from Elmwood Park to Falls Park. It just seemed like a good distance and not much thought was put into it. Kayaking through downtown Sioux Falls did sound like a good time though!
 <CenteredImage image={hopefulTakeout} altText={'Jay Heath Trail'} title={'Jay Heath Trail'} width={500} height={1000} />
 
-I have walked down by the river a decent amount and always noticed a place to take your boat out(seen above). I planned to end the trip there!
+I have walked down by the river a decent amount and always noticed a place to take your boat out (seen above). I planned to end the trip there!
 
 
 ## Research
@@ -93,17 +102,19 @@ How long will this take?
 Will you die?
 
 All great questions. I shared my location on my phone and headed off.
+<br/>
+Another great resource for kayaking in Sioux Falls is this webpage run by the state of South Dakota: [South Dakota Paddling][3]
 </div>
 </TwoColumn>
 
 <TwoColumn>
-One other thing I looked at is this all trails track. I don't know that this did much, but I did use it to be able to judge some distances to try to come up with a ballpark of how long this was going to take. You can see this on all trails [here][1]
+One other thing I looked at is this AllTrails track. I don't know that this did much, but I did use it to be able to judge some distances to try to come up with a ballpark of how long this was going to take. You can see this on AllTrails [here][1]
 
 <iframe className="alltrails" src="https://www.alltrails.com/widget/trail/us/south-dakota/big-sioux-river-kayaking-route-ward-to-brandon?elevationDiagram=false" width="100%" height="400" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
 </TwoColumn>
 
 ## Flow
-Check the flow before you go! I did not. I could find anything on the internet recommending a minimum flow for rafting. Here were the stats when I went:
+Check the flow before you go! I did not. I could not find anything on the internet recommending a minimum flow for rafting. Here were the stats when I went:
 
 * Skunk Creek: 33.2 CFS                                           -- Considered Average
 * Big Sioux River at Sioux Falls: 43.9 CFS                        -- Considered Much Below Average
@@ -143,7 +154,7 @@ Not much water. There was a significant amount of dragging on the bottom. I had 
 There was water on this section. I found out why at the end!
 <CenteredImage image={rocks} altText={'Big Sioux Rock Crossing'} title={'Rock Crossing'} width={1000} height={500} />
 
-These rocks / damn are labeled on the official map. Here is a more exact location:
+These rocks / dam are labeled on the official map. Here is a more exact location:
 <TwoColumn>
     <CenteredImage image={rockMap} altText={'Big Sioux Rock Crossing Location'} title={'Rock Crossing'} width={500} height={1000} />
     <GoogleMap
@@ -152,7 +163,7 @@ These rocks / damn are labeled on the official map. Here is a more exact locatio
 </TwoColumn>
 
 ## Zoo -> Confluence with Skunk Creek
-Starting below the rocks was the worst water on the river. There was hardly any and I did not even attempt to launch. I ended up almost calling the trip at this point but I decided to walk down to skunk creek to see if there was more water. It turns out there was! I walked across the below bridge and down to the confluence to launch!
+Starting below the rocks was the worst water on the river. There was hardly any and I did not even attempt to launch. I ended up almost calling the trip at this point but I decided to walk down to Skunk Creek to see if there was more water. It turns out there was! I walked across the below bridge and down to the confluence to launch!
 <CenteredImage image={bridgeToSkunk} altText={'Bridge to Skunk Creek'} title={'Bridge to Skunk Creek'} width={1000} height={500} />
 
 <TwoColumn>
@@ -179,11 +190,11 @@ Taking out can be done almost anywhere along the river. I chose Pasley Park on t
 
 ## Wild Life
 <TwoColumn>
-<CenteredImage image={mussle} altText={'Big Mussle'} title={'Big Mussle'} width={1000} height={500} />
+<CenteredImage image={mussle} altText={'Big Mussel'} title={'Big Mussel'} width={1000} height={500} />
 I was able to see a ton of waterfowl: birds, ducks, geese sitting on eggs, and Sandhill cranes. I was also able to see turtles and a couple of deer. The most exciting thing was a river otter. Am I sure that I saw this? No. Did I get a picture? No. However, I am pretty sure this is what I saw! Big mussels were also spotted.
 </TwoColumn>
 
-## Farm Park Putin
+## Farm Park Put-in
 There is a nice kayak launch at this park. Honestly, Farm Park to Falls Park would be the most fun section of the river and is what I would recommend.
 
 <TwoColumn>
@@ -227,4 +238,5 @@ It was a beautiful day to be out on the water! I would like to continue to kayak
 
 [1]: https://www.alltrails.com/trail/us/south-dakota/big-sioux-river-kayaking-route-ward-to-brandon
 [2]: https://waterwatch.usgs.gov/new/index.php?mt=real&st=big+sioux+river&usst=&ushuc=&go=GO&id=wwlmap_viewer
+[3]: https://gfp.sd.gov/paddling/
 
