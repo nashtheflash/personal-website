@@ -11,7 +11,6 @@ export { TwoColumn } from './layout/two-column'
 export { OneColumn } from './layout/one-column'
 export { TLDR } from './layout/tldr'
 
-
 //Feature
 export { TravelFeature } from './feature-sections/travel-feature';
 export { ImageFeature } from './feature-sections/image-feature';
@@ -79,6 +78,8 @@ export { Login } from "./login/login";
 export { YoutubeAd } from "./ads/youtube-video";
 export { RelatedArticles } from "./ads/related-articles";
 
+//Loaders
+export { HashBrownsLoader } from "./loaders/hash-browns-loader";
 
 //Art
 export { UnsplashDownloader } from "./art/download-unsplash";

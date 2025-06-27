@@ -4,11 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { CSS3DRenderer, CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer";
+import { HashBrownsLoader } from "../";
 
 export function ThreeSixtyImage({image}) {
     const containerRef = useRef(null);
     const animationFrameId = useRef(null);
     const [activeAnnotation, setActiveAnnotation] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const annotations = [
         // { id: "door", position: new THREE.Vector3(0, 0, -200), label: "Door", size: 1 },
@@ -26,9 +29,25 @@ export function ThreeSixtyImage({image}) {
         setActiveAnnotation(null);
     };
 
+    // Function to get the appropriate image URL (proxy in development)
+    const getImageUrl = (url) => {
+        // Check if we're in development and the URL is external
+        if (typeof window !== 'undefined' && 
+            window.location.hostname === 'localhost' && 
+            url.startsWith('http')) {
+            // Use the proxy API route
+            return `/api/proxy-image?url=${encodeURIComponent(url)}`;
+        }
+        return url;
+    };
+
     useEffect(() => {
         const container = containerRef.current;
-        if (!container) return;
+        if (!container || !image) return;
+
+        // Reset states
+        setIsLoading(true);
+        setError(null);
 
         // Scene
         const scene = new THREE.Scene();
@@ -53,14 +72,21 @@ export function ThreeSixtyImage({image}) {
         const geometry = new THREE.SphereGeometry(500, 60, 40);
         geometry.scale(-1, 1, 1);
         const textureLoader = new THREE.TextureLoader();
+        
+        // Set crossOrigin for remote images
+        textureLoader.crossOrigin = "anonymous";
+        
+        // Get the appropriate image URL
+        const imageUrl = getImageUrl(image);
+        console.log("🖼️ Loading image from:", imageUrl);
+        
         textureLoader.load(
-            image,
+            imageUrl,
             (texture) => {
                 console.log("✅ Texture Loaded Successfully!");
 
                 texture.mapping = THREE.EquirectangularReflectionMapping;
                 texture.colorSpace = THREE.SRGBColorSpace;
-                // texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
                 texture.minFilter = THREE.LinearFilter;
                 texture.magFilter = THREE.LinearFilter;
                 texture.generateMipmaps = true;
@@ -73,9 +99,17 @@ export function ThreeSixtyImage({image}) {
                 const material = new THREE.MeshBasicMaterial({ map: texture });
                 const sphereMesh = new THREE.Mesh(geometry, material);
                 scene.add(sphereMesh);
+                
+                setIsLoading(false);
             },
-            undefined,
-            (error) => console.error("🚨 Texture Load Error:", error)
+            (progress) => {
+                console.log("📈 Loading progress:", (progress.loaded / progress.total * 100) + "%");
+            },
+            (error) => {
+                console.error("🚨 Texture Load Error:", error);
+                setError("Failed to load image. Please check the URL and try again.");
+                setIsLoading(false);
+            }
         );
 
         // Orbit Controls
@@ -147,15 +181,43 @@ ${point.label}
             if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
             window.removeEventListener("click", handleOutsideClick);
             if (container) {
-                container.removeChild(webGLRenderer.domElement);
-                container.removeChild(cssRenderer.domElement);
+                if (webGLRenderer.domElement.parentNode === container) {
+                    container.removeChild(webGLRenderer.domElement);
+                }
+                if (cssRenderer.domElement.parentNode === container) {
+                    container.removeChild(cssRenderer.domElement);
+                }
             }
             webGLRenderer.dispose();
         };
-    }, []);
+    }, [image]); // Add image to dependency array
 
     return (
         <div ref={containerRef} style={{ width: "100%", height: "80vh", position: "relative", overflow: "hidden" }}>
+            {/* Loading State */}
+            {isLoading && (
+                <HashBrownsLoader loadingText={'360° Image'} color={'white'}/>
+            )}
+            
+            {/* Error State */}
+            {error && (
+                <div style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: 10,
+                    background: "rgba(255, 0, 0, 0.8)",
+                    color: "white",
+                    padding: "20px",
+                    borderRadius: "8px",
+                    fontSize: "16px",
+                    textAlign: "center"
+                }}>
+                    {error}
+                </div>
+            )}
+            
             {/* Hidden Labels Controlled by State */}
             {annotations.map((annotation) => (
                 <style key={annotation.id}>
