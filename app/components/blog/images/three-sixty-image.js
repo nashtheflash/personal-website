@@ -29,13 +29,9 @@ export function ThreeSixtyImage({image}) {
         setActiveAnnotation(null);
     };
 
-    // Function to get the appropriate image URL (proxy in development)
+    // Always use the proxy for remote images
     const getImageUrl = (url) => {
-        // Check if we're in development and the URL is external
-        if (typeof window !== 'undefined' && 
-            window.location.hostname === 'localhost' && 
-            url.startsWith('http')) {
-            // Use the proxy API route
+        if (url.startsWith('http')) {
             return `/api/proxy-image?url=${encodeURIComponent(url)}`;
         }
         return url;
