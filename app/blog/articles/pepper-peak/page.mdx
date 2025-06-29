@@ -1,15 +1,17 @@
+import Link from 'next/link';
+
 import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
-    title: "O'Malley Peak Climb Report",
+    title: "Pepper Peak Climb Report",
     published: "2025-06-22",
     updated: "2025-06-26",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041',
-    description:"Complete O'Malley Peak climb report from Glen Alps Trailhead in Alaska's Chugach Mountains. 9.67-mile non-technical hiking route with 3,601ft elevation gain, stunning views, and scree surfing descent. Perfect for peak bagging in Anchorage's front range with detailed trail conditions, wildlife encounters, and essential planning information.",
-    keywords: ["O'Malley Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
-    tags: ["O'Malley Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
-    isActive: true,
+    description:"",
+    keywords: ["Pepper Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
+    tags: ["Pepper Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
+    isActive: false,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -45,8 +47,8 @@ import {
 } from '@awesome.me/kit-237330da78/icons/classic/light'
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041";
-export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2F360-image-small.jpg?alt=media&token=5da71dd7-ad8f-4f9b-9ab8-04a799045ab3";
-export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Froute.jpeg?alt=media&token=b5c83c1c-fffe-4603-a304-8fa9ed07ab30";
+export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-360-image.jpg?alt=media&token=b8ae2cff-19b7-420d-98ea-0f465e7adbcc";
+export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-3D-map.jpeg?alt=media&token=e4c60c78-c72f-4573-b375-f6b72410d868";
 export const porcupine = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fporcupine.mov?alt=media&token=3c0bf4e7-c4dd-4ea8-bf1f-acfa80fefbb1";
 export const headwall = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fheadwall.jpeg?alt=media&token=864e82ae-9251-452b-bc8c-74195131742f";
 
@@ -55,7 +57,7 @@ export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
 export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 
 <ImageFeature
-    title="O'Malley Peak Climb Report"
+    title="Pepper Peak Climb Report"
     image={threeSixtyImage}
     threeSixty={true}
 />
@@ -74,21 +76,35 @@ export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 <MdxLayout>
 
 <TLDR
-text="O'Malley is an easy non-technical climb in the front range. It is very fun, the scree surfing is pleasant, and the views are spectacular. More and more tourists are finding their way over to Little O'Malley which is a great alternative if you aren't feeling up to the whole climb!"
+text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing over Eklutna Lake. If you like walking on ridges and non-technical climbing in the Chugach, you will find this trip fun!"
 />
 
-I made it up O'Malley peak on a dreary day in late June. I was lucky; when I left the truck it was starting to sprinkle and it looked like a rainy day was in my future. Fortunately, the mountains kept the rain further back in the range. I would say that it was very pleasant on the summit. It is funny how often this happens to me in the great Chugach. The map below illustrates the route nicely!
+<div className={`w-full`} id='condiment-traverse'>
+    <h2 className='text-center font-mono mb-2'>Condiment Traverse</h2>
+    <p className={'text-center w-full'}>If you are going to climb salt you also have to climb pepper and shaker! You can find the other parts of this trip below!</p>
+</div>
+<div className='flex justify-evenly items-center w-full h-52'>
+    <div className={'flex flex-col items-center justify-center gap-2'}>
+        <span className={'text-9xl'}>⛰️</span>
+        <Link href={'/blog/articles/pepper-peak#condiment-traverse'} className={"bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] p-1 rounded-md"}>Pepper Peak</Link>
+    </div>
+    <span className={'text-6xl'}>➡️</span>
+    <div className={'flex flex-col items-center justify-center'}>
+        <span className={'text-9xl'}>⛰️</span>
+        <Link href={'/blog/articles/shaker-peak#condiment-traverse'}>Shaker Peak</Link>
+    </div>
+    <span className={'text-6xl'}>➡️</span>
+    <div className={'flex flex-col items-center justify-center'}>
+        <span className={'text-9xl'}>⛰️</span>
+        <Link href={'/blog/articles/salt-peak#condiment-traverse'}>Salt Peak</Link>
+    </div>
+</div>
+
+The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls of the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wreseling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole. Anyway here is an overview of the route up to Pepper:
 
 <CenteredImage image={route} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
 
-<div className="h-fit w-full bg-[#ddded9] rounded-xl px-4 py-2 my-4">
-    <h2 className="m-0 pb-2 font-mono font-bold underline underline-offset-4">Tourist Reroute</h2>
-    <p className="m-0">There is a big push to divert some of the traffic from Flattop to O'Malley or maybe Little O'Malley. It is hard to tell what the plan is but it is easy to see all of the work that has been put in. Wood planks over delicate areas, exceptional signage, and absence of loneliness abound!</p>
-    <ul>
-        <a href={'https://www.alaska.org/detail/omalley-peak-trail'}><li>Alaska.org</li></a>
-        <a href={'https://www.anchorage.net/trail/little-omalley-peak-trail/636085504c15ab7f116ea553/'}><li>Visit Anchorage</li></a>
-    </ul>
-</div>
+Lots of people stop here! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugatch. Maybe even a glacier? It would be impossible to know!
 
 <TwoColumn>
     <div className={'w-full sm:w-1/2'}>
@@ -125,10 +141,10 @@ Climb the headwall, turn left and you are at the top! It is that easy. This is m
 
 <TwoColumn>
     <div className={'w-full sm:w-1/2'}>
-        <StravaEmbed dataEmbedId='14886179027'/>
+        <StravaEmbed dataEmbedId='14937681322'/>
     </div>
     <div className={'w-full h-full sm:w-1/2'}>
-        <iframe src='https://connect.garmin.com/modern/activity/embed/19516293891' width="100%" height="100%" title='Activity Embed' frameborder="0" />
+        <iframe src='https://connect.garmin.com/modern/activity/embed/19565668335' width="100%" height="100%" title='Activity Embed' frameborder="0" />
     </div>
 </TwoColumn>
 
@@ -139,6 +155,7 @@ Climb the headwall, turn left and you are at the top! It is that easy. This is m
 />
 
 </MdxLayout>
+
 
 
 
