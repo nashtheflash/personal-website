@@ -23,7 +23,7 @@ async function RelatedCard({article}) {
     const {title, thumbnail, description} = await getSingleBlogPostMetadata(article);
 
     return(
-            <div className="card bg-base-100 w-96 h-full max-h-[600px] shadow-sm">
+            <div className="card bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] w-96 h-full max-h-[600px] shadow-sm">
                 <figure className='relative w-full h-52 my-0'>
                     <Image
                         alt={`${title} Feature Image`}
@@ -36,8 +36,8 @@ async function RelatedCard({article}) {
                     />
                 </figure>
                 <div className="card-body p-3">
-                    <h2 className="card-title mt-2 mb-1">{title}</h2>
-                    <p>{description}</p>
+                    <h2 className="card-title mt-2 mb-1 text-slate-700">{title}</h2>
+                    <p className='text-slate-600 font-light'>{description}</p>
                     <div className="card-actions justify-end">
                     <Link href={article}>
                         <button className="btn btn-primary">View Article</button>
