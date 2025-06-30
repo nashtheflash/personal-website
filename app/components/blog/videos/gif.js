@@ -1,9 +1,10 @@
 export function Gif({video, topTitle, bottomTitle, height, width}){
+    console.log(video);
 
     return(
         <>
             { topTitle && <p className='m-0'>{topTitle}</p> }
-            <div className='flex flex-col justify-center items-center w-full'>
+            <div className='flex flex-col justify-center items-center w-full bg-orange-500'>
                 <video 
                     width={width} 
                     height={height}
@@ -12,7 +13,7 @@ export function Gif({video, topTitle, bottomTitle, height, width}){
                     loop
                     muted
                     playsInline
-                    className='m-0'
+                    className='m-0 bg-blue-700'
                 >
                     <source src={video} type="video/mp4" />
                     Your browser does not support the video tag.
