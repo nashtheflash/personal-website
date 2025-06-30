@@ -9,8 +9,8 @@ export const postMetadata = {
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041',
     description:"",
-    keywords: ["Pepper Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
-    tags: ["Pepper Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
+    keywords: ["Shaker Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
+    tags: ["Shaker Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
     isActive: false,
 };
 
@@ -47,8 +47,8 @@ import {
 } from '@awesome.me/kit-237330da78/icons/classic/light'
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041";
-export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-360-image.jpg?alt=media&token=b8ae2cff-19b7-420d-98ea-0f465e7adbcc";
-export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-3D-map.jpeg?alt=media&token=e4c60c78-c72f-4573-b375-f6b72410d868";
+export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-360-image.jpg?alt=media&token=bf87c4a8-ac2a-4897-966f-2989f5edb23b";
+export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-3D-map.jpeg?alt=media&token=ed2df92b-dec5-4404-be52-708cea9d2460";
 export const porcupine = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fporcupine.mov?alt=media&token=3c0bf4e7-c4dd-4ea8-bf1f-acfa80fefbb1";
 export const headwall = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fheadwall.jpeg?alt=media&token=864e82ae-9251-452b-bc8c-74195131742f";
 
@@ -57,20 +57,20 @@ export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
 export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 
 <ImageFeature
-    title="Pepper Peak Climb Report"
+    title="Shaker Peak Climb Report"
     image={threeSixtyImage}
     threeSixty={true}
 />
 
 <BlogStatsSection>
-    <Stat title={'Distance (Mi)'} stat={'9.67'} icon={faRoute}/>
-    <Stat title={'Summit Elevation'} stat={'5,150'} icon={faMountain}/>
-    <Stat title={'Elevation Gain'} stat={'3,601'} icon={faArrowTrendUp}/>
-    <Stat title={'Elevation Loss'} stat={'3,623'} icon={faArrowTrendDown}/>
-    <Stat title={'Duration'} stat={'3:05:40'} icon={faTimer}/>
-    <Stat title={'Summit Date'} stat={'June 22, 2025'} icon={faCalendarDays}/>
+    <Stat title={'Distance (Mi)'} stat={'1.21'} icon={faRoute}/>
+    <Stat title={'Summit Elevation'} stat={'5,089'} icon={faMountain}/>
+    <Stat title={'Elevation Gain'} stat={'423'} icon={faArrowTrendUp}/>
+    <Stat title={'Elevation Loss'} stat={'769'} icon={faArrowTrendDown}/>
+    <Stat title={'Duration'} stat={'00:36:13'} icon={faTimer}/>
+    <Stat title={'Summit Date'} stat={'June 27, 2025'} icon={faCalendarDays}/>
     <Stat title={'Difficulty'} stat={'Non-Technical'} icon={faPickaxe}/>
-    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/oVZwQ1dcR2RcPk7b6" target="_blank">Rainbow Trailhead</a>} icon={faLocationDot}/>
+    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/SUd1hwbJLJ2foY8m8" target="_blank">Eklutna Trailhead</a>} icon={faLocationDot}/>
 </BlogStatsSection>
 
 <MdxLayout>
@@ -89,12 +89,12 @@ text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing o
         <Link href={'/blog/articles/pepper-peak#condiment-traverse'}>Pepper Peak</Link>
     </div>
     <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center'}>
+    <div className={'flex flex-col items-center justify-center gap-2'}>
         <span className={'text-9xl'}>⛰️</span>
         <Link href={'/blog/articles/shaker-peak#condiment-traverse'} className={"bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] p-1 rounded-md"}>Shaker Peak</Link>
     </div>
     <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center'}>
+    <div className={'flex flex-col items-center justify-center gap-2'}>
         <span className={'text-9xl'}>⛰️</span>
         <Link href={'/blog/articles/salt-peak#condiment-traverse'}>Salt Peak</Link>
     </div>

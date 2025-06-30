@@ -5,11 +5,11 @@ export const postMetadata = {
     published: "2024-12-01",
     updated: "2024-12-01",
     author: 'Nash Bostwick',
-    thumbnail: '/blog/tune-roof-insulation-install/feature-image.JPEG',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-roof-insulation%2Ffeature-image.JPEG?alt=media&token=c049372f-b403-4359-82b2-0934d9bae26d',
     description:"Complete Tune M1 roof insulation installation guide with materials list, tools needed, and step-by-step instructions. Improve cold weather performance and reduce summer heat with this DIY project.",
     keywords: ['Tune M1', 'roof insulation', 'camper insulation', 'cold weather performance', 'summer heat protection', 'DIY camper insulation', 'truck camper insulation', 'foam insulation panels', 'reflective insulation', 'camper temperature control', 'Tune M1 upgrade'],
     tags: ['Tune M1', 'Roof Insulation', 'DIY Guide', 'Cold Weather', 'Temperature Control'],
-    isActive: false,
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -22,6 +22,7 @@ import {
     Stat,
     ImageFeature,
     MdxTableWraper,
+    Gif,
 } from '@/app/components/blog'
 
 import { 
@@ -42,10 +43,10 @@ import {
     faShopify,
 } from '@fortawesome/free-brands-svg-icons';
 
-import featureImage from "@/public/blog/tune-roof-insulation-install/feature-image.JPEG";
-import carpet from "@/public/blog/tune-roof-insulation-install/carpet.gif";
-import carpetMenards from "@/public/blog/tune-roof-insulation-install/carpet.JPEG";
-import measurements from "@/public/blog/tune-roof-insulation-install/measurements.PNG";
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-roof-insulation%2Ffeature-image.JPEG?alt=media&token=c049372f-b403-4359-82b2-0934d9bae26d";
+export const carpet = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-roof-insulation%2Fcarpet.gif?alt=media&token=3987f7f3-a018-40b2-abe7-c09f8efe6542";
+export const carpetMenards = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-roof-insulation%2Fcarpet.JPEG?alt=media&token=6f749494-ca2a-4b43-b239-d9d94275ff95";
+export const measurements = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-roof-insulation%2Fmeasurements.PNG?alt=media&token=773e33a3-132b-475f-8e8b-e732adafae6d";
 
 <ImageFeature
     title='Tune M1 Roof Install'
@@ -108,8 +109,8 @@ Originally done in Noah's post but I opted to save some time and money and not d
 ### Install Carpet
 When buying the carpet, make sure that it does not have a backing material. This will make the panels way heavier and the adhesive wont work at well!
 <TwoColumn>
-    <CenteredImage image={carpet} altText={'Tune M1 Insulation Carpet'} title={'No Backing'} width={'500'} height={'500'} />
-    <CenteredImage image={carpetMenards} altText={'Manards Carpet'} title={'Menards Product'} width={'500'} height={'500'} />
+    <Gif video={carpet} width={500}/>
+    <CenteredImage image={carpetMenards} altText={'Menards Carpet'} title={'Menards Product'} width={'500'} height={'500'} />
 </TwoColumn>
 
 Unroll the carpet and stick the panels to it! Once everything was bonded together, I cut the carpet to fit! I found that laying everything on the foam offcuts and using scissors worked the best!
