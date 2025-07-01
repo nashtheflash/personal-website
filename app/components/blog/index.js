@@ -59,8 +59,9 @@ export { Checkmark } from './emojis/checkmark';
 //Links
 export { LinkNewTab } from "./links/link-new-tab";
 
-//Strava
-export { StravaEmbed } from "./strava/strava-embed";
+//Activity Trackers
+export { StravaEmbed } from "./activity-trackers/strava-embed";
+export { StravaGarmin } from "./activity-trackers/strava-garmin";
 
 //Headings
 export { BlackTieTitle } from "./section-headers/black-tie";

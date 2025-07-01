@@ -25,6 +25,7 @@ import {
     Stat,
     ImageFeature,
     StravaEmbed,
+    StravaGarmin,
     YoutubeVideo,
     RelatedArticles,
     HashBrownsLoader,
@@ -123,14 +124,10 @@ Climb the headwall, turn left and you are at the top! It is that easy. This is m
     <h2 className='text-center font-mono'>KPIs</h2>
 </div>
 
-<TwoColumn className={'h-[calc(100vh-25vh)]'}>
-    <div className={'w-full h-full sm:w-1/2'}>
-        <StravaEmbed dataEmbedId='14886179027'/>
-    </div>
-    <div className={'w-full h-full sm:w-1/2'}>
-        <iframe src='https://connect.garmin.com/modern/activity/embed/19516293891' width="100%" height="100%" title='Activity Embed' frameborder="0" />
-    </div>
-</TwoColumn>
+<StravaGarmin
+    stravaId='14886179027'
+    garminId='19516293891'
+/>
 
 <RelatedArticles 
     articleOne={relatedArticleOne}

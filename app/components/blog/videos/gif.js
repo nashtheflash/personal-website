@@ -4,7 +4,7 @@ export function Gif({video, topTitle, bottomTitle, height, width}){
     return(
         <>
             { topTitle && <p className='m-0'>{topTitle}</p> }
-            <div className='flex flex-col justify-center items-center w-full bg-orange-500'>
+            <div className='flex flex-col justify-center items-center w-full'>
                 <video 
                     width={width} 
                     height={height}
