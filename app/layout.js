@@ -15,6 +15,8 @@ import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
 
 import "./globals.css";
 
+//Service Worker
+import { ServiceWorkerRegister } from "./components/sw-register";
 
 export default async function RootLayout({ children }) {
 
@@ -24,10 +26,11 @@ export default async function RootLayout({ children }) {
                 <AuthProvider>
                     <NavBar/>
                     {children}
-                    <SpeedInsights />
-                    <Analytics/>
-                    <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
                 </AuthProvider>
+                <ServiceWorkerRegister />
+                <SpeedInsights />
+                <Analytics/>
+                <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
             </body>
         </html>
     );

@@ -78,6 +78,7 @@ export { RelatedArticles } from "./ads/related-articles";
 
 //Loaders
 export { HashBrownsLoader } from "./loaders/hash-browns-loader";
+export { AuthLoader } from "./loaders/auth-loader";
 
 //Art
 export { UnsplashDownloader } from "./art/download-unsplash";
