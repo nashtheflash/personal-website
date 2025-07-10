@@ -72,9 +72,6 @@ export { LineGraph } from "./charts/line-chart";
 //Forms
 export { ContactUs } from "./forms/contact-us";
 
-//Login
-export { Login } from "./login/login";
-
 //Ads
 export { YoutubeAd } from "./ads/youtube-video";
 export { RelatedArticles } from "./ads/related-articles";
