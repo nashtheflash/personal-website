@@ -4,14 +4,14 @@ import { generateMetadata } from '@/utils';
 
 export const postMetadata = {
     title: "Pepper Peak Climb Report",
-    published: "2025-06-22",
-    updated: "2025-06-26",
+    published: "2025-06-27",
+    updated: "2025-07-10",
     author: 'Nash Bostwick',
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041',
-    description:"",
-    keywords: ["Pepper Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-peper-view-from-salt.jpeg?alt=media&token=133df8ad-4b07-4757-9f41-c37d049a2884',
+    description:"Pepper Peak (5,381') Climb Report. Located in Alaska's Chugach Mountains. Non-technical 4.56-mile route with 4,606' elevation gain. Part of the Condiment Traverse with Salt and Shaker Peaks.",
+    keywords: ["Pepper Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Elutna Lake Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
     tags: ["Pepper Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
-    isActive: false,
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -31,8 +31,9 @@ import {
     RelatedArticles,
     HashBrownsLoader,
     Gif,
-    Callout,
+    CallOut,
     TLDR,
+    GoogleMap,
 } from '@/app/components/blog'
 
 import { 
@@ -49,12 +50,13 @@ import {
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041";
 export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-360-image.jpg?alt=media&token=b8ae2cff-19b7-420d-98ea-0f465e7adbcc";
 export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-3D-map.jpeg?alt=media&token=e4c60c78-c72f-4573-b375-f6b72410d868";
-export const porcupine = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fporcupine.mov?alt=media&token=3c0bf4e7-c4dd-4ea8-bf1f-acfa80fefbb1";
-export const headwall = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fheadwall.jpeg?alt=media&token=864e82ae-9251-452b-bc8c-74195131742f";
+export const bridge = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fbridge.jpeg?alt=media&token=b35a1b18-116a-42f3-b50e-edcccc3582f4";
+export const pepperCairn = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-aproch-cairn.jpeg?alt=media&token=33b3d409-97dd-45b2-8c16-cfc1e8ed2b34";
+export const goats = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fgoat-vid.mov?alt=media&token=5102a5a6-a5ce-43b9-8801-873e5f91f15f";
 
-export const relatedArticleOne = '/blog/articles/thayer-hut';
-export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
-export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
+export const relatedArticleOne = '/blog/articles/shaker-peak';
+export const relatedArticleTwo = '/blog/articles/salt-peak';
+export const relatedArticleThree = '/blog/articles/omalley-peak';
 
 <ImageFeature
     title="Pepper Peak Climb Report"
@@ -100,53 +102,50 @@ text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing o
     </div>
 </div>
 
-The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls of the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wreseling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole. Anyway here is an overview of the route up to Pepper:
+With little planning I headed up to Eklutna Lake. Rain peppered my windshield the entire drive. The mountains were hiding and I was prepared for a soggy Alaskan summer day. I loaded the gpx file for the route into my watch. This ended up being a huge help! Here is an overview of the route.
 
-<CenteredImage image={route} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
+The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls off the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wrestling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole. Anyway, here is an overview of the route up to Pepper:
 
-Lots of people stop here! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugatch. Maybe even a glacier? It would be impossible to know!
-
-<TwoColumn>
-    <div className={'w-full sm:w-1/2'}>
-        The route is easy and non-technical. Glen Alps trailhead is the normal place to park to climb O'Malley. It is also the normal place to park to climb Flattop, Blueberry Knoll, and the overlook at the back of the parking lot. It is the favorite of tourists visiting Anchorage. You will see tons of goofy things going on up here. Also, scary stuff. Like bro are you sure you should be trying to hike out here? Rescues are frequent. Be careful, the people are treacherous!
-
-Head out the back of the parking lot and turn right on the Power Line Pass. You will quickly see an offshoot to the left labeled "O'Malley Peak Trail". That is what you are looking for! The trail leads up to Little O'Malley and is straightforward!
-
-On the way up I saw this porcupine on the trail. I have mistaken these for bear cubs many times. I love how they slowly lumber down the trail. Their gait gives off a pissed off vibe. I imagine them cussing the humans as they waddle though the world. I love them! I also love dogs and I was able to save a few of the off-leash variety from getting stuck with a quill! The owners seemed upset for some reason. Next time I will let them do their thing!
-
-After I parted ways with the porcupine I was standing on Little O'Malley ridge before I knew it! I walked down the back of the ridge onto the large meadow. Huge meadow actually. I love looking at it from Anchorage because it is so freaking big.
-    </div>
-
-    <div className={'w-full sm:w-1/2'}>
-        <Gif video={porcupine} width={500}/>
-    </div>
-</TwoColumn>
-
-I won't stop talking about the meadow! It is so nice and in late June it was filled with beautiful wild flowers and so few people. Most of the tourists stop at the ridge! The hike to the back was blissful! You want to aim for the large headwall on your hike. I love an easy target and it is easy to hit the bull's-eye here!
-
-<CenteredImage image={headwall} altText={"O'Malley Headwall"} title={"Bull's Eye!!"} width={1000} height={500} />
-
-Climb the headwall, turn left and you are at the top! It is that easy. This is my favorite place to take out-of-towners for a few reasons:
-
-<ul>
-    <li>The start is very friendly, but usually there is a sudden realization that you are alone at some point.</li>
-    <li>Turning around is easy.</li>
-    <li>The scree surfing on the headwall is short yet sublime.</li>
-</ul>
-
- 
-<div className={`w-full`}>
-    <h2 className='text-center font-mono'>KPIs</h2>
-</div>
+<CenteredImage image={route} altText={"Pepper Peak 3D Map"} width={1000} height={500} />
 
 <TwoColumn>
     <div className={'w-full sm:w-1/2'}>
-        <StravaEmbed dataEmbedId='14937681322'/>
+        The day started at the familiar Eklutna Lake Trailhead. The launching point for so many Chugach adventures. I headed over the bridge, past the bike rental shop, and through the bollards onto the Twin Peaks Trail.
+        <CenteredImage image={bridge} altText={"Eklutna Bridge"} width={500} height={500} />
     </div>
-    <div className={'w-full h-full sm:w-1/2'}>
-        <iframe src='https://connect.garmin.com/modern/activity/embed/19565668335' width="100%" height="100%" title='Activity Embed' frameborder="0" />
+
+    <div className={'w-full sm:w-1/2'}>
+    <GoogleMap
+        url={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8270.495385068169!2d-149.14938538094555!3d61.41122229934596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56c8fbc4f2cd9a13%3A0x608af17d8ea0b47a!2sEklutna%20Lakeside%20Trail!5e0!3m2!1sen!2sus!4v1752124445649!5m2!1sen!2sus'}
+    />
     </div>
 </TwoColumn>
+
+Twin Peaks Trail is a fairly easy approach. You may hear or see references to benches on the trail. Here is the breakdown:
+* **First Bench** -> This is the first bench you will come across while walking up the trail.
+* **Second Bench** -> This is the second bench you will come across while walking up the trail.
+
+If you are descending the trail, keep in mind this is reversed. The first bench becomes the second bench. The second bench would be referred to as the first bench. The view from the first bench is always stunning! Unfortunately, it was too foggy to see the day I climbed! Fortunately, it wasn't too foggy to sneak a peek at a herd of goats across the valley!
+
+<Gif video={goats} width={1000}/>
+
+<TwoColumn>
+    <div className={'w-full sm:w-1/2'}>
+    After you decipher the bench situation, and come upon the second bench, you will see a trail that continues up the hill. This is the trail! It gets steeper from here but nothing crazy. Follow the trail and you will see a cairn at the base of Pepper, turn uphill here. I was at the top in no time at all!
+
+It is an easy and straightforward climb to the top. I ascended into some intense fog. The first 360 image that I took would only be interesting to the fog lovers out there. Fortunately, I was able to snap a somewhat clear picture on the way back!
+    </div>
+
+    <div className={'w-full sm:w-1/2'}>
+        <CenteredImage image={pepperCairn} altText={"Pepper Peak Trail Cairn"} title={"The Cairn"} width={500} height={500} />
+    </div>
+</TwoColumn>
+
+<CallOut title={'Naming Conventions'} text={"The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls off the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wrestling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole."} />
+
+Lots of people stop at the top of Pepper Peak and do not finish the whole Traverse! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugach. Maybe even a glacier? It would be impossible to know!
+
+I continued on to Shaker Peak. You can read about it here: [Shaker Peak][1]
 
 <RelatedArticles 
     articleOne={relatedArticleOne}
@@ -156,6 +155,4 @@ Climb the headwall, turn left and you are at the top! It is that easy. This is m
 
 </MdxLayout>
 
-
-
-
+[1]: /blog/articles/shaker-peak
