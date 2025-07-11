@@ -12,7 +12,7 @@ import {
     faKey,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-import { chewy, didot } from "@/lib/fonts"
+import { didot } from "@/lib/fonts"
 
 export function Login() {
   const [email, setEmail] = useState("")

@@ -6,42 +6,66 @@ import {
     faEnvelope,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
+import { didot } from "@/lib/fonts"
+
 export function ContactUs() {
 
     return (
         <div className="mx-auto w-full md:p-10 py-5 md:py-0">
-            <h1 className="text-center text-2xl sm:text-3xl font-semibold text-[#4A07DA]">
-                Not A Partner?
-            </h1>
-            <h4 className="text-center text-sm sm:text-xs font-semibold text-[#4A07DA]">
-                Please fill out the contact form below to get in touch!
-            </h4>
+            <h2 className={`text-center text-2xl sm:text-6xl ${didot.className} text-indigo-900`}>Work With Us</h2>
             <div className="w-full mt-2 sm:mt-5">
                 <div className="flex flex-col gap-5 w-full">
                     <div className="flex flex-col md:flex-row  gap-3 w-full">
-                        <label className="input input-bordered flex items-center gap-2 w-full md:w-1/2">
+                        <label 
+                            className="group input input-bordered flex items-center gap-2 w-full md:w-1/2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                        >
                             <FontAwesomeIcon icon={faSignature} className='h-5 w-5'/>
-                            <input type="text" className="grow" placeholder="First Name" />
+                            <input 
+                                type="text" 
+                                placeholder="First Name" 
+                                className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                            />
                         </label>
-                        <label className="input input-bordered flex items-center gap-2 w-full md:w-1/2">
+                        <label 
+                            className="group input input-bordered flex items-center gap-2 w-full md:w-1/2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                        >
                             <FontAwesomeIcon icon={faSignature} className='h-5 w-5'/>
-                            <input type="text" className="grow" placeholder="Last Name" />
+                            <input 
+                                type="text" 
+                                placeholder="Last Name" 
+                                className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                            />
                         </label>
                     </div>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label 
+                        className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                    >
                         <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                        <input type="text" className="grow" placeholder="Email" />
+                        <input 
+                            type="text" 
+                            placeholder="Email"
+                            className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                        />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label 
+                        className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                    >
                         <FontAwesomeIcon icon={faPhone} className='h-5 w-5'/>
-                        <input type="text" className="grow" placeholder="Phone" />
+                        <input 
+                            type="text" 
+                            placeholder="Phone"
+                            className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                        />
                     </label>
                     <textarea
                         placeholder="Hey Nash! We would love to partner up on a upcoming project!!"
-                        className="textarea textarea-bordered textarea-md w-full">
+                        className={`group input input-bordered text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className} flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200`}
+                    >
                     </textarea>
                     <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-                        <button className="btn btn-active btn-primary btn-block">
+                        <button 
+                            className="px-6 py-2 w-full font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                           >
                             Send Message
                         </button>
                     </div>
