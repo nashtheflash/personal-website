@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
 import { MdxLayout} from "../components/blog"
 import { generateMetadata } from '@/utils';
@@ -31,7 +32,7 @@ async function WritingList() {
                 orderedArticals.map((article, i) => {
                     return (
                         <li key={i} className={``}>
-                            <a href={`/writing${article.folder}`}>{article.title}</a>
+                            <Link href={`/writing${article.folder}`}>{article.title}</Link>
                         </li>
                     )
                 })

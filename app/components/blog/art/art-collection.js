@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState} from "react";
 import { getPhotosInCollection } from "@/app/server-actions/unsplash";
@@ -26,12 +27,12 @@ export function ArtCollection({allArt}) {
                 photos && photos.map((photo, i) => {
                     return (
                         <div key={i} className={`relative h-fit w-fit`}>
-                            <a href={`/art/view-piece/${photo.id}`}>
+                            <Link href={`/art/view-piece/${photo.id}`}>
                                 <ArtCard 
                                     image={photo.urls.raw}
                                     name='tbd'
                                 />
-                            </a>
+                            </Link>
                         </div>
                     )
                 })

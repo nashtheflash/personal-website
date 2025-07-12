@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
 import { MdxLayout, BlogCard } from "../components/blog"
 import { generateMetadata } from '@/utils';
@@ -26,17 +27,17 @@ async function BlogList() {
     const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
 
     return(
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full">
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
             {
                 orderedArticals.map((article, i) => {
                     return (
                         <div key={i} className={`relative h-full w-full min-h-[500px] ${getSize(i)}`}>
-                            <a href={`/blog/articles${article.folder}`}>
+                            <Link href={`/blog/articles${article.folder}`}>
                                 <BlogCard 
                                     title={article.title}
                                     thumbnail={article.thumbnail}
                                 />
-                            </a>
+                            </Link>
                         </div>
                     )
                 })

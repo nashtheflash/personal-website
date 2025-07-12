@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import logo from "@/public/logo.png";
 
@@ -20,7 +21,7 @@ function Project() {
                 <div className="prose grow-0 w-1/2">
                     <h1 className="text-5xl">NashBrowns</h1>
                     <p>My personal website is a creative outlet where I publish art! Everything you see on the blog was written or created by me. That includes all of the writing, art, and even the website itself, which I built using some of my favorite technologies!</p>
-                    <a className="text-xs" href="/blog/articals/nash-browns">See Blog Post</a>
+                    <Link className="text-xs" href="/blog/articals/nash-browns">See Blog Post</Link>
                 </div>
                 <div className='flex justify-center items-center w-1/2'>
                     <Image
