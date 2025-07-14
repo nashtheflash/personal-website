@@ -14,9 +14,9 @@ export function ArtNav({ collections }) {
                     collections && collections.map((collection, i) => {
                         return(
                             <li key={i}>
-                                <a onClick={() => router.push(`/art?collection=${collection.id}`)}>
+                                <Link href={`/art?collection=${collection.id}`}>
                                     {collection.title}
-                                </a>
+                                </Link>
                             </li>
                         )
                 })
