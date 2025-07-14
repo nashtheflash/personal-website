@@ -15,6 +15,7 @@ export function ArtCollection({allArt}) {
     useEffect(() => {
         async function fetchPhotos() {
             const data = await getPhotosInCollection(collectionId || 'NNFr348ZLYA'); // featured collection id// featured collection id
+            console.log(data);
             setPhotos(data);
         }
         fetchPhotos();
@@ -25,6 +26,7 @@ export function ArtCollection({allArt}) {
         <div className="not-prose grid grid-cols-1 gap-2 justify-items-center items-center w-full">
             {
                 photos && photos.map((photo, i) => {
+                    console.log(photo)
                     return (
                         <div key={i} className={`relative h-fit w-fit`}>
                             <Link href={`/art/view-piece/${photo.id}`}>
