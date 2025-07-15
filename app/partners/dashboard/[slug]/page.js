@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 
 import { withAuth } from "@/lib/firebase";
 
-import { getAllTenants } from "@/lib/server-actions/firebase/firestore";
-import { getAllUsers } from "@/lib/server-actions/firebase/firestore";
+import { getAllTenants, getAllUsers, getUserTenant } from "@/lib/server-actions/firebase/firestore";
 import { capitalizeFirstLetter } from "@/lib/strings";
 
 import { AdminDashboard } from "@/app/components/general";

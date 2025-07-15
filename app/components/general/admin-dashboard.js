@@ -1,3 +1,5 @@
+import { addUser } from '@/lib/server-actions/firebase/firestore'
+
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
 
 const menuItems = [
@@ -38,10 +40,16 @@ function AddTenant() {
 
 function AddUser() {
 
+    const newUser = () => {
+        // const userData = JSON.stringify({ first_name: 'test', last_name: 'name', email: 'test@nashbrowns.com', tenant: 0});
+        const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
+        addUser(userData)
+    }
+
     return(
-            <div className="card w-96 bg-base-100 card-xl shadow-sm">
-                <div className="card-body">
-                    <h2 className="card-title">Add New User</h2>
+        <div className="card w-96 bg-base-100 card-xl shadow-sm">
+            <div className="card-body">
+                <h2 className="card-title">Add New User</h2>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
 
                     <label className="label">Tenant</label>
@@ -60,10 +68,14 @@ function AddUser() {
                     <label className="label">Email</label>
                     <input type="email" className="input" placeholder="cMOREbutts@now.com" />
                 </fieldset>
-                    <div className="justify-end card-actions">
-                        <button className="btn btn-primary">Invite User</button>
-                    </div>
+                <div className="justify-end card-actions">
+                    <button 
+                        onClick={newUser}
+                        className="btn btn-primary"
+                    >Invite User
+                    </button>
                 </div>
             </div>
+        </div>
     )
 }
