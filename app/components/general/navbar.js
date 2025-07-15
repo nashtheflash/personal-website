@@ -1,5 +1,10 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { useAggressiveAuth } from '@/lib/firebase';
+import { SignOut } from '@/app//components/general';
 
 import nashBrwonsWhite from '@/public/nashbrowns-logo-white.png'
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
@@ -16,6 +21,8 @@ const menuItems = [
 ]
 
 export function NavBar() {
+    const { user, loading, isAssumed, hasError } = useAggressiveAuth()
+
     return(
         <div className="navbar h-11 max-h-11 bg-[url('/textures/noise-yellow-2.png')] bg-repeat bg-[length:50px] border-b-4 border-black">
             <div className="navbar-start">
@@ -51,7 +58,7 @@ export function NavBar() {
             </div>
             <div className="navbar-end">
                 <ul className={`menu menu-horizontal px-1 text-indigo-900 text-2xl ${didot.className}`}>
-                    <li><Link href='/partners'>Partners</Link></li>
+                    {user ? <li><SignOut/></li> : <li><Link href='/partners'>Partners</Link></li>}
                 </ul>
             </div>
         </div>

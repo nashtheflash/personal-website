@@ -22,7 +22,7 @@ export const SignOut = () => {
   return (
     <button
       onClick={handleSignOut}
-      className="p-2 rounded-sm bg-red-500 font-semibold text-white"
+      className="text-indigo-900 text-2xl"
     >
       Sign Out
     </button>

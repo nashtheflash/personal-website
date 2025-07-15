@@ -13,7 +13,7 @@ import door from '@/public/local-images/login/door.png'
 //Fonts
 import { didot } from "@/lib/fonts";
 
-export default function ProjectsHome() {
+export default function Partners() {
     const { user, loading, isAssumed, hasError } = useAggressiveAuth()
 
     return(
@@ -34,22 +34,6 @@ export default function ProjectsHome() {
                     <div className='h-fit w-fit'>
                         <Login/>
                     </div>
-                    {user && (
-                        <>
-                            <p className="text-xl">
-                                Welcome, {user.email}!
-                                {isAssumed && <span className="text-sm text-yellow-400 ml-2">(assumed)</span>}
-                                {hasError && <span className="text-sm text-red-400 ml-2">(error)</span>}
-                            </p>
-                            <Link
-                                href="/partners/dashboard/tune-outdoor"
-                                className="text-blue-500 underline text-lg"
-                            >
-                                <p>Visit the protected page</p>
-                            </Link>
-                            <SignOut />
-                        </>
-                    )}
                 </div>
             </div>
             <div className="flex justify-center items-center bg-[url('/local-images/login/coperation-2.png')] bg-no-repeat bg-cover w-full min-h-screen aspect-16/9">
