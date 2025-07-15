@@ -1,26 +1,57 @@
 "use client"
 
+import { useEffect, useState } from "react";
+
 import { withAuth } from "@/lib/firebase";
-// import { use } from 'react'
-// import { useParams } from 'next/navigation'
+
+import { getAllTenants } from "@/lib/server-actions/firebase/firestore";
+import { getAllUsers } from "@/lib/server-actions/firebase/firestore";
+import { capitalizeFirstLetter } from "@/lib/strings";
 
 import { AdminDashboard } from "@/app/components/general";
 import { ClientDashboard } from "@/app/components/general";
 
+async function fetchTenants(setTenants) {
+    try {
+        const tenantsData = await getAllTenants();
+        setTenants(tenantsData);
+    } catch (error) {
+        console.error('Error fetching tenants:', error);
+    }
+};
+
+async function fetchUsers(setUsers) {
+    try {
+        const usersData = await getAllUsers();
+        setUsers(usersData);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+};
+
 const Dashboard = ({ params }) => {
     const { slug } = params 
+
+    const [tenants, setTenants] = useState([]);
+    const [users, setUsers] = useState([]);
+
+    //Data Fetching
+    useEffect(() => {
+        fetchTenants(setTenants);
+        fetchUsers(setUsers);
+    }, [])
 
     return (
         <div className="min-h-screen">
             <div className="flex flex-col justify-start items-center w-full h-fit bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
-            { slug == 'nashbrowns' && <AdminNav/> }
+                { slug == 'nashbrowns' && <AdminNav tenants={tenants} users={users}/> }
             </div>
             { slug == 'nashbrowns' ? <AdminDashboard /> : <ClientDashboard clientId={slug} /> }
         </div>
     )
 }
 
-function AdminNav() {
+function AdminNav({ tenants, users }) {
 
     return(
         <div className='py-3'>
@@ -41,8 +72,11 @@ function AdminNav() {
                         </svg>
                         <select defaultValue="Pick a color" className="select">
                             <option disabled={true}>Select Tennant</option>
-                            <option>Nash Browns</option>
-                            <option>Tune Outdoor</option>
+                            {tenants && tenants.map((tenant, i) => {
+                                return (
+                                    <option key={i}>{tenant.display_name}</option>
+                                )
+                            })}
                         </select>
                     </a>
                 </li>
@@ -62,9 +96,11 @@ function AdminNav() {
                         </svg>
                         <select defaultValue="Pick a color" className="select">
                             <option disabled={true}>Select User</option>
-                            <option>Nash</option>
-                            <option>Warren</option>
-                            <option>Sean</option>
+                            {users && users.map((user, i) => {
+                                return (
+                                    <option key={i}>{capitalizeFirstLetter(user.first_name) + ' ' + capitalizeFirstLetter(user.last_name)}</option>
+                                )
+                            })}
                         </select>
                     </a>
                 </li>
