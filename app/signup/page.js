@@ -1,9 +1,14 @@
 import { SignUp } from "../components/general";
 
+
 export default function SignUpPage() {
     return (
-        <div className="mx-auto w-96 md:p-10 py-5 md:py-0">
-            <SignUp/>
+        <div className="flex justify-center items-center bg-[url('/local-images/signup/sking-6.png')] bg-no-repeat bg-cover w-full h-[calc(100vh-64px)] aspect-16/9">
+            <div className="flex flex-col justify-center items-start w-fit m-auto py-4 px-3 rounded-xl opacity-90 bg-[url('/textures/noise-grey-2.png')] bg-repeat bg-[length:50px]">
+                <div className="mx-auto w-fit">
+                    <SignUp/>
+                </div>
+            </div>
         </div>
     );
 }
