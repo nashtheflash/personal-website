@@ -15,7 +15,7 @@ self.addEventListener('fetch', (event) => {
   const url = request.url
   const method = request.method
   
-  console.log('SW v2 fetch event:', method, url)
+  // console.log('SW v2 fetch event:', method, url)
   
   // CRITICAL: Handle POST requests first and NEVER cache them
   if (method === 'POST') {

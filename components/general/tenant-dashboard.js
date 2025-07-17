@@ -10,6 +10,10 @@ export default function TenantDashboard() {
   const makeAuthenticatedRequest = useAuthenticatedApi();
   const idToken = useIdToken();
   
+  const [dashboardData, setDashboardData] = useState(null);
+  const [dashboardLoading, setDashboardLoading] = useState(false);
+  const [dashboardError, setDashboardError] = useState(null);
+  
   // Debug logging
   useEffect(() => {
     console.log('Server auth state:', {
@@ -20,6 +24,35 @@ export default function TenantDashboard() {
       error
     });
   }, [serverUser, serverTenant, isValidated, hasValidTenant, error]);
+
+  // Auto-fetch dashboard data when tenant is available
+  // useEffect(() => {
+  //   if (hasValidTenant && serverTenant?.id) {
+  //     fetchTenantDashboard(serverTenant.id);
+  //   }
+  // }, [hasValidTenant, serverTenant?.id]);
+
+  const fetchTenantDashboard = async (tenantId) => {
+    if (!tenantId) return;
+    
+    setDashboardLoading(true);
+    setDashboardError(null);
+    
+    try {
+      const data = await makeAuthenticatedRequest(
+        `/api/tenant/${tenantId}/dashboard`
+      );
+      console.log('Tenant dashboard data:', data);
+      setDashboardData(data);
+      return data;
+    } catch (error) {
+      console.error('Failed to fetch tenant dashboard data:', error);
+      setDashboardError(error.message);
+      throw error;
+    } finally {
+      setDashboardLoading(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -130,6 +163,45 @@ export default function TenantDashboard() {
           </div>
         </div>
 
+        {/* Dashboard Data Section */}
+        <div className="bg-green-50 rounded-lg p-4 mb-6">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold text-green-700">Dashboard Data</h3>
+            <button
+              onClick={() => fetchTenantDashboard(serverTenant?.id)}
+              disabled={dashboardLoading}
+              className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700 disabled:opacity-50"
+            >
+              {dashboardLoading ? 'Loading...' : 'Refresh Dashboard'}
+            </button>
+          </div>
+          
+          {dashboardLoading && (
+            <div className="text-center py-4">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto"></div>
+              <p className="mt-2 text-gray-600">Loading dashboard data...</p>
+            </div>
+          )}
+          
+          {dashboardError && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+              <strong>Error:</strong> {dashboardError}
+            </div>
+          )}
+          
+          {dashboardData && !dashboardLoading && (
+            <div className="space-y-2">
+              <p><span className="font-medium">Status:</span> {dashboardData.success ? 'Success' : 'Failed'}</p>
+              <p><span className="font-medium">Last Updated:</span> {dashboardData.lastUpdated ? new Date(dashboardData.lastUpdated).toLocaleString() : 'N/A'}</p>
+              <div className="mt-4">
+                <h4 className="font-medium text-gray-700 mb-2">Dashboard Content:</h4>
+                <pre className="bg-gray-100 p-3 rounded text-sm overflow-auto">
+                  {JSON.stringify(dashboardData.dashboard, null, 2)}
+                </pre>
+              </div>
+            </div>
+          )}
+        </div>
 
       </div>
     </div>

@@ -24,7 +24,7 @@ export function Login() {
     e.preventDefault()
     try {
       await signInWithEmailAndPassword(auth, email, password)
-      router.push("/partners/dashboard/nash-bostwick") // Navigate to the home page
+      router.push("/partners/dashboard") // Navigate to the home page
     } catch (error) {
       console.error("Error logging in:", error)
       setloginError(error.message)
