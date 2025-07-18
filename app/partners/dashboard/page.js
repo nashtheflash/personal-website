@@ -11,42 +11,24 @@ import { capitalizeFirstLetter } from "@/lib/strings";
 import { AdminDashboard } from "@/app/components/general";
 import { ClientDashboard } from "@/app/components/general";
 
-async function fetchTenants(setTenants) {
-    try {
-        const tenantsData = await getAllTenants();
-        setTenants(tenantsData);
-    } catch (error) {
-        console.error('Error fetching tenants:', error);
-    }
-};
+// async function fetchTenants(setTenants) {
+//     try {
+//         const tenantsData = await getAllTenants();
+//         setTenants(tenantsData);
+//     } catch (error) {
+//         console.error('Error fetching tenants:', error);
+//     }
+// };
+//
+// async function fetchUsers(setUsers) {
+//     try {
+//         const usersData = await getAllUsers();
+//         setUsers(usersData);
+//     } catch (error) {
+//         console.error('Error fetching users:', error);
+//     }
+// };
 
-async function fetchUsers(setUsers) {
-    try {
-        const usersData = await getAllUsers();
-        setUsers(usersData);
-    } catch (error) {
-        console.error('Error fetching users:', error);
-    }
-};
-
-const fetchTenantDashboard = async (tenantId, makeAuthenticatedRequest) => {
-    console.log('fetchtennatdahsboard running')
-    console.log('fetchtennatdahsboard tenantID: ', tenantId)
-
-    if (!tenantId) return;
-
-    console.log('fetchtennatdahsboard tenantID passed')
-
-
-    try {
-        const data = await makeAuthenticatedRequest(
-            `/api/tenant/${tenantId}/dashboard`
-        );
-        console.log('Tenant data:', data);
-    } catch (error) {
-        console.error('Failed to fetch tenant data:', error);
-    }
-};
 
 export default function Dashboard() {
     const { user, loading } = useAuth();
@@ -60,21 +42,20 @@ export default function Dashboard() {
 
     //Data Fetching
     useEffect(() => {
-        fetchTenants(setTenants);
-        fetchUsers(setUsers);
-        fetchTenantDashboard(serverTenant?.id); //change to fetch clientContent
+        // fetchTenants(setTenants);
+        // fetchUsers(setUsers);
     }, [])
 
-    useEffect(() => {
-        console.log('checking for valid tenant and server tenant');
-
-        if (hasValidTenant && serverTenant?.id) {
-            console.log('Fetching tenant dashboard for tenant ID:', serverTenant.id);
-            fetchTenantDashboard(serverTenant.id, makeAuthenticatedRequest);
-            console.log('dashboard fetched')
-        }
-
-    }, [hasValidTenant, serverTenant?.id]);
+    // useEffect(() => {
+    //     console.log('checking for valid tenant and server tenant');
+    //
+    //     if (hasValidTenant && serverTenant?.id) {
+    //         console.log('Fetching tenant dashboard for tenant ID:', serverTenant.id);
+    //         fetchTenantDashboard(serverTenant.id, makeAuthenticatedRequest);
+    //         console.log('dashboard fetched')
+    //     }
+    //
+    // }, [hasValidTenant, serverTenant?.id]);
 
     if (loading || !isValidated) {
         return (

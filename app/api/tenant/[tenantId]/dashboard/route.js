@@ -27,30 +27,61 @@ export async function GET(request, { params }) {
       return Response.json({ error: 'Access denied to this tenant' }, { status: 403 });
     }
     
-    // Get dashboard data from Firestore
-    const dashboardRef = adminDb.collection('dashboards').doc(tenantId);
-    const dashboardDoc = await dashboardRef.get();
+    // Get content data from Firestore for this tenant
+    const contentRef = adminDb.collection('content');
+    const contentQuery = await contentRef
+      .where('tenant', 'array-contains', parseInt(tenantId))
+      .get();
     
-    if (!dashboardDoc.exists) {
+    if (contentQuery.empty) {
       return Response.json({
-        error: 'Dashboard not found for this tenant'
-      }, { status: 404 });
+        success: true,
+        tenantId,
+        user: userInfo.email,
+        content: [],
+        totalContent: 0
+      });
     }
     
-    const dashboardData = dashboardDoc.data();
+    const contentData = contentQuery.docs.map(doc => {
+      const data = doc.data();
+      console.log('Document found:', doc.id, 'title:', data.title, 'format:', data.format, 'tenant:', data.tenant);
+      return {
+        id: doc.id,
+        comments: data.comments,
+        creation_date: data.creation_date?.toDate?.() || data.creation_date,
+        format: data.format,
+        last_updated: data.last_updated?.toDate?.() || data.last_updated,
+        likes: data.likes,
+        platform: data.platform,
+        platform_id: data.platform_id,
+        published_at: data.published_at,
+        sponsored: data.sponsored,
+        tenant: data.tenant,
+        title: data.title,
+        type: data.type,
+        views: data.views
+      };
+    });
+    
+    console.log('Total documents returned:', contentData.length);
+    console.log('Documents by format:', contentData.reduce((acc, doc) => {
+      acc[doc.format] = (acc[doc.format] || 0) + 1;
+      return acc;
+    }, {}));
     
     return Response.json({
       success: true,
       tenantId,
       user: userInfo.email,
-      dashboard: dashboardData,
-      lastUpdated: dashboardDoc.updateTime?.toDate?.() || null
+      content: contentData,
+      totalContent: contentData.length
     });
     
   } catch (error) {
-    console.error('Error fetching dashboard data:', error);
+    console.error('Error fetching content data:', error);
     return Response.json({
-      error: 'Failed to fetch dashboard data'
+      error: 'Failed to fetch content data'
     }, { status: 500 });
   }
 } 
