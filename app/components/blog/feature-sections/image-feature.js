@@ -23,7 +23,7 @@ export function ImageFeature({ title, image, alt, threeSixty=false, video=false 
                             :
                             <Image
                                 src={image}
-                                alt={alt ? alt : "Artical Featured Image"}
+                                alt={alt ? alt : "Article Featured Image"}
                                 style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
                                 fill={true}
                             />

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
 import companyCoverPhoto from '@/public/tune-dashboard-photo.jpg'
+import moreExposureMan from '@/public/more-exposure-man.png'
 
 import { didot } from "@/lib/fonts";
 
@@ -17,6 +18,15 @@ import {
     faInstagram,
     faTiktok,
 } from '@fortawesome/free-brands-svg-icons';
+
+import { 
+    faUpRightFromSquare,
+    // faComputerMouse,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+import { 
+    faComputerMouse,
+} from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 
 export function ClientDashboard() {
@@ -43,7 +53,7 @@ export function ClientDashboard() {
 
         <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
             <h1 className={`text-right text-md ${didot.className} text-indigo-900`}>Add User</h1>
-            <div className='flex justify-between items-start gap-5 w-full p-10'>
+            <div className='flex justify-between items-center gap-5 w-full p-10'>
                 <div className='flex justify-center items-center w-1/2'>
                     <Image
                         src={companyCoverPhoto}
@@ -53,9 +63,18 @@ export function ClientDashboard() {
                         className='rounded-xl'
                     />
                 </div>
-                <div className='w-1/2 h-full flex flex-col justify-center items-center'>
+                <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
                     <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
                     <Stats/>
+                    <div className='relative flex flex-col w-full h-56'>
+                            <Image
+                                src={moreExposureMan}
+                                alt={"Artical Featured Image"}
+                                style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                                fill={true}
+                            />
+                    </div>
+                    <button className='btn w-full'>Order Content</button>
                 </div>
             </div>
             <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
@@ -97,7 +116,10 @@ function Videos({videos}) {
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className="card-title">Videos</h2>
+                <div className='relative w-full'>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Videos</h2>
+                </div>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
@@ -117,9 +139,23 @@ function Videos({videos}) {
                             {
                                 videos && videos.map((video, index) => (
                                     <tr key={index}>
-                                        <td><a href={`https://youtu.be/${video.platform_id}`}>{video.title}</a></td>
-                                        <td className='text-center'>{video.platform == 'youtube' ? <FontAwesomeIcon icon={faYoutube} /> : <FontAwesomeIcon icon={faTiktok} />}</td>
-                                        <td>{video.format == 'long_form' ? 'Long Form' : 'Short Form'}</td>
+                                        <td>
+                                            <a href={`https://youtu.be/${video.platform_id}`} target='_blank'>
+                                                <div className='flex justify-start items-start gap-1'>
+                                                    {video.title} 
+                                                    <FontAwesomeIcon icon={faUpRightFromSquare} className='h-2 w-2 text-blue-600' />
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td className='text-center'>
+                                            {
+                                                video.platform == 'youtube' ? (
+                                                    <a href='https://www.youtube.com/@nash_brownss' target='_blank'>
+                                                        <FontAwesomeIcon icon={faYoutube} className='w-10 h-10 text-red-600' />
+                                                    </a>
+                                                ) : <FontAwesomeIcon icon={faTiktok} />}
+                                        </td>
+                                        <td>{video.format == 'long_form' ? <LongForm/> : <ShortForm/>}</td>
                                         <td>{video.sponsored ? <Sponsored/> : <NotSponsored/> }</td>
                                         <td>{video.views.toLocaleString()}</td>
                                         <td>{video.likes.toLocaleString()}</td>
@@ -132,6 +168,23 @@ function Videos({videos}) {
                     </table>
                 </div>
             </div>
+        </div>
+    )
+}
+
+
+function ShortForm() {
+    return(
+        <div className="badge badge-secondary">
+            Long Form
+        </div>
+    )
+}
+
+function LongForm() {
+    return(
+        <div className="badge badge-info">
+            Short Form
         </div>
     )
 }
@@ -254,20 +307,16 @@ function Stats() {
                         ></path>
                     </svg>
                 </div>
-                <div className={`stat-title ${didot.className} text-indigo-900`}>Page Views</div>
+                <div className={`stat-title ${didot.className} text-indigo-900`}>Total Views</div>
                 <div className="stat-value text-secondary">2.6M</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>21% more than last month</div>
             </div>
 
             <div className="stat">
                 <div className="stat-figure text-secondary">
-                    <div className="avatar avatar-online">
-                        <div className="w-16 rounded-full">
-                            <img src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
-                        </div>
-                    </div>
+                    <FontAwesomeIcon icon={faComputerMouse} className='w-7 h-7 font-bold' />
                 </div>
-                <div className={`stat-title ${didot.className} text-indigo-900`}>Tasks Done</div>
+                <div className={`stat-title ${didot.className} text-indigo-900`}>Afiliat Clicks</div>
                 <div className="stat-value">89%</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>31 tasks remaining</div>
             </div>
@@ -343,3 +392,36 @@ function formatDateToPrettyString(isoString) {
 
     return `${month} ${getOrdinal(day)} ${year}`;
 }
+
+function getPreviousDay6pmFormatted() {
+  const options = { timeZone: 'America/Anchorage' };
+  const now = new Date();
+
+  // Get yesterday in Alaska time
+  const anchorageNow = new Date(now.toLocaleString('en-US', options));
+  anchorageNow.setDate(anchorageNow.getDate() - 1);
+  anchorageNow.setHours(18, 0, 0, 0); // 6 PM
+
+  // Extract parts
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+  const month = months[anchorageNow.getMonth()];
+  const day = anchorageNow.getDate();
+  const year = anchorageNow.getFullYear();
+
+  // Get ordinal suffix
+  function getOrdinal(n) {
+    if (n >= 11 && n <= 13) return 'th';
+    switch (n % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
+    }
+  }
+
+  return `${month} ${day}${getOrdinal(day)} ${year}, 6PM AKST`;
+}
+
