@@ -23,21 +23,16 @@ export function ClientDashboard() {
     const { serverTenant, hasValidTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
 
+    const [tenants, setTenants] = useState([]);
     const [videos, setVideos] = useState([]);
     const [articles, setArticles] = useState([]);
-
-    //Data Fetching
-    useEffect(() => {
-        // fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, makeAuthenticatedRequest); //change to fetch clientContent
-    }, [])
 
     useEffect(() => {
         console.log('checking for valid tenant and server tenant');
 
         if (hasValidTenant && serverTenant?.id) {
             console.log('Fetching tenant dashboard for tenant ID:', serverTenant.id);
-            // fetchTenantDashboard(serverTenant.id, makeAuthenticatedRequest);
-        fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, makeAuthenticatedRequest); //change to fetch clientContent
+            fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, makeAuthenticatedRequest); //change to fetch clientContent
             console.log('dashboard fetched')
         }
 
@@ -280,6 +275,16 @@ function Stats() {
     )
 }
 
+// TODO: Add to fetch Dashboard and add tenant brand exposer data
+// async function fetchTenants(setTenants) {
+//     try {
+//         const tenantsData = await getAllTenants();
+//         setTenants(tenantsData);
+//     } catch (error) {
+//         console.error('Error fetching tenants:', error);
+//     }
+// };
+
 const fetchTenantDashboard = async (tenantId, setVideos, setArticles, makeAuthenticatedRequest) => {
     if (!tenantId) return;
 
@@ -299,42 +304,42 @@ const fetchTenantDashboard = async (tenantId, setVideos, setArticles, makeAuthen
 };
 
 function separateByType(items) {
-  const videos = [];
-  const articles = [];
+    const videos = [];
+    const articles = [];
 
-  for (const item of items) {
-    if (item.type === 'video') {
-      videos.push(item);
-    } else if (item.type === 'article') {
-      articles.push(item);
+    for (const item of items) {
+        if (item.type === 'video') {
+            videos.push(item);
+        } else if (item.type === 'article') {
+            articles.push(item);
+        }
     }
-  }
 
-  // Sort videos by published_at in descending order (most recent first)
-  videos.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-  
-  // Sort articles by published_at in descending order (most recent first)
-  articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+    // Sort videos by published_at in descending order (most recent first)
+    videos.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 
-  return { videos, articles };
+    // Sort articles by published_at in descending order (most recent first)
+    articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+
+    return { videos, articles };
 }
 
 function formatDateToPrettyString(isoString) {
-  const date = new Date(isoString);
+    const date = new Date(isoString);
 
-  const options = { month: 'long' };
-  const month = new Intl.DateTimeFormat('en-US', options).format(date);
-  const day = date.getDate();
-  const year = date.getFullYear();
+    const options = { month: 'long' };
+    const month = new Intl.DateTimeFormat('en-US', options).format(date);
+    const day = date.getDate();
+    const year = date.getFullYear();
 
-  const getOrdinal = (n) => {
-    if (n >= 11 && n <= 13) return `${n}th`;
-    const lastDigit = n % 10;
-    if (lastDigit === 1) return `${n}st`;
-    if (lastDigit === 2) return `${n}nd`;
-    if (lastDigit === 3) return `${n}rd`;
-    return `${n}th`;
-  };
+    const getOrdinal = (n) => {
+        if (n >= 11 && n <= 13) return `${n}th`;
+        const lastDigit = n % 10;
+        if (lastDigit === 1) return `${n}st`;
+        if (lastDigit === 2) return `${n}nd`;
+        if (lastDigit === 3) return `${n}rd`;
+        return `${n}th`;
+    };
 
-  return `${month} ${getOrdinal(day)} ${year}`;
+    return `${month} ${getOrdinal(day)} ${year}`;
 }

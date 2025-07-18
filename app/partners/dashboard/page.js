@@ -11,23 +11,25 @@ import { capitalizeFirstLetter } from "@/lib/strings";
 import { AdminDashboard } from "@/app/components/general";
 import { ClientDashboard } from "@/app/components/general";
 
-// async function fetchTenants(setTenants) {
-//     try {
-//         const tenantsData = await getAllTenants();
-//         setTenants(tenantsData);
-//     } catch (error) {
-//         console.error('Error fetching tenants:', error);
-//     }
-// };
-//
-// async function fetchUsers(setUsers) {
-//     try {
-//         const usersData = await getAllUsers();
-//         setUsers(usersData);
-//     } catch (error) {
-//         console.error('Error fetching users:', error);
-//     }
-// };
+// TODO: Move to admin dashboard
+async function fetchTenants(setTenants) {
+    try {
+        const tenantsData = await getAllTenants();
+        setTenants(tenantsData);
+    } catch (error) {
+        console.error('Error fetching tenants:', error);
+    }
+};
+
+// TODO: Move to admin dashboard
+async function fetchUsers(setUsers) {
+    try {
+        const usersData = await getAllUsers();
+        setUsers(usersData);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+};
 
 
 export default function Dashboard() {
@@ -41,9 +43,10 @@ export default function Dashboard() {
     const [users, setUsers] = useState([]);
 
     //Data Fetching
+    // TODO: Move to admin dashboard
     useEffect(() => {
-        // fetchTenants(setTenants);
-        // fetchUsers(setUsers);
+        fetchTenants(setTenants);
+        fetchUsers(setUsers);
     }, [])
 
     // useEffect(() => {
