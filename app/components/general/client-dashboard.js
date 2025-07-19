@@ -1,17 +1,21 @@
 'use client'
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
+//IMGS
 import companyCoverPhoto from '@/public/tune-dashboard-photo.jpg'
 import moreExposureMan from '@/public/more-exposure-man.png'
+import nashBrownsHokusaiLogo from '@/public/hokusai-nashbrowns-logo.png'
 
+//FONTS
 import { didot } from "@/lib/fonts";
 
+//ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { 
     faStrava,
     faYoutube,
@@ -21,7 +25,6 @@ import {
 
 import { 
     faUpRightFromSquare,
-    // faComputerMouse,
 } from '@awesome.me/kit-237330da78/icons/classic/light'
 
 import { 
@@ -52,7 +55,14 @@ export function ClientDashboard() {
     return(
 
         <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
-            <h1 className={`text-right text-md ${didot.className} text-indigo-900`}>Add User</h1>
+            <div className='flex justify-end items-center w-full'>
+                <button 
+                    onClick={()=>document.getElementById('my_modal_3').showModal()}
+                    className={`btn-ghost text-md ${didot.className} text-indigo-900`}
+                >
+                    Add User
+                </button>
+            </div>
             <div className='flex justify-between items-center gap-5 w-full p-10'>
                 <div className='flex justify-center items-center w-1/2'>
                     <Image
@@ -81,33 +91,53 @@ export function ClientDashboard() {
                 <Videos videos={videos}/>
                 <Articles articles={articles}/>
             </div>
+            <AddUser/>
         </div>
     )
 }
 
 
-function AddUser() {
+function AddUserForm() {
 
     return(
-        <div className="card w-96 bg-base-100 card-xl shadow-sm">
-            <div className="card-body">
-                <h2 className="card-title">Add New User</h2>
-                <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+        <>
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
 
-                    <label className="label">First Name</label>
-                    <input type="firstname" className="input" placeholder="Semore" />
+                <label className="label">First Name</label>
+                <input type="firstname" className="input" placeholder="Semore" />
 
-                    <label className="label">Last Name</label>
-                    <input type="lastname" className="input" placeholder="Butts" />
+                <label className="label">Last Name</label>
+                <input type="lastname" className="input" placeholder="Butts" />
 
-                    <label className="label">Email</label>
-                    <input type="email" className="input" placeholder="cMOREbutts@now.com" />
-                </fieldset>
-                <div className="justify-end card-actions">
-                    <button className="btn btn-primary">Invite User</button>
-                </div>
+                <label className="label">Email</label>
+                <input type="email" className="input" placeholder="cMOREbutts@now.com" />
+            </fieldset>
+            <div className="justify-end card-actions">
+                <button className="btn btn-primary">Invite User</button>
             </div>
-        </div>
+        </>
+    )
+}
+
+function AddUser() {
+    //good start but needs some help. Proababy should show a message that syas the user has been invited
+
+    return(
+        <>
+            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+            <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                    <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h3 className="font-bold text-lg">Add New User</h3>
+                    <form method="dialog">
+                        <AddUserForm/>
+                    </form>
+                </div>
+            </dialog>
+        </>
     )
 }
 
@@ -173,57 +203,26 @@ function Videos({videos}) {
 }
 
 
-function ShortForm() {
-    return(
-        <div className="badge badge-secondary">
-            Long Form
-        </div>
-    )
-}
-
-function LongForm() {
-    return(
-        <div className="badge badge-info">
-            Short Form
-        </div>
-    )
-}
-
-function Sponsored() {
-    return(
-        <div className="badge badge-success">
-            <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></polyline></g></svg>
-            Yes
-        </div>
-    )
-}
-
-function NotSponsored() {
-    return(
-        <div className="badge badge-error">
-            <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><rect x="1.972" y="11" width="20.056" height="2" transform="translate(-4.971 12) rotate(-45)" fill="currentColor" strokeWidth={0}></rect><path d="m12,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm0-20C7.038,3,3,7.037,3,12s4.038,9,9,9,9-4.037,9-9S16.962,3,12,3Z" strokeWidth={0} fill="currentColor"></path></g></svg>
-            No
-        </div>
-    )
-}
 
 function Articles() {
 
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className="card-title">Articles</h2>
+                <div className='relative w-full'>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Articles</h2>
+                </div>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
                         <thead>
                             <tr>
                                 <th>Title</th>
+                                <th className='text-center'>Platform</th>
                                 <th>Type</th>
                                 <th>Sponsored</th>
                                 <th>Views</th>
-                                <th>Likes</th>
-                                <th>Comments</th>
                                 <th>Post Date</th>
                             </tr>
                         </thead>
@@ -231,32 +230,24 @@ function Articles() {
                             {/* row 1 */}
                             <tr>
                                 <td>Tune M1 Starlink Install</td>
-                                <td>Long Form Video</td>
+                                <td>
+                                    <div className='flex justify-center items-center'>
+                                        <Link href='/blog' target='_blank'>
+                                            <div className='relative h-10 w-10'>
+                                                <Image
+                                                    src={nashBrownsHokusaiLogo}
+                                                    alt={"Artical Featured Image"}
+                                                    style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                                                    fill={true}
+                                                />
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </td>
+                                <td>Blog Post</td>
                                 <td>No</td>
                                 <td>5.6k</td>
-                                <td>5</td>
-                                <td>1</td>
                                 <td>June 21, 2025</td>
-                            </tr>
-                            {/* row 2 */}
-                            <tr>
-                                <td>Tune M1 Gravel Travel</td>
-                                <td>Short Form Video</td>
-                                <td>No</td>
-                                <td>5.6k</td>
-                                <td>5</td>
-                                <td>1</td>
-                                <td>June 19, 2025</td>
-                            </tr>
-                            {/* row 3 */}
-                            <tr>
-                                <td>Tune M1 Third Brake Light Install</td>
-                                <td>Long Form Video</td>
-                                <td>No</td>
-                                <td>5.6k</td>
-                                <td>5</td>
-                                <td>1</td>
-                                <td>June 18, 2025</td>
                             </tr>
                         </tbody>
                     </table>
@@ -320,6 +311,40 @@ function Stats() {
                 <div className="stat-value">89%</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>31 tasks remaining</div>
             </div>
+        </div>
+    )
+}
+
+function ShortForm() {
+    return(
+        <div className="badge badge-secondary">
+            Long Form
+        </div>
+    )
+}
+
+function LongForm() {
+    return(
+        <div className="badge badge-info">
+            Short Form
+        </div>
+    )
+}
+
+function Sponsored() {
+    return(
+        <div className="badge badge-success">
+            <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></polyline></g></svg>
+            Yes
+        </div>
+    )
+}
+
+function NotSponsored() {
+    return(
+        <div className="badge badge-error">
+            <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><rect x="1.972" y="11" width="20.056" height="2" transform="translate(-4.971 12) rotate(-45)" fill="currentColor" strokeWidth={0}></rect><path d="m12,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm0-20C7.038,3,3,7.037,3,12s4.038,9,9,9,9-4.037,9-9S16.962,3,12,3Z" strokeWidth={0} fill="currentColor"></path></g></svg>
+            No
         </div>
     )
 }
