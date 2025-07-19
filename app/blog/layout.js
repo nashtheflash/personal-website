@@ -21,7 +21,7 @@ async function incrementPageCounter(route) {
     const contentId = routeArray.pop();
 
     // /blog/articles/... if there are 2 or fewer items in the array it is not a post
-    if (routeArray.length < 2 ) return;
+    if (routeArray.length <= 2 ) return;
 
     const { partners } = await getSingleBlogPostMetadata(route);
 

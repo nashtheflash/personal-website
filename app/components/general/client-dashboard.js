@@ -196,6 +196,9 @@ function Videos({videos}) {
                             }
                         </tbody>
                     </table>
+                    <div className='flex justify-center items-center w-full mt-5'>
+                        <div className="badge badge-outline badge-primary">Show More</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,13 +207,14 @@ function Videos({videos}) {
 
 
 
-function Articles() {
+function Articles({articles}) {
+    console.log('from artical comp', articles);
 
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Live Data. Refresh page to update.</p>
                     <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Articles</h2>
                 </div>
                 <div className="overflow-x-auto">
@@ -228,29 +232,42 @@ function Articles() {
                         </thead>
                         <tbody>
                             {/* row 1 */}
-                            <tr>
-                                <td>Tune M1 Starlink Install</td>
-                                <td>
-                                    <div className='flex justify-center items-center'>
-                                        <Link href='/blog' target='_blank'>
-                                            <div className='relative h-10 w-10'>
-                                                <Image
-                                                    src={nashBrownsHokusaiLogo}
-                                                    alt={"Artical Featured Image"}
-                                                    style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
-                                                    fill={true}
-                                                />
+                            { articles && articles.map((article, index) => (
+                                <tr key={index}>
+                                    <td>
+                                        <Link href={`/blog/articles/${article.platform_id}`} target='_blank'>
+                                            <div className='flex justify-start items-start gap-1'>
+                                                {article.title} 
+                                                <FontAwesomeIcon icon={faUpRightFromSquare} className='h-2 w-2 text-blue-600' />
                                             </div>
                                         </Link>
-                                    </div>
-                                </td>
-                                <td>Blog Post</td>
-                                <td>No</td>
-                                <td>5.6k</td>
-                                <td>June 21, 2025</td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <div className='flex justify-center items-center'>
+                                            <Link href='/blog' target='_blank'>
+                                                <div className='relative h-10 w-10'>
+                                                    <Image
+                                                        src={nashBrownsHokusaiLogo}
+                                                        alt={"Artical Featured Image"}
+                                                        style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                                                        fill={true}
+                                                    />
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </td>
+                                    <td>{article.type == 'blog' ? <BlogPost/> : <ShortForm/>}</td>
+                                    <td>{article.sponsored ? <Sponsored/> : <NotSponsored/> }</td>
+                                    <td>{article.views.toLocaleString()}</td>
+                                    <td>{formatDateToPrettyString(article.published_at)}</td>
+                                </tr>
+                            ))
+                            }
                         </tbody>
                     </table>
+                    <div className='flex justify-center items-center w-full mt-5'>
+                        <div className="badge badge-outline badge-primary">Show More</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -318,7 +335,7 @@ function Stats() {
 function ShortForm() {
     return(
         <div className="badge badge-secondary">
-            Long Form
+            Short Form
         </div>
     )
 }
@@ -326,7 +343,15 @@ function ShortForm() {
 function LongForm() {
     return(
         <div className="badge badge-info">
-            Short Form
+            Long Form
+        </div>
+    )
+}
+
+function BlogPost() {
+    return(
+        <div className="badge badge-info">
+            Blog Post
         </div>
     )
 }
@@ -384,7 +409,7 @@ function separateByType(items) {
     for (const item of items) {
         if (item.type === 'video') {
             videos.push(item);
-        } else if (item.type === 'article') {
+        } else if (item.type === 'blog') {
             articles.push(item);
         }
     }
