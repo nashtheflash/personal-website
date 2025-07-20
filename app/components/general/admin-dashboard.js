@@ -1,5 +1,5 @@
-import { addUser, addContentDocument } from '@/lib/server-actions/firebase/firestore'
-import { useForm } from 'react-hook-form'
+import { addUser, addContentDocument, sendEmail } from '@/lib/server-actions/firebase/firestore'
+import { useForm } from "react-hook-form"
 
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
 
@@ -39,9 +39,10 @@ function AddTenant() {
 function AddUser() {
 
     const newUser = () => {
-        // const userData = JSON.stringify({ first_name: 'test', last_name: 'name', email: 'test@nashbrowns.com', tenant: 0});
         const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
+
         addUser(userData)
+
     }
 
     return(

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 
+import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
+
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
 //IMGS
@@ -97,7 +99,24 @@ export function ClientDashboard() {
 }
 
 
+//TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
 function AddUserForm() {
+
+    const newUser = () => {
+        const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
+        addUser(userData)
+
+        sendEmail({
+            to: ['nashb1323@gmail.com'],
+            from: 'hello@nashbrowns.com',
+            subject: 'just the subject',
+            message_text: 'WANNA JOIN????',
+            message_html: '',
+        }).then(() => {
+                console.log('Email sent successfully');
+            })
+        console.log('EMAIL SENT!!');
+    }
 
     return(
         <>
@@ -113,7 +132,7 @@ function AddUserForm() {
                 <input type="email" className="input" placeholder="cMOREbutts@now.com" />
             </fieldset>
             <div className="justify-end card-actions">
-                <button className="btn btn-primary">Invite User</button>
+                <button className="btn btn-primary" onClick={newUser}>Invite User</button>
             </div>
         </>
     )
