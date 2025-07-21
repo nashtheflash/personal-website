@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from "react";
 
 import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
+import { useAuth } from '@/lib/firebase';
 
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
@@ -33,42 +34,66 @@ import {
     faComputerMouse,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
+
+
 export default function EditUsers() {
     const { serverTenant, hasValidTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
 
     const [users, setUsers] = useState();
+    const [reloadUser, setReloadUser] = useState(false);
+
+    const fetchTenantUsers = async (tenantId) => {
+        try {
+            const response = await makeAuthenticatedRequest(`/api/tenant/${tenantId}/users`);
+            setUsers(response.users);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
+    };
 
     useEffect(() => {
-        const fetchTenantUsers = async (tenantId) => {
-            try {
-                const response = await makeAuthenticatedRequest(
-                    `/api/tenant/${tenantId}/users`
-                );
-                setUsers(response.users);
-            } catch (error) {
-                console.error('Error fetching users:', error);
-            }
-        };
+        if (!hasValidTenant && !serverTenant?.id) return;
 
+        fetchTenantUsers(serverTenant.id);
+        setReloadUser(false);
 
-        if (hasValidTenant && serverTenant?.id) {
-            fetchTenantUsers(serverTenant.id);
-        }
-
-    }, [hasValidTenant, serverTenant?.id]);
+    }, [hasValidTenant, serverTenant?.id, reloadUser]);
 
 
     return(
         <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
             <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                <Users users={users}/>
+                <Users users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
             </div>
         </div>
     )
 }
 
-function Users({users}) {
+function Users({users, setReloadUser}) {
+    const { user: userAuth } = useAuth();
+    const { serverTenant } = useServerAuth();
+    const makeAuthenticatedRequest = useAuthenticatedApi();
+
+
+    const handleDeleteUser = async (userId) => {
+        if (confirm('Are you sure you want to delete this user?')) {
+            try {
+                await makeAuthenticatedRequest(
+                    `/api/user/${serverTenant.id}/delete-user`,
+                    {
+                        method: 'DELETE',
+                        body: JSON.stringify({ userId })
+                    }
+                );
+
+                // Refresh the users list
+                setReloadUser(true);
+            } catch (error) {
+                console.error('Error deleting user:', error);
+            }
+        }
+    };
 
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
@@ -94,7 +119,7 @@ function Users({users}) {
                                         <td>{user.last_name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.phone}</td>
-                                        <td>X</td>
+                                        <td><button className='btn btn-error' onClick={() => handleDeleteUser(user.id)} disabled={userAuth.email == user.email ? 'disabled' : ''}>X</button></td>
                                     </tr>
                                 ))
                             }
