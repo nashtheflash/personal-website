@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
 import { useAuth } from '@/lib/firebase';
+import { useAggressiveAuth } from '@/lib/firebase';
 
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
@@ -33,6 +34,7 @@ import {
 import { 
     faComputerMouse,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
+import { AddGrain } from '@/app/components/styles';
 
 
 
@@ -62,16 +64,19 @@ export default function EditUsers() {
 
 
     return(
-        <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
-            <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                <Users users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
+        <AddGrain bg={'bg-base-200'}>
+            <div className="w-full h-fit min-h-screen pr-5 pt-3">
+                <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
+                    <Users users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
+                </div>
             </div>
-        </div>
+        </AddGrain>
     )
 }
 
 function Users({users, setReloadUser}) {
-    const { user: userAuth } = useAuth();
+    // const { user: userAuth } = useAuth();
+    const { user: userAuth } = useAggressiveAuth()
     const { serverTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
 
@@ -98,11 +103,11 @@ function Users({users, setReloadUser}) {
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Users</h2>
+                <h2 className={`card-title text-5xl ${didot.className} text-accent-content`}>Users</h2>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead>
+                        <thead className='text-base-content'>
                             <tr>
                                 <th>First Name</th>
                                 <th>Last Name</th>
@@ -111,7 +116,7 @@ function Users({users, setReloadUser}) {
                                 <th>Remove</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='text-primary-content'>
                             {
                                 users && users.map((user, index) => (
                                     <tr key={index}>

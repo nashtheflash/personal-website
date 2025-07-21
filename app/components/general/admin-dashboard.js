@@ -1,3 +1,5 @@
+'use client'
+
 import { addUser, addContentDocument, sendEmail } from '@/lib/server-actions/firebase/firestore'
 import { useForm } from "react-hook-form"
 

@@ -21,8 +21,8 @@ import { ServiceWorkerRegister } from "./components/sw-register";
 export default async function RootLayout({ children }) {
 
     return (
-        <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable}`} data-theme="dark">
-            <body className='min-h-screen bg-base-100'>
+        <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable}`} data-theme="retro">
+            <body className='min-h-screen bg-base-200'>
                 <AuthProvider>
                     <NavBar/>
                     {children}

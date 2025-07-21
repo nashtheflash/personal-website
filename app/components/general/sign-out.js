@@ -27,7 +27,7 @@ export const SignOut = () => {
     return (
         <button
             onClick={handleSignOut}
-            className="text-indigo-900 text-2xl"
+            className="text-2xl"
         >
             Sign Out
         </button>

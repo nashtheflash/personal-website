@@ -39,7 +39,19 @@ module.exports = {
         },
     },
     daisyui: {
-        themes: ["light", "dark", "cupcake"],
+        themes: [
+            // "light", 
+            // "dark", 
+            // "cupcake",
+            "retro",
+            // "garden",
+            // "pastel",
+            // "autumn",
+            // "winter",
+            // "nord",
+            // "silk",
+        ],
+darkTheme: false,
     },
     plugins: [
         require('daisyui'),
