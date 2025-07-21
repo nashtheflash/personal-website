@@ -56,7 +56,7 @@ export default function EditUsers() {
             fetchTenantUsers(serverTenant.id);
         }
 
-    }, [hasValidTenant, serverTenant?.id, makeAuthenticatedRequest]);
+    }, [hasValidTenant, serverTenant?.id]);
 
 
     return(
