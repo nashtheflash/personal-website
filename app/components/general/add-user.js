@@ -54,13 +54,30 @@ function AddUserForm() {
             };
             console.log(userData);
             await addUser(userData);
+
             await sendEmail({
                 to: [data.email],
                 from: 'hello@nashbrowns.com',
-                subject: 'You have been invited!',
-                message_text: 'You have been invited to join Nash Browns!',
-                message_html: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? `<a href=http://localhost:3000/signup?email=${data.email}>Join Nash Browns</a>` : `<a href=https://www.nashbrowns.com/signup?email=${data.email}>Join Nash Browns</a>`
-            });
+                subject: 'You’ve been invited!',
+                message_text: 'You have been invited to join Nash Browns Media!',
+                message_html: `
+                        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
+                        <h2 style="color: #333;">Welcome to Nash Browns Media 🎉</h2>
+                        <p>Click the button below to create your account and view your company's exposure:</p>
+                        <p>
+                        <a href="${window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                        ? `http://localhost:3000/signup?email=${data.email}`
+                        : `https://www.nashbrowns.com/signup?email=${data.email}`}"
+                        style="display: inline-block; padding: 12px 20px; color: #fff; background-color: #4f46e5; text-decoration: none; border-radius: 6px; font-weight: bold;"
+                        >
+                        Join Nash Browns Media
+                        </a>
+                        </p>
+                        <p style="font-size: 0.9em; color: #777;">If you weren’t expecting this email, you can safely ignore it.</p>
+                        </div>
+                `
+                });
+
             setSuccess(true);
             reset();
         } catch (err) {
