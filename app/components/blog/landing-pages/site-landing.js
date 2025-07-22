@@ -6,7 +6,6 @@ import hokusaiNashBrownsLogo from '@/public/hokusai-nashbrowns-logo.png';
 
 export function SiteLanding() {
     return(
-        <AddGrain bg={'bg-base-200'}>
             <div className="w-full h-[calc(100vh-64px)] overflow-hidden">
                 <div className="flex flex-col justify-center items-center h-full w-full">
                     <Image
@@ -18,6 +17,5 @@ export function SiteLanding() {
                     />
                 </div>
             </div>
-        </AddGrain>
     )
 }

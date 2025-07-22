@@ -13,9 +13,7 @@ export default function BlogHome() {
 
     return(
         <MdxLayout>
-            <div className="bg-[#f2f1ed] w-full">
-                <BlogList/>
-            </div>
+            <BlogList/>
         </MdxLayout>
     )
 }
@@ -27,7 +25,7 @@ async function BlogList() {
     const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
 
     return(
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full">
             {
                 orderedArticals.map((article, i) => {
                     return (

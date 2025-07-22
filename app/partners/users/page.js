@@ -48,7 +48,7 @@ export default function Users() {
 
     const fetchTenantUsers = async (tenantId) => {
         try {
-            const response = await makeAuthenticatedRequest(`/api/tenant/${tenantId}/users`);
+            const response = await makeAuthenticatedRequest(`/api/${tenantId}/users/get-tenant-users`);
             setUsers(response.users);
         } catch (error) {
             console.error('Error fetching users:', error);
@@ -65,14 +65,14 @@ export default function Users() {
 
 
     return(
-        <AddGrain bg={'bg-base-200'}>
+        <>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
                 </div>
             </div>
             <AddUserModal modalId='add-user-modal'/>
-        </AddGrain>
+        </>
     )
 }
 
@@ -86,7 +86,7 @@ function UsersTable({users, setReloadUser}) {
         if (confirm('Are you sure you want to delete this user?')) {
             try {
                 await makeAuthenticatedRequest(
-                    `/api/user/${serverTenant.id}/delete-user`,
+                    `/api/${serverTenant.id}/users/delete-user`,
                     {
                         method: 'DELETE',
                         body: JSON.stringify({ userId })

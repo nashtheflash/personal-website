@@ -1,1 +1,1 @@
-export { AddGrain } from "./add-grain";
+export { AddBackground } from "./add-background";

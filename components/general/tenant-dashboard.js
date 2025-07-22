@@ -40,7 +40,7 @@ export default function TenantDashboard() {
     
     try {
       const data = await makeAuthenticatedRequest(
-        `/api/tenant/${tenantId}/dashboard`
+        `/api/${tenantId}/content`
       );
       console.log('Tenant dashboard data:', data);
       setDashboardData(data);

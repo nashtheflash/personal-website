@@ -39,17 +39,12 @@ export function ClientDashboard() {
     const { serverTenant, hasValidTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
 
-    const [tenants, setTenants] = useState([]);
     const [videos, setVideos] = useState([]);
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        console.log('checking for valid tenant and server tenant');
-
         if (hasValidTenant && serverTenant?.id) {
-            console.log('Fetching tenant dashboard for tenant ID:', serverTenant.id);
             fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, makeAuthenticatedRequest); //change to fetch clientContent
-            console.log('dashboard fetched')
         }
 
     }, [hasValidTenant, serverTenant?.id]);
@@ -57,41 +52,39 @@ export function ClientDashboard() {
 
     return(
 
-        <AddGrain bg='bg-base-200'>
-            <div className="w-full h-fit min-h-screen pr-5 pt-3">
-                <div className='flex justify-end items-center w-full'>
-                    <Link href='/partners/users' className='btn btn-ghost'>Manage Users</Link>
+        <div className="w-full h-fit min-h-screen pr-5 pt-3">
+            <div className='flex justify-end items-center w-full'>
+                <Link href='/partners/users' className='btn btn-ghost text-primary-content'>Manage Users</Link>
+            </div>
+            <div className='flex justify-between items-center gap-5 w-full p-10'>
+                <div className='flex justify-center items-center w-1/2'>
+                    <Image
+                        src={companyCoverPhoto}
+                        alt='Nash Borowns Logo Long'
+                        width={500}
+                        height={750}
+                        className='rounded-xl'
+                    />
                 </div>
-                <div className='flex justify-between items-center gap-5 w-full p-10'>
-                    <div className='flex justify-center items-center w-1/2'>
+                <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
+                    <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
+                    <Stats/>
+                    <div className='relative flex flex-col w-full h-56'>
                         <Image
-                            src={companyCoverPhoto}
-                            alt='Nash Borowns Logo Long'
-                            width={500}
-                            height={750}
-                            className='rounded-xl'
+                            src={moreExposureMan}
+                            alt={"Artical Featured Image"}
+                            style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                            fill={true}
                         />
                     </div>
-                    <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
-                        <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
-                        <Stats/>
-                        <div className='relative flex flex-col w-full h-56'>
-                            <Image
-                                src={moreExposureMan}
-                                alt={"Artical Featured Image"}
-                                style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
-                                fill={true}
-                            />
-                        </div>
-                        <button className='btn w-full'>Order Content</button>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                    <Videos videos={videos}/>
-                    <Articles articles={articles}/>
+                    <button className='btn btn-secondary w-full'>Order Content</button>
                 </div>
             </div>
-        </AddGrain>
+            <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
+                <Videos videos={videos}/>
+                <Articles articles={articles}/>
+            </div>
+        </div>
     )
 }
 
@@ -405,7 +398,7 @@ const fetchTenantDashboard = async (tenantId, setVideos, setArticles, makeAuthen
 
     try {
         const data = await makeAuthenticatedRequest(
-            `/api/tenant/${tenantId}/dashboard`
+            `/api/${tenantId}/content/get-all-content`
         );
         const {videos, articles} = separateByType(data.content);
         console.log(data.content);

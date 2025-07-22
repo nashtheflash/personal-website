@@ -6,7 +6,7 @@ import logo from "@/public/logo.png";
 export default function ProjectsHome() {
 
     return(
-        <div className="min-h-[calc(100vh-64px)] bg-[#f2f1ed] w-full">
+        <div className="min-h-[calc(100vh-64px)] w-full">
             <div className="relative flex flex-col justify-center items-center h-full w-full">
                 <Project/>
             </div>

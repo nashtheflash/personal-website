@@ -18,7 +18,7 @@ export default function Partners() {
     const { user, loading, isAssumed, hasError } = useAggressiveAuth()
 
     return(
-        <AddGrain bg={'bg-base-200'}>
+        <>
             <div className=" flex flex-col justify-center items-start w-3/4 m-auto">
                 <div className='flex flex-col md:flex-row justify-evenly items-center w-full min-h-[calc(100vh-64px)]'>
                     <div className='h-fit w-96'>
@@ -42,7 +42,7 @@ export default function Partners() {
                     <ContactUs/>
                 </div>
             </div>
-        </AddGrain>
+        </>
     )
 }
 

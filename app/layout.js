@@ -13,6 +13,9 @@ import { AuthProvider } from "@/lib/firebase"
 //Fonts
 import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
 
+//Defualt Styles
+import { AddBackground } from "./components/styles";
+
 import "./globals.css";
 
 //Service Worker
@@ -22,15 +25,17 @@ export default async function RootLayout({ children }) {
 
     return (
         <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable}`} data-theme="retro">
-            <body className='min-h-screen bg-base-200'>
-                <AuthProvider>
-                    <NavBar/>
-                    {children}
-                </AuthProvider>
-                <ServiceWorkerRegister />
-                <SpeedInsights />
-                <Analytics/>
-                <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
+            <body className='min-h-screen'>
+                <AddBackground bgColor={'bg-base-200'}>
+                    <AuthProvider>
+                        <NavBar/>
+                        {children}
+                    </AuthProvider>
+                    <ServiceWorkerRegister />
+                    <SpeedInsights />
+                    <Analytics/>
+                    <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
+                </AddBackground>
             </body>
         </html>
     );

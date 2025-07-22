@@ -1,20 +1,119 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { addUser, addContentDocument, sendEmail } from '@/lib/server-actions/firebase/firestore'
+import { useServerAuth } from '@/lib/firebase/auth-hooks'
+import { useAuthenticatedApi } from '@/lib/firebase/auth-hooks'
 import { useForm } from "react-hook-form"
 
-import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
+import { capitalizeFirstLetter } from '@/lib/strings'
+
 
 export function AdminDashboard() {
+    const { serverTenant, hasValidTenant } = useServerAuth();
+    const makeAuthenticatedRequest = useAuthenticatedApi();
+
+    const [users, setUsers] = useState();
+    const [tenants, setTenants] = useState();
+    const [reloadUser, setReloadUser] = useState(false);
+
+    const fetchAllUsers = async (tenantId) => {
+        try {
+            const response = await makeAuthenticatedRequest(`/api/admin/${tenantId}/all-users`);
+            setUsers(response.users);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
+    };
+
+    const fetchAllTenants = async (tenantId) => {
+        try {
+            const response = await makeAuthenticatedRequest(`/api/admin/${tenantId}/all-tenants`);
+            console.log('tenants:', response.tenants)
+            setTenants(response.tenants);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
+    };
+
+    useEffect(() => {
+        if (!hasValidTenant && !serverTenant?.id) return;
+
+        fetchAllUsers(serverTenant.id);
+        fetchAllTenants(serverTenant.id);
+        setReloadUser(false);
+
+    }, [hasValidTenant, serverTenant?.id, reloadUser]);
 
     return(
-        <div className="flex flex-col justify-start items-center gap-5 pb-10 w-full h-fit min-h-screen bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
+        <div className="flex flex-col justify-start items-center gap-5 pb-10 w-full h-fit min-h-screen">
+            <div className="flex flex-col justify-start items-center w-full h-fit">
+                <AdminNav tenants={tenants} users={users}/>
+            </div>
             <h2 className='text-center font-mono'>Widgets</h2>
             <AddContent/>
             <AddTenant/>
             <AddUser/>
         </div>
 
+    )
+}
+
+function AdminNav({ tenants, users }) {
+
+    return(
+        <div className='py-3'>
+            <ul className="menu bg-base-200 lg:menu-horizontal rounded-box">
+                <li>
+                    <a>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <select defaultValue="Pick a color" className="select">
+                            <option disabled={true}>Select Tennant</option>
+                            {tenants && tenants.map((tenant, i) => {
+                                return (
+                                    <option key={i}>{tenant.display_name}</option>
+                                )
+                            })}
+                        </select>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <select defaultValue="Pick a color" className="select">
+                            <option disabled={true}>Select User</option>
+                            {users && users.map((user, i) => {
+                                return (
+                                    <option key={i}>{capitalizeFirstLetter(user.first_name) + ' ' + capitalizeFirstLetter(user.last_name)}</option>
+                                )
+                            })}
+                        </select>
+                    </a>
+                </li>
+            </ul>
+        </div>
     )
 }
 
