@@ -1,9 +1,11 @@
 'use client'
 
+import { useRouter, useSearchParams } from "next/navigation"
 import { useState } from "react"
-import { createUserWithEmailAndPassword } from "firebase/auth"
+
 import { auth } from "@/firebase"
-import { useRouter } from "next/navigation"
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth"
+import { useAuth } from "@/lib/firebase";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -14,18 +16,33 @@ import {
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 import { didot } from "@/lib/fonts"
+import { getUser } from "@/lib/server-actions/firebase/firestore"
 
 export function SignUp() {
-    const [email, setEmail] = useState("")
+    const searchParams = useSearchParams()
+    const newUserEmail = searchParams.get('email')
+
+    const { user } = useAuth()
+
     const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
     const [signUpError, setSignUpError] = useState(null)
     const router = useRouter()
 
     const handleSignUp = async (e) => {
         e.preventDefault()
+
+        if(user) await signOut(auth);
+
         try {
-            await createUserWithEmailAndPassword(auth, email, password)
-            router.push("/") // Navigate to the home page
+            //auth does this automatically
+            // const userExists = await getUser(newUserEmail)
+            // if (userExists) throw new Error("User already exists")
+
+            const userCredential = await createUserWithEmailAndPassword(auth, newUserEmail, password)
+            if (!userCredential) throw new Error("User not created")
+
+            router.push("/partners/dashboard") // Navigate to the tenant dashboard
         } catch (error) {
             console.error("Error signing up:", error)
             setSignUpError(error.message)
@@ -43,8 +60,8 @@ export function SignUp() {
                 <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
                 <input 
                     type="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={newUserEmail}
+                    readOnly
                     placeholder="Email"
                     className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
                 />
@@ -67,8 +84,8 @@ export function SignUp() {
                 <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
                 <input 
                     type="password"
-                    value={password}
-                    // onChange={(e) => setPassword(e.target.value)}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="Confirm Password"
                     className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
                 />

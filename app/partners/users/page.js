@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
+import { AddUserModal } from '@/app/components/general';
 
 import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
 import { useAuth } from '@/lib/firebase';
@@ -38,7 +39,7 @@ import { AddGrain } from '@/app/components/styles';
 
 
 
-export default function EditUsers() {
+export default function Users() {
     const { serverTenant, hasValidTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
 
@@ -67,15 +68,15 @@ export default function EditUsers() {
         <AddGrain bg={'bg-base-200'}>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                    <Users users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
+                    <UsersTable users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
                 </div>
             </div>
+            <AddUserModal modalId='add-user-modal'/>
         </AddGrain>
     )
 }
 
-function Users({users, setReloadUser}) {
-    // const { user: userAuth } = useAuth();
+function UsersTable({users, setReloadUser}) {
     const { user: userAuth } = useAggressiveAuth()
     const { serverTenant } = useServerAuth();
     const makeAuthenticatedRequest = useAuthenticatedApi();
@@ -131,49 +132,15 @@ function Users({users, setReloadUser}) {
                         </tbody>
                     </table>
                     <div className='flex justify-center items-center w-full mt-5'>
-                        <div className="badge badge-outline badge-primary">Add New User</div>
+                        <button
+                            onClick={()=>document.getElementById('add-user-modal').showModal()}
+                            className="badge badge-outline badge-info"
+                        >
+                            Add New User
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
-
-//TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
-function AddUserForm() {
-
-    const newUser = () => {
-        const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
-        addUser(userData)
-
-        sendEmail({
-            to: ['nashb1323@gmail.com'],
-            from: 'hello@nashbrowns.com',
-            subject: 'just the subject',
-            message_text: 'WANNA JOIN????',
-            message_html: '',
-        }).then(() => {
-                console.log('Email sent successfully');
-            })
-        console.log('EMAIL SENT!!');
-    }
-
-    return(
-        <>
-            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-
-                <label className="label">First Name</label>
-                <input type="firstname" className="input" placeholder="Semore" />
-
-                <label className="label">Last Name</label>
-                <input type="lastname" className="input" placeholder="Butts" />
-
-                <label className="label">Email</label>
-                <input type="email" className="input" placeholder="cMOREbutts@now.com" />
-            </fieldset>
-            <div className="justify-end card-actions">
-                <button className="btn btn-primary" onClick={newUser}>Invite User</button>
-            </div>
-        </>
     )
 }

@@ -22,7 +22,6 @@ const menuItems = [
 ]
 
 export function NavBar() {
-    const { user, loading, isAssumed, hasError } = useAggressiveAuth()
 
     return(
         <AddGrain bg='bg-base-300'>
@@ -60,10 +59,28 @@ export function NavBar() {
                 </div>
                 <div className="navbar-end">
                     <ul className={`menu menu-horizontal px-1 text-2xl text-base-content ${didot.className}`}>
-                        {user ? <li><SignOut/></li> : <li><Link href='/partners'>Partners</Link></li>}
+                        <PartnerSignOutButton/>
                     </ul>
                 </div>
             </div>
         </AddGrain>
     )
+}
+
+function PartnerSignOutButton() {
+    const { user, loading, isAssumed, hasError } = useAggressiveAuth()
+
+    if(user) {
+        return (
+            <div className='flex flex-row gap-1'>
+                <li><Link href='/partners/dashboard'>Dashboard</Link></li>
+                <li><SignOut/></li>
+            </div>
+        )
+    }
+
+    return (
+        <li><Link href='/partners'>Partners</Link></li>
+    )
+
 }

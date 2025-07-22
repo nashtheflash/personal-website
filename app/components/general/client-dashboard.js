@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 
-import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
+import { AddUserModal } from './';
 
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
 
@@ -58,12 +58,7 @@ export function ClientDashboard() {
 
         <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
             <div className='flex justify-end items-center w-full'>
-                <button 
-                    onClick={()=>document.getElementById('my_modal_3').showModal()}
-                    className={`btn-ghost text-md ${didot.className} text-indigo-900`}
-                >
-                    Add User
-                </button>
+                <Link href='/partners/users' className='btn btn-ghost'>Manage Users</Link>
             </div>
             <div className='flex justify-between items-center gap-5 w-full p-10'>
                 <div className='flex justify-center items-center w-1/2'>
@@ -93,72 +88,71 @@ export function ClientDashboard() {
                 <Videos videos={videos}/>
                 <Articles articles={articles}/>
             </div>
-            <AddUser/>
         </div>
     )
 }
 
 
 //TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
-function AddUserForm() {
+// function AddUserForm() {
+//
+//     const newUser = () => {
+//         const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
+//         addUser(userData)
+//
+//         sendEmail({
+//             to: ['nashb1323@gmail.com'],
+//             from: 'hello@nashbrowns.com',
+//             subject: 'just the subject',
+//             message_text: 'WANNA JOIN????',
+//             message_html: '',
+//         }).then(() => {
+//                 console.log('Email sent successfully');
+//             })
+//         console.log('EMAIL SENT!!');
+//     }
+//
+//     return(
+//         <>
+//             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+//
+//                 <label className="label">First Name</label>
+//                 <input type="firstname" className="input" placeholder="Semore" />
+//
+//                 <label className="label">Last Name</label>
+//                 <input type="lastname" className="input" placeholder="Butts" />
+//
+//                 <label className="label">Email</label>
+//                 <input type="email" className="input" placeholder="cMOREbutts@now.com" />
+//             </fieldset>
+//             <div className="justify-end card-actions">
+//                 <button className="btn btn-primary" onClick={newUser}>Invite User</button>
+//             </div>
+//         </>
+//     )
+// }
 
-    const newUser = () => {
-        const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
-        addUser(userData)
-
-        sendEmail({
-            to: ['nashb1323@gmail.com'],
-            from: 'hello@nashbrowns.com',
-            subject: 'just the subject',
-            message_text: 'WANNA JOIN????',
-            message_html: '',
-        }).then(() => {
-                console.log('Email sent successfully');
-            })
-        console.log('EMAIL SENT!!');
-    }
-
-    return(
-        <>
-            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-
-                <label className="label">First Name</label>
-                <input type="firstname" className="input" placeholder="Semore" />
-
-                <label className="label">Last Name</label>
-                <input type="lastname" className="input" placeholder="Butts" />
-
-                <label className="label">Email</label>
-                <input type="email" className="input" placeholder="cMOREbutts@now.com" />
-            </fieldset>
-            <div className="justify-end card-actions">
-                <button className="btn btn-primary" onClick={newUser}>Invite User</button>
-            </div>
-        </>
-    )
-}
-
-function AddUser() {
-    //good start but needs some help. Proababy should show a message that syas the user has been invited
-
-    return(
-        <>
-            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-            <dialog id="my_modal_3" className="modal">
-                <div className="modal-box">
-                    <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    </form>
-                    <h3 className="font-bold text-lg">Add New User</h3>
-                    <form method="dialog">
-                        <AddUserForm/>
-                    </form>
-                </div>
-            </dialog>
-        </>
-    )
-}
+// function AddUser() {
+//     //good start but needs some help. Proababy should show a message that syas the user has been invited
+//
+//     return(
+//         <>
+//             {/* You can open the modal using document.getElementById('ID').showModal() method */}
+//             <dialog id="my_modal_3" className="modal">
+//                 <div className="modal-box">
+//                     <form method="dialog">
+//                         {/* if there is a button in form, it will close the modal */}
+//                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+//                     </form>
+//                     <h3 className="font-bold text-lg">Add New User</h3>
+//                     <form method="dialog">
+//                         <AddUserForm/>
+//                     </form>
+//                 </div>
+//             </dialog>
+//         </>
+//     )
+// }
 
 function Videos({videos}) {
 
