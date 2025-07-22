@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { useState, Suspense } from "react"
+import { useState } from "react"
 
 import { auth } from "@/firebase"
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth"
@@ -50,57 +50,55 @@ export function SignUp() {
     }
 
     return (
-        <Suspense fallback={'Loading...'}>
-            <form
-                onSubmit={handleSignUp}
-                className="flex flex-col p-8 gap-4 text-black min-w-80"
+        <form
+            onSubmit={handleSignUp}
+            className="flex flex-col p-8 gap-4 text-black min-w-80"
+        >
+            <label 
+                className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
             >
-                <label 
-                    className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                    <input 
-                        type="email" 
-                        value={newUserEmail}
-                        readOnly
-                        placeholder="Email"
-                        className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
-                    />
-                </label>
-                <label 
-                    className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                    <input 
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
-                        className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
-                    />
-                </label>
-                <label 
-                    className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                    <input 
-                        type="password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        placeholder="Confirm Password"
-                        className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
-                    />
-                </label>
-                <button
-                    type="submit"
-                    className="p-2 rounded-sm bg-green-500 font-semibold text-lg text-white"
-                >
-                    Sign Up
-                </button>
-                {signUpError && (
-                    <p className="text-red-500 text-sm">{signUpError.message}</p>
-                )}
-            </form>
-        </Suspense>
+                <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
+                <input 
+                    type="email" 
+                    value={newUserEmail}
+                    readOnly
+                    placeholder="Email"
+                    className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                />
+            </label>
+            <label 
+                className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+            >
+                <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
+                <input 
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                    className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                />
+            </label>
+            <label 
+                className="group input input-bordered flex items-center gap-2 font-serif text-indigo-900 border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+            >
+                <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
+                <input 
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="Confirm Password"
+                    className={`grow text-indigo-900 placeholder:text-indigo-900 placeholder:${didot.className}`}
+                />
+            </label>
+            <button
+                type="submit"
+                className="p-2 rounded-sm bg-green-500 font-semibold text-lg text-white"
+            >
+                Sign Up
+            </button>
+            {signUpError && (
+                <p className="text-red-500 text-sm">{signUpError.message}</p>
+            )}
+        </form>
     )
 }
