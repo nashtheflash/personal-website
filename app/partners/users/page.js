@@ -104,11 +104,11 @@ function UsersTable({users, setReloadUser}) {
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className={`card-title text-5xl ${didot.className} text-accent-content`}>Users</h2>
+                <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Users</h2>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead className='text-base-content'>
+                        <thead className='text-primary-content'>
                             <tr>
                                 <th>First Name</th>
                                 <th>Last Name</th>

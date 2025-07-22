@@ -6,6 +6,15 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color-base-content: 41% 0.112 45.904;
+  --color-primary-content: 39% 0.141 25.723;
+  --color-secondary-content: 44% 0.119 151.328;
+  --color-accent-content: 41% 0.112 45.904;
+  --color-neutral-content: 86% 0.005 56.366;
+  --color-info-content: 96% 0.059 95.617;
+  --color-success-content: 96% 0.059 95.617;
+  --color-warning-content: 96% 0.059 95.617;
+  --color-error-content: 40% 0.123 38.172;
 }
 
 @media (prefers-color-scheme: dark) {

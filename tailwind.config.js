@@ -8,6 +8,17 @@ module.exports = {
     ],
     theme: {
         extend: {
+            colors: {
+                'base-content': 'oklch(var(--color-base-content))',
+                'primary-content': 'oklch(var(--color-primary-content))',
+                'secondary-content': 'oklch(var(--color-secondary-content))',
+                'accent-content': 'oklch(var(--color-accent-content))',
+                'neutral-content': 'oklch(var(--color-neutral-content))',
+                'info-content': 'oklch(var(--color-info-content))',
+                'success-content': 'oklch(var(--color-success-content))',
+                'warning-content': 'oklch(var(--color-warning-content))',
+                'error-content': 'oklch(var(--color-error-content))',
+            },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
@@ -50,6 +61,7 @@ module.exports = {
             // "winter",
             // "nord",
             // "silk",
+
         ],
 darkTheme: false,
     },

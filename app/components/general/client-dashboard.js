@@ -32,6 +32,7 @@ import {
 import { 
     faComputerMouse,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
+import { AddGrain } from '../styles';
 
 
 export function ClientDashboard() {
@@ -56,39 +57,41 @@ export function ClientDashboard() {
 
     return(
 
-        <div className="w-full h-fit min-h-screen pr-5 pt-3 bg-[url('/textures/noise-yellow-1.png')] bg-repeat bg-[length:50px]">
-            <div className='flex justify-end items-center w-full'>
-                <Link href='/partners/users' className='btn btn-ghost'>Manage Users</Link>
-            </div>
-            <div className='flex justify-between items-center gap-5 w-full p-10'>
-                <div className='flex justify-center items-center w-1/2'>
-                    <Image
-                        src={companyCoverPhoto}
-                        alt='Nash Borowns Logo Long'
-                        width={500}
-                        height={750}
-                        className='rounded-xl'
-                    />
+        <AddGrain bg='bg-base-200'>
+            <div className="w-full h-fit min-h-screen pr-5 pt-3">
+                <div className='flex justify-end items-center w-full'>
+                    <Link href='/partners/users' className='btn btn-ghost'>Manage Users</Link>
                 </div>
-                <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
-                    <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
-                    <Stats/>
-                    <div className='relative flex flex-col w-full h-56'>
+                <div className='flex justify-between items-center gap-5 w-full p-10'>
+                    <div className='flex justify-center items-center w-1/2'>
+                        <Image
+                            src={companyCoverPhoto}
+                            alt='Nash Borowns Logo Long'
+                            width={500}
+                            height={750}
+                            className='rounded-xl'
+                        />
+                    </div>
+                    <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
+                        <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
+                        <Stats/>
+                        <div className='relative flex flex-col w-full h-56'>
                             <Image
                                 src={moreExposureMan}
                                 alt={"Artical Featured Image"}
                                 style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
                                 fill={true}
                             />
+                        </div>
+                        <button className='btn w-full'>Order Content</button>
                     </div>
-                    <button className='btn w-full'>Order Content</button>
+                </div>
+                <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
+                    <Videos videos={videos}/>
+                    <Articles articles={articles}/>
                 </div>
             </div>
-            <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                <Videos videos={videos}/>
-                <Articles articles={articles}/>
-            </div>
-        </div>
+        </AddGrain>
     )
 }
 
@@ -160,14 +163,14 @@ function Videos({videos}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Videos</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-primary-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-primary-content`}>Videos</h2>
                 </div>
                 <div className="overflow-x-auto">
-                    <table className="table">
+                    <table className="table text-primary-content">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className='text-primary-content'>
                                 <th>Title</th>
                                 <th className='text-center'>Platform</th>
                                 <th>Type</th>
@@ -210,7 +213,7 @@ function Videos({videos}) {
                         </tbody>
                     </table>
                     <div className='flex justify-center items-center w-full mt-5'>
-                        <div className="badge badge-outline badge-primary">Show More</div>
+                        <div className="badge badge-outline badge-info">Show More</div>
                     </div>
                 </div>
             </div>
@@ -227,14 +230,14 @@ function Articles({articles}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-indigo-600`}>Live Data. Refresh page to update.</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-indigo-900`}>Articles</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-primary-content`}>Live Data. Refresh page to update.</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-primary-content`}>Articles</h2>
                 </div>
                 <div className="overflow-x-auto">
-                    <table className="table">
+                    <table className="table text-primary-content">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className='text-primary-content'>
                                 <th>Title</th>
                                 <th className='text-center'>Platform</th>
                                 <th>Type</th>
@@ -279,7 +282,7 @@ function Articles({articles}) {
                         </tbody>
                     </table>
                     <div className='flex justify-center items-center w-full mt-5'>
-                        <div className="badge badge-outline badge-primary">Show More</div>
+                        <div className="badge badge-outline badge-info">Show More</div>
                     </div>
                 </div>
             </div>
@@ -457,34 +460,34 @@ function formatDateToPrettyString(isoString) {
 }
 
 function getPreviousDay6pmFormatted() {
-  const options = { timeZone: 'America/Anchorage' };
-  const now = new Date();
+    const options = { timeZone: 'America/Anchorage' };
+    const now = new Date();
 
-  // Get yesterday in Alaska time
-  const anchorageNow = new Date(now.toLocaleString('en-US', options));
-  anchorageNow.setDate(anchorageNow.getDate() - 1);
-  anchorageNow.setHours(18, 0, 0, 0); // 6 PM
+    // Get yesterday in Alaska time
+    const anchorageNow = new Date(now.toLocaleString('en-US', options));
+    anchorageNow.setDate(anchorageNow.getDate() - 1);
+    anchorageNow.setHours(18, 0, 0, 0); // 6 PM
 
-  // Extract parts
-  const months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
-  const month = months[anchorageNow.getMonth()];
-  const day = anchorageNow.getDate();
-  const year = anchorageNow.getFullYear();
+    // Extract parts
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const month = months[anchorageNow.getMonth()];
+    const day = anchorageNow.getDate();
+    const year = anchorageNow.getFullYear();
 
-  // Get ordinal suffix
-  function getOrdinal(n) {
-    if (n >= 11 && n <= 13) return 'th';
-    switch (n % 10) {
-      case 1: return 'st';
-      case 2: return 'nd';
-      case 3: return 'rd';
-      default: return 'th';
+    // Get ordinal suffix
+    function getOrdinal(n) {
+        if (n >= 11 && n <= 13) return 'th';
+        switch (n % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
     }
-  }
 
-  return `${month} ${day}${getOrdinal(day)} ${year}, 6PM AKST`;
+    return `${month} ${day}${getOrdinal(day)} ${year}, 6PM AKST`;
 }
 
