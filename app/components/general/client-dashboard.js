@@ -54,7 +54,7 @@ export function ClientDashboard() {
 
         <div className="w-full h-fit min-h-screen pr-5 pt-3">
             <div className='flex justify-end items-center w-full'>
-                <Link href='/partners/users' className='btn btn-ghost text-primary-content'>Manage Users</Link>
+                <Link href='/partners/users' className='btn btn-ghost text-base-content'>Manage Users</Link>
             </div>
             <div className='flex justify-between items-center gap-5 w-full p-10'>
                 <div className='flex justify-center items-center w-1/2'>
@@ -156,14 +156,14 @@ function Videos({videos}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-primary-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-primary-content`}>Videos</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Videos</h2>
                 </div>
                 <div className="overflow-x-auto">
-                    <table className="table text-primary-content">
+                    <table className="table text-base-content">
                         {/* head */}
                         <thead>
-                            <tr className='text-primary-content'>
+                            <tr className='text-base-content'>
                                 <th>Title</th>
                                 <th className='text-center'>Platform</th>
                                 <th>Type</th>
@@ -223,14 +223,14 @@ function Articles({articles}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-primary-content`}>Live Data. Refresh page to update.</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-primary-content`}>Articles</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Live Data. Refresh page to update.</p>
+                    <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Articles</h2>
                 </div>
                 <div className="overflow-x-auto">
-                    <table className="table text-primary-content">
+                    <table className="table text-base-content">
                         {/* head */}
                         <thead>
-                            <tr className='text-primary-content'>
+                            <tr className='text-base-content'>
                                 <th>Title</th>
                                 <th className='text-center'>Platform</th>
                                 <th>Type</th>

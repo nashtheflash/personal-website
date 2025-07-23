@@ -24,7 +24,7 @@ const menuItems = [
 export function NavBar() {
 
     return(
-        <div className="navbar h-11 max-h-11 border-b-4 border-black text-base-content">
+        <div className="navbar h-11 max-h-11 border-b-4 border-black bg-base-300 text-base-content">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

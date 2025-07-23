@@ -4,6 +4,12 @@ import { useServerAuth } from '@/lib/firebase/auth-hooks';
 import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faSignature,
+    faEnvelope,
+} from '@awesome.me/kit-237330da78/icons/classic/regular';
+import { didot } from "@/lib/fonts";
 
 export function AddUserModal({ modalId }) {
     return (
@@ -14,7 +20,7 @@ export function AddUserModal({ modalId }) {
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 className="font-bold text-lg">Add New User</h3>
+                    <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Invite User</h3>
                     {/* REMOVE the extra form here */}
                     <AddUserForm />
                 </div>
@@ -26,9 +32,8 @@ export function AddUserModal({ modalId }) {
 //TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
 function AddUserForm() {
     const { serverTenant } = useServerAuth();
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
     const [success, setSuccess] = useState(false);
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     // FIX: Only render the form when serverTenant is available
@@ -42,7 +47,6 @@ function AddUserForm() {
         if (!data.lastName) return;
         if (!data.email) return;
 
-        setLoading(true);
         setError(null);
         setSuccess(false);
         try {
@@ -58,7 +62,7 @@ function AddUserForm() {
             await sendEmail({
                 to: [data.email],
                 from: 'hello@nashbrowns.com',
-                subject: 'You’ve been invited!',
+                subject: 'You\'ve been invited!',
                 message_text: 'You have been invited to join Nash Browns Media!',
                 message_html: `
                         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
@@ -73,7 +77,7 @@ function AddUserForm() {
                         Join Nash Browns Media
                         </a>
                         </p>
-                        <p style="font-size: 0.9em; color: #777;">If you weren’t expecting this email, you can safely ignore it.</p>
+                        <p style="font-size: 0.9em; color: #777;">If you weren't expecting this email, you can safely ignore it.</p>
                         </div>
                 `
                 });
@@ -83,32 +87,83 @@ function AddUserForm() {
         } catch (err) {
             setError('Failed to invite user.');
             console.error(err);
-        } finally {
-            setLoading(false);
         }
     };
 
     return(
         <>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-                    <label className="label">First Name</label>
-                    <input type="text" className="input" placeholder="Semore" {...register('firstName', { required: 'First name is required' })} />
-                    {errors.firstName && <span className="text-error text-xs">{errors.firstName.message}</span>}
-
-                    <label className="label">Last Name</label>
-                    <input type="text" className="input" placeholder="Butts" {...register('lastName', { required: 'Last name is required' })} />
-                    {errors.lastName && <span className="text-error text-xs">{errors.lastName.message}</span>}
-
-                    <label className="label">Email</label>
-                    <input type="email" className="input" placeholder="cMOREbutts@now.com" {...register('email', { required: 'Email is required' })} />
-                    {errors.email && <span className="text-error text-xs">{errors.email.message}</span>}
-                </fieldset>
-                <div className="justify-end card-actions mt-2">
-                    <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? 'Inviting...' : 'Invite User'}</button>
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-3 gap-4 min-w-80">
+                <div className="space-y-1">
+                    <label 
+                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                    >
+                        <FontAwesomeIcon icon={faSignature} className='h-5 w-5'/>
+                        <input 
+                            type="text" 
+                            {...register('firstName', { required: 'First name is required' })}
+                            placeholder="First Name"
+                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        />
+                    </label>
+                    {errors.firstName && (
+                        <p className="text-error-content text-sm">{errors.firstName.message}</p>
+                    )}
                 </div>
-                {success && <div className="text-success mt-2">User invited successfully!</div>}
-                {error && <div className="text-error mt-2">{error}</div>}
+
+                <div className="space-y-1">
+                    <label 
+                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                    >
+                        <FontAwesomeIcon icon={faSignature} className='h-5 w-5'/>
+                        <input 
+                            type="text" 
+                            {...register('lastName', { required: 'Last name is required' })}
+                            placeholder="Last Name"
+                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        />
+                    </label>
+                    {errors.lastName && (
+                        <p className="text-error-content text-sm">{errors.lastName.message}</p>
+                    )}
+                </div>
+
+                <div className="space-y-1">
+                    <label 
+                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
+                    >
+                        <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
+                        <input 
+                            type="email" 
+                            {...register('email', { 
+                                required: 'Email is required',
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    message: "Invalid email address"
+                                }
+                            })}
+                            placeholder="Email"
+                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        />
+                    </label>
+                    {errors.email && (
+                        <p className="text-error-content text-sm">{errors.email.message}</p>
+                    )}
+                </div>
+
+                <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="p-2 rounded-md bg-success font-semibold text-lg text-success-content disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    {isSubmitting ? "Inviting..." : "Invite User"}
+                </button>
+
+                {success && (
+                    <p className="text-center text-success text-sm">User invited successfully!</p>
+                )}
+                {error && (
+                    <p className="text-center text-error-content text-sm">{error}</p>
+                )}
             </form>
         </>
     )

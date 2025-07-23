@@ -1,41 +1,13 @@
 'use client'
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useState } from "react";
 import { AddUserModal } from '@/app/components/general';
-
-import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
-import { useAuth } from '@/lib/firebase';
 import { useAggressiveAuth } from '@/lib/firebase';
-
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
-
-//IMGS
-import companyCoverPhoto from '@/public/tune-dashboard-photo.jpg'
-import moreExposureMan from '@/public/more-exposure-man.png'
-import nashBrownsHokusaiLogo from '@/public/hokusai-nashbrowns-logo.png'
 
 //FONTS
 import { didot } from "@/lib/fonts";
-
-//ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faStrava,
-    faYoutube,
-    faInstagram,
-    faTiktok,
-} from '@fortawesome/free-brands-svg-icons';
-
-import { 
-    faUpRightFromSquare,
-} from '@awesome.me/kit-237330da78/icons/classic/light'
-
-import { 
-    faComputerMouse,
-} from '@awesome.me/kit-237330da78/icons/classic/regular'
-import { AddGrain } from '@/app/components/styles';
+import { RequireAuth } from '@/app/components/auth';
 
 
 
@@ -65,14 +37,14 @@ export default function Users() {
 
 
     return(
-        <>
+        <RequireAuth>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
                 </div>
             </div>
             <AddUserModal modalId='add-user-modal'/>
-        </>
+        </RequireAuth>
     )
 }
 
@@ -108,7 +80,7 @@ function UsersTable({users, setReloadUser}) {
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead className='text-primary-content'>
+                        <thead className='text-base-content'>
                             <tr>
                                 <th>First Name</th>
                                 <th>Last Name</th>
@@ -117,7 +89,7 @@ function UsersTable({users, setReloadUser}) {
                                 <th>Remove</th>
                             </tr>
                         </thead>
-                        <tbody className='text-primary-content'>
+                        <tbody className='text-base-content'>
                             {
                                 users && users.map((user, index) => (
                                     <tr key={index}>
