@@ -18,7 +18,7 @@ export function AddUserModal({ modalId }) {
                 <div className="modal-box">
                     {/* Close button form */}
                     <form method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
                     </form>
                     <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Invite User</h3>
                     {/* REMOVE the extra form here */}
