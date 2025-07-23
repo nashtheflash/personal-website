@@ -41,10 +41,11 @@ export function ClientDashboard() {
 
     const [videos, setVideos] = useState([]);
     const [articles, setArticles] = useState([]);
+    const [tenantData, setTenantData] = useState();
 
     useEffect(() => {
         if (hasValidTenant && serverTenant?.id) {
-            fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, makeAuthenticatedRequest); //change to fetch clientContent
+            fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, setTenantData, makeAuthenticatedRequest); //change to fetch clientContent
         }
 
     }, [hasValidTenant, serverTenant?.id]);
@@ -68,7 +69,7 @@ export function ClientDashboard() {
                 </div>
                 <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
                     <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
-                    <Stats/>
+                    {tenantData && <Stats totalLikes={tenantData.totalLikes} totalViews={tenantData.totalViews} />}
                     <div className='relative flex flex-col w-full h-56'>
                         <Image
                             src={moreExposureMan}
@@ -87,68 +88,6 @@ export function ClientDashboard() {
         </div>
     )
 }
-
-
-//TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
-// function AddUserForm() {
-//
-//     const newUser = () => {
-//         const userData = { firstName: 'test', lastName: 'name', email: 'test@nashbrowns.com', tenant: 0};
-//         addUser(userData)
-//
-//         sendEmail({
-//             to: ['nashb1323@gmail.com'],
-//             from: 'hello@nashbrowns.com',
-//             subject: 'just the subject',
-//             message_text: 'WANNA JOIN????',
-//             message_html: '',
-//         }).then(() => {
-//                 console.log('Email sent successfully');
-//             })
-//         console.log('EMAIL SENT!!');
-//     }
-//
-//     return(
-//         <>
-//             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-//
-//                 <label className="label">First Name</label>
-//                 <input type="firstname" className="input" placeholder="Semore" />
-//
-//                 <label className="label">Last Name</label>
-//                 <input type="lastname" className="input" placeholder="Butts" />
-//
-//                 <label className="label">Email</label>
-//                 <input type="email" className="input" placeholder="cMOREbutts@now.com" />
-//             </fieldset>
-//             <div className="justify-end card-actions">
-//                 <button className="btn btn-primary" onClick={newUser}>Invite User</button>
-//             </div>
-//         </>
-//     )
-// }
-
-// function AddUser() {
-//     //good start but needs some help. Proababy should show a message that syas the user has been invited
-//
-//     return(
-//         <>
-//             {/* You can open the modal using document.getElementById('ID').showModal() method */}
-//             <dialog id="my_modal_3" className="modal">
-//                 <div className="modal-box">
-//                     <form method="dialog">
-//                         {/* if there is a button in form, it will close the modal */}
-//                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-//                     </form>
-//                     <h3 className="font-bold text-lg">Add New User</h3>
-//                     <form method="dialog">
-//                         <AddUserForm/>
-//                     </form>
-//                 </div>
-//             </dialog>
-//         </>
-//     )
-// }
 
 function Videos({videos}) {
 
@@ -283,7 +222,7 @@ function Articles({articles}) {
     )
 }
 
-function Stats() {
+function Stats({totalLikes, totalViews}) {
 
     return(
         <div className="flex">
@@ -304,7 +243,7 @@ function Stats() {
                     </svg>
                 </div>
                 <div className={`stat-title ${didot.className} text-indigo-900`}>Total Likes</div>
-                <div className="stat-value text-primary">25.6K</div>
+                <div className="stat-value text-primary">{totalLikes.toLocaleString()}</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>21% more than last month</div>
             </div>
 
@@ -325,7 +264,7 @@ function Stats() {
                     </svg>
                 </div>
                 <div className={`stat-title ${didot.className} text-indigo-900`}>Total Views</div>
-                <div className="stat-value text-secondary">2.6M</div>
+                <div className="stat-value text-secondary">{totalViews.toLocaleString()}</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>21% more than last month</div>
             </div>
 
@@ -334,7 +273,7 @@ function Stats() {
                     <FontAwesomeIcon icon={faComputerMouse} className='w-7 h-7 font-bold' />
                 </div>
                 <div className={`stat-title ${didot.className} text-indigo-900`}>Afiliat Clicks</div>
-                <div className="stat-value">89%</div>
+                <div className="stat-value">0</div>
                 <div className={`stat-desc ${didot.className} text-indigo-900`}>31 tasks remaining</div>
             </div>
         </div>
@@ -393,18 +332,34 @@ function NotSponsored() {
 //     }
 // };
 
-const fetchTenantDashboard = async (tenantId, setVideos, setArticles, makeAuthenticatedRequest) => {
+const fetchTenantDashboard = async (tenantId, setVideos, setArticles, setTenantData, makeAuthenticatedRequest) => {
     if (!tenantId) return;
 
     try {
-        const data = await makeAuthenticatedRequest(
+        const contentDataQuery = makeAuthenticatedRequest(
             `/api/${tenantId}/content/get-all-content`
         );
-        const {videos, articles} = separateByType(data.content);
-        console.log(data.content);
+
+        const tenantDataQuery = makeAuthenticatedRequest(
+            `/api/${tenantId}/tenant/get-tenant`
+        );
+
+
+        const [tenantData, contentData] = await Promise.all([tenantDataQuery, contentDataQuery])
+
+        // const data = await makeAuthenticatedRequest(
+        //     `/api/${tenantId}/content/get-all-content`
+        // );
+
+        const {videos, articles} = separateByType(contentData.content);
+        const {total_likes, total_views} = tenantData.tenant;
 
         setVideos(videos);
         setArticles(articles);
+        setTenantData({
+            totalLikes: total_likes, 
+            totalViews: total_views
+        });
 
     } catch (error) {
         console.error('Failed to fetch tenant data:', error);
