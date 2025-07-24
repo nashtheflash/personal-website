@@ -1,284 +1,43 @@
-'use client'
+import { generateMetadata } from '@/utils';
+import { Suspense } from 'react';
+import { Users } from '@/app/components/pages';
+import { cookies } from 'next/headers';
+import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
+import { getAllUsersForTenant } from '@/lib/firebase/firestore';
 
-import { useEffect, useState } from "react";
-import { AddUserModal } from '@/app/components/general';
-import { useAggressiveAuth } from '@/lib/firebase';
-import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
-import { useForm } from 'react-hook-form';
-import { getAuth, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular';
-import { didot } from "@/lib/fonts";
+export const metadata = generateMetadata({
+    title:"Users",
+    description:"Nash Browns Partner Login Page",
+    keywords: ['Nash Browns', 'Nash', 'Browns', 'Login']
+});
 
-//FONTS
-import { RequireAuth } from '@/app/components/auth';
+export default async function UserPage() {
+    const cookieStore = cookies();
+    const idToken = cookieStore.get('idToken')?.value;
 
 
+    let users = [];
 
-export default function Users() {
-    const { serverTenant, hasValidTenant } = useServerAuth();
-    const makeAuthenticatedRequest = useAuthenticatedApi();
-
-    const [users, setUsers] = useState();
-    const [reloadUser, setReloadUser] = useState(false);
-
-    const fetchTenantUsers = async (tenantId) => {
+    if (idToken) {
         try {
-            const response = await makeAuthenticatedRequest(`/api/${tenantId}/users/get-tenant-users`);
-            setUsers(response.users);
-        } catch (error) {
-            console.error('Error fetching users:', error);
-        }
-    };
-
-    useEffect(() => {
-        if (!hasValidTenant && !serverTenant?.id) return;
-
-        fetchTenantUsers(serverTenant.id);
-        setReloadUser(false);
-
-    }, [hasValidTenant, serverTenant?.id, reloadUser]);
-
-
-    return(
-        <RequireAuth>
-            <div className="w-full h-fit min-h-screen pr-5 pt-3">
-                <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
-                    <UsersTable users={users} setUsers={setUsers} setReloadUser={setReloadUser}/>
-                </div>
-            </div>
-            <AddUserModal modalId='add-user-modal'/>
-        </RequireAuth>
-    )
-}
-
-function UsersTable({users, setReloadUser}) {
-    const { user: userAuth } = useAggressiveAuth()
-    const { serverTenant } = useServerAuth();
-    const makeAuthenticatedRequest = useAuthenticatedApi();
-
-
-    const handleDeleteUser = async (userId) => {
-        if (confirm('Are you sure you want to delete this user?')) {
-            try {
-                await makeAuthenticatedRequest(
-                    `/api/${serverTenant.id}/users/delete-user`,
-                    {
-                        method: 'DELETE',
-                        body: JSON.stringify({ userId })
-                    }
-                );
-
-                // Refresh the users list
-                setReloadUser(true);
-            } catch (error) {
-                console.error('Error deleting user:', error);
+            const userInfo = await validateToken(idToken);
+            const tenantId = await getUserTenant(userInfo.email);
+            if (tenantId) {
+                users = await getAllUsersForTenant(tenantId);
             }
+        } catch (e) {
+            // Not authenticated or no tenant
+            users = [];
         }
-    };
+    }
 
-    return(
-        <div className="card w-full bg-base-100 card-lg shadow-sm">
-            <div className="card-body">
-                <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Users</h2>
-                <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead className='text-base-content'>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody className='text-base-content'>
-                            {
-                                users && users.map((user, index) => (
-                                    <tr key={index}>
-                                        <td>{user.first_name}</td>
-                                        <td>{user.last_name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{userAuth.email == user.email ? <RecetPasswordBtn/> : ''}</td>
-                                        <td><button className='btn btn-error' onClick={() => handleDeleteUser(user.id)} disabled={userAuth.email == user.email ? 'disabled' : ''}>X</button></td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                    <div className='flex justify-center items-center w-full mt-5'>
-                        <button
-                            onClick={()=>document.getElementById('add-user-modal').showModal()}
-                            className="badge badge-outline badge-info"
-                        >
-                            Add New User
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <ResetPasswordModal modalId='reset-password-modal'/>
-        </div>
-    )
-}
-
-function RecetPasswordBtn() {
-    return(
-        <button
-            onClick={()=>document.getElementById('reset-password-modal').showModal()}
-            className="btn btn-link text-base-content"
-        >
-            Reset Password
-        </button>
-    )
-}
-
-export function ResetPasswordModal({ modalId }) {
     return (
-        <>
-            <dialog id={modalId} className="modal">
-                <div className="modal-box">
-                    {/* Close button form */}
-                    <form method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
-                    </form>
-                    <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Reset Password</h3>
-                    {/* REMOVE the extra form here */}
-                    <ResetPasswordForm />
-                </div>
-            </dialog>
-        </>
+        <Suspense fallback={<Loading />}>
+            <Users users={users} />
+        </Suspense>
     );
 }
 
-function ResetPasswordForm() {
-    const auth = getAuth();
-    const { register, handleSubmit, watch, formState: { errors, isSubmitting }, reset } = useForm();
-    const [success, setSuccess] = useState(false);
-    const [error, setError] = useState(null);
-
-    const password = watch("password");
-    const currentPassword = watch("currentPassword");
-
-    const onSubmit = async (data) => {
-        if (!data.password || !data.currentPassword) return;
-
-        setError(null);
-        setSuccess(false);
-
-        try {
-            if (auth.currentUser) {
-                // First, re-authenticate the user
-                const credential = EmailAuthProvider.credential(
-                    auth.currentUser.email,
-                    data.currentPassword
-                );
-                
-                await reauthenticateWithCredential(auth.currentUser, credential);
-                
-                // Then update the password
-                await updatePassword(auth.currentUser, data.password);
-                setSuccess(true);
-                reset();
-                setTimeout(() => {
-                    document.getElementById('reset-password-modal').close();
-                }, 2000);
-            } else {
-                setError('No user is currently signed in.');
-            }
-        } catch (error) {
-            console.error('Error updating password:', error);
-            if (error.code === 'auth/wrong-password') {
-                setError('Current password is incorrect.');
-            } else if (error.code === 'auth/too-many-requests') {
-                setError('Too many failed attempts. Please try again later.');
-            } else {
-                setError('Failed to update password. Please try again.');
-            }
-        }
-    };
-
-    return(
-        <>
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-3 gap-4 min-w-80">
-                <div className="space-y-1">
-                    <label 
-                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                        <input 
-                            type="password"
-                            {...register('currentPassword', { 
-                                required: 'Current password is required'
-                            })}
-                            placeholder="Current Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
-                        />
-                    </label>
-                    {errors.currentPassword && (
-                        <p className="text-error-content text-sm">{errors.currentPassword.message}</p>
-                    )}
-                </div>
-
-                <div className="space-y-1">
-                    <label 
-                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                        <input 
-                            type="password"
-                            {...register('password', { 
-                                required: 'New password is required',
-                                minLength: {
-                                    value: 6,
-                                    message: "Password must be at least 6 characters"
-                                }
-                            })}
-                            placeholder="New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
-                        />
-                    </label>
-                    {errors.password && (
-                        <p className="text-error-content text-sm">{errors.password.message}</p>
-                    )}
-                </div>
-
-                <div className="space-y-1">
-                    <label 
-                        className="group input input-bordered flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200"
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} className='h-5 w-5'/>
-                        <input 
-                            type="password"
-                            {...register('confirmPassword', {
-                                required: 'Please confirm your new password',
-                                validate: value => value === password || "Passwords do not match"
-                            })}
-                            placeholder="Confirm New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
-                        />
-                    </label>
-                    {errors.confirmPassword && (
-                        <p className="text-error-content text-sm">{errors.confirmPassword.message}</p>
-                    )}
-                </div>
-
-                <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="p-2 rounded-md bg-success font-semibold text-lg text-success-content disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                    {isSubmitting ? "Updating..." : "Update Password"}
-                </button>
-
-                {success && (
-                    <p className="text-center text-success text-sm">Password updated successfully!</p>
-                )}
-                {error && (
-                    <p className="text-center text-error-content text-sm">{error}</p>
-                )}
-            </form>
-        </>
-    )
+function Loading() {
+  return <h2>Loading...</h2>;
 }
-

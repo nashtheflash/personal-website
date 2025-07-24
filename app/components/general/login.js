@@ -33,7 +33,17 @@ export function Login() {
 
     const onSubmit = async (data) => {
         try {
-            await signInWithEmailAndPassword(auth, data.email, data.password)
+            const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password)
+            const user = userCredential.user;
+            if (user) {
+                const idToken = await user.getIdToken();
+                // Call API to set the cookie
+                await fetch('/api/auth/set-token-cookie', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ idToken }),
+                });
+            }
             router.push("/partners/dashboard") // Navigate to the home page
         } catch (error) {
             console.error("Error logging in:", error)

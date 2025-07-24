@@ -20,7 +20,7 @@ export async function POST(request) {
     if (tenantId !== null) {
       // Get full tenant information
       tenant = await getTenantInfo(tenantId);
-      console.log('Tenant info:', tenant);
+      // console.log('Tenant info:', tenant);
     }
     
     const response = {

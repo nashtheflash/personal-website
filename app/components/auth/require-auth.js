@@ -5,6 +5,7 @@ import { useServerAuth } from '@/lib/firebase/auth-hooks';
 import { useState, useEffect } from 'react';
 
 export function RequireAuth({ children }) {
+    const start = performance.now();
     const { user, loading } = useAuth();
     const { serverUser, serverTenant, isValidated, hasValidTenant, error } = useServerAuth();
     const [timeoutError, setTimeoutError] = useState(false);
