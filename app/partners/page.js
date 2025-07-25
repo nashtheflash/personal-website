@@ -1,11 +1,16 @@
-'use client'
-
 import Image from 'next/image';
-import { ContactUs } from '../components/blog/forms/contact-us';
-import { Login } from '../components/general';
+import { ContactUs } from '@/app/components/blog/forms/contact-us';
+import { Login } from '@/app/components/general';
+import { generateMetadata } from '@/utils';
 
 //Images
 import door from '@/public/local-images/login/door.png'
+
+export const metadata = generateMetadata({
+    title:"Partners",
+    description:"Nash Browns Partner Login Page",
+    keywords: ['Nash Browns', 'Nash', 'Browns', 'Login']
+});
 
 export default function Partners() {
     return(
@@ -36,4 +41,5 @@ export default function Partners() {
         </>
     )
 }
+
 

@@ -1,12 +1,6 @@
-'use client'
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from "react";
-
-import { AddUserModal } from './';
-
-import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
+import { AddGrain } from '../styles';
 
 //IMGS
 import companyCoverPhoto from '@/public/tune-dashboard-photo.jpg'
@@ -18,38 +12,16 @@ import { didot } from "@/lib/fonts";
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faStrava,
-    faYoutube,
-    faInstagram,
-    faTiktok,
-} from '@fortawesome/free-brands-svg-icons';
-
-import { 
-    faUpRightFromSquare,
-} from '@awesome.me/kit-237330da78/icons/classic/light'
-
-import { 
-    faComputerMouse,
-} from '@awesome.me/kit-237330da78/icons/classic/regular'
-import { AddGrain } from '../styles';
+import { faStrava, faYoutube, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faUpRightFromSquare } from '@awesome.me/kit-237330da78/icons/classic/light'
+import { faComputerMouse } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 
-export function ClientDashboard() {
-    const { serverTenant, hasValidTenant } = useServerAuth();
-    const makeAuthenticatedRequest = useAuthenticatedApi();
+export function ClientDashboard({tenantData, tenantVideos, tenantArticles}) {
 
-    const [videos, setVideos] = useState([]);
-    const [articles, setArticles] = useState([]);
-    const [tenantData, setTenantData] = useState();
-
-    useEffect(() => {
-        if (hasValidTenant && serverTenant?.id) {
-            fetchTenantDashboard(serverTenant?.id, setVideos, setArticles, setTenantData, makeAuthenticatedRequest); //change to fetch clientContent
-        }
-
-    }, [hasValidTenant, serverTenant?.id]);
-
+    const videos = JSON.parse(tenantVideos)
+    const articles = JSON.parse(tenantArticles)
+    const tenant = JSON.parse(tenantData)
 
     return(
 
@@ -69,7 +41,7 @@ export function ClientDashboard() {
                 </div>
                 <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
                     <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
-                    {tenantData && <Stats totalLikes={tenantData.totalLikes} totalViews={tenantData.totalViews} />}
+                    {tenant && <Stats totalLikes={tenant.total_likes} totalViews={tenant.total_views} />}
                     <div className='relative flex flex-col w-full h-56'>
                         <Image
                             src={moreExposureMan}
@@ -156,7 +128,6 @@ function Videos({videos}) {
 
 
 function Articles({articles}) {
-    console.log('from artical comp', articles);
 
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
@@ -322,70 +293,6 @@ function NotSponsored() {
     )
 }
 
-// TODO: Add to fetch Dashboard and add tenant brand exposer data
-// async function fetchTenants(setTenants) {
-//     try {
-//         const tenantsData = await getAllTenants();
-//         setTenants(tenantsData);
-//     } catch (error) {
-//         console.error('Error fetching tenants:', error);
-//     }
-// };
-
-const fetchTenantDashboard = async (tenantId, setVideos, setArticles, setTenantData, makeAuthenticatedRequest) => {
-    if (!tenantId) return;
-
-    try {
-        const contentDataQuery = makeAuthenticatedRequest(
-            `/api/${tenantId}/content/get-all-content`
-        );
-
-        const tenantDataQuery = makeAuthenticatedRequest(
-            `/api/${tenantId}/tenant/get-tenant`
-        );
-
-
-        const [tenantData, contentData] = await Promise.all([tenantDataQuery, contentDataQuery])
-
-        // const data = await makeAuthenticatedRequest(
-        //     `/api/${tenantId}/content/get-all-content`
-        // );
-
-        const {videos, articles} = separateByType(contentData.content);
-        const {total_likes, total_views} = tenantData.tenant;
-
-        setVideos(videos);
-        setArticles(articles);
-        setTenantData({
-            totalLikes: total_likes, 
-            totalViews: total_views
-        });
-
-    } catch (error) {
-        console.error('Failed to fetch tenant data:', error);
-    }
-};
-
-function separateByType(items) {
-    const videos = [];
-    const articles = [];
-
-    for (const item of items) {
-        if (item.type === 'video') {
-            videos.push(item);
-        } else if (item.type === 'blog') {
-            articles.push(item);
-        }
-    }
-
-    // Sort videos by published_at in descending order (most recent first)
-    videos.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-
-    // Sort articles by published_at in descending order (most recent first)
-    articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-
-    return { videos, articles };
-}
 
 function formatDateToPrettyString(isoString) {
     const date = new Date(isoString);
