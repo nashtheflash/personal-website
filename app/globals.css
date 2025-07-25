@@ -39,6 +39,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .table-scrollbar::-webkit-scrollbar {
+      width: 4px; /* Adjust width as needed */
+      height: 8px; /* Adjust height for horizontal scrollbar */
+    }
+
+    .table-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Track background color */
+      border-radius: 100vh; /* Rounded corners for the track */
+    }
+
+    .table-scrollbar::-webkit-scrollbar-thumb {
+      background: #312c85; /* Thumb color */
+      border-radius: 100vh; /* Rounded corners for the thumb */
+    }
+
+    .table-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Thumb color on hover */
+    }
 }
 
 

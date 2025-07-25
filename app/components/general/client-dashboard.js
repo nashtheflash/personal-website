@@ -14,7 +14,7 @@ import { didot } from "@/lib/fonts";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStrava, faYoutube, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faUpRightFromSquare } from '@awesome.me/kit-237330da78/icons/classic/light'
-import { faComputerMouse } from '@awesome.me/kit-237330da78/icons/classic/regular'
+import { faComputerMouse, faHeart, faEye } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 
 export function ClientDashboard({tenantData, tenantVideos, tenantArticles}) {
@@ -29,7 +29,7 @@ export function ClientDashboard({tenantData, tenantVideos, tenantArticles}) {
             <div className='flex justify-end items-center w-full'>
                 <Link href='/partners/users' className='btn btn-ghost text-base-content'>Manage Users</Link>
             </div>
-            <div className='flex justify-between items-center gap-5 w-full p-10'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-5 w-full p-10'>
                 <div className='flex justify-center items-center w-1/2'>
                     <Image
                         src={companyCoverPhoto}
@@ -70,7 +70,7 @@ function Videos({videos}) {
                     <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
                     <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Videos</h2>
                 </div>
-                <div className="overflow-x-auto">
+                <div className="h-[365.5px] table-scrollbar overflow-x-auto">
                     <table className="table text-base-content">
                         {/* head */}
                         <thead>
@@ -116,9 +116,11 @@ function Videos({videos}) {
                             }
                         </tbody>
                     </table>
+                    {/*
                     <div className='flex justify-center items-center w-full mt-5'>
                         <div className="badge badge-outline badge-info">Show More</div>
                     </div>
+                    */}
                 </div>
             </div>
         </div>
@@ -136,7 +138,7 @@ function Articles({articles}) {
                     <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Live Data. Refresh page to update.</p>
                     <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Articles</h2>
                 </div>
-                <div className="overflow-x-auto">
+                <div className="h-[365.5px] table-scrollbar overflow-x-auto">
                     <table className="table text-base-content">
                         {/* head */}
                         <thead>
@@ -150,7 +152,6 @@ function Articles({articles}) {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* row 1 */}
                             { articles && articles.map((article, index) => (
                                 <tr key={index}>
                                     <td>
@@ -184,9 +185,11 @@ function Articles({articles}) {
                             }
                         </tbody>
                     </table>
+                    {/*
                     <div className='flex justify-center items-center w-full mt-5'>
                         <div className="badge badge-outline badge-info">Show More</div>
                     </div>
+                    */}
                 </div>
             </div>
         </div>
@@ -196,57 +199,23 @@ function Articles({articles}) {
 function Stats({totalLikes, totalViews}) {
 
     return(
-        <div className="flex">
-            <div className="stat">
-                <div className="stat-figure text-primary">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        className="inline-block h-8 w-8 stroke-current"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                        ></path>
-                    </svg>
-                </div>
-                <div className={`stat-title ${didot.className} text-indigo-900`}>Total Likes</div>
-                <div className="stat-value text-primary">{totalLikes.toLocaleString()}</div>
-                <div className={`stat-desc ${didot.className} text-indigo-900`}>21% more than last month</div>
-            </div>
+        <div className='flex justify-between items-center w-full'>
+            <Stat icon={faHeart} iconColor={'text-rose-600'} stat={totalLikes.toLocaleString()} description='Total Likes'/>
+            <div className="divider divider-horizontal"/>
+            <Stat icon={faEye} iconColor={'text-lime-600'} stat={totalViews.toLocaleString()} description='Total Views'/>
+            <div className="divider divider-horizontal"/>
+            <Stat icon={faComputerMouse} iconColor={'text-orange-600'} stat={'00'} description='Total Afiliat Clicks'/>
+        </div>
+    )
+}
 
-            <div className="stat">
-                <div className="stat-figure text-secondary">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        className="inline-block h-8 w-8 stroke-current"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                        ></path>
-                    </svg>
-                </div>
-                <div className={`stat-title ${didot.className} text-indigo-900`}>Total Views</div>
-                <div className="stat-value text-secondary">{totalViews.toLocaleString()}</div>
-                <div className={`stat-desc ${didot.className} text-indigo-900`}>21% more than last month</div>
-            </div>
-
-            <div className="stat">
-                <div className="stat-figure text-secondary">
-                    <FontAwesomeIcon icon={faComputerMouse} className='w-7 h-7 font-bold' />
-                </div>
-                <div className={`stat-title ${didot.className} text-indigo-900`}>Afiliat Clicks</div>
-                <div className="stat-value">0</div>
-                <div className={`stat-desc ${didot.className} text-indigo-900`}>31 tasks remaining</div>
-            </div>
+function Stat({icon, iconColor, stat, description}) {
+    
+    return (
+        <div className='flex flex-col justify-center items-center w-full'>
+            <FontAwesomeIcon icon={icon} className={`h-7 w-7 ${iconColor}`} />
+            <h2 className='text-primary-content text-4xl font-mono font-extrabold'>{stat}</h2>
+            <h3 className='text-base-content font-semibold text-xs'>{description}</h3>
         </div>
     )
 }
