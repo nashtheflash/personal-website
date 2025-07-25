@@ -4,8 +4,7 @@ import { useAuth } from '@/lib/firebase/auth-context';
 import { useServerAuth } from '@/lib/firebase/auth-hooks';
 import { useState, useEffect } from 'react';
 
-export function RequireAuth({ children }) {
-    const start = performance.now();
+export function RequireAuth({ children, skeleton }) {
     const { user, loading } = useAuth();
     const { serverUser, serverTenant, isValidated, hasValidTenant, error } = useServerAuth();
     const [timeoutError, setTimeoutError] = useState(false);
@@ -48,12 +47,17 @@ export function RequireAuth({ children }) {
 
     if (loading || !isValidated) {
         return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-600 mx-auto"></div>
-                    <p className="mt-4 text-gray-600">Loading</p>
-                </div>
-            </div>
+            <>
+                {
+                    skeleton ? <>{skeleton}</> : (
+                        <div className="flex items-center justify-center min-h-screen">
+                            <div className="text-center">
+                                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-600 mx-auto"></div>
+                                <p className="mt-4 text-gray-600">Loading</p>
+                            </div>
+                        </div>
+                    )}
+            </>
         );
     }
 

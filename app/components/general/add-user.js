@@ -1,36 +1,36 @@
 'use client';
 
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useServerAuth } from '@/lib/firebase/auth-hooks';
 import { addUser, sendEmail } from '@/lib/server-actions/firebase/firestore';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { inviteEmail } from "@/lib/email_templates";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faSignature,
     faEnvelope,
 } from '@awesome.me/kit-237330da78/icons/classic/regular';
+
 import { didot } from "@/lib/fonts";
 
-export function AddUserModal({ modalId }) {
+export function AddUserModal({ modalId, users, setUsers}) {
     return (
-        <>
-            <dialog id={modalId} className="modal">
-                <div className="modal-box">
-                    {/* Close button form */}
-                    <form method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
-                    </form>
-                    <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Invite User</h3>
-                    {/* REMOVE the extra form here */}
-                    <AddUserForm />
-                </div>
-            </dialog>
-        </>
+        <dialog id={modalId} className="modal">
+            <div className="modal-box">
+                {/* Close button form */}
+                <form method="dialog">
+                    <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
+                </form>
+                <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Invite User</h3>
+                {/* REMOVE the extra form here */}
+                <AddUserForm users={users} setUsers={setUsers} />
+            </div>
+        </dialog>
     );
 }
 
-//TODO: MOVE THIS TO ITS OWN COMPONENT AND USE ON ADMIN DASHBOARD!!!!!
-function AddUserForm() {
+function AddUserForm({users, setUsers}) {
     const { serverTenant } = useServerAuth();
     const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
     const [success, setSuccess] = useState(false);
@@ -42,45 +42,42 @@ function AddUserForm() {
     }
 
     const onSubmit = async (data) => {
-        if (!serverTenant) return;
-        if (!data.firstName) return;
-        if (!data.lastName) return;
-        if (!data.email) return;
+        if (!serverTenant)  throw new Error('No server tenant found');
+        if (!data.firstName)  throw new Error('First name is required');
+        if (!data.lastName) throw new Error('Last name is required');
+        if (!data.email) throw new Error('Email is required');
 
         setError(null);
         setSuccess(false);
+        
         try {
             const userData = {
-                firstName: data.firstName,
-                lastName: data.lastName,
+                first_name: data.firstName,
+                last_name: data.lastName,
                 email: data.email,
                 tenant: parseInt(serverTenant?.id) // TODO: update if tenant selection is needed
             };
-            console.log(userData);
+
+            //add user to firestore
             await addUser(userData);
+
+            //send invite email
+            const emailHtml = inviteEmail(
+                window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                    ? `http://localhost:3000/signup?email=${data.email}`
+                    : `https://www.nashbrowns.com/signup?email=${data.email}`
+            );
 
             await sendEmail({
                 to: [data.email],
                 from: 'hello@nashbrowns.com',
                 subject: 'You\'ve been invited!',
                 message_text: 'You have been invited to join Nash Browns Media!',
-                message_html: `
-                        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
-                        <h2 style="color: #333;">Welcome to Nash Browns Media 🎉</h2>
-                        <p>Click the button below to create your account and view your company's exposure:</p>
-                        <p>
-                        <a href="${window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-                        ? `http://localhost:3000/signup?email=${data.email}`
-                        : `https://www.nashbrowns.com/signup?email=${data.email}`}"
-                        style="display: inline-block; padding: 12px 20px; color: #fff; background-color: #4f46e5; text-decoration: none; border-radius: 6px; font-weight: bold;"
-                        >
-                        Join Nash Browns Media
-                        </a>
-                        </p>
-                        <p style="font-size: 0.9em; color: #777;">If you weren't expecting this email, you can safely ignore it.</p>
-                        </div>
-                `
-                });
+                message_html: emailHtml
+            });
+
+            //update the local users list
+            setUsers([...users, userData]);
 
             setSuccess(true);
             reset();

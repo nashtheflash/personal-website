@@ -16,22 +16,19 @@ function Loading() {
 }
 
 export function Users({ users: initialUsers }) {
-    const { user: userAuth } = useAggressiveAuth()
     const [users, setUsers] = useState(initialUsers);
     // You can implement client-side updates to users here if needed
 
-    if(!users) return;
-    if(!userAuth) return <Loading/>;
 
     return(
-        <>
+        <RequireAuth skeleton={<Loading/>}>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers}/>
                 </div>
             </div>
-            <AddUserModal modalId='add-user-modal'/>
-        </>
+            <AddUserModal modalId='add-user-modal' users={users} setUsers={setUsers}/>
+        </RequireAuth>
     )
 }
 
@@ -51,7 +48,7 @@ function UsersTable({users, setUsers}) {
                     }
                 );
                 // Refresh the users list locally
-                setUsers(users.filter(u => u.id !== userId));
+                setUsers(users.filter(u => u.email !== userId));
             } catch (error) {
                 console.error('Error deleting user:', error);
             }
@@ -114,7 +111,7 @@ function RecetPasswordBtn() {
     )
 }
 
-export function ResetPasswordModal({ modalId }) {
+export function ResetPasswordModal({ modalId, users , setUsers}) {
     return (
         <>
             <dialog id={modalId} className="modal">
