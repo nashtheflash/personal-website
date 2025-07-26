@@ -10,7 +10,7 @@ export function PartnerDashboard({tenantData, tenantVideos, tenantArticles}) {
     if(serverTenant?.id == 0){
         return (
             <div className="min-h-screen">
-                <RequireAuth skeleton={<Loading/>}>
+                <RequireAuth>
                     <AdminDashboard />
                 </RequireAuth>
             </div>
@@ -20,7 +20,7 @@ export function PartnerDashboard({tenantData, tenantVideos, tenantArticles}) {
     if(tenantData && tenantVideos && tenantArticles){
         return (
             <div className="min-h-screen">
-                <RequireAuth skeleton={<Loading/>}>
+                <RequireAuth>
                     <ClientDashboard tenantData={tenantData} tenantVideos={tenantVideos} tenantArticles={tenantArticles} /> 
                 </RequireAuth>
             </div>

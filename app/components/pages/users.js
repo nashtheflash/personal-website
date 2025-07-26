@@ -21,7 +21,7 @@ export function Users({ users: initialUsers }) {
 
 
     return(
-        <RequireAuth skeleton={<Loading/>}>
+        <RequireAuth>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers}/>
