@@ -11,7 +11,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { AuthProvider } from "@/lib/firebase"
 
 //Fonts
-import { inter, mori, neue, cursive, spartan } from "../lib/fonts";
+import { inter, mori, neue, cursive, spartan, chewy, didot } from "@/lib/fonts";
 
 //Defualt Styles
 import { AddBackground } from "./components/styles";
@@ -24,7 +24,7 @@ import { ServiceWorkerRegister } from "./components/sw-register";
 export default async function RootLayout({ children }) {
 
     return (
-        <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable}`} data-theme="retro">
+        <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable} ${chewy.variable} ${didot.variable}`} data-theme="retro">
             <body className='min-h-screen'>
                 <AddBackground bgColor={'bg-base-200'}>
                     <AuthProvider>

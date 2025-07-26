@@ -80,7 +80,7 @@ export function SignUp() {
                         })}
                         placeholder="Email"
                         readOnly
-                        className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                     />
                 </label>
                 {errors.email && (
@@ -103,7 +103,7 @@ export function SignUp() {
                             }
                         })}
                         placeholder="Password"
-                        className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                     />
                 </label>
                 {errors.password && (
@@ -123,7 +123,7 @@ export function SignUp() {
                             validate: value => value === password || "Passwords do not match"
                         })}
                         placeholder="Confirm Password"
-                        className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                     />
                 </label>
                 {errors.confirmPassword && (

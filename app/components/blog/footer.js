@@ -10,14 +10,13 @@ import {
 
 import garmin from "@/public/garmin-logo-simple.png";
 import Link from 'next/link';
-import { didot } from "@/lib/fonts";
 import { AddBackground } from '@/app/components/styles';
 
 
 export function Footer() {
     return (
         <AddBackground bgColor={'bg-secondary'} hasTopo={true}>
-            <footer className={`footer footer-horizontal footer-center text-base-content rounded ${didot.className}`}>
+            <footer className={`footer footer-horizontal footer-center text-base-content rounded font-didot`}>
                 <div className="w-full h-full p-10">
                     <nav className="grid grid-flow-col gap-4">
                         <Link href={'/blog/articals/nash-browns'} className="link link-hover">About</Link>

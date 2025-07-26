@@ -30,6 +30,8 @@ module.exports = {
                 neue: ['var(--font-neue)'],
                 cursive: ['var(--font-cursive)'],
                 spartan: ['var(--font-spartan)'],
+                chewy: ['var(--font-chewy)'],
+                didot: ['var(--font-didot)'],
             },
             typography: {
                 DEFAULT: {

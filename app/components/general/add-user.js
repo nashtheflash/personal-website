@@ -12,7 +12,6 @@ import {
     faEnvelope,
 } from '@awesome.me/kit-237330da78/icons/classic/regular';
 
-import { didot } from "@/lib/fonts";
 
 export function AddUserModal({ modalId, users, setUsers}) {
     return (
@@ -22,7 +21,7 @@ export function AddUserModal({ modalId, users, setUsers}) {
                 <form method="dialog">
                     <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
                 </form>
-                <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Invite User</h3>
+                <h3 className={`text-center text-2xl sm:text-5xl font-didot text-base-content`}>Invite User</h3>
                 {/* REMOVE the extra form here */}
                 <AddUserForm users={users} setUsers={setUsers} />
             </div>
@@ -99,7 +98,7 @@ function AddUserForm({users, setUsers}) {
                             type="text" 
                             {...register('firstName', { required: 'First name is required' })}
                             placeholder="First Name"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.firstName && (
@@ -116,7 +115,7 @@ function AddUserForm({users, setUsers}) {
                             type="text" 
                             {...register('lastName', { required: 'Last name is required' })}
                             placeholder="Last Name"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.lastName && (
@@ -139,7 +138,7 @@ function AddUserForm({users, setUsers}) {
                                 }
                             })}
                             placeholder="Email"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.email && (

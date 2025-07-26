@@ -7,7 +7,6 @@ import moreExposureMan from '@/public/more-exposure-man.png'
 import nashBrownsHokusaiLogo from '@/public/hokusai-nashbrowns-logo.png'
 
 //FONTS
-import { didot } from "@/lib/fonts";
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,7 +37,7 @@ export function ClientDashboard({tenantData, tenantVideos, tenantArticles}) {
                     />
                 </div>
                 <div className='w-1/2 h-full flex flex-col gap-3 justify-center items-center'>
-                    <h2 className={`text-2xl text-bold ${didot.className} text-indigo-900`}>Total Brand Exposure</h2>
+                    <h2 className={`text-2xl text-bold font-didot text-indigo-900`}>Total Brand Exposure</h2>
                     {tenant && <Stats totalLikes={tenant.total_likes} totalViews={tenant.total_views} />}
                     <div className='relative flex flex-col w-full h-56'>
                         <Image
@@ -65,8 +64,8 @@ function Videos({videos}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Videos</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit font-didot text-base-content`}>Last Updated: {getPreviousDay6pmFormatted()}</p>
+                    <h2 className={`card-title text-5xl font-didot text-base-content`}>Videos</h2>
                 </div>
                 <div className="h-[365.5px] table-scrollbar overflow-x-auto">
                     <table className="table text-base-content">
@@ -139,8 +138,8 @@ function Articles({articles}) {
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
                 <div className='relative w-full'>
-                    <p className={`absolute top-0 right-0 text-sm w-fit ${didot.className} text-base-content`}>Live Data. Refresh page to update.</p>
-                    <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Articles</h2>
+                    <p className={`absolute top-0 right-0 text-sm w-fit font-didot text-base-content`}>Live Data. Refresh page to update.</p>
+                    <h2 className={`card-title text-5xl font-didot text-base-content`}>Articles</h2>
                 </div>
                 <div className="h-[365.5px] table-scrollbar overflow-x-auto">
                     <table className="table text-base-content">

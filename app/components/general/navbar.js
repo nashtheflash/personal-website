@@ -10,7 +10,6 @@ import nashBrwonsWhite from '@/public/nashbrowns-logo-white.png'
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
 
 //Fonts
-import { didot } from "@/lib/fonts"
 import { AddGrain } from '../styles';
 
 const menuItems = [
@@ -48,7 +47,7 @@ export function NavBar() {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className={`menu menu-horizontal px-1 text-2xl ${didot.className}`}>
+                <ul className='menu menu-horizontal px-1 text-2xl font-didot'>
                     {
                         menuItems.map((item) => (
                             <li key={item.name}><Link href={item.href}>{item.name}</Link></li>
@@ -57,7 +56,7 @@ export function NavBar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <ul className={`menu menu-horizontal px-1 text-2xl text-base-content ${didot.className}`}>
+                <ul className='menu menu-horizontal px-1 text-2xl text-base-content font-didot'>
                     <PartnerSignOutButton/>
                 </ul>
             </div>

@@ -84,7 +84,7 @@ export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
                                 }
                             })}
                             placeholder="New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.password && (
@@ -104,7 +104,7 @@ export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
                                 validate: value => value === password || "Passwords do not match"
                             })}
                             placeholder="Confirm New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.confirmPassword && (
@@ -152,7 +152,7 @@ export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
                             }
                         })}
                         placeholder="New Password"
-                        className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                     />
                 </label>
                 {errors.password && (
@@ -172,7 +172,7 @@ export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
                             validate: value => value === password || "Passwords do not match"
                         })}
                         placeholder="Confirm New Password"
-                        className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                        className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                     />
                 </label>
                 {errors.confirmPassword && (

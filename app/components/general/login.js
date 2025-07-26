@@ -53,7 +53,7 @@ export function Login() {
 
     return (
         <div className="mx-auto w-full md:p-10 py-5 md:py-0">
-            <h1 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Login</h1>
+            <h1 className={`text-center text-2xl sm:text-5xl font-didot text-base-content`}>Login</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="min-w-80">
                 <div className="w-full mt-5 sm:mt-8">
                     <div className="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-0">
@@ -72,7 +72,7 @@ export function Login() {
                                         }
                                     })}
                                     placeholder="Email"
-                                    className={`text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                                    className={`text-base-content placeholder:text-base-content placeholder:font-didot`}
                                 />
                             </label>
                             {errors.email && (
@@ -91,7 +91,7 @@ export function Login() {
                                         required: "Password is required"
                                     })}
                                     placeholder="Password"
-                                    className={`text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                                    className={`text-base-content placeholder:text-base-content placeholder:font-didot`}
                                 />
                             </label>
                             {errors.password && (
@@ -144,7 +144,7 @@ export function ForgotPasswordModal({ modalId }) {
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Reset Password</h3>
+                    <h3 className={`text-center text-2xl sm:text-5xl font-didot text-base-content`}>Reset Password</h3>
                     {/* REMOVE the extra form here */}
                     <ForgotPasswordForm />
                 </div>
@@ -198,7 +198,7 @@ function ForgotPasswordForm() {
                                 }
                             })}
                             placeholder="Email"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.email && (

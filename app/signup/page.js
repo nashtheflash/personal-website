@@ -3,7 +3,6 @@ import { SignUp } from "../components/general";
 import { AddBackground } from "@/app/components/styles";
 import { SimpleSpinner } from "@/app/components/loading"
 
-import { didot } from "@/lib/fonts";
 
 export default function SignUpPage() {
     return (
@@ -13,7 +12,7 @@ export default function SignUpPage() {
                     <div className="flex flex-col justify-center items-start w-fit m-auto py-4 px-3 opacity-90">
                         <div className="mx-auto w-fit">
                             <div className="flex justify-center items-center w-full text-base-content">
-                                <h2 className={`text-3xl p-0 ${didot.className}`}>Sign Up</h2>
+                                <h2 className={`text-3xl p-0 font-didot`}>Sign Up</h2>
                             </div>
                             <SignUp/>
                         </div>

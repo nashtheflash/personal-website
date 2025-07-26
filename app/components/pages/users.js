@@ -15,8 +15,6 @@ import { AddUserModal } from '@/app/components/general';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular';
 
-import { didot } from "@/lib/fonts";
-
 export function Users({ users: initialUsers }) {
     const [users, setUsers] = useState(initialUsers);
     // You can implement client-side updates to users here if needed
@@ -62,7 +60,7 @@ function UsersTable({users, setUsers}) {
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className={`card-title text-5xl ${didot.className} text-base-content`}>Users</h2>
+                <h2 className={`card-title text-5xl font-didot text-base-content`}>Users</h2>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
@@ -136,7 +134,7 @@ export function ResetPasswordModal({ modalId, users , setUsers}) {
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost text-base-content absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 className={`text-center text-2xl sm:text-5xl ${didot.className} text-base-content`}>Reset Password</h3>
+                    <h3 className={`text-center text-2xl sm:text-5xl font-didot text-base-content`}>Reset Password</h3>
                     {/* REMOVE the extra form here */}
                     <ResetPasswordForm />
                 </div>
@@ -206,7 +204,7 @@ function ResetPasswordForm() {
                                 required: 'Current password is required'
                             })}
                             placeholder="Current Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.currentPassword && (
@@ -229,7 +227,7 @@ function ResetPasswordForm() {
                                 }
                             })}
                             placeholder="New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.password && (
@@ -249,7 +247,7 @@ function ResetPasswordForm() {
                                 validate: value => value === password || "Passwords do not match"
                             })}
                             placeholder="Confirm New Password"
-                            className={`grow text-base-content placeholder:text-base-content placeholder:${didot.className}`}
+                            className={`grow text-base-content placeholder:text-base-content placeholder:font-didot`}
                         />
                     </label>
                     {errors.confirmPassword && (

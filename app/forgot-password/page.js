@@ -3,7 +3,6 @@ import { ForgotPassword } from "@/app/components/auth";
 import { AddBackground } from "@/app/components/styles";
 import { SimpleSpinner } from "@/app/components/loading"
 
-import { didot } from "@/lib/fonts";
 
 export default function ForgotPasswordPage({ searchParams }) {
     const mode = searchParams?.mode;
@@ -18,7 +17,7 @@ export default function ForgotPasswordPage({ searchParams }) {
                     <div className="flex flex-col justify-center items-start w-fit m-auto py-4 px-3 opacity-90">
                         <div className="mx-auto w-fit">
                             <div className="flex justify-center items-center w-full text-base-content">
-                                <h2 className={`text-3xl p-0 ${didot.className}`}>
+                                <h2 className={`text-3xl p-0 font-didot`}>
                                     {mode === 'resetPassword' ? 'Set New Password' : 'Reset Password'}
                                 </h2>
                             </div>
