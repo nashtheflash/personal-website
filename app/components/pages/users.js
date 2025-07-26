@@ -60,28 +60,28 @@ function UsersTable({users, setUsers}) {
     return(
         <div className="card w-full bg-base-100 card-lg shadow-sm">
             <div className="card-body">
-                <h2 className={`card-title text-5xl font-didot text-base-content`}>Users</h2>
+                <h2 className={`card-title text-3xl sm:text-4xl lg:text-5xl font-didot text-base-content text-center sm:text-left`}>Users</h2>
                 <div className="overflow-x-auto">
-                    <table className="table">
+                    <table className="table min-w-full">
                         {/* head */}
                         <thead className='text-base-content'>
                             <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Remove</th>
+                                <th className="min-w-[100px] sm:min-w-[120px]">First Name</th>
+                                <th className="min-w-[100px] sm:min-w-[120px]">Last Name</th>
+                                <th className="min-w-[150px] sm:min-w-[200px]">Email</th>
+                                <th className="min-w-[100px] sm:min-w-[120px]">Password</th>
+                                <th className="min-w-[60px] sm:min-w-[80px]">Remove</th>
                             </tr>
                         </thead>
                         <tbody className='text-base-content'>
                             {
                                 users && users.map((user, index) => (
-                                    <tr key={index}>
-                                        <td>{user.first_name}</td>
-                                        <td>{user.last_name}</td>
-                                        <td>{user.email}</td>
+                                    <tr key={index} className="hover:bg-base-200">
+                                        <td className="text-xs sm:text-sm">{user.first_name}</td>
+                                        <td className="text-xs sm:text-sm">{user.last_name}</td>
+                                        <td className="text-xs sm:text-sm truncate max-w-[150px] sm:max-w-[200px]">{user.email}</td>
                                         <td><RecetPasswordBtn auth={userAuth} user={user}/></td>
-                                        <td><button className='btn btn-error' onClick={() => handleDeleteUser(user.email)} disabled={userAuth?.email == user.email ? 'disabled' : ''}>X</button></td>
+                                        <td><button className='btn btn-error btn-xs sm:btn-sm' onClick={() => handleDeleteUser(user.email)} disabled={userAuth?.email == user.email ? 'disabled' : ''}>X</button></td>
                                     </tr>
                                 ))
                             }
@@ -90,7 +90,7 @@ function UsersTable({users, setUsers}) {
                     <div className='flex justify-center items-center w-full mt-5'>
                         <button
                             onClick={()=>document.getElementById('add-user-modal').showModal()}
-                            className="badge badge-outline badge-info"
+                            className="badge badge-outline badge-info text-xs sm:text-sm"
                         >
                             Add New User
                         </button>
@@ -105,16 +105,16 @@ function UsersTable({users, setUsers}) {
 function RecetPasswordBtn({auth, user}) {
     if (!auth?.email) {
         return(
-            <h6>-------------</h6>
+            <h6 className="text-xs sm:text-sm">-------------</h6>
         )
     }
 
     if (auth?.email == user.email) {
         return(
-            <Suspense loading={<h6>Loading...</h6>}>
+            <Suspense loading={<h6 className="text-xs sm:text-sm">Loading...</h6>}>
                 <button
                     onClick={()=>document.getElementById('reset-password-modal').showModal()}
-                    className="btn btn-link text-base-content"
+                    className="btn btn-link text-base-content text-xs sm:text-sm"
                 >
                     Reset Password
                 </button>

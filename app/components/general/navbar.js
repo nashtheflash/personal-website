@@ -29,12 +29,13 @@ export function NavBar() {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
                         {
                             menuItems.map((item) => (
                                 <li key={item.name}><Link href={item.href}>{item.name}</Link></li>
                             ))
                         }
+                        <MobilePartnerSignOutButton/>
                     </ul>
                 </div>
                 <Link className="" href='/' >
@@ -56,7 +57,7 @@ export function NavBar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <ul className='menu menu-horizontal px-1 text-2xl text-base-content font-didot'>
+                <ul className='menu menu-horizontal px-1 text-2xl text-base-content font-didot hidden lg:flex'>
                     <PartnerSignOutButton/>
                 </ul>
             </div>
@@ -73,6 +74,24 @@ function PartnerSignOutButton() {
                 <li><Link href='/partners/dashboard'>Dashboard</Link></li>
                 <li><SignOut/></li>
             </div>
+        )
+    }
+
+    return (
+        <li><Link href='/partners'>Partners</Link></li>
+    )
+
+}
+
+function MobilePartnerSignOutButton() {
+    const { user, loading, isAssumed, hasError } = useAggressiveAuth()
+
+    if(user) {
+        return (
+            <>
+                <li><Link href='/partners/dashboard'>Dashboard</Link></li>
+                <li><SignOut className="text-base"/></li>
+            </>
         )
     }
 

@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/firebase";
 import { auth } from "@/firebase";
 import router from "next/router";
 
-export const SignOut = () => {
+export const SignOut = ({ className = "text-2xl" }) => {
     const { user } = useAuth()
     const router = useRouter()
 
@@ -27,7 +27,7 @@ export const SignOut = () => {
     return (
         <button
             onClick={handleSignOut}
-            className="text-2xl"
+            className={className}
         >
             Sign Out
         </button>
