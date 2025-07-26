@@ -33,7 +33,3 @@ export function PartnerDashboard({tenantData, tenantVideos, tenantArticles}) {
         </div>
     )
 }
-
-function Loading() {
-    return <h2>Client Loading...</h2>;
-}

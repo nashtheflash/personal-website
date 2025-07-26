@@ -10,11 +10,7 @@ import { useAuth } from "@/lib/firebase";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { 
-    faSignature,
-    faPhone,
-    faEnvelope,
-} from '@awesome.me/kit-237330da78/icons/classic/regular'
+import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
 import { didot } from "@/lib/fonts"
 
@@ -23,9 +19,10 @@ export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
     const newUserEmail = searchParams.get('email')
 
     const { user } = useAuth()
+    const router = useRouter()
+
     const [signUpError, setSignUpError] = useState(null)
     const [success, setSuccess] = useState(false)
-    const router = useRouter()
 
     const {
         register,

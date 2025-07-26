@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AddGrain } from '../styles';
 
 //IMGS
 import companyCoverPhoto from '@/public/tune-dashboard-photo.jpg'
@@ -24,7 +23,6 @@ export function ClientDashboard({tenantData, tenantVideos, tenantArticles}) {
     const tenant = JSON.parse(tenantData)
 
     return(
-
         <div className="w-full h-fit min-h-screen pr-5 pt-3">
             <div className='flex justify-end items-center w-full'>
                 <Link href='/partners/users' className='btn btn-ghost text-base-content'>Manage Users</Link>
@@ -105,8 +103,14 @@ function Videos({videos}) {
                                                     </a>
                                                 ) : <FontAwesomeIcon icon={faTiktok} />}
                                         </td>
-                                        <td>{video.format == 'long_form' ? <LongForm/> : <ShortForm/>}</td>
-                                        <td>{video.sponsored ? <Sponsored/> : <NotSponsored/> }</td>
+                                        <td>
+                                            {
+                                                video.format == 'long_form' ? 
+                                                    <div className="badge badge-info">Long Form</div> : 
+                                                    <div className="badge badge-secondary">Short Form</div>
+                                            }
+                                        </td>
+                                        <td><Sponsored sponsored={video.sponsored}/></td>
                                         <td>{video.views.toLocaleString()}</td>
                                         <td>{video.likes.toLocaleString()}</td>
                                         <td>{video.comments.toLocaleString()}</td>
@@ -176,8 +180,14 @@ function Articles({articles}) {
                                             </Link>
                                         </div>
                                     </td>
-                                    <td>{article.type == 'blog' ? <BlogPost/> : <ShortForm/>}</td>
-                                    <td>{article.sponsored ? <Sponsored/> : <NotSponsored/> }</td>
+                                    <td>
+                                        {
+                                            article.type == 'blog' ? 
+                                                <div className="badge badge-info">Blog Post</div> : 
+                                                <div className="badge badge-secondary">Short Form</div>
+                                        }
+                                    </td>
+                                    <td><Sponsored sponsored={article.sponsored}/></td>
                                     <td>{article.views.toLocaleString()}</td>
                                     <td>{formatDateToPrettyString(article.published_at)}</td>
                                 </tr>
@@ -210,7 +220,7 @@ function Stats({totalLikes, totalViews}) {
 }
 
 function Stat({icon, iconColor, stat, description}) {
-    
+
     return (
         <div className='flex flex-col justify-center items-center w-full'>
             <FontAwesomeIcon icon={icon} className={`h-7 w-7 ${iconColor}`} />
@@ -220,40 +230,16 @@ function Stat({icon, iconColor, stat, description}) {
     )
 }
 
-function ShortForm() {
-    return(
-        <div className="badge badge-secondary">
-            Short Form
-        </div>
-    )
-}
+function Sponsored({sponsored}) {
+    if(sponsored.sponsored) {
+        return(
+            <div className="badge badge-success">
+                <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></polyline></g></svg>
+                Yes
+            </div>
+        )
+    }
 
-function LongForm() {
-    return(
-        <div className="badge badge-info">
-            Long Form
-        </div>
-    )
-}
-
-function BlogPost() {
-    return(
-        <div className="badge badge-info">
-            Blog Post
-        </div>
-    )
-}
-
-function Sponsored() {
-    return(
-        <div className="badge badge-success">
-            <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></polyline></g></svg>
-            Yes
-        </div>
-    )
-}
-
-function NotSponsored() {
     return(
         <div className="badge badge-error">
             <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><rect x="1.972" y="11" width="20.056" height="2" transform="translate(-4.971 12) rotate(-45)" fill="currentColor" strokeWidth={0}></rect><path d="m12,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm0-20C7.038,3,3,7.037,3,12s4.038,9,9,9,9-4.037,9-9S16.962,3,12,3Z" strokeWidth={0} fill="currentColor"></path></g></svg>
@@ -261,7 +247,6 @@ function NotSponsored() {
         </div>
     )
 }
-
 
 function formatDateToPrettyString(isoString) {
     const date = new Date(isoString);

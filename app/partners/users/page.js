@@ -1,15 +1,17 @@
-import { generateMetadata } from '@/utils';
 import { Suspense } from 'react';
-import { Users } from '@/app/components/pages';
 import { cookies } from 'next/headers';
+
 import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { getAllUsersForTenant } from '@/lib/firebase/firestore';
+
+import { Users } from '@/app/components/pages';
 import { SimpleSpinner } from "@/app/components/loading"
 
+import { generateMetadata } from '@/utils';
 export const metadata = generateMetadata({
     title:"Users",
-    description:"Nash Browns Partner Login Page",
-    keywords: ['Nash Browns', 'Nash', 'Browns', 'Login']
+    description:"View User Information",
+    keywords: []
 });
 
 export default async function UserPage() {
@@ -23,9 +25,11 @@ export default async function UserPage() {
         try {
             const userInfo = await validateToken(idToken);
             const tenantId = await getUserTenant(userInfo.email);
+
             if (tenantId) {
                 users = await getAllUsersForTenant(tenantId);
             }
+
         } catch (e) {
             // Not authenticated or no tenant
             users = [];

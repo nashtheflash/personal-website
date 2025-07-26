@@ -1,12 +1,13 @@
 import { Suspense } from 'react';
-import { PartnerDashboard } from '@/app/components/pages';
-import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
-import { generateMetadata } from '@/utils';
 import { cookies } from 'next/headers';
+
+import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { getTenantContent, getTenant } from '@/lib/firebase/firestore';
+
+import { PartnerDashboard } from '@/app/components/pages';
 import { SimpleSpinner } from "@/app/components/loading"
 
-
+import { generateMetadata } from '@/utils';
 export const metadata = generateMetadata({
     title:"Dashboard",
     description:"Nash Browns Partner Login Page",

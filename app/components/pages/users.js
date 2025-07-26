@@ -1,28 +1,32 @@
 'use client'
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
-import { AddUserModal } from '@/app/components/general';
-import { useAggressiveAuth } from '@/lib/firebase';
-import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
+
 import { useForm } from 'react-hook-form';
+
+import { useAggressiveAuth } from '@/lib/firebase';
 import { getAuth, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
+import { useServerAuth, useAuthenticatedApi } from '@/lib/firebase/auth-hooks';
+
+import { RequireAuth } from '@/app/components/auth';
+import { AddUserModal } from '@/app/components/general';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular';
+
 import { didot } from "@/lib/fonts";
-import { RequireAuth } from '@/app/components/auth';
 
 export function Users({ users: initialUsers }) {
     const [users, setUsers] = useState(initialUsers);
     // You can implement client-side updates to users here if needed
 
-
     return(
         <RequireAuth>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
-            <div className='flex justify-end items-center w-full'>
-                <Link href='/partners/dashboard' className='btn btn-ghost text-base-content'>Dashboard</Link>
-            </div>
+                <div className='flex justify-end items-center w-full'>
+                    <Link href='/partners/dashboard' className='btn btn-ghost text-base-content'>Dashboard</Link>
+                </div>
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers}/>
                 </div>
@@ -78,7 +82,7 @@ function UsersTable({users, setUsers}) {
                                         <td>{user.first_name}</td>
                                         <td>{user.last_name}</td>
                                         <td>{user.email}</td>
-                                        <td>{userAuth?.email == user.email ? <RecetPasswordBtn/> : ''}</td>
+                                        <td><RecetPasswordBtn auth={userAuth} user={user}/></td>
                                         <td><button className='btn btn-error' onClick={() => handleDeleteUser(user.email)} disabled={userAuth?.email == user.email ? 'disabled' : ''}>X</button></td>
                                     </tr>
                                 ))
@@ -100,15 +104,27 @@ function UsersTable({users, setUsers}) {
     )
 }
 
-function RecetPasswordBtn() {
-    return(
-        <button
-            onClick={()=>document.getElementById('reset-password-modal').showModal()}
-            className="btn btn-link text-base-content"
-        >
-            Reset Password
-        </button>
-    )
+function RecetPasswordBtn({auth, user}) {
+    if (!auth?.email) {
+        return(
+            <h6>-------------</h6>
+        )
+    }
+
+    if (auth?.email == user.email) {
+        return(
+            <Suspense loading={<h6>Loading...</h6>}>
+                <button
+                    onClick={()=>document.getElementById('reset-password-modal').showModal()}
+                    className="btn btn-link text-base-content"
+                >
+                    Reset Password
+                </button>
+            </Suspense>
+        )
+    }
+
+    return
 }
 
 export function ResetPasswordModal({ modalId, users , setUsers}) {
@@ -151,9 +167,9 @@ function ResetPasswordForm() {
                     auth.currentUser.email,
                     data.currentPassword
                 );
-                
+
                 await reauthenticateWithCredential(auth.currentUser, credential);
-                
+
                 // Then update the password
                 await updatePassword(auth.currentUser, data.password);
                 setSuccess(true);
@@ -259,5 +275,3 @@ function ResetPasswordForm() {
         </>
     )
 }
-
-
