@@ -3,7 +3,7 @@
 import { useAuth } from "@/lib/firebase"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
-import { AuthLoader } from "@/app/components/blog"
+import { SimpleSpinner } from "@/app/components/loading"
 
 // Wrapper component version (for use with JSX children)
 export function RequireAuth({ children }) {
@@ -26,7 +26,7 @@ export function RequireAuth({ children }) {
 
   // Show children immediately, but redirect if unauthenticated
   if (shouldRedirect) {
-    return null // Hide content while redirecting
+    return <SimpleSpinner/> // Hide content while redirecting
   }
 
   // Show children by default, even during loading

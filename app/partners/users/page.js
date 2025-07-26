@@ -4,6 +4,7 @@ import { Users } from '@/app/components/pages';
 import { cookies } from 'next/headers';
 import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { getAllUsersForTenant } from '@/lib/firebase/firestore';
+import { SimpleSpinner } from "@/app/components/loading"
 
 export const metadata = generateMetadata({
     title:"Users",
@@ -32,13 +33,8 @@ export default async function UserPage() {
     }
 
     return (
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<SimpleSpinner/>}>
             <Users users={users} />
         </Suspense>
     );
-}
-
-
-function Loading() {
-    return <h2>Loading...</h2>;
 }

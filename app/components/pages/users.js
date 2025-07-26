@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import Link from "next/link";
 import { AddUserModal } from '@/app/components/general';
 import { useAggressiveAuth } from '@/lib/firebase';
 import { useServerAuth, useAuthenticatedApi, useIdToken } from '@/lib/firebase/auth-hooks';
@@ -11,10 +12,6 @@ import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular';
 import { didot } from "@/lib/fonts";
 import { RequireAuth } from '@/app/components/auth';
 
-function Loading() {
-  return <h2>Loading Client Auth</h2>;
-}
-
 export function Users({ users: initialUsers }) {
     const [users, setUsers] = useState(initialUsers);
     // You can implement client-side updates to users here if needed
@@ -23,6 +20,9 @@ export function Users({ users: initialUsers }) {
     return(
         <RequireAuth>
             <div className="w-full h-fit min-h-screen pr-5 pt-3">
+            <div className='flex justify-end items-center w-full'>
+                <Link href='/partners/dashboard' className='btn btn-ghost text-base-content'>Dashboard</Link>
+            </div>
                 <div className="flex flex-col justify-start items-center gap-5 w-full h-fit p-10">
                     <UsersTable users={users} setUsers={setUsers}/>
                 </div>

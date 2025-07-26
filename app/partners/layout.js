@@ -11,7 +11,9 @@ export default function PartnerLayout({ children }) {
     
     return (
         <>
-            {children}
+            <div className='min-h-screen'>
+                {children}
+            </div>
             <Footer/>
         </>
     );

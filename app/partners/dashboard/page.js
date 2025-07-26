@@ -4,6 +4,7 @@ import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { generateMetadata } from '@/utils';
 import { cookies } from 'next/headers';
 import { getTenantContent, getTenant } from '@/lib/firebase/firestore';
+import { SimpleSpinner } from "@/app/components/loading"
 
 
 export const metadata = generateMetadata({
@@ -48,14 +49,10 @@ export default async function Partners() {
     }
 
     return(
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<SimpleSpinner/>}>
             <PartnerDashboard tenantData={tenantData} tenantVideos={tenantVideos} tenantArticles={tenantArticles}/>
         </Suspense>
     )
-}
-
-function Loading() {
-    return <h2>Suspense Loading...</h2>;
 }
 
 function separateByType(items) {
