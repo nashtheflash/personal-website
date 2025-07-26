@@ -43,7 +43,7 @@ export function NoTenantAccess() {
         </h2>
         
         <p className="text-base-content/70 mb-6">
-          Your account has been created successfully, but you don't have access to any tenant yet. 
+          Your account has been created successfully, but you don&apos;t have access to any tenant yet. 
           Please contact your administrator to assign you to a tenant.
         </p>
         
