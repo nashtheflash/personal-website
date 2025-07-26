@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { getAuth, setPersistence, browserLocalPersistence, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -17,6 +17,9 @@ export const app = initializeApp(firebaseConfig);
 // Initialize Auth & Firestore
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+// Initialize Google Auth Provider
+export const googleProvider = new GoogleAuthProvider();
 
 // Enable persistence for better performance
 setPersistence(auth, browserLocalPersistence);
