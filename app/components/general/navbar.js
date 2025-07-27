@@ -6,11 +6,10 @@ import Link from 'next/link';
 import { useAggressiveAuth } from '@/lib/firebase';
 import { SignOut } from '@/app//components/general';
 
+import { AddBackground } from '@/app/components/styles';
+
 import nashBrwonsWhite from '@/public/nashbrowns-logo-white.png'
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'
-
-//Fonts
-import { AddGrain } from '../styles';
 
 const menuItems = [
     {name: 'Blog', href: '/blog'},
@@ -23,7 +22,8 @@ const menuItems = [
 export function NavBar() {
 
     return(
-        <div className="navbar h-11 max-h-11 border-b-4 border-black bg-base-300 text-base-content">
+        <AddBackground bgColor='bg-base-300'>
+        <div className="navbar h-11 max-h-11 border-b-4 border-black text-base-content">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,6 +62,7 @@ export function NavBar() {
                 </ul>
             </div>
         </div>
+        </AddBackground>
     )
 }
 

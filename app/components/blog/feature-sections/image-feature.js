@@ -31,7 +31,7 @@ export function ImageFeature({ title, image, alt, threeSixty=false, video=false 
             </div>
             <div className='bg-neutral-800 w-full h-fit'>
                 <div className='prose p-3 text-xs sm:text-xl '>
-                    <h1 className='uppercase'>{title}</h1>
+                    <h1 className='uppercase text-info-content'>{title}</h1>
                 </div>
             </div>
         </div>
