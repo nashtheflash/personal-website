@@ -76,7 +76,7 @@ export function Login() {
     return (
         <div className="mx-auto w-full md:p-10 py-5 md:py-0">
             <h1 className={`text-center text-2xl sm:text-5xl font-didot text-base-content`}>Login</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="min-w-80">
+            <form onSubmit={handleSubmit(onSubmit)} className="">
                 <div className="w-full mt-5 sm:mt-8">
                     <div className="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-0">
                         <div className="space-y-1">

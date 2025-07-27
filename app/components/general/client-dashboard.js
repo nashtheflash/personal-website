@@ -209,11 +209,11 @@ function Stats({totalLikes, totalViews}) {
 
     return(
         <div className='flex justify-between items-center w-full'>
-            <Stat icon={faHeart} iconColor={'text-rose-600'} stat={totalLikes.toLocaleString()} description='Likes'/>
+            <Stat icon={faHeart} iconColor={'text-red-600'} stat={totalLikes.toLocaleString()} description='Likes'/>
             <div className="divider divider-horizontal"/>
-            <Stat icon={faEye} iconColor={'text-lime-600'} stat={totalViews.toLocaleString()} description='Views'/>
+            <Stat icon={faEye} iconColor={'text-secondary-content'} stat={totalViews.toLocaleString()} description='Views'/>
             <div className="divider divider-horizontal"/>
-            <Stat icon={faComputerMouse} iconColor={'text-orange-600'} stat={'00'} description='Clicks'/>
+            <Stat icon={faComputerMouse} iconColor={'text-blue-600'} stat={'00'} description='Clicks'/>
         </div>
     )
 }

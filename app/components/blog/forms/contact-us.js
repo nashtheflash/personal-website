@@ -6,8 +6,6 @@ import {
     faEnvelope,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-import { didot } from "@/lib/fonts"
-
 export function ContactUs() {
 
     return (
