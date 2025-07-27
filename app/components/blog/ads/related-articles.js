@@ -41,7 +41,7 @@ async function RelatedCard({article}) {
 
                     <div className="card-actions justify-end">
                     <Link href={article}>
-                        <button className="btn btn-primary">View Article</button>
+                        <button className="btn btn-info">View Article</button>
                     </Link>
                 </div>
             </div>

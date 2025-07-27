@@ -4,9 +4,11 @@ export function AddBackground({
     hasTopo=false,  
 }) {
     return(
-        <div className={`bg-[url('/textures/default-noise-2.png')] bg-repeat bg-[length:50px] ${bgColor} ${hasTopo ? "bg-[url('/topo-bg-3-black.png')]" : ''}`}>
+        <div className={`${bgColor} ${hasTopo ? "bg-[url('/topo-bg-3-black.png')]" : ''}`}>
+            <div className="bg-[url('/textures/default-noise-2.png')] bg-repeat bg-[length:50px]">
                 {children}
             </div>
+        </div>
     )
 }
 

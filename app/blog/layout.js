@@ -1,6 +1,8 @@
 import { pathname } from 'next-extra/pathname';
 import { getSingleBlogPostMetadata } from "@/lib/next-path"
 import { incrementContentDocumentField } from '@/lib/firebase/firestore';
+import { AddBackground } from '../components/styles';
+import { Footer } from '../components/blog';
 
 export default async function MDXPage({ children }) {
     const route = await pathname();
@@ -9,9 +11,14 @@ export default async function MDXPage({ children }) {
     await incrementPageCounter(route);
 
     return (
-        <div className="grid grid-cols-1 justify-items-stretch w-full min-h-[calc(100vh-64px)] text-gray-900">
-            {children}
-        </div>
+        <>
+            <AddBackground>
+                <div className="grid grid-cols-1 justify-items-stretch w-full min-h-[calc(100vh-64px)] text-gray-900">
+                    {children}
+                </div>
+            </AddBackground>
+            <Footer/>
+        </>
     )
 }
 

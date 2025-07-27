@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
 import { MdxLayout, BlogCard } from "../components/blog"
 import { generateMetadata } from '@/utils';
-import { AddBackground } from '../components/styles';
 
 export const metadata = generateMetadata({
     title:"Blog",
@@ -13,11 +12,9 @@ export const metadata = generateMetadata({
 export default function BlogHome() {
 
     return(
-        <AddBackground>
-            <MdxLayout>
-                <BlogList/>
-            </MdxLayout>
-        </AddBackground>
+        <MdxLayout>
+            <BlogList/>
+        </MdxLayout>
     )
 }
 
