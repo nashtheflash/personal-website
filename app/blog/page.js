@@ -77,12 +77,14 @@ async function BlogList() {
         <div className={`not-prose grid grid-cols-1 ${gridRows} sm:grid-cols-4 gap-2 justify-items-center items-center w-full ${gridHeight} p-2`}>
             {
                 orderedArticals.map((article, i) => {
+                    console.log('ARTICAL', article);
+
                     return (
                         <div key={i} className={`relative h-full w-full col-span-1 row-span-1 min-h-80 sm:min-h-0 ${gridItemTemplate[i]}`}>
                             <Link href={`/blog/articles${article.folder}`}>
                                 <BlogCard 
                                     title={article.title}
-                                    thumbnail={article.thumbnail}
+                                    thumbnail={article.thumbnailIllustration ? article.thumbnailIllustration : article.thumbnail}
                                 />
                             </Link>
                         </div>
@@ -92,33 +94,6 @@ async function BlogList() {
         </div>
     )
 }
-
-async function BlogListOld() {
-    const allArticals = folderPaths('app/blog/articles');
-    const metadata = await getBlogPostMetadata('app/blog/articles', allArticals)
-    const activeArticalMetadata = metadata.filter((article) => article.isActive)
-    const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
-
-    return(
-        <div className="not-prose grid grid-cols-1 sm:grid-cols-3 gap-2 justify-items-center items-center w-full">
-            {
-                orderedArticals.map((article, i) => {
-                    return (
-                        <div key={i} className={`relative h-full w-full min-h-[500px] ${getSize(i)}`}>
-                            <Link href={`/blog/articles${article.folder}`}>
-                                <BlogCard 
-                                    title={article.title}
-                                    thumbnail={article.thumbnail}
-                                />
-                            </Link>
-                        </div>
-                    )
-                })
-            }
-        </div>
-    )
-}
-
 
 const getGridDems = (gridItems) => {
     const blocks = Math.ceil(gridItems.length / 4);
@@ -128,12 +103,12 @@ const getGridDems = (gridItems) => {
     return { gridHeight: `min-h-[calc(${gridHeight}vh-64px)]`, gridRows: `grid-rows-${gridRows}` }
 }
 
-function getSize(index) {
-    if(index == 0) return 'col-span-1 sm:col-span-3'
-    if(index == 1) return 'col-span-1 sm:col-span-1'
-    if(index % 2 == 0) return 'col-span-1 sm:col-span-2'
-    if(index % 3 == 0) return 'col-span-1'
-}
+// function getSize(index) {
+//     if(index == 0) return 'col-span-1 sm:col-span-3'
+//     if(index == 1) return 'col-span-1 sm:col-span-1'
+//     if(index % 2 == 0) return 'col-span-1 sm:col-span-2'
+//     if(index % 3 == 0) return 'col-span-1'
+// }
 
 
 function sortByClosestPublishedDate(posts) {

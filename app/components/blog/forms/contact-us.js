@@ -57,7 +57,7 @@ export function ContactUs() {
                     </label>
                     <textarea
                         placeholder="Hey Nash! We would love to partner up on a upcoming project!!"
-                        className={`group input input-bordered text-base-content placeholder:text-base-content placeholder:font-didot flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200`}
+                        className={`group input input-bordered placeholder:text-base-content placeholder:font-didot flex items-center gap-2 font-serif text-base-content border border-indigo-900 bg-opacity-0 bg-black rounded-xl shadow-sm has-[:focus]:bg-opacity-20 hover:bg-opacity-20 hover:shadow-md transition-all duration-200`}
                     >
                     </textarea>
                     <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">

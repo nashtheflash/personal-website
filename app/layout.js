@@ -18,9 +18,6 @@ import { AddBackground } from "./components/styles";
 
 import "./globals.css";
 
-//Service Worker
-import { ServiceWorkerRegister } from "./components/sw-register";
-
 export default async function RootLayout({ children }) {
 
     return (
@@ -31,7 +28,6 @@ export default async function RootLayout({ children }) {
                         <NavBar/>
                         {children}
                     </AuthProvider>
-                    <ServiceWorkerRegister />
                     <SpeedInsights />
                     <Analytics/>
                     <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />

@@ -14,8 +14,6 @@ import {
     faKey,
 } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-import { didot } from "@/lib/fonts"
-import Link from "next/link"
 
 export function Login() {
     const [loginError, setLoginError] = useState(null)
