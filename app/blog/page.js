@@ -12,13 +12,88 @@ export const metadata = generateMetadata({
 export default function BlogHome() {
 
     return(
-        <MdxLayout>
+        <div className='prose-lg flex flex-col justify-self-center items-start w-full sm:px-0 text-gray-600'> 
             <BlogList/>
-        </MdxLayout>
+        </div>
     )
 }
 
 async function BlogList() {
+    const allArticals = folderPaths('app/blog/articles');
+    const metadata = await getBlogPostMetadata('app/blog/articles', allArticals)
+    const activeArticalMetadata = metadata.filter((article) => article.isActive)
+    const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
+
+    //LOLOLOLOLOLOL
+    const gridItemTemplate = [
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+
+        'sm:col-span-2 sm:row-span-1',
+        'sm:col-span-2 sm:row-span-3',
+        'sm:col-span-1 sm:row-span-2',
+        'sm:col-span-1 sm:row-span-2',
+    ]
+    
+
+
+    const { gridHeight, gridRows } = getGridDems(orderedArticals);
+
+
+
+    return(
+        <div className={`not-prose grid grid-cols-1 ${gridRows} sm:grid-cols-4 gap-2 justify-items-center items-center w-full ${gridHeight} p-2`}>
+            {
+                orderedArticals.map((article, i) => {
+                    return (
+                        <div key={i} className={`relative h-full w-full col-span-1 row-span-1 min-h-80 sm:min-h-0 ${gridItemTemplate[i]}`}>
+                            <Link href={`/blog/articles${article.folder}`}>
+                                <BlogCard 
+                                    title={article.title}
+                                    thumbnail={article.thumbnail}
+                                />
+                            </Link>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
+}
+
+async function BlogListOld() {
     const allArticals = folderPaths('app/blog/articles');
     const metadata = await getBlogPostMetadata('app/blog/articles', allArticals)
     const activeArticalMetadata = metadata.filter((article) => article.isActive)
@@ -44,6 +119,14 @@ async function BlogList() {
     )
 }
 
+
+const getGridDems = (gridItems) => {
+    const blocks = Math.ceil(gridItems.length / 4);
+    const gridHeight = blocks * 80;
+    const gridRows = blocks * 3;
+
+    return { gridHeight: `min-h-[calc(${gridHeight}vh-64px)]`, gridRows: `grid-rows-${gridRows}` }
+}
 
 function getSize(index) {
     if(index == 0) return 'col-span-1 sm:col-span-3'
