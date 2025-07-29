@@ -16,20 +16,20 @@ export const metadata = generateMetadata({
 export default function Partners() {
     return(
         <>
-                <div className="hidden md:block">
-                    <div className="flex flex-col justify-center items-start w-3/4 m-auto">
+            <div className="hidden md:block">
+                <div className="flex flex-col justify-center items-start w-3/4 m-auto">
                     <LoginForm/>
-                    </div>
                 </div>
-                <div className="block md:hidden">
-                    <MobileLoginForm/>
-                </div>
+            </div>
+            <div className="block md:hidden">
+                <MobileLoginForm/>
+                <br/>
+            </div>
             <div className="flex justify-center items-center bg-[url('/local-images/login/hippy-coperation.jpg')] bg-no-repeat bg-cover w-full min-h-screen aspect-16/9">
                 <div className="flex flex-col justify-center items-start w-3/4 m-auto py-10 px-3 rounded-xl opacity-90 bg-[url('/textures/noise-grey-2.png')] bg-repeat bg-[length:50px]">
                     <ContactUs/>
                 </div>
             </div>
-            <br/>
         </>
     )
 }
@@ -59,13 +59,11 @@ function LoginForm() {
 function MobileLoginForm() {
     return(
         <>
-        <div className="flex justify-center items-center bg-[url('/local-images/login/door.png')] bg-no-repeat bg-cover w-full min-h-screen aspect-16/9">
-            <div className="flex flex-col justify-center items-start w-3/4 m-auto py-10 px-3 rounded-xl opacity-90 bg-[url('/textures/noise-grey-2.png')] bg-repeat bg-[length:50px]">
-                <Login/>
+            <div className="flex justify-center items-center bg-[url('/local-images/login/hippy-door.png')] bg-no-repeat bg-cover w-full min-h-screen aspect-16/9">
+                <div className="flex flex-col justify-center items-start w-3/4 m-auto py-10 px-3 rounded-xl opacity-90 bg-[url('/textures/noise-grey-2.png')] bg-repeat bg-[length:50px]">
+                    <Login/>
+                </div>
             </div>
-        </div>
-            <br/>
-            <br/>
         </>
     )
 }
