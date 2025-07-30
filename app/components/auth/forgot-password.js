@@ -9,10 +9,8 @@ import { createUserWithEmailAndPassword, signOut, confirmPasswordReset } from "f
 import { useAuth } from "@/lib/firebase";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular'
 
-import { didot } from "@/lib/fonts"
 
 export function ForgotPassword({ mode, oobCode, apiKey, lang }) {
     const searchParams = useSearchParams()

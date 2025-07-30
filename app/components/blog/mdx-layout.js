@@ -11,7 +11,7 @@ export function MdxLayoutFullWidth({ children }) {
 export function MdxLayout({ children }) {
   // Create any shared layout or styles here
   return (
-    <div className="prose prose-lg flex flex-col justify-self-center items-start w-full my-3 px-3 sm:px-0 text-gray-600">
+    <div className="prose prose-xl flex flex-col justify-self-center items-start w-full my-3 p-3 text-gray-600 bg-base-300 bg-[url('/textures/default-noise-8.png')] bg-repeat bg-[length:50px] rounded-xl shadow-2xl">
       {children}
     </div>
   )
