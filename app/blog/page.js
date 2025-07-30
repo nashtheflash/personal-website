@@ -20,8 +20,41 @@ export default function BlogHome() {
 
 async function BlogList() {
     const allArticals = folderPaths('app/blog/articles');
+    
+    // Handle case where no articles are found
+    if (!allArticals || allArticals.length === 0) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-96">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles found</h2>
+                <p className="text-gray-600">Please check back later for new content.</p>
+            </div>
+        );
+    }
+    
     const metadata = await getBlogPostMetadata('app/blog/articles', allArticals)
+    
+    // Handle case where no metadata is found
+    if (!metadata || metadata.length === 0) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-96">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles found</h2>
+                <p className="text-gray-600">Please check back later for new content.</p>
+            </div>
+        );
+    }
+    
     const activeArticalMetadata = metadata.filter((article) => article.isActive)
+    
+    // Handle case where no active articles are found
+    if (!activeArticalMetadata || activeArticalMetadata.length === 0) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-96">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">No active articles found</h2>
+                <p className="text-gray-600">Please check back later for new content.</p>
+            </div>
+        );
+    }
+    
     const orderedArticals = sortByClosestPublishedDate(activeArticalMetadata)
 
     //LOLOLOLOLOLOL
@@ -82,7 +115,7 @@ async function BlogList() {
             }}
         >
             {
-                orderedArticals.map((article, i) => {
+                orderedArticals && orderedArticals.length > 0 ? orderedArticals.map((article, i) => {
                     return (
                         <div key={i} className={`relative h-full w-full col-span-1 row-span-1 min-h-80 sm:min-h-0 ${gridItemTemplate[i]}`}>
                             <Link href={`/blog/articles${article.folder}`}>
@@ -93,13 +126,25 @@ async function BlogList() {
                             </Link>
                         </div>
                     )
-                })
+                }) : (
+                    <div className="col-span-full flex flex-col items-center justify-center min-h-96">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles available</h2>
+                        <p className="text-gray-600">Please check back later for new content.</p>
+                    </div>
+                )
             }
         </div>
     )
 }
 
 const getGridDems = (gridItems) => {
+    if (!gridItems || gridItems.length === 0) {
+        return { 
+            gridHeight: 80, 
+            gridRows: 3 
+        };
+    }
+    
     const blocks = Math.ceil(gridItems.length / 4);
     const gridHeight = blocks * 80;
     const gridRows = blocks * 3;
@@ -121,6 +166,10 @@ const getGridDems = (gridItems) => {
 
 
 function sortByClosestPublishedDate(posts) {
+    if (!posts || posts.length === 0) {
+        return [];
+    }
+    
     return posts.sort((a, b) => {
         const today = new Date();
 
@@ -134,8 +183,17 @@ function sortByClosestPublishedDate(posts) {
 }
 
 function parseDate(dateStr) {
-    // Ensure YYYY-MM-DD format is correctly parsed
-    const [year, month, day] = dateStr.split('-').map(Number);
-    return new Date(year, month - 1, day); // Month is 0-based in JS Date
+    if (!dateStr) {
+        return new Date();
+    }
+    
+    try {
+        // Ensure YYYY-MM-DD format is correctly parsed
+        const [year, month, day] = dateStr.split('-').map(Number);
+        return new Date(year, month - 1, day); // Month is 0-based in JS Date
+    } catch (error) {
+        console.error(`Error parsing date: ${dateStr}`, error);
+        return new Date();
+    }
 }
 
