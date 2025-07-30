@@ -1,0 +1,77 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to get user's tenant ID
+    function getUserTenant() {
+      return get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.tenant;
+    }
+    
+    // Helper function to check if user is admin (tenant ID 0)
+    function isAdmin() {
+      return isAuthenticated() && getUserTenant() == 0;
+    }
+    
+    // Helper function to check if user has access to a specific tenant
+    function hasTenantAccess(tenantId) {
+      return isAuthenticated() && (isAdmin() || getUserTenant() == tenantId);
+    }
+    
+    // Helper function to check if user owns the document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{email} {
+      // Users can read their own document
+      allow read: if isAuthenticated() && request.auth.token.email == email;
+      
+      // Only admins can create, update, or delete user documents
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Tenants collection
+    match /tenants/{tenantId} {
+      // Only admins can read all tenants
+      // Regular users can only read their assigned tenant
+      allow read: if hasTenantAccess(int(tenantId));
+      
+      // Only admins can create, update, or delete tenants
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Content collection
+    match /content/{contentId} {
+      // Users can read content from their assigned tenant
+      allow read: if isAuthenticated() && 
+        (isAdmin() || resource.data.tenant.hasAny([getUserTenant()]));
+      
+      // Only admins can create, update, or delete content
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Email queue collection
+    match /email_queue/{emailId} {
+      // Only admins can read email queue
+      allow read: if isAdmin();
+      
+      // Authenticated users can create email queue entries (for sending emails)
+      allow create: if isAuthenticated();
+      
+      // Only admins can update or delete email queue entries
+      allow update, delete: if isAdmin();
+    }
+
+    // Default rule - deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 
