@@ -44,6 +44,8 @@ export function NavBar() {
                         alt='Nash Borowns Logo Long'
                         width={248}
                         height={48}
+                        className="w-48 h-auto"
+                        priority
                     />
                 </Link>
             </div>

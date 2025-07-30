@@ -74,11 +74,15 @@ async function BlogList() {
 
 
     return(
-        <div className={`not-prose grid grid-cols-1 ${gridRows} sm:grid-cols-4 gap-2 justify-items-center items-center w-full ${gridHeight} p-2`}>
+        <div 
+            className={`not-prose grid grid-cols-1 sm:grid-cols-4 gap-2 justify-items-center items-center w-full p-2`}
+            style={{ 
+                gridTemplateRows: `repeat(${gridRows}, minmax(0, 1fr))`,
+                minHeight: `calc(${gridHeight}vh - 64px)`
+            }}
+        >
             {
                 orderedArticals.map((article, i) => {
-                    console.log('ARTICAL', article);
-
                     return (
                         <div key={i} className={`relative h-full w-full col-span-1 row-span-1 min-h-80 sm:min-h-0 ${gridItemTemplate[i]}`}>
                             <Link href={`/blog/articles${article.folder}`}>
@@ -100,7 +104,12 @@ const getGridDems = (gridItems) => {
     const gridHeight = blocks * 80;
     const gridRows = blocks * 3;
 
-    return { gridHeight: `min-h-[calc(${gridHeight}vh-64px)]`, gridRows: `grid-rows-${gridRows}` }
+    console.log(gridHeight);
+
+    return { 
+        gridHeight: gridHeight, 
+        gridRows: gridRows 
+    }
 }
 
 // function getSize(index) {

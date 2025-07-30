@@ -4,7 +4,7 @@ export function BlogCard({ title, thumbnail }) {
     const isVideo = isVideoURL(thumbnail);
 
     return(
-        <div className="group h-full w-full rounded-2xl overflow-hidden shadow-xl">
+        <div className="group relative h-full w-full rounded-2xl overflow-hidden shadow-xl">
             {isVideo ? ( 
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover m-0"
@@ -23,7 +23,7 @@ export function BlogCard({ title, thumbnail }) {
                     alt={`${title} thumbnail`}
                     style={{objectFit: 'cover', borderRadius: '1rem'}}
                     fill={true}
-                    sizes="100vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
             }
             <h2 className="hidden group-hover:block absolute right-0 bottom-0 p-1 pb-0 font-spartan font-bold text-slate-600 text-4xl uppercase rounded-md rounded-br-md backdrop-blur-xl bg-gray-200 bg-opacity-40">{title}</h2>

@@ -20,7 +20,7 @@ export function YoutubeAd({videoID, description}) {
     const { width, height } = useWindowSize();
 
     return(
-        <div className="h-fit w-full my-10 bg-[#d0cfcd] border-[#d0cfcd] rounded-box p-6">
+        <div className="h-fit w-full my-10 bg-gray-400 border-[#d0cfcd] rounded-xl p-6">
             <div className="flex flex-col gap-5 md:flex-row justify-between items-center w-full">
                 <div className='flex flex-col items-center justify-center md:justify-start md:items-start'>
                     <h1 className='text-gray-700 mb-0 text-3xl sm:text-5xl'>Rather Watch?</h1>

@@ -12,7 +12,7 @@ export function YoutubeVideo({videoId}){
     const origin = 'origin=https://nashbrowns.com'
 
     return(
-        <div className="h-fit w-full bg-[#ddded9] rounded-lg px-4 py-2 my-4">
+        <div className="h-fit w-full bg-gray-400 rounded-lg px-4 py-2 my-4">
             { width > 768 ? <h2 className='text-center text-5xl font-mono font-bold my-6'>🎥 Watch On Youtube</h2> : <h2 className='text-center text-5xl font-mono font-bold my-6'>🎥 YouTube</h2>}
             <div className="flex justify-center items-center w-full">
                 <iframe 

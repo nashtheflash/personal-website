@@ -152,11 +152,13 @@ export function Art({art}) {
     const image = art ? art : `https://images.unsplash.com/photo-1739289354200-f5db511bd08b?q=300`;
 
     return(
-        <Image
-            src={image}
-            alt={"Artical Featured Image"}
-            style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
-            fill={true}
-        />
+        <div className="relative w-full h-full">
+            <Image
+                src={image}
+                alt={"Artical Featured Image"}
+                style={{ objectFit: 'cover', margin: '0' }} // navbar, lineheight, paddding, padding, padding?
+                fill={true}
+            />
+        </div>
     )
 }

@@ -98,22 +98,30 @@ The first part of the test is heating the camper from ambient temperature to 65 
 <CenteredImage image={insideCamperNoInsulation} altText={'Inside Camper Windows Closed'} width={700} height={700} />
 </TwoColumn>
 
-<LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempNoInsulationData} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempNoInsulationData} />
+</div>
 
 It took about 90 minutes to get the camper up to temperature. The temperature sensor for the heater thermostat is very close to the heater. I also have the king-size bed extension that overhangs the heater and forms a cubby. I thought these factors would lead to a large temperature difference between what the heater was sensing versus what the temperature sensor in the sleeping section of the camper was reading. This was clearly not the case! The difference in temperature was only about 2.5–3 degrees.
 
-<LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Overnight Heater Performance'} data={noInsulationData} />
+</div>
 
 The difference between ambient and camper temperature was kept at 40 degrees, which was impressive—but you can also see that the heater ran almost continuously. During the 9-hour test, the heater was only off for about 2.5 hours, kicking on around 10 times. This doesn't sound like much, but when the heater kicks on, it is super loud!
 
 ### Tune with Insulation Kit
 This test involves heating the camper from ambient temperature to 65 degrees. The camper has the insulation kit installed, no roof insulation, the windows closed, and the heater set to boost mode. You can see the setup on the right.
 
-<LineGraph title={'Ambient to 65 Degrees(empty)'} data={noRoofInsulationInsulationPackDataTimeToTemp} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Ambient to 65 Degrees(empty)'} data={noRoofInsulationInsulationPackDataTimeToTemp} />
+</div>
 
 It took about 60 minutes to get the camper up to temperature. It was noticeably faster than without the kit installed. Without the insulation kit, the camper can get drafty due to all the zippers and openings. The insulation kit eliminates the drafts, making it much more comfortable! As you can see, the heater is still kicking on and off a decent amount.
 
-<LineGraph title={'Overnight Heater Performance'} data={noRoofInsulationInsulationPackData} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Overnight Heater Performance'} data={noRoofInsulationInsulationPackData} />
+</div>
 
 ### Tune with Roof Insulation
 
@@ -123,11 +131,15 @@ This test is with the roof insulation only, with the windows closed. The heater 
 </TwoColumn>
 
 The first part of the test is heating the camper from ambient temperature to 65 degrees.
-<LineGraph title={'Ambient to 65 Degrees(empty)'} data={roofInsulationNoInsulationPackDataTimeToTemp} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Ambient to 65 Degrees(empty)'} data={roofInsulationNoInsulationPackDataTimeToTemp} />
+</div>
 
 It took about 60 minutes to get the camper up to temperature. Note that the ambient temperature was a little warmer than in the other tests! You can see that the heater turned on less frequently than without the roof insulation. I love the roof insulation! It helps keep light out, parking lot lights are awful without it, and it also helps cut down on noise. I think it looks really nice as well! The test results aren't much different from the full insulation test.
 
-<LineGraph title={'Overnight Heater Performance'} data={roofInsulationNoInsulationPackData} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Overnight Heater Performance'} data={roofInsulationNoInsulationPackData} />
+</div>
 
 ### Tune with Insulation Kit & Roof Insulation
 <TwoColumn>
@@ -137,8 +149,13 @@ This test is with the Tune Insulation Pack and roof insulation, the windows clos
 
 This is by far the best setup. It's not only warm, but it also makes the camper feel like a den. It's dark, quiet, and there are no drafts able to get in. Even when it's cold, the night setting on the heater is warm enough to keep the camper comfortable. Having the heater in night mode is a huge deal because it is very quiet! I wake up every time I hear the heater kick on when it's in Auto mode.
 
-<LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempRoofInsulationPackData} />
-<LineGraph title={'Overnight Heater Performance'} data={roofInsulationPackData} />
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Ambient to 65 Degrees(empty)'} data={timeToTempRoofInsulationPackData} />
+</div>
+<br/>
+<div className="w-full bg-gray-400 pb-10 rounded-xl">
+    <LineGraph title={'Overnight Heater Performance'} data={roofInsulationPackData} />
+</div>
 
 #### Hest Mattress Specs
 This is by far the test with the least amount of data. It is more of a feel. My honest feeling is that the Hest mattress that the Tune comes with is enough insulation for sleeping. It is cold when you get into bed, but you warm it up quickly. Hest foam seems to have an R-Value of 8.8 seen below:

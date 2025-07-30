@@ -7,7 +7,7 @@ export function LineGraph({ title, data }) {
     return (
         <div className='w-full h-fit p-4 flex flex-col items-center justify-center'>
             <div className='w-full max-w-4xl h-[400px] sm:h-[500px] md:h-[600px]'>
-                <h3 className='text-center text-lg font-semibold mb-4 text-gray-600'>
+                <h3 className='text-center text-lg font-semibold mb-4 text-gray-800'>
                     {title}
                 </h3>
                 <ResponsiveContainer width="100%" height="100%">
@@ -23,13 +23,13 @@ export function LineGraph({ title, data }) {
                         <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                         <XAxis 
                             dataKey="name" 
-                            tick={{ fontSize: 12 }}
+                            tick={{ fontSize: 12, fill: '#374151' }}
                             angle={-45}
                             textAnchor="end"
                             height={60}
                         />
                         <YAxis 
-                            tick={{ fontSize: 12 }}
+                            tick={{ fontSize: 12, fill: '#374151' }}
                             width={60}
                         />
                         <Tooltip 
