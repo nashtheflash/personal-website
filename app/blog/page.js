@@ -25,7 +25,7 @@ async function BlogList() {
     if (!allArticals || allArticals.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center min-h-96">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles found</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles found in directory</h2>
                 <p className="text-gray-600">Please check back later for new content.</p>
             </div>
         );
@@ -37,7 +37,7 @@ async function BlogList() {
     if (!metadata || metadata.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center min-h-96">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">No articles found</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">No article metadata found</h2>
                 <p className="text-gray-600">Please check back later for new content.</p>
             </div>
         );
@@ -183,17 +183,8 @@ function sortByClosestPublishedDate(posts) {
 }
 
 function parseDate(dateStr) {
-    if (!dateStr) {
-        return new Date();
-    }
-    
-    try {
-        // Ensure YYYY-MM-DD format is correctly parsed
-        const [year, month, day] = dateStr.split('-').map(Number);
-        return new Date(year, month - 1, day); // Month is 0-based in JS Date
-    } catch (error) {
-        console.error(`Error parsing date: ${dateStr}`, error);
-        return new Date();
-    }
+    // Ensure YYYY-MM-DD format is correctly parsed
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, day); // Month is 0-based in JS Date
 }
 
