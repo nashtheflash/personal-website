@@ -2,7 +2,8 @@ import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 
 import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
-import { getTenantContent, getTenant } from '@/lib/firebase/firestore';
+import { getTenantContent } from '@/lib/firebase/firestore';
+import { getTenantServer } from '@/lib/firebase/firestore/tenants';
 
 import { PartnerDashboard } from '@/app/components/pages';
 import { SimpleSpinner } from "@/app/components/loading"
@@ -31,7 +32,7 @@ export default async function Partners() {
 
 
             if (tenantId && tenantId != 0) {
-                const tenantQuery = getTenant(tenantId);
+                const tenantQuery = getTenantServer(tenantId);
                 const contentQuery = getTenantContent(tenantId);
 
                 const [tenant, content] = await Promise.all([tenantQuery, contentQuery]);
