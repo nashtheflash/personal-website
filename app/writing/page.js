@@ -9,14 +9,12 @@ export const metadata = generateMetadata({
     keywords: ['Writing','Nash Browns', 'Nash Bostwick']
 });
 
-export default function BlogHome() {
+export default function WritingHome() {
 
     return(
-        <MdxLayout>
-            <div className="w-full">
-                <WritingList/>
-            </div>
-        </MdxLayout>
+        <div className="w-full">
+            <WritingList/>
+        </div>
     )
 }
 

@@ -1,12 +1,13 @@
+import { MdxLayout } from "../components/blog";
 import { Footer } from "../components/blog";
 
 export default function WritingLayout({ children }) {
     return (
         <>
             <div className="w-full h-full min-h-screen">
-                <div className="prose prose-lg flex flex-col justify-self-center items-start w-full py-3 px-3 sm:px-16 text-gray-600">
+                <MdxLayout>
                     {children}
-                </div>
+                </MdxLayout>
             </div>
             <Footer/>
         </>
