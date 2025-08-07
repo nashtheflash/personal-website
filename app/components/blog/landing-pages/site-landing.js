@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import { AddGrain } from '../../styles';
 
-// import logo from '@/public/logo.png';
-// import hokusaiNashBrownsLogo from '@/public/hokusai-nashbrowns-logo.png';
 import hippyHokusaiNashBrownsLogo from '@/public/hippy-hokusai-logo.png';
 
 export function SiteLanding() {
