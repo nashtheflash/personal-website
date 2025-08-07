@@ -8,6 +8,7 @@ export const postMetadata = {
     updated: "2025-07-10",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-peper-view-from-salt.jpeg?alt=media&token=133df8ad-4b07-4757-9f41-c37d049a2884',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fhippy-hokusai-feature-image.jpg?alt=media&token=5066f119-2020-4f4f-aacd-6aadb0fa0d76',
     description:"Pepper Peak (5,381') Climb Report. Located in Alaska's Chugach Mountains. Non-technical 4.56-mile route with 4,606' elevation gain. Part of the Condiment Traverse with Salt and Shaker Peaks.",
     keywords: ["Pepper Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Elutna Lake Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
     tags: ["Pepper Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
@@ -27,6 +28,7 @@ import {
     Stat,
     ImageFeature,
     StravaEmbed,
+    StravaGarmin,
     YoutubeVideo,
     RelatedArticles,
     HashBrownsLoader,
@@ -54,9 +56,9 @@ export const bridge = "https://firebasestorage.googleapis.com/v0/b/nash-browns.f
 export const pepperCairn = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fpepper-aproch-cairn.jpeg?alt=media&token=33b3d409-97dd-45b2-8c16-cfc1e8ed2b34";
 export const goats = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fgoat-vid.mov?alt=media&token=5102a5a6-a5ce-43b9-8801-873e5f91f15f";
 
-export const relatedArticleOne = '/blog/articles/shaker-peak';
-export const relatedArticleTwo = '/blog/articles/salt-peak';
-export const relatedArticleThree = '/blog/articles/omalley-peak';
+export const relatedArticleOne = '/blog/articles/thayer-hut';
+export const relatedArticleTwo = '/blog/articles/pepper-peak';
+export const relatedArticleThree = '/blog/articles/salt-peak';
 
 <ImageFeature
     title="Pepper Peak Climb Report"
@@ -146,6 +148,15 @@ It is an easy and straightforward climb to the top. I ascended into some intense
 Lots of people stop at the top of Pepper Peak and do not finish the whole Traverse! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugach. Maybe even a glacier? It would be impossible to know!
 
 I continued on to Shaker Peak. You can read about it here: [Shaker Peak][1]
+
+<div className={`w-full`}>
+    <h2 className='text-center font-mono'>KPIs (Full Traverse)</h2>
+</div>
+
+<StravaGarmin
+    stravaId='14937681322'
+    garminId='19565668335'
+/>
 
 <RelatedArticles 
     articleOne={relatedArticleOne}

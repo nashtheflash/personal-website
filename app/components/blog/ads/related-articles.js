@@ -37,7 +37,7 @@ async function RelatedCard({article}) {
                 </figure>
                 <div className="card-body p-3">
                     <h2 className="card-title mt-2 mb-1 text-slate-700">{title}</h2>
-                    <p className='text-slate-600 font-light'>{description.slice(0, 247).trim() + (description.length > 250 ? '...' : '')}</p>
+                    <p className='text-slate-600 font-light'>{description?.slice(0, 247).trim() + (description?.length > 250 ? '...' : '')}</p>
 
                     <div className="card-actions justify-end">
                     <Link href={article}>

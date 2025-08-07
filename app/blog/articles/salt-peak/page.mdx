@@ -7,9 +7,10 @@ export const postMetadata = {
     published: "2025-06-22",
     updated: "2025-06-26",
     author: 'Nash Bostwick',
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041',
-    description:"",
-    keywords: ["salt Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fsalt-summit.jpeg?alt=media&token=b9694ac8-64f9-4089-bb2a-0418d984dcb3',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fhippy-hokusai-feature-image.jpg?alt=media&token=14ac248e-4977-4ba0-948c-221127c28293',
+    description:"Complete guide to climbing Salt Peak (5,455 ft) in Alaska's Chugach Mountains. Final peak of the Condiment Traverse with 900 ft elevation gain. Get route details, trailhead info, and tips for this non-technical Alaska hiking adventure.",
+    keywords: ["Salt Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
     tags: ["Salt Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
     isActive: false,
 };
@@ -27,6 +28,7 @@ import {
     Stat,
     ImageFeature,
     StravaEmbed,
+    StravaGarmin,
     YoutubeVideo,
     RelatedArticles,
     HashBrownsLoader,
@@ -46,15 +48,16 @@ import {
     faPickaxe,
 } from '@awesome.me/kit-237330da78/icons/classic/light'
 
-export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041";
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fsalt-summit.jpeg?alt=media&token=b9694ac8-64f9-4089-bb2a-0418d984dcb3";
 export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fsalt-360-image.jpg?alt=media&token=41672e80-82db-4260-a83b-6e54c2770faa";
 export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fsalt-3D-map.jpeg?alt=media&token=1ee808c4-9bef-4555-9476-497590a53be4";
-export const porcupine = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fporcupine.mov?alt=media&token=3c0bf4e7-c4dd-4ea8-bf1f-acfa80fefbb1";
-export const headwall = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fheadwall.jpeg?alt=media&token=864e82ae-9251-452b-bc8c-74195131742f";
+export const miter = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/pepper-peak%2Fthe-miter.jpg?alt=media&token=c0e3cb0c-99d8-4780-b5ba-68e42a8cb73c";
+export const palmer = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fsalt-palmer-view.jpeg?alt=media&token=5f20ac85-fbd7-4cf4-ac12-6521b0940a53";
+export const pizza = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/salt-peak%2Fpizza.jpeg?alt=media&token=9571891e-4f9d-4163-b608-2bd852c1e866";
 
-export const relatedArticleOne = '/blog/articles/thayer-hut';
-export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
-export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
+export const relatedArticleOne = '/blog/articles/shaker-peak';
+export const relatedArticleTwo = '/blog/articles/salt-peak';
+export const relatedArticleThree = '/blog/articles/omalley-peak';
 
 <ImageFeature
     title="Salt Peak Climb Report"
@@ -76,7 +79,7 @@ export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 <MdxLayout>
 
 <TLDR
-text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing over Eklutna Lake. If you like walking on ridges and non-technical climbing in the Chugach, you will find this trip fun!"
+text="Salt is the final stop on the Condiment Traverse. Maybe the furthest stop is more accurate. Shaker and Pepper must be summited again! This worked out in my favor, on the way out I was socked in. Nothing was visible. On the way back the clouds parted and allowed me to take the 360 images!"
 />
 
 <div className={`w-full`} id='condiment-traverse'>
@@ -100,53 +103,26 @@ text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing o
     </div>
 </div>
 
-The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls of the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wreseling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole. Anyway here is an overview of the route up to Pepper:
+The route to Salt! The track closer to the lake was me "saving tons of time" on the way back after I had mastered this route!
+<CenteredImage image={route} altText={"Route from Pepper Peak to Shaker Peak"} width={1000} height={500} />
 
-<CenteredImage image={route} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
+You must go lower to get higher! Down Shaker I went. The descent was a nice break but ultimately annoying, not steep enough to scree surf, but steep enough to burn the legs! Beautiful views of the Miter once I got to the saddle!
+<CenteredImage image={miter} altText={"O'Malley Peak 3D Map"} width={500} height={500} />
 
-Lots of people stop here! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugatch. Maybe even a glacier? It would be impossible to know!
+The nice thing about this outing is that it is very straightforward. I shimmied up Salt as the weather finally broke! The views were nice. Heck you could even see Palmer from here. Most of the biggest mountains were being bashful and hiding in the clouds!
+<CenteredImage image={palmer} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
 
-<TwoColumn>
-    <div className={'w-full sm:w-1/2'}>
-        The route is easy and non-technical. Glen Alps trailhead is the normal place to park to climb O'Malley. It is also the normal place to park to climb Flattop, Blueberry Knoll, and the overlook at the back of the parking lot. It is the favorite of tourists visiting Anchorage. You will see tons of goofy things going on up here. Also, scary stuff. Like bro are you sure you should be trying to hike out here? Rescues are frequent. Be careful, the people are treacherous!
+The whole trip was uneventful other than the goats. A good thing I guess? The route back was more of the same. It's weird that in order to get back to the trailhead you have to re-climb everything! I of course had to get some Moose's Tooth Za to both celebrate a fun day in the Chugach and wish farewell to Alaska. I'll be back in August.
+<CenteredImage image={pizza} altText={"Mooses Tooth Pizza"} width={500} height={500} />
 
-Head out the back of the parking lot and turn right on the Power Line Pass. You will quickly see an offshoot to the left labeled "O'Malley Peak Trail". That is what you are looking for! The trail leads up to Little O'Malley and is straightforward!
-
-On the way up I saw this porcupine on the trail. I have mistaken these for bear cubs many times. I love how they slowly lumber down the trail. Their gait gives off a pissed off vibe. I imagine them cussing the humans as they waddle though the world. I love them! I also love dogs and I was able to save a few of the off-leash variety from getting stuck with a quill! The owners seemed upset for some reason. Next time I will let them do their thing!
-
-After I parted ways with the porcupine I was standing on Little O'Malley ridge before I knew it! I walked down the back of the ridge onto the large meadow. Huge meadow actually. I love looking at it from Anchorage because it is so freaking big.
-    </div>
-
-    <div className={'w-full sm:w-1/2'}>
-        <Gif video={porcupine} width={500}/>
-    </div>
-</TwoColumn>
-
-I won't stop talking about the meadow! It is so nice and in late June it was filled with beautiful wild flowers and so few people. Most of the tourists stop at the ridge! The hike to the back was blissful! You want to aim for the large headwall on your hike. I love an easy target and it is easy to hit the bull's-eye here!
-
-<CenteredImage image={headwall} altText={"O'Malley Headwall"} title={"Bull's Eye!!"} width={1000} height={500} />
-
-Climb the headwall, turn left and you are at the top! It is that easy. This is my favorite place to take out-of-towners for a few reasons:
-
-<ul>
-    <li>The start is very friendly, but usually there is a sudden realization that you are alone at some point.</li>
-    <li>Turning around is easy.</li>
-    <li>The scree surfing on the headwall is short yet sublime.</li>
-</ul>
-
- 
 <div className={`w-full`}>
-    <h2 className='text-center font-mono'>KPIs</h2>
+    <h2 className='text-center font-mono'>KPIs (Full Traverse)</h2>
 </div>
 
-<TwoColumn>
-    <div className={'w-full sm:w-1/2'}>
-        <StravaEmbed dataEmbedId='14937681322'/>
-    </div>
-    <div className={'w-full h-full sm:w-1/2'}>
-        <iframe src='https://connect.garmin.com/modern/activity/embed/19565668335' width="100%" height="100%" title='Activity Embed' frameborder="0" />
-    </div>
-</TwoColumn>
+<StravaGarmin
+    stravaId='14937681322'
+    garminId='19565668335'
+/>
 
 <RelatedArticles 
     articleOne={relatedArticleOne}

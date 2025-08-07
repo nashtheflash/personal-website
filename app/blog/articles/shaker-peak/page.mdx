@@ -7,8 +7,9 @@ export const postMetadata = {
     published: "2025-06-22",
     updated: "2025-06-26",
     author: 'Nash Bostwick',
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041',
-    description:"",
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-shaker-viewed-from-salt.jpeg?alt=media&token=e54dac35-9788-43f2-8d76-f8ecbdd796ad',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fhippy-hokusai-feature-image.jpg?alt=media&token=918cbc3a-fec1-4ed3-9a38-974699aaf998',
+    description:"Complete guide to climbing Shaker Peak in Alaska's Chugach Mountains. Get detailed route information, elevation stats (5,089 ft), trailhead directions, and tips for this non-technical peak as part of the Condiment Traverse. Perfect for Alaska hiking and peak bagging adventures.",
     keywords: ["Shaker Peak", 'Chugach National Forest', 'Alaska hiking', 'Alaska peak climbing', 'Glen Alps Trailhead', 'non-technical climbing', 'Alaska outdoor activities', 'Chugach Mountains', 'Alaska summit', 'hiking Alaska', 'peak bagging', 'Alaska adventure'],
     tags: ["Shaker Peak", 'Chugach', 'Alaska', 'Climbing', 'Hiking', 'Peak Bagging', 'Chugach 120'],
     isActive: false,
@@ -27,6 +28,7 @@ import {
     Stat,
     ImageFeature,
     StravaEmbed,
+    StravaGarmin,
     YoutubeVideo,
     RelatedArticles,
     HashBrownsLoader,
@@ -49,12 +51,12 @@ import {
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Ffeature-image.jpg?alt=media&token=0437ec91-4457-422a-8f2c-c34065623041";
 export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-360-image.jpg?alt=media&token=bf87c4a8-ac2a-4897-966f-2989f5edb23b";
 export const route = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-3D-map.jpeg?alt=media&token=ed2df92b-dec5-4404-be52-708cea9d2460";
-export const porcupine = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fporcupine.mov?alt=media&token=3c0bf4e7-c4dd-4ea8-bf1f-acfa80fefbb1";
-export const headwall = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/omalley-climb-report%2Fheadwall.jpeg?alt=media&token=864e82ae-9251-452b-bc8c-74195131742f";
+export const garminWatch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fwatch-arrow.jpg?alt=media&token=4ba391ae-e99c-4de9-819b-cb233de9290c";
+export const thePoint = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/shaker-peak%2Fshaker-eklutna-lake.jpeg?alt=media&token=6130022d-9e20-4127-bd73-ac844a8177ee";
 
 export const relatedArticleOne = '/blog/articles/thayer-hut';
-export const relatedArticleTwo = '/blog/articles/tune-cold-weather-performance';
-export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
+export const relatedArticleTwo = '/blog/articles/pepper-peak';
+export const relatedArticleThree = '/blog/articles/salt-peak';
 
 <ImageFeature
     title="Shaker Peak Climb Report"
@@ -76,7 +78,7 @@ export const relatedArticleThree = '/blog/articles/rock-island-katy-trail';
 <MdxLayout>
 
 <TLDR
-text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing over Eklutna Lake. If you like walking on ridges and non-technical climbing in the Chugach, you will find this trip fun!"
+text="Shaker Peak is the second stop on the Condiment Traverse. It is more of a big hill that sits on a ridge. It is easy hiking!"
 />
 
 <div className={`w-full`} id='condiment-traverse'>
@@ -100,53 +102,37 @@ text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing o
     </div>
 </div>
 
-The order of the names is annoying to me. I believe that Salt, Pepper, Shaker rolls of the tongue in a way Pepper, Shaker, Salt does not. However, looking at the mountains, I like that shaker is more rounded, less prominent, and all around much more shaker shaped. Looking at the mountains, I can see why and fully agree why each peak received its name. I was wreseling with this the entire afternoon and am only starting to feel comfortable with the situation as a whole. Anyway here is an overview of the route up to Pepper:
+The route to shaker is short and straight forward:
+<CenteredImage image={route} altText={"Route from Pepper Peak to Shaker Peak"} width={1000} height={500} />
 
-<CenteredImage image={route} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
+When I got to the massive pile of rocks on the peak, I was levitating among the clouds. I couldn't see shit. I took a few steps beyond the cairn before I heard my watch start beeping. I was off course! I had the customary first thought, "Why is my watch fucked up?". I couldn't be going the wrong way. As always, after getting my bearings, I was in fact going the wrong way! At the cairn you must take a hard right. I started a blind descent into the abyss. It looked like I was walking towards a cliff!
 
-Lots of people stop here! I can see why, it is beautiful on a clear day you can see Eklutna Lake and deep into the Chugatch. Maybe even a glacier? It would be impossible to know!
+The clouds occasionally would open up enough for me to get some sort of bearing. I was quickly assured that this was the correct route when I saw the ridge, Shaker, and Pepper. Also, no cliff! Eklutna lake even made an appearance from time to time!
+<CenteredImage image={thePoint} altText={"View of Eklutna Lake from Shaker Ridge"} width={1000} height={500} />
+
 
 <TwoColumn>
     <div className={'w-full sm:w-1/2'}>
-        The route is easy and non-technical. Glen Alps trailhead is the normal place to park to climb O'Malley. It is also the normal place to park to climb Flattop, Blueberry Knoll, and the overlook at the back of the parking lot. It is the favorite of tourists visiting Anchorage. You will see tons of goofy things going on up here. Also, scary stuff. Like bro are you sure you should be trying to hike out here? Rescues are frequent. Be careful, the people are treacherous!
+        I usually do some type of research before going into the mountains, but sometimes it's nice to throw a gpx in the watch and go. If you haven't tried Garmin watch navigation for mountaineering I would highly recommend it! A little red triangle will appear near the bezel telling you where you are in relation to the track. If you get too far away, it buzzes. So simple, so nice!
 
-Head out the back of the parking lot and turn right on the Power Line Pass. You will quickly see an offshoot to the left labeled "O'Malley Peak Trail". That is what you are looking for! The trail leads up to Little O'Malley and is straightforward!
-
-On the way up I saw this porcupine on the trail. I have mistaken these for bear cubs many times. I love how they slowly lumber down the trail. Their gait gives off a pissed off vibe. I imagine them cussing the humans as they waddle though the world. I love them! I also love dogs and I was able to save a few of the off-leash variety from getting stuck with a quill! The owners seemed upset for some reason. Next time I will let them do their thing!
-
-After I parted ways with the porcupine I was standing on Little O'Malley ridge before I knew it! I walked down the back of the ridge onto the large meadow. Huge meadow actually. I love looking at it from Anchorage because it is so freaking big.
+In the case to the right I need to start to veer to the right! I don't know if putting all your eggs in the watch navigation basket is a good idea. I find that I am more lazy and tunnel visioned when I am using the watch. I'm constantly reminding myself to pay attention, but it's nice to be in the zone!
     </div>
 
     <div className={'w-full sm:w-1/2'}>
-        <Gif video={porcupine} width={500}/>
+        <CenteredImage image={garminWatch} altText={"O'Malley Peak 3D Map"} width={1000} height={500} />
     </div>
 </TwoColumn>
 
-I won't stop talking about the meadow! It is so nice and in late June it was filled with beautiful wild flowers and so few people. Most of the tourists stop at the ridge! The hike to the back was blissful! You want to aim for the large headwall on your hike. I love an easy target and it is easy to hit the bull's-eye here!
+Before I knew it, I was standing on top of Shaker. It was only a mile away. Time to give some vertical back to the mountains and head up Salt!
 
-<CenteredImage image={headwall} altText={"O'Malley Headwall"} title={"Bull's Eye!!"} width={1000} height={500} />
-
-Climb the headwall, turn left and you are at the top! It is that easy. This is my favorite place to take out-of-towners for a few reasons:
-
-<ul>
-    <li>The start is very friendly, but usually there is a sudden realization that you are alone at some point.</li>
-    <li>Turning around is easy.</li>
-    <li>The scree surfing on the headwall is short yet sublime.</li>
-</ul>
-
- 
 <div className={`w-full`}>
-    <h2 className='text-center font-mono'>KPIs</h2>
+    <h2 className='text-center font-mono'>KPIs (Full Traverse)</h2>
 </div>
 
-<TwoColumn>
-    <div className={'w-full sm:w-1/2'}>
-        <StravaEmbed dataEmbedId='14937681322'/>
-    </div>
-    <div className={'w-full h-full sm:w-1/2'}>
-        <iframe src='https://connect.garmin.com/modern/activity/embed/19565668335' width="100%" height="100%" title='Activity Embed' frameborder="0" />
-    </div>
-</TwoColumn>
+<StravaGarmin
+    stravaId='14937681322'
+    garminId='19565668335'
+/>
 
 <RelatedArticles 
     articleOne={relatedArticleOne}
