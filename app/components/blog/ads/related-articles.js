@@ -1,9 +1,3 @@
-/*
- * This componenet sucks. It is hard to get all of the cards to be the same hight when the titles and descriptions wrap to diffrent heights. Worth looking into further! Works good on mobile and desctop but not so much inbetween!
- *
- * 
- * 
- */
 'use server'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -44,8 +38,8 @@ async function RelatedCard({article}) {
                     />
                 </figure>
                 <div className="flex flex-col justify-between items-start p-3">
-                    <h2 className="grow mt-2 mb-1 text-slate-700 min-h-20">{title}</h2>
-                    <p className='text-slate-600 font-light text-md'>{description?.slice(0, 157).trim() + (description?.length > 160 ? '...' : '')}</p>
+                    <h2 className="grow mt-2 mb-1 text-slate-700 min-h-20 line-clamp-2">{title}</h2>
+                    <p className='text-slate-600 font-light text-md line-clamp-4'>{description}</p>
 
                     <div className="grow place-self-end">
                         <Link href={article}>
