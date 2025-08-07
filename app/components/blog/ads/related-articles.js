@@ -1,7 +1,14 @@
+/*
+ * This componenet sucks. It is hard to get all of the cards to be the same hight when the titles and descriptions wrap to diffrent heights. Worth looking into further! Works good on mobile and desctop but not so much inbetween!
+ *
+ * 
+ * 
+ */
 'use server'
 import Image from 'next/image';
 import Link from 'next/link';
 import { getSingleBlogPostMetadata } from "@/lib/next-path"
+import { AddBackground } from '../../styles';
 
 export async function RelatedArticles({articleOne, articleTwo, articleThree}) {
 
@@ -10,7 +17,7 @@ export async function RelatedArticles({articleOne, articleTwo, articleThree}) {
             <div className='w-full'>
                 <h2 className='text-center font-mono'>Related Articles</h2>
             </div>
-            <div className="flex flex-col gap-3 md:flex-row justify-between items-center w-full">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-3 justify-between items-start w-full">
                 <RelatedCard article={articleOne}/>
                 <RelatedCard article={articleTwo}/>
                 <RelatedCard article={articleThree}/>
@@ -23,7 +30,8 @@ async function RelatedCard({article}) {
     const {title, thumbnail, description} = await getSingleBlogPostMetadata(article);
 
     return(
-            <div className="card bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] w-96 h-full max-h-[600px] shadow-sm">
+        <div className='w-full h-full rounded-2xl overflow-hidden'>
+            <AddBackground bgColor={'bg-secondary'} hasTopo={true}>
                 <figure className='relative w-full h-52 my-0'>
                     <Image
                         alt={`${title} Feature Image`}
@@ -35,16 +43,17 @@ async function RelatedCard({article}) {
                         }}
                     />
                 </figure>
-                <div className="card-body p-3">
-                    <h2 className="card-title mt-2 mb-1 text-slate-700">{title}</h2>
-                    <p className='text-slate-600 font-light'>{description?.slice(0, 247).trim() + (description?.length > 250 ? '...' : '')}</p>
+                <div className="flex flex-col justify-between items-start p-3">
+                    <h2 className="grow mt-2 mb-1 text-slate-700 min-h-20">{title}</h2>
+                    <p className='text-slate-600 font-light text-md'>{description?.slice(0, 157).trim() + (description?.length > 160 ? '...' : '')}</p>
 
-                    <div className="card-actions justify-end">
-                    <Link href={article}>
-                        <button className="btn btn-info">View Article</button>
-                    </Link>
+                    <div className="grow place-self-end">
+                        <Link href={article}>
+                            <button className="btn btn-info">View Article</button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
+            </AddBackground>
         </div>
     )
 }
