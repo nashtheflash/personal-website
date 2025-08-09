@@ -32,6 +32,14 @@ service cloud.firestore {
       allow read, write: if isAuthenticated();
     }
 
+    // Incoming requests collection (contact form submissions)
+    match /incoming_request/{requestId} {
+      // Allow anyone to write (submit contact forms)
+      // No read access needed for public contact forms
+      allow write: if true;
+      allow read: if false;
+    }
+
     // Default rule - deny all other access
     match /{document=**} {
       allow read, write: if false;
