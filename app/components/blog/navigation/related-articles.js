@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getSingleBlogPostMetadata } from "@/lib/next-path"
 import { AddBackground } from '../../styles';
 
-export async function RelatedArticles({articleOne, articleTwo, articleThree}) {
+export async function ContinueReading({articleOne, articleTwo, articleThree}) {
 
     return(
         <>
@@ -51,3 +51,5 @@ async function RelatedCard({article}) {
         </div>
     )
 }
+
+

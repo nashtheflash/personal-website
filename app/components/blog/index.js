@@ -74,7 +74,11 @@ export { ContactUs } from "./forms/contact-us";
 
 //Ads
 export { YoutubeAd } from "./ads/youtube-video";
-export { RelatedArticles } from "./ads/related-articles";
+// export { ContinueReading } from "./ads/continue-reading";
+
+//Navigation
+export { ContinueReading } from "./navigation/continue-reading";
+export { RA } from "./navigation/related-articles";
 
 //Loaders
 export { HashBrownsLoader } from "./loaders/hash-browns-loader";
