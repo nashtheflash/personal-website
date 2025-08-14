@@ -31,6 +31,7 @@ import {
     StravaGarmin,
     YoutubeVideo,
     ContinueReading,
+    RelatedArticles,
     HashBrownsLoader,
     Gif,
     Callout,
@@ -82,26 +83,12 @@ export const relatedArticleThree = '/blog/articles/omalley-peak';
 text="Salt is the final stop on the Condiment Traverse. Maybe the furthest stop is more accurate. Shaker and Pepper must be summited again! This worked out in my favor, on the way out I was socked in. Nothing was visible. On the way back the clouds parted and allowed me to take the 360 images!"
 />
 
-<div className={`w-full`} id='condiment-traverse'>
-    <h2 className='text-center font-mono mb-2'>Condiment Traverse</h2>
-    <p className={'text-center w-full'}>If you are going to climb salt you also have to climb pepper and shaker! You can find the other parts of this trip below!</p>
-</div>
-<div className='flex justify-evenly items-center w-full h-52'>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/pepper-peak#condiment-traverse'}>Pepper Peak</Link>
-    </div>
-    <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/shaker-peak#condiment-traverse'}>Shaker Peak</Link>
-    </div>
-    <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/salt-peak#condiment-traverse'} className={"bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] p-1 rounded-md"}>Salt Peak</Link>
-    </div>
-</div>
+<RelatedArticles 
+    title={'Condiment Traverse'}
+    description={'If you are going to climb Salt you also have to climb Pepper and Shaker! You can find the other parts of this trip below!'}
+    articles={['/blog/articles/pepper-peak', '/blog/articles/shaker-peak', '/blog/articles/salt-peak']}
+    currentView={'/blog/articles/salt-peak'}
+/>
 
 The route to Salt! The track closer to the lake was me "saving tons of time" on the way back after I had mastered this route!
 <CenteredImage image={route} altText={"Route from Pepper Peak to Shaker Peak"} width={1000} height={500} />

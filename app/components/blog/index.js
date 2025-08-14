@@ -74,11 +74,10 @@ export { ContactUs } from "./forms/contact-us";
 
 //Ads
 export { YoutubeAd } from "./ads/youtube-video";
-// export { ContinueReading } from "./ads/continue-reading";
 
 //Navigation
 export { ContinueReading } from "./navigation/continue-reading";
-export { RA } from "./navigation/related-articles";
+export { RelatedArticles } from "./navigation/related-articles";
 
 //Loaders
 export { HashBrownsLoader } from "./loaders/hash-browns-loader";

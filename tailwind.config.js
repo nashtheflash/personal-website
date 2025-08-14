@@ -36,7 +36,42 @@ module.exports = {
             typography: {
                 DEFAULT: {
                     css: {
-                        maxWidth: '100ch', // add required value here
+                        maxWidth: '90ch',
+                        fontSize: '1rem',
+                        lineHeight: '1.75',
+                        '--tw-prose-body': 'oklch(var(--color-base-content))',
+                        '--tw-prose-headings': 'oklch(var(--color-base-content))',
+                        '--tw-prose-links': 'oklch(var(--color-primary-content))',
+                        '--tw-prose-bold': 'oklch(var(--color-base-content))',
+                        '--tw-prose-counters': 'oklch(var(--color-base-content))',
+                        '--tw-prose-bullets': 'oklch(var(--color-base-content))',
+                        '--tw-prose-hr': 'oklch(var(--color-neutral-content))',
+                        '--tw-prose-quotes': 'oklch(var(--color-base-content))',
+                        '--tw-prose-quote-borders': 'oklch(var(--color-neutral-content))',
+                        '--tw-prose-captions': 'oklch(var(--color-base-content))',
+                        '--tw-prose-code': 'oklch(var(--color-base-content))',
+                        '--tw-prose-pre-code': 'oklch(var(--color-base-content))',
+                        '--tw-prose-pre-bg': 'oklch(var(--color-neutral-content))',
+                        '--tw-prose-th-borders': 'oklch(var(--color-neutral-content))',
+                        '--tw-prose-td-borders': 'oklch(var(--color-neutral-content))',
+                    }
+                },
+                sm: {
+                    css: {
+                        maxWidth: '85ch',
+                        fontSize: '0.875rem',
+                    }
+                },
+                lg: {
+                    css: {
+                        maxWidth: '95ch',
+                        fontSize: '1.125rem',
+                    }
+                },
+                xl: {
+                    css: {
+                        maxWidth: '100ch',
+                        fontSize: '1.25rem',
                     }
                 }
             },

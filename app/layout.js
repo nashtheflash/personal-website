@@ -22,6 +22,9 @@ export default async function RootLayout({ children }) {
 
     return (
         <html lang="en" className={`${inter.variable} ${mori.variable} ${neue.variable} ${cursive.variable} ${spartan.variable} ${chewy.variable} ${didot.variable}`} data-theme="retro">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+            </head>
             <body className='min-h-screen'>
                 <AddBackground bgColor={'bg-base-200'}>
                     <AuthProvider>

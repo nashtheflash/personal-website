@@ -31,6 +31,7 @@ import {
     StravaGarmin,
     YoutubeVideo,
     ContinueReading,
+    RelatedArticles,
     HashBrownsLoader,
     Gif,
     CallOut,
@@ -83,26 +84,12 @@ export const relatedArticleThree = '/blog/articles/salt-peak';
 text="Pepper Peak is the first part of the Condiment Traverse; a 3 peak outing over Eklutna Lake. If you like walking on ridges and non-technical climbing in the Chugach, you will find this trip fun!"
 />
 
-<div className={`w-full`} id='condiment-traverse'>
-    <h2 className='text-center font-mono mb-2'>Condiment Traverse</h2>
-    <p className={'text-center w-full'}>If you are going to climb salt you also have to climb pepper and shaker! You can find the other parts of this trip below!</p>
-</div>
-<div className='flex justify-evenly items-center w-full h-52'>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/pepper-peak#condiment-traverse'} className={"bg-[#bdd2c9] bg-[url('/topo-bg-3-black.png')] p-1 rounded-md"}>Pepper Peak</Link>
-    </div>
-    <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/shaker-peak#condiment-traverse'}>Shaker Peak</Link>
-    </div>
-    <span className={'text-6xl'}>➡️</span>
-    <div className={'flex flex-col items-center justify-center gap-2'}>
-        <span className={'text-9xl'}>⛰️</span>
-        <Link href={'/blog/articles/salt-peak#condiment-traverse'}>Salt Peak</Link>
-    </div>
-</div>
+<RelatedArticles 
+    title={'Condiment Traverse'}
+    description={'If you are going to climb Pepper you can continue onto Shaker and Salt! You can find the other parts of this trip below!'}
+    articles={['/blog/articles/pepper-peak', '/blog/articles/shaker-peak', '/blog/articles/salt-peak']}
+    currentView={'/blog/articles/pepper-peak'}
+/>
 
 <h2 className='text-center font-mono mb-2'>Pepper Peak</h2>
 
