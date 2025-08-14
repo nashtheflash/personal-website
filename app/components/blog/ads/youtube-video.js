@@ -1,6 +1,6 @@
 'use client'
 
-import { useWindowSize } from '@/app/hooks';
+import { useWindowSize } from '/lib/hooks';
 import { YouTubeEmbed } from '@next/third-parties/google'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

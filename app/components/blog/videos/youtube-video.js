@@ -1,7 +1,7 @@
 'use client'
 
 import { YouTubeEmbed } from '@next/third-parties/google'
-import { useWindowSize } from '@/app/hooks';
+import { useWindowSize } from '@/lib/hooks';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCameraMovie } from '@awesome.me/kit-237330da78/icons/classic/solid'
