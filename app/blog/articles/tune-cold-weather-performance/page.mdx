@@ -1,4 +1,4 @@
-import { generateMetadata } from '@/utils';
+import { generateMetadata } from '@/lib/seo';
 
 export const postMetadata = {
     title: "Tune M1 Cold Weather Performance",
@@ -25,7 +25,7 @@ import {
     ImageFeature,
     LineGraph,
     ContinueReading,
-} from '@/app/components/blog'
+} from '@/components/blog'
 
 import { 
     timeToTempNoInsulationData,
@@ -53,7 +53,7 @@ export const relatedArticleOne = '/blog/articles/tune-heavy-lift-strut-install';
 export const relatedArticleTwo = '/blog/articles/tune-starlink-install';
 export const relatedArticleThree = '/blog/articles/tune-insulation-pack-repair';
 
-import { FriggaTempLoger } from '@/app/products/product-links';
+import { FriggaTempLoger } from '@/products/product-links';
 
 <ImageFeature
     title='Tune M1 Cold Weather Performance'

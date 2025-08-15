@@ -75,9 +75,9 @@ The Google Auth buttons are available on both login and sign-up pages:
 #### Components
 
 - `lib/firebase/auth-utils.js` - Google Auth utility functions
-- `app/components/general/login.js` - Login component with Google Auth
-- `app/components/general/sign-up.js` - Sign-up component with Google Auth
-- `app/components/auth/no-tenant-access.js` - Component for users without tenant access
+- `components/general/login.js` - Login component with Google Auth
+- `components/general/sign-up.js` - Sign-up component with Google Auth
+- `components/auth/no-tenant-access.js` - Component for users without tenant access
 - `app/api/auth/create-google-user/route.js` - API endpoint for creating user entries
 
 #### Server-Side Integration

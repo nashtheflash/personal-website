@@ -5,10 +5,10 @@ import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { getTenantContent } from '@/lib/firebase/firestore';
 import { getTenantServer } from '@/lib/firebase/firestore/tenants';
 
-import { PartnerDashboard } from '@/app/components/pages';
-import { SimpleSpinner } from "@/app/components/loading"
+import { PartnerDashboard } from '@/components/pages';
+import { SimpleSpinner } from "@/components/loading"
 
-import { generateMetadata } from '@/utils';
+import { generateMetadata } from '@/lib/seo';
 export const metadata = generateMetadata({
     title:"Dashboard",
     description:"Nash Browns Partner Login Page",

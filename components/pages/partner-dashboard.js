@@ -1,10 +1,10 @@
 'use client'
 
 import { useServerAuth } from '@/lib/firebase/auth-hooks';
-import { AdminDashboard, ClientDashboard } from "@/app/components/general";
-import { RequireAuth } from '@/app/components/auth';
-import { SimpleSpinner } from '@/app/components/loading';
-import { NoTenantAccess } from '@/app/components/auth/no-tenant-access';
+import { AdminDashboard, ClientDashboard } from "@/components/general";
+import { RequireAuth } from '@/components/auth';
+import { SimpleSpinner } from '@/components/loading';
+import { NoTenantAccess } from '@/components/auth/no-tenant-access';
 
 export function PartnerDashboard({tenantData, tenantVideos, tenantArticles}) {
     const { serverTenant } = useServerAuth();

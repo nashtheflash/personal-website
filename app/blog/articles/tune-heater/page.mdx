@@ -1,4 +1,4 @@
-import { generateMetadata } from '@/utils';
+import { generateMetadata } from '@/lib/seo';
 
 export const postMetadata = {
     title: "Tune M1 Heater",
@@ -14,7 +14,7 @@ export const postMetadata = {
 
 export const metadata = generateMetadata({...postMetadata});
 
-import { MdxLayout } from '@/app/components/blog'
+import { MdxLayout } from '@/components/blog'
 
 <MdxLayout>
     <h1>This article is all about the heater</h1>

@@ -9,8 +9,8 @@ import { useAggressiveAuth } from '@/lib/firebase';
 import { getAuth, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
 import { useServerAuth, useAuthenticatedApi } from '@/lib/firebase/auth-hooks';
 
-import { RequireAuth } from '@/app/components/auth';
-import { AddUserModal } from '@/app/components/general';
+import { RequireAuth } from '@/components/auth';
+import { AddUserModal } from '@/components/general';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@awesome.me/kit-237330da78/icons/classic/regular';

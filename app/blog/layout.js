@@ -1,8 +1,8 @@
 import { pathname } from 'next-extra/pathname';
 import { getSingleBlogPostMetadata } from "@/lib/next-path"
 import { incrementContentDocumentField } from '@/lib/firebase/firestore';
-import { AddBackground } from '../components/styles';
-import { Footer } from '../components/blog';
+import { AddBackground } from '@/components/styles';
+import { Footer } from '@/components/blog';
 
 export default async function MDXPage({ children }) {
     const route = await pathname();

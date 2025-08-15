@@ -1,7 +1,7 @@
 import { Suspense } from "react"
-import { ForgotPassword } from "@/app/components/auth";
-import { AddBackground } from "@/app/components/styles";
-import { SimpleSpinner } from "@/app/components/loading"
+import { ForgotPassword } from "@/components/auth";
+import { AddBackground } from "@/components/styles";
+import { SimpleSpinner } from "@/components/loading"
 
 
 export default function ForgotPasswordPage({ searchParams }) {

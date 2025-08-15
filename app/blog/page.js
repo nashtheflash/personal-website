@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { folderPaths, getBlogPostMetadata } from "@/lib/next-path"
-import { MdxLayout, BlogCard } from "../components/blog"
-import { generateMetadata } from '@/utils';
+import { MdxLayout, BlogCard } from "@/components/blog"
+import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
     title:"Blog",

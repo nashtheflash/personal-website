@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchUnsplashImageById, parseUnsplashText } from '@/app/server-actions/unsplash';
-import { generateMetadata as gmd } from '@/utils';
-import { UnsplashDownloader } from '@/app/components/blog';
+import { generateMetadata as gmd } from '@/lib/seo';
+import { UnsplashDownloader } from '@/components/blog';
 
 import { 
     faBitcoin,

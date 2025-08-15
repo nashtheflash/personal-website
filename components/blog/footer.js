@@ -10,7 +10,7 @@ import {
 
 import garmin from "@/public/garmin-logo-simple.png";
 import Link from 'next/link';
-import { AddBackground } from '@/app/components/styles';
+import { AddBackground } from '@/components/styles';
 
 
 export function Footer() {

@@ -1,4 +1,4 @@
-import { MdxImage } from '@/app/components/blog'
+import { MdxImage } from '@/components/blog'
 
 export function CenteredImage({image, altText, title, subtitle, width, height}) {
    

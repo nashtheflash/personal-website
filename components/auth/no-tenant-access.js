@@ -3,7 +3,7 @@
 import { useAuth } from "@/lib/firebase"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
-import { SimpleSpinner } from "@/app/components/loading"
+import { SimpleSpinner } from "@/components/loading"
 
 export function NoTenantAccess() {
   const { user, loading, isAuthenticated } = useAuth()

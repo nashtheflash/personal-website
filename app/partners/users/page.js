@@ -4,10 +4,10 @@ import { cookies } from 'next/headers';
 import { validateToken, getUserTenant } from '@/lib/firebase/tenant-auth';
 import { getAllUsersForTenant } from '@/lib/firebase/firestore';
 
-import { Users } from '@/app/components/pages';
-import { SimpleSpinner } from "@/app/components/loading"
+import { Users } from '@/components/pages';
+import { SimpleSpinner } from "@/components/loading"
 
-import { generateMetadata } from '@/utils';
+import { generateMetadata } from '@/lib/seo';
 export const metadata = generateMetadata({
     title:"Users",
     description:"View User Information",

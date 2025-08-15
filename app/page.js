@@ -1,5 +1,5 @@
-import { generateMetadata } from '@/utils';
-import { SiteLanding } from "./components/blog";
+import { generateMetadata } from '@/lib/seo';
+import { SiteLanding } from "@/components/blog";
 
 export const metadata = generateMetadata({
     title:"Nash Browns",

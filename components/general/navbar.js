@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { useAggressiveAuth } from '@/lib/firebase';
-import { SignOut } from '@/app//components/general';
+import { SignOut } from '@/components/general';
 
-import { AddBackground } from '@/app/components/styles';
+import { AddBackground } from '@/components/styles';
 
 import nashBrwonsWhite from '@/public/nashbrowns-logo-white.png'
 import hokuasiWordLogo from '@/public/hokusai-nashborwns-logo.png'

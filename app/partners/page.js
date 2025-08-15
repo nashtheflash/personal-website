@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { ContactUs } from '@/app/components/blog/forms/contact-us';
-import { Login } from '@/app/components/general';
-import { generateMetadata } from '@/utils';
+import { ContactUs } from '@/components/blog/forms/contact-us';
+import { Login } from '@/components/general';
+import { generateMetadata } from '@/lib/seo';
 
 //Images
 import door from '@/public/local-images/login/door.png'

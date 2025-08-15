@@ -1,4 +1,4 @@
-import { generateMetadata } from '@/utils';
+import { generateMetadata } from '@/lib/seo';
 
 export const postMetadata = {
     title: "My Tune M1 Setup",
@@ -17,11 +17,11 @@ export const metadata = generateMetadata({...postMetadata});
 import { 
     MdxLayout,
     ImageFeature,
-} from '@/app/components/blog'
+} from '@/components/blog'
 
 import { 
     ReflectiveInsulation,
-} from '@/app/products/product-links'
+} from '@/products/product-links'
 
 
 <ImageFeature

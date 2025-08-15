@@ -1,7 +1,7 @@
 import { Suspense } from "react"
-import { SignUp } from "../components/general";
-import { AddBackground } from "@/app/components/styles";
-import { SimpleSpinner } from "@/app/components/loading"
+import { SignUp } from "@/components/general";
+import { AddBackground } from "@/components/styles";
+import { SimpleSpinner } from "@/components/loading"
 
 
 export default function SignUpPage() {

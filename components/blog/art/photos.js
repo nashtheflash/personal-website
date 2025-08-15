@@ -1,9 +1,9 @@
 'use client'
 // import { readFiles } from "@/lib/next-path"
 
-import { MdxLayout, ArtNav, ArtCollection } from "@/app/components/blog"
+import { MdxLayout, ArtNav, ArtCollection } from "@/components/blog"
 import { Suspense } from "react";
-import { SimpleSpinner } from "@/app/components/loading"
+import { SimpleSpinner } from "@/components/loading"
 
 export function Photos() {
     // const allArt = readFiles('public/art', 1);

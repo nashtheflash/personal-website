@@ -1,5 +1,5 @@
-import { MdxLayout } from "../components/blog";
-import { Footer } from "../components/blog";
+import { MdxLayout } from "@/components/blog";
+import { Footer } from "@/components/blog";
 
 export default function WritingLayout({ children }) {
     return (

@@ -1,5 +1,5 @@
 import { readFiles } from "@/lib/next-path"
-import { MdxLayout, ArtNav, Photos, ArtCollection } from "../components/blog"
+import { MdxLayout, ArtNav, Photos, ArtCollection } from "@/components/blog"
 import { getMyUnsplashCollections } from "../server-actions/unsplash";
 
 export default async function ArtHome() {

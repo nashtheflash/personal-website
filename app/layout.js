@@ -1,4 +1,4 @@
-import { NavBar } from "@/app/components/general"
+import { NavBar } from "@/components/general"
 
 // Vercel
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -14,7 +14,7 @@ import { AuthProvider } from "@/lib/firebase"
 import { inter, mori, neue, cursive, spartan, chewy, didot } from "@/lib/fonts";
 
 //Defualt Styles
-import { AddBackground } from "./components/styles";
+import { AddBackground } from "@/components/styles";
 
 import "./globals.css";
 

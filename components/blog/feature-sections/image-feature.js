@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { ThreeSixtyImage } from '@/app/components/blog'
+import { ThreeSixtyImage } from '@/components/blog'
 
 export function ImageFeature({ title, image, alt, threeSixty=false, video=false }) {
     return(
