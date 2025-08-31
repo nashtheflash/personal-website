@@ -1,0 +1,132 @@
+import { generateMetadata } from '@/lib/seo';
+
+export const postMetadata = {
+    title: "Kodiak Island Explore",
+    published: "2024-08-30",
+    updated: "2024-08-30",
+    author: 'Nash Bostwick',
+    thumbnail: '/blog/artical-template/thumbnail.JPEG',
+    description:"",
+    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
+    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
+    isActive: false,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae";
+
+<ImageFeature
+    title='Tune M1 Cold Weather Performance'
+    image={featureImage}
+/>
+
+<MdxLayout>
+
+<TLDR
+text="I went to Kodiak Island with my mom. We didn't do anything crazy but that is okay! I was able to explore the town and the more touristy side of the island." 
+/>
+
+This trip stated and ended in Anchorage, but for the purpose of this post it started and ended at the ferry terminal in Homer, a 4 hour drive from Anchorage, but there are options to fly or even take a bus!
+
+# The Ferry
+Note all boats in the fleet are different! We were on the Tutsumena. That is the only boat that I have been on and is the only boat that I can speak about.
+
+Unfortunately I don't go on boats often. I went on lakes growing up in the Midwest, but almost never the ocean. The ferry was one of the highlights of the trip for me. The loading, the unloading, the voyage, it was all amazing! We went out on a very calm day, 1-2ft seas, and could see for miles. We say tons of whales, some of which were Orcas which I had never seen before!
+
+The way back was a different story. The boat left Kodiak in 10:00pm and we would get to Homer the next morning. The weather was bad and the seas were ~12ft and there was a gale warning.
+
+You have two options for overnight ferrying. You can rent a stateroom(~$180), a non negotiable for my mom, or post up anywhere you can on the boat. This is the option I would have went with if I wad solo. You would want a sleeping pad and a bag at minimum. I would bring a head style bug net, the flies can get over welling, and some kind of tarp and towel to keep the moisture away from my area.
+
+Booking the ferry is a little tough but makes sense after you dive into it for a few minutes. Here is the site that handles all of the bookings!
+
+While waiting for the ferry ride back, I could tell that the weather was going to be a little rough, but I wanted to know how rough. The Windy app is all you really need. It will tell you the winds and the size of the waves!
+
+# Road System
+Hostly there isn't much here. There is one main road that has a few offshoots.
+
+# Do you Need A Car?
+Yes.
+
+I love biking, but this would have been a lot on a bike.
+
+# Food
+You don't have many options, the only restraints are in Kodiak. Here is my down and dirty review:
+
+### Breakfast
+1. [Harborside Coffee & Goods][4]:
+2. [Harborside Wheel Watch][9]: This is the only option for a drive through breakfast other the Mickey D's. It is good!
+3. [Bean and Bloom Coffeehouse][5]:
+
+### Lunch
+1. [Mall Bakery][]: Sandwiches, pizza bread, ect. Get here early the best options go fast! Cant find the link to this onw!
+2. [Aquamarine][2]:
+
+### Dinner
+1. [Henry's][1]: this is an must hit! The fish and chips are great!
+2. [The Chart Room][3]:
+3. [Kodiak Hana][6]:
+
+### Brewries
+1. [Kodiak Island Brewing][7]:
+2. [Double Shovel][8]:
+
+### Plaqces we didn't vistt
+
+# Groceries
+# Hiking
+# Museums
+# Seeing Bears
+
+
+# This is the template
+[Kansas River Hazard Information][1]
+
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
+
+</MdxLayout>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[1]: https://maps.app.goo.gl/fmbZaeQF2MEZSaWy7
+[2]: https://maps.app.goo.gl/nBGB6sci29sahZ2F7
+[3]: https://maps.app.goo.gl/QQkix1bEA8WCUerW7  
+[4]: https://maps.app.goo.gl/ZtmmXtcbkT3wCAqs8
+[5]: https://maps.app.goo.gl/922kesX7GHxCZEGF6
+[6]: https://maps.app.goo.gl/Ljt3CBWPHSG7gvca9
+[7]: https://maps.app.goo.gl/6zN3vqLFUMkpeDeb9 
+[8]: https://maps.app.goo.gl/vSNojEnvRmyibRi49
+[9]: https://maps.app.goo.gl/gJWzqy8uNAGUMTdQ9
