@@ -6,10 +6,10 @@ export const postMetadata = {
     updated: "2025-08-30",
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kodaik-island-explore%2Ffeature-image.jpg?alt=media&token=2e52f0d2-69ad-4f93-af3e-b400fdfb6c2b',
-    description:"",
-    keywords: ['test', 'test', 'test', 'test', 'test', 'test'],
-    tags: ['test', 'test', 'test', 'test', 'test', 'test'],
-    isActive: false,
+    description: "Complete guide to visiting Kodiak Island, Alaska. Discover the best restaurants, ferry information from Homer, and prime wildlife viewing spots for bears, whales, and sea lions. Essential travel tips for Kodiak Island exploration.",
+    keywords: ['Kodiak Island', 'Alaska travel', 'Kodiak restaurants', 'Alaska ferry', 'Homer to Kodiak', 'Kodiak wildlife', 'Alaska bears', 'Kodiak Island guide', 'Alaska marine highway', 'Kodiak Island tourism'],
+    tags: ['Alaska', 'Kodiak Island', 'Travel Guide', 'Wildlife Viewing', 'Restaurants', 'Ferry Travel', 'Alaska Tourism', 'Bear Viewing', 'Whale Watching'],
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -33,16 +33,6 @@ import {
     PhotoCarousel,
 } from '@/components/blog'
 
-import { 
-    ReflectiveInsulation,
-} from '@/products/product-links'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faReact,
-    faShopify,
-} from '@fortawesome/free-brands-svg-icons';
-
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kodaik-island-explore%2Ffeature-image-two.jpeg?alt=media&token=74a817ce-64dc-449a-a743-f42fe45d686d";
 export const boat = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kodaik-island-explore%2Ftut-ferry.jpeg?alt=media&token=bb3b3d7f-0bf9-4586-8045-f46550d65bee";
 export const stateRoom = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kodaik-island-explore%2Froom.jpeg?alt=media&token=c937fd40-e0c2-4d59-971e-83ff49091789";
@@ -62,26 +52,26 @@ export const deer  = "https://firebasestorage.googleapis.com/v0/b/nash-browns.fi
 <MdxLayout>
 
 <TLDR
-text="I went to Kodiak Island with my mom. We did son and mom things, nothing to crazy! I was able to explore the town and the more touristy side of the island." 
+text="I went to Kodiak Island with my mom. We did mom and son things, nothing to crazy! I was able to explore the town and the more touristy side of the island." 
 />
 
-This trip started and ended in Anchorage, but for the purpose of this post it started and ended at the ferry terminal in Homer, a 4 hour drive from Anchorage, but there are options to fly or even take a bus!
+This trip started and ended in Anchorage, but for the purpose of this post it started and ended at the ferry terminal in Homer, a 4 hour drive from Anchorage, but there are options to fly or even take a bus! This post ended up being more of a short review of the places that we visited than details about the trip.
 
 ## The Ferry
 **Note**: all boats in the fleet are different! We were on the [Tustumena][10]. That is the only boat that I have been on and is the only boat that I can speak about.
-<CenteredImage image={boat} altText={'Tutstumena Docked in Kodiak'} title={'Tutstumena Docked in Kodiak'} width={1000} height={500} />
+<CenteredImage image={boat} altText={'Tustumena Docked in Kodiak'} title={'Tustumena Docked in Kodiak'} width={1000} height={500} />
 
 Unfortunately I don't go on boats often. I went on lakes growing up in the Midwest, but almost never the ocean. The ferry was one of the highlights of the trip for me. The loading, the unloading, the voyage, it was all amazing! We went from Homer to Kodiak on a very calm day, 1-2ft seas, and could see for miles. We saw tons of whales, some of which were Orcas which I had never seen before!
 
-The way back was a different story. The boat left Kodiak in 10:00pm and we would get to Homer the next morning. The weather was bad and the seas were ~12ft and there was a gale warning. The captain ended up taking a longer route that added an additional 2 hours to the trip. We didn't think that this was a possibility. We also didn't understand that it could take up to 2 hours for our car to be unloaded from the ferry. Both of these delayers lead to us returning the rental car late. Not a huge deal, but something that I will keep in mind on future trips!
+The way back was a different story. The boat left Kodiak at 10:00pm and we would get to Homer the next morning. The weather was bad and the seas were ~12ft and there was a gale warning. The captain ended up taking a longer route that added an additional 2 hours to the trip. We didn't think that this was a possibility. We also didn't understand that it could take up to 2 hours for our car to be unloaded from the ferry. Both of these delays lead to us returning the rental car late. Not a huge deal, but something that I will keep in mind on future trips!
 
-You have two options for overnight ferrying. You can rent a stateroom(~$180), a non negotiable for my mom, or post up anywhere you can on the boat. This is the option I would have went with if I wad solo. You would want a sleeping pad and a bag at minimum. I would bring a head style bug net, the flies can get over welling, and some kind of tarp and towel to keep the moisture away from my area.
-<CenteredImage image={stateRoom} altText={'Tutstumena State Room'} title={'Tutstumena State Room'} width={1000} height={500} />
+You have two options for overnight ferrying. You can rent a stateroom(~$180), a non negotiable for my mom, or post up anywhere you can on the boat. This is the option I would have gone with if I was solo. You would want a sleeping pad and a bag at minimum. I would bring a head style bug net, the flies can get overwhelming, and some kind of tarp and towel to keep the moisture away from my area.
+<CenteredImage image={stateRoom} altText={'Tustumena State Room'} title={'Tustumena State Room'} width={1000} height={500} />
 
 Booking the ferry is a little tough but makes sense after you dive into it for a few minutes. Here is the site that handles all of the bookings!
 [Alaska Marine Highway][11]
 
-While waiting for the ferry ride back, I could tell that the weather was going to be a little rough, but I wanted to know how rough. The Windy app is all you really need. It will tell you the winds and the size of the waves! I also fond the NOAA puts out a high level forecast that does not require an app download.
+While waiting for the ferry ride back, I could tell that the weather was going to be a little rough, but I wanted to know how rough. The Windy app is all you really need. It will tell you the winds and the size of the waves! I also found the NOAA puts out a high level forecast that does not require an app download.
 [Windy][12]
 [NOAA Marine Forecast][13]
 
@@ -90,52 +80,53 @@ Yes.
 
 <CenteredImage image={car} altText={'Rav 4'} width={500} height={500} />
 
-I love biking, but this would have been a lot on a bike. You could defiantly get around town well on a bike but you would feel trapped unless you were ready to put in some bigger miles days on roads without a shoulder.
+If you didn't have a car you would be stuck in town the entire time. You can see the whole town in about three hours!
 
 ## Road System
 We were in a rented Toyota Rav4 and made it around just fine! The roads marked on the below map could be gravel but are well maintained.
 
-Hostly there isn't much here. There is one main road that has a few offshoots. The first day that we were there was absolutely gorgeous so we went out to Fossil Beach and then started the drive back to town. We added the Chiniak Highway to the route on the way back! Then we drove out to Anton bay the next afternoon. Then, we were out of places to drive. There isn't a ton here if you are just looking from the car.
-<CenteredImage image={roadMap} altText={'Kodiak Island Road Map'} title={'3 Corners'} width={500} height={500} />
+<CenteredImage image={roadMap} altText={'Kodiak Island Road Map'} title={'Road Map'} width={500} height={500} />
 
-**Biking**: I freaking love biking. All of the roads outside of the town of Kodiak are 2 lane highways without a shoulder. Defiantly not the most comfortable but I would ride it! It is only 48 Miles out to Fossil Beach! Which would be about 80% of the entire road system!
+Honestly there isn't much here. There is one main road that has a few offshoots. The first day that we were there was absolutely gorgeous so we went out to Fossil Beach and then started the drive back to town. We added the Chiniak Highway to the route on the way back! Then we drove out to Anton bay the next afternoon. Then, we were out of places to drive. There isn't a ton here if you are just looking from the car.
+
+**Biking**: I freaking love biking. All of the roads outside of the town of Kodiak are 2 lane highways without a shoulder. Definitely not the most comfortable but I would ride it! It is only 48 Miles out to Fossil Beach, which would be about 80% of the entire road system!
 
 ## Food
-You don't have many options, the only restraints are in Kodiak. Here is my down and dirty review:
+You don't have many options, the only restaurants are in Kodiak. Here is my down and dirty review:
 
 ### Breakfast
 1. [Harborside Coffee & Goods][4]: The best coffee shop in Kodiak!
-2. [Harborside Wheel Watch][9]: This is the only option for a drive through breakfast other the Mickey D's. It is good!
+2. [Harborside Wheel Watch][9]: This is the only option for a drive through breakfast other than Mickey D's. It is good!
 3. [Bean and Bloom Coffeehouse][5]: Okay coffee shop. The vibe isn't as good as Harborside
 
 ### Lunch
-1. [ANKO][14]: Listed as a Korean restraint on Google but this is more of a bakery. Sandwiches, pizza bread, ect. Get here early the best options go fast! Must hit!
+1. [ANKO][14]: Listed as a Korean restaurant on Google but this is more of a bakery. Sandwiches, pizza bread, etc. Get here early the best options go fast! Must hit!
 2. [Aquamarine][15]: They have a huge menu. I wouldn't tell anyone not to go here. However not a must visit.
 
 ### Dinner
-1. [Henry's][1]: this is an must hit! The fish and chips are great! Priced well for what you get. Close to the ferry terminal.
+1. [Henry's][1]: this is a must hit! The fish and chips are great! Priced well for what you get. Close to the ferry terminal.
 2. [The Chart Room][3]: In the Best Western. Overhyped but not bad. Was it really that good? ahh...
 3. [Kodiak Hana][6]: Good sushi! The inside is fancier than the outside.
-3. [Lani's][16]: Philipino BBQ food truck. Soooooo good. Hit this and then take it over to Island Brewing for a beverage.
+3. [Lani's][16]: Filipino BBQ food truck. Soooooo good. Hit this and then take it over to Island Brewing for a beverage.
 
 <CenteredImage image={lanis} altText={"Lani's Food Truck"} title={"Lani's Food Truck"} width={1000} height={500} />
 
 ### Breweries
-1. [Kodiak Island Brewing][7]: Good beer. I was supper excited to get merch from here but it all kinda sucked... Must visit!
+1. [Kodiak Island Brewing][7]: Good beer. I was super excited to get merch from here but it all kinda sucked... Must visit!
 2. [Double Shovel][8]: Good Cider. Nice atmosphere. More of a commercial vibe.
 
 ### Restaurants we didn't visit
 Some of the info on Google Maps is outdated. Some Restaurants might not be there!
-1. [Nuniaq][31]: Good beer. I was supper excited to get merch from here but it all kinda sucked... Must visit!
+1. [Nuniaq][31]: Looked good to my but for some reason my mom did not want to go here.
 2. [Kodiak Island Brewing Food Truck][7]: I think this was Thai Food? It looked good!
-3. [Village Bar][34]: Probably and interesting bar. Not really the place to take your mom.
+3. [Village Bar][34]: Probably an interesting bar. Not really the place to take your mom.
 4. [The Mecca][33]: Again not mom friendly. This is the only shitty bar I'm sad that I didn't visit.
 5. [Tony's][32]: This might actually be closed...
 
 After writing this I realize that there actually are a decent amount of options. Some of which may not be listed. haha
 
 ## Groceries
-1. [Cactus Flats Health Food][17]: A hippy grocery story where you can buy soap and fancy chocolate and shit... Surprisingly a ton of variety. Similar to the [Blue Market][30] in Anchorage!
+1. [Cactus Flats Health Food][17]: A hippy grocery store where you can buy soap and fancy chocolate and shit... Surprisingly a ton of variety. Similar to the [Blue Market][30] in Anchorage!
 2. [Safeway][18]: As expected.
 3. [Walmart][19]: As expected.
 
@@ -143,8 +134,8 @@ After writing this I realize that there actually are a decent amount of options.
 There are plenty of options to hike on the island. There are also some great spots to hike/walk/run in town! My mom and I mainly focused on the close to town hikes:
 1. [Fort Abercrombie][20]: Pretty cool!
 2. [Miller Point][21]: Great views of the ocean and marine life
-3. [Northend][22] / [Rotery Park][23] / [South End Trails][24]: All are on near island and hook together. Just separate parking locations
-There are a tone more options but I would say these are easy and pretty much in town!
+3. [Northend][22] / [Rotery Park][23] / [South End Trails][24]: All are on nearby island and hook together. Just separate parking locations
+There are a ton more options but I would say these are easy and pretty much in town!
 <CenteredImage image={fort} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
 
 ## Museums
@@ -152,10 +143,10 @@ The museums are cool, but I would probably save them for a rainy day. If it some
 1. [Kodiak History Museum][25]: $10 entry fee. Probably my favorite museum on the island.
 2. [Alutiiq Museum][26]: $10 entry fee. Cool but not a must visit.
 3. [Kodiak National Wildlife Refuge Visitor Center][27]: Fee! Kinda cool but worth it for what you pay!
-4. [Kodiak Maritime Museum][28]: This is not a museum! It is miss labeled on Google Maps!
+4. [Kodiak Maritime Museum][28]: This is not a museum! It is mislabeled on Google Maps!
 
 ## Gear Shops
-[Flow][29]: The owner is a supper cool dude. If I needed anything I would head here.
+1. [Flow][29]: The owner is a super cool dude. If I needed anything I would head here.
 
 ## Wildlife
 Hanging out by the ocean for an extended period of time is the best advice I can offer. Bring a book, it is the only strategy I know!
@@ -168,12 +159,14 @@ Just go to the dump bro...
 The Ferry is probably your best bet. We saw plenty from the beaches too though.
 
 ### Sea Lions
-The ferry or the main harbor down town. I was reading (Dostoevsky of course this is Russia man!) on a bench by the harbor for about an hour when all of a sudden a massive sea lion surfaced. It was insane!
+The ferry or the main harbor downtown. I was reading, Dostoevsky of course this is Russia man, on a bench by the harbor for about an hour when all of a sudden a massive sea lion surfaced. It was insane!
 <CenteredImage image={seaLion} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
 
 ### Deer
 So cool to see some deer in Alaska. They are everywhere!
 <CenteredImage image={deer} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+
+We were on the island for 3 full days and that ended up being plenty. Unless you are going for some specific purpose, I wouldn't say that you need to stay for any longer. The beaches here are awesome! The marine life is awesome! Kodiak Island is awesome!
 
 
 <PhotoCarousel 
@@ -195,14 +188,7 @@ So cool to see some deer in Alaska. They are everywhere!
     options={{loop: true}} 
 />
 
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
-<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
-
 </MdxLayout>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 
 [1]: https://maps.app.goo.gl/fmbZaeQF2MEZSaWy7
