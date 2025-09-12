@@ -9,7 +9,7 @@ export const postMetadata = {
     description:"Complete Tune M1 roof ladder installation guide with step-by-step instructions, tools needed, and mounting tips for easy roof access on your truck camper.",
     keywords: ['Tune M1', 'roof ladder', 'camper ladder', 'truck camper ladder', 'roof access', 'camper roof ladder', 'Tune ladder install', 'camper modification', 'roof mounting', 'camper accessories', 'DIY camper ladder'],
     tags: ['Tune M1', 'Roof Ladder', 'Installation', 'DIY Guide', 'Camper Accessories'],
-    isActive: false,
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -46,18 +46,56 @@ import {
 import featureImage from "@/public/blog/nash-browns/thumbnail.png";
 
 <ImageFeature
-    title='Tune M1 Cold Weather Performance'
+    title='Tune Ladder Installation'
     image={featureImage}
 />
 
-<BlogStatsSection>
-    <Stat title={'TITLE'} stat={'value'} icon={faReact}/>
-</BlogStatsSection>
-
 
 <MdxLayout>
+I decided not to buy the ladder from Tune. This ended up being a bad decision. There isn't much information out there on the dementions for what ladder is needed and I hope this helps!
 
-# This is the template
+# Ladder Options
+
+### Tune Ladder Kit
+The ladder kit from Tune is probably the way to go. You can purchase the kit directly from Tune. [Ladder Kit][1]
+
+
+### Tune Hooks With Third Party Ladder
+You can buy the hooks from Tune without the ladder here ->  [Tune Hooks][2]
+
+3rd party ladder options
+
+* Options 1 
+* Options 2 
+* Options 3
+* You can actually just buy the ladder from Tune as well -> [Tune Ladder][3]
+
+I ended U up with the Coso 12.5 foot ladder.
+
+# Truck Measurements
+All measurments were taken using a 2022 Toyota Tacoma. I would assume there would be similar to a full sized truck but not exact.
+
+<TwoColums>
+<div>
+### Camper Closed
+It is 7 feet from the ground to the hooks when the camper is closed
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+</div>
+
+<div>
+### Camper Open
+It is 9' 6" feet from the ground to the hooks when the camper is open
+<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
+</div>
+
+</TwoColums>
+<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={'h-2/3'} height={'w-2/3'} />
+
+# Final Thoughts
+I should have just bought the ladder from Tune. The searching just isn't worth it.
+
+
+
 [Kansas River Hazard Information][1]
 
 <CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={'h-2/3'} height={'w-2/3'} />
@@ -65,7 +103,9 @@ import featureImage from "@/public/blog/nash-browns/thumbnail.png";
 
 </MdxLayout>
 
-[1]: /blog/articles/artical-template
+[1]: https://www.tuneoutdoor.com/product/ladder-kit
+[2]: https://www.tuneoutdoor.com/product/ladder-brackets
+[3]: https://www.tuneoutdoor.com/product/ladder
 
 <h1>This article is all about the heater</h1>
 
