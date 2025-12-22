@@ -1,0 +1,104 @@
+import { generateMetadata } from '@/lib/seo';
+
+export const postMetadata = {
+    title: "Tune M1 Ladder Installation Guide",
+    published: "2024-12-01",
+    updated: "2024-12-01",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-ladder-installation%2Ffeature-image%20(1).png?alt=media&token=721f38ba-f544-40b0-8dcb-5793f1c2f30e',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-ladder-installation%2Ffeature-image%20(1).png?alt=media&token=721f38ba-f544-40b0-8dcb-5793f1c2f30e',
+    description:"Complete Tune M1 roof ladder installation guide with step-by-step instructions, tools needed, and mounting tips for easy roof access on your truck camper.",
+    keywords: ['Tune M1', 'roof ladder', 'camper ladder', 'truck camper ladder', 'roof access', 'camper roof ladder', 'Tune ladder install', 'camper modification', 'roof mounting', 'camper accessories', 'DIY camper ladder'],
+    tags: ['Tune M1', 'Roof Ladder', 'Installation', 'DIY Guide', 'Camper Accessories'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    OneColumn,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    Footer, 
+    TravelFeature, 
+    Gif, 
+    BlogMapWrapper,
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    StravaEmbed,
+    BlackTieTitle,
+    PhotoCarousel,
+} from '@/components/blog'
+
+import { 
+    ReflectiveInsulation,
+} from '@/products/product-links'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faReact,
+    faShopify,
+} from '@fortawesome/free-brands-svg-icons';
+
+export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-ladder-installation%2Ffeature-image%20(1).png?alt=media&token=721f38ba-f544-40b0-8dcb-5793f1c2f30e";
+export const camperOpen = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-ladder-installation%2Fcamper-open.jpeg?alt=media&token=342921e5-294f-4b7e-ba9c-3a0b4a6eda3e";
+export const camperClosed = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-ladder-installation%2Fcamper-closed.jpeg?alt=media&token=d151c14a-d085-49a9-82e0-b94be9898512";
+
+<ImageFeature
+    title='Tune Ladder Installation'
+    image={featureImage}
+/>
+
+
+<MdxLayout>
+I decided not to buy the ladder from Tune. This ended up being a bad decision. There isn't much information out there on the dementions for what ladder is needed and I hope this helps!
+
+# Ladder Options
+
+### Tune Ladder Kit
+The ladder kit from Tune is probably the way to go. You can purchase the kit directly from Tune. [Ladder Kit][1]
+
+
+### Tune Hooks With Third Party Ladder
+You can buy the hooks from Tune without the ladder here ->  [Tune Hooks][2]
+
+3rd party ladder options
+
+* [TeleStep][4] (Recommended)
+* [Coso 12.5][5]
+* [Tune Ladder][3]  You can actually just buy the ladder from Tune as well! This is the ladder only not the kit with the hooks!
+
+I ended up with the Coso 12.5 foot ladder, but then ended up getting the TeleStep 10.5 foot ladder. The TeleStep ladder is a far better choice
+
+# Truck Measurements
+All measurements were taken using a 2022 Toyota Tacoma. I would assume there would be similar to a full sized truck but not exact.
+
+<TwoColumn>
+<div>
+### Camper Closed
+It is 7 feet from the ground to the hooks when the camper is closed
+<CenteredImage image={camperClosed} altText={'Tune M1 Closed'} width={'500'} height={'500'} />
+</div>
+
+<div>
+### Camper Open
+It is 9' 6" feet from the ground to the hooks when the camper is open
+<CenteredImage image={camperOpen} altText={'Tune M1 Open'} width={'500'} height={'500'} />
+</div>
+
+</TwoColumn>
+
+# Final Thoughts
+I should have just bought the ladder from Tune. The searching just isn't worth it. I ended up bringing the 10.5 foot Telestep home and it was exactly what I needed.
+
+</MdxLayout>
+
+[1]: https://www.tuneoutdoor.com/product/ladder-kit
+[2]: https://www.tuneoutdoor.com/product/ladder-brackets
+[3]: https://www.tuneoutdoor.com/product/ladder
+[4]: https://telestepsladders.com/products/10-5ft-telescoping-extension-ladder-1400e
+[5]: https://www.amazon.ca/Telescoping-Lightweight-Stabilizers-Multi-Purpose-Collapsible/dp/B09SKZ7WD7/ref=asc_df_B09SKZ7WD7?mcid=366bcb5f1a9d3b2bbf61193a071f0957&tag=googleshopc0c-20&linkCode=df0&hvadid=706725384639&hvpos=&hvnetw=g&hvrand=6576857640357880248&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001307&hvtargid=pla-1637078009170&hvocijid=6576857640357880248-B09SKZ7WD7-&hvexpln=0&gad_source=1&th=1
