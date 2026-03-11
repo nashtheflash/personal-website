@@ -4,9 +4,6 @@ import { NavBar } from "@/components/general"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
 
-//Firebase
-import { GoogleAnalytics } from '@next/third-parties/google'
-
 //Auth
 import { AuthProvider } from "@/lib/firebase"
 
@@ -33,7 +30,6 @@ export default async function RootLayout({ children }) {
                     </AuthProvider>
                     <SpeedInsights />
                     <Analytics/>
-                    <GoogleAnalytics gaId={process.env.MEASUREMENT_ID} />
                 </AddBackground>
             </body>
         </html>
