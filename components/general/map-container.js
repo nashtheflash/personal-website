@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getTrack } from "./server-action";
-import MapBox from "./mapbox";
+import dynamic from 'next/dynamic';
+
+const MapBox = dynamic(() => import('./mapbox'), { ssr: false });
 
 export default function Map({mapHeight, data}) {
     const [trackData, setTrackData] = useState();

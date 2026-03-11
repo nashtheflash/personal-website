@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic';
+
 export { MdxLayout } from "./mdx-layout";
 export { MdxPageWidth } from "./mdx-layout";
 
@@ -38,7 +40,7 @@ export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
 export { ThreeCenteredImages } from "./images/three-centered-images"
 export { PhotoCarousel } from "./images/photo-carousel/photo-carousel"
-export { ThreeSixtyImage } from "./images/three-sixty-image"
+export const ThreeSixtyImage = dynamic(() => import('./images/three-sixty-image').then(m => m.ThreeSixtyImage), { ssr: false })
 
 //Videos
 export { BasicVideo } from './videos/basic-video';
@@ -67,7 +69,7 @@ export { StravaGarmin } from "./activity-trackers/strava-garmin";
 export { BlackTieTitle } from "./section-headers/black-tie";
 
 //Charts
-export { LineGraph } from "./charts/line-chart";
+export const LineGraph = dynamic(() => import('./charts/line-chart').then(m => m.LineGraph), { ssr: false });
 
 //Forms
 export { ContactUs } from "./forms/contact-us";
