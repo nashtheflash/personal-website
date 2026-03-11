@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { chewy } from "@/lib/fonts";
 
 export function HashBrownsLoader({loadingText, color}) {
     return (
@@ -20,7 +19,7 @@ export function HashBrownsLoader({loadingText, color}) {
                     className='animate-spin-smooth mt-0'
                 />
             </div>
-            <p className={`${chewy.className} ${color == 'white' ? 'text-white' : 'text-black'}`}>{loadingText}</p>
+            <p className={`font-inter ${color == 'white' ? 'text-white' : 'text-black'}`}>{loadingText}</p>
         </div>
     )
 }
