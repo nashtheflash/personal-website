@@ -63,7 +63,7 @@ export { LinkNewTab } from "./links/link-new-tab";
 
 //Activity Trackers
 export { StravaEmbed } from "./activity-trackers/strava-embed";
-export { StravaGarmin } from "./activity-trackers/strava-garmin";
+export { Strava } from "./activity-trackers/strava";
 
 //Headings
 export { BlackTieTitle } from "./section-headers/black-tie";
