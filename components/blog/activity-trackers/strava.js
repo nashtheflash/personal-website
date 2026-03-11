@@ -1,8 +1,19 @@
 'use client'
 
-import Script from 'next/script';
+import { useEffect } from 'react';
+
+const STRAVA_SCRIPT_SRC = 'https://strava-embeds.com/embed.js';
 
 export function Strava({ stravaId }) {
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = STRAVA_SCRIPT_SRC;
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => script.remove();
+    }, [stravaId]);
 
     return (
         <div className="flex justify-center w-full">
@@ -12,7 +23,6 @@ export function Strava({ stravaId }) {
                 data-style="standard"
                 data-from-embed="false"
             />
-            <Script src="https://strava-embeds.com/embed.js" />
         </div>
     );
 }
