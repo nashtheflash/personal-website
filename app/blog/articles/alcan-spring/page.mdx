@@ -9,7 +9,7 @@ export const postMetadata = {
     description:"Is your Toyota Tacoma sagging under a Tune M1 camper? Custom Alcan leaf springs are the fix. Guide covers ordering, truck weighing, install results, and after care.",
     keywords: ['Alcan Spring', 'Toyota Tacoma', 'Rear End Sag', 'Tune M1', 'Tune M1 Sag', 'Tune M1 Suspension', 'Tune M1 Leaf Springs', 'Custom Leaf Springs', 'Truck Camper Sag', 'Tacoma Camper Sag', 'Tacoma Sagging', 'Tacoma Overloaded Springs', 'Truck Camper Leaf Springs', 'Leaf Spring Upgrade'],
     tags: ['Toyota Tacoma', 'Tune M1', 'Suspension', 'Leaf Springs', 'Truck Build', 'Install Guide', 'Overlanding', 'Camping'],
-    isActive: false,
+    isActive: true,
 };
 
 export const metadata = generateMetadata({...postMetadata});
@@ -47,7 +47,7 @@ import {
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Ffeature-image.jpeg?alt=media&token=6bfbe3ee-a2bc-46e5-88df-b7f23f0be907";
 export const alcanSpringAfterCare = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Falcan-spring-after-care.jpg?alt=media&token=cc98cadf-a40c-417f-a703-bc8dfc293d65";
-export const alcanSpringInvoice = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Falcan-spring-invoice.jpg?alt=media&token=9fb3c35e-74ba-4427-a265-df8a36612e60";
+export const alcanSpringInvoice = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Falcan-spring-invoice-blackout.jpg?alt=media&token=eb698d39-6044-4f9b-a53f-2775391bbbe4";
 export const alcanSpringRecipt = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Falcan-spring-recipt.jpg?alt=media&token=586354c5-1790-4e32-9045-82cb3d622e81";
 export const liftBlock2 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Flift-block-2.jpeg?alt=media&token=6b1b4495-2272-4d95-9fc2-c5c6ea9c2cfd";
 export const liftBlock = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Flift-block.jpeg?alt=media&token=f154a61b-3d95-4d32-840e-3fab80ac7d8b";
@@ -71,66 +71,82 @@ export const truckBefore = "https://firebasestorage.googleapis.com/v0/b/nash-bro
 export const weightTicketBack = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Fweight-ticket-back.jpg?alt=media&token=bad50841-fcb7-4e38-a9b8-737fbf3fad65";
 export const weightTicketFront = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Fweight-ticket-front.jpg?alt=media&token=cf47c4ba-bca9-47f7-bee7-8dba936b8304";
 export const weightTicketWeights = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Fweight-ticket-weights.jpg?alt=media&token=f108a7f7-7f08-43a0-a0f2-ffd5353cfa39";
+export const bamf = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/alcan-spring%2Fbamf-hd-hangers.jpg?alt=media&token=062d651a-1405-4912-aa4f-f2d8dc2d24e9";
 
 <ImageFeature
     title='Alcan Spring Installation'
     image={featureImage}
 />
 
-
 <MdxLayout>
 
 <TLDR
-text="After installing the Tune M1 on my Toyota Tacoma, the rear end was definitely sagging. This actually didn't seem like a huge problem, until I fixed it." 
+text="After installing the Tune M1 on my 3rd Gen Toyota Tacoma, the rear end was definitely sagging. This actually didn't seem like a huge problem, until I fixed it." 
 />
 
-<ImageDiff imageBefore={truckBefore} imageAfter={truckAfter}/>
+<ImageDiff imageBefore={truckBefore} imageAfter={truckAfter} beforeAltText="Tacoma Before Alcan Spring Install" afterAltText="Tacoma After Alcan Spring Install"/>
 
 So ya. A bit of a difference!!
 
 ## Process
-Keep in mind that the springs are custom made for your truck. The process is pretty straight forward and emailing the guys over at Alcan Spring directly is easy and they are happy to help! Here is an outline so you know what you are getting yourself into:
+Keep in mind that the springs are custom made in the USA for your truck by Alcan Spring. The process is pretty straightforward! Start by emailing the guys over at Alcan Spring directly with the following information:
 
-### 1. Truck information
+### 1. Basic Truck Information
 You need to have all the information for the truck that you are upfitting!
 - Year
 - Make
 - Model
 - VIN
 
-### 2. Weight Your Truck
-I wish that I would have gotten my truck weight before installing the Tune M1, but I didn't know how easy it was! Knowing the weight of your truck, with the normal gear inside, is critical for the guys over at the shop to recommend the correct spring. I recommend going to a [CAT Scale][2]. They can be found at almost any truck stop in the United States. Just pull onto the scale and they will give you a sheet that looks like this:
+### 2. Weigh Your Truck
+<TwoColumn>
 
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+I wish that I would have gotten my truck weight before installing the Tune M1, but I didn't know how easy it was! Knowing the weight of your truck, with the normal gear inside, is critical for the guys over at the shop to recommend the correct spring. I recommend going to a [CAT Scale][1]. They can be found at almost any truck stop in the United States. Just pull onto the scale and they will give you a sheet that looks like this:
 
-What you are looking for is the axle weight — provide that to the guys over at Alcan.
+<CenteredImage image={weightTicketFront} altText={'CAT Weight ticket Toyota Tacoma with Tune M1'} title={'CAT Weight Ticket'} width={600} height={600} />
 
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+</TwoColumn>
+
+What you are looking for is the axle weight. Provide that to the guys over at Alcan.
+<CenteredImage image={weightTicketWeights} altText={'CAT Scale Weight Ticket Axle Weights Toyota Tacoma'} title={'Axle Weights'} width={500} height={500} />
+
+
 
 ### 3. Lift
-If your truck has been lifted you should provide that information to Alcan. In my case, the truck had a 1.5" lift. They were able to remove the blocks and have the springs provide the lift instead!
+If your truck has been lifted, you should provide that information to Alcan. In my case, the truck had a 1.5" lift. They were able to remove the blocks and have the springs provide the lift instead!
 
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+<TwoCenteredImages image={[liftBlock, liftBlock2]} altText={['Toyota Tacoma Lift Blocks', 'Toyota Tacoma 1.5" Lift Block']} titles={['Lift Blocks', '1.5" Lift']} width={300} height={300} />
 
-# Result
-I am really happy with the result. I tried my best to photograph the difference but the pictures really don't do it justice. The following issues went away after getting the new springs:
+## Result
+I am really happy with the result. The following issues went away after getting the new springs:
+
+### Ride Quality
+I was expecting the truck to ride quite a bit rougher, but it was the opposite. The truck rides way better! I think that the springs were so overloaded that they were bottoming out and unable to absorb the bumps as designed.
+
+<CenteredImage image={oldSpring3} altText={'Toyota Tacoma Stock Springs'} title={'Stock Spring'} width={500} height={500} />
 
 ### Leveling
-I could tell an immediate difference when I got in the truck. I didn't even have to move. Just by looking over the hood, I could see that the truck was sitting way flatter.
+This was actually what I was most excited about fixing! I think that the truck looks much better without the squat. I could tell an immediate difference when I got in the truck. I didn't even have to move. Just by looking over the hood, I could see that the truck was sitting way flatter.
 
-### Yawing
-I was expecting the truck to ride quite a bit rougher, but it was almost the opposite. The truck rides way better — there’s a lot less yawing side to side. It rides straight down the road without tilting side to side.
+<CenteredImage image={truckAfter} altText={'Toyota Tacoma after Alcan Spring Install'} title={'After Shot'} width={500} height={500} />
+
+
+### Yawing / Rolling
+There’s a lot less yawing/rolling side to side. I didn't realize to what extent this was happening until the new springs were installed.
 
 ### Bucking
-The bridge over the lake near San Francisco between Half Moon Bay and Livermore is an example of a road that used to cause bucking but no longer does.
+I found that some roads with rhythmic rolling bumps would cause the truck to "buck". Interstate 229 south of Sioux Falls and the San Mateo Bridge near San Francisco instantly come to mind. Slowing down and varying speed were the only options to make the bucking stop. I have driven both sections of road post install and they do not cause the truck to buck anymore!
 
 ### Bouncing
-Hitting rolling bumps on the road caused a lot less bouncing that was really noticeable getting on and off bridges. The camper bounce is a lot less just going down the road. Wind seems to affect it less. I feel like it just can’t get into a rhythm because the springs are a lot heavier.
+Similar to bucking, bouncing is a single bump/jolt. Think getting on and off bridges or hitting a pothole. The truck's leaf springs would feel like they were bottoming out in these scenarios. After installing the Alcan Springs, the truck acts like it did before installing the Tune M1.
+
+### Camper Movement
+Right after the camper was installed I was watching it through the sunroof. The front would move up and down almost continuously. I learned to ignore it and it never caused an issue. Once I got the springs installed it pretty much went away. It still moves some, but it seems to move a little then stop. An unexpected surprise!
 
 ### Summary
-I honestly thought that the side effects above were just the result of getting a new camper and that they weren't going anywhere. I was shocked by the result to say the least. I can't find any negative side effects to adding the springs.
+I thought that the above issues were just the result of getting a new camper and that they weren't going anywhere. I was shocked by the result to say the least. I can't find any negative side effects to adding the springs.
 
-# After Care
+## After Care
 I wish the team over at Alcan would have let me know that there would be some work required by me after the install. I was lucky because I ended up having the tools needed, but it was just that, luck!
 
 Here are the recommended things to do after install:
@@ -146,30 +162,29 @@ Tools:
 - Deep well Socket set with big sizes!
 - Ratchet
 
-Big and deep sockets are definitely worth mentioning again. The bolts are long, I was lucky to have a pass through socket set, and the biggest socket was the needed 7/8ths. The "Spring Bolts" are another story. The bolts are huge, and I did not have the appropriate socket or adjustable wrench. Lucky, they never backed off their marks.
+Big and deep sockets are definitely worth mentioning again. The bolts are long, I was lucky to have a pass through socket set, and the biggest socket was the needed 7/8ths. The "Spring Bolts" are another story. The bolts are huge, and I did not have the appropriate socket or adjustable wrench. Luckily, they never backed off their marks.
 
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
+<CenteredImage image={alcanSpringAfterCare} altText={'Alcan Spring After Care Instructions'} title={'After Care Instructions'} width={500} height={500} />
 
 Don't skip this step!!! My U-bolts definitely needed tightening! It only takes about 5 minutes.
 
-# Cost Breakdown
-Here is the full cost breakdown of the upgrade. Keep in mind that you must pay for the springs before they are made, then pay for the install on site the day it happens.
+## Cost Breakdown
+The total cost was **$1,668.80**. A little pricey but I plan to keep the rig for some time! I could have saved **$514.33** by installing them myself. Unfortunately I don't have a shop available to use right now!
 
-# Other Upgrades
-Alcan recommended that I upgrade the shackles next. I honestly wish they would have done this before the install because I might have just had them do it at the same time. They just really know what they are talking about and I trust them!
+<CenteredImage image={alcanSpringInvoice} altText={'Alcan Spring Invoice'} title={'Alcan Spring Invoice'} width={500} height={500} />
 
-# Alcan Spring Contact Information
+## Other Upgrades
+Alcan recommended that I upgrade the shackles and hangers to [BAMF HD Hangers & Shackles][2] next. They said this would stiffen up the rear of the truck even more. I am 90% highway 10% off road so I'm not sure if this is necessary. I honestly wish they would have done this before the install because I might have just had them do it at the same time. They just really know what they are talking about and I trust them!
+<CenteredImage image={bamf} altText={'BAMF HD Hanger'} title={'BAMF HD Hanger'} width={500} height={500} />
+
+<br/>
+
+## Alcan Spring Contact Information
 - Website: https://www.alcanspring.com/
 - Email: sales@alcanspring.com
 - Phone: 970-241-2655
 
-<BlogMapWrapper mapUrl="https://maps.app.goo.gl/xEDT8UMjAps2Js4c6" />
-
-
-[Kansas River Hazard Information][1]
-
-<CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
-<TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
+<BlogMapWrapper mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6191.950016959645!2d-108.63978542407497!3d39.107039134307136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874702a33a3d710f%3A0xdbc8edae75bf8284!2sALCAN%20SPRING!5e0!3m2!1sen!2sus!4v1780002964389!5m2!1sen!2sus" />
 
 </MdxLayout>
 <br/>
@@ -178,5 +193,5 @@ Alcan recommended that I upgrade the shackles next. I honestly wish they would h
 <br/>
 <br/>
 
-[1]: /blog/articals/artical-template
-[2]: https://catscale.com/
+[1]: https://catscale.com/
+[2]: https://www.bayareametalfab.com/2005-2023-Toyota-Tacoma-HD-Shackle-Hanger_p_82.html?srsltid=AfmBOop7xdRf46gKSstc-jTziCSt8ivts4y7VCVa2cogY1fBqM6gaC_n
