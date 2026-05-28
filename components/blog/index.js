@@ -40,6 +40,7 @@ export { CenteredImage } from "./images/centered-image";
 export { TwoCenteredImages } from "./images/two-centered-images"
 export { ThreeCenteredImages } from "./images/three-centered-images"
 export { PhotoCarousel } from "./images/photo-carousel/photo-carousel"
+export { ImageDiff } from "./images/image-diff"
 export const ThreeSixtyImage = dynamic(() => import('./images/three-sixty-image').then(m => m.ThreeSixtyImage), { ssr: false })
 
 //Videos
