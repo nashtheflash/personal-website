@@ -10,8 +10,6 @@ export async function RelatedArticles({ title, description, articles = [], curre
     })
   );
 
-    console.log(articleData);
-
   return (
     <div className="w-full">
       <h2 className="text-center font-mono">{title}</h2>

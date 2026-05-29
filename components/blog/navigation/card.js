@@ -11,9 +11,9 @@ export function ActiveCard({ articles = [] }) {
     <div className="relative w-full h-48 sm:h-96 overflow-hidden px-2 sm:px-0">
       <div className="absolute inset-0 flex justify-center items-center">
         {articles.map((article, i) => {
-          const src = typeof article.thumbnail === 'string' 
-            ? article.thumbnail 
-            : article.thumbnail?.src;
+          const src = typeof article.thumbnailIllustration === 'string' 
+            ? article.thumbnailIllustration 
+            : article.thumbnailIllustration?.src;
 
           const isExpanded = hoveredIndex === i;
 

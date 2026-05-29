@@ -21,7 +21,7 @@ export async function ContinueReading({articleOne, articleTwo, articleThree}) {
 }
 
 async function RelatedCard({article}) {
-    const {title, thumbnail, description} = await getSingleBlogPostMetadata(article);
+    const {title, thumbnail, thumbnailIllustration, description} = await getSingleBlogPostMetadata(article);
 
     return(
         <div className='w-full h-full rounded-2xl overflow-hidden'>
@@ -29,7 +29,7 @@ async function RelatedCard({article}) {
                 <figure className='relative w-full h-52 my-0'>
                     <Image
                         alt={`${title} Feature Image`}
-                        src={thumbnail}
+                        src={thumbnailIllustration ? thumbnailIllustration : thumbnail}
                         fill
                         sizes="(min-width: 808px) 50vw, 100vw"
                         style={{

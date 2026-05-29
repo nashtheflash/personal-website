@@ -19,20 +19,20 @@ export function YoutubeAd({videoID, description}) {
     const origin = 'origin=https://nashbrowns.com'
 
     return(
-        <div className="h-fit w-full my-6 sm:my-10 bg-gray-400 bg-[url('/textures/default-noise-8.png')] bg-repeat bg-[length:25px] sm:bg-[length:50px] border-[#d0cfcd] rounded-xl p-3 sm:p-6">
-            <div className="flex flex-col gap-3 sm:gap-5 md:flex-row justify-between items-center w-full">
+        <div className="h-fit w-full my-6 sm:my-8 bg-gray-400 bg-[url('/textures/default-noise-8.png')] bg-repeat bg-[length:25px] sm:bg-[length:50px] border-[#d0cfcd] rounded-xl p-3 sm:p-4">
+            <div className="flex flex-col gap-3 sm:gap-4 md:flex-row justify-between items-center w-full">
                 <div className='flex flex-col items-center justify-center md:justify-start md:items-start text-center md:text-left'>
-                    <h1 className='text-gray-700 mb-0 text-xl sm:text-3xl lg:text-5xl'>Rather Watch?</h1>
+                    <h1 className='text-gray-700 mb-0 text-xl sm:text-3xl lg:text-4xl'>Rather Watch?</h1>
                     <span className="text-sm sm:text-base">{description}</span>
                 </div>
                 <div className='flex flex-col items-center justify-center'>
-                    { width > 768 ? 
-                        <FontAwesomeIcon icon={faArrowRight} className='h-8 w-8 sm:h-12 sm:w-12'/> : 
-                        <FontAwesomeIcon icon={faArrowDown} className='h-8 w-8 sm:h-12 sm:w-12'/>
+                    { width > 768 ?
+                        <FontAwesomeIcon icon={faArrowRight} className='h-8 w-8 sm:h-10 sm:w-10'/> :
+                        <FontAwesomeIcon icon={faArrowDown} className='h-8 w-8 sm:h-10 sm:w-10'/>
                     }
                     <span className="text-xs sm:text-sm">Click the video to go to YouTube</span>
                 </div>
-                <div className="w-full max-w-full">
+                <div className="w-full md:w-[45%]">
                     <a href={videoURL} className='block'>
                         <div className='pointer-events-none w-full'>
                             <iframe 
