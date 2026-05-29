@@ -5,8 +5,8 @@ import { ActiveCard } from "./card";
 export async function RelatedArticles({ title, description, articles = [], currentView }) {
   const articleData = await Promise.all(
     articles.map(async (slug) => {
-      const { title, thumbnail, url } = await getSingleBlogPostMetadata(slug);
-      return { title, thumbnail, url: slug , current: slug == currentView ? true : false};
+      const { title, thumbnail, thumbnailIllustration, url } = await getSingleBlogPostMetadata(slug);
+      return { title, thumbnail, thumbnailIllustration, url: slug , current: slug == currentView ? true : false};
     })
   );
 
