@@ -1,0 +1,142 @@
+import { generateMetadata } from '@/lib/seo';
+
+export const postMetadata = {
+    title: "South Yuyanq' Ch'ex",
+    published: "2026-06-15",
+    updated: "2026-06-15",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-thumbnail-2.JPG?alt=media&token=bc60b0ac-d1e0-4db6-8da9-0aa6a4e996e3',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-1-thumbnail.jpg?alt=media&token=0abdefeb-af60-4311-a13e-590fc46adcaa',
+    description:"South Yuyanq' Ch'ex (formerly South Suicide Peak) is an easy non-technical climb near Anchorage, Alaska. Trip report with route beta, the Rabbit Lake ford, and photos.",
+    keywords: ["South Yuyanq' Ch'ex", "South Suicide Peak", 'Suicide Peaks', "Yuyanq' Ch'ex", "North Suicide Peak", 'Anchorage hiking', 'Anchorage mountains', 'Chugach State Park', 'Chugach Mountains', 'Rabbit Lake', 'Rabbit Lake ford', 'Rabbit Creek Trail', 'Alaska peak bagging', 'Alaska trip report', 'Chugach scrambling'],
+    tags: ['Alaska', 'Anchorage', 'Chugach State Park', 'Hiking', 'Mountaineering', 'Scrambling', 'Peak Bagging', 'Trip Report'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    TwoColumn,
+    CenteredImage, 
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    RelatedArticles,
+    ContinueReading,
+    Strava,
+} from '@/components/blog'
+
+import { 
+    faRoute,
+    faArrowTrendUp,
+    faArrowTrendDown,
+    faMountain,
+    faTimer,
+    faCalendarDays,
+    faLocationDot,
+    faPickaxe,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-yuyanq'-che'ex.jpeg?alt=media&token=c2535437-8e31-4355-a05c-359d61537fe3";
+export const drawing = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-route.jpg?alt=media&token=b542809f-319d-4f4f-9666-72cd442faaab";
+export const southTop = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-yuyanq'-che'ex-final-climb-3.jpeg?alt=media&token=ded20e7c-83d9-4736-8d09-0a497be932e7";
+export const backToTheBike = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fbike.jpg?alt=media&token=6adae6a0-dad3-44aa-9435-499190be56de";
+export const overview = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Foverview-pic.jpeg?alt=media&token=ad6da8af-a52a-4ebb-bf81-5bc355eab405";
+export const fromIndianhouse = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fform-indianhouse.jpeg?alt=media&token=bd52bed2-5f43-419b-ab03-ee3169104704";
+
+export const relatedArticleOne = '/blog/articles/pepper-peak';
+export const relatedArticleTwo = '/blog/articles/north-yuyanq-chex';
+export const relatedArticleThree = '/blog/articles/indianhouse';
+
+<ImageFeature
+    title="South Yuyanq' Ch'ex"
+    image={threeSixtyImage}
+    threeSixty={true}
+/>
+
+<BlogStatsSection>
+    <Stat title={'Distance (Mi)'} stat={'4.50'} icon={faRoute}/>
+    <Stat title={'Summit Elevation'} stat={'5,005'} icon={faMountain}/>
+    <Stat title={'Elevation Gain'} stat={'1,653'} icon={faArrowTrendUp}/>
+    <Stat title={'Elevation Loss'} stat={'1,712'} icon={faArrowTrendDown}/>
+    <Stat title={'Duration'} stat={'02:22:18'} icon={faTimer}/>
+    <Stat title={'Summit Date'} stat={'June 15, 2026'} icon={faCalendarDays}/>
+    <Stat title={'Difficulty'} stat={'Non-Technical'} icon={faPickaxe}/>
+    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/phoQa3ZMCeNTBYoC7" target="_blank">Sunny Side Flattop Trailhead</a>} icon={faLocationDot}/>
+</BlogStatsSection>
+
+<MdxLayout>
+
+<TLDR>
+South Yuyanq' Ch'ex (you-yonk cheh)(soft J's only), formerly known as South Suicide Peak, is an easy climb right outside of Anchorage. Apparently the Athabascan translation is 'Heaven’s Breath'. All that goofy stuff is above my pay grade. It would be terrible if someone looked at the name of the peak next to these. You can read more about it in this <a href="https://alaskabeacon.com/briefs/a-two-year-drive-successfully-renames-two-southcentral-alaska-mountains/" target="_blank" rel="noopener noreferrer" className="underline">Alaska Beacon Article</a>.
+</TLDR>
+
+<RelatedArticles 
+    title={'Self Harm Traverse'}
+    description={"The traverse can't be renamed unfortunately :("}
+    articles={['/blog/articles/north-yuyanq-chex', '/blog/articles/south-yuyanq-chex']}
+    currentView={'/blog/articles/south-yuyanq-chex'}
+/>
+
+This one starts on the saddle after summiting North Yuyanq' Ch'ex. You can read all about the approach [here][1]. The main idea is that I took the yellow line up and the blue line down. 
+<CenteredImage image={drawing} altText={"Route drawing of South Yuyanq' Ch'ex showing the yellow ascent line and blue descent line"} title={'The Route'} width={1000} height={1000} />
+
+From the saddle up to the summit couldn't be any easier. You can see the whole path. However, the path is very annoying. Up to the top of the gully, which I eventually used to get back down to Rabbit Lake, it's pretty easy and what you would expect, but above the gully the rocks get bigger and are annoying to get through.
+<CenteredImage image={southTop} altText={"The final rocky climb to the summit of South Yuyanq' Ch'ex above the gully"} title={'The Summit Block'} width={1000} height={1000} />
+
+<TwoColumn>
+<div>
+
+I summited the peak and immediately realized one thing: the ice bridge that I crossed earlier in the day was no more. I knew it was going to be cold to get back across. I hoped that it was even possible! Almost instantly I wondered how soft the snowy section at the bottom of the gully was.
+
+After some more food I headed down. The portion above the gully is equally as annoying to descend, if not more so. Then I entered the top of the gully. Honestly, not my favorite gully, but before I knew it I was at the bottom. The snowy sections were softer than they were earlier in the day, but still fine!
+
+I started crossing the flat section back to my bike. The melted snow had turned this into a swamp, so many post holes. My feet were quickly soaked. Nevertheless, I quickly got to my bike.
+
+Unfortunately, I didn't get as many photos or videos of this as I would have liked because, well, I was a little nervous haha. Nothing like something new to get you to focus on the task at hand. I had never forded with a bike. The water wasn't especially deep, I think it hit my knees once, but it was moving and probably 20-30 ft across.
+
+</div>
+
+<CenteredImage image={backToTheBike} altText={'Fording the river back to my bike below Rabbit Lake'} title={'The Ford'} width={500} height={500} />
+</TwoColumn>
+
+
+It only took one attempt to get across. The main thing I learned was that the bike wanted to "flag" around once I got about a quarter of the way across the river. I was just taking my time, and was able to start side stepping and point the front wheel upriver and let the river push the back wheel around.
+
+<CenteredImage image={overview} altText={"View of North and South Yuyanq' Ch'ex rising above Rabbit Lake"} title={'The Objective'} width={800} height={800} />
+
+I think this crossing would be mandatory to get over to the mountains, but you could also maybe walk around the back of the lake? Also, this would be very dependent on the time of year. It appears I was there on the day that most of the snow bridges melted, June 15. Earlier, you could probably snow bridge. Late August, there might not be much of a river and you could just walk on the natural dam at the southernmost portion of the lake. Who knows though.
+
+## From the Back
+Here is a bounce pic from the summit of Indianhouse! I climbed it a few days later! This would be the approach from the Falls Creek side.
+<CenteredImage image={fromIndianhouse} altText={"North and South Yuyanq' Ch'ex viewed from Indianhouse Peak on the Falls Creek side"} title={'From Indianhouse'} width={800} height={800} />
+
+
+<Strava
+    stravaId='18937835762'
+    garminId='19565668335'
+/>
+
+## GPX Files:
+Here are the files from the trip. I had to do a little editing because I recorded this as a multi-sport activity (Bike, Mountaineering, Bike).
+1. The Raw Files -> [Bike Approach][2], [Climbing][3], [Bike Back to Trailhead][4]
+2. Clean Full File -> [Clean File][5]
+3. Just South Yuyanq' Ch'ex -> [South Yuyanq' Ch'ex][6]
+
+
+<ContinueReading 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
+
+</MdxLayout>
+
+[1]: /blog/articles/north-yuyanq-chex
+[2]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fraw-bike-approach.gpx?alt=media&token=4c240dce-4e69-48ec-a9a3-43e82d795c1e
+[3]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fraw-mountaineering.gpx?alt=media&token=1ef66ca5-c11c-435a-8199-5e7e675978c0
+[4]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fraw-back-to-trailhead.gpx?alt=media&token=ccee1cdf-e290-436c-9afa-ab1afe28a886
+[5]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fnorth-and-south-suicide.gpx?alt=media&token=109bfce4-718d-41ab-ab6d-7e6eb698e4c6
+[6]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/north-south-yuyanq-cheex%2Fsouth-file.gpx?alt=media&token=6794194d-8eaf-4004-a416-7f164c3acdb2

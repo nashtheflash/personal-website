@@ -1,0 +1,195 @@
+import { generateMetadata } from '@/lib/seo';
+
+export const postMetadata = {
+    title: "Indianhouse",
+    published: "2026-06-20",
+    updated: "2026-06-20",
+    author: 'Nash Bostwick',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fthumb-1-original.jpg?alt=media&token=77c1a243-abcf-4072-9f53-02a7439cdf5f',
+    thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fthumb-1.jpg?alt=media&token=1b5d6e58-b083-48b9-8265-a70210a2867c',
+    description:"Indianhouse is a steep, off-trail scramble above Turnagain Arm near Anchorage, Alaska. Trip report with route beta for the woods, ridge, sidehill, and gully.",
+    keywords: ['Indianhouse', 'Indianhouse Mountain', 'Indianhouse peak', 'Anchorage hiking', 'Anchorage mountains', 'Turnagain Arm', 'Chugach State Park', 'Chugach Mountains', 'off-trail scramble', 'Alaska scrambling', 'Alaska peak bagging', 'Seward Highway hikes', 'mountain goats Alaska', 'Alaska trip report'],
+    tags: ['Alaska', 'Anchorage', 'Turnagain Arm', 'Chugach State Park', 'Hiking', 'Mountaineering', 'Scrambling', 'Peak Bagging', 'Trip Report'],
+    isActive: true,
+};
+
+export const metadata = generateMetadata({...postMetadata});
+
+import { 
+    MdxLayout,
+    TwoColumn,
+    CenteredImage, 
+    TwoCenteredImages, 
+    TLDR,
+    BlogStatsSection,
+    Stat,
+    ImageFeature,
+    ContinueReading,
+    Strava,
+} from '@/components/blog'
+
+import { 
+    faRoute,
+    faArrowTrendUp,
+    faArrowTrendDown,
+    faMountain,
+    faTimer,
+    faCalendarDays,
+    faLocationDot,
+    faPickaxe,
+} from '@awesome.me/kit-237330da78/icons/classic/light'
+
+export const threeSixtyImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2F360-summit-view.JPG?alt=media&token=683e8548-86ca-4993-8935-e74283887083";
+export const goat = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgoat-main.jpeg?alt=media&token=37662022-9afb-420b-93b3-522513ab4146";
+export const kanye = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fkanye.jpeg?alt=media&token=49a482a2-f10a-4814-92f8-26bdd9608d1a";
+export const goat2 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgoat-2.jpeg?alt=media&token=cea70dc6-e985-417c-a96e-9a0767eed1fe";
+export const goat3 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgoat-3.jpeg?alt=media&token=43f29f2a-a9ed-4f10-bf1a-eb3dab7f46fd";
+export const goat4 = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgoat-4.jpeg?alt=media&token=4c2ffcfb-1437-4c8c-99f9-575d33358438";
+export const goatLast = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgoat-last.jpeg?alt=media&token=92b2dd01-f112-4b99-a2b5-3ca3b6020e4d";
+export const gullyDrawing = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fgully-drawing.jpg?alt=media&token=04bf3775-da7f-46f1-9030-355819882533";
+export const ridgeDrawing = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fridge-drawing.jpg?alt=media&token=486b9982-407d-4c3b-b30d-8898827afd2e";
+export const sideHillDrawing = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fside-hill-drawing.jpg?alt=media&token=07e7be08-e0bf-4841-95f9-7b5dd51d2b11";
+export const summitView = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fsummit-view.jpeg?alt=media&token=51107dd4-8d82-4ddc-a843-7c5c37dd882b";
+export const theSearch = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Fthe-search.jpeg?alt=media&token=8efab784-351f-4cd1-ac88-1eda7f0f1a6d";
+export const topGullyDrawing = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2Ftop-gully-drawling.jpg?alt=media&token=c7b20838-0635-40a7-80bb-266a02c527d4";
+
+export const relatedArticleOne = '/blog/articles/pepper-peak';
+export const relatedArticleTwo = '/blog/articles/north-yuyanq-chex';
+export const relatedArticleThree = '/blog/articles/salt-peak';
+
+<ImageFeature
+    title="Indianhouse"
+    image={threeSixtyImage}
+    threeSixty={true}
+/>
+
+<BlogStatsSection>
+    <Stat title={'Distance (Mi)'} stat={'6.8'} icon={faRoute}/>
+    <Stat title={'Summit Elevation'} stat={'4,300'} icon={faMountain}/>
+    <Stat title={'Elevation Gain'} stat={'4,898'} icon={faArrowTrendUp}/>
+    <Stat title={'Elevation Loss'} stat={'4,973'} icon={faArrowTrendDown}/>
+    <Stat title={'Duration'} stat={'07:10:21'} icon={faTimer}/>
+    <Stat title={'Summit Date'} stat={'June 20, 2026'} icon={faCalendarDays}/>
+    <Stat title={'Difficulty'} stat={'Non-Technical'} icon={faPickaxe}/>
+    <Stat title={'Trailhead'} stat={<a href="https://maps.app.goo.gl/VKjMMuhGSrwHxcF97" target="_blank">The Pullout</a>} icon={faLocationDot}/>
+</BlogStatsSection>
+
+
+<MdxLayout>
+
+<TLDR
+text="Indianhouse is a steep, mostly off-trail scramble above Turnagain Arm just south of Anchorage. There is no real trail. You work up through the woods, along a ridge, sidehill into the gully, and scramble to the summit. Bring bear spray, and an ice axe and helmet are nice if there is snow. Watch for the goats!" 
+/>
+
+## The Approach
+Non-existent. You park at the small turnout; there will be a slope that starts on the inland-facing side of the turnout. Meet Indianhouse!
+
+The climb is split into 3ish parts. To me, the woods and the ridge are kind of the same section. Honestly, let's just go with 4: The Woods, The Ridge, The Sidehill, and The Gully. Keep in mind that this is an out and back, so each must be completed two times.
+
+## The Woods
+This starts from the turnout and isn't too hard to follow. On the day I climbed, the initial trail that led into the woods was probably the hardest to find, but honestly it was more of a "Is that really it?". This section is by far the least steep. I made some noise in this section. I would bring some spray with you. Along the Turnagain Arm is bear central!
+## The Ridge
+This section comes quickly and is the first real ascent. It's not too bad, very similar to Bird Ridge, which you can see across the valley. I was lucky, this was an amazing day and the view kept slowing me down! Don't turn your brain off, it's time to go off trail!
+## The Sidehill
+So you get to the top of the ridge and it looks straightforward. Make the saddle thing, then head climbers right and follow the ridge to the top. 
+
+<CenteredImage image={ridgeDrawing} altText={'Route drawing up the ridge toward the summit of Indianhouse'} title={'The Ridge'} width={1000} height={1000} />
+
+Yea don't do that. You actually need to side hill over to the base of the protrusion and head up one of the gullies. You want to stay climbers right in the gully. Definitely stay to the right. The image below is taken about halfway through the sidehill. You see that yellow line? Don't go there. You still can't see the gully you are aiming for in this image.
+
+<CenteredImage image={sideHillDrawing} altText={'Drawing of the sidehill traverse on Indianhouse, with the yellow line marking where not to go'} title={'The Sidehill'} width={1000} height={1000} />
+
+AHHHHHHHHHHH
+<CenteredImage image={goat} altText={'A mountain goat on the slopes of Indianhouse'} title={'A Goat!'} width={1000} height={1000} />
+
+I encountered Kanye West in the wild. A real treat. I don't normally listen to music while I'm out in the nature but obviously Ye was blasted for a lil bit.
+
+If you find yourself in a similar situation, I would really recommend the following:
+<TwoColumn>
+<div>
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/4iz9lGMjU1lXS51oPmUmTe?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+She said, "Ye keep makin' that. Keep makin' that PLATINUM AND GOLD FOR ME"
+
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/3sNVsP50132BTNlImLx70i?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Rock Forever 21 but just turned thirtay? Whats one good girl worth? Dis that what we do don't tell your mom shit.
+
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/5SkRLpaGtvYPhw02vZhQQ9?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Tell me that ain't secure, school seems so secure, three years, ain't picked a career, I'll just say down here.
+
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/0mEdbdeRFQwBhN4xfyIeUM?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+I feel the pressure, under more scrutiny, and what do I do? Act more stupidly.... So I parallel double park that muthafuka sideways? Back in my day?? Ohh am I Late? I mean Magic made it.
+
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/1auxYwYrFRqZP7t3s7w4um?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Scuse my French but I'm in Franceeeeeeeeeeee. I'm just sayin'
+
+<iframe data-testid="embed-iframe" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/track/432hUIl3ISDeytYW5XBQ5h?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Gotta hit em with that deep track. Really a natural feel. Not one of my favorites but really hit in the moment
+</div>
+
+<CenteredImage image={kanye} altText={'Mountain goat on Indianhouse, my Kanye West encounter'} title={'Ye'} width={500} height={500} />
+
+</TwoColumn>
+
+Really just the best to do it.
+
+<CenteredImage image={goat2} altText={'Mountain goat standing on the rocks of Indianhouse'} title={'The Goat'} width={1000} height={1000} />
+<TwoCenteredImages image={[goat4, goat3]} altText={['Mountain goat on the slopes of Indianhouse', 'Mountain goat watching from the rocks']} titles={['The Locals', 'Up Close']} width={300} height={300} />
+
+I usually don't get to have close encounters with the goats, but these guys were pretty friendly and I was able to get about 30-50 feet from them on the way up. On the way down I was being very quiet and came around a rock and they were about 10 ft away! Nice goats. Their eyes were as black as gun barrels and in some ways I felt a satanic vibe. Maybe this is why they are the preferred victim of sacrifice. At least that's what I hear, I'm just a normal dude.
+
+
+This was my legs' least favorite section on the way down. It felt longer than I remembered on the way up.
+
+## The Gully
+<TwoColumn>
+<div>
+So once you are in the gully you will want to stay climbers right. Going left leads to a sharp drop. The gully is pretty standard for the Chugach. I ran into a little snow and was glad to have an ice axe. I think that a helmet would be nice, especially if you have multiple people in your group. The gully is narrow and loose. It would be hard to hide from some falling rock. 
+
+At the top, you will need to head to the right, up a steeper section of the gully. I was a little worried at the beginning due to some snow at the top, but was able to finagle across onto the backside of the ridge into another gully and then it was an easy up. 
+</div>
+
+<CenteredImage image={gullyDrawing} altText={'Route drawing up the gully on Indianhouse, staying climbers right'} title={'The Gully'} width={500} height={500} />
+</TwoColumn>
+
+<CenteredImage image={topGullyDrawing} altText={'Drawing of the route through the top of the gully on Indianhouse'} title={'Top of the Gully'} width={1000} height={1000} />
+
+
+The top is amazing!
+<CenteredImage image={summitView} altText={'Summit view from Indianhouse over Turnagain Arm'} title={'The Summit'} width={1000} height={1000} />
+
+## The Left Side of the Gully
+I didn't really read anything before heading up this mountain, so I ended up climbing the left side of the gully and was cliffed out. I am sure that you can see it on my Strava. I was able to cut over to the right side of the gully, but I pretty much had to go back to the bottom. This exploration killed about an hour of time.
+
+
+Indianhouse was a fun one. Hopefully this weather continues to hold out!!!!
+
+
+## Stay Safe Out There
+<TwoColumn>
+I was up there while they were searching for the guy who was surfing out in the Turnagain Arm. A sad deal. I think this copter is actually out of Kodiak, which is kind of crazy to think about. You wouldn't want to have an issue out there with that type of distance between you and the helicopter / Coast Guard. Stay safe out there! Here is the entire article -> [‘He started getting farther away’: Witnesses recount Anchorage paddleboarder’s struggles in Turnagain Arm][1]
+
+<CenteredImage image={theSearch} altText={'Search and rescue helicopter over Turnagain Arm, seen from Indianhouse'} title={'The Search'} width={250} height={250} />
+
+</TwoColumn>
+
+<Strava
+    stravaId='19004671862'
+    garminId='19565668335'
+/>
+Just one GPX file on this guy! -> [Indianhouse GPX][2]
+
+
+## Okay but just one more
+<CenteredImage image={goatLast} altText={'One last mountain goat on Indianhouse'} title={'One More Goat'} width={1000} height={1000} />
+
+<ContinueReading 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
+
+</MdxLayout>
+<br/>
+
+[1]: https://www.adn.com/alaska-news/anchorage/2026/06/22/body-of-missing-paddleboarder-recovered-from-turnagain-arm/
+[2]: https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/indianhouse%2FIndianhouse_w_Kanye_West.gpx?alt=media&token=5092d332-71a0-4d52-b0e5-4f98ccf444ce

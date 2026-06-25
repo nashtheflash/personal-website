@@ -32,6 +32,7 @@ import {
     StravaEmbed,
     BlackTieTitle,
     PhotoCarousel,
+    ContinueReading,
 } from '@/components/blog'
 
 import { 
@@ -45,6 +46,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export const featureImage = "https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/tune-cold-weather-performance%2Fthumbnail.jpg?alt=media&token=ed7facc8-8f93-470b-a807-f4bbdfeccfae";
+
+export const relatedArticleOne = '/blog/articles/pepper-peak';
+export const relatedArticleTwo = '/blog/articles/north-yuyanq-chex';
+export const relatedArticleThree = '/blog/articles/salt-peak';
 
 <ImageFeature
     title='Tune M1 Cold Weather Performance'
@@ -67,6 +72,12 @@ text="This is a summary of the of the artical that will be writen bad spellin"
 
 <CenteredImage image={featureImage} altText={'Cedar Niles 3 Corners'} title={'3 Corners'} width={500} height={500} />
 <TwoCenteredImages image={[featureImage, featureImage]} altText={['West Trailhead', 'Trail Entrance']} titles={['West Trailhead', 'Trail Entrance']} width={500} height={500} />
+
+<ContinueReading 
+    articleOne={relatedArticleOne}
+    articleTwo={relatedArticleTwo}
+    articleThree={relatedArticleThree}
+/>
 
 </MdxLayout>
 <br/>
