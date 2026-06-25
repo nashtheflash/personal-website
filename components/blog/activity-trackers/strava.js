@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const STRAVA_SCRIPT_SRC = 'https://strava-embeds.com/embed.js';
 
-export function Strava({ stravaId }) {
+export function Strava({ stravaId, token }) {
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -13,7 +13,7 @@ export function Strava({ stravaId }) {
         document.body.appendChild(script);
 
         return () => script.remove();
-    }, [stravaId]);
+    }, [stravaId, token]);
 
     return (
         <div className="flex justify-center w-full">
@@ -22,6 +22,7 @@ export function Strava({ stravaId }) {
                 data-embed-id={stravaId}
                 data-style="standard"
                 data-from-embed="false"
+                data-token={token}
             />
         </div>
     );
