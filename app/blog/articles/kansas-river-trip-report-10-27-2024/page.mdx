@@ -7,7 +7,7 @@ export const postMetadata = {
     author: 'Nash Bostwick',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Ffeature-image.jpg?alt=media&token=445188c4-442b-4027-a4bf-995ddbda2fbc',
     thumbnailIllustration: 'https://firebasestorage.googleapis.com/v0/b/nash-browns.firebasestorage.app/o/kansas-river-trip-report-10-27-24%2Fhippy-hokusai-feature-image.jpg?alt=media&token=2c705187-8fa6-4990-be22-36b1a6456f0e',
-    description:"Kansas River Kayaking Trip Report 10/27/2024. Turner Bridge to Kaw Point",
+    description:"A late-October trip report paddling 9 miles down the Kansas (Kaw) River from Turner Bridge to Kaw Point at 1,200 CFS, with fall colors, river access notes, wildlife, photos, and Strava and Garmin data.",
     keywords: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
     tags: ['Kansas River', 'Kaw River', 'kayaking', 'Trip Report', 'Turner Bridge', 'Kaw Point'],
     isActive: true,
@@ -38,7 +38,7 @@ import {
     BlogStatsSection,
     ImageFeature,
     MdxLayout,
-    StravaEmbed,
+    Strava,
     BlackTieTitle,
     PhotoCarousel,
     Stat,
@@ -89,12 +89,10 @@ Accessing at Turner bridge was alright. The actual ramp is pretty secluded. I dr
 There was more paddling than expected on this trip. I was expecting 1200 CFS to push me along, but if I stopped paddling I was dead in the water. There was some wind but it was sporadic and short lived. 
 
 The total trip length was 9.24 Miles which was the expected length. The Friends of the Kaw website says that novice paddlers can paddle 3 miles per hour, so I was expecting 3 hours. Instead, It took 3 hours 50 minutes. Maybe I am out of shape, but I felt like I was getting after it. I did take a 15min break to take a leak and adjust the seat on my boat. I was sore the next day!
-<TwoColumn>
-    <StravaEmbed
-    dataEmbedId={12760366647}
-    />
-    <iframe src='https://connect.garmin.com/modern/activity/embed/17393317922' title='Turner Bridge -> Confluence' width='465' height='500' frameBorder='0'></iframe>
-</TwoColumn>
+<Strava
+    stravaId='12760366647'
+    token='R-qsXWfdM-Ko4yKvWB-nlLrA-HLyqgLTFBxmQX1MrT8'
+/>
 
 I was expecting the paddle through downtown to be pretty cool. I ended up disappointed. There are large levees that surround the river and it ruins the view. If you are after skyline views I would get on the Missouri River instead! Below you can see what I am talking about!
 <CenteredImage image={levee} altText={'West Bottoms Levee'} title={'West Bottoms Levee'} width={640} height={640}/>
@@ -128,15 +126,11 @@ I ran into a guy fishing while heading down the river. He mentioned another acce
     <CenteredImage image={kawPoint} altText={'Kaw Point Downtown Kansas City Overlook'} title={'Kaw Point'} width={320} height={320}/>
 </TwoColumn>
 
-</MdxLayout>
 
-<OneColumn>
-    <BlackTieTitle
-        title='Photo Gallery'
-    />
-</OneColumn>
+<BlackTieTitle
+    title='Photo Gallery'
+/>
 
-<br/>
 
 <PhotoCarousel 
 photoUrls={[
@@ -160,11 +154,11 @@ photoUrls={[
 options={{loop: true}} 
 />
 
-<MdxLayout>
 <ContinueReading 
-    articleOne={relatedArticleOne}
-    articleTwo={relatedArticleTwo}
-    articleThree={relatedArticleThree}
+articleOne={relatedArticleOne}
+articleTwo={relatedArticleTwo}
+articleThree={relatedArticleThree}
 />
+
 
 </MdxLayout>

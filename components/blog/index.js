@@ -63,7 +63,6 @@ export { Checkmark } from './emojis/checkmark';
 export { LinkNewTab } from "./links/link-new-tab";
 
 //Activity Trackers
-export { StravaEmbed } from "./activity-trackers/strava-embed";
 export { Strava } from "./activity-trackers/strava";
 
 //Headings

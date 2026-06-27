@@ -24,7 +24,7 @@ import {
     BlogStatsSection,
     Stat,
     ImageFeature,
-    StravaEmbed,
+    Strava,
     GoogleMap,
     ContinueReading,
 } from '@/components/blog'
@@ -168,7 +168,7 @@ Starting below the rocks was the worst water on the river. There was hardly any 
 <CenteredImage image={bridgeToSkunk} altText={'Bridge to Skunk Creek'} title={'Bridge to Skunk Creek'} width={1000} height={500} />
 
 <TwoColumn>
-<CenteredImage image={needle} altText={'Syringe Down by the Sioux River'} title={'Syringe Down By The River'} width={1000} height={500} />
+<CenteredImage image={needle} altText={'Syringe Down by the Sioux River'} title={'Syringe Down By The River'} width={500} height={500} />
 I would bring shoes for the walk. You never know what you are going to find down by the river in Sioux Falls! I found a couple of syringes :(
 </TwoColumn>
 
@@ -191,7 +191,7 @@ Taking out can be done almost anywhere along the river. I chose Pasley Park on t
 
 ## Wild Life
 <TwoColumn>
-<CenteredImage image={mussle} altText={'Big Mussel'} title={'Big Mussel'} width={1000} height={500} />
+<CenteredImage image={mussle} altText={'Big Mussel'} title={'Big Mussel'} width={500} height={500} />
 I was able to see a ton of waterfowl: birds, ducks, geese sitting on eggs, and Sandhill cranes. I was also able to see turtles and a couple of deer. The most exciting thing was a river otter. Am I sure that I saw this? No. Did I get a picture? No. However, I am pretty sure this is what I saw! Big mussels were also spotted.
 </TwoColumn>
 
@@ -221,7 +221,10 @@ It was a beautiful day to be out on the water! I would like to continue to kayak
 </div>
 
 <div className='w-full sm:w-1/2'>
-<StravaEmbed dataEmbedId='14226823720'/>
+<Strava
+    stravaId='14226823720'
+    token='aE1i7zzLW_5NULsoNFBo9B0r_p-KLtVKW3Mjo9m0ecY'
+/>
 </div>
 
 </TwoColumn>
